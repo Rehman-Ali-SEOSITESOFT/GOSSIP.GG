@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "./constant.scss";
 //  LAYOUTS STYLE'S
 @import "./layouts/Header.scss";
 @import "./layouts/Footer.scss";
@@ -9,3 +11,10 @@
 
 // PAGE'S STYLE'S
 @import "./pages/home.scss";
+
+// GLOBAL SECTION WIDTH
+.global-section-width {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+}
