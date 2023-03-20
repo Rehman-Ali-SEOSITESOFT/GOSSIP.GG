@@ -1,13 +1,18 @@
-import React from 'react'
+import React from "react";
 
 const Header = () => {
     return (
-        <header >
-            <div className='container global-section-width'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, praesentium officiis labore nesciunt iure eum consequatur aut ab eius, cum alias expedita repellat reprehenderit cupiditate totam? Delectus enim suscipit labore!
+        <header>
+            <div className="container global-section-width ">
+                <div className="grid ">
+
+                    <div className="columns-1">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nisi, ea est distinctio magni aperiam odit totam sit quibusdam odio consequatur repellat dolorum, saepe dicta. Est consequuntur distinctio earum perferendis.
+                    </div>
+                </div>
             </div>
         </header>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;
