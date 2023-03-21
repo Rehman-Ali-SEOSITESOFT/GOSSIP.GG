@@ -20,3 +20,15 @@
   max-width: 1440px;
   margin: auto;
 }
+
+@media screen and (max-width: 1400px) {
+  .global-section-width {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .global-section-width {
+    padding: 0 16px;
+  }
+}

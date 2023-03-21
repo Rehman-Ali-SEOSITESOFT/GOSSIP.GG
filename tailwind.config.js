@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'class',
+  darkMode: "class",
   purge: {
     enabled: true,
-    content: ['./src/**/*.tsx'],
+    content: ["./src/**/*.tsx"],
   },
   content: [
     // Or if using `src` directory:
@@ -14,22 +14,21 @@ module.exports = {
     extend: {
       colors: {
         // BRAND LIGHT COLOR'S
-        'brandLightOpacity100': '#e5e5e5',
-        'brandLightOpacity90': 'rgba(229, 229, 229, 0.9)',
-        'brandLightOpacity70': 'rgba(229, 229, 229, 0.7)',
-        'brandLightOpacity50': 'rgba(229, 229, 229, 0.5)',
-        'brandLightOpacity10': 'rgba(229, 229, 229, 0.1)',
-        'brandLightOpacity5': 'rgba(229, 229, 229, 0.05)',
+        brandLightOpacity100: "#e5e5e5",
+        brandLightOpacity90: "rgba(229, 229, 229, 0.9)",
+        brandLightOpacity70: "rgba(229, 229, 229, 0.7)",
+        brandLightOpacity50: "rgba(229, 229, 229, 0.5)",
+        brandLightOpacity10: "rgba(229, 229, 229, 0.1)",
+        brandLightOpacity5: "rgba(229, 229, 229, 0.05)",
         // BRAND DARK COLORS
-        'brandDark1': '#2e2a2b',  
-        'brandDark2': '#221e1f',
-        'brandDark3': '#141313',
+        brandDark1: "#2e2a2b",
+        brandDark2: "#221e1f",
+        brandDark3: "#141313",
         // BRAND COLOR
-        'brand': '#ed4e50',
+        brand: "#ed4e50",
         // SEMANTIC COLORS
-        'successIndicator': '#008d52',
-        'errorIndicator': '#d91618'
-
+        successIndicator: "#008d52",
+        errorIndicator: "#d91618",
       },
       screens: {
         'mw-2xl': {'max': '1535px'},
@@ -50,5 +49,5 @@ module.exports = {
       
     },
   },
-  plugins: [require('@tailwindcss/typography')],
-}
+  plugins: [require("@tailwindcss/typography")],
+};
