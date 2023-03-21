@@ -1,18 +1,12 @@
 "use client";
-import {useTheme} from 'next-themes'
 
 
 
 export default function Home() {
-  const {theme, setTheme} = useTheme()
+ 
   return (
-    <div>
-    <h1 className="text-3xl text-pink-500 dark:text-blue" >
-        Welcome to Your App
-      </h1>
-      <button className='dark:text-red-500' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-        toggle
-      </button>
-  </div>
+    <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
   )
 }

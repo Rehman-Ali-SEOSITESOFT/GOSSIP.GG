@@ -1,7 +1,8 @@
 
 
 import '../styles/styles.scss';
-import { Providers } from './providers'
+import Header from '@/layouts/header/Header';
+import Footer from '@/layouts/footer/Footer';
 export default function RootLayout({
   children,
 }: {
@@ -9,16 +10,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+
       <head />
-      <body className="dark:bg-gray-800">
-      {/* <ThemeProvider> */}
-      <Providers>{children}</Providers>
-        {/* </ThemeProvider> */}
-        </body>
+      <body>
+        <main className='gossip'>
+          <Header />
+          <div className='content'>
+            {children}
+          </div>
+          <Footer />
+        </main>
+      </body>
     </html>
   )
 }

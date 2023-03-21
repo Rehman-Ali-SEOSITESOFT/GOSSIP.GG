@@ -1,0 +1,59 @@
+header {
+  .header_width {
+    background-color: $brandDark2;
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    padding: 0 25px;
+    position: relative;
+  }
+  .header_width::before {
+    border-bottom: 35px solid transparent;
+    border-left: 0;
+    border-right: 50px solid red;
+    content: "";
+    height: 89px;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+  .header__left {
+    .logo img {
+      max-height: 22px;
+    }
+  }
+  ul {
+    li {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: $brandLightOpacity100;
+    }
+  }
+  .header__right {
+    .icons {
+      background-color: $brandLightOpacity10;
+      padding: 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50px;
+      img {
+        max-width: 100%;
+      }
+    }
+    .login__btn {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      color: $brandLightOpacity100;
+      width: 85px;
+      margin: 0 14px;
+    }
+  }
+}
