@@ -127,10 +127,10 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="none md:block fixed__bottom__header">
-          <div className="xl:w-3/6 lg:w-1/1  header__center">
+        <div className="hidden mw-lg:block fixed__bottom__header fixed bottom-0 left-0 right-0 bg-brandDark2">
+          <div className="xl:w-3/6 lg:w-1/1 ">
             <div className="header-navigation">
-              <ul className="flex flex-wrap  justify-center">
+              <ul className="flex flex-wrap  justify-center mw-sm:justify-between">
                 {menu.map((elme, index) => {
                   return (
                     <li key={index}>

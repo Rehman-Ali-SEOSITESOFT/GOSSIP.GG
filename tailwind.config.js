@@ -30,22 +30,22 @@ module.exports = {
         successIndicator: "#008d52",
         errorIndicator: "#d91618",
       },
-      // screens: {
-      //   "2xl": { max: "1535px" },
-      //   // => @media (max-width: 1535px) { ... }
+      screens: {
+        "mw-2xl": { max: "1535px" },
+        // => @media (max-width: 1535px) { ... }
 
-      //   xl: { max: "1279px" },
-      //   // => @media (max-width: 1279px) { ... }
+        "mw-xl": { max: "1279px" },
+        // => @media (max-width: 1279px) { ... }
 
-      //   lg: { max: "1023px" },
-      //   // => @media (max-width: 1023px) { ... }
+        "mw-lg": { max: "1024px" },
+        // => @media (max-width: 1023px) { ... }
 
-      //   md: { max: "767px" },
-      //   // => @media (max-width: 767px) { ... }
+        "mw-md": { max: "767px" },
+        // => @media (max-width: 767px) { ... }
 
-      //   sm: { max: "639px" },
-      //   // => @media (max-width: 639px) { ... }
-      // },
+        "mw-sm": { max: "639px" },
+        // => @media (max-width: 639px) { ... }
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
