@@ -1,7 +1,7 @@
 
 
 import '../styles/styles.scss';
-
+import { Providers } from './providers'
 export default function RootLayout({
   children,
 }: {
@@ -14,7 +14,11 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body className="dark:bg-gray-800">
+      {/* <ThemeProvider> */}
+      <Providers>{children}</Providers>
+        {/* </ThemeProvider> */}
+        </body>
     </html>
   )
 }
