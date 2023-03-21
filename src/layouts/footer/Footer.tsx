@@ -1,17 +1,18 @@
 import React from "react";
 import Image from "next/image";
-import logo from "../../assets/images/footer/m-footer-logo.png";
+import logo from "../../assets/images/footer/main-logo.png";
+import MobileLogo from "../../assets/images/footer/m-footer-logo.png";
 import Instgram from "../../assets/images/footer/instagram.png";
 import Twitter from "../../assets/images/footer/twitter.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-brandDark2">
+    <footer className="bg-brandDark2 mw-lg:mb-16">
       <div className="global-section-width">
         {/* Desktop Footer Start */}
-        <div className="pt-10 px-5 pb-5  mw-lg:hidden">
+        <div className="pt-14   mw-lg:hidden">
           <Image src={logo} alt="Gossip GG" />
-          <div className="pt-7 flex flex-row justify-between">
+          <div className="pt-6 flex flex-row justify-between">
             <div className="max-w-[70%]">
               <p className="text-brandLightOpacity100 text-base font-text max-w-[80%]">
                 Gossip.GG brings you the latest scoop from Gaming, Esports,
@@ -55,7 +56,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex justify-center items-center pt-7 text-base font-text">
+          <div className="flex justify-center items-center pt-5 pb-7 text-base font-text">
             <p className="text-brandLightOpacity100">
               (c) 2023 Gossip.gg - All Rights Reserved{" "}
             </p>
@@ -63,8 +64,8 @@ const Footer = () => {
         </div>
         {/* Desktop Footer end */}
         {/* Mobile Footer Start */}
-        <div className="hidden pt-5 px-4 pb-5  mw-lg:block">
-          <Image src={logo} alt="Gossip GG" />
+        <div className="hidden pt-5  pb-5  mw-lg:block">
+          <Image src={MobileLogo} alt="Gossip GG" />
           <p className="pt-3 text-brandLightOpacity100  font-text2 ">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
