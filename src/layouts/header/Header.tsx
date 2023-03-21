@@ -5,83 +5,64 @@ import logo from "../../assets/images/header/main-logo.png";
 import search from "../../assets/images/header/search.png";
 import moon from "../../assets/images/header/moon.png";
 import sun from "../../assets/images/header/sun.png";
-// type SuggestionType = { name: string; link: string };
-// export interface IResult {
-//   documents: SuggestionType[];
-// }
+
 const Header = () => {
-  type MenuList = [{ name: string; link: string }];
-  // const [menu, setMenu] = useState<IResult>(
-  //   {
-  //     name: "Home",
-  //     link: "/",
-  //   },
-  //   {
-  //     name: "gossip",
-  //     link: "/",
-  //   },
-  //   {
-  //     name: "esports",
-  //     link: "/",
-  //   },
-  //   {
-  //     name: "gaming",
-  //     link: "/",
-  //   },
-  //   {
-  //     name: "tech",
-  //     link: "/",
-  //   },
-  // );
-  const [menu, setMenu] = useState<MenuList>([
+  interface MenuList {
+    name: string;
+    link: string;
+  }
+
+  const [menu, setMenu] = useState<MenuList[]>([
     {
       name: "Home",
       link: "/",
     },
     {
       name: "gossip",
-      link: "/",
+      link: "/gossip",
     },
     {
       name: "esports",
-      link: "/",
+      link: "/esports",
     },
     {
       name: "gaming",
-      link: "/",
+      link: "/gaming",
     },
     {
       name: "tech",
-      link: "/",
+      link: "/tech",
     },
   ]);
-  console.log(menu);
+  const hanldeClose = () => {
+    console.log("ier");
+  };
   return (
     <header>
       <div className="header_width">
-        <div className="container">
-          <div className="flex  flex-wrap items-center">
-            <div className="md:w-1/4	header__left ">
+        <div className="2xl:container header_container">
+          <div className="flex  flex-wrap items-center md:justify-between">
+            <div className="xl:w-1/4 lg:w-1/5 w-3/6	header__left ">
               <div className="logo">
                 <Image src={logo} alt="Gossip GG" />
               </div>
             </div>
-            <div className="md:w-3/6 header__center">
+            <div className="xl:w-3/6 lg:w-1/1	 header__center">
               <div className="header-navigation">
-                <ul className="flex flex-wrap justify-between">
+                <ul className="flex flex-wrap  justify-center">
                   {menu.map((elme, index) => {
                     return (
                       <li key={index}>
-                        <a href="#">{elme.name}</a>
+                        <a href={elme.link}>{elme.name}</a>
                       </li>
                     );
                   })}
                 </ul>
               </div>
             </div>
-            <div className="md:w-1/4	header__right">
+            <div className="xl:w-1/4 lg:w-1/5	w-3/6 header__right">
               <div className="header__right flex justify-end">
-                <div className="search__btn icons">
+                <div className="search__btn icons" onClick={hanldeClose}>
                   <span>
                     <Image src={search} alt="search" />
                   </span>
