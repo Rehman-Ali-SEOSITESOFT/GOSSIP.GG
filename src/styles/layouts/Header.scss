@@ -1,36 +1,105 @@
 header {
+  overflow: hidden;
+  padding: 0 0 20px 0;
   .header_width {
     background-color: $brandDark2;
-    max-width: 1440px;
+    max-width: 1390px;
     width: 100%;
     margin: auto;
-    padding: 0 25px;
     position: relative;
+    border: 1px solid $brand;
+    border-top: 0;
+    .header_container {
+      padding: 24px 65px;
+      box-shadow: 0px 4px 8px rgba(237, 78, 80, 0.3);
+    }
+    .header_container::before {
+      content: "";
+      position: absolute;
+      border-bottom: 0;
+      border-left: 0;
+      border-right: 0;
+      left: 0;
+      top: 0;
+      height: 100px;
+      background: $whitecolor;
+      width: 68px;
+      transform: skew(35deg, 0);
+      transform-origin: bottom;
+    }
+    .header_container::after {
+      content: "";
+      position: absolute;
+      border-bottom: 0;
+      border-left: 0;
+      border-right: 0;
+      right: 0;
+      top: 0;
+      height: 112px;
+      background: $whitecolor;
+      width: 69px;
+      transform: rotateZ(35deg);
+      transform-origin: bottom;
+    }
   }
-  .header_width::before {
-    border-bottom: 35px solid transparent;
-    border-left: 0;
-    border-right: 50px solid red;
-    content: "";
-    height: 89px;
-    left: 0;
+  .header_width::before,
+  .header_width::after {
     position: absolute;
-    top: 0;
+    content: "";
   }
+
+  .header_width::before {
+    border: 0;
+    height: 89px;
+    width: 1px;
+    background: $brand;
+    top: 0;
+    left: 0;
+    transform: skew(35deg, 0);
+    transform-origin: top;
+  }
+  .header_width::after {
+    border: 0;
+    height: 108px;
+    width: 1px;
+    background: $brand;
+    right: 0;
+    top: 0;
+    transform: rotate(35deg);
+    transform-origin: top;
+  }
+
   .header__left {
     .logo img {
       max-height: 22px;
     }
   }
-  ul {
-    li {
-      font-family: "Montserrat";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 20px;
-      text-transform: uppercase;
-      color: $brandLightOpacity100;
+  .header__center {
+    ul {
+      li {
+        padding: 0 28px;
+
+        a {
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 20px;
+          text-transform: uppercase;
+          color: $brandLightOpacity100;
+          list-style: none;
+          // transition: font-size 0.5s ease-in-out;
+          // padding: 0 28px;
+        }
+        a:hover {
+          font-weight: 800;
+          font-size: 18px;
+          line-height: 22px;
+          // transition: font-size 0.5s ease-in-out;
+          color: $brand;
+          // padding: 0 28px;
+        }
+      }
     }
   }
   .header__right {
@@ -40,9 +109,14 @@ header {
       width: 40px;
       height: 40px;
       border-radius: 50px;
+      cursor: pointer;
+
       img {
         max-width: 100%;
       }
+    }
+    .icons:hover {
+      background-color: $brandLightOpacity50;
     }
     .login__btn {
       font-family: "Montserrat";
@@ -53,7 +127,199 @@ header {
       text-align: center;
       color: $brandLightOpacity100;
       width: 85px;
-      margin: 0 14px;
+      margin: 0 28px;
+    }
+  }
+}
+
+// RESPONSIVE
+@media screen and (max-width: 1400px) {
+  header {
+    padding: 0 0 15px 0;
+    .header_width {
+      .header_container {
+        padding: 20px 60px;
+      }
+    }
+    .header_width::after {
+      height: 98px;
+    }
+
+    .header_width::before {
+      height: 80px;
+    }
+    .header__center {
+      ul {
+        li {
+          padding: 0 22px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    .header__left {
+      .logo {
+        img {
+          max-height: 20px;
+          max-width: 140px;
+        }
+      }
+    }
+    .header__right {
+      .icons {
+        padding: 10px;
+        min-width: 40px;
+        width: 40px;
+        height: 40px;
+
+        cursor: pointer;
+        img {
+          width: 40px !important;
+        }
+      }
+      .login__btn {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+        min-width: 75px;
+        margin: 0 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    .header_width {
+      border-left: 0;
+      border-right: 0;
+    }
+    .header_width::before,
+    .header_width::after {
+      display: none;
+    }
+    .header_width {
+      .header_container {
+        padding: 20px 16px;
+      }
+      .header_container::after,
+      .header_container::before {
+        display: none;
+      }
+    }
+
+    .header__left {
+      .logo {
+        img {
+          max-height: 20px;
+          max-width: 140px;
+        }
+      }
+    }
+    .header__center {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background: $brandDark2;
+      padding: 24px 16px;
+      // ul {
+      //   li {
+      //     a {
+      //       font-family: "Montserrat";
+      //       font-style: normal;
+      //       font-weight: 700;
+      //       font-size: 10px;
+      //       line-height: 12px;
+      //     }
+      //   }
+      // }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  header {
+    .header__right {
+      .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 35px;
+        width: 35px;
+        height: 35px;
+
+        img {
+          width: 15px !important;
+        }
+      }
+      .login__btn {
+        min-width: 75px;
+      }
+    }
+    .header__center {
+      ul {
+        justify-content: space-between;
+        li {
+          padding: 0 0;
+          a {
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 26px;
+            color: $brandLightOpacity70;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    .header_width {
+      .header_container {
+        padding: 15px 15px;
+      }
+    }
+    .header__left {
+      .logo {
+        img {
+          max-height: fit-content;
+          max-width: 120px;
+        }
+      }
+    }
+    .header__right {
+      .icons {
+        min-width: 30px;
+        width: 32px;
+        height: 32px;
+
+        img {
+          width: 100% !important;
+          max-width: 17px !important;
+        }
+      }
+      .login__btn {
+        min-width: 65px;
+        font-size: 16px;
+      }
+    }
+    .header__center {
+      padding: 15px 15px;
+      ul {
+        li {
+          a {
+            font-size: 10px;
+          }
+        }
+      }
     }
   }
 }
