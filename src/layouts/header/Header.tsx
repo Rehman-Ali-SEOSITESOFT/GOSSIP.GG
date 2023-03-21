@@ -53,7 +53,12 @@ const Header = () => {
                   {menu.map((elme, index) => {
                     return (
                       <li key={index}>
-                        <a href={elme.link}>{elme.name}</a>
+                        <a
+                          href={elme.link}
+                          className="font-bold leading-5 no-underline uppercase text-brandLightOpacity100 hover:text-brand hover:font-extrabold"
+                        >
+                          {elme.name}
+                        </a>
                       </li>
                     );
                   })}
@@ -61,16 +66,19 @@ const Header = () => {
               </div>
             </div>
             <div className="xl:w-1/4 lg:w-1/5	w-3/6 header__right">
-              <div className="header__right flex justify-end">
-                <div className="search__btn icons" onClick={hanldeClose}>
+              <div className="header__right flex justify-end ">
+                <div
+                  className="search__btn icons bg-brandLightOpacity10 hover:bg-brandLightOpacity50"
+                  onClick={hanldeClose}
+                >
                   <span>
-                    <Image src={search} alt="search" />
+                    <Image src={search} alt="search " />
                   </span>
                 </div>
-                <div className="login__btn icons">
+                <div className="login__btn icons text-brandLightOpacity100 bg-brandLightOpacity10 hover:bg-brandLightOpacity50">
                   <span> Login</span>
                 </div>
-                <div className="theme__btn icons">
+                <div className="theme__btn icons bg-brandLightOpacity10 hover:bg-brandLightOpacity50">
                   <span>
                     <Image src={moon} alt="moon light icon" />
                   </span>
