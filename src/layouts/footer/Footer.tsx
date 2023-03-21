@@ -58,7 +58,7 @@ const Footer = () => {
           </div>
           <div className="flex justify-center items-center pt-5 pb-7 text-base font-text">
             <p className="text-brandLightOpacity100">
-              (c) 2023 Gossip.gg - All Rights Reserved{" "}
+              (c) 2023 Gossip.gg - All Rights Reserved
             </p>
           </div>
         </div>
