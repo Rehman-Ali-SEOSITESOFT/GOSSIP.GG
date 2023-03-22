@@ -33,19 +33,19 @@ module.exports = {
         white: '#ffffff',
       },
       screens: {
-        'mw-2xl': {'max': '1535px'},
+        "mw-2xl": { max: "1535px" },
         // => @media (max-width: 1535px) { ... }
-  
-        'mw-xl': {'max': '1279px'},
+
+        "mw-xl": { max: "1279px" },
         // => @media (max-width: 1279px) { ... }
-  
-        'mw-lg': {'max': '1024px'},
+
+        "mw-lg": { max: "1024px" },
         // => @media (max-width: 1023px) { ... }
-  
-        'mw-md': {'max': '767px'},
+
+        "mw-md": { max: "767px" },
         // => @media (max-width: 767px) { ... }
-  
-        'mw-sm': {'max': '639px'},
+
+        "mw-sm": { max: "639px" },
         // => @media (max-width: 639px) { ... }
       },
      
