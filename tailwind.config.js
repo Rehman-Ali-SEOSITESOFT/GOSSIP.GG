@@ -31,7 +31,10 @@ module.exports = {
         errorIndicator: "#d91618",
         // custom color
         white: '#ffffff',
-        grayCard:'rgba(34, 30, 31, 0.1)'
+        grayCard:'rgba(34, 30, 31, 0.1)',
+        bodycolor: "#f8f8f8",
+        grayCardHover: "rgba(34, 30, 31, 30%)",
+    
       },
       screens: {
         "mw-2xl": { max: "1535px" },
@@ -49,12 +52,8 @@ module.exports = {
         "mw-sm": { max: "639px" },
         // => @media (max-width: 639px) { ... }
       },
-     
-      
     },
-    fontSize:{
-      'text-1xl': '22px'
-    }
+    
    
   },
   plugins: [require("@tailwindcss/typography")],
