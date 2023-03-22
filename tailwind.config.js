@@ -48,10 +48,14 @@ module.exports = {
 
         "mw-md": { max: "767px" },
         // => @media (max-width: 767px) { ... }
+        "mw-sm1": { max: "690px" },
 
         "mw-sm": { max: "639px" },
         // => @media (max-width: 639px) { ... }
       },
+      // backgroundImage: {
+      //   'events': "url('../../assets/images/esport-event/card.png')",
+      // },
     },
     
    

@@ -82,10 +82,9 @@ const LiveMatch = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-          
         },
       },
-     
+
       {
         breakpoint: 690,
         settings: {
@@ -94,13 +93,12 @@ const LiveMatch = () => {
           infinite: true,
         },
       },
-      
     ],
   };
   return (
     <section className="live-matches">
       <div className="global-section-width">
-        <Slider {...settings}>
+        <Slider className="live-matches-slider" {...settings}>
           {matchData.map((item, index) => (
             <div
               className="bg-white border-inherit border rounded-sm "
@@ -113,14 +111,14 @@ const LiveMatch = () => {
                     src={Logo}
                     alt="Live Match logo"
                   />
-                  <p className="text-base pl-3 text-brandDark2 font-text-live-page font-semibold">
+                  <p className="font-live-match-16 pl-3 text-brandDark2 font-text-live-page font-semibold">
                     {item.match_title}
                   </p>
                 </div>
                 {item.match_status !== "LIVE" ? (
                   <div className="bg-grayCard opacity-100 h-8 max-w-[25%] flex justify-center items-center rounded-sm">
                     <p className="text-brandDark2 font-text-live-page font-semibold font-live-match-14 px-2 ">
-                    {item.match_status}
+                      {item.match_status}
                     </p>
                   </div>
                 ) : (
@@ -131,11 +129,11 @@ const LiveMatch = () => {
                   </div>
                 )}
               </div>
-              <div className="flex justify-center items-center">
+              <div className="flex justify-center items-center mw-sm1:hidden">
                 <Image src={Line} alt="saprator line" />
               </div>
-              <div className=" p-4 flex flex-row justify-between ">
-                <div className="   flex flex-row justify-between">
+              <div className=" p-4 flex flex-row justify-between mw-sm1:hidden ">
+                <div className="flex flex-row justify-between">
                   <div>
                     <Image src={TeamOne} alt="Team logo" />
                   </div>
@@ -153,7 +151,7 @@ const LiveMatch = () => {
                     vs
                   </p>
                 </div>
-                <div className="    flex flex-row justify-between">
+                <div className=" flex flex-row justify-between">
                   <div>
                     <Image src={TeamTwo} alt="Team logo" />
                   </div>
@@ -167,10 +165,33 @@ const LiveMatch = () => {
                   </div>
                 </div>
               </div>
+              <div className=" hidden p-4 flex flex-row justify-between mw-sm1:block border-t-inherit border-t ">
+               <div className="flex flex-row justify-between items-center">
+               <div className="flex flex-row justify-center items-center">
+                  <Image src={TeamOne} alt="Team logo" />
+                  <p className="text-brandDark2 pl-3 font-text-live-page font-bold font-live-match-18">
+                    {item.team_one_title}
+                  </p>
+                </div>
+                <p className="text-brandDark2 font-text-live-page text-1xl font-live-match-22 font-extrabold">
+                  {item.team_one_score}
+                </p>
+               </div>
+               <div className="flex flex-row justify-between items-center mt-4">
+               <div className="flex flex-row justify-center items-center">
+                  <Image src={TeamTwo} alt="Team logo" />
+                  <p className="text-brandDark2 pl-3 font-text-live-page font-bold font-live-match-18">
+                    {item.team_two_title}
+                  </p>
+                </div>
+                <p className="text-brandDark2 font-text-live-page text-1xl font-live-match-22 font-extrabold">
+                  {item.team_two_score}
+                </p>
+               </div>
+               
+              </div>
             </div>
           ))}
-
-         
         </Slider>
       </div>
     </section>
