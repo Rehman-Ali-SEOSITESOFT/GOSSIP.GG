@@ -4,7 +4,7 @@ import Image from "next/image";
 import Logo from "../../assets/images/live-match/logo.png";
 import TeamOne from "../../assets/images/live-match/team-one.png";
 import TeamTwo from "../../assets/images/live-match/team-two.png";
-import Line from "../../assets/images/general/line.png";
+import Line from "../../assets/images/general/Line.png";
 const LiveMatch = () => {
   interface MatchList {
     match_title: string;
