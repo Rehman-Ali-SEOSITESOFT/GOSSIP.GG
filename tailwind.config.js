@@ -30,11 +30,13 @@ module.exports = {
         successIndicator: "#008d52",
         errorIndicator: "#d91618",
         // custom color
-        white: '#ffffff',
-        grayCard:'rgba(34, 30, 31, 0.1)',
+        white: "#ffffff",
+
         bodycolor: "#f8f8f8",
         grayCard: "rgba(34, 30, 31, 0.1)",
         grayCardHover: "rgba(34, 30, 31, 30%)",
+        textColor: "rgba(34, 30, 31, 0.9)",
+        textColorGray: "rgba(34, 30, 31, 0.7) ",
       },
       screens: {
         "mw-2xl": { max: "1535px" },
@@ -53,8 +55,6 @@ module.exports = {
         // => @media (max-width: 639px) { ... }
       },
     },
-    
-   
   },
   plugins: [require("@tailwindcss/typography")],
 };

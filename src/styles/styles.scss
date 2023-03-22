@@ -23,6 +23,7 @@
   width: 100%;
   max-width: 1440px;
   margin: auto;
+  padding: 0 80px;
 }
 .slick-slider button {
   background-color: $brandLightOpacity100;
@@ -51,11 +52,12 @@
 
 @media screen and (max-width: 1430px) {
   .global-section-width {
-    padding: 0 20px;
+    // padding: 0 20px;
+    padding: 0 70px;
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
   .global-section-width {
     padding: 0 16px;
   }
