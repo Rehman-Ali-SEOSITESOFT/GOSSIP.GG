@@ -31,6 +31,7 @@ module.exports = {
         errorIndicator: "#d91618",
         // custom color
         white: '#ffffff',
+        grayCard:'rgba(34, 30, 31, 0.1)'
       },
       screens: {
         "mw-2xl": { max: "1535px" },
@@ -51,6 +52,9 @@ module.exports = {
      
       
     },
+    fontSize:{
+      'text-1xl': '22px'
+    }
    
   },
   plugins: [require("@tailwindcss/typography")],
