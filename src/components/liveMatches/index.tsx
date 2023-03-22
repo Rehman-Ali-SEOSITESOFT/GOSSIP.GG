@@ -82,19 +82,18 @@ const LiveMatch = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-          
         },
       },
-     
+
       {
         breakpoint: 690,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
+          arrows: false,
         },
       },
-      
     ],
   };
   return (
@@ -120,7 +119,7 @@ const LiveMatch = () => {
                 {item.match_status !== "LIVE" ? (
                   <div className="bg-grayCard opacity-100 h-8 max-w-[25%] flex justify-center items-center rounded-sm">
                     <p className="text-brandDark2 font-text-live-page font-semibold font-live-match-14 px-2 ">
-                    {item.match_status}
+                      {item.match_status}
                     </p>
                   </div>
                 ) : (
@@ -169,8 +168,6 @@ const LiveMatch = () => {
               </div>
             </div>
           ))}
-
-         
         </Slider>
       </div>
     </section>

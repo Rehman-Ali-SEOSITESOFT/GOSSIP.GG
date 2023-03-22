@@ -24,6 +24,30 @@
   max-width: 1440px;
   margin: auto;
 }
+.slick-slider button {
+  background-color: $brandLightOpacity100;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  z-index: 1;
+}
+.slick-slider {
+  .slick-prev:before,
+  .slick-next:before {
+    content: "\f104";
+    font-size: 20px;
+    color: $brandDark2;
+    font-family: fontawesome;
+  }
+
+  .slick-next:before {
+    content: "\f105";
+  }
+}
+.slick-slider button:hover {
+  background-color: $brandLightOpacity100;
+}
 
 @media screen and (max-width: 1430px) {
   .global-section-width {
