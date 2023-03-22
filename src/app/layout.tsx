@@ -3,6 +3,11 @@
 import '../styles/styles.scss';
 import Header from '@/layouts/header/Header';
 import Footer from '@/layouts/footer/Footer';
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+
 export default function RootLayout({
   children,
 }: {
@@ -13,9 +18,9 @@ export default function RootLayout({
 
       <head />
       <body>
-        <main className='gossip'>
+        <main className='gossip bg-brandLightOpacity10'>
           <Header />
-          <div className='content'>
+          <div className=''>
             {children}
           </div>
           <Footer />
