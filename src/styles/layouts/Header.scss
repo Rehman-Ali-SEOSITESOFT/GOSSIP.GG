@@ -281,6 +281,28 @@ header {
       //   }
       // }
     }
+    .fixed__bottom__header {
+      padding: 20px 16px;
+      ul {
+        li {
+          a {
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 16px;
+            padding: 0 25px;
+          }
+          a.active {
+            color: $brand;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+            text-decoration-color: $brand;
+            text-decoration-thickness: 2px;
+          }
+        }
+      }
+    }
     .seach--deve {
       position: absolute;
       width: 100%;
@@ -296,6 +318,19 @@ header {
 @media screen and (max-width: 600px) {
   header {
     overflow: visible;
+    .fixed__bottom__header {
+      padding: 20px 16px;
+      ul {
+        li {
+          a {
+            font-size: 12px;
+            line-height: 12px;
+            padding: 0 0;
+            letter-spacing: 0.05em;
+          }
+        }
+      }
+    }
     .header__right {
       .icons {
         display: flex;
@@ -382,6 +417,16 @@ header {
       .login__btn {
         min-width: 65px;
         font-size: 16px;
+      }
+    }
+    .fixed__bottom__header {
+      ul {
+        li {
+          a {
+            font-size: 10px;
+            line-height: 10px;
+          }
+        }
       }
     }
     .header__center {

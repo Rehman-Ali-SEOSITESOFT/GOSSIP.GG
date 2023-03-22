@@ -136,7 +136,9 @@ const Header = () => {
                     <li key={index}>
                       <a
                         href={elme.link}
-                        className="font-bold leading-5 no-underline uppercase text-brandLightOpacity100 hover:text-brand hover:font-extrabold sm:text-brandLightOpacity70 "
+                        className={`font-bold leading-5 no-underline uppercase text-brandLightOpacity100 hover:text-brand hover:font-extrabold text-brandLightOpacity100 mw-sm:text-brandLightOpacity70 ${
+                          index === 0 && "active"
+                        }`}
                       >
                         {elme.name}
                       </a>
