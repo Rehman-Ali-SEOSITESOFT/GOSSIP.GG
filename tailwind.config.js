@@ -32,6 +32,8 @@ module.exports = {
         // custom color
         white: "#ffffff",
         bodycolor: "#f8f8f8",
+        grayCard: "rgba(34, 30, 31, 0.1)",
+        grayCardHover: "rgba(34, 30, 31, 30%)",
       },
       screens: {
         "mw-2xl": { max: "1535px" },

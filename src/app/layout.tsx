@@ -16,7 +16,7 @@ export default function RootLayout({
       <body>
         <main className="gossip bg-bodycolor">
           <Header />
-          <div className="">{children}</div>
+          <div className="content">{children}</div>
           <Footer />
         </main>
       </body>

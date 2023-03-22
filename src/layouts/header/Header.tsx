@@ -20,19 +20,19 @@ const Header = () => {
     },
     {
       name: "gossip",
-      link: "/gossip",
+      link: "/",
     },
     {
       name: "esports",
-      link: "/esports",
+      link: "/",
     },
     {
       name: "gaming",
-      link: "/gaming",
+      link: "/",
     },
     {
       name: "tech",
-      link: "/tech",
+      link: "/",
     },
   ]);
   const [searchOpen, setSearchOpen] = useState<Boolean>(true);
@@ -115,7 +115,10 @@ const Header = () => {
                       <span> Login</span>
                     </div>
 
-                    <div className="theme__btn icons bg-brandLightOpacity10 hover:bg-brandLightOpacity50" onClick={hanldeChnagedTheme}>
+                    <div
+                      className="theme__btn icons bg-brandLightOpacity10 hover:bg-brandLightOpacity50"
+                      onClick={hanldeChnagedTheme}
+                    >
                       <span>
                         {themChange ? (
                           <Image src={moon} alt="moon light icon" />
