@@ -30,7 +30,8 @@ module.exports = {
         successIndicator: "#008d52",
         errorIndicator: "#d91618",
         // custom color
-        white: '#ffffff',
+        white: "#ffffff",
+        bodycolor: "#f8f8f8",
       },
       screens: {
         "mw-2xl": { max: "1535px" },
@@ -48,10 +49,7 @@ module.exports = {
         "mw-sm": { max: "639px" },
         // => @media (max-width: 639px) { ... }
       },
-     
-      
     },
-   
   },
   plugins: [require("@tailwindcss/typography")],
 };

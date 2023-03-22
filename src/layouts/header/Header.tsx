@@ -37,6 +37,7 @@ const Header = () => {
   ]);
   const [searchOpen, setSearchOpen] = useState<Boolean>(true);
   const [searchText, setSearchText] = useState<string>("");
+  const [themChange, setThemeChange] = useState<Boolean>(false);
   const hanldeClose = () => {
     setSearchOpen(!searchOpen);
   };
@@ -45,6 +46,9 @@ const Header = () => {
   };
   const hanldeSearch = () => {
     console.log(searchText);
+  };
+  const hanldeChnagedTheme = () => {
+    setThemeChange(!themChange);
   };
   return (
     <header>
@@ -110,9 +114,14 @@ const Header = () => {
                     <div className="login__btn icons text-brandLightOpacity100 bg-brandLightOpacity10 hover:bg-brandLightOpacity50">
                       <span> Login</span>
                     </div>
-                    <div className="theme__btn icons bg-brandLightOpacity10 hover:bg-brandLightOpacity50">
+
+                    <div className="theme__btn icons bg-brandLightOpacity10 hover:bg-brandLightOpacity50" onClick={hanldeChnagedTheme}>
                       <span>
-                        <Image src={moon} alt="moon light icon" />
+                        {themChange ? (
+                          <Image src={moon} alt="moon light icon" />
+                        ) : (
+                          <Image src={sun} alt="moon light icon" />
+                        )}
                       </span>
                     </div>
                   </>
