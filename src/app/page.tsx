@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <section className="home-page">
       <Trending />
-      {/* <LiveMatch /> */}
+      <LiveMatch />
     </section>
   );
 }

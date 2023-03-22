@@ -30,7 +30,8 @@ module.exports = {
         successIndicator: "#008d52",
         errorIndicator: "#d91618",
         // custom color
-        white: "#ffffff",
+        white: '#ffffff',
+        grayCard:'rgba(34, 30, 31, 0.1)',
         bodycolor: "#f8f8f8",
         grayCard: "rgba(34, 30, 31, 0.1)",
         grayCardHover: "rgba(34, 30, 31, 30%)",
@@ -52,6 +53,8 @@ module.exports = {
         // => @media (max-width: 639px) { ... }
       },
     },
+    
+   
   },
   plugins: [require("@tailwindcss/typography")],
 };
