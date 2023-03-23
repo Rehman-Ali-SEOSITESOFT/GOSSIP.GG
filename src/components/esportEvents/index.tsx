@@ -79,6 +79,7 @@ const EsportEvent = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
+          arrows: false
         },
       },
     ],

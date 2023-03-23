@@ -56,9 +56,7 @@ module.exports = {
         "mw-sm": { max: "639px" },
         // => @media (max-width: 639px) { ... }
       },
-      // backgroundImage: {
-      //   'events': "url('../../assets/images/esport-event/card.png')",
-      // },
+     
     },
   },
   plugins: [require("@tailwindcss/typography")],

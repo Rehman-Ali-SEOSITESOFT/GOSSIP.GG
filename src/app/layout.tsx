@@ -4,6 +4,7 @@ import Footer from "@/layouts/footer/Footer";
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Providers } from './providers';
 
 export default function RootLayout({
   children,
@@ -14,11 +15,13 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>
-        <main className="gossip bg-bodycolor">
+      <Providers>
+        <main className="gossip bg-bodycolor dark:bg-brandDark2">
           <Header />
           <div className="content">{children}</div>
           <Footer />
         </main>
+        </Providers>
       </body>
     </html>
   );
