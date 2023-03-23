@@ -6,13 +6,13 @@ import search from "../../assets/images/header/search.png";
 import moon from "../../assets/images/header/moon.png";
 import sun from "../../assets/images/header/sun.png";
 import close from "../../assets/images/header/close-search.png";
-import {useTheme} from 'next-themes';
+import { useTheme } from "next-themes";
 const Header = () => {
   interface MenuList {
     name: string;
     link: string;
   }
-  const {theme, setTheme} = useTheme();
+  const { theme, setTheme } = useTheme();
   const [menu, setMenu] = useState<MenuList[]>([
     {
       name: "Home",
@@ -50,7 +50,7 @@ const Header = () => {
   return (
     <header>
       <div className="header_width">
-        <div className="2xl:container header_container">
+        <div className="2xl:container header_container before:bg-bodycolor after:bg-bodycolor dark:before:bg-brandDark2 dark:after:bg-brandDark2 ">
           <div className="flex  flex-wrap items-center justify-between">
             <div className="xl:w-1/4 lg:w-1/5  w-3/6  header__left ">
               <div className="logo">
