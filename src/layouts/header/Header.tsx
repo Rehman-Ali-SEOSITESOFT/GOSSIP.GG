@@ -6,13 +6,13 @@ import search from "../../assets/images/header/search.png";
 import moon from "../../assets/images/header/moon.png";
 import sun from "../../assets/images/header/sun.png";
 import close from "../../assets/images/header/close-search.png";
-
+import {useTheme} from 'next-themes';
 const Header = () => {
   interface MenuList {
     name: string;
     link: string;
   }
-
+  const {theme, setTheme} = useTheme();
   const [menu, setMenu] = useState<MenuList[]>([
     {
       name: "Home",
@@ -120,10 +120,10 @@ const Header = () => {
                       onClick={hanldeChnagedTheme}
                     >
                       <span>
-                        {themChange ? (
-                          <Image src={moon} alt="moon light icon" />
+                        {theme === 'light' ? (
+                          <Image src={moon} alt="moon light icon" onClick={() => setTheme('dark')} />
                         ) : (
-                          <Image src={sun} alt="moon light icon" />
+                          <Image src={sun} alt="moon light icon"  onClick={() => setTheme('light')}/>
                         )}
                       </span>
                     </div>
