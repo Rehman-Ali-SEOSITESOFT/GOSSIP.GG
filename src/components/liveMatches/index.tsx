@@ -98,13 +98,13 @@ const LiveMatch = () => {
     ],
   };
   return (
-    <section className="live-matches">
-      <div className="global-section-width">
+    <section className="live-matches mb-10"  >
+      <div className="global-section-width ">
       <SectionSaprator title="LIVE MATCHES"/>
-        <Slider className="live-matches-slider" {...settings}>
+        <Slider className="live-matches-slider " {...settings}>
           {matchData.map((item, index) => (
             <div
-              className="bg-white dark:bg-brandDark1 border-inherit dark:border-brandDark1 border rounded-sm "
+              className="bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1  dark:bg-brandDark1 border-inherit dark:border-brandDark1 border rounded-sm "
               key={index}
             >
               <div className="flex flex-row justify-between items-center content-center p-4">
