@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import trendingLight from "../../assets/globals/trending-light.png";
 import trendingDard from "../../assets/globals/trending-dark.png";
+import { useTheme } from "next-themes";
 const Trending = () => {
   var settings = {
     dots: false,
@@ -97,6 +98,8 @@ const Trending = () => {
       link: "/",
     },
   ]);
+  const { theme, setTheme } = useTheme();
+
   return (
     <section className="trending">
       <div className="global-section-width">
@@ -104,11 +107,11 @@ const Trending = () => {
           <div className="flex items-center	">
             <div className="trend--left">
               <Image
-                src={trendingDard}
+                src={theme === "light" ? trendingDard : trendingLight}
                 alt="trending"
                 className="inline-block w-5"
               />
-              <h4 className="inline-block font-styls text-brandDark2">
+              <h4 className="inline-block font-styls text-brandDark2 dark:text-brandLightOpacity100 ">
                 Trending:
               </h4>
             </div>
@@ -117,7 +120,7 @@ const Trending = () => {
                 return (
                   <a
                     href="#"
-                    className="tags bg-grayCard hover:bg-grayCardHover"
+                    className="tags bg-grayCard hover:bg-grayCardHover dark:bg-brandLightOpacity10 dark:text-brandLightOpacity70 dark:hover:bg-brandLightOpacity30 "
                     key={index}
                   >
                     <span>{item.name}</span>

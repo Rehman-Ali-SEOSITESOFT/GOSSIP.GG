@@ -18,6 +18,7 @@ module.exports = {
         brandLightOpacity90: "rgba(229, 229, 229, 0.9)",
         brandLightOpacity70: "rgba(229, 229, 229, 0.7)",
         brandLightOpacity50: "rgba(229, 229, 229, 0.5)",
+        brandLightOpacity30: "rgba(229, 229, 229, 0.3)",
         brandLightOpacity10: "rgba(229, 229, 229, 0.1)",
         brandLightOpacity5: "rgba(229, 229, 229, 0.05)",
         // BRAND DARK COLORS
