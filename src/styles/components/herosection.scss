@@ -96,8 +96,18 @@
     margin-bottom: 10px;
     padding-bottom: 0;
     .image-wrapper {
-      height: 100px;
+      height: auto;
       width: 100%;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .desc-wrapper {
+      h3 {
+        font-size: 15px;
+        line-height: normal;
+      }
     }
   }
   .left-side {
