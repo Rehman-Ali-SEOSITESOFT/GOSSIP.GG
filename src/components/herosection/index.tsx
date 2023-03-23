@@ -9,21 +9,25 @@ const HeroSection = () => {
     <section className="herosection">
       <div className="global-section-width">
         <div className="2xl:container">
-          <div className="flex">
-            <div className="w-7/12">
-              <div className="left-side">
+          <div className="flex mw-lg:flex-col">
+            <div className="w-7/12 mw-xl:w-1/2 mw-lg:w-full ">
+              <div className="left-side ">
                 <Image src={leftside} alt="demo" />
-                <h2>
+                <div className="overlay"></div>
+                <h2 className="title text-brandLightOpacity100">
                   JONATHAN Stays Loyal to BGMI, No Plans to Shift to New State
                   Mobile Yet
                 </h2>
               </div>
             </div>
-            <div className="w-5/12">
-              <div className="right-side">
+            <div className="w-5/12 mw-xl:w-1/2  mw-lg:w-full">
+              <div className="right-side pl-8 mx-14:pl-6 mw-lg:pl-0 mw-lg:py-5">
                 {["", "", ""].map((e, i) => {
                   return (
-                    <div className="single-item flex" key={i}>
+                    <div
+                      className="single-item mw-sm:border-l-brand flex"
+                      key={i}
+                    >
                       <div className="image-wrapper ">
                         <Image src={book1} alt="demo " className=" " />
                       </div>
@@ -31,12 +35,18 @@ const HeroSection = () => {
                         <h3 className="text-base font-bold text-brandDark2 cu_font_family">
                           MR Luna has announced he is stepping down as CEO{" "}
                         </h3>
-                        <p className="text-xs text-textColor roboto_slab">
+                        <p className="text-xs text-textColor roboto_slab py-2.5 mx-14:py-2 mw-sm:hidden">
                           It is a long established fact that a reader will be
                           distracted by the readable content of a page when...
                         </p>
                         <small className="text-textColorGray text-xs">
-                          <span>3 hrs ago </span> <span>5 min read</span>
+                          <span>
+                            {" "}
+                            <i>3 hrs ago</i>{" "}
+                          </span>{" "}
+                          <span className="line border-l border-l-textColorGray	 text-textColorGray">
+                            5 min read
+                          </span>
                         </small>
                       </div>
                       <div className="thumnail-wrapper">

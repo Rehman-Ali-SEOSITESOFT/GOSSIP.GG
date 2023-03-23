@@ -139,7 +139,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="hidden mw-lg:block fixed__bottom__header fixed bottom-0 left-0 right-0 bg-brandDark2">
+        <div className="hidden mw-lg:block mw-lg:z-10 fixed__bottom__header fixed bottom-0 left-0 right-0 bg-brandDark2">
           <div className="xl:w-3/6 lg:w-1/1 ">
             <div className="header-navigation">
               <ul className="flex flex-wrap  justify-center mw-sm:justify-between">
