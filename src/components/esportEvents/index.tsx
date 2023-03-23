@@ -6,6 +6,7 @@ import Icon from '../../assets/images/esport-event/icon.png';
 import Logo from '../../assets/images/esport-event/logo.png';
 import RightIcon from '../../assets/images/esport-event/right.png';
 import Line from "../../assets/images/general/Line.png";
+import SectionSaprator from "../secSaprator";
 
 const EsportEvent = () => {
   interface EventList {
@@ -93,10 +94,11 @@ const EsportEvent = () => {
   return (
     <section className="Esport-events">
       <div className="global-section-width">
+        <SectionSaprator title="ESPORTS EVENTS"/>
         <Slider {...settings}>
           {eventData.map((item, index) => (
             <div
-              className="bg-white border-inherit border rounded-sm p-2.5"
+              className="bg-white dark:bg-brandDark1 border-inherit dark:border-brandDark1 border rounded-sm p-2.5"
               key={index}
             >
                <div  className="">
@@ -104,14 +106,14 @@ const EsportEvent = () => {
                  <Image src={Icon} className="absolute top-4 ml-1.5" alt="icon logo"/>
                </div>
                <div>
-                <p className=" text-brandDark2 font-bold font-esport-event-16 pt-4">
+                <p className=" text-brandDark2 dark:text-brandLightOpacity100  font-bold font-esport-event-16 pt-4">
                 DOTA Pro Circuit 2023 Tour 1  
                 </p>
                <div className="flex flex-row  pt-2.5">
                 <Image  src={Logo} alt="event logo"/>
                 <div className="flex flex-col pl-2">
-                  <p className=" text-brandDark2 font-esport-event-12 font-semibold ">SAT, FEB 02 - THU, MAR 18</p>
-                  <p className="font-esport-event-12 text-brandDark2 font-semibold pt-1.5">South Asia <span></span> Prizepool $4500 </p>
+                  <p className=" text-brandDark2 dark:text-brandLightOpacity100 font-esport-event-12 font-semibold ">SAT, FEB 02 - THU, MAR 18</p>
+                  <p className="font-esport-event-12 text-brandDark2 dark:text-brandLightOpacity100 font-semibold pt-1.5">South Asia <span></span> Prizepool $4500 </p>
                 </div>
                </div>
                 </div>
@@ -119,7 +121,7 @@ const EsportEvent = () => {
                 <Image src={Line} alt="saprator line" />
               </div>  
               <div className="flex flex-row justify-center items-center pt-3">
-                <p className="text-brandDark2 font-esport-event-12 font-semibold pr-1.5 ">Registration Open</p>
+                <p className="text-brandDark2 dark:text-brandLightOpacity100 font-esport-event-12 font-semibold pr-1.5 ">Registration Open</p>
                 <Image className="pl-1.5" src={RightIcon} alt="Right Icon"/> 
               </div>
             </div>
