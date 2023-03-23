@@ -5,6 +5,7 @@ import Logo from "../../assets/images/live-match/logo.png";
 import TeamOne from "../../assets/images/live-match/team-one.png";
 import TeamTwo from "../../assets/images/live-match/team-two.png";
 import Line from "../../assets/images/general/Line.png";
+import SectionSaprator from "../secSaprator";
 const LiveMatch = () => {
   interface MatchList {
     match_title: string;
@@ -99,6 +100,7 @@ const LiveMatch = () => {
   return (
     <section className="live-matches">
       <div className="global-section-width">
+      <SectionSaprator title="LIVE MATCHES"/>
         <Slider className="live-matches-slider" {...settings}>
           {matchData.map((item, index) => (
             <div

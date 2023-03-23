@@ -57,6 +57,9 @@ module.exports = {
         "mw-sm": { max: "639px" },
         // => @media (max-width: 639px) { ... }
       },
+      margin: {
+        '88px': '88px',
+      }
      
     },
   },
