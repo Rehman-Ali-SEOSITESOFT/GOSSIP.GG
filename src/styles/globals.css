@@ -72,12 +72,12 @@
 }
 
 /*  GLOBALE SLICK SLIDER NEXT AND PREVIW BUTTON */
-.slick-next {
-  right: 0;
+.trendingteass .slick-next {
+  right: 0 !important;
 }
 
-.slick-prev {
-  left: 0;
+.trendingteass .slick-prev {
+  left: 0 !important;
 }
 
 /* TRENDING COMPONENT  */
@@ -91,9 +91,9 @@
   display: none !important;
 }
 
-.trendingteass .slick-prev:before,
-.trendingteass .slick-next:before {
-  content: "\f104";
+.slick-prev:before,
+.slick-next:before {
+  content: "\f104" ;
   font-size: 20px;
   font-family: fontawesome;
   color: var(--brandDark2);
