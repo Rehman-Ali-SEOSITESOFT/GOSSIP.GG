@@ -79,6 +79,7 @@
 .slick-prev {
   left: 0;
 }
+
 /* TRENDING COMPONENT  */
 .trendingteass .slick-slide {
   width: auto !important;
@@ -106,14 +107,10 @@
 .trendingteass .slick-prev {
   top: 14px;
 }
-.slick-prev {
+.trendingteass .slick-prev {
   left: -45px;
 }
-/* @media screen and (max-width: 1430px) {
-  .trending .slick-next {
-    right: 0;
-  }
-} */
+
 @media screen and (max-width: 1430px) {
   .global-section-width {
     padding: 0 70px;
