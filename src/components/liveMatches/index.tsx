@@ -6,6 +6,7 @@ import TeamOne from "../../assets/images/live-match/team-one.png";
 import TeamTwo from "../../assets/images/live-match/team-two.png";
 import Line from "../../assets/images/general/Line.png";
 import SectionSaprator from "../secSaprator";
+import style from './liveMatch.module.css';
 const LiveMatch = () => {
   interface MatchList {
     match_title: string;
@@ -98,13 +99,13 @@ const LiveMatch = () => {
     ],
   };
   return (
-    <section className="live-matches">
-      <div className="global-section-width">
-      <SectionSaprator title="LIVE MATCHES"/>
-        <Slider className="live-matches-slider" {...settings}>
+    <section className="live-matches mb-10">
+      <div className="global-section-width ">
+        <SectionSaprator title="LIVE MATCHES" />
+        <Slider className="live-matches-slider " {...settings}>
           {matchData.map((item, index) => (
             <div
-              className="bg-white dark:bg-brandDark1 border-inherit dark:border-brandDark1 border rounded-sm "
+              className="bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1  dark:bg-brandDark1 border-inherit dark:border-brandDark1 border rounded-sm "
               key={index}
             >
               <div className="flex flex-row justify-between items-center content-center p-4">
@@ -114,19 +115,19 @@ const LiveMatch = () => {
                     src={Logo}
                     alt="Live Match logo"
                   />
-                  <p className="font-live-match-16 pl-3 text-brandDark2 dark:text-brandLightOpacity100 font-text-live-page font-semibold">
+                  <p className={`${style.font_live_match_16} pl-3 text-brandDark2 dark:text-brandLightOpacity100 ${style.font_text_live_page} font-semibold`}>
                     {item.match_title}
                   </p>
                 </div>
                 {item.match_status !== "LIVE" ? (
                   <div className="bg-grayCard dark:bg-brandLightOpacity10 opacity-100 h-8 max-w-[25%] flex justify-center items-center rounded-sm">
-                    <p className="text-brandDark2 dark:text-brandLightOpacity100 font-text-live-page font-semibold font-live-match-14 px-2 ">
+                    <p className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_text_live_page} font-semibold ${style.font_live_match_14} px-2 `}>
                       {item.match_status}
                     </p>
                   </div>
                 ) : (
                   <div className="bg-errorIndicator h-8 w-14 flex justify-center items-center rounded-sm">
-                    <p className="text-white font-text-live-page tracking-wider  ">
+                    <p className={`text-white ${style.font_text_live_page} tracking-wider  `}>
                       {item.match_status}
                     </p>
                   </div>
@@ -141,16 +142,16 @@ const LiveMatch = () => {
                     <Image src={TeamOne} alt="Team logo" />
                   </div>
                   <div className="flex flex-col justify-center items-center pl-3">
-                    <p className="text-brandDark2 dark:text-brandLightOpacity100 font-text-live-page font-bold font-live-match-18">
+                    <p className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_text_live_page} font-bold ${style.font_live_match_18}`}>
                       {item.team_one_title}
                     </p>
-                    <p className="text-brandDark2 dark:text-brandLightOpacity100 font-text-live-page text-1xl font-live-match-22 font-extrabold">
+                    <p className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_text_live_page} text-1xl ${style.font_live_match_22} font-extrabold`}>
                       {item.team_one_score}
                     </p>
                   </div>
                 </div>
                 <div className="  ">
-                  <p className="font-live-match-16 font-text-live-pag text-brandDark2 dark:text-brandLightOpacity100 opacity-70">
+                  <p className={`${style.font_live_match_16} font-text-live-pag text-brandDark2 dark:text-brandLightOpacity100 opacity-70`}>
                     vs
                   </p>
                 </div>
@@ -159,39 +160,38 @@ const LiveMatch = () => {
                     <Image src={TeamTwo} alt="Team logo" />
                   </div>
                   <div className="flex flex-col justify-center items-center  pl-3">
-                    <p className="text-brandDark2 dark:text-brandLightOpacity100 font-text-live-page font-bold font-live-match-18">
+                    <p className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_text_live_page} font-bold ${style.font_live_match_18}`}>
                       {item.team_two_title}
                     </p>
-                    <p className="text-brandDark2 dark:text-brandLightOpacity100 font-text-live-page text-1xl font-live-match-22 font-extrabold">
+                    <p className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_text_live_page} text-1xl ${style.font_live_match_22} font-extrabold`}>
                       {item.team_two_score}
                     </p>
                   </div>
                 </div>
               </div>
               <div className=" hidden p-4 flex flex-row justify-between mw-sm1:block border-t-inherit border-t ">
-               <div className="flex flex-row justify-between items-center">
-               <div className="flex flex-row justify-center items-center">
-                  <Image src={TeamOne} alt="Team logo" />
-                  <p className="text-brandDark2 dark:text-brandLightOpacity100 pl-3 font-text-live-page font-bold font-live-match-18">
-                    {item.team_one_title}
+                <div className="flex flex-row justify-between items-center">
+                  <div className="flex flex-row justify-center items-center">
+                    <Image src={TeamOne} alt="Team logo" />
+                    <p className={`text-brandDark2 dark:text-brandLightOpacity100 pl-3 ${style.font_text_live_page} font-bold ${style.font_live_match_18}`}>
+                      {item.team_one_title}
+                    </p>
+                  </div>
+                  <p className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_text_live_page} text-1xl ${style.font_live_match_22} font-extrabold`}>
+                    {item.team_one_score}
                   </p>
                 </div>
-                <p className="text-brandDark2 dark:text-brandLightOpacity100 font-text-live-page text-1xl font-live-match-22 font-extrabold">
-                  {item.team_one_score}
-                </p>
-               </div>
-               <div className="flex flex-row justify-between items-center mt-4">
-               <div className="flex flex-row justify-center items-center">
-                  <Image src={TeamTwo} alt="Team logo" />
-                  <p className="text-brandDark2 dark:text-brandLightOpacity100 pl-3 font-text-live-page font-bold font-live-match-18">
-                    {item.team_two_title}
+                <div className="flex flex-row justify-between items-center mt-4">
+                  <div className="flex flex-row justify-center items-center">
+                    <Image src={TeamTwo} alt="Team logo" />
+                    <p className={`text-brandDark2 dark:text-brandLightOpacity100 pl-3 ${style.font_text_live_page} font-bold ${style.font_live_match_18}`}>
+                      {item.team_two_title}
+                    </p>
+                  </div>
+                  <p className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_text_live_page} text-1xl ${style.font_live_match_22} font-extrabold`}>
+                    {item.team_two_score}
                   </p>
                 </div>
-                <p className="text-brandDark2 dark:text-brandLightOpacity100 font-text-live-page text-1xl font-live-match-22 font-extrabold">
-                  {item.team_two_score}
-                </p>
-               </div>
-               
               </div>
             </div>
           ))}

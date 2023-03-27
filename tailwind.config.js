@@ -59,7 +59,7 @@ module.exports = {
         // => @media (max-width: 639px) { ... }
       },
       margin: {
-        "88px": "88px",
+        '88px': '88px',
       },
     },
   },

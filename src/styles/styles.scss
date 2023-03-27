@@ -1,76 +1,76 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@300;400;500;600;700;800;900&display=swap");
-// font-family: "Montserrat", sans-serif;
-// font-family: "Roboto Slab", serif;
-@import "./constant.scss";
-//  LAYOUTS STYLE'S
-@import "./layouts/Header.scss";
-@import "./layouts/Footer.scss";
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@300;400;500;600;700;800;900&display=swap");
+// // font-family: "Montserrat", sans-serif;
+// // font-family: "Roboto Slab", serif;
+// @import "./constant.scss";
+// //  LAYOUTS STYLE'S
+// @import "./layouts/Header.scss";
+// @import "./layouts/Footer.scss";
 
-//  COMPONENTS STYLE'S
+// //  COMPONENTS STYLE'S
 
-// PAGE'S STYLE'S
-@import "./pages/home.scss";
+// // PAGE'S STYLE'S
+// @import "./pages/home.scss";
 
-// COMPONENTS STYLE'S
-@import "./components/live-match.scss";
-@import "./components/esport-events.scss";
-@import "./components/custom.scss";
+// // COMPONENTS STYLE'S
+// @import "./components/live-match.scss";
+// @import "./components/esport-events.scss";
+// @import "./components/custom.scss";
 
-@import "./components/live-match.scss";
-@import "./components/trending.scss";
-@import "./components/herosection.scss";
-// GLOBAL SECTION WIDTH
-.global-section-width {
-  width: 100%;
-  max-width: 1440px;
-  margin: auto;
-  padding: 0 80px;
-}
+// @import "./components/live-match.scss";
+// @import "./components/trending.scss";
+// @import "./components/herosection.scss";
+// // GLOBAL SECTION WIDTH
+// .global-section-width {
+//   width: 100%;
+//   max-width: 1440px;
+//   margin: auto;
+//   padding: 0 80px;
+// }
 
-.montserratfont {
-  font-family: "Montserrat";
-}
-.robotoslub {
-  font-family: "Roboto Slab";
-}
+// .montserratfont {
+//   font-family: "Montserrat";
+// }
+// .robotoslub {
+//   font-family: "Roboto Slab";
+// }
 
-.slick-slider button {
-  background-color: $brandLightOpacity100;
-  width: 40px;
-  height: 40px;
-  border-radius: 25px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  z-index: 1;
-}
-.slick-slider {
-  .slick-prev:before,
-  .slick-next:before {
-    content: "\f104";
-    font-size: 20px;
-    color: $brandDark2;
-    font-family: fontawesome;
-  }
+// .slick-slider button {
+//   background-color: $brandLightOpacity100;
+//   width: 40px;
+//   height: 40px;
+//   border-radius: 25px;
+//   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+//   z-index: 1;
+// }
+// .slick-slider {
+//   .slick-prev:before,
+//   .slick-next:before {
+//     content: "\f104";
+//     font-size: 20px;
+//     color: $brandDark2;
+//     font-family: fontawesome;
+//   }
 
-  .slick-next:before {
-    content: "\f105";
-  }
-}
-.slick-slider button:hover {
-  background-color: $brandLightOpacity100;
-}
+//   .slick-next:before {
+//     content: "\f105";
+//   }
+// }
+// .slick-slider button:hover {
+//   background-color: $brandLightOpacity100;
+// }
 
-@media screen and (max-width: 1430px) {
-  .global-section-width {
-    // padding: 0 20px;
-    padding: 0 70px;
-  }
-}
+// @media screen and (max-width: 1430px) {
+//   .global-section-width {
+//     // padding: 0 20px;
+//     padding: 0 70px;
+//   }
+// }
 
-@media screen and (max-width: 1024px) {
-  .global-section-width {
-    padding: 0 16px;
-  }
-}
+// @media screen and (max-width: 1024px) {
+//   .global-section-width {
+//     padding: 0 16px;
+//   }
+// }

@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
-import Card from '../../assets/images/esport-event/card.png';
-import Icon from '../../assets/images/esport-event/icon.png';
-import Logo from '../../assets/images/esport-event/logo.png';
-import RightIcon from '../../assets/images/esport-event/right.png';
+import Card from "../../assets/images/esport-event/card.png";
+import Icon from "../../assets/images/esport-event/icon.png";
+import Logo from "../../assets/images/esport-event/logo.png";
+import RightIcon from "../../assets/images/esport-event/right.png";
 import Line from "../../assets/images/general/Line.png";
 import SectionSaprator from "../secSaprator";
+import style from './esportEvents.module.css';
+
 
 const EsportEvent = () => {
   interface EventList {
@@ -62,8 +64,6 @@ const EsportEvent = () => {
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 1,
-    // centerPadding: '40px',
-    // centerMode: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -80,49 +80,54 @@ const EsportEvent = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          arrows: false
+          arrows: false,
         },
       },
     ],
   };
 
-
-  // position: absolute;
-  //   top: 8px;
-  //   margin-left: 8px;
-
   return (
     <section className="Esport-events">
       <div className="global-section-width">
-        <SectionSaprator title="ESPORTS EVENTS"/>
+        <SectionSaprator title="ESPORTS EVENTS" />
         <Slider {...settings}>
           {eventData.map((item, index) => (
             <div
-              className="bg-white dark:bg-brandDark1 border-inherit dark:border-brandDark1 border rounded-sm p-2.5"
+              className="bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1 dark:bg-brandDark1 border-inherit dark:border-brandDark1 border rounded-sm p-2.5"
               key={index}
             >
-               <div  className="">
-                 <Image className="w-[100%]" src={Card} alt="card logo"/>
-                 <Image src={Icon} className="absolute top-4 ml-1.5" alt="icon logo"/>
-               </div>
-               <div>
-                <p className=" text-brandDark2 dark:text-brandLightOpacity100  font-bold font-esport-event-16 pt-4">
-                DOTA Pro Circuit 2023 Tour 1  
+              <div className="">
+                <Image className="w-[100%]" src={Card} alt="card logo" />
+                <Image
+                  src={Icon}
+                  className="absolute top-4 ml-1.5"
+                  alt="icon logo"
+                />
+              </div>
+              <div>
+                <p className={`text-brandDark2 dark:text-brandLightOpacity100  font-bold ${style.font_esport_event_16} pt-4`}>
+                  DOTA Pro Circuit 2023 Tour 1
                 </p>
-               <div className="flex flex-row  pt-2.5">
-                <Image  src={Logo} alt="event logo"/>
-                <div className="flex flex-col pl-2">
-                  <p className=" text-brandDark2 dark:text-brandLightOpacity100 font-esport-event-12 font-semibold ">SAT, FEB 02 - THU, MAR 18</p>
-                  <p className="font-esport-event-12 text-brandDark2 dark:text-brandLightOpacity100 font-semibold pt-1.5">South Asia <span></span> Prizepool $4500 </p>
+                <div className="flex flex-row  pt-2.5">
+                  <Image src={Logo} alt="event logo" />
+                  <div className="flex flex-col pl-2">
+                    <p className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_esport_event_12} font-semibold `}>
+                      SAT, FEB 02 - THU, MAR 18
+                    </p>
+                    <p className={`${style.font_esport_event_12} text-brandDark2 dark:text-brandLightOpacity100 font-semibold pt-1.5`}>
+                      South Asia <span></span> Prizepool $4500
+                    </p>
+                  </div>
                 </div>
-               </div>
-                </div>
-                <div className="flex justify-center items-center pt-2.5">
+              </div>
+              <div className="flex justify-center items-center pt-2.5">
                 <Image src={Line} alt="saprator line" />
-              </div>  
+              </div>
               <div className="flex flex-row justify-center items-center pt-3">
-                <p className="text-brandDark2 dark:text-brandLightOpacity100 font-esport-event-12 font-semibold pr-1.5 ">Registration Open</p>
-                <Image className="pl-1.5" src={RightIcon} alt="Right Icon"/> 
+                <p className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_esport_event_12} font-semibold pr-1.5 `}>
+                  Registration Open
+                </p>
+                <Image className="pl-1.5" src={RightIcon} alt="Right Icon" />
               </div>
             </div>
           ))}

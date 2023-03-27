@@ -9,11 +9,11 @@ import LatestNews from "@/components/latestnews/Index";
 export default function Home() {
   return (
     <section className="home-page">
-      <Trending />
+      {/* <Trending />
       <HeroSection />
       <EsportEvent />
       <LatestNews />
-      <LiveMatch />
+      <LiveMatch /> */}
     </section>
   );
 }
