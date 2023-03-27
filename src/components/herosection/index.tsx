@@ -6,7 +6,7 @@ import book2 from "../../assets/images/hero/right-side-012.png";
 import book3 from "../../assets/images/hero/right-side-03.png";
 const HeroSection = () => {
   return (
-    <section className="herosection pt-3	">
+    <section className="herosection pt-3 mw-md:pt-11	">
       <div className="global-section-width">
         <div className="2xl:container">
           <div className="flex mw-lg:flex-col">

@@ -49,7 +49,7 @@ const Header = () => {
 
   return (
     <header>
-      <div className="header_width">
+      <div className="header_width bg-brandDark3">
         <div className="2xl:container header_container before:bg-bodycolor after:bg-bodycolor dark:before:bg-brandDark2 dark:after:bg-brandDark2 ">
           <div className="flex  flex-wrap items-center justify-between">
             <div className="xl:w-1/4 lg:w-1/5  w-3/6  header__left ">
@@ -114,13 +114,15 @@ const Header = () => {
 
                     <div
                       className="theme__btn icons bg-brandLightOpacity10 hover:bg-brandLightOpacity50"
-                      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                      onClick={() =>
+                        setTheme(theme === "dark" ? "light" : "dark")
+                      }
                     >
                       <span>
-                        {theme === 'light' ? (
+                        {theme === "light" ? (
                           <Image src={moon} alt="moon light icon" />
                         ) : (
-                          <Image src={sun} alt="moon light icon"  />
+                          <Image src={sun} alt="moon light icon" />
                         )}
                       </span>
                     </div>

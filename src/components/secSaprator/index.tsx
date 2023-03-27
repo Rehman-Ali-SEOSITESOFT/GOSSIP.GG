@@ -2,11 +2,19 @@ import React from "react";
 
 const SectionSaprator = (props: any) => {
   return (
+<<<<<<< HEAD
     <div className="section-saprator flex flex-row items-center mb-6 mt-[88px]">
       <p className="text-brandDark2 font-bold font-sec-saprate-18 dark:text-secSaprator">
         {props.title}
       </p>
       <div className="bg-gradient-to-r from-brandDark2  h-0.5  min-w-[86%] ml-3 dark:from-secSaprator"></div>
+=======
+    <div className="section-saprator flex flex-row items-center mb-6 mt-[88px] overflow-hidden mw-xl:m-0	mw-xl:py-8 mw-sm:py-5">
+      <p className="text-brandDark2 font-bold font-sec-saprate-18 dark:text-secSaprator w-auto min-w-fit mw-sm:pt-5 mw-sm:border-t-2 border-t-brandLightOpacity10 mw-sm:w-full">
+        {props.title}
+      </p>
+      <div className="bg-gradient-to-r from-brandDark2 h-0.5  min-w-[86%] ml-3 dark:from-secSaprator mw-sm:hidden"></div>
+>>>>>>> 7f41c649677eb2f013462ce76ab4a13485ae8225
     </div>
   );
 };

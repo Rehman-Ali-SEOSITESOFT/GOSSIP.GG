@@ -38,7 +38,7 @@ module.exports = {
         grayCardHover: "rgba(34, 30, 31, 30%)",
         textColor: "rgba(34, 30, 31, 0.9)",
         textColorGray: "rgba(34, 30, 31, 0.7) ",
-        secSaprator: "#ED4E50"
+        secSaprator: "#ED4E50",
       },
       screens: {
         "mw-2xl": { max: "1535px" },
