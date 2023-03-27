@@ -2,11 +2,15 @@ import { Fragment, useState } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
 import Logo from "../../assets/images/live-match/logo.png";
+import LogoDark from "../../assets/images/live-match/dark-logo.png";
 import TeamOne from "../../assets/images/live-match/team-one.png";
 import TeamTwo from "../../assets/images/live-match/team-two.png";
 import Line from "../../assets/images/general/Line.png";
+import DarkLine from "../../assets/images/general/dark-line.png";
 import SectionSaprator from "../secSaprator";
 import style from './liveMatch.module.css';
+import { useTheme } from "next-themes";
+
 const LiveMatch = () => {
   interface MatchList {
     match_title: string;
@@ -16,7 +20,7 @@ const LiveMatch = () => {
     team_two_title: string;
     team_two_score: number;
   }
-
+   const {theme} = useTheme(); 
   const [matchData, setMatchData] = useState<MatchList[]>([
     {
       match_title: "LPL 2023 Spring",
@@ -84,6 +88,7 @@ const LiveMatch = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
+          arrows: false,
         },
       },
 
@@ -112,7 +117,7 @@ const LiveMatch = () => {
                 <div className="flex items-center">
                   <Image
                     className="max-w-[100%] max-h-[100%]"
-                    src={Logo}
+                    src={theme === 'dark' ? LogoDark :  Logo }
                     alt="Live Match logo"
                   />
                   <p className={`${style.font_live_match_16} pl-3 text-brandDark2 dark:text-brandLightOpacity100 ${style.font_text_live_page} font-semibold`}>
@@ -134,7 +139,7 @@ const LiveMatch = () => {
                 )}
               </div>
               <div className="flex justify-center items-center mw-sm1:hidden">
-                <Image src={Line} alt="saprator line" />
+                <Image src={theme === 'dark' ? DarkLine : Line} alt="saprator line" />
               </div>
               <div className=" p-4 flex flex-row justify-between mw-sm1:hidden ">
                 <div className="flex flex-row justify-between">
