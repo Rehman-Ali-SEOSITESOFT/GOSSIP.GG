@@ -11,9 +11,9 @@ export default function Home() {
     <section className="home-page">
       <Trending />
       <HeroSection />
-      {/* <EsportEvent /> */}
+      <EsportEvent />
       <LatestNews />
-      {/* <LiveMatch /> */}
+      <LiveMatch />
     </section>
   );
 }

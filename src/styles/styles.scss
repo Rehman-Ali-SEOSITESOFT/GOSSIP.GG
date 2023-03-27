@@ -15,9 +15,9 @@
 @import "./pages/home.scss";
 
 // COMPONENTS STYLE'S
-@import './components/live-match.scss';
-@import './components/esport-events.scss';
-@import './components/custom.scss';
+@import "./components/live-match.scss";
+@import "./components/esport-events.scss";
+@import "./components/custom.scss";
 
 @import "./components/live-match.scss";
 @import "./components/trending.scss";
@@ -29,6 +29,14 @@
   margin: auto;
   padding: 0 80px;
 }
+
+.montserratfont {
+  font-family: "Montserrat";
+}
+.robotoslub {
+  font-family: "Roboto Slab";
+}
+
 .slick-slider button {
   background-color: $brandLightOpacity100;
   width: 40px;
