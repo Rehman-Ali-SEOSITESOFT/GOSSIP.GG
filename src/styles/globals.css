@@ -36,7 +36,7 @@
   padding: 0 80px;
 }
 .slick-slider button {
-  background-color: #e5e5e5;
+  background-color: #e5e5e5 !important;
   width: 40px;
   height: 40px;
   border-radius: 25px;
@@ -44,7 +44,7 @@
   z-index: 1;
 }
 .slick-slider .slick-prev:before,
-.slick-next:before {
+.slick-slider .slick-next:before {
   content: "\f104";
   font-size: 20px;
   color: #221e1f;
@@ -93,7 +93,7 @@
 
 .slick-prev:before,
 .slick-next:before {
-  content: "\f104" ;
+  content: "\f104";
   font-size: 20px;
   font-family: fontawesome;
   color: var(--brandDark2);

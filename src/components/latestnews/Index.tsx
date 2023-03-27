@@ -81,10 +81,10 @@ const LatestNews = () => {
                       gaming...
                     </h4>
                     <div className="tags flex py-4 montserratfont">
-                      <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium ">
+                      <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer  ">
                         News
                       </div>
-                      <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded text-xs leading-4 font-medium">
+                      <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer">
                         Esports
                       </div>
                     </div>
@@ -100,7 +100,7 @@ const LatestNews = () => {
                   <div
                     className={`${
                       style.thumnail_img
-                    } pt-5 pr-5  border-r-grayCard
+                    }  pr-5  border-r-grayCard
                     ${
                       index + 1 === 1 || index + 1 === 2 || index + 1 === 3
                         ? "pt-0"
