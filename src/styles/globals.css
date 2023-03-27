@@ -70,9 +70,56 @@
 .robotoslub {
   font-family: "Roboto Slab";
 }
+
+/*  GLOBALE SLICK SLIDER NEXT AND PREVIW BUTTON */
+.slick-next {
+  right: 0;
+}
+
+.slick-prev {
+  left: 0;
+}
+/* TRENDING COMPONENT  */
+.trendingteass .slick-slide {
+  width: auto !important;
+  margin-right: 12px;
+}
+
+.trendingteass button.slick-disabled,
+.trendingteass button.slick-disabled {
+  display: none !important;
+}
+
+.trendingteass .slick-prev:before,
+.trendingteass .slick-next:before {
+  content: "\f104";
+  font-size: 20px;
+  font-family: fontawesome;
+  color: var(--brandDark2);
+}
+
+.trendingteass .slick-next:before {
+  content: "\f105";
+}
+
+.trendingteass .slick-next,
+.trendingteass .slick-prev {
+  top: 14px;
+}
+.slick-prev {
+  left: -45px;
+}
+/* @media screen and (max-width: 1430px) {
+  .trending .slick-next {
+    right: 0;
+  }
+} */
 @media screen and (max-width: 1430px) {
   .global-section-width {
     padding: 0 70px;
+  }
+  .trending .slick-next {
+    right: 0;
   }
 }
 

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import trendingLight from "../../assets/globals/trending-light.png";
 import trendingDard from "../../assets/globals/trending-dark.png";
+import styles from "./trending.module.css";
 import { useTheme } from "next-themes";
 const Trending = () => {
   var settings = {
@@ -101,26 +102,31 @@ const Trending = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <section className="trending">
+    <section className={`${styles.trending} trending`}>
       <div className="global-section-width">
         <div className="2xl:container">
           <div className="flex items-center	">
-            <div className="trend--left">
+            <div className={`${styles.trend_left}`}>
               <Image
                 src={theme === "light" ? trendingDard : trendingLight}
                 alt="trending"
                 className="inline-block w-5"
               />
-              <h4 className="inline-block font-styls text-brandDark2 dark:text-brandLightOpacity100 ">
+              <h4
+                className={`inline-block ${styles.font_styls} text-brandDark2 dark:text-brandLightOpacity100 `}
+              >
                 Trending:
               </h4>
             </div>
-            <Slider {...settings} className="trend--right trendingteass">
+            <Slider
+              {...settings}
+              className={`${styles.trend_right} ${styles.trendingteass} trendingteass`}
+            >
               {tags.map((item, index) => {
                 return (
                   <a
                     href="#"
-                    className="tags bg-grayCard hover:bg-grayCardHover dark:bg-brandLightOpacity10 dark:text-brandLightOpacity70 dark:hover:bg-brandLightOpacity30 "
+                    className={`${styles.tags} bg-grayCard hover:bg-grayCardHover dark:bg-brandLightOpacity10 dark:text-brandLightOpacity70 dark:hover:bg-brandLightOpacity30 `}
                     key={index}
                   >
                     <span>{item.name}</span>
