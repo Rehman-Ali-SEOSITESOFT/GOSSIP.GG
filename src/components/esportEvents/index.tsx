@@ -8,8 +8,8 @@ import RightIcon from "../../assets/images/esport-event/right.png";
 import Line from "../../assets/images/general/Line.png";
 import SectionSaprator from "../secSaprator";
 import style from './esportEvents.module.css';
-
-
+import { useTheme } from "next-themes";
+import DarkLine from "../../assets/images/general/dark-line.png";
 const EsportEvent = () => {
   interface EventList {
     event_title: string;
@@ -17,6 +17,7 @@ const EsportEvent = () => {
     country: string;
     prize: string;
   }
+  const {theme} = useTheme(); 
 
   const [eventData, setEventData] = useState<EventList[]>([
     {
@@ -71,6 +72,7 @@ const EsportEvent = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
+          arrows: false,
         },
       },
 
@@ -121,7 +123,7 @@ const EsportEvent = () => {
                 </div>
               </div>
               <div className="flex justify-center items-center pt-2.5">
-                <Image src={Line} alt="saprator line" />
+                <Image src={ theme === 'dark' ? DarkLine :  Line} alt="saprator line" />
               </div>
               <div className="flex flex-row justify-center items-center pt-3">
                 <p className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_esport_event_12} font-semibold pr-1.5 `}>
