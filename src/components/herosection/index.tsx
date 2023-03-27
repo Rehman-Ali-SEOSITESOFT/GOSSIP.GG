@@ -36,9 +36,8 @@ const HeroSection = () => {
                     </p>
                     <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs">
                       <span>
-                        {" "}
-                        <i>3 hrs ago</i>{" "}
-                      </span>{" "}
+                        <i>3 hrs ago</i>
+                      </span>
                       <span className="line border-l border-l-textColorGray dark:border-l-brandLightOpacity70	">
                         5 min read
                       </span>
@@ -46,7 +45,7 @@ const HeroSection = () => {
                   </div>
                   <div className="thumnail-wrapper">
                     <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity30  hover:bg-grayCardHover cursor-pointer rounded-3xl">
-                      <i className="fa-regular fa-bookmark "></i>{" "}
+                      <i className="fa-regular fa-bookmark "></i>
                     </div>
                   </div>
                 </div>
@@ -64,9 +63,8 @@ const HeroSection = () => {
                     </p>
                     <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs">
                       <span>
-                        {" "}
-                        <i>3 hrs ago</i>{" "}
-                      </span>{" "}
+                        <i>3 hrs ago</i>
+                      </span>
                       <span className="line border-l border-l-textColorGray dark:border-l-brandLightOpacity70	">
                         5 min read
                       </span>
@@ -74,7 +72,7 @@ const HeroSection = () => {
                   </div>
                   <div className="thumnail-wrapper">
                     <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity30  hover:bg-grayCardHover cursor-pointer rounded-3xl">
-                      <i className="fa-regular fa-bookmark "></i>{" "}
+                      <i className="fa-regular fa-bookmark "></i>
                     </div>
                   </div>
                 </div>
@@ -92,9 +90,8 @@ const HeroSection = () => {
                     </p>
                     <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs">
                       <span>
-                        {" "}
-                        <i>3 hrs ago</i>{" "}
-                      </span>{" "}
+                        <i>3 hrs ago</i>
+                      </span>
                       <span className="line border-l border-l-textColorGray dark:border-l-brandLightOpacity70	">
                         5 min read
                       </span>
@@ -102,7 +99,7 @@ const HeroSection = () => {
                   </div>
                   <div className="thumnail-wrapper">
                     <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity30  hover:bg-grayCardHover cursor-pointer rounded-3xl">
-                      <i className="fa-regular fa-bookmark "></i>{" "}
+                      <i className="fa-regular fa-bookmark "></i>
                     </div>
                   </div>
                 </div>

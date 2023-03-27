@@ -4,7 +4,7 @@ import logo from "../../assets/images/footer/main-logo.png";
 import MobileLogo from "../../assets/images/footer/m-footer-logo.png";
 import Instgram from "../../assets/images/footer/instagram.png";
 import Twitter from "../../assets/images/footer/twitter.png";
-
+import style from './Footer.module.css';
 const Footer = () => {
   return (
     <footer className="bg-brandDark2 mw-lg:mb-16 dark:bg-brandDark3">
@@ -14,7 +14,7 @@ const Footer = () => {
           <Image src={logo} alt="Gossip GG" />
           <div className="pt-6 flex flex-row justify-between">
             <div className="max-w-[70%]">
-              <p className="text-brandLightOpacity100 text-base font-text1 max-w-[80%]">
+              <p className={`text-brandLightOpacity100 text-base ${style.font_text1} max-w-[80%]`}>
                 Gossip.GG brings you the latest scoop from Gaming, Esports,
                 Tech, and a whole lot more. From breaking the latest industry
                 news to in-depth reviews and features, Gossip.GG has you
@@ -66,7 +66,7 @@ const Footer = () => {
         {/* Mobile Footer Start */}
         <div className="hidden pt-5  pb-5 mw-lg:block">
           <Image src={MobileLogo} alt="Gossip GG" />
-          <p className="pt-3 text-brandLightOpacity100  font-text2 ">
+          <p className={`pt-3 text-brandLightOpacity100  ${style.font_text2} `}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry&#39;s standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -74,7 +74,7 @@ const Footer = () => {
           </p>
           <div className="pt-7 flex flex-row justify-between">
             <div>
-              <ul className="flex flex-col text-brandLightOpacity100 text-left  font-text2   ">
+              <ul className={`flex flex-col text-brandLightOpacity100 text-left  ${style.font_text2}   `}>
                 <li>
                   <a href="#">About us</a>
                 </li>
@@ -95,7 +95,7 @@ const Footer = () => {
               </div>
             </div>
             <div>
-              <ul className="flex flex-col text-brandLightOpacity100   font-text2   text-right">
+              <ul className={`flex flex-col text-brandLightOpacity100   ${style.font_text2}   text-right`}>
                 <li>
                   <a href="#">Disclaimer</a>
                 </li>
@@ -108,7 +108,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="flex justify-center items-center pt-7  font-text2  ">
+          <div className={`flex justify-center items-center pt-7  ${style.font_text2}  `}>
             <p className="text-brandLightOpacity100">
               (c) 2023 Gossip.gg - All Rights Reserved
             </p>

@@ -1,10 +1,10 @@
 .trending {
   padding: 25px 0 35px 0;
 
-  .trend--left {
+  .trend-left {
     width: 12%;
   }
-  .trend--right {
+  .trend-right {
     width: 88%;
   }
 
@@ -35,20 +35,20 @@
   line-height: 17px;
   color: rgba(34, 30, 31, 0.7);
   padding: 8px 12px;
-  // background: rgba(34, 30, 31, 0.1);
+  /* // background: rgba(34, 30, 31, 0.1); */
   border-radius: 16px;
   text-align: center;
   width: auto !important;
 }
-// .tags:hover {
+/* // .tags:hover {
 //   background-color: rgb(198 197 197);
-// }
+// } */
 .trendingteass .slick-slide {
   width: auto !important;
   margin-right: 12px;
 }
 
-// .trendingteass button {
+/* // .trendingteass button {
 //   background-color: $brandLightOpacity100;
 //   width: 40px;
 //   height: 40px;
@@ -58,7 +58,7 @@
 // }
 // .trendingteass button:hover {
 //   background-color: $brandLightOpacity100;
-// }
+// } */
 .trendingteass button.slick-disabled,
 .trendingteass button.slick-disabled {
   display: none !important;
@@ -78,12 +78,12 @@
 
 @media screen and (max-width: 1430px) {
   .trending {
-    // .trend--left {
+    /* // .trend-left {
     //   width: 15%;
     // }
-    // .trend--right {
+    // .trend-right {
     //   width: 85%;
-    // }
+    // } */
     .slick-next {
       right: 0;
     }
@@ -91,10 +91,10 @@
 }
 @media screen and (max-width: 1024px) {
   .trending {
-    .trend--left {
+    .trend-left {
       width: 15%;
     }
-    .trend--right {
+    .trend-right {
       width: 85%;
     }
   }
@@ -104,13 +104,13 @@
   .trending {
     padding: 16px 0 30px 0;
     border-bottom: 1px solid $brandLightOpacity10;
-    .trend--left {
+    .trend-left {
       width: 15%;
       h4 {
         display: none;
       }
     }
-    .trend--right {
+    .trend-right {
       width: 85%;
     }
   }

@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './overwrite.css';
+
+/* // GLOBAL SECTION WIDTH */
+.global-section-width {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 80px;
+}
+.slick-slider button {
+  background-color: #e5e5e5;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  z-index: 1;
+}
+.slick-slider .slick-prev:before, .slick-next:before {
+    content: "\f104";
+    font-size: 20px;
+    color: #221e1f;
+    font-family: fontawesome;
+  }
+
+  .slick-slider .slick-next:before {
+    content: "\f105";
+  }
+
+.slick-slider button:hover {
+  background-color: #e5e5e5;
+}
+
+
+.font-sec-saprate-18 {
+  font-family: "Montserrat";
+  font-size: 18px;
+}
+
+
+@media screen and (max-width: 1430px) {
+  .global-section-width {
+    /* // padding: 0 20px; */
+    padding: 0 70px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .global-section-width {
+    padding: 0 16px;
+  }
+}
