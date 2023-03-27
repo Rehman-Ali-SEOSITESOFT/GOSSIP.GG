@@ -2,7 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './overwrite.css';
+@import "./overwrite.css";
+
+/* // BRAND LIGHT COLOR'S */
+:root {
+  --whitecolor: white;
+  --brandLightOpacity100: #e5e5e5;
+  --brandLightOpacity90: rgba(229, 229, 229, 0.9);
+  --brandLightOpacity70: rgba(229, 229, 229, 0.7);
+  --brandLightOpacity50: rgba(229, 229, 229, 0.5);
+  --brandLightOpacity10: rgba(229, 229, 229, 0.1);
+  --brandLightOpacity5: rgba(229, 229, 229, 0.05);
+  --bodycolor: #f8f8f8;
+  /* // BRAND DARK COLORS */
+  --brandDark1: #2e2a2b;
+  --brandDark2: #221e1f;
+  --brandDark3: #141313;
+  --grayCardHover: rgba(34, 30, 31, 30%);
+
+  /* // BRAND COLOR */
+  --brand: #ed4e50;
+
+  /* // SEMANTIC COLORS */
+  --successIndicator: #008d52;
+  --errorIndicator: #d91618;
+}
 
 /* // GLOBAL SECTION WIDTH */
 .global-section-width {
@@ -19,31 +43,35 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   z-index: 1;
 }
-.slick-slider .slick-prev:before, .slick-next:before {
-    content: "\f104";
-    font-size: 20px;
-    color: #221e1f;
-    font-family: fontawesome;
-  }
+.slick-slider .slick-prev:before,
+.slick-next:before {
+  content: "\f104";
+  font-size: 20px;
+  color: #221e1f;
+  font-family: fontawesome;
+}
 
-  .slick-slider .slick-next:before {
-    content: "\f105";
-  }
+.slick-slider .slick-next:before {
+  content: "\f105";
+}
 
 .slick-slider button:hover {
   background-color: #e5e5e5;
 }
-
 
 .font-sec-saprate-18 {
   font-family: "Montserrat";
   font-size: 18px;
 }
 
-
+.montserratfont {
+  font-family: "Montserrat";
+}
+.robotoslub {
+  font-family: "Roboto Slab";
+}
 @media screen and (max-width: 1430px) {
   .global-section-width {
-    /* // padding: 0 20px; */
     padding: 0 70px;
   }
 }
