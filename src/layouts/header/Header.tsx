@@ -51,7 +51,7 @@ const Header = () => {
     console.log(searchText);
   };
 
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
   const cancelButtonRef = useRef(null)
 
 

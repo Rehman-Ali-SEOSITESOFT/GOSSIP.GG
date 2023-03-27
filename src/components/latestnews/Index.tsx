@@ -44,7 +44,7 @@ const LatestNews = () => {
   return (
     <section className={style.latest_news_page}>
       <div className="global-section-width">
-        <SectionSaprator title="latest news" />
+        <SectionSaprator title="Latest News" />
         <div className="2xl:container border border-grayCard rounded dark:border-brandLightOpacity10">
           <div className="flex flex-wrap pt-5  bg-white rounded dark:bg-brandDark1">
             {items.map((elem, index) => {
