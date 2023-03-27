@@ -107,11 +107,19 @@ const Trending = () => {
         <div className="2xl:container">
           <div className="flex items-center	">
             <div className={`${styles.trend_left}`}>
-              <Image
-                src={theme === "light" ? trendingDard : trendingLight}
-                alt="trending"
-                className="inline-block w-5"
-              />
+              {theme === "dark" ? 
+               <Image
+               src={trendingLight}
+               alt="trending"
+               className="inline-block w-5"
+             />:
+             <Image
+             src={trendingDard}
+             alt="trending"
+             className="inline-block w-5"
+           />
+              }
+             
               <h4
                 className={`inline-block ${styles.font_styls} text-brandDark2 dark:text-brandLightOpacity100 `}
               >

@@ -99,7 +99,7 @@
   color: var(--brandDark2);
 }
 
-.trendingteass .slick-next:before {
+ .slick-next:before {
   content: "\f105";
 }
 

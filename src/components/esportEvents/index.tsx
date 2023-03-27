@@ -79,6 +79,15 @@ const EsportEvent = () => {
       {
         breakpoint: 690,
         settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 415,
+        settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
