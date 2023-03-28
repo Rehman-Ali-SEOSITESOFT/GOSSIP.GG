@@ -61,6 +61,10 @@ module.exports = {
       },
       margin: {
         '88px': '88px',
+      },
+      width:{
+        '300px':'300px',
+        '168px':'168px'
       }
     },
   },
