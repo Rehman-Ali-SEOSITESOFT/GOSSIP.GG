@@ -86,7 +86,8 @@ const LoginModal = (props: any) => {
                       </p>
                     </div>
                   </div>
-                  <div className="flex flex-row items-center justify-center ">
+
+                <div className="flex flex-row items-center justify-center ">
                  <div className="bg-gradient-to-l min-w-[35%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
                   <p className="px-2">Or continue with</p> 
                  <div className="bg-gradient-to-r min-w-[35%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
