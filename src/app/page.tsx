@@ -12,7 +12,7 @@ export default function Home() {
       <Trending />
       <HeroSection />
       <EsportEvent />
-      <LatestNews />
+      {/* <LatestNews /> */}
       <LiveMatch />
     </section>
   );
