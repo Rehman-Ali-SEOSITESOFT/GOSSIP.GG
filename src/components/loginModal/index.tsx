@@ -64,6 +64,7 @@ const LoginModal = (props: any) => {
                       type="password"
                       placeholder="******************"
                     />
+                    
                     <div className="flex flex-row justify-between items-center ">
                       <div>
                         <input type="checkbox" />
