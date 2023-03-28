@@ -115,7 +115,7 @@ const LoginModal = (props: any) => {
                           Log In
                         </button>
                         <p className="pt-3 montserratfont text-brandLightOpacity70 text-xs">
-                          Dont't have and account?
+                          Dont&#39;t have and account?
                           <a href="#"
                           onClick={() => onClickOpenModal()}
                           className="underline  font-medium pl-1.5">
