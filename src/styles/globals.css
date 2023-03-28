@@ -99,7 +99,7 @@
   color: var(--brandDark2);
 }
 
- .slick-next:before {
+.slick-next:before {
   content: "\f105";
 }
 
@@ -109,6 +109,19 @@
 }
 .trendingteass .slick-prev {
   left: -45px;
+}
+
+/* SCROLL */
+.choiceselect .slectopitons::-webkit-scrollbar {
+  width: 10px !important;
+}
+
+.choiceselect .slectopitons::-webkit-scrollbar-track {
+  border-radius: 4px;
+}
+
+.choiceselect .slectopitons::-webkit-scrollbar-thumb {
+  border-radius: 8px;
 }
 
 @media screen and (max-width: 1430px) {

@@ -39,6 +39,13 @@ module.exports = {
         textColor: "rgba(34, 30, 31, 0.9)",
         textColorGray: "rgba(34, 30, 31, 0.7) ",
         secSaprator: "#ED4E50",
+
+        custom: {
+          DEFAULT: "#363233",
+        },
+        custom2: {
+          DEFAULT: "#282425",
+        },
       },
       screens: {
         "mw-2xl": { max: "1535px" },
@@ -57,16 +64,22 @@ module.exports = {
         "mw-sm1": { max: "690px" },
 
         "mw-sm": { max: "639px" },
+        "mw-sm3": { max: "400px" },
         // => @media (max-width: 639px) { ... }
       },
       margin: {
-        '88px': '88px',
+        "88px": "88px",
       },
-      width:{
-        '300px':'300px',
-        '168px':'168px'
-      }
+      width: {
+        "300px": "300px",
+        "168px": "168px",
+        "624px": "624px",
+        "464px": "464px",
+      },
+      boxShadow: {
+        "3xshadow": "0px 8px 20px #000000",
+      },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography"), require("tailwind-scrollbar")],
 };

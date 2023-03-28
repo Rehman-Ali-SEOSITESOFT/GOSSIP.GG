@@ -1,6 +1,6 @@
 "use client";
 
-import React ,{ useState } from 'react'
+import React, { useState } from "react";
 import Image from "next/image";
 import logo from "../../assets/images/header/main-logo.png";
 import search from "../../assets/images/header/search.png";
@@ -9,7 +9,8 @@ import sun from "../../assets/images/header/sun.png";
 import close from "../../assets/images/header/close-search.png";
 import { useTheme } from "next-themes";
 import styles from "./Header.module.css";
-import LoginModal from '@/components/loginModal';
+import LoginModal from "@/components/loginModal";
+import ChoiceTopicModel from "@/components/choiceTopicsModel";
 const Header = () => {
   interface MenuList {
     name: string;
@@ -39,6 +40,7 @@ const Header = () => {
     },
   ]);
   const [searchOpen, setSearchOpen] = useState<Boolean>(true);
+
   const [searchText, setSearchText] = useState<string>("");
   const hanldeClose = () => {
     setSearchOpen(!searchOpen);
@@ -50,11 +52,15 @@ const Header = () => {
     console.log(searchText);
   };
 
-  const [open, setOpen] = useState(false)
-  
-  const onClickOpenModal = () =>{
-    setOpen(!open)
-  }
+  const [open, setOpen] = useState(false);
+  const [choicModelOpen, setChoicModelOpen] = useState<Boolean>(false);
+  const onClickOpenModal = () => {
+    setOpen(!open);
+  };
+
+  const choicTopicModel = () => {
+    setChoicModelOpen(!choicModelOpen);
+  };
   return (
     <header className={styles.main_header}>
       <div
@@ -128,6 +134,12 @@ const Header = () => {
                     >
                       <span> Login</span>
                     </div>
+                    {/* <div
+                      onClick={choicTopicModel}
+                      className={`${styles.login__btn} ${styles.icons} text-brandLightOpacity100 bg-brandLightOpacity10 hover:bg-brandLightOpacity50`}
+                    >
+                      <span> Choice </span>
+                    </div> */}
 
                     <div
                       className={`${styles.theme__btn} ${styles.icons} bg-brandLightOpacity10 hover:bg-brandLightOpacity50`}
@@ -184,7 +196,11 @@ const Header = () => {
         </div>
       </div>
 
-     <LoginModal open={open} onClickOpenModal={onClickOpenModal}/>
+      <LoginModal open={open} onClickOpenModal={onClickOpenModal} />
+      <ChoiceTopicModel
+        openmodel={choicModelOpen}
+        choicTopicModel={choicTopicModel}
+      />
     </header>
   );
 };
