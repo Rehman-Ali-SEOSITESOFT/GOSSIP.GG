@@ -122,7 +122,9 @@ const EsportEvent = () => {
                 >
                   DOTA Pro Circuit 2023 Tour 1
                 </p>
-                <div className="flex flex-row  pt-2.5">
+                <div
+                  className={`${style.image_wrapper__event} flex flex-row  pt-2.5 `}
+                >
                   <Image src={Logo} alt="event logo" />
                   <div className="flex flex-col pl-2">
                     <p
