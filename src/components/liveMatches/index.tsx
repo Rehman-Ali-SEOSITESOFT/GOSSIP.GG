@@ -136,7 +136,7 @@ const LiveMatch = () => {
                   </p>
                 </div>
                 {item.match_status !== "LIVE" ? (
-                  <div className="bg-grayCard dark:bg-brandLightOpacity10 opacity-100 h-8 max-w-[25%] flex justify-center items-center rounded-sm">
+                  <div className="bg-grayCard dark:bg-brandLightOpacity10 opacity-100 h-8 max-w-[25%] flex justify-center items-center rounded-sm min-w-fit">
                     <p
                       className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_text_live_page} font-semibold ${style.font_live_match_14} px-2 `}
                     >
@@ -144,7 +144,7 @@ const LiveMatch = () => {
                     </p>
                   </div>
                 ) : (
-                  <div className="bg-errorIndicator h-8 w-14 flex justify-center items-center rounded-sm">
+                  <div className="bg-errorIndicator h-8 w-14 flex justify-center items-center rounded-sm min-w-fit">
                     <p
                       className={`text-white ${style.font_text_live_page} tracking-wider  `}
                     >
