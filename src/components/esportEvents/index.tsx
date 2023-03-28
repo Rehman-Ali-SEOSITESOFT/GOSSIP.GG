@@ -7,7 +7,7 @@ import Logo from "../../assets/images/esport-event/logo.png";
 import RightIcon from "../../assets/images/esport-event/right.png";
 import Line from "../../assets/images/general/Line.png";
 import SectionSaprator from "../secSaprator";
-import style from './esportEvents.module.css';
+import style from "./esportEvents.module.css";
 import { useTheme } from "next-themes";
 import DarkLine from "../../assets/images/general/dark-line.png";
 const EsportEvent = () => {
@@ -17,7 +17,7 @@ const EsportEvent = () => {
     country: string;
     prize: string;
   }
-  const {theme} = useTheme(); 
+  const { theme } = useTheme();
 
   const [eventData, setEventData] = useState<EventList[]>([
     {
@@ -86,12 +86,13 @@ const EsportEvent = () => {
         },
       },
       {
-        breakpoint: 415,
+        breakpoint: 500,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
           arrows: false,
+          centerMode: true,
         },
       },
     ],
@@ -116,26 +117,37 @@ const EsportEvent = () => {
                 />
               </div>
               <div>
-                <p className={`text-brandDark2 dark:text-brandLightOpacity100  font-bold ${style.font_esport_event_16} pt-4`}>
+                <p
+                  className={`text-brandDark2 dark:text-brandLightOpacity100  font-bold ${style.font_esport_event_16} pt-4`}
+                >
                   DOTA Pro Circuit 2023 Tour 1
                 </p>
                 <div className="flex flex-row  pt-2.5">
                   <Image src={Logo} alt="event logo" />
                   <div className="flex flex-col pl-2">
-                    <p className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_esport_event_12} font-semibold `}>
+                    <p
+                      className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_esport_event_12} font-semibold `}
+                    >
                       SAT, FEB 02 - THU, MAR 18
                     </p>
-                    <p className={`${style.font_esport_event_12} text-brandDark2 dark:text-brandLightOpacity100 font-semibold pt-1.5`}>
+                    <p
+                      className={`${style.font_esport_event_12} text-brandDark2 dark:text-brandLightOpacity100 font-semibold pt-1.5`}
+                    >
                       South Asia <span></span> Prizepool $4500
                     </p>
                   </div>
                 </div>
               </div>
               <div className="flex justify-center items-center pt-2.5">
-                <Image src={ theme === 'dark' ? DarkLine :  Line} alt="saprator line" />
+                <Image
+                  src={theme === "dark" ? DarkLine : Line}
+                  alt="saprator line"
+                />
               </div>
               <div className="flex flex-row justify-center items-center pt-3">
-                <p className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_esport_event_12} font-semibold pr-1.5 `}>
+                <p
+                  className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_esport_event_12} font-semibold pr-1.5 `}
+                >
                   Registration Open
                 </p>
                 <Image className="pl-1.5" src={RightIcon} alt="Right Icon" />

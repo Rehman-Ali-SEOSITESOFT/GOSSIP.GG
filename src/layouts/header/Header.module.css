@@ -25,7 +25,7 @@
   top: 0;
   height: 100px;
   width: 68px;
-  transform: skew(35deg, 0);
+  transform: skew(34.5deg, 0);
   transform-origin: bottom;
 }
 .header_container::after {
@@ -54,7 +54,7 @@
   width: 1px;
   top: 0;
   left: 0;
-  transform: skew(35deg, 0);
+  transform: skew(34.5deg, 0);
   transform-origin: top;
 }
 .header_width::after {
