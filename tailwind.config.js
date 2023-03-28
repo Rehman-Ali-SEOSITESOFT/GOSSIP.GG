@@ -60,7 +60,7 @@ module.exports = {
       },
       margin: {
         '88px': '88px',
-      },
+      }
     },
   },
   plugins: [require("@tailwindcss/typography")],
