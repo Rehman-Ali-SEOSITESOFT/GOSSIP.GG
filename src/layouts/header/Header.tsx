@@ -18,6 +18,8 @@ import PasswordEmailModal from "@/components/modals/passwordEmailSentModal";
 import ForgotPasswordModal from "@/components/modals/forgotPasswordModal";
 import ResetPasswordModal from "@/components/modals/resetPasswordModal";
 import WelcomeGossip from "@/components/modals/welcomeModel/Index";
+import setting from "../../assets/profile/settings.png";
+import downloadarrow from "../../assets/profile/downarrow.png";
 const Header = () => {
   interface MenuList {
     name: string;
@@ -62,6 +64,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const [choicModelOpen, setChoicModelOpen] = useState<Boolean>(false);
   const [welcomeGoggip, setWelcomeGoggip] = useState<Boolean>(true);
+  const [profileShow, setProfileShow] = useState<Boolean>(true);
   const onClickOpenModal = () => {
     setOpen(!open);
   };
@@ -138,18 +141,28 @@ const Header = () => {
                         <Image src={search} alt="search " />
                       </span>
                     </div>
-                    <div
+                    {/* <div
                       onClick={onClickOpenModal}
                       className={`${styles.login__btn} ${styles.icons} text-brandLightOpacity100 bg-brandLightOpacity10 hover:bg-brandLightOpacity50`}
                     >
                       <span> Login</span>
-                    </div>
-                    {/* <div
+                    </div> */}
+                    <div
                       className={`${styles.profile_box} px-4 cursor-pointer relative`}
                     >
-                      <Image src={profile} alt="Demo" />
+                      <Image
+                        src={profile}
+                        alt="Demo"
+                        onClick={() => setProfileShow(!profileShow)}
+                      />
 
-                      <div className="absolute w-[240px] py-7	px-4	 dark:bg-brandDark1 right-0 left-auto">
+                      <div
+                        className={`absolute w-[240px] py-7	px-4	 dark:bg-brandDark1 right-[10px] top-[50px]  left-auto  border border-brandLightOpacity10 rounded-lg ${
+                          profileShow ? "hidden" : "block"
+                        } `}
+                      >
+                        {/* <Image src={downloadarrow} alt="Demo" /> */}
+
                         <div className="deail ">
                           <h2 className="text-lg dark:text-brand font-bold montserratfont">
                             Naveen
@@ -160,18 +173,35 @@ const Header = () => {
                           >
                             abc@xyz.in
                           </label>
+                          <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pt-2">
+                            View Profile
+                          </h5>
                         </div>
-                        <div className="settings">
-                          <h5 className="text-base leading-5 montserratfont font-semibold	dark:text-brandLightOpacity100">
+                        <div className="settings border-t border-b border-brandLightOpacity10 my-3 py-3 pl-2">
+                          <h5 className="text-base leading-5 montserratfont font-semibold	dark:text-brandLightOpacity100 ">
+                            Settings
+                            <span>
+                              <Image
+                                src={setting}
+                                alt=""
+                                className="inline-block ml-3"
+                              />
+                            </span>
+                          </h5>
+                          <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 py-3 pl-2">
                             Edit Profile
                           </h5>
-                          <h5>Manage Preferences</h5>
+                          <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pl-2">
+                            Manage Preferences
+                          </h5>
                         </div>
                         <div className="logout">
-                          <h5>Log Out</h5>
+                          <h5 className="text-brandLightOpacity100 text-base leading-5 montserratfont">
+                            Log Out
+                          </h5>
                         </div>
                       </div>
-                    </div> */}
+                    </div>
                     {/* <div
                       onClick={choicTopicModel}
                       className={`${styles.login__btn} ${styles.icons} text-brandLightOpacity100 bg-brandLightOpacity10 hover:bg-brandLightOpacity50`}
