@@ -4,23 +4,34 @@ import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Banner from "../../assets/images/modal/banner.png";
 import Logo from "../../assets/images/modal/logo.png";
-import Discord from "../../assets/images/modal/discord.png";
+import EyeOff from "../../assets/images/modal/eye.png";
 import Close from "../../assets/images/modal/close.png";
-import Google from "../../assets/images/modal/google.png";
-import style from "./login.module.css";
+import Eye from "../../assets/images/modal/eye-off.png";
+import style from "./resetPassword.module.css";
 import SignupModal from "../signupModal";
-const LoginModal = (props: any) => {
+const ResetPasswordModal = (props: any) => {
   const cancelButtonRef = useRef(null);
 
   const [open, setOpen] = useState(false);
-  console.log("login====", props.open)
+  const [show, setShow] = useState(false);
+  const [showCon, setShowCon] = useState(false);
+
   const onClickOpenModal = () => {
-    if(!open){
+    if (!open) {
       props.onClickOpenModal();
     }
     setOpen(!open);
-
   };
+
+  const onClickShowPassword = () => {
+    setShow(!show);
+  };
+
+  const onClickShowConPassword = () => {
+    setShowCon(!showCon);
+  };
+
+  
 
   return (
     <>
@@ -58,7 +69,7 @@ const LoginModal = (props: any) => {
                     <div className={style.image_h}>
                       <Image
                         src={Banner}
-                        className="max-w-[100%] h-full"
+                        className="max-w-[100&] h-full"
                         alt="banner logo"
                       />
                       <div
@@ -74,72 +85,62 @@ const LoginModal = (props: any) => {
                       <div className="flex flex-col items-center ">
                         <Image src={Logo} alt="logo" />
                         <p className="text-brandLightOpacity100 text-2xl montserratfont not-italic font-bold pb-6 mw-sm:text-lg ">
-                          Log In to Gossip.gg
+                          Reset Password
                         </p>
+                        {/* <div>
                         <input
                           className="border-brandLightOpacity10 border rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
-                          id="email"
-                          type="text"
-                          placeholder="Email"
-                        />
-                        <input
-                          className="border-brandLightOpacity10 mt-4 mb-38px border rounded w-full h-12 py-2 px-6  bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
                           id="password"
                           type="password"
-                          autoComplete="false"
-                          placeholder="Password"
+                          placeholder="New Password"
                         />
+                        <Image className="absolute top-4 right-4" src={Eye} alt="password icon" />
+
+                        </div> */}
+                       
+                          
+                          <div className="relative w-[100%]">
+                            <input
+                             name="password"
+                              type={show ? "text" : "password"}
+                              placeholder="New Password"
+                              className="border-brandLightOpacity10 border rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
+                            />
+                            <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
+                              <Image
+                                className=""
+                                src={show ? Eye : EyeOff}
+                                alt="password icon"
+                                onClick={() => onClickShowPassword()}
+                              />
+                            </div>
+                          </div>
+                          <div className="relative w-[100%] mt-[33px] mb-[39px]">
+                            <input
+                             name="con-password"
+                              type={showCon ? "text" : "password"}
+                              placeholder="Re-enter Password"
+                              className="border-brandLightOpacity10 border rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
+                            />
+                            <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
+                              <Image
+                                className=""
+                                src={showCon ? Eye : EyeOff}
+                                alt="password icon"
+                                onClick={() => onClickShowConPassword()}
+                              />
+                            </div>
+                          </div>
+                        
+                        
+
+                      
                       </div>
 
-                      <div className="flex flex-row justify-between items-center mb-38px ">
-                        <div className="flex flex-row items-center">
-                          <input
-                            type="checkbox"
-                            className="h-5 w-5 text-green-600"
-                          />
-                          <p className="pl-2.5 montserratfont text-brandLightOpacity70 text-xs">
-                            Remember me
-                          </p>
-                        </div>
-                        <div>
-                          <a
-                            href=""
-                            className="montserratfont text-brandLightOpacity70 text-xs underline"
-                          >
-                            Forgot password?
-                          </a>
-                        </div>
-                      </div>
-                      <div className="flex flex-col items-center">
+                      <div className="flex flex-col items-center mb-[289px]">
                         <button className="bg-brand mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold">
-                          Log In
+                          Submit
                         </button>
-                        <p className="pt-3 montserratfont text-brandLightOpacity70 text-xs">
-                          Dont&#39;t have and account?
-                          <a href="#"
-                          onClick={() => onClickOpenModal()}
-                          className="underline  font-medium pl-1.5">
-                            Sign Up
-                          </a>
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-row items-center justify-center ">
-                      <div className="bg-gradient-to-l mw-sm:min-w-[25%] min-w-[35%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
-                      <p className="px-2 montserratfont mw-sm:text-sm text-lg font-bold">
-                        Or continue with
-                      </p>
-                      <div className="bg-gradient-to-r mw-sm:min-w-[25%] min-w-[35%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
-                    </div>
-                    <div className="mw-sm:pl-10 mw-sm:pr-10 pl-40 pr-40 mt-8 mb-68px">
-                      <div className="flex flex-row justify-center items-center">
-                        <div className="mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full mr-5 dark:bg-brandLightOpacity5 bg-brandLightOpacity5 flex justify-center items-center content-center ">
-                          <Image src={Google} alt="google icon" />
-                        </div>
-                        <div className="mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full ml-5 dark:bg-brandLightOpacity5 bg-brandLightOpacity5 flex justify-center items-center content-center ">
-                          <Image src={Discord} alt="google icon" />
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -155,4 +156,4 @@ const LoginModal = (props: any) => {
   );
 };
 
-export default LoginModal;
+export default ResetPasswordModal;

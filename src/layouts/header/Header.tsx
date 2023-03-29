@@ -11,6 +11,10 @@ import { useTheme } from "next-themes";
 import styles from "./Header.module.css";
 import LoginModal from "@/components/loginModal";
 import ChoiceTopicModel from "@/components/choiceTopicsModel";
+import PasswrodChangeModal from "@/components/passwordChangedModal";
+import PasswordEmailModal from "@/components/passwordEmailSentModal";
+import ForgotPasswordModal from "@/components/forgotPasswordModal";
+import ResetPasswordModal from "@/components/resetPasswordModal";
 const Header = () => {
   interface MenuList {
     name: string;
@@ -196,7 +200,11 @@ const Header = () => {
         </div>
       </div>
 
-      <LoginModal open={open} onClickOpenModal={onClickOpenModal} />
+      {/* <LoginModal open={open} onClickOpenModal={onClickOpenModal} /> */}
+      {/* <PasswrodChangeModal open={open} onClickOpenModal={onClickOpenModal}/> */}
+      {/* <PasswordEmailModal open={open} onClickOpenModal={onClickOpenModal}/> */}
+      {/* <ForgotPasswordModal open={open} onClickOpenModal={onClickOpenModal}/> */}
+       <ResetPasswordModal open={open} onClickOpenModal={onClickOpenModal}/>
       <ChoiceTopicModel
         openmodel={choicModelOpen}
         choicTopicModel={choicTopicModel}

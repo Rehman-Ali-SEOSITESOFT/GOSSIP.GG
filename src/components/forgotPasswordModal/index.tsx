@@ -1,26 +1,27 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Banner from "../../assets/images/modal/banner.png";
 import Logo from "../../assets/images/modal/logo.png";
 import Discord from "../../assets/images/modal/discord.png";
 import Close from "../../assets/images/modal/close.png";
+import Back from "../../assets/images/modal/back.png";
 import Google from "../../assets/images/modal/google.png";
-import style from "./signup.module.css";
-import EmailModal from "../emailSentModal";
+import style from "./forgotPassword.module.css";
 
-const SignupModal = (props: any) => {
+const ForgotPasswordModal = (props: any) => {
   const cancelButtonRef = useRef(null);
 
   const [open, setOpen] = useState(false);
-  console.log("login====", props.open);
+  console.log("login====", props.open)
   const onClickOpenModal = () => {
-    if (!open) {
+    if(!open){
       props.onClickOpenModal();
     }
     setOpen(!open);
+
   };
+
   return (
     <>
       <Transition.Root show={props.open} as={Fragment}>
@@ -66,51 +67,41 @@ const SignupModal = (props: any) => {
                       >
                         <Image src={Close} alt="google icon" />
                       </div>
+                      <div
+                        onClick={() => props.onClickOpenModal()}
+                        className="h-10 w-10 rounded-full  dark:bg-brandLightOpacity5 flex justify-center items-center content-center absolute top-4 left-4 "
+                      >
+                        <Image src={Back} alt="back icon" />
+                      </div>
                     </div>
                   </div>
                   <div className="flex flex-col ">
-                    <div className=" mw-sm:pl-10 mw-sm:pr-10 pl-40 pr-40  mb-9">
+                    <div className=" mw-sm:pl-10 mw-sm:pr-10 pl-[140px] pr-[140px]  mb-9">
                       <div className="flex flex-col items-center ">
                         <Image src={Logo} alt="logo" />
                         <p className="text-brandLightOpacity100 text-2xl montserratfont not-italic font-bold pb-6 mw-sm:text-lg ">
-                          {" "}
-                          Sign Up to Gossip.gg
+                          Forgot Password?
                         </p>
+                        <span className="montserratfont text-center  pb-8 text-brandLightOpacity70 not-italic text-base mw-sm:text-[12px]">Please confirm your email so we can send<br/> you a link to reset your password.</span>
                         <input
-                          className="text-base font-medium  montserratfont border-brandLightOpacity10 border rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
-                          id="name"
-                          type="text"
-                          placeholder="Name"
-                        />
-                        <input
-                          className="text-base font-medium  montserratfont border-brandLightOpacity10 mt-4 border rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
+                          className="border-brandLightOpacity10 mb-10 border rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
                           id="email"
                           type="text"
                           placeholder="Email"
                         />
-                        <input
-                          className="text-base font-medium  montserratfont border-brandLightOpacity10 mt-4 mb-38px border rounded w-full h-12 py-2 px-6  bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
-                          id="password"
-                          type="password"
-                          autoComplete="false"
-                          placeholder="Create Password"
-                        />
+                       
                       </div>
 
                       <div className="flex flex-col items-center">
-                        <button
-                          onClick={() => onClickOpenModal()}
-                          className="bg-brand mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold"
-                        >
-                          Sign Up
+                        <button className="bg-brand mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold">
+                          Send Link
                         </button>
                         <p className="pt-3 montserratfont text-brandLightOpacity70 text-xs">
-                          Already have an account?{" "}
-                          <a
-                            href="#"
-                            className=" pl-1.5 underline  font-medium"
-                          >
-                            Log In
+                          Dont&#39;t have and account?
+                          <a href="#"
+                          // onClick={() => onClickOpenModal()}
+                          className="underline  font-medium pl-1.5">
+                            Sign Up
                           </a>
                         </p>
                       </div>
@@ -123,7 +114,7 @@ const SignupModal = (props: any) => {
                       </p>
                       <div className="bg-gradient-to-r mw-sm:min-w-[25%] min-w-[35%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
                     </div>
-                    <div className="mw-sm:pl-10 mw-sm:pr-10 pl-40 pr-40 mt-8 mb-68px">
+                    <div className="mw-sm:pl-10 mw-sm:pr-10 pl-30 pr-30 mt-8 mb-[124px]">
                       <div className="flex flex-row justify-center items-center">
                         <div className="mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full mr-5 dark:bg-brandLightOpacity5 bg-brandLightOpacity5 flex justify-center items-center content-center ">
                           <Image src={Google} alt="google icon" />
@@ -140,9 +131,10 @@ const SignupModal = (props: any) => {
           </div>
         </Dialog>
       </Transition.Root>
-      <EmailModal open={open} onClickOpenModal={onClickOpenModal} />
+
+      {/* <SignupModal open={open} onClickOpenModal={onClickOpenModal} /> */}
     </>
   );
 };
 
-export default SignupModal;
+export default ForgotPasswordModal;
