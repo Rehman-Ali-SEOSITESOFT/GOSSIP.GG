@@ -9,10 +9,15 @@ import sun from "../../assets/images/header/sun.png";
 import close from "../../assets/images/header/close-search.png";
 import { useTheme } from "next-themes";
 import styles from "./Header.module.css";
-import LoginModal from "@/components/loginModal";
-import ChoiceTopicModel from "@/components/choiceTopicsModel";
-import WelcomeGossip from "@/components/welcomeModel/Index";
+
 import profile from "../../assets/profile/profile-icon.png";
+import LoginModal from "@/components/modals/loginModal";
+import ChoiceTopicModel from "@/components/modals/choiceTopicsModel";
+import PasswrodChangeModal from "@/components/modals/passwordChangedModal";
+import PasswordEmailModal from "@/components/modals/passwordEmailSentModal";
+import ForgotPasswordModal from "@/components/modals/forgotPasswordModal";
+import ResetPasswordModal from "@/components/modals/resetPasswordModal";
+import WelcomeGossip from "@/components/modals/welcomeModel/Index";
 const Header = () => {
   interface MenuList {
     name: string;
@@ -133,13 +138,13 @@ const Header = () => {
                         <Image src={search} alt="search " />
                       </span>
                     </div>
-                    {/* <div
+                    <div
                       onClick={onClickOpenModal}
                       className={`${styles.login__btn} ${styles.icons} text-brandLightOpacity100 bg-brandLightOpacity10 hover:bg-brandLightOpacity50`}
                     >
                       <span> Login</span>
-                    </div> */}
-                    <div
+                    </div>
+                    {/* <div
                       className={`${styles.profile_box} px-4 cursor-pointer relative`}
                     >
                       <Image src={profile} alt="Demo" />
@@ -166,7 +171,7 @@ const Header = () => {
                           <h5>Log Out</h5>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                     {/* <div
                       onClick={choicTopicModel}
                       className={`${styles.login__btn} ${styles.icons} text-brandLightOpacity100 bg-brandLightOpacity10 hover:bg-brandLightOpacity50`}
@@ -230,6 +235,10 @@ const Header = () => {
       </div>
 
       <LoginModal open={open} onClickOpenModal={onClickOpenModal} />
+      {/* <PasswrodChangeModal open={open} onClickOpenModal={onClickOpenModal}/> */}
+      {/* <PasswordEmailModal open={open} onClickOpenModal={onClickOpenModal}/> */}
+      {/* <ForgotPasswordModal open={open} onClickOpenModal={onClickOpenModal}/> */}
+      {/* <ResetPasswordModal open={open} onClickOpenModal={onClickOpenModal}/> */}
       {/* <ChoiceTopicModel
         openmodel={choicModelOpen}
         choicTopicModel={choicTopicModel}

@@ -86,13 +86,20 @@ const ChoiceTopicModel = (props: any) => {
     setAdClass(id);
   };
 
+  const onClickDone = () => {
+     localStorage.setItem("isLogin", JSON.stringify(true) )
+     props.onClickOpenModal()
+  }
+
+
+
   return (
-    <Transition.Root show={props.openmodel} as={Fragment}>
+    <Transition.Root show={props.open} as={Fragment}>
       <Dialog
         as="div"
         className="relative z-10 choiceselect"
         initialFocus={cancelButtonRef}
-        onClose={() => props.choicTopicModel()}
+        onClose={() => props.onClickOpenModal()}
       >
         <Transition.Child
           as={Fragment}
@@ -127,7 +134,7 @@ const ChoiceTopicModel = (props: any) => {
                     </div>
                     <div
                       className="icon flex  dark:bg-brandLightOpacity10  justify-center items-center w-[40px] h-[40px] rounded-3xl cursor-pointer"
-                      onClick={() => props.choicTopicModel()}
+                      onClick={() => props.onClickOpenModal()}
                     >
                       <i className="text-xl fa-solid fa-xmark"></i>
                     </div>
@@ -163,6 +170,7 @@ const ChoiceTopicModel = (props: any) => {
                   </div>
                   <div className={`${styles.btns} flex flex-col	`}>
                     <a
+                      onClick={onClickDone}
                       className={`done_btn w-300px bg-brand inline-block py-3	rounded-3xl	text-center m-auto text-lg	leading-6	mb-6 text-brandLightOpacity100	font-bold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold ${
                         text === null ? "opacity-50	" : "opacity-100	"
                       }  `}

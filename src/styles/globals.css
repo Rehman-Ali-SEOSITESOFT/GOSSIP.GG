@@ -29,6 +29,7 @@
 }
 
 /* // GLOBAL SECTION WIDTH */
+
 .global-section-width {
   width: 100%;
   max-width: 1440px;
@@ -64,6 +65,9 @@
   font-size: 18px;
 }
 
+.f_it{
+  font-style: italic;
+}
 .montserratfont {
   font-family: "Montserrat";
 }
