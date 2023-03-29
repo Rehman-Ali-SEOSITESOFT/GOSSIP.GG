@@ -11,6 +11,7 @@ import { useTheme } from "next-themes";
 import styles from "./Header.module.css";
 import LoginModal from "@/components/loginModal";
 import ChoiceTopicModel from "@/components/choiceTopicsModel";
+import WelcomeGossip from "@/components/welcomeModel/Index";
 const Header = () => {
   interface MenuList {
     name: string;
@@ -54,6 +55,7 @@ const Header = () => {
 
   const [open, setOpen] = useState(false);
   const [choicModelOpen, setChoicModelOpen] = useState<Boolean>(false);
+  const [welcomeGoggip, setWelcomeGoggip] = useState<Boolean>(true);
   const onClickOpenModal = () => {
     setOpen(!open);
   };
@@ -61,6 +63,10 @@ const Header = () => {
   const choicTopicModel = () => {
     setChoicModelOpen(!choicModelOpen);
   };
+  const welcomGossipModel = () => {
+    setWelcomeGoggip(!welcomeGoggip);
+  };
+
   return (
     <header className={styles.main_header}>
       <div
@@ -197,10 +203,14 @@ const Header = () => {
       </div>
 
       <LoginModal open={open} onClickOpenModal={onClickOpenModal} />
-      <ChoiceTopicModel
+      {/* <ChoiceTopicModel
         openmodel={choicModelOpen}
         choicTopicModel={choicTopicModel}
-      />
+      /> */}
+      {/* <WelcomeGossip
+        welcomeGoggip={welcomeGoggip}
+        welcomGossipModel={welcomGossipModel}
+      /> */}
     </header>
   );
 };
