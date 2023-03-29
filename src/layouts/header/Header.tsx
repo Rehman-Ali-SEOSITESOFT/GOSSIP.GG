@@ -12,6 +12,7 @@ import styles from "./Header.module.css";
 import LoginModal from "@/components/loginModal";
 import ChoiceTopicModel from "@/components/choiceTopicsModel";
 import WelcomeGossip from "@/components/welcomeModel/Index";
+import profile from "../../assets/profile/profile-icon.png";
 const Header = () => {
   interface MenuList {
     name: string;
@@ -68,12 +69,10 @@ const Header = () => {
   };
 
   return (
-    <header className={styles.main_header}>
-      <div
-        className={`${styles.header_width} bg-brandDark3 border border-brand before:bg-brand after:bg-brand`}
-      >
+    <header className={`${styles.main_header} relative z-[2]`}>
+      <div className={`${styles.header_width} `}>
         <div
-          className={`2xl:container header_container before:bg-bodycolor after:bg-bodycolor dark:before:bg-brandDark2 dark:after:bg-brandDark2 ${styles.header_container}`}
+          className={`2xl:container header_container ${styles.header_container} `}
         >
           <div className="flex  flex-wrap items-center justify-between">
             <div className={`xl:w-1/4 lg:w-1/5  w-3/6  ${styles.header__left}`}>
@@ -134,11 +133,39 @@ const Header = () => {
                         <Image src={search} alt="search " />
                       </span>
                     </div>
-                    <div
+                    {/* <div
                       onClick={onClickOpenModal}
                       className={`${styles.login__btn} ${styles.icons} text-brandLightOpacity100 bg-brandLightOpacity10 hover:bg-brandLightOpacity50`}
                     >
                       <span> Login</span>
+                    </div> */}
+                    <div
+                      className={`${styles.profile_box} px-4 cursor-pointer relative`}
+                    >
+                      <Image src={profile} alt="Demo" />
+
+                      <div className="absolute w-[240px] py-7	px-4	 dark:bg-brandDark1 right-0 left-auto">
+                        <div className="deail ">
+                          <h2 className="text-lg dark:text-brand font-bold montserratfont">
+                            Naveen
+                          </h2>
+                          <label
+                            htmlFor=""
+                            className="montserratfont text-xs	font-medium dark:text-brandLightOpacity70"
+                          >
+                            abc@xyz.in
+                          </label>
+                        </div>
+                        <div className="settings">
+                          <h5 className="text-base leading-5 montserratfont font-semibold	dark:text-brandLightOpacity100">
+                            Edit Profile
+                          </h5>
+                          <h5>Manage Preferences</h5>
+                        </div>
+                        <div className="logout">
+                          <h5>Log Out</h5>
+                        </div>
+                      </div>
                     </div>
                     {/* <div
                       onClick={choicTopicModel}

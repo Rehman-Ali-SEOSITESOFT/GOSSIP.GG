@@ -68,25 +68,22 @@ module.exports = {
         // => @media (max-width: 639px) { ... }
       },
       margin: {
-        '88px': '88px',
-        '38px':'38px',
-        "68px":"68px",
-        "126px":'126px',
-        "291px":"291px"
+        "88px": "88px",
+        "38px": "38px",
+        "68px": "68px",
+        "126px": "126px",
+        "291px": "291px",
       },
-      width:{
-        '300px':'300px',
-        '168px':'168px',
+      width: {
+        "300px": "300px",
+        "168px": "168px",
         "624px": "624px",
         "464px": "464px",
       },
-      boxShadow:{
-        "3xshadow": "0px 8px 20px #000000"
-      }
-  
+      boxShadow: {
+        "3xshadow": "0px 8px 20px #000000",
       },
-    
-     
+    },
   },
   plugins: [require("@tailwindcss/typography"), require("tailwind-scrollbar")],
 };

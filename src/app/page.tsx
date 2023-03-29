@@ -5,6 +5,8 @@ import LiveMatch from "@/components/liveMatches";
 import EsportEvent from "@/components/esportEvents";
 import Trending from "@/components/trending/Index";
 import LatestNews from "@/components/latestnews/Index";
+import ForYou from "@/components/forYou/Index";
+import EmailVerify from "@/components/emailVerify/Index";
 
 export default function Home() {
   return (
@@ -13,7 +15,9 @@ export default function Home() {
       <HeroSection />
       <EsportEvent />
       <LatestNews />
+      <ForYou />
       <LiveMatch />
+      <EmailVerify />
     </section>
   );
 }
