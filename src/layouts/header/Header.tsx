@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import logo from "../../assets/images/header/main-logo.png";
 import search from "../../assets/images/header/search.png";
@@ -9,15 +9,9 @@ import sun from "../../assets/images/header/sun.png";
 import close from "../../assets/images/header/close-search.png";
 import { useTheme } from "next-themes";
 import styles from "./Header.module.css";
-
 import profile from "../../assets/profile/profile-icon.png";
 import LoginModal from "@/components/modals/loginModal";
-import ChoiceTopicModel from "@/components/modals/choiceTopicsModel";
-import PasswrodChangeModal from "@/components/modals/passwordChangedModal";
-import PasswordEmailModal from "@/components/modals/passwordEmailSentModal";
-import ForgotPasswordModal from "@/components/modals/forgotPasswordModal";
-import ResetPasswordModal from "@/components/modals/resetPasswordModal";
-import WelcomeGossip from "@/components/modals/welcomeModel/Index";
+import { useRouter } from 'next/navigation';
 const Header = () => {
   interface MenuList {
     name: string;
@@ -47,8 +41,15 @@ const Header = () => {
     },
   ]);
   const [searchOpen, setSearchOpen] = useState<Boolean>(true);
-
   const [searchText, setSearchText] = useState<string>("");
+  const [isLoggedIn, setIsLoggedIn] = useState<Boolean>(false);
+  const router = useRouter()
+  useEffect(() => {
+    let user: any = localStorage.getItem("isLogin");
+    setIsLoggedIn(user);
+    // router.refresh();
+  });
+
   const hanldeClose = () => {
     setSearchOpen(!searchOpen);
   };
@@ -60,19 +61,18 @@ const Header = () => {
   };
 
   const [open, setOpen] = useState(false);
-  const [choicModelOpen, setChoicModelOpen] = useState<Boolean>(false);
-  const [welcomeGoggip, setWelcomeGoggip] = useState<Boolean>(true);
   const onClickOpenModal = () => {
     setOpen(!open);
   };
 
-  const choicTopicModel = () => {
-    setChoicModelOpen(!choicModelOpen);
-  };
-  const welcomGossipModel = () => {
-    setWelcomeGoggip(!welcomeGoggip);
-  };
 
+
+  const onClicklogout = () =>{
+    localStorage.removeItem('isLogin');
+    router.refresh();
+    
+  }
+  console.log("isLoggedIn", isLoggedIn)
   return (
     <header className={`${styles.main_header} relative z-[2]`}>
       <div className={`${styles.header_width} `}>
@@ -138,46 +138,43 @@ const Header = () => {
                         <Image src={search} alt="search " />
                       </span>
                     </div>
-                    <div
-                      onClick={onClickOpenModal}
-                      className={`${styles.login__btn} ${styles.icons} text-brandLightOpacity100 bg-brandLightOpacity10 hover:bg-brandLightOpacity50`}
-                    >
-                      <span> Login</span>
-                    </div>
-                    {/* <div
-                      className={`${styles.profile_box} px-4 cursor-pointer relative`}
-                    >
-                      <Image src={profile} alt="Demo" />
+                    {isLoggedIn ? (
+                      <div
+                        className={`${styles.profile_box} px-4 cursor-pointer relative`}
+                      >
+                        <Image src={profile} alt="Demo" />
 
-                      <div className="absolute w-[240px] py-7	px-4	 dark:bg-brandDark1 right-0 left-auto">
-                        <div className="deail ">
-                          <h2 className="text-lg dark:text-brand font-bold montserratfont">
-                            Naveen
-                          </h2>
-                          <label
-                            htmlFor=""
-                            className="montserratfont text-xs	font-medium dark:text-brandLightOpacity70"
-                          >
-                            abc@xyz.in
-                          </label>
-                        </div>
-                        <div className="settings">
-                          <h5 className="text-base leading-5 montserratfont font-semibold	dark:text-brandLightOpacity100">
-                            Edit Profile
-                          </h5>
-                          <h5>Manage Preferences</h5>
-                        </div>
-                        <div className="logout">
-                          <h5>Log Out</h5>
+                        <div className="absolute w-[240px] py-7	px-4	 dark:bg-brandDark1 right-0 left-auto">
+                          <div className="deail ">
+                            <h2 className="text-lg dark:text-brand font-bold montserratfont">
+                              Naveen
+                            </h2>
+                            <label
+                              htmlFor=""
+                              className="montserratfont text-xs	font-medium dark:text-brandLightOpacity70"
+                            >
+                              abc@xyz.in
+                            </label>
+                          </div>
+                          <div className="settings">
+                            <h5 className="text-base leading-5 montserratfont font-semibold	dark:text-brandLightOpacity100">
+                              Edit Profile
+                            </h5>
+                            <h5>Manage Preferences</h5>
+                          </div>
+                          <div onClick={onClicklogout} className="logout">
+                            <h5>Log Out</h5>
+                          </div>
                         </div>
                       </div>
-                    </div> */}
-                    {/* <div
-                      onClick={choicTopicModel}
-                      className={`${styles.login__btn} ${styles.icons} text-brandLightOpacity100 bg-brandLightOpacity10 hover:bg-brandLightOpacity50`}
-                    >
-                      <span> Choice </span>
-                    </div> */}
+                    ) : (
+                      <div
+                        onClick={onClickOpenModal}
+                        className={`${styles.login__btn} ${styles.icons} text-brandLightOpacity100 bg-brandLightOpacity10 hover:bg-brandLightOpacity50`}
+                      >
+                        <span> Login</span>
+                      </div>
+                    )}
 
                     <div
                       className={`${styles.theme__btn} ${styles.icons} bg-brandLightOpacity10 hover:bg-brandLightOpacity50`}

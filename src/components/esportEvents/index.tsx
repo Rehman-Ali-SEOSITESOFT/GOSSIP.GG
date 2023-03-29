@@ -157,6 +157,18 @@ const EsportEvent = () => {
             </div>
           ))}
         </Slider>
+        <div className="flex mt-4 mw-sm:hidden">
+            <div className="w-full">
+              <a
+                href="#"
+                className="text-textColorGray dark:text-brandLightOpacity70 montserratfont font-base  leading-5"
+              >
+                View more <span>&#x3E;</span>
+                <span>&#x3E;</span>
+                <span>&#x3E;</span>
+              </a>
+            </div>
+          </div>
       </div>
     </section>
   );
