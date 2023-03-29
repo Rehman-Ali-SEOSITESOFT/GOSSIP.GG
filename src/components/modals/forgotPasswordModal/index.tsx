@@ -7,12 +7,12 @@ import Discord from "../../../assets/images/modal/discord.png";
 import Close from "../../../assets/images/modal/close.png";
 import Back from "../../../assets/images/modal/back.png";
 import Google from "../../../assets/images/modal/google.png";
+import PasswordEmailModal from "../passwordEmailSentModal";
 
 const ForgotPasswordModal = (props: any) => {
   const cancelButtonRef = useRef(null);
 
   const [open, setOpen] = useState(false);
-  console.log("login====", props.open)
   const onClickOpenModal = () => {
     if(!open){
       props.onClickOpenModal();
@@ -92,7 +92,9 @@ const ForgotPasswordModal = (props: any) => {
                       </div>
 
                       <div className="flex flex-col items-center">
-                        <button className="bg-brand mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold">
+                        <button
+                        onClick={onClickOpenModal}
+                        className="bg-brand mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold">
                           Send Link
                         </button>
                         <p className="pt-3 montserratfont text-brandLightOpacity70 text-xs">
@@ -130,8 +132,7 @@ const ForgotPasswordModal = (props: any) => {
           </div>
         </Dialog>
       </Transition.Root>
-
-      {/* <SignupModal open={open} onClickOpenModal={onClickOpenModal} /> */}
+      <PasswordEmailModal open={open} onClickOpenModal={onClickOpenModal}/>   
     </>
   );
 };

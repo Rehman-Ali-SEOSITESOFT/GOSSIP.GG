@@ -9,18 +9,28 @@ import Close from "../../../assets/images/modal/close.png";
 import Google from "../../../assets/images/modal/google.png";
 
 import SignupModal from "../signupModal";
+import ForgotPasswordModal from "../forgotPasswordModal";
 const LoginModal = (props: any) => {
   const cancelButtonRef = useRef(null);
 
   const [open, setOpen] = useState(false);
-  console.log("login====", props.open)
+  const [openForgotPasswordModal, setOpenForgotPasswordModal] = useState(false);
+
   const onClickOpenModal = () => {
     if(!open){
       props.onClickOpenModal();
     }
     setOpen(!open);
-
   };
+
+
+  const onClickOpenForgotPasswordModal = () => {
+    if(!openForgotPasswordModal){
+      props.onClickOpenModal();
+    }
+    setOpenForgotPasswordModal(!openForgotPasswordModal);
+  };
+
 
   return (
     <>
@@ -103,7 +113,8 @@ const LoginModal = (props: any) => {
                         </div>
                         <div>
                           <a
-                            href=""
+                            href="#"
+                            onClick={() => onClickOpenForgotPasswordModal()}
                             className="montserratfont text-brandLightOpacity70 text-xs underline"
                           >
                             Forgot password?
@@ -151,6 +162,7 @@ const LoginModal = (props: any) => {
       </Transition.Root>
 
       <SignupModal open={open} onClickOpenModal={onClickOpenModal} />
+      <ForgotPasswordModal open={openForgotPasswordModal} onClickOpenModal={onClickOpenForgotPasswordModal} />
     </>
   );
 };

@@ -1,10 +1,19 @@
-import React, { Fragment, useRef } from "react";
+import React, { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import Image from "next/image";
 import Banner from "../../../assets/images/modal/banner.png";
+import WelcomeGossip from "../welcomeModel/Index";
 
 const EmailModal = (props: any) => {
   const cancelButtonRef = useRef(null);
+  const [open, setOpen] = useState(false);
+  const onClickOpenModal = () => {
+    if(!open){
+      props.onClickOpenModal();
+    }
+    setOpen(!open);
+
+  };
   return (
     <>
     <Transition.Root show={props.open} as={Fragment}>
@@ -61,7 +70,7 @@ const EmailModal = (props: any) => {
                     
                     <div className="flex flex-col items-center ">
                       <button
-                      onClick={() => props.onClickOpenModal()}
+                      onClick={() => onClickOpenModal()}
                       className="bg-brand mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold">
                         Ok
                       </button>
@@ -80,7 +89,8 @@ const EmailModal = (props: any) => {
         </div>
       </Dialog>
     </Transition.Root>
-    
+    <WelcomeGossip open={open} onClickOpenModal={onClickOpenModal}/>
+   
     </>
   );
 };

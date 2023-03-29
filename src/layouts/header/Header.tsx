@@ -206,7 +206,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* <LoginModal open={open} onClickOpenModal={onClickOpenModal} /> */}
+      <LoginModal open={open} onClickOpenModal={onClickOpenModal} />
       {/* <PasswrodChangeModal open={open} onClickOpenModal={onClickOpenModal}/> */}
       {/* <PasswordEmailModal open={open} onClickOpenModal={onClickOpenModal}/> */}
       {/* <ForgotPasswordModal open={open} onClickOpenModal={onClickOpenModal}/> */}

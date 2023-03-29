@@ -4,10 +4,18 @@ import Image from "next/image";
 import Banner from "../../../assets/images/modal/banner.png";
 import Close from "../../../assets/images/modal/close.png";
 import Back from "../../../assets/images/modal/back.png";
+import ResetPasswordModal from "../resetPasswordModal";
 const PasswordEmailModal = (props: any) => {
   const cancelButtonRef = useRef(null);
 
- 
+  const [open, setOpen] = useState(false);
+  const onClickOpenModal = () => {
+    if(!open){
+      props.onClickOpenModal();
+    }
+    setOpen(!open);
+
+  };
   return (
     <>
     <Transition.Root show={props.open} as={Fragment}>
@@ -75,7 +83,7 @@ const PasswordEmailModal = (props: any) => {
                     
                     <div className="flex flex-col items-center ">
                       <button
-                      onClick={() => props.onClickOpenModal()}
+                      onClick={() => onClickOpenModal()}
                       className="bg-brand outline-none mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold">
                         Ok
                       </button>
@@ -94,7 +102,7 @@ const PasswordEmailModal = (props: any) => {
         </div>
       </Dialog>
     </Transition.Root>
-    
+      <ResetPasswordModal open={open} onClickOpenModal={onClickOpenModal}/>
     </>
   );
 };

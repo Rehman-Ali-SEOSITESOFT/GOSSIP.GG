@@ -1,14 +1,12 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Banner from "../../../assets/images/modal/banner.png";
 import Logo from "../../../assets/images/modal/logo.png";
 import EyeOff from "../../../assets/images/modal/eye.png";
 import Close from "../../../assets/images/modal/close.png";
 import Eye from "../../../assets/images/modal/eye-off.png";
-
-import SignupModal from "../signupModal";
+import PasswrodChangeModal from "../passwordChangedModal";
 const ResetPasswordModal = (props: any) => {
   const cancelButtonRef = useRef(null);
 
@@ -138,7 +136,9 @@ const ResetPasswordModal = (props: any) => {
                       </div>
 
                       <div className="flex flex-col items-center mb-[289px]">
-                        <button className="bg-brand mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold">
+                        <button
+                        onClick={onClickOpenModal}
+                        className="bg-brand mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold">
                           Submit
                         </button>
                       </div>
@@ -151,7 +151,7 @@ const ResetPasswordModal = (props: any) => {
         </Dialog>
       </Transition.Root>
 
-      <SignupModal open={open} onClickOpenModal={onClickOpenModal} />
+      <PasswrodChangeModal open={open} onClickOpenModal={onClickOpenModal} />
     </>
   );
 };
