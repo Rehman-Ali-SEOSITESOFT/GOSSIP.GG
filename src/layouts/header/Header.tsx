@@ -191,7 +191,7 @@ const Header = () => {
                            </h5>
                          </div>
                          <div 
-                         onClick={onClickOpenModal}
+                         onClick={onClicklogout}
                          className="logout">
                            <h5 className="text-brandLightOpacity100 text-base leading-5 montserratfont">
                              Log Out
