@@ -1,13 +1,9 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import Banner from "../../assets/images/modal/banner.png";
-import Logo from "../../assets/images/modal/logo.png";
-import Discord from "../../assets/images/modal/discord.png";
-import Close from "../../assets/images/modal/close.png";
-import Google from "../../assets/images/modal/google.png";
-import style from "./passwordChanged.module.css";
+import Banner from "../../../assets/images/modal/banner.png";
+import Close from "../../../assets/images/modal/close.png";
+
 const PasswrodChangeModal = (props: any) => {
   const cancelButtonRef = useRef(null);
 
@@ -44,7 +40,7 @@ const PasswrodChangeModal = (props: any) => {
               >
                 <Dialog.Panel className="relative shadow-3xshadow  transform overflow-hidden rounded-lg dark:bg-brandDark2 bg-white text-left shadow-xl transition-all sm:my-8 ">
                   <div className="bg-brandDark2">
-                    <div className={style.image_h}>
+                    <div className="h-[181px]">
                       <Image
                         src={Banner}
                         className="max-w-[100%] h-full"

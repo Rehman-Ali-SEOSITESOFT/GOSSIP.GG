@@ -9,13 +9,13 @@ import sun from "../../assets/images/header/sun.png";
 import close from "../../assets/images/header/close-search.png";
 import { useTheme } from "next-themes";
 import styles from "./Header.module.css";
-import LoginModal from "@/components/loginModal";
-import ChoiceTopicModel from "@/components/choiceTopicsModel";
-import PasswrodChangeModal from "@/components/passwordChangedModal";
-import PasswordEmailModal from "@/components/passwordEmailSentModal";
-import ForgotPasswordModal from "@/components/forgotPasswordModal";
-import ResetPasswordModal from "@/components/resetPasswordModal";
-import WelcomeGossip from "@/components/welcomeModel/Index";
+import LoginModal from "@/components/modals/loginModal";
+import ChoiceTopicModel from "@/components/modals/choiceTopicsModel";
+import PasswrodChangeModal from "@/components/modals/passwordChangedModal";
+import PasswordEmailModal from "@/components/modals/passwordEmailSentModal";
+import ForgotPasswordModal from "@/components/modals/forgotPasswordModal";
+import ResetPasswordModal from "@/components/modals/resetPasswordModal";
+import WelcomeGossip from "@/components/modals/welcomeModel/Index";
 const Header = () => {
   interface MenuList {
     name: string;
@@ -210,7 +210,7 @@ const Header = () => {
       {/* <PasswrodChangeModal open={open} onClickOpenModal={onClickOpenModal}/> */}
       {/* <PasswordEmailModal open={open} onClickOpenModal={onClickOpenModal}/> */}
       {/* <ForgotPasswordModal open={open} onClickOpenModal={onClickOpenModal}/> */}
-       <ResetPasswordModal open={open} onClickOpenModal={onClickOpenModal}/>
+       {/* <ResetPasswordModal open={open} onClickOpenModal={onClickOpenModal}/> */}
       {/* <ChoiceTopicModel
         openmodel={choicModelOpen}
         choicTopicModel={choicTopicModel}

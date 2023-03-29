@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import welcomeicon from "../../assets/globals/welcome-icon.png";
-import userimg from "../../assets/globals/welcome-img.png";
+import welcomeicon from "../../../assets/globals/welcome-icon.png";
+import userimg from "../../../assets/globals/welcome-img.png";
 import Image from "next/image";
 const WelcomeGossip = (props: any) => {
   const cancelButtonRef = useRef(null);
