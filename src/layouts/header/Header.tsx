@@ -11,7 +11,7 @@ import { useTheme } from "next-themes";
 import styles from "./Header.module.css";
 import profile from "../../assets/profile/profile-icon.png";
 import LoginModal from "@/components/modals/loginModal";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 import setting from "../../assets/profile/settings.png";
 import downloadarrow from "../../assets/profile/downarrow.png";
 const Header = () => {
@@ -45,7 +45,7 @@ const Header = () => {
   const [searchOpen, setSearchOpen] = useState<Boolean>(true);
   const [searchText, setSearchText] = useState<string>("");
   const [isLoggedIn, setIsLoggedIn] = useState<Boolean>(false);
-  const router = useRouter()
+  const router = useRouter();
   useEffect(() => {
     let user: any = localStorage.getItem("isLogin");
     setIsLoggedIn(user);
@@ -68,14 +68,11 @@ const Header = () => {
     setOpen(!open);
   };
 
-
-
-  const onClicklogout = () =>{
-    localStorage.removeItem('isLogin');
+  const onClicklogout = () => {
+    localStorage.removeItem("isLogin");
     router.refresh();
-    
-  }
-  console.log("isLoggedIn", isLoggedIn)
+  };
+  console.log("isLoggedIn", isLoggedIn);
   return (
     <header className={`${styles.main_header} relative z-[2]`}>
       <div className={`${styles.header_width} `}>
@@ -142,63 +139,61 @@ const Header = () => {
                       </span>
                     </div>
                     {isLoggedIn ? (
-                       <div
-                       className={`${styles.profile_box} px-4 cursor-pointer relative`}
-                     >
-                       <Image
-                         src={profile}
-                         alt="Demo"
-                         onClick={() => setProfileShow(!profileShow)}
-                       />
- 
-                       <div
-                         className={`absolute w-[240px] py-7	px-4	 dark:bg-brandDark1 right-[10px] top-[50px]  left-auto  border border-brandLightOpacity10 rounded-lg ${
-                           profileShow ? "hidden" : "block"
-                         } `}
-                       >
-                         {/* <Image src={downloadarrow} alt="Demo" /> */}
- 
-                         <div className="deail ">
-                           <h2 className="text-lg dark:text-brand font-bold montserratfont">
-                             Naveen
-                           </h2>
-                           <label
-                             htmlFor=""
-                             className="montserratfont text-xs	font-medium dark:text-brandLightOpacity70"
-                           >
-                             abc@xyz.in
-                           </label>
-                           <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pt-2">
-                             View Profile
-                           </h5>
-                         </div>
-                         <div className="settings border-t border-b border-brandLightOpacity10 my-3 py-3 pl-2">
-                           <h5 className="text-base leading-5 montserratfont font-semibold	dark:text-brandLightOpacity100 ">
-                             Settings
-                             <span>
-                               <Image
-                                 src={setting}
-                                 alt=""
-                                 className="inline-block ml-3"
-                               />
-                             </span>
-                           </h5>
-                           <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 py-3 pl-2">
-                             Edit Profile
-                           </h5>
-                           <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pl-2">
-                             Manage Preferences
-                           </h5>
-                         </div>
-                         <div 
-                         onClick={onClicklogout}
-                         className="logout">
-                           <h5 className="text-brandLightOpacity100 text-base leading-5 montserratfont">
-                             Log Out
-                           </h5>
-                         </div>
-                       </div>
-                     </div>
+                      <div
+                        className={`${styles.profile_box} px-4 cursor-pointer relative`}
+                      >
+                        <Image
+                          src={profile}
+                          alt="Demo"
+                          onClick={() => setProfileShow(!profileShow)}
+                        />
+
+                        <div
+                          className={`absolute w-[240px] py-7	px-4 bg-brandLightOpacity100 	 dark:bg-brandDark1 right-[10px] top-[50px]  left-auto  border border-brandLightOpacity10 rounded-lg ${
+                            profileShow ? "hidden" : "block"
+                          } `}
+                        >
+                          {/* <Image src={downloadarrow} alt="Demo" /> */}
+
+                          <div className="deail ">
+                            <h2 className="text-lg dark:text-brand font-bold montserratfont">
+                              Naveen
+                            </h2>
+                            <label
+                              htmlFor=""
+                              className="montserratfont text-xs	font-medium dark:text-brandLightOpacity70"
+                            >
+                              abc@xyz.in
+                            </label>
+                            <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pt-2">
+                              View Profile
+                            </h5>
+                          </div>
+                          <div className="settings border-t border-b border-brandLightOpacity10 my-3 py-3 pl-2">
+                            <h5 className="text-base leading-5 montserratfont font-semibold	dark:text-brandLightOpacity100 ">
+                              Settings
+                              <span>
+                                <Image
+                                  src={setting}
+                                  alt=""
+                                  className="inline-block ml-3"
+                                />
+                              </span>
+                            </h5>
+                            <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 py-3 pl-2">
+                              Edit Profile
+                            </h5>
+                            <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pl-2">
+                              Manage Preferences
+                            </h5>
+                          </div>
+                          <div onClick={onClicklogout} className="logout">
+                            <h5 className="dark:text-brandLightOpacity100 text-brandDark1 text-base leading-5 montserratfont">
+                              Log Out
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
                     ) : (
                       <div
                         onClick={onClickOpenModal}
@@ -213,7 +208,7 @@ const Header = () => {
                     >
                       <span> Login</span>
                     </div> */}
-                   
+
                     {/* <div
                       onClick={choicTopicModel}
                       className={`${styles.login__btn} ${styles.icons} text-brandLightOpacity100 bg-brandLightOpacity10 hover:bg-brandLightOpacity50`}
