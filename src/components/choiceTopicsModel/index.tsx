@@ -53,7 +53,39 @@ const ChoiceTopicModel = (props: any) => {
     "Team Fury",
     "Graphic card",
     "Nvidia",
+    "Gaming",
+    "Valorant",
+    "OTC",
+    "LOL",
+    "Floo Flames",
+    "Team Fury",
+    "Graphic card",
+    "Nvidia",
+    "Gaming",
+    "Valorant",
+    "OTC",
+    "LOL",
+    "Floo Flames",
+    "Team Fury",
+    "Graphic card",
+    "Nvidia",
+    "Gaming",
+    "Valorant",
+    "OTC",
+    "LOL",
+    "Floo Flames",
+    "Team Fury",
+    "Graphic card",
+    "Nvidia",
   ]);
+
+  let [addclass, setAdClass] = useState<number | null>(null);
+  let [text, setTest] = useState<number | null>(null);
+  const hanldeCheck = (event: any, id: number) => {
+    setTest(id);
+    setAdClass(id);
+  };
+
   return (
     <Transition.Root show={props.openmodel} as={Fragment}>
       <Dialog
@@ -89,12 +121,15 @@ const ChoiceTopicModel = (props: any) => {
                 className={`relative transform overflow-hidden rounded-lg  w-full text-left transition-all dark:bg-brandDark2 shadow-3xshadow ${styles.panelChoice} p-5	border-2 rounded-lg	 dark:border-brandLightOpacity10 pb-11	`}
               >
                 <div className="choiceModelMain">
-                  <div className="choiceheader flex justify-between">
-                    <div className="icon">
-                      <i className="fa-solid fa-angle-left"></i>
+                  <div className="choiceheader pb-8 flex justify-between">
+                    <div className="icon flex dark:bg-brandLightOpacity10 justify-center items-center w-[40px] h-[40px] rounded-3xl cursor-pointer	">
+                      <i className="text-xl fa-solid fa-angle-left"></i>
                     </div>
-                    <div className="icon">
-                      <i className="fa-solid fa-xmark"></i>
+                    <div
+                      className="icon flex  dark:bg-brandLightOpacity10  justify-center items-center w-[40px] h-[40px] rounded-3xl cursor-pointer"
+                      onClick={() => props.choicTopicModel()}
+                    >
+                      <i className="text-xl fa-solid fa-xmark"></i>
                     </div>
                   </div>
                   <div className="titlesection text-center">
@@ -112,8 +147,13 @@ const ChoiceTopicModel = (props: any) => {
                       {items.map((e, i) => {
                         return (
                           <div
-                            className="box p-4 flex justify-center items-center w-[120px] h-[60px] mw-sm:w-[30%] mw-sm3:w-[45%]    bg-brandLightOpacity10 text-center mr-3 mw-sm:mr-2 mw-sm:mb-2 	mb-3	montserratfont text-xs font-medium leading-4	rounded"
+                            className={`box py-4 flex justify-center items-center w-[120px] h-[60px] mw-sm:w-[30%] mw-sm3:w-[45%]    text-center mr-3 mw-sm:mr-2 mw-sm:mb-2 	mb-3	montserratfont  font-medium leading-4	rounded hover:font-semibold hover:text-brand hover:border hover:text-base hover:bg-brandDark2 hover:border-brand cursor-pointer ${
+                              addclass === i
+                                ? "active font-semibold text-brand border text-base bg-brandDark2 border-brand "
+                                : "text-brandLightOpacity70 bg-brandLightOpacity10 text-xs"
+                            } `}
                             key={i}
+                            onClick={(e) => hanldeCheck(e, i)}
                           >
                             {e}
                           </div>
@@ -122,10 +162,15 @@ const ChoiceTopicModel = (props: any) => {
                     </div>
                   </div>
                   <div className={`${styles.btns} flex flex-col	`}>
-                    <a className="done_btn w-300px bg-brand inline-block py-3	rounded-3xl	text-center m-auto text-lg	leading-6	mb-6 text-brandLightOpacity100	font-bold montserratfont cursor-pointer mw-sm:w-[200px] mw-sm:h-[40px]	">
+                    <a
+                      className={`done_btn w-300px bg-brand inline-block py-3	rounded-3xl	text-center m-auto text-lg	leading-6	mb-6 text-brandLightOpacity100	font-bold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold ${
+                        text === null ? "opacity-50	" : "opacity-100	"
+                      }  `}
+                    >
                       Done
                     </a>
-                    <a className="skip_btn   w-300px border border-brandLightOpacity100 inline-block py-3	rounded-3xl	text-center m-auto text-lg leading-6 text-brandLightOpacity100 font-bold montserratfont	cursor-pointer  mw-sm:w-[200px] mw-sm:h-[40px]">
+
+                    <a className="skip_btn   w-300px border border-brandLightOpacity100 inline-block py-3	rounded-3xl	text-center m-auto text-lg leading-6 text-brandLightOpacity100 font-bold montserratfont	cursor-pointer   mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base  mw-sm:text-semibold">
                       Skip
                     </a>
                   </div>

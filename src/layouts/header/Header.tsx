@@ -15,6 +15,7 @@ import PasswrodChangeModal from "@/components/passwordChangedModal";
 import PasswordEmailModal from "@/components/passwordEmailSentModal";
 import ForgotPasswordModal from "@/components/forgotPasswordModal";
 import ResetPasswordModal from "@/components/resetPasswordModal";
+import WelcomeGossip from "@/components/welcomeModel/Index";
 const Header = () => {
   interface MenuList {
     name: string;
@@ -58,6 +59,7 @@ const Header = () => {
 
   const [open, setOpen] = useState(false);
   const [choicModelOpen, setChoicModelOpen] = useState<Boolean>(false);
+  const [welcomeGoggip, setWelcomeGoggip] = useState<Boolean>(true);
   const onClickOpenModal = () => {
     setOpen(!open);
   };
@@ -65,6 +67,10 @@ const Header = () => {
   const choicTopicModel = () => {
     setChoicModelOpen(!choicModelOpen);
   };
+  const welcomGossipModel = () => {
+    setWelcomeGoggip(!welcomeGoggip);
+  };
+
   return (
     <header className={styles.main_header}>
       <div
@@ -205,10 +211,14 @@ const Header = () => {
       {/* <PasswordEmailModal open={open} onClickOpenModal={onClickOpenModal}/> */}
       {/* <ForgotPasswordModal open={open} onClickOpenModal={onClickOpenModal}/> */}
        <ResetPasswordModal open={open} onClickOpenModal={onClickOpenModal}/>
-      <ChoiceTopicModel
+      {/* <ChoiceTopicModel
         openmodel={choicModelOpen}
         choicTopicModel={choicTopicModel}
-      />
+      /> */}
+      {/* <WelcomeGossip
+        welcomeGoggip={welcomeGoggip}
+        welcomGossipModel={welcomGossipModel}
+      /> */}
     </header>
   );
 };
