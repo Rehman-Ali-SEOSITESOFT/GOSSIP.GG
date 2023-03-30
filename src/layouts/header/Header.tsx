@@ -187,8 +187,8 @@ const Header = () => {
                               Manage Preferences
                             </h5>
                           </div>
-                          <div onClick={onClickOpenModal} className="logout">
-                            <h5 className="text-brandLightOpacity100 text-base leading-5 montserratfont">
+                          <div onClick={onClicklogout} className="logout">
+                            <h5 className="dark:text-brandLightOpacity100 text-brandDark1 text-base leading-5 montserratfont">
                               Log Out
                             </h5>
                           </div>
