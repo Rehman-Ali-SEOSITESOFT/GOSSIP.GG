@@ -9,7 +9,7 @@ import Close from "../../../assets/images/modal/close.png";
 import Google from "../../../assets/images/modal/google.png";
 
 import SignupModal from "../signupModal";
-import ForgotPasswordModal from "../forgotPasswordModal";
+import ForgotPasswordModal from "../ForgotPasswordModal";
 const LoginModal = (props: any) => {
   const cancelButtonRef = useRef(null);
 

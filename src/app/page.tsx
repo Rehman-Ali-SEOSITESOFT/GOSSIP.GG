@@ -1,12 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
-import HeroSection from "@/components/herosection";
-import LiveMatch from "@/components/liveMatches";
-import EsportEvent from "@/components/esportEvents";
-import Trending from "@/components/trending/Index";
-import LatestNews from "@/components/latestnews/Index";
-import ForYou from "@/components/forYou/Index";
-import EmailVerify from "@/components/emailVerify/Index";
+import HeroSection from "@/components/HeroSection";
+import LiveMatch from "@/components/LiveMatches";
+import EsportEvent from "@/components/EsportEvents";
+import Trending from "@/components/Trending/Index";
+import LatestNews from "@/components/LatestNews/Index";
+import ForYou from "@/components/ForYou/Index";
+import EmailVerify from "@/components/EmailVerify/Index";
 import { useRouter } from "next/navigation";
 
 export default function Home() {

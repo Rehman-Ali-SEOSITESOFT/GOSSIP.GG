@@ -10,7 +10,7 @@ import close from "../../assets/images/header/close-search.png";
 import { useTheme } from "next-themes";
 import styles from "./Header.module.css";
 import profile from "../../assets/profile/profile-icon.png";
-import LoginModal from "@/components/modals/loginModal";
+import LoginModal from "@/components/Modals/LoginModal";
 import { useRouter } from "next/navigation";
 import setting from "../../assets/profile/settings.png";
 import downloadarrow from "../../assets/profile/downarrow.png";

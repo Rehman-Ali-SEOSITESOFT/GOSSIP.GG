@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SectionSaprator from "../secSaprator";
+import SectionSaprator from "../SecSaprator";
 import Image from "next/image";
 import image1 from "../../assets/select/image-react-1.png";
 import image2 from "../../assets/select/image-react-2.png";

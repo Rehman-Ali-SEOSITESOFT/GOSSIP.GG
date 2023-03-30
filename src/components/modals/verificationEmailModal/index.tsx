@@ -2,7 +2,7 @@ import React, { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import Image from "next/image";
 import Banner from "../../../assets/images/modal/banner.png";
-import WelcomeGossip from "../welcomeModel/Index";
+import WelcomeGossip from "../WelcomeModel/Index";
 
 const EmailModal = (props: any) => {
   const cancelButtonRef = useRef(null);

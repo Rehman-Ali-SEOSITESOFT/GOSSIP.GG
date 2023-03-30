@@ -6,7 +6,7 @@ import Logo from "../../../assets/images/modal/logo.png";
 import EyeOff from "../../../assets/images/modal/eye.png";
 import Close from "../../../assets/images/modal/close.png";
 import Eye from "../../../assets/images/modal/eye-off.png";
-import PasswrodChangeModal from "../passwordChangedModal";
+import PasswrodChangeModal from "../PasswordChangedModal";
 const ResetPasswordModal = (props: any) => {
   const cancelButtonRef = useRef(null);
 

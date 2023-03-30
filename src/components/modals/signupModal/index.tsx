@@ -8,7 +8,7 @@ import Discord from "../../../assets/images/modal/discord.png";
 import Close from "../../../assets/images/modal/close.png";
 import Google from "../../../assets/images/modal/google.png";
 import style from "./signup.module.css";
-import EmailModal from "../verificationEmailModal";
+import EmailModal from "../VerificationEmailModal";
 
 const SignupModal = (props: any) => {
   const cancelButtonRef = useRef(null);

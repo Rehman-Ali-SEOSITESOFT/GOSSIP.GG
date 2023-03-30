@@ -7,7 +7,7 @@ import Discord from "../../../assets/images/modal/discord.png";
 import Close from "../../../assets/images/modal/close.png";
 import Back from "../../../assets/images/modal/back.png";
 import Google from "../../../assets/images/modal/google.png";
-import PasswordEmailModal from "../passwordEmailSentModal";
+import PasswordEmailModal from "../PasswordEmailSentModal";
 
 const ForgotPasswordModal = (props: any) => {
   const cancelButtonRef = useRef(null);

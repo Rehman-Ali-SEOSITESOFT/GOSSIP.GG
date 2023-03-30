@@ -4,7 +4,7 @@ import Image from "next/image";
 import Banner from "../../../assets/images/modal/banner.png";
 import Close from "../../../assets/images/modal/close.png";
 import Back from "../../../assets/images/modal/back.png";
-import ResetPasswordModal from "../resetPasswordModal";
+import ResetPasswordModal from "../ResetPasswordModal";
 const PasswordEmailModal = (props: any) => {
   const cancelButtonRef = useRef(null);
 
