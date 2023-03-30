@@ -10,7 +10,7 @@ import close from "../../assets/images/header/close-search.png";
 import { useTheme } from "next-themes";
 import styles from "./Header.module.css";
 import profile from "../../assets/profile/profile-icon.png";
-import LoginModal from "@/components/modals/loginModal";
+import LoginModal from "@/components/Modals/LoginModal";
 import { useRouter } from "next/navigation";
 import setting from "../../assets/profile/settings.png";
 import downloadarrow from "../../assets/profile/downarrow.png";
@@ -190,7 +190,7 @@ const Header = () => {
                               Manage Preferences
                             </h5>
                           </div>
-                          <div onClick={onClickOpenModal} className="logout">
+                          <div onClick={onClicklogout} className="logout">
                             <h5 className="text-brand dark:text-brandLightOpacity100 text-base leading-5 montserratfont">
                               Log Out
                             </h5>

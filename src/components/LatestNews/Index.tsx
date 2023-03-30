@@ -7,7 +7,7 @@ import new4 from "../../assets/latest-news/news4.png";
 import new5 from "../../assets/latest-news/news5.png";
 import new6 from "../../assets/latest-news/news6.png";
 import Image from "next/image";
-import SectionSaprator from "../secSaprator";
+import SectionSaprator from "../SecSaprator";
 
 const LatestNews = () => {
   interface List {

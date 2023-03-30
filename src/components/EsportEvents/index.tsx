@@ -6,7 +6,7 @@ import Icon from "../../assets/images/esport-event/icon.png";
 import Logo from "../../assets/images/esport-event/logo.png";
 import RightIcon from "../../assets/images/esport-event/right.png";
 import Line from "../../assets/images/general/Line.png";
-import SectionSaprator from "../secSaprator";
+import SectionSaprator from "../SecSaprator";
 import style from "./esportEvents.module.css";
 import { useTheme } from "next-themes";
 import DarkLine from "../../assets/images/general/dark-line.png";
@@ -18,7 +18,6 @@ const EsportEvent = () => {
     prize: string;
   }
   const { theme } = useTheme();
-
   const [eventData, setEventData] = useState<EventList[]>([
     {
       event_title: "DOTA Pro Circuit 2023 Tour 1",

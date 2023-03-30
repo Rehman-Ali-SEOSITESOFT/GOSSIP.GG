@@ -7,7 +7,7 @@ import TeamOne from "../../assets/images/live-match/team-one.png";
 import TeamTwo from "../../assets/images/live-match/team-two.png";
 import Line from "../../assets/images/general/Line.png";
 import DarkLine from "../../assets/images/general/dark-line.png";
-import SectionSaprator from "../secSaprator";
+import SectionSaprator from "../SecSaprator";
 import style from "./liveMatch.module.css";
 import { useTheme } from "next-themes";
 

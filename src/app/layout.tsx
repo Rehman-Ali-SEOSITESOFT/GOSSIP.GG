@@ -1,7 +1,7 @@
 // import "../styles/styles.scss";
 import "../styles/globals.css";
-import Header from "@/layouts/header/Header";
-import Footer from "@/layouts/footer/Footer";
+import Header from "@/layouts/Header/Header";
+import Footer from "@/layouts/Footer/Footer";
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
