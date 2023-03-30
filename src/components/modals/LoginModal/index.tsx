@@ -8,8 +8,9 @@ import Discord from "../../../assets/images/modal/discord.png";
 import Close from "../../../assets/images/modal/close.png";
 import Google from "../../../assets/images/modal/google.png";
 
-import SignupModal from "../signupModal";
+import SignupModal from "../SignupModal";
 import ForgotPasswordModal from "../ForgotPasswordModal";
+
 const LoginModal = (props: any) => {
   const cancelButtonRef = useRef(null);
 
