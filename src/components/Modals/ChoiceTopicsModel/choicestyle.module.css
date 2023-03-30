@@ -1,0 +1,7 @@
+.selecttopic {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 67.23%,
+    rgba(49, 49, 49, 0.7) 100%
+  );
+}
