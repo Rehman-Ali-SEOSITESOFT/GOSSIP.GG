@@ -77,7 +77,7 @@ const Header = () => {
     <header className={`${styles.main_header} relative z-[2]`}>
       <div className={`${styles.header_width} `}>
         <div
-          className={`2xl:container header_container ${styles.header_container}  mw-lg-bg-brandDark3 `}
+          className={`2xl:container header_container ${styles.header_container}  mw-lg-bg `}
         >
           <div className="flex  flex-wrap items-center justify-between">
             <div className={`xl:w-1/4 lg:w-1/5  w-3/6  ${styles.header__left}`}>
@@ -187,8 +187,8 @@ const Header = () => {
                               Manage Preferences
                             </h5>
                           </div>
-                          <div onClick={onClicklogout} className="logout">
-                            <h5 className="dark:text-brandLightOpacity100 text-brandDark1 text-base leading-5 montserratfont">
+                          <div onClick={onClickOpenModal} className="logout">
+                            <h5 className="text-brandLightOpacity100 text-base leading-5 montserratfont">
                               Log Out
                             </h5>
                           </div>
