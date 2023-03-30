@@ -4,7 +4,6 @@ import welcomeicon from "../../../assets/globals/welcome-icon.png";
 import userimg from "../../../assets/globals/welcome-img.png";
 import Image from "next/image";
 import ChoiceTopicModel from "../ChoiceTopicsModel";
-
 const WelcomeGossip = (props: any) => {
   const cancelButtonRef = useRef(null);
   const [open, setOpen] = useState(false);
