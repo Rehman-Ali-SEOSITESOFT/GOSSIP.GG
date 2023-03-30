@@ -77,7 +77,7 @@ const Header = () => {
     <header className={`${styles.main_header} relative z-[2]`}>
       <div className={`${styles.header_width} `}>
         <div
-          className={`2xl:container header_container ${styles.header_container} `}
+          className={`2xl:container header_container ${styles.header_container}  mw-lg:bg-brandDark3 `}
         >
           <div className="flex  flex-wrap items-center justify-between">
             <div className={`xl:w-1/4 lg:w-1/5  w-3/6  ${styles.header__left}`}>
@@ -149,12 +149,14 @@ const Header = () => {
                         />
 
                         <div
-                          className={`absolute w-[240px] py-7	px-4 bg-brandLightOpacity100 	 dark:bg-brandDark1 right-[10px] top-[50px]  left-auto  border border-brandLightOpacity10 rounded-lg ${
+                          className={`absolute w-[240px] py-7	px-4 bg-brandLightOpacity100 	 dark:bg-brandDark1 right-[0] top-[60px]  left-auto  border border-grayCard dark:border-brandLightOpacity10 rounded-lg ${
                             profileShow ? "hidden" : "block"
                           } `}
                         >
                           {/* <Image src={downloadarrow} alt="Demo" /> */}
-
+                          <div
+                            className={`${styles.triangleshap}  border-y-brandLightOpacity100	 dark:border-y-brandDark1`}
+                          ></div>
                           <div className="deail ">
                             <h2 className="text-lg dark:text-brand font-bold montserratfont">
                               Naveen
@@ -169,7 +171,7 @@ const Header = () => {
                               View Profile
                             </h5>
                           </div>
-                          <div className="settings border-t border-b border-brandLightOpacity10 my-3 py-3 pl-2">
+                          <div className="settings border-t border-b border-grayCard dark:border-brandLightOpacity10 my-3 py-3 pl-2">
                             <h5 className="text-base leading-5 montserratfont font-semibold	dark:text-brandLightOpacity100 ">
                               Settings
                               <span>
@@ -187,8 +189,8 @@ const Header = () => {
                               Manage Preferences
                             </h5>
                           </div>
-                          <div onClick={onClicklogout} className="logout">
-                            <h5 className="dark:text-brandLightOpacity100 text-brandDark1 text-base leading-5 montserratfont">
+                          <div onClick={onClickOpenModal} className="logout">
+                            <h5 className="text-brand dark:text-brandLightOpacity100 text-base leading-5 montserratfont">
                               Log Out
                             </h5>
                           </div>

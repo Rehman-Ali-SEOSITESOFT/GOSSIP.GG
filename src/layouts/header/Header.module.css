@@ -85,6 +85,19 @@
 .header__right .profile_box {
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.5));
 }
+
+.triangleshap {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 22px solid;
+  background: transparent;
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  z-index: 0;
+}
 @media screen and (max-width: 1430px) {
   .main_header {
     padding: 0 20px 10px 20px;
