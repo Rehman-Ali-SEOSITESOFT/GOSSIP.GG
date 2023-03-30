@@ -77,7 +77,7 @@ const Header = () => {
     <header className={`${styles.main_header} relative z-[2]`}>
       <div className={`${styles.header_width} `}>
         <div
-          className={`2xl:container header_container ${styles.header_container} `}
+          className={`2xl:container header_container ${styles.header_container}  mw-lg-bg-brandDark3 `}
         >
           <div className="flex  flex-wrap items-center justify-between">
             <div className={`xl:w-1/4 lg:w-1/5  w-3/6  ${styles.header__left}`}>
