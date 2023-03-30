@@ -11,6 +11,7 @@ import { useTheme } from "next-themes";
 import styles from "./Header.module.css";
 import profile from "../../assets/profile/profile-icon.png";
 import LoginModal from "@/components/Modals/LoginModal";
+import EditProfileModal from "@/components/Modals/EditProfileModal";
 import { useRouter } from "next/navigation";
 import setting from "../../assets/profile/settings.png";
 import downloadarrow from "../../assets/profile/downarrow.png";
@@ -272,7 +273,8 @@ const Header = () => {
           </div>
         </div>
       </div>
-
+      
+      {/* <EditProfileModal open={open} onClickOpenModal={onClickOpenModal} /> */}
       <LoginModal open={open} onClickOpenModal={onClickOpenModal} />
       {/* <PasswrodChangeModal open={open} onClickOpenModal={onClickOpenModal}/> */}
       {/* <PasswordEmailModal open={open} onClickOpenModal={onClickOpenModal}/> */}

@@ -113,13 +113,13 @@ const LiveMatch = () => {
     ],
   };
   return (
-    <section className="live-matches mb-10">
+    <section className="live-matches mb-[88px]">
       <div className="global-section-width ">
         <SectionSaprator title="LIVE MATCHES" />
         <Slider className="live-matches-slider " {...settings}>
           {matchData.map((item, index) => (
             <div
-              className="bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1  dark:bg-brandDark1 border-inherit dark:border-brandDark1 border rounded "
+              className="border  dark:border-brandLightOpacity10 bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1  dark:bg-brandDark1 border-inherit dark:border-brandDark1 border rounded"
               key={index}
             >
               <div className="flex flex-row justify-between items-center content-center p-4">
@@ -136,9 +136,9 @@ const LiveMatch = () => {
                   </p>
                 </div>
                 {item.match_status !== "LIVE" ? (
-                  <div className="bg-grayCard dark:bg-brandLightOpacity10 opacity-100 h-8 max-w-[25%] flex justify-center items-center rounded-sm min-w-fit">
+                  <div className="bg-grayCard dark:bg-brandLightOpacity10 opacity-100 h-8 max-w-[25%]  text-[14px]  flex justify-center items-center rounded-sm min-w-fit">
                     <p
-                      className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_text_live_page} font-semibold ${style.font_live_match_14} px-2 `}
+                      className='text-brandDark2 dark:text-brandLightOpacity100 opacity-70 montserratfont font-medium  text-[14px]  px-2 '
                     >
                       {item.match_status}
                     </p>
@@ -146,7 +146,7 @@ const LiveMatch = () => {
                 ) : (
                   <div className="bg-errorIndicator h-8 w-14 flex justify-center items-center rounded-sm min-w-fit">
                     <p
-                      className={`text-white ${style.font_text_live_page} tracking-wider  `}
+                      className={`text-white montserratfont  text-[14px]  tracking-wider   `}
                     >
                       {item.match_status}
                     </p>

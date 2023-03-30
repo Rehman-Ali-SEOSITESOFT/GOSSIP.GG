@@ -16,7 +16,7 @@ export default function Home() {
   useEffect(() => {
     let user: any = localStorage.getItem("isLogin");
     setIsLoggedIn(user);
-    // router.refresh();
+    router.refresh();
   }, []);
 
   return (
