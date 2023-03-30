@@ -53,7 +53,7 @@ const HeroSection = () => {
                         <Image src={elem.picture} alt="demo " />
                       </div>
                       <div className={styles.desc_wrapper}>
-                        <h3 className="text-base font-bold text-brandDark2 montserratfont dark:text-brandLightOpacity100">
+                        <h3 className="text-base font-bold  leading-5	 text-brandDark2 montserratfont dark:text-brandLightOpacity100">
                           {" "}
                           {elem.name}{" "}
                         </h3>
@@ -62,12 +62,12 @@ const HeroSection = () => {
                           distracted by the readable content of a page when...
                         </p>
                         <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs">
-                          <span>
+                          <span className="montserratfont">
                             {" "}
                             <i>3 hrs ago</i>{" "}
                           </span>{" "}
                           <span
-                            className={`${styles.line} border-l border-l-textColorGray dark:border-l-brandLightOpacity70`}
+                            className={`${styles.line} border-l border-l-textColorGray dark:border-l-brandLightOpacity70 montserratfont`}
                           >
                             5 min read
                           </span>

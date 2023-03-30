@@ -99,7 +99,6 @@ const Trending = () => {
       link: "/",
     },
   ]);
-  const { theme, setTheme } = useTheme();
 
   return (
     <section className={`${styles.trending} trending`}>
@@ -107,19 +106,12 @@ const Trending = () => {
         <div className="2xl:container">
           <div className="flex items-center	">
             <div className={`${styles.trend_left}`}>
-              {theme === "dark" ? 
-               <Image
-               src={trendingLight}
-               alt="trending"
-               className="inline-block w-5"
-             />:
-             <Image
-             src={trendingDard}
-             alt="trending"
-             className="inline-block w-5"
-           />
-              }
-             
+              <Image
+                src={trendingLight}
+                alt="trending"
+                className={` inline-block w-5  brightness-0 dark:brightness-100		`}
+              />
+
               <h4
                 className={`inline-block ${styles.font_styls} text-brandDark2 dark:text-brandLightOpacity100 `}
               >

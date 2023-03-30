@@ -1,12 +1,19 @@
+import ProfileDetail from "@/components/Userprofile/UserProfile";
 import React from "react";
 
 const page = () => {
   return (
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ex sint
-      error, minima a dolores cupiditate veniam dolor recusandae et veritatis
-      dignissimos deleniti non dolorum quisquam perspiciatis est natus corporis!
-    </div>
+    <section className="user-profile">
+      <div className="user-section-width">
+        <div className="2xl:container">
+          <div className="flex">
+            <div className="w-full border dark:border-brandLightOpacity10 rounded-lg dark:bg-[#2a2627]">
+              <ProfileDetail />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

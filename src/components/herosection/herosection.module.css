@@ -55,7 +55,7 @@
     max-width: 150px;
   }
   .single_item .desc_wrapper {
-    padding: 0 5px 0 15px;
+    padding: 0 15px 0 15px;
   }
 }
 
@@ -88,16 +88,25 @@
   }
 
   .single_item .image_wrapper {
-    height: auto;
+    height: 100%;
     width: 100%;
+    max-width: 110px;
   }
+  /* .single_item .image_wrapper {
+    width: 100%;
+    max-width: 100px;
+    height: 100px;
+  } */
   .single_item .image_wrapper img {
     height: 100%;
+    width: 100%;
     object-fit: cover;
   }
   .single_item .desc_wrapper h3 {
-    font-size: 15px;
-    line-height: normal;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
   }
   .left_side img {
     min-height: 100%;

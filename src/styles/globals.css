@@ -36,6 +36,15 @@
   margin: auto;
   padding: 0 80px;
 }
+
+.user-section-width {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 190px;
+}
+
+/*  */
 .slick-slider button {
   background-color: #e5e5e5 !important;
   width: 40px;
@@ -65,7 +74,7 @@
   font-size: 18px;
 }
 
-.f_it{
+.f_it {
   font-style: italic;
 }
 .montserratfont {
@@ -76,13 +85,6 @@
 }
 
 /*  GLOBALE SLICK SLIDER NEXT AND PREVIW BUTTON */
-.trendingteass .slick-next {
-  right: 0 !important;
-}
-
-.trendingteass .slick-prev {
-  left: 0 !important;
-}
 
 /* TRENDING COMPONENT  */
 .trendingteass .slick-slide {
@@ -111,9 +113,6 @@
 .trendingteass .slick-prev {
   top: 14px;
 }
-.trendingteass .slick-prev {
-  left: -45px;
-}
 
 /* SCROLL */
 .choiceselect .slectopitons::-webkit-scrollbar {
@@ -126,6 +125,15 @@
 
 .choiceselect .slectopitons::-webkit-scrollbar-thumb {
   border-radius: 8px;
+}
+.slick-prev {
+  left: -60px !important;
+}
+.slick-next {
+  right: -65px !important;
+}
+.trendingteass .slick-prev {
+  left: -45px !important;
 }
 
 @media screen and (max-width: 1430px) {
