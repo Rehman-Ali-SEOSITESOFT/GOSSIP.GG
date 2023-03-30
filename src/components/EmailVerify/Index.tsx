@@ -2,7 +2,7 @@ import React from "react";
 
 const EmailVerify = () => {
   return (
-    <section className="emailverify dark:bg-brand py-1.5 fixed bottom-0 right-0 left-0 too-auto	mw-lg:bottom-[70px]">
+    <section className="emailverify bg-brand py-1.5 fixed bottom-0 right-0 left-0 too-auto	mw-lg:bottom-[70px]">
       <div className="global-section-width">
         <div className="2xl:container">
           <div className="w-full">

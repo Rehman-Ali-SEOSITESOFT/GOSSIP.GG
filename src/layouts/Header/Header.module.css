@@ -1,6 +1,10 @@
 .main_header {
   /* overflow: hidden; */
   padding: 0 0 10px 0;
+  position: sticky;
+  top: -1px;
+  left: 0;
+  right: 0;
 }
 .header_width {
   max-width: 1390px;
@@ -27,11 +31,13 @@
 .header__center ul li a {
   font-family: "Montserrat";
   font-style: normal;
+  font-weight: 700;
   display: block;
   font-size: 16px;
+  line-height: 20px;
 }
 
-.header__center ul li a :hover {
+.header__center ul li a:hover {
   transform: scale(1.11);
 }
 .header__right .icons {

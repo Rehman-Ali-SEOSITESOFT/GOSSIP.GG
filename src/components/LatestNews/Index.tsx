@@ -50,8 +50,9 @@ const LatestNews = () => {
             {items.map((elem, index) => {
               return (
                 <div
-                  // p-5
-                  className={`w-1/3  mw-12:w-1/3 mw-lg:w-full flex     ${
+                  className={`w-1/3 ${
+                    index === 0 || index === 1 || index === 2 ? "pt-0" : "pt-5"
+                  } pl-5	 pr-5	 pb-0		  mw-12:w-1/3 mw-lg:w-full flex     ${
                     style.news_items
                   } border-grayCard  dark:border-brandLightOpacity10 ${
                     index === 2
@@ -66,7 +67,7 @@ const LatestNews = () => {
                     <Image
                       src={elem.picture}
                       alt="Latest new"
-                      className="rounded-sm"
+                      className="rounded-sm object-cover"
                     />
                   </div>
                   <div
@@ -76,7 +77,7 @@ const LatestNews = () => {
                       Bayes Esports appoints York Scheunemann as COO of reputed
                       gaming...
                     </h4>
-                    <div className="tags flex py-4 montserratfont">
+                    <div className="tags flex pt-3.5 pb-3 montserratfont">
                       <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity30 dark:text-brandLightOpacity70">
                         News
                       </div>
@@ -104,92 +105,6 @@ const LatestNews = () => {
                   </div>
                 </div>
               );
-              // return (
-              //   <div
-              //     // p-5
-              //     className={`w-1/3  mw-12:w-1/2 mw-sm:w-full flex  pl-5    ${style.news_items} `}
-              //     key={index}
-              //   >
-              //     <div
-              //       className={`${style.news_img_wrap} pr-4
-              //       ${
-              //         index + 1 === 4 || index + 1 === 5 || index + 1 === 6
-              //           ? "border-0"
-              //           : "border-b border-b-grayCard"
-              //       }
-              //       ${
-              //         index + 1 === 1 || index + 1 === 2 || index + 1 === 3
-              //           ? "pt-0"
-              //           : "pt-5"
-              //       }   rounded-sm   dark:border-b-brandLightOpacity10  pb-5`}
-              //     >
-              //       <Image
-              //         src={elem.picture}
-              //         alt="Latest new"
-              //         className="rounded-sm"
-              //       />
-              //     </div>
-              //     <div
-              //       className={`${
-              //         style.news_desc
-              //       }  pr-5 mx-14:pr-4  dark:border-b-brandLightOpacity10  pb-5 ${
-              //         index + 1 === 4 || index + 1 === 5 || index + 1 === 6
-              //           ? "border-0"
-              //           : "border-b border-b-grayCard"
-              //       }  ${
-              //         index + 1 === 1 || index + 1 === 2 || index + 1 === 3
-              //           ? "pt-0"
-              //           : "pt-5"
-              //       } `}
-              //     >
-              //       <h4 className="text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100">
-              //         Bayes Esports appoints York Scheunemann as COO of reputed
-              //         gaming...
-              //       </h4>
-              //       <div className="tags flex py-4 montserratfont">
-              //         <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity30 dark:text-brandLightOpacity70">
-              //           News
-              //         </div>
-              //         <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity30 dark:text-brandLightOpacity70">
-              //           Esports
-              //         </div>
-              //       </div>
-              //       <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs montserratfont">
-              //         <span>
-              //           <i>3 hrs ago</i>
-              //         </span>
-              //         <span
-              //           className="border-l border-l-textColorGray pl-2 ml-2 border-textColorGray
-              //         dark:border-l-brandLightOpacity10
-              //         "
-              //         >
-              //           5 min read
-              //         </span>
-              //       </small>
-              //     </div>
-              //     <div
-              //       className={`${
-              //         style.thumnail_img
-              //       }  pr-5 mx-14:pr-4  border-r-grayCard dark:border-r-brandLightOpacity10
-              //       ${
-              //         index + 1 === 1 || index + 1 === 2 || index + 1 === 3
-              //           ? "pt-0"
-              //           : "pt-5"
-              //       }
-              //       ${
-              //         index + 1 === 3 || index + 1 === 6
-              //           ? "border-0"
-              //           : `border-r`
-              //       }
-
-              //       `}
-              //     >
-              //       <div className="bookmark text-textColorGray hover:text-textColor  dark:text-brandLightOpacity70 dark:hover:text-brandLightOpacity100">
-              //         <i className="fa-regular fa-bookmark "></i>
-              //       </div>
-              //     </div>
-              //   </div>
-              // );
             })}
           </div>
           <div className="hidden mw-sm:hidden flex flex-wrap pt-5 pb-5  bg-white rounded dark:bg-brandDark1 mw-lg:flex ">

@@ -95,7 +95,7 @@ const Header = () => {
                         <li key={index}>
                           <a
                             href={elme.link}
-                            className="font-bold leading-5 no-underline uppercase text-brandLightOpacity100 hover:text-brand hover:font-extrabold sm:text-brandLightOpacity70 "
+                            className="font-bold leading-5 no-underline uppercase text-brandLightOpacity100 hover:text-brand hover:font-extrabold sm:text-brandLightOpacity70  "
                           >
                             {elme.name}
                           </a>
@@ -147,6 +147,7 @@ const Header = () => {
                           src={profile}
                           alt="Demo"
                           onClick={() => setProfileShow(!profileShow)}
+                          className="mw-sm:w-[35px] mw-sm:h-[35px]"
                         />
 
                         <div
