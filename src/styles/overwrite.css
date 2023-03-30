@@ -1,0 +1,32 @@
+/* /// Overwrite slick slider of esport section section/// */
+
+.Esport-events .slick-initialized .slick-list {
+  margin: 0 -16px;
+}
+.Esport-events .slick-initialized .slick-slide > div {
+  padding: 0 16px;
+}
+
+/* /// Overwrite slick slider of live match section/// */
+.live-matches .slick-initialized .slick-list {
+  margin: 0 -16px;
+}
+.live-matches .slick-initialized .slick-slide > div {
+  padding: 0 16px;
+}
+
+@media screen and (max-width: 500px) {
+  .Esport-events .slick-initialized .slick-list,
+  .live-matches .slick-initialized .slick-list {
+    margin: 0 0;
+  }
+  .Esport-events .slick-slide,
+  .live-matches-slider .slick-slide {
+    margin-left: -7px;
+  }
+
+  .Esport-events .slick-initialized .slick-slide > div,
+  .live-matches .slick-initialized .slick-slide > div {
+    padding: 0 15px;
+  }
+}

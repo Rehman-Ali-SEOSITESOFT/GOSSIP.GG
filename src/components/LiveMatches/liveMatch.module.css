@@ -1,0 +1,55 @@
+.font_text_live_page {
+  font-family: "Montserrat";
+}
+
+.font_live_match_18 {
+  font-size: 18px;
+}
+
+.font_live_match_22 {
+  font-size: 22px;
+}
+
+.font_live_match_16 {
+  font-size: 16px;
+}
+
+.font_live_match_14 {
+  font-size: 14px;
+}
+
+/* 
+.abc{
+  margin:10px;
+  box-shadow: 0px 0px 8px 0px #000;
+} */
+
+@media (max-width: 1397px) {
+  .font_live_match_14 {
+    font-size: 10px;
+  }
+  .font_live_match_22 {
+    font-size: 18px;
+  }
+  .font_live_match_16 {
+    font-size: 12px;
+  }
+  .font_live_match_18 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 875px) {
+  .font_live_match_14 {
+    font-size: 10px;
+  }
+  .font_live_match_22 {
+    font-size: 18px;
+  }
+  .font_live_match_16 {
+    font-size: 12px;
+  }
+  .font_live_match_18 {
+    font-size: 14px;
+  }
+}
