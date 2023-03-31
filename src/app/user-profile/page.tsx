@@ -1,10 +1,10 @@
 "use client";
 import UserForYou from "@/components/Userprofile/UserForyou";
 import ProfileDetail from "@/components/Userprofile/UserProfile";
-import React from "react";
+import React, { useState } from "react";
 
 const page = () => {
-  const [openTab, setOpenTab] = React.useState(1);
+  const [openTab, setOpenTab] = useState(1);
 
   return (
     <section className="user-profile">
