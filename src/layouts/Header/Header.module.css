@@ -23,6 +23,7 @@
 
 .header__left .logo img {
   max-height: 22px;
+  max-width: fit-content;
 }
 
 .header__center ul li {

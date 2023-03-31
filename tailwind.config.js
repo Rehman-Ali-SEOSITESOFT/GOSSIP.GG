@@ -19,6 +19,7 @@ module.exports = {
         brandLightOpacity70: "rgba(229, 229, 229, 0.7)",
         brandLightOpacity50: "rgba(229, 229, 229, 0.5)",
         brandLightOpacity30: "rgba(229, 229, 229, 0.3)",
+        brandLightOpacity20: "rgba(229, 229, 229, 0.2)",
         brandLightOpacity10: "rgba(229, 229, 229, 0.1)",
         brandLightOpacity5: "rgba(229, 229, 229, 0.05)",
         // BRAND DARK COLORS
@@ -39,7 +40,7 @@ module.exports = {
         textColor: "rgba(34, 30, 31, 0.9)",
         textColorGray: "rgba(34, 30, 31, 0.7) ",
         secSaprator: "#ED4E50",
-
+        userprofilebg: "#2a2627",
         custom: {
           DEFAULT: "#363233",
         },

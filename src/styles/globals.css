@@ -135,13 +135,31 @@
 .trendingteass .slick-prev {
   left: -45px !important;
 }
+.dark_gr_tab :focus-visible,
+.gr_tab button:focus-visible {
+  outline: none;
+}
+/* CUSTOM TAB */
+/* .gr_tab button[aria-selected="false"] {
+  color: green;
+}
+.gr_tab button[aria-selected="true"] {
+  color: red;
+}
+.dark_gr_tab button[aria-selected="false"] {
+  color: #e5e5e5;
+}
+.dark_gr_tab button[aria-selected="true"] {
+  color: #ed4e50;
+} */
 
+/*  */
 @media screen and (max-width: 1430px) {
   .global-section-width {
     padding: 0 70px;
   }
   .trending .slick-next {
-    right: 0;
+    right: 0 !important;
   }
 }
 

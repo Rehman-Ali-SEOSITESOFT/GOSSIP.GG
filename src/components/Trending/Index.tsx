@@ -126,7 +126,10 @@ const Trending = () => {
                 return (
                   <a
                     href="#"
-                    className={`${styles.tags} bg-grayCard hover:bg-grayCardHover dark:bg-brandLightOpacity10 dark:text-brandLightOpacity70 dark:hover:bg-brandLightOpacity30 `}
+                    className={`${styles.tags} bg-grayCard 
+                    text-textColorGray hover:bg-grayCardHover dark:bg-brandLightOpacity10 dark:text-brandLightOpacity70 
+                    dark:hover:text-brandLightOpacity100
+                    dark:hover:bg-brandLightOpacity20 `}
                     key={index}
                   >
                     <span>{item.name}</span>

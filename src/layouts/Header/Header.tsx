@@ -95,7 +95,7 @@ const Header = () => {
                         <li key={index}>
                           <a
                             href={elme.link}
-                            className="font-bold leading-5 no-underline uppercase text-brandLightOpacity100 hover:text-brand hover:font-extrabold sm:text-brandLightOpacity70  "
+                            className="font-bold leading-5 no-underline uppercase text-brandLightOpacity100 hover:text-brand hover:font-extrabold sm:text-brandLightOpacity100  "
                           >
                             {elme.name}
                           </a>
@@ -132,7 +132,7 @@ const Header = () => {
                 {searchOpen ? (
                   <>
                     <div
-                      className={`${styles.search__btn} ${styles.icons} bg-brandLightOpacity10 hover:bg-brandLightOpacity50`}
+                      className={`${styles.search__btn} ${styles.icons} bg-brandLightOpacity10 hover:bg-brandLightOpacity20`}
                       onClick={hanldeClose}
                     >
                       <span>
@@ -151,7 +151,7 @@ const Header = () => {
                         />
 
                         <div
-                          className={`absolute w-[240px] py-7	px-4 bg-brandLightOpacity100 	 dark:bg-brandDark1 right-[0] top-[60px]  left-auto  border border-grayCard dark:border-brandLightOpacity10 rounded-lg ${
+                          className={`absolute w-[240px] py-7	px-4 bg-brandLightOpacity20 	 dark:bg-brandDark1 right-[0] top-[60px]  left-auto  border border-grayCard dark:border-brandLightOpacity10 rounded-lg ${
                             profileShow ? "hidden" : "block"
                           } `}
                         >
@@ -201,7 +201,7 @@ const Header = () => {
                     ) : (
                       <div
                         onClick={onClickOpenModal}
-                        className={`${styles.login__btn} ${styles.icons} text-brandLightOpacity100 bg-brandLightOpacity10 hover:bg-brandLightOpacity50`}
+                        className={`${styles.login__btn} ${styles.icons} text-brandLightOpacity100 bg-brandLightOpacity10 hover:bg-brandLightOpacity20`}
                       >
                         <span> Login</span>
                       </div>
@@ -221,7 +221,7 @@ const Header = () => {
                     </div> */}
 
                     <div
-                      className={`${styles.theme__btn} ${styles.icons} bg-brandLightOpacity10 hover:bg-brandLightOpacity50`}
+                      className={`${styles.theme__btn} ${styles.icons} bg-brandLightOpacity10 hover:bg-brandLightOpacity20`}
                       onClick={() =>
                         setTheme(theme === "dark" ? "light" : "dark")
                       }
