@@ -17,7 +17,7 @@ const ProfileDetail = () => {
           className="banner w-full h-full object-cover  "
           alt="banner "
         />
-        <div className="dark:bg-brandLightOpacity10 rounded-3xl inline-block px-4	 py-2.5 absolute top-6	right-6	 cursor-pointer	">
+        <div className="dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 rounded-3xl inline-block px-4	 py-2.5 absolute top-6	right-6	 cursor-pointer	">
           <Image
             src={editprofile}
             alt="edit user"
@@ -36,8 +36,8 @@ const ProfileDetail = () => {
             alt="profile-image"
           />
         </div>
-        <div className="profile_detail flex  justify-between pt-[15px] pr-[80px] pb-[50px] pl-[80px]">
-          <div className="about-user w-[65%] border-l-2	dark:border-brand pl-3">
+        <div className="profile_detail flex  justify-between pt-[15px] pr-[95px] pb-[50px] pl-[80px]">
+          <div className="about-user w-[55%] border-l-2	dark:border-brand pl-3.5">
             <h3 className="title text-2xl leading-7	font-bold montserratfont	 dark:text-brandLightOpacity100">
               Naveen
             </h3>
@@ -53,30 +53,49 @@ const ProfileDetail = () => {
               Gossip team since the start.
             </p>
           </div>
-          <div className="about-rank w-[45%]">
-            <div className="plyaing-detail">
-              <h4 className="text-base dark:text-brandLightOpacity100 leading-5">
+          <div className="about-rank w-[45%] pl-[80px] flex justify-between flex-col">
+            <div className="plyaing-detail pl-3.5	">
+              <h4 className="text-base dark:text-brandLightOpacity100 montserratfont leading-5 font-semibold pb-2	 ">
                 Currently playing:
               </h4>
-              <div className="flex ">
-                <div>
-                  <Image alt="pc" src={pc} /> <span>PC</span>
+              <div className="flex items-center">
+                <div
+                  className="text-sm	leading-4 montserratfont font-normal	dark:text-brandLightOpacity100 
+                border dark:border-brandLightOpacity100 rounded w-[75px] h-[35px] flex items-center justify-center	"
+                >
+                  <Image alt="pc" className="inline-block mr-2 " src={pc} />{" "}
+                  <span>PC</span>
                 </div>
-                <div>
-                  <Image alt="pc" src={valorant} /> <span>Valorant</span>
+                <div className="text-sm	leading-4	montserratfont font-normal	dark:text-brandLightOpacity100 border dark:border-brandLightOpacity100 rounded w-[103px] h-[35px] flex items-center justify-center ml-3">
+                  <Image
+                    alt="pc"
+                    src={valorant}
+                    className="inline-block  mr-2 w-[20px] h-16px"
+                  />{" "}
+                  <span>Valorant</span>
                 </div>
               </div>
             </div>
-            <div className="more">
-              <div className="saved">
-                <h4>saved</h4>
-                <p>50 articles</p>
+            <div className="more flex justify-between">
+              <div className="saved border-l-2 dark:border-brand pl-4	 ">
+                <h4 className="text-base leading-5 font-semibold dark:text-brandLightOpacity100 montserratfont capitalize mb-4	">
+                  saved
+                </h4>
+                <p className="montserratfont test-base leading-5 font-normal dark:text-brandLightOpacity100">
+                  50 articles
+                </p>
               </div>
-              <div className="social-link">
-                <h4>Social Links:</h4>
-                <div className="image">
-                  <Image src={instagram} alt="" />
-                  <Image src={twitter} alt="" />
+              <div className="social-link border-l-2 dark:border-brand pl-4	 ">
+                <h4 className="text-base leading-5 font-semibold dark:text-brandLightOpacity100 montserratfont capitalize mb-2.5	">
+                  Social Links:
+                </h4>
+                <div className="image flex">
+                  <Image
+                    src={instagram}
+                    alt=""
+                    className="w-[24px] h-[24px] mr-4	"
+                  />
+                  <Image src={twitter} alt="" className="w-[24px] h-[24px]" />
                 </div>
               </div>
             </div>

@@ -74,7 +74,7 @@ const HeroSection = () => {
                         </small>
                       </div>
                       <div className={styles.thumnail_wrapper}>
-                        <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity30  hover:bg-grayCardHover cursor-pointer rounded-3xl">
+                        <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20  hover:bg-grayCardHover cursor-pointer rounded-3xl">
                           <i className="fa-regular fa-bookmark "></i>{" "}
                         </div>
                       </div>
