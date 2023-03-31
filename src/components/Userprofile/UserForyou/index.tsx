@@ -16,9 +16,9 @@ const UserForYou = () => {
                 Bayes Esports appoints York Scheunemann as COO of their company
               </h2>
               <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs montserratfont">
-                  <a href="#" className="underline">
-                    John D
-                  </a>
+                <a href="#" className="underline">
+                  John D
+                </a>
                 <span className="border-l border-l-textColorGray pl-2 ml-2 border-textColorGray   dark:border-l-brandLightOpacity10   ">
                   Jan 30th, 2023, 18:08
                 </span>
@@ -28,7 +28,7 @@ const UserForYou = () => {
               </small>
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
+                industry. Lorem Ipsum has been the industry&#39;s standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type...
               </p>
