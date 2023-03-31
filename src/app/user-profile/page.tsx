@@ -3,7 +3,7 @@ import UserForYou from "@/components/Userprofile/UserForyou";
 import ProfileDetail from "@/components/Userprofile/UserProfile";
 import React, { useState } from "react";
 
-const page = () => {
+const Page = () => {
   const [openTab, setOpenTab] = useState(1);
 
   return (
@@ -75,4 +75,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
