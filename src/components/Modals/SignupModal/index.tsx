@@ -76,19 +76,19 @@ const SignupModal = (props: any) => {
                           Sign Up to Gossip.gg
                         </p>
                         <input
-                          className="text-base font-medium  montserratfont border-brandLightOpacity10 border rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
+                          className="text-base hover:border hover:border-[#ffffff] font-medium  montserratfont border-brandLightOpacity10 border rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
                           id="name"
                           type="text"
                           placeholder="Name"
                         />
                         <input
-                          className="text-base font-medium  montserratfont border-brandLightOpacity10 mt-4 border rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
+                          className="text-base hover:border hover:border-[#ffffff] font-medium  montserratfont border-brandLightOpacity10 mt-4 border rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
                           id="email"
                           type="text"
                           placeholder="Email"
                         />
                         <input
-                          className="text-base font-medium  montserratfont border-brandLightOpacity10 mt-4 mb-38px border rounded w-full h-12 py-2 px-6  bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
+                          className="text-base font-medium hover:border hover:border-[#ffffff]  montserratfont border-brandLightOpacity10 mt-4 mb-38px border rounded w-full h-12 py-2 px-6  bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
                           id="password"
                           type="password"
                           autoComplete="false"

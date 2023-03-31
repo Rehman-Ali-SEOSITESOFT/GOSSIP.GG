@@ -52,7 +52,7 @@ const ForgotPasswordModal = (props: any) => {
                 leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                 leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
               >
-                <Dialog.Panel className="relative shadow-3xshadow  transform overflow-hidden rounded-lg dark:bg-brandDark2 bg-white text-left shadow-xl transition-all sm:my-8 ">
+                <Dialog.Panel className="relative shadow-3xshadow  transform overflow-hidden rounded-lg dark:bg-brandDark2 bg-white text-left  transition-all sm:my-8 ">
                   <div className="bg-brandDark2">
                     <div className="h-[181px]">
                       <Image
@@ -74,7 +74,7 @@ const ForgotPasswordModal = (props: any) => {
                       </div>
                     </div>
                   </div>
-                  <div className="flex flex-col ">
+                  <div className="flex flex-col  border-2 rounded-b-lg dark:border-r-brandLightOpacity10 dark:border-l-brandLightOpacity10 dark:border-b-brandLightOpacity10  dark:border-t-brandDark2">
                     <div className=" mw-sm:pl-10 mw-sm:pr-10 pl-[140px] pr-[140px]  mb-9">
                       <div className="flex flex-col items-center ">
                         <Image src={Logo} alt="logo" />
@@ -83,7 +83,7 @@ const ForgotPasswordModal = (props: any) => {
                         </p>
                         <span className="montserratfont text-center  pb-8 text-brandLightOpacity70 not-italic text-base mw-sm:text-[12px]">Please confirm your email so we can send<br/> you a link to reset your password.</span>
                         <input
-                          className="border-brandLightOpacity10 mb-10 border rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
+                          className="border-brandLightOpacity10 hover:border hover:border-[#ffffff] mb-10 border rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
                           id="email"
                           type="text"
                           placeholder="Email"

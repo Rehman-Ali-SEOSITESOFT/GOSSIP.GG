@@ -47,7 +47,7 @@ const PasswordEmailModal = (props: any) => {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative shadow-3xshadow  transform overflow-hidden rounded-lg dark:bg-brandDark2 bg-white text-left shadow-xl transition-all sm:my-8 ">
+              <Dialog.Panel className="relative shadow-3xshadow  transform overflow-hidden rounded-lg dark:bg-brandDark2 bg-white text-left transition-all sm:my-8 ">
                 <div className="bg-brandDark2">
                   <div className="h-[181px]">
                     <Image
@@ -69,7 +69,7 @@ const PasswordEmailModal = (props: any) => {
                       </div>
                   </div>
                 </div>
-                <div className="flex flex-col ">
+                <div className="flex flex-col border-2 rounded-b-lg dark:border-r-brandLightOpacity10 dark:border-l-brandLightOpacity10 dark:border-b-brandLightOpacity10  dark:border-t-brandDark2 ">
                   <div className=" mw-sm:pl-10 mw-sm:pr-10 pl-35 pr-35  mb-9">
                     <div className="flex flex-col items-center  mt-126px pb-10">
                       <p className="text-brandLightOpacity100 text-2xl montserratfont not-italic font-bold pb-6 mw-sm:text-lg "> Email Sent</p>

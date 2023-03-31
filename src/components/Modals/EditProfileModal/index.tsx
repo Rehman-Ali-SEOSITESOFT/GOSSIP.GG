@@ -1,11 +1,7 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import Image from "next/image";
-import Banner from "../../../assets/images/modal/banner.png";
-import Logo from "../../../assets/images/modal/logo.png";
-import Discord from "../../../assets/images/modal/discord.png";
 import Close from "../../../assets/images/modal/close.png";
-import Google from "../../../assets/images/modal/google.png";
 
 const EditProfileModal = (props: any) => {
   const cancelButtonRef = useRef(null);
@@ -14,21 +10,20 @@ const EditProfileModal = (props: any) => {
   const [openForgotPasswordModal, setOpenForgotPasswordModal] = useState(false);
 
   const onClickOpenModal = () => {
-    if(!open){
+    if (!open) {
       props.onClickOpenModal();
     }
     setOpen(!open);
   };
 
-
   const onClickOpenForgotPasswordModal = () => {
-    if(!openForgotPasswordModal){
+    if (!openForgotPasswordModal) {
       props.onClickOpenModal();
     }
     setOpenForgotPasswordModal(!openForgotPasswordModal);
   };
 
-
+  const [openTab, setOpenTab] = React.useState(1);
   return (
     <>
       <Transition.Root show={props.open} as={Fragment}>
@@ -60,12 +55,18 @@ const EditProfileModal = (props: any) => {
                 leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                 leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
               >
-                <Dialog.Panel className="relative shadow-3xshadow  transform overflow-hidden rounded-lg dark:bg-brandDark2 bg-white text-left shadow-xl transition-all sm:my-8 ">
+                <Dialog.Panel className="relative shadow-3xshadow  transform overflow-hidden rounded-lg dark:bg-brandDark2 bg-brandDark2 text-left  transition-all sm:my-8   border-2  dark:border-brandLightOpacity10   ">
                   <div className="bg-brandDark2">
                     <div className="flex flex-row justify-between  pl-12 pt-4 pr-4">
-                      <div>
-                        <p>Edit Profile</p>
-                        <p>Naveen <span></span> Joined Feb 2023</p>                      
+                      <div className="">
+                        <p className="text-[24px] pb-[5px] text-brandLightOpacity100 font-bold montserratfont">
+                          Edit Profile
+                        </p>
+                        <p className="flex items-center text-xs text-brandLightOpacity70 font-normal montserratfont">
+                          Naveen{" "}
+                          <span className="h-4 w-[1px]  mx-3 dark:bg-brandLightOpacity70 inline-block "></span>{" "}
+                          Joined Feb 2023
+                        </p>
                       </div>
                       <div
                         onClick={() => props.onClickOpenModal()}
@@ -76,76 +77,122 @@ const EditProfileModal = (props: any) => {
                     </div>
                   </div>
                   <div className="flex flex-col ">
-                    <div className=" mw-sm:pl-10 mw-sm:pr-10 pl-40 pr-40  mb-9">
-                      <div className="flex flex-col items-center ">
-                        <Image src={Logo} alt="logo" />
-                        <p className="text-brandLightOpacity100 text-2xl montserratfont not-italic font-bold pb-6 mw-sm:text-lg ">
-                          edit to Gossip.gg
-                        </p>
-                        <input
-                          className="border-brandLightOpacity10 border rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
-                          id="email"
-                          type="text"
-                          placeholder="Email"
-                        />
-                        <input
-                          className="border-brandLightOpacity10 mt-4 mb-38px border rounded w-full h-12 py-2 px-6  bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
-                          id="password"
-                          type="password"
-                          autoComplete="false"
-                          placeholder="Password"
-                        />
-                      </div>
-
-                      <div className="flex flex-row justify-between items-center mb-38px ">
-                        <div className="flex flex-row items-center">
-                          <input
-                            type="checkbox"
-                            className="h-5 w-5 text-green-600"
-                          />
-                          <p className="pl-2.5 montserratfont text-brandLightOpacity70 text-xs">
-                            Remember me
-                          </p>
-                        </div>
-                        <div>
-                          <a
-                            href="#"
-                            onClick={() => onClickOpenForgotPasswordModal()}
-                            className="montserratfont text-brandLightOpacity70 text-xs underline"
+                    <div className="mb-9">
+                      <div className="flex flex-wrap">
+                        <div className="w-full">
+                          <ul
+                            className="flex border dark:border-r-brandDark2  dark:border-l-brandDark2 dark:border-t-brandDark2 dark:border-b-brandLightOpacity10 mb-0 list-none flex-wrap pt-3  flex-row"
+                            role="tablist"
                           >
-                            Forgot password?
-                          </a>
-                        </div>
-                      </div>
-                      <div className="flex flex-col items-center">
-                        <button className="bg-brand mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold">
-                          Log In
-                        </button>
-                        <p className="pt-3 montserratfont text-brandLightOpacity70 text-xs">
-                          Dont&#39;t have and account?
-                          <a href="#"
-                          onClick={() => onClickOpenModal()}
-                          className="underline  font-medium pl-1.5">
-                            Sign Up
-                          </a>
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-row items-center justify-center ">
-                      <div className="bg-gradient-to-l mw-sm:min-w-[25%] min-w-[35%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
-                      <p className="px-2 montserratfont mw-sm:text-sm text-lg font-bold">
-                        Or continue with
-                      </p>
-                      <div className="bg-gradient-to-r mw-sm:min-w-[25%] min-w-[35%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
-                    </div>
-                    <div className="mw-sm:pl-10 mw-sm:pr-10 pl-40 pr-40 mt-8 mb-68px">
-                      <div className="flex flex-row justify-center items-center">
-                        <div className="mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full mr-5 dark:bg-brandLightOpacity5 bg-brandLightOpacity5 flex justify-center items-center content-center ">
-                          <Image src={Google} alt="google icon" />
-                        </div>
-                        <div className="mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full ml-5 dark:bg-brandLightOpacity5 bg-brandLightOpacity5 flex justify-center items-center content-center ">
-                          <Image src={Discord} alt="google icon" />
+                            <li className="-mb-px mr-2  last:mr-0 flex-auto text-center">
+                              <a
+                                className={
+                                  "text-base  block leading-normal " +
+                                  (openTab === 1
+                                    ? "dark:text-brand font-bold border-2 dark:border-b-brand dark:border-t-brandDark2 dark:border-r-brandDark2 dark:border-l-brandDark2"
+                                    : "dark:bg-brandDark2  font-normal dark:text-brandLightOpacity70")
+                                }
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  setOpenTab(1);
+                                }}
+                                data-toggle="tab"
+                                href="#link1"
+                                role="tablist"
+                              >
+                                Profile Information
+                              </a>
+                            </li>
+                            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+                              <a
+                                className={
+                                  "text-base  block leading-normal " +
+                                  (openTab === 2
+                                    ? "dark:text-brand font-bold border-2 dark:border-b-brand dark:border-t-brandDark2 dark:border-r-brandDark2 dark:border-l-brandDark2"
+                                    : "dark:bg-brandDark2  font-nomral dark:text-brandLightOpacity70")
+                                }
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  setOpenTab(2);
+                                }}
+                                data-toggle="tab"
+                                href="#link2"
+                                role="tablist"
+                              >
+                                Profile Images
+                              </a>
+                            </li>
+                            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+                              <a
+                                className={
+                                  "text-base  block leading-normal " +
+                                  (openTab === 3
+                                    ? "dark:text-brand border-2 font-bold dark:border-b-brand dark:border-t-brandDark2 dark:border-r-brandDark2 dark:border-l-brandDark2"
+                                    : "dark:bg-brandDark2 font-nomral  dark:text-brandLightOpacity70")
+                               }
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  setOpenTab(3);
+                                }}
+                                data-toggle="tab"
+                                href="#link3"
+                                role="tablist"
+                              >
+                                Currently Playing
+                              </a>
+                            </li>
+                          </ul>
+                          <div className="relative flex flex-col min-w-0 break-words bg-brandDark2 w-full mb-6 shadow-lg rounded">
+                            <div className="px-4 py-5 flex-auto">
+                              <div className="tab-content tab-space">
+                                <div
+                                  className={openTab === 1 ? "block" : "hidden"}
+                                  id="link1"
+                                >
+                                  <p>
+                                    Collaboratively administrate empowered
+                                    markets via plug-and-play networks.
+                                    Dynamically procrastinate B2C users after
+                                    installed base benefits.
+                                    <br />
+                                    <br /> Dramatically visualize customer
+                                    directed convergence without revolutionary
+                                    ROI.
+                                  </p>
+                                </div>
+                                <div
+                                  className={openTab === 2 ? "block" : "hidden"}
+                                  id="link2"
+                                >
+                                  <p>
+                                    Completely synergize resource taxing
+                                    relationships via premier niche markets.
+                                    Professionally cultivate one-to-one customer
+                                    service with robust ideas.
+                                    <br />
+                                    <br />
+                                    Dynamically innovate resource-leveling
+                                    customer service for state of the art
+                                    customer service.
+                                  </p>
+                                </div>
+                                <div
+                                  className={openTab === 3 ? "block" : "hidden"}
+                                  id="link3"
+                                >
+                                  <p>
+                                    Efficiently unleash cross-media information
+                                    without cross-media value. Quickly maximize
+                                    timely deliverables for real-time schemas.
+                                    <br />
+                                    <br /> Dramatically maintain
+                                    clicks-and-mortar solutions without
+                                    functional solutions.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -156,8 +203,7 @@ const EditProfileModal = (props: any) => {
           </div>
         </Dialog>
       </Transition.Root>
-
-     </>
+    </>
   );
 };
 

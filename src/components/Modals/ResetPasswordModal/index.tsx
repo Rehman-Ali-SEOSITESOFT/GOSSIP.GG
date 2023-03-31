@@ -62,7 +62,7 @@ const ResetPasswordModal = (props: any) => {
                 leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                 leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
               >
-                <Dialog.Panel className="relative shadow-3xshadow  transform overflow-hidden rounded-lg dark:bg-brandDark2 bg-white text-left shadow-xl transition-all sm:my-8 ">
+                <Dialog.Panel className="relative shadow-3xshadow  transform overflow-hidden rounded-lg dark:bg-brandDark2 bg-white text-left  transition-all sm:my-8 ">
                   <div className="bg-brandDark2">
                     <div className="h-[181px]">
                       <Image
@@ -78,7 +78,7 @@ const ResetPasswordModal = (props: any) => {
                       </div>
                     </div>
                   </div>
-                  <div className="flex flex-col ">
+                  <div className="flex flex-col border-2 rounded-b-lg dark:border-r-brandLightOpacity10 dark:border-l-brandLightOpacity10 dark:border-b-brandLightOpacity10  dark:border-t-brandDark2 ">
                     <div className=" mw-sm:pl-10 mw-sm:pr-10 pl-40 pr-40  mb-9">
                       <div className="flex flex-col items-center ">
                         <Image src={Logo} alt="logo" />
@@ -102,7 +102,7 @@ const ResetPasswordModal = (props: any) => {
                              name="password"
                               type={show ? "text" : "password"}
                               placeholder="New Password"
-                              className="border-brandLightOpacity10 border rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
+                              className="border-brandLightOpacity10 hover:border hover:border-[#ffffff] border rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
                             />
                             <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
                               <Image
@@ -118,7 +118,7 @@ const ResetPasswordModal = (props: any) => {
                              name="con-password"
                               type={showCon ? "text" : "password"}
                               placeholder="Re-enter Password"
-                              className="border-brandLightOpacity10 border rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
+                              className="border-brandLightOpacity10 border hover:border hover:border-[#ffffff] rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
                             />
                             <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
                               <Image

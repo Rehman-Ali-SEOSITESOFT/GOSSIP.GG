@@ -18,20 +18,18 @@ const LoginModal = (props: any) => {
   const [openForgotPasswordModal, setOpenForgotPasswordModal] = useState(false);
 
   const onClickOpenModal = () => {
-    if(!open){
+    if (!open) {
       props.onClickOpenModal();
     }
     setOpen(!open);
   };
 
-
   const onClickOpenForgotPasswordModal = () => {
-    if(!openForgotPasswordModal){
+    if (!openForgotPasswordModal) {
       props.onClickOpenModal();
     }
     setOpenForgotPasswordModal(!openForgotPasswordModal);
   };
-
 
   return (
     <>
@@ -64,7 +62,10 @@ const LoginModal = (props: any) => {
                 leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                 leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
               >
-                <Dialog.Panel className="relative shadow-3xshadow  transform overflow-hidden rounded-lg dark:bg-brandDark2 bg-white text-left shadow-xl transition-all sm:my-8 ">
+                <Dialog.Panel
+                  className="relative transform overflow-hidden rounded-lg dark:bg-brandDark2 bg-white text-left  transition-all sm:my-8  shadow-3xshadow
+                "
+                >
                   <div className="bg-brandDark2">
                     <div className="h-[181px]">
                       <Image
@@ -80,7 +81,7 @@ const LoginModal = (props: any) => {
                       </div>
                     </div>
                   </div>
-                  <div className="flex flex-col ">
+                  <div className="flex flex-col border-2 rounded-b-lg dark:border-r-brandLightOpacity10 dark:border-l-brandLightOpacity10 dark:border-b-brandLightOpacity10  dark:border-t-brandDark2">
                     <div className=" mw-sm:pl-10 mw-sm:pr-10 pl-40 pr-40  mb-9">
                       <div className="flex flex-col items-center ">
                         <Image src={Logo} alt="logo" />
@@ -88,13 +89,13 @@ const LoginModal = (props: any) => {
                           Log In to Gossip.gg
                         </p>
                         <input
-                          className="border-brandLightOpacity10 border rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
+                          className="border-brandLightOpacity10 hover:border hover:border-[#ffffff] border rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
                           id="email"
                           type="text"
                           placeholder="Email"
                         />
                         <input
-                          className="border-brandLightOpacity10 mt-4 mb-38px border rounded w-full h-12 py-2 px-6  bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
+                          className="border-brandLightOpacity10 mt-4 mb-38px hover:border hover:border-[#ffffff] border rounded w-full h-12 py-2 px-6  bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
                           id="password"
                           type="password"
                           autoComplete="false"
@@ -128,9 +129,11 @@ const LoginModal = (props: any) => {
                         </button>
                         <p className="pt-3 montserratfont text-brandLightOpacity70 text-xs">
                           Dont&#39;t have and account?
-                          <a href="#"
-                          onClick={() => onClickOpenModal()}
-                          className="underline  font-medium pl-1.5">
+                          <a
+                            href="#"
+                            onClick={() => onClickOpenModal()}
+                            className="underline  font-medium pl-1.5"
+                          >
                             Sign Up
                           </a>
                         </p>
@@ -163,7 +166,10 @@ const LoginModal = (props: any) => {
       </Transition.Root>
 
       <SignupModal open={open} onClickOpenModal={onClickOpenModal} />
-      <ForgotPasswordModal open={openForgotPasswordModal} onClickOpenModal={onClickOpenForgotPasswordModal} />
+      <ForgotPasswordModal
+        open={openForgotPasswordModal}
+        onClickOpenModal={onClickOpenForgotPasswordModal}
+      />
     </>
   );
 };
