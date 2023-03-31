@@ -42,7 +42,7 @@ const ProfileDetail = () => {
               Naveen
             </h3>
             <h5 className="rank text-lg leading-6 font-normal		tracking-[0.03em]	dark:text-brandLightOpacity100 robotoslub py-2.5	">
-              I’m not a player, I’m a gamer.
+              I&#39;m not a player, I&#39;m a gamer.
             </h5>
             <p className="joined-data dark:text-brandLightOpacity70 font-medium montserratfont leading-4	 text-sm">
               Joined Feb 2023
