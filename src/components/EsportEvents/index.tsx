@@ -4,6 +4,7 @@ import Image from "next/image";
 import Card from "../../assets/images/esport-event/card.png";
 import Icon from "../../assets/images/esport-event/icon.png";
 import Logo from "../../assets/images/esport-event/logo.png";
+import DarkLogo from "../../assets/images/esport-event/logo-dark.png";
 import RightIcon from "../../assets/images/esport-event/right.png";
 import Line from "../../assets/images/general/Line.png";
 import SectionSaprator from "../SecSaprator";
@@ -104,7 +105,7 @@ const EsportEvent = () => {
         <Slider {...settings}>
           {eventData.map((item, index) => (
             <div
-              className="bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1 dark:bg-brandDark1 border-inherit dark:border-brandDark1 border rounded-sm p-2.5"
+              className="rounded border  dark:border-brandLightOpacity10 bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1 dark:bg-brandDark1 border-inherit dark:border-brandDark1 border  p-2.5"
               key={index}
             >
               <div className="">
@@ -124,17 +125,17 @@ const EsportEvent = () => {
                 <div
                   className={`${style.image_wrapper__event} flex flex-row  pt-2.5 `}
                 >
-                  <Image src={Logo} alt="event logo" />
+                  <Image src={theme === 'dark' ? DarkLogo : Logo} alt="event logo" />
                   <div className="flex flex-col pl-2">
                     <p
-                      className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_esport_event_12} font-semibold `}
+                      className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_esport_event_12} font-medium `}
                     >
-                      SAT, FEB 02 - THU, MAR 18
+                     DEC 02, 2022 - JAN 18, 2023
                     </p>
                     <p
-                      className={`${style.font_esport_event_12} text-brandDark2 dark:text-brandLightOpacity100 font-semibold pt-1.5`}
+                      className={`${style.font_esport_event_12} text-brandDark2 dark:text-brandLightOpacity100 font-medium pt-1.5 flex items-center`}
                     >
-                      South Asia <span></span> Prizepool $4500
+                      South Asia <span className="h-1 w-1 bg-brandDark2 opacity-70 dark:opacity-100  dark:bg-brandLightOpacity100 inline-block rounded-full ml-[7px] mr-[8px]"></span> Prizepool $4500
                     </p>
                   </div>
                 </div>
@@ -147,7 +148,7 @@ const EsportEvent = () => {
               </div>
               <div className="flex flex-row justify-center items-center pt-3">
                 <p
-                  className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_esport_event_12} font-semibold pr-1.5 `}
+                  className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_esport_event_12} font-medium pr-1.5 `}
                 >
                   Registration Open
                 </p>
