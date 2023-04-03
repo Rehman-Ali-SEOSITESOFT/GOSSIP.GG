@@ -14,8 +14,8 @@ import ForgotPasswordModal from "../ForgotPasswordModal";
 const LoginModal = (props: any) => {
   const cancelButtonRef = useRef(null);
 
-  const [open, setOpen] = useState(false);
-  const [openForgotPasswordModal, setOpenForgotPasswordModal] = useState(false);
+  const [open, setOpen] = useState<boolean | null>(false);
+  const [openForgotPasswordModal, setOpenForgotPasswordModal] = useState<boolean | null>(false);
 
   const onClickOpenModal = () => {
     if (!open) {
