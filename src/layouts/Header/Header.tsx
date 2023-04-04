@@ -73,7 +73,7 @@ const Header = () => {
     localStorage.removeItem("isLogin");
     router.refresh();
   };
-  console.log("isLoggedIn", isLoggedIn);
+
   return (
     <header className={`${styles.main_header} relative z-[2]`}>
       <div className={`${styles.header_width} `}>
@@ -274,9 +274,9 @@ const Header = () => {
           </div>
         </div>
       </div>
-      
-      <EditProfileModal open={open} onClickOpenModal={onClickOpenModal} />
-      {/* <LoginModal open={open} onClickOpenModal={onClickOpenModal} /> */}
+
+      {/* <EditProfileModal open={open} onClickOpenModal={onClickOpenModal} /> */}
+      <LoginModal open={open} onClickOpenModal={onClickOpenModal} />
       {/* <PasswrodChangeModal open={open} onClickOpenModal={onClickOpenModal}/> */}
       {/* <PasswordEmailModal open={open} onClickOpenModal={onClickOpenModal}/> */}
       {/* <ForgotPasswordModal open={open} onClickOpenModal={onClickOpenModal}/> */}

@@ -1,8 +1,9 @@
 "use client";
-import UserForYou from "@/components/Userprofile/UserForyou";
-import ProfileDetail from "@/components/Userprofile/UserProfile";
-import UserSaved from "@/components/Userprofile/UserSaved";
+import Image from "next/image";
 import React, { useState } from "react";
+import notconnect from "../../assets/empty-user-proilfe/noun-connection.png";
+import nounlowfuel from "../../assets/empty-user-proilfe/noun-low-fuel.png";
+import EmptyProfileDetail from "@/components/Empty-profile/EditProfie";
 
 const Page = () => {
   const [openTab, setOpenTab] = useState(1);
@@ -13,7 +14,7 @@ const Page = () => {
         <div className="2xl:container">
           <div className="flex">
             <div className="w-full border border-borderEditProfile dark:border-brandLightOpacity10 rounded-lg bg-white dark:bg-userprofilebg mt-[78px] mb-[88px]">
-              <ProfileDetail />
+              <EmptyProfileDetail />
             </div>
           </div>
         </div>
@@ -57,16 +58,44 @@ const Page = () => {
                   href="#link2"
                   role="tablist"
                 >
-                  saved(50)
+                  saved(-)
                 </a>
               </li>
             </ul>
-            <div className="tab-content tab-space w-full pt-12	">
+            <div className="tab-content tab-space w-full pt-12 h-full min-h-[800px]	">
               <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                <UserForYou />
+                <div className="for-you-section text-center">
+                  <p className="montserratfont font-normal text-base leading-5 dark:text-brandLightOpacity100 text-brandDark2">
+                    Recommended articles will appear here based on topics you
+                    are following.
+                  </p>
+                  <h5 className="text-brandDark2 dark:text-brandLightOpacity100 font-semibold test-base leading-5  montserratfont py-12 pb-28">
+                    Get started by{" "}
+                    <a href="#" className="underline underline-offset-4	">
+                      adding your preferences.
+                    </a>
+                  </h5>
+                  <Image
+                    src={notconnect}
+                    alt="Img "
+                    className="m-auto  dark:brightness-100 brightness-0"
+                  />
+                </div>
               </div>
               <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                <UserSaved />
+                <div className="for-saved-section text-center ">
+                  <h5 className="text-brandDark2 dark:text-brandLightOpacity100 font-semibold test-base leading-5  montserratfont pt-12	pb-7 ">
+                    <a href="#" className="underline underline-offset-4 ">
+                      Continue reading
+                    </a>{" "}
+                    to save articles you like.{" "}
+                  </h5>
+                  <Image
+                    src={nounlowfuel}
+                    alt="Img "
+                    className="text-center m-auto dark:brightness-100 brightness-0"
+                  />
+                </div>
               </div>
             </div>
           </div>

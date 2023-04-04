@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
+  // mode: "jit",
   purge: {
     enabled: true,
     content: ["./src/**/*.tsx"],
@@ -26,6 +27,7 @@ module.exports = {
         brandDark1: "#2e2a2b",
         brandDark2: "#221e1f",
         brandDark3: "#141313",
+        borderEditProfile: "rgba(34, 30, 31, 0.2)",
         // BRAND COLOR
         brand: "#ed4e50",
         // SEMANTIC COLORS
@@ -41,6 +43,7 @@ module.exports = {
         textColorGray: "rgba(34, 30, 31, 0.7) ",
         secSaprator: "#ED4E50",
         userprofilebg: "#2a2627",
+
         custom: {
           DEFAULT: "#363233",
         },
