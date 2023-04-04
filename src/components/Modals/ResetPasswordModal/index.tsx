@@ -10,9 +10,9 @@ import PasswrodChangeModal from "../PasswordChangedModal";
 const ResetPasswordModal = (props: any) => {
   const cancelButtonRef = useRef(null);
 
-  const [open, setOpen] = useState(false);
-  const [show, setShow] = useState(false);
-  const [showCon, setShowCon] = useState(false);
+  const [open, setOpen] = useState<boolean | null>(false);
+  const [show, setShow] = useState<boolean | null>(false);
+  const [showCon, setShowCon] = useState<boolean | null>(false);
 
   const onClickOpenModal = () => {
     if (!open) {
