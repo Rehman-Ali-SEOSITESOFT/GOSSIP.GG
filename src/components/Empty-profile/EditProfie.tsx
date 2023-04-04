@@ -1,21 +1,20 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import bannerimg from "../../../assets/user-profile/banner.png";
-import whitebanner from "../../../assets/user-profile/white-banner.png";
-import profileimg from "../../../assets/user-profile/profile.png";
-import pc from "../../../assets/user-profile/airplay.png";
-import valorant from "../../../assets/user-profile/valorant.png";
-import twitter from "../../../assets/user-profile/twitter.png";
-import instagram from "../../../assets/user-profile/instagram.png";
-import editprofile from "../../../assets/user-profile/edit.png";
-import styles from "./style.module.css";
+import bannerimg from "../../assets/user-profile/banner.png";
+import whitebanner from "../../assets/user-profile/white-banner.png";
+import profileimg from "../../assets/user-profile/profile.png";
+import pc from "../../assets/user-profile/airplay.png";
+import valorant from "../../assets/user-profile/valorant.png";
+import twitter from "../../assets/user-profile/twitter.png";
+import instagram from "../../assets/user-profile/instagram.png";
+import editprofile from "../../assets/user-profile/edit.png";
 import { useTheme } from "next-themes";
-const ProfileDetail = () => {
+const EmptyProfileDetail = () => {
   const { theme, setTheme } = useTheme();
 
   return (
     <>
-      <div className={` ${styles.banner_image}  relative h-[190px]`}>
+      <div className={` banner_image  relative h-[190px]`}>
         {theme === "light" ? (
           <Image
             src={whitebanner}
@@ -53,16 +52,14 @@ const ProfileDetail = () => {
             <h3 className="title text-2xl leading-7	font-bold montserratfont text-brandDark2	 dark:text-brandLightOpacity100 ">
               Naveen
             </h3>
-            <h5 className="rank text-lg leading-6 font-normal		tracking-[0.03em]	 text-brandDark2 dark:text-brandLightOpacity100 robotoslub py-2.5	">
-              I&#39;m not a player, I&#39;m a gamer.
-            </h5>
+            <p className="about-user-description montserratfont text-base leading-7 text-brandDark2	font-normal test-textColorGray dark:text-brandLightOpacity70 pt-5  underline underline-offset-2		">
+              + Add mantra
+            </p>
             <p className="joined-data text-textColorGray dark:text-brandLightOpacity70 font-medium montserratfont leading-4	 text-sm">
               Joined Feb 2023
             </p>
-            <p className="about-user-description montserratfont text-base leading-7 text-brandDark2	font-normal dark:text-brandLightOpacity100 pt-5	">
-              Naveen has been a passionate Esports fan since he was a kid. He
-              has been a freelance Esports player since 2014 and has been on the
-              Gossip team since the start.
+            <p className="about-user-description montserratfont text-base leading-7 text-textColorGray	font-normal dark:text-brandLightOpacity70 pt-5 h-[100px]	 underline underline-offset-2">
+              + Add description
             </p>
           </div>
           <div className="about-rank w-[45%] pl-[80px] flex justify-between flex-col">
@@ -71,25 +68,9 @@ const ProfileDetail = () => {
                 Currently playing:
               </h4>
               <div className="flex items-center">
-                <div
-                  className="text-sm	leading-4 montserratfont font-normal	dark:text-brandLightOpacity100 
-                border border-brandDark2 dark:border-brandLightOpacity100 rounded w-[75px] h-[35px] flex items-center justify-center	"
-                >
-                  <Image
-                    alt="pc"
-                    className="inline-block mr-2 brightness-0	dark:brightness-100 "
-                    src={pc}
-                  />{" "}
-                  <span>PC</span>
-                </div>
-                <div className="text-sm	leading-4	montserratfont font-normal	dark:text-brandLightOpacity100 border border-brandDark2 dark:border-brandLightOpacity100 rounded w-[103px] h-[35px] flex items-center justify-center ml-3">
-                  <Image
-                    alt="pc"
-                    src={valorant}
-                    className="inline-block  mr-2 w-[20px] h-16px brightness-0	dark:brightness-100"
-                  />{" "}
-                  <span>Valorant</span>
-                </div>
+                <p className="about-user-description montserratfont text-base leading-7  test-textColorGray	font-normal dark:text-brandLightOpacity70 pt-5	 underline underline-offset-2">
+                  + Add game
+                </p>
               </div>
             </div>
             <div className="more flex justify-between">
@@ -98,24 +79,15 @@ const ProfileDetail = () => {
                   saved
                 </h4>
                 <p className="montserratfont test-base leading-5 font-normal dark:text-brandLightOpacity100 text-brandDark2 ">
-                  50 articles
+                  -
                 </p>
               </div>
               <div className="social-link border-l-2 border-brandDark2  dark:border-brand pl-4	 ">
                 <h4 className="text-base leading-5 font-semibold dark:text-brandLightOpacity100 montserratfont capitalize mb-2.5	">
                   Social Links:
                 </h4>
-                <div className="image flex">
-                  <Image
-                    src={instagram}
-                    alt=""
-                    className="w-[24px] h-[24px] mr-4 brightness-0	dark:brightness-100		"
-                  />
-                  <Image
-                    src={twitter}
-                    alt=""
-                    className="w-[24px] h-[24px] brightness-0	dark:brightness-100"
-                  />
+                <div className="image flex  test-textColorGray dark:text-brandLightOpacity70  underline underline-offset-2">
+                  + Add
                 </div>
               </div>
             </div>
@@ -126,4 +98,4 @@ const ProfileDetail = () => {
   );
 };
 
-export default ProfileDetail;
+export default EmptyProfileDetail;

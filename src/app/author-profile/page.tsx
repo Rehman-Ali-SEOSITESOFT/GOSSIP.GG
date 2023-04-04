@@ -1,7 +1,8 @@
 "use client";
-import UserForYou from "@/components/Userprofile/UserForyou";
-import ProfileDetail from "@/components/Userprofile/UserProfile";
-import UserSaved from "@/components/Userprofile/UserSaved";
+
+import AuthorEditProfile from "@/components/Authorprofile/EditorProfile/AuthorEditProfile";
+import PopularAuthor from "@/components/Authorprofile/Popular";
+
 import React, { useState } from "react";
 
 const Page = () => {
@@ -13,7 +14,7 @@ const Page = () => {
         <div className="2xl:container">
           <div className="flex">
             <div className="w-full border border-borderEditProfile dark:border-brandLightOpacity10 rounded-lg bg-white dark:bg-userprofilebg mt-[78px] mb-[88px]">
-              <ProfileDetail />
+              <AuthorEditProfile />
             </div>
           </div>
         </div>
@@ -38,7 +39,7 @@ const Page = () => {
                   href="#link1"
                   role="tablist"
                 >
-                  For You
+                  All (239)
                 </a>
               </li>
               <li className="">
@@ -57,16 +58,38 @@ const Page = () => {
                   href="#link2"
                   role="tablist"
                 >
-                  saved(50)
+                  Popular(12)
+                </a>
+              </li>
+              <li className="">
+                <a
+                  className={
+                    "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                    (openTab === 3
+                      ? "text-brand border-b border-brand "
+                      : "text-brandLightOpacity70")
+                  }
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setOpenTab(3);
+                  }}
+                  data-toggle="tab"
+                  href="#link3"
+                  role="tablist"
+                >
+                  Featured (7)
                 </a>
               </li>
             </ul>
             <div className="tab-content tab-space w-full pt-12	">
               <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                <UserForYou />
+                <h1 className="mb-12">All</h1>
               </div>
               <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                <UserSaved />
+                <PopularAuthor />
+              </div>
+              <div className={openTab === 3 ? "block" : "hidden"} id="link3">
+                <h1 className="mb-12">Feactured</h1>
               </div>
             </div>
           </div>

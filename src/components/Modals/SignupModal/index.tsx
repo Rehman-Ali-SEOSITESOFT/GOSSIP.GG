@@ -14,7 +14,7 @@ const SignupModal = (props: any) => {
   const cancelButtonRef = useRef(null);
 
   const [open, setOpen] = useState(false);
-  console.log("login====", props.open);
+
   const onClickOpenModal = () => {
     if (!open) {
       props.onClickOpenModal();
