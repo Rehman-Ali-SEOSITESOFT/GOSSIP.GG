@@ -4,7 +4,7 @@ import ForYou from "@/components/ForYou/Index";
 import AllHeroSection from "./HeroSection";
 import AllReviews from "./Reviews";
 import GamingFeatures from "@/components/Gamings/GamingFeatures/GamingFeatures";
-import TechFecture from "./Feacture";
+import TechFecture from "./Feature";
 import AllDeail from "./Deails";
 const MainTech = () => {
   return (

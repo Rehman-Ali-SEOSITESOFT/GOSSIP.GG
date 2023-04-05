@@ -45,8 +45,8 @@ const TechFecture = () => {
                       }  `}
                     >
                       <h4 className="text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 capitalize ">
-                        Hellblade: Senua's Sacrifice Might Just be One of the
-                        Most Important Games of the Modern Era
+                        Hellblade: Senua&#39;s Sacrifice Might Just be One of
+                        the Most Important Games of the Modern Era
                       </h4>
                       <p className="font-normal	text-xs	robotoslub pt-[8px] dark:text-brandLightOpacity90">
                         It is a long established fact that a reader will be
