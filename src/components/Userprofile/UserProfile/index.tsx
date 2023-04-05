@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import bannerimg from "../../../assets/user-profile/banner.png";
 import whitebanner from "../../../assets/user-profile/white-banner.png";
@@ -10,9 +10,15 @@ import instagram from "../../../assets/user-profile/instagram.png";
 import editprofile from "../../../assets/user-profile/edit.png";
 import styles from "./style.module.css";
 import { useTheme } from "next-themes";
+import EditProfileModal from "@/components/Modals/EditProfileModal";
 const ProfileDetail = () => {
   const { theme, setTheme } = useTheme();
+ 
+  const [open, setOpen] = useState<boolean | null>(false);
 
+  const onClickOpenModal = () => {
+    setOpen(!open);
+  };
   return (
     <>
       <div className={` ${styles.banner_image}  relative h-[190px]`}>
@@ -29,12 +35,15 @@ const ProfileDetail = () => {
             alt="banner "
           />
         )}
-        <div className="dark:bg-brandLightOpacity10 bg-borderEditProfile dark:hover:bg-brandLightOpacity20 rounded-3xl inline-block px-4	 py-2.5 absolute top-6	right-6	 cursor-pointer	">
+        <div
+          onClick={() => onClickOpenModal()}
+          className="dark:bg-brandLightOpacity10 bg-borderEditProfile dark:hover:bg-brandLightOpacity20 rounded-3xl inline-block px-4	 py-2.5 absolute top-6	right-6	 cursor-pointer	"
+        >
           <Image
             src={editprofile}
             alt="edit user"
             className="inline-block w-[20px] h-[20px] mr-2	"
-          />{" "}
+          />
           <span className="text-base  font-semibold leading-5 text-white	dark:text-brandLightOpacity100	montserratfont">
             Edit Profile
           </span>
@@ -122,6 +131,7 @@ const ProfileDetail = () => {
           </div>
         </div>
       </div>
+      <EditProfileModal open={open} onClickOpenModal={onClickOpenModal} />
     </>
   );
 };

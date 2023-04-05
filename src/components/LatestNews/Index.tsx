@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import style from "./latestnew.module.css";
-import new1 from "../../assets/latest-news/news1.png";
-import new2 from "../../assets/latest-news/news2.png";
-import new3 from "../../assets/latest-news/news3.png";
-import new4 from "../../assets/latest-news/news4.png";
-import new5 from "../../assets/latest-news/news5.png";
-import new6 from "../../assets/latest-news/news6.png";
-import Image from "next/image";
-import SectionSaprator from "../SecSaprator";
+import React, { useState } from "react"
+import style from "./latestnew.module.css"
+import new1 from "../../assets/latest-news/news1.png"
+import new2 from "../../assets/latest-news/news2.png"
+import new3 from "../../assets/latest-news/news3.png"
+import new4 from "../../assets/latest-news/news4.png"
+import new5 from "../../assets/latest-news/news5.png"
+import new6 from "../../assets/latest-news/news6.png"
+import Image from "next/image"
+import SectionSaprator from "../SecSaprator"
 
 const LatestNews = () => {
   interface List {
-    name: string;
-    picture: any;
+    name: string
+    picture: any
   }
   const item: List[] = [
     {
@@ -39,8 +39,8 @@ const LatestNews = () => {
       name: "demo ",
       picture: new6,
     },
-  ];
-  const [items, setItems] = useState(item);
+  ]
+  const [items, setItems] = useState(item)
   return (
     <section className={style.latest_news_page}>
       <div className="global-section-width">
@@ -104,7 +104,7 @@ const LatestNews = () => {
                     </div>
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
           <div className="hidden mw-sm:hidden flex flex-wrap pt-5 pb-5  bg-white rounded dark:bg-brandDark1 mw-lg:flex ">
@@ -159,7 +159,7 @@ const LatestNews = () => {
                     </div>
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -209,13 +209,13 @@ const LatestNews = () => {
                     </div>
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default LatestNews;
+export default LatestNews

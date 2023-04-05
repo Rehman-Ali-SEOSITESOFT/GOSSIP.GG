@@ -8,14 +8,17 @@ import Twitter from "../../../assets/images/footer/twitter.png";
 import Game from "../../../assets/images/general/game.png";
 import Airplay from "../../../assets/images/general/airplay.png";
 import Vector from "../../../assets/images/general/Vector.png";
-import  Nitendo from "../../../assets/images/general/Nintendo.png";
+import Nitendo from "../../../assets/images/general/Nintendo.png";
 import Xbox from "../../../assets/images/general/Xbox.png";
 import Playstation from "../../../assets/images/general/PlayStation.png";
-
+import Banner3 from "../../../assets/images/profile/banner-3.png";
+import Logo1 from "../../../assets/images/profile/logo-1.png";
+import DisplaySlider from "./DisplayImageSlider";
+import BannerSlider from "./BannerImageSlider";
 const EditProfileModal = (props: any) => {
-  const cancelButtonRef = useRef(null); 
+  const cancelButtonRef = useRef(null);
   const [openTab, setOpenTab] = useState<number | null>(1);
-  
+
   interface GameList {
     name: string;
     picture: any;
@@ -25,6 +28,8 @@ const EditProfileModal = (props: any) => {
     name: string;
     picture: any;
   }
+
+
   const item: GameList[] = [
     {
       name: "Valorant",
@@ -57,9 +62,6 @@ const EditProfileModal = (props: any) => {
     {
       name: "Valorant",
       picture: Game,
-    }, {
-      name: "Valorant",
-      picture: Game,
     },
     {
       name: "Valorant",
@@ -73,7 +75,10 @@ const EditProfileModal = (props: any) => {
       name: "Valorant",
       picture: Game,
     },
-  
+    {
+      name: "Valorant",
+      picture: Game,
+    },
   ];
   const [gameItems, setGameItems] = useState(item);
 
@@ -97,10 +102,10 @@ const EditProfileModal = (props: any) => {
     {
       name: "Nintendo",
       picture: Nitendo,
-    }
-  
+    },
   ];
   const [platformItems, setPlatformItems] = useState(itemPlatform);
+
   return (
     <>
       <Transition.Root show={props.open} as={Fragment}>
@@ -140,7 +145,7 @@ const EditProfileModal = (props: any) => {
                           Edit Profile
                         </p>
                         <p className="flex items-center text-xs text-brandLightOpacity70 font-normal montserratfont">
-                          Naveen{" "}
+                          Naveen
                           <span className="h-4 w-[1px]  mx-3 dark:bg-brandLightOpacity70 inline-block "></span>{" "}
                           Joined Feb 2023
                         </p>
@@ -222,7 +227,7 @@ const EditProfileModal = (props: any) => {
                           <div className="mw-sm1:px-[10px] px-12  flex-auto">
                             <div className="tab-content tab-space">
                               <div
-                                className={openTab === 1 ? "block" : "hidden"}
+                                className={openTab === 1 ? "block mb-[85px]" : "hidden"}
                                 id="link1"
                               >
                                 <div className="mt-7">
@@ -303,47 +308,97 @@ const EditProfileModal = (props: any) => {
                                 </div>
                               </div>
                               <div
-                                className={openTab === 2 ? "block" : "hidden"}
+                                className={openTab === 2 ? "block mb-6" : "hidden"}
                                 id="link2"
-                              ></div>
-                              <div
-                                className={openTab === 3 ? "block" : "hidden"}
-                                id="link3"
                               >
-                                <div className="pt-[41px]">
-                                  <p className="text-base text-brandLightOpacity100 montserratfont font-semibold">
-                                    Game
-                                  </p>
-                                  <div className="grid grid-cols-4 row-auto gap-4">
-                                   {gameItems.map((item , index) => 
-                                     <div key={index} className="flex items-center justify-around border border-[#ffffff]  rounded-lg h-11">
-                                     <Image src={item.picture} alt="game icon"/>
-                                     <p className="text-base text-brandLightOpacity70 montserratfont font-normal ">{item.name}</p>
-                                   </div>
-                                   )}
-                                  
+                                <div>
+                                  <div className="mt-8 ">
+                                    <Image
+                                      className=""
+                                      src={Banner3}
+                                      alt="Banner"
+                                    />
+                                    <Image
+                                      className="absolute top-20 left-[90px]"
+                                      src={Logo1}
+                                      alt="Logo"
+                                    />
                                   </div>
                                 </div>
-                                <div className="pt-[88px]">
-                                  <p className="text-base text-brandLightOpacity100 montserratfont font-semibold">
+                                <div className="border border-brandLightOpacity10 mt-[71px]"></div>
+                                <div className="mt-4 max-w-[570px]">
+                                  <p className="text-base mb-4 text-brandLightOpacity100 montserratfont font-semibold ">
+                                    Display Image
+                                  </p>
+                                   <div className="max-w-[500px] pl-9">
+                                   <DisplaySlider/>
+                                   </div>
+                                </div>
+                                <div className="border border-brandLightOpacity10 mt-[22px]"></div>
+                                <div className="mt-4">
+                                  <p className="text-base mb-4 text-brandLightOpacity100 montserratfont font-semibold ">
+                                    Banner Image
+                                  </p>
+                                  <div className="max-w-[500px] pl-9">
+                                   <BannerSlider/>
+                                   </div>
+                                </div>
+                                <div className="border border-brandLightOpacity10 mt-4"></div>
+                              </div>
+                              <div
+                                className={openTab === 3 ? "block mb-[147px]" : "hidden"}
+                                id="link3"
+                              >
+                                <div className="mt-[41px] ">
+                                  <p className="mb-6 text-base text-brandLightOpacity100 montserratfont font-semibold">
+                                    Game
+                                  </p>
+                                  <div className="flex flex-wrap max-w-[570px]  ">
+                                    {gameItems.map((item, index) => (
+                                      <div
+                                        key={index}
+                                        className="min-w-fit mr-4   mb-4  mw-sm:mb-2 mw-sm:mr-2 flex items-center justify-around border border-[#ffffff]  rounded-lg h-11"
+                                      >
+                                        <Image
+                                          className="ml-3 mr-2 mw-sm:mr-1 mw-sm:ml-2"
+                                          src={item.picture}
+                                          alt="game icon"
+                                        />
+                                        <p className="mr-3 text-base mw-sm:mr-2 mw-sm:text-[14px] text-brandLightOpacity70 montserratfont font-normal ">
+                                          {item.name}
+                                        </p>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+                                <div className="mt-[88px]">
+                                  <p className="text-base mb-6 text-brandLightOpacity100 montserratfont font-semibold">
                                     Platform
                                   </p>
-                                  <div className="grid grid-cols-4 gap-4">
-                                   {platformItems.map((item , index) => 
-                                     <div key={index} className="flex items-center justify-around border border-[#ffffff]  rounded-lg h-11">
-                                     <Image src={item.picture} alt="game icon"/>
-                                     <p className="text-base text-brandLightOpacity70 montserratfont font-normal ">{item.name}</p>
-                                   </div>
-                                   )}
+                                  <div className="flex flex-wrap max-w-[570px]">
+                                    {platformItems.map((item, index) => (
+                                      <div
+                                        key={index}
+                                        className="min-w-fit mr-4   mb-4  mw-sm:mb-2 mw-sm:mr-2 flex items-center justify-around border border-[#ffffff]  rounded-lg h-11"
+                                      >
+                                        <Image
+                                          className="ml-3 mr-2 mw-sm:mr-1 mw-sm:ml-2"
+                                          src={item.picture}
+                                          alt="game icon"
+                                        />
+                                        <p className="mr-3 text-base mw-sm:mr-2 mw-sm:text-[14px] text-brandLightOpacity70 montserratfont font-normal ">
+                                          {item.name}
+                                        </p>
+                                      </div>
+                                    ))}
                                   </div>
                                 </div>
                               </div>
-                              <div className="mt-[85px]  mb-[57px] flex justify-center ">
-                                    <button className="bg-brand mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold">
-                                      Save Changes
-                                    </button>
-                                  </div>
-                               
+                              <div className=" mb-[57px] flex justify-center ">
+                                <button className="bg-brand mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold">
+                                  Save Changes
+                                </button>
+                              </div>
                             </div>
                           </div>
                         </div>

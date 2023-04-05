@@ -86,14 +86,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-row">
-              <div className="h-10 w-10 mr-5 rounded-3xl bg-brandDark1 flex justify-center  items-center">
-                <Image src={Instgram} alt="Instagram Profile" />
-              </div>
-              <div className="h-10 w-10  rounded-3xl bg-brandDark1 flex justify-center  items-center">
-                <Image src={Twitter} alt="Twitter Profile" />
-              </div>
-            </div>
+          
             <div>
               <ul className={`flex flex-col text-brandLightOpacity100   ${style.font_text2}   text-right`}>
                 <li>

@@ -9,9 +9,15 @@ import twitter from "../../assets/user-profile/twitter.png";
 import instagram from "../../assets/user-profile/instagram.png";
 import editprofile from "../../assets/user-profile/edit.png";
 import { useTheme } from "next-themes";
+import EditProfileModal from "../Modals/EditProfileModal";
 const EmptyProfileDetail = () => {
   const { theme, setTheme } = useTheme();
 
+  const [open, setOpen] = useState<boolean | null>(false);
+
+  const onClickOpenModal = () => {
+    setOpen(!open);
+  };
   return (
     <>
       <div className={` banner_image  relative h-[190px]`}>
@@ -28,12 +34,15 @@ const EmptyProfileDetail = () => {
             alt="banner "
           />
         )}
-        <div className="dark:bg-brandLightOpacity10 bg-borderEditProfile dark:hover:bg-brandLightOpacity20 rounded-3xl inline-block px-4	 py-2.5 absolute top-6	right-6	 cursor-pointer	">
+        <div
+          onClick={() => onClickOpenModal()}
+          className="dark:bg-brandLightOpacity10 bg-borderEditProfile dark:hover:bg-brandLightOpacity20 rounded-3xl inline-block px-4	 py-2.5 absolute top-6	right-6	 cursor-pointer	"
+        >
           <Image
             src={editprofile}
             alt="edit user"
             className="inline-block w-[20px] h-[20px] mr-2	"
-          />{" "}
+          />
           <span className="text-base  font-semibold leading-5 text-white	dark:text-brandLightOpacity100	montserratfont">
             Edit Profile
           </span>
@@ -94,6 +103,7 @@ const EmptyProfileDetail = () => {
           </div>
         </div>
       </div>
+      <EditProfileModal open={open} onClickOpenModal={onClickOpenModal} />
     </>
   );
 };

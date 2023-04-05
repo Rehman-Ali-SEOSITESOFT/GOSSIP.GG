@@ -1,26 +1,26 @@
-"use client";
+"use client"
 
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import logo from "../../assets/images/header/main-logo.png";
-import search from "../../assets/images/header/search.png";
-import moon from "../../assets/images/header/moon.png";
-import sun from "../../assets/images/header/sun.png";
-import close from "../../assets/images/header/close-search.png";
-import { useTheme } from "next-themes";
-import styles from "./Header.module.css";
-import profile from "../../assets/profile/profile-icon.png";
-import LoginModal from "@/components/Modals/LoginModal";
-import EditProfileModal from "@/components/Modals/EditProfileModal";
-import { useRouter } from "next/navigation";
-import setting from "../../assets/profile/settings.png";
-import downloadarrow from "../../assets/profile/downarrow.png";
+import React, { useState, useEffect } from "react"
+import Image from "next/image"
+import logo from "../../assets/images/header/main-logo.png"
+import search from "../../assets/images/header/search.png"
+import moon from "../../assets/images/header/moon.png"
+import sun from "../../assets/images/header/sun.png"
+import close from "../../assets/images/header/close-search.png"
+import { useTheme } from "next-themes"
+import styles from "./Header.module.css"
+import profile from "../../assets/profile/profile-icon.png"
+import LoginModal from "@/components/Modals/LoginModal"
+import EditProfileModal from "@/components/Modals/EditProfileModal"
+import { useRouter } from "next/navigation"
+import setting from "../../assets/profile/settings.png"
+import downloadarrow from "../../assets/profile/downarrow.png"
 const Header = () => {
   interface MenuList {
-    name: string;
-    link: string;
+    name: string
+    link: string
   }
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme()
   const [menu, setMenu] = useState<MenuList[]>([
     {
       name: "Home",
@@ -36,44 +36,51 @@ const Header = () => {
     },
     {
       name: "gaming",
-      link: "/",
+      link: "/gaming",
     },
     {
       name: "tech",
       link: "/tech",
     },
-  ]);
-  const [searchOpen, setSearchOpen] = useState<Boolean>(true);
-  const [searchText, setSearchText] = useState<string>("");
-  const [isLoggedIn, setIsLoggedIn] = useState<Boolean>(false);
-  const router = useRouter();
+  ])
+  const [searchOpen, setSearchOpen] = useState<Boolean>(true)
+  const [searchText, setSearchText] = useState<string>("")
+  const [isLoggedIn, setIsLoggedIn] = useState<Boolean>(false)
+  const router = useRouter()
   useEffect(() => {
-    let user: any = localStorage.getItem("isLogin");
-    setIsLoggedIn(user);
+    let user: any = localStorage.getItem("isLogin")
+    setIsLoggedIn(user)
     // router.refresh();
-  });
+  })
 
   const hanldeClose = () => {
-    setSearchOpen(!searchOpen);
-  };
+    setSearchOpen(!searchOpen)
+  }
   const hanldeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchText(e.target.value);
-  };
+    setSearchText(e.target.value)
+  }
   const hanldeSearch = () => {
-    console.log(searchText);
-  };
+    console.log(searchText)
+  }
 
-  const [open, setOpen] = useState(false);
-  const [profileShow, setProfileShow] = useState<Boolean>(true);
+  const [open, setOpen] = useState(false)
+  const [profileShow, setProfileShow] = useState<Boolean>(true)
   const onClickOpenModal = () => {
-    setOpen(!open);
-  };
+    setOpen(!open)
+  }
 
   const onClicklogout = () => {
+<<<<<<< HEAD
+    localStorage.removeItem("isLogin")
+    router.refresh()
+  }
+  console.log("isLoggedIn", isLoggedIn)
+=======
     localStorage.removeItem("isLogin");
     router.refresh();
   };
 
+>>>>>>> a0a028681930fd27aea6e087fb3954d37ccdbef2
   return (
     <header className={`${styles.main_header} relative z-[2]`}>
       <div className={`${styles.header_width} `}>
@@ -100,7 +107,7 @@ const Header = () => {
                             {elme.name}
                           </a>
                         </li>
-                      );
+                      )
                     })}
                   </ul>
                 </div>
@@ -267,7 +274,7 @@ const Header = () => {
                         {elme.name}
                       </a>
                     </li>
-                  );
+                  )
                 })}
               </ul>
             </div>
@@ -290,7 +297,7 @@ const Header = () => {
         welcomGossipModel={welcomGossipModel}
       /> */}
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

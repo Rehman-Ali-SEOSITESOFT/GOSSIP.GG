@@ -1,8 +1,8 @@
-import React, { Fragment, useEffect, useRef, useState } from "react";
-import { Dialog, Transition } from "@headlessui/react";
-import styles from "./choicestyle.module.css";
+import React, { Fragment, useEffect, useRef, useState } from "react"
+import { Dialog, Transition } from "@headlessui/react"
+import styles from "./choicestyle.module.css"
 const ChoiceTopicModel = (props: any) => {
-  const cancelButtonRef = useRef(null);
+  const cancelButtonRef = useRef(null)
 
   const [items, setItems] = useState<string[]>([
     "Gaming",
@@ -77,21 +77,19 @@ const ChoiceTopicModel = (props: any) => {
     "Team Fury",
     "Graphic card",
     "Nvidia",
-  ]);
+  ])
 
-  let [addclass, setAdClass] = useState<number | null>(null);
-  let [text, setTest] = useState<number | null>(null);
+  let [addclass, setAdClass] = useState<number | null>(null)
+  let [text, setTest] = useState<number | null>(null)
   const hanldeCheck = (event: any, id: number) => {
-    setTest(id);
-    setAdClass(id);
-  };
-
-  const onClickDone = () => {
-     localStorage.setItem("isLogin", JSON.stringify(true) )
-     props.onClickOpenModal()
+    setTest(id)
+    setAdClass(id)
   }
 
-
+  const onClickDone = () => {
+    localStorage.setItem("isLogin", JSON.stringify(true))
+    props.onClickOpenModal()
+  }
 
   return (
     <Transition.Root show={props.open} as={Fragment}>
@@ -164,7 +162,7 @@ const ChoiceTopicModel = (props: any) => {
                           >
                             {e}
                           </div>
-                        );
+                        )
                       })}
                     </div>
                   </div>
@@ -189,7 +187,7 @@ const ChoiceTopicModel = (props: any) => {
         </div>
       </Dialog>
     </Transition.Root>
-  );
-};
+  )
+}
 
-export default ChoiceTopicModel;
+export default ChoiceTopicModel
