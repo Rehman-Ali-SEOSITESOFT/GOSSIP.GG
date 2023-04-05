@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 "use client"
 import UserForYou from "@/components/Userprofile/UserForyou"
 import ProfileDetail from "@/components/Userprofile/UserProfile"
 import React, { useState } from "react"
+=======
+"use client";
+import UserForYou from "@/components/Userprofile/UserForyou";
+import ProfileDetail from "@/components/Userprofile/UserProfile";
+import UserSaved from "@/components/Userprofile/UserSaved";
+import React, { useState } from "react";
+>>>>>>> a0a028681930fd27aea6e087fb3954d37ccdbef2
 
 const Page = () => {
   const [openTab, setOpenTab] = useState(1)
@@ -11,16 +19,16 @@ const Page = () => {
       <div className="user-section-width">
         <div className="2xl:container">
           <div className="flex">
-            <div className="w-full border dark:border-brandLightOpacity10 rounded-lg dark:bg-userprofilebg mt-[78px] mb-[88px]">
+            <div className="w-full border border-borderEditProfile dark:border-brandLightOpacity10 rounded-lg bg-white dark:bg-userprofilebg mt-[78px] mb-[88px]">
               <ProfileDetail />
             </div>
           </div>
         </div>
       </div>
-      <div className="user-section-width">
+      <div className="user-section-width relative">
         <div className="2xl:container">
           <div className="flex flex-col">
-            <ul className="flex full">
+            <ul className="flex full listTabUser before:content-[''] before:w-full before:max-w-[1390px] before:left-0 before:right-0 before:top-[40px] before:absolute before:m-auto before:h-[1px] dark:before:bg-brandLightOpacity10 before:bg-grayCard">
               <li className="">
                 <a
                   className={
@@ -60,12 +68,12 @@ const Page = () => {
                 </a>
               </li>
             </ul>
-            <div className="tab-content tab-space w-full">
+            <div className="tab-content tab-space w-full pt-12	">
               <div className={openTab === 1 ? "block" : "hidden"} id="link1">
                 <UserForYou />
               </div>
               <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                saved(50)
+                <UserSaved />
               </div>
             </div>
           </div>

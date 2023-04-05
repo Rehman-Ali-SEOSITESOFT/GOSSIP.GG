@@ -70,10 +70,17 @@ const Header = () => {
   }
 
   const onClicklogout = () => {
+<<<<<<< HEAD
     localStorage.removeItem("isLogin")
     router.refresh()
   }
   console.log("isLoggedIn", isLoggedIn)
+=======
+    localStorage.removeItem("isLogin");
+    router.refresh();
+  };
+
+>>>>>>> a0a028681930fd27aea6e087fb3954d37ccdbef2
   return (
     <header className={`${styles.main_header} relative z-[2]`}>
       <div className={`${styles.header_width} `}>
