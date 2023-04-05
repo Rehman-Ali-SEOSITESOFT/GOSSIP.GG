@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const SectionSaprator = (props: any) => {
   return (
@@ -8,7 +8,7 @@ const SectionSaprator = (props: any) => {
       </p>
       <div className="bg-gradient-to-r from-brandDark2 h-0.5  min-w-[86%] ml-3 dark:from-secSaprator mw-sm:hidden"></div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionSaprator;
+export default SectionSaprator

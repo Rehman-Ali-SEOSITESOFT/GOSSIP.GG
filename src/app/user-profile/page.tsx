@@ -21,14 +21,14 @@ const Page = () => {
       <div className="user-section-width relative">
         <div className="2xl:container">
           <div className="flex flex-col">
-            <ul className="flex full listTabUser before:content-[''] before:w-full before:max-w-[1390px] before:left-0 before:right-0 before:top-[40px] before:absolute before:m-auto before:h-[1px] dark:before:bg-brandLightOpacity10 before:bg-grayCard">
+            <ul className="flex full listTabUser before:content-[''] before:w-full before:max-w-[1390px] before:left-0 before:right-0 before:top-[31px] before:absolute before:m-auto before:h-[1px] dark:before:bg-brandLightOpacity10 before:bg-grayCard">
               <li className="">
                 <a
                   className={
-                    "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                    "text-base mw-sm3:text-[10px] mw-sm1:text-[12px]  montserratfont  leading-5   capitalize  pb-[8px]  " +
                     (openTab === 1
-                      ? "text-brand border-b border-brand"
-                      : "text-brandLightOpacity70 ")
+                      ? " dark:text-brand border-b-2 border-brandDark2   dark:border-b-brand font-bold	"
+                      : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-normal  ")
                   }
                   onClick={(e) => {
                     e.preventDefault();
@@ -41,13 +41,13 @@ const Page = () => {
                   For You
                 </a>
               </li>
-              <li className="">
+              <li className="pl-[72px]">
                 <a
                   className={
-                    "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                    "text-base mw-sm3:text-[10px] mw-sm1:text-[12px]  montserratfont  leading-5   capitalize  pb-[8px]  " +
                     (openTab === 2
-                      ? "text-brand border-b border-brand "
-                      : "text-brandLightOpacity70")
+                      ? " dark:text-brand border-b-2 border-brandDark2   dark:border-b-brand font-bold	"
+                      : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-normal  ")
                   }
                   onClick={(e) => {
                     e.preventDefault();

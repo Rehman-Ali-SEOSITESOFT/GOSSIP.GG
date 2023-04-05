@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import SectionSaprator from "../SecSaprator";
-import Image from "next/image";
-import image1 from "../../assets/select/image-react-1.png";
-import image2 from "../../assets/select/image-react-2.png";
-import image3 from "../../assets/select/image-react-3.png";
-import image4 from "../../assets/select/image-react-4.png";
+import React, { useState } from "react"
+import SectionSaprator from "../SecSaprator"
+import Image from "next/image"
+import image1 from "../../assets/select/image-react-1.png"
+import image2 from "../../assets/select/image-react-2.png"
+import image3 from "../../assets/select/image-react-3.png"
+import image4 from "../../assets/select/image-react-4.png"
 
 const ForYou = () => {
-  const [list, setList] = useState<any[]>([image1, image2, image3, image4]);
+  const [list, setList] = useState<any[]>([image1, image2, image3, image4])
 
   return (
     <section className="forYou">
@@ -47,7 +47,7 @@ const ForYou = () => {
                     </div>
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
           <div className="hidden mw-md:flex  flex-wrap justify-between">
@@ -83,7 +83,7 @@ const ForYou = () => {
                     </div>
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
 
@@ -102,7 +102,7 @@ const ForYou = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ForYou;
+export default ForYou

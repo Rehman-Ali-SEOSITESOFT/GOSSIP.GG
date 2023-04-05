@@ -70,16 +70,10 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .left_side img {
-    min-height: 300px;
-    height: 400px;
-    object-fit: cover;
-    width: 100% !important;
-  }
-}
-
 @media screen and (max-width: 600px) {
+  .single_item .desc_wrapper {
+    padding: 0 10px 0 12px;
+  }
   .single_item {
     border-left: 2px solid;
     padding-left: 10px;
@@ -88,9 +82,9 @@
   }
 
   .single_item .image_wrapper {
-    height: 100%;
+    height: 85px;
     width: 100%;
-    max-width: 110px;
+    max-width: 85px;
   }
   /* .single_item .image_wrapper {
     width: 100%;

@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
@@ -18,10 +18,10 @@ import downloadarrow from "../../assets/profile/downarrow.png";
 import Link from 'next/link'
 const Header = () => {
   interface MenuList {
-    name: string;
-    link: string;
+    name: string
+    link: string
   }
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme()
   const [menu, setMenu] = useState<MenuList[]>([
     {
       name: "Home",
@@ -37,38 +37,38 @@ const Header = () => {
     },
     {
       name: "gaming",
-      link: "/",
+      link: "/gaming",
     },
     {
       name: "tech",
-      link: "/",
+      link: "/tech",
     },
-  ]);
-  const [searchOpen, setSearchOpen] = useState<Boolean>(true);
-  const [searchText, setSearchText] = useState<string>("");
-  const [isLoggedIn, setIsLoggedIn] = useState<Boolean>(false);
-  const router = useRouter();
+  ])
+  const [searchOpen, setSearchOpen] = useState<Boolean>(true)
+  const [searchText, setSearchText] = useState<string>("")
+  const [isLoggedIn, setIsLoggedIn] = useState<Boolean>(false)
+  const router = useRouter()
   useEffect(() => {
-    let user: any = localStorage.getItem("isLogin");
-    setIsLoggedIn(user);
+    let user: any = localStorage.getItem("isLogin")
+    setIsLoggedIn(user)
     // router.refresh();
-  });
+  })
 
   const hanldeClose = () => {
-    setSearchOpen(!searchOpen);
-  };
+    setSearchOpen(!searchOpen)
+  }
   const hanldeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchText(e.target.value);
-  };
+    setSearchText(e.target.value)
+  }
   const hanldeSearch = () => {
-    console.log(searchText);
-  };
+    console.log(searchText)
+  }
 
-  const [open, setOpen] = useState(false);
-  const [profileShow, setProfileShow] = useState<Boolean>(true);
+  const [open, setOpen] = useState(false)
+  const [profileShow, setProfileShow] = useState<Boolean>(true)
   const onClickOpenModal = () => {
-    setOpen(!open);
-  };
+    setOpen(!open)
+  }
 
   const onClicklogout = () => {
     localStorage.removeItem("isLogin");
@@ -101,7 +101,7 @@ const Header = () => {
                             {elme.name}
                           </a>
                         </li>
-                      );
+                      )
                     })}
                   </ul>
                 </div>
@@ -152,13 +152,13 @@ const Header = () => {
                         />
 
                         <div
-                          className={`absolute w-[240px] py-7	px-4 bg-brandLightOpacity20 	 dark:bg-brandDark1 right-[0] top-[60px]  left-auto  border border-grayCard dark:border-brandLightOpacity10 rounded-lg ${
+                          className={`absolute w-[240px] py-7	px-4 bg-white 	 dark:bg-brandDark1 right-[0] top-[60px]  left-auto  border border-grayCard dark:border-brandLightOpacity10 rounded-lg ${
                             profileShow ? "hidden" : "block"
                           } `}
                         >
                           {/* <Image src={downloadarrow} alt="Demo" /> */}
                           <div
-                            className={`${styles.triangleshap}  border-y-brandLightOpacity100	 dark:border-y-brandDark1`}
+                            className={`${styles.triangleshap}  border-b-[22px] border-b-white	 dark:border-y-brandDark1`}
                           ></div>
                           <div className="deail ">
                             <h2 className="text-lg dark:text-brand font-bold montserratfont">
@@ -273,7 +273,7 @@ const Header = () => {
                         {elme.name}
                       </a>
                     </li>
-                  );
+                  )
                 })}
               </ul>
             </div>
@@ -296,7 +296,7 @@ const Header = () => {
         welcomGossipModel={welcomGossipModel}
       /> */}
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

@@ -134,10 +134,10 @@ const UserForYou = () => {
             </div>
           );
         })}
-      </div>{" "}
+      </div>
       <Pagination />
     </>
   );
 };
 
-export default UserForYou;
+export default UserForYou

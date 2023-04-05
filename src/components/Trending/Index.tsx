@@ -1,11 +1,11 @@
-"use client";
-import Image from "next/image";
-import React, { useState } from "react";
-import Slider from "react-slick";
-import trendingLight from "../../assets/globals/trending-light.png";
-import trendingDard from "../../assets/globals/trending-dark.png";
-import styles from "./trending.module.css";
-import { useTheme } from "next-themes";
+"use client"
+import Image from "next/image"
+import React, { useState } from "react"
+import Slider from "react-slick"
+import trendingLight from "../../assets/globals/trending-light.png"
+import trendingDard from "../../assets/globals/trending-dark.png"
+import styles from "./trending.module.css"
+import { useTheme } from "next-themes"
 const Trending = () => {
   var settings = {
     dots: false,
@@ -35,10 +35,10 @@ const Trending = () => {
         },
       },
     ],
-  };
+  }
   interface TagsList {
-    name: string;
-    link: string;
+    name: string
+    link: string
   }
 
   const [tags, setTags] = useState<TagsList[]>([
@@ -98,7 +98,7 @@ const Trending = () => {
       name: "Flame Throwers",
       link: "/",
     },
-  ]);
+  ])
 
   return (
     <section className={`${styles.trending} trending`}>
@@ -134,14 +134,14 @@ const Trending = () => {
                   >
                     <span>{item.name}</span>
                   </a>
-                );
+                )
               })}
             </Slider>
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Trending;
+export default Trending
