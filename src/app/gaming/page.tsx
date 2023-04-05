@@ -1,7 +1,7 @@
 "use client"
 import HeroSection from "@/components/HeroSection"
 import Trending from "@/components/Trending/Index"
-import React from "react"
+import React, { useState } from "react"
 import GamingGuides from "../../components/Gamings/GamingGuides/index"
 import LatestNews from "@/components/LatestNews/Index"
 import ViewMore from "@/components/Gamings/ViewMore/ViewMore"
@@ -9,43 +9,72 @@ import ForYou from "@/components/ForYou/Index"
 import SectionSaprator from "@/components/SecSaprator"
 import styles from "./gaming.module.css"
 import GuideGaming from "@/components/Gamings/GuidesGaming/GuideGaming"
+import NewCategory from "../../components/Game/news-category/NewsCategory"
+import Guides from "@/components/Game/Guides/Guides"
+import Reviews from "@/components/Game/Reviews/Reviews"
+import Features from "@/components/Game/Features/Features"
+import All from "../../components/Game/All/index"
 const page = () => {
+  const [openTab, setOpenTab] = useState(0)
+  const menulist = [
+    { name: "all", data: <All /> },
+    { name: "News", data: <NewCategory /> },
+    { name: "features", data: <Features /> },
+    { name: "guides", data: <Guides /> },
+    { name: "reviews", data: <Reviews /> },
+  ]
+  const hanldeOpenTab = (e: number) => {
+    setOpenTab(e)
+  }
+
   return (
     <>
       <section className="gaming_page_wrapper">
-        <div className="gaming_tabs_width border-t border-b border-brandLightOpacity10 py-4">
+        <div className="w-full text-center pt-[36px] pb-[36px]">
+          <ul className="flex w-[460px] m-auto justify-between">
+            {menulist.map((el, index) => {
+              return (
+                <li key={index}>
+                  <a
+                    className={
+                      "cursor-pointer capitalize montserratfont block  transition-all	duration-75 leading-loose	 " +
+                      (openTab === index
+                        ? "scale-[1.1] text-brand font-bold border-b-2 border-brand"
+                        : "text-base font-normal text-brandLightOpacity100")
+                    }
+                    onClick={() => hanldeOpenTab(index)}
+                    data-toggle="tab"
+                    // href={`#link${index}`}
+                    role="tablist"
+                  >
+                    {el.name}
+                  </a>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+
+        <div className="gaming_tabs_width border-t border-b border-brandLightOpacity10 ">
           <Trending />
         </div>
 
-        <div className="gaming_tabs_hero_section pt-8 pb-[10px]">
-          <HeroSection />
-        </div>
-        <div className="latest_news">
-          <LatestNews />
-          <div className="global-section-width">
-            <div className="2xl:container">
-              <div className="view_latest_news pb-0 pt-[16px]">
-                <ViewMore />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="latest_news">
-          <div className="global-section-width">
-            <div className="2xl:container">
-              <div className="view_latest_news pb-0 pt-[16px]">
-                <SectionSaprator title="Guides" />
-              </div>
-            </div>
-          </div>
-          <div className={styles.for_your_section}>
-            <GuideGaming />
-          </div>
-        </div>
         <div className="guides_"></div>
-        <div className="gaming_guide_section ">
+        {/* <div className="gaming_guide_section ">
           <GamingGuides />
-        </div>
+        </div> */}
+        {menulist.map((el, i) => {
+          return (
+            openTab === i && (
+              <div
+                className="max-w-[1440px] w-full m-auto  tabtech  border-grayCard dark:border-brandLightOpacity10 p-0"
+                key={i}
+              >
+                {el.data}
+              </div>
+            )
+          )
+        })}
       </section>
     </>
   )
