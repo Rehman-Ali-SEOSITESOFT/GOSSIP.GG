@@ -1,15 +1,15 @@
-import React, { useState } from "react"
-import style from "./GamingFeatures.module.css"
-import image1 from "../../../assets/gaming/image1.png"
-import image2 from "../../../assets/gaming/image1.png"
-import image3 from "../../../assets/gaming/image1.png"
-import image4 from "../../../assets/gaming/image1.png"
-import bookmark from "../../../assets/gaming/bookmark.png"
-import Image from "next/image"
+import React, { useState } from "react";
+import style from "./GamingFeatures.module.css";
+import image1 from "../../../assets/gaming/image1.png";
+import image2 from "../../../assets/gaming/image1.png";
+import image3 from "../../../assets/gaming/image1.png";
+import image4 from "../../../assets/gaming/image1.png";
+import bookmark from "../../../assets/gaming/bookmark.png";
+import Image from "next/image";
 const GamingFeatures = () => {
   interface List {
-    name: string
-    picture: any
+    name: string;
+    picture: any;
   }
   const item: List[] = [
     {
@@ -28,8 +28,8 @@ const GamingFeatures = () => {
       name: "demo ",
       picture: image4,
     },
-  ]
-  const [items, setItems] = useState(item)
+  ];
+  const [items, setItems] = useState(item);
   return (
     <>
       <div className="features_gaming_section dark:bg-brandDark1 bg-white p-6 px-7 rounded border-grayCard border">
@@ -61,8 +61,8 @@ const GamingFeatures = () => {
                   className={`${style.news_desc} border-grayCard dark:border-brandLightOpacity10`}
                 >
                   <h4 className="text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 pr-[16px]">
-                    Hellblade: Senua's Sacrifice Might Just be One of the Most
-                    Important Games of the Modern Era
+                    Hellblade: Senua&#39;s Sacrifice Might Just be One of the
+                    Most Important Games of the Modern Era
                   </h4>
                   <p className="font-normal	text-xs	robotoslub pt-[8px] brandLightOpacity90">
                     It is a long established fact that a reader will be
@@ -86,12 +86,12 @@ const GamingFeatures = () => {
                   </div>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default GamingFeatures
+export default GamingFeatures;

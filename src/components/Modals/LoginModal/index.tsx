@@ -4,16 +4,18 @@ import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Banner from "../../../assets/images/modal/banner.png";
 import Logo from "../../../assets/images/modal/logo.png";
+import LightLogo from "../../../assets/images/modal/light-logo.png";
 import Discord from "../../../assets/images/modal/discord.png";
+import DiscordLight from "../../../assets/images/modal/discord-light.png";
 import Close from "../../../assets/images/modal/close.png";
 import Google from "../../../assets/images/modal/google.png";
-
+import GoogleLight from "../../../assets/images/modal/google-light.png";
 import SignupModal from "../SignupModal";
 import ForgotPasswordModal from "../ForgotPasswordModal";
-
+import { useTheme } from "next-themes";
 const LoginModal = (props: any) => {
   const cancelButtonRef = useRef(null);
-
+  const { theme} = useTheme();
   const [open, setOpen] = useState<boolean | null>(false);
   const [openForgotPasswordModal, setOpenForgotPasswordModal] = useState<boolean | null>(false);
 
@@ -63,7 +65,7 @@ const LoginModal = (props: any) => {
                 leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
               >
                 <Dialog.Panel
-                  className="relative transform overflow-hidden rounded-lg dark:bg-brandDark2 bg-white text-left  transition-all sm:my-8  shadow-3xshadow
+                  className="relative transform overflow-hidden rounded-lg  dark:bg-brandDark2  text-left  transition-all sm:my-8  shadow-3xshadow
                 "
                 >
                   <div className="bg-brandDark2">
@@ -81,21 +83,21 @@ const LoginModal = (props: any) => {
                       </div>
                     </div>
                   </div>
-                  <div className="flex flex-col border-2 rounded-b-lg dark:border-r-brandLightOpacity10 dark:border-l-brandLightOpacity10 dark:border-b-brandLightOpacity10  dark:border-t-brandDark2">
+                  <div className="flex flex-col bg-bodycolor dark:bg-brandDark2  border-2 rounded-b-lg dark:border-r-brandLightOpacity10 dark:border-l-brandLightOpacity10 dark:border-b-brandLightOpacity10  dark:border-t-brandDark2">
                     <div className=" mw-sm:pl-10 mw-sm:pr-10 pl-40 pr-40  mb-9">
                       <div className="flex flex-col items-center ">
-                        <Image src={Logo} alt="logo" />
-                        <p className="text-brandLightOpacity100 text-2xl montserratfont not-italic font-bold pb-6 mw-sm:text-lg ">
+                        <Image src={theme === 'dark' ? Logo : LightLogo} alt="logo" />
+                        <p className="text-brandDark2 dark:text-brandLightOpacity100 text-2xl montserratfont not-italic font-bold pb-6 mw-sm:text-lg ">
                           Log In to Gossip.gg
                         </p>
                         <input
-                          className="border-brandLightOpacity10 hover:border hover:border-[#ffffff] border rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
+                          className="border-brandLightOpacity10 hover:border hover:border-brandDark2 dark:hover:border-[#ffffff]  dark:border-brandLightOpacity10 border border-choosebox  rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
                           id="email"
                           type="text"
                           placeholder="Email"
                         />
                         <input
-                          className="border-brandLightOpacity10 mt-4 mb-38px hover:border hover:border-[#ffffff] border rounded w-full h-12 py-2 px-6  bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
+                          className="border-brandLightOpacity10 mt-4 mb-38px hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6  bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline  focus:border-brandDark2 dark:focus:border-[#ffffff]"
                           id="password"
                           type="password"
                           autoComplete="false"
@@ -109,7 +111,7 @@ const LoginModal = (props: any) => {
                             type="checkbox"
                             className="h-5 w-5 text-green-600"
                           />
-                          <p className="pl-2.5 montserratfont text-brandLightOpacity70 text-xs">
+                          <p className="pl-2.5 montserratfont text-brandDark2  dark:text-brandLightOpacity70 text-xs">
                             Remember me
                           </p>
                         </div>
@@ -117,7 +119,7 @@ const LoginModal = (props: any) => {
                           <a
                             href="#"
                             onClick={() => onClickOpenForgotPasswordModal()}
-                            className="montserratfont text-brandLightOpacity70 text-xs underline"
+                            className="montserratfont text-brandDark2 dark:text-brandLightOpacity70 text-xs underline"
                           >
                             Forgot password?
                           </a>
@@ -127,7 +129,7 @@ const LoginModal = (props: any) => {
                         <button className="bg-brand mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold">
                           Log In
                         </button>
-                        <p className="pt-3 montserratfont text-brandLightOpacity70 text-xs">
+                        <p className="pt-3 montserratfont text-brandDark2 dark:text-brandLightOpacity70 text-xs">
                           Dont&#39;t have and account?
                           <a
                             href="#"
@@ -149,11 +151,11 @@ const LoginModal = (props: any) => {
                     </div>
                     <div className="mw-sm:pl-10 mw-sm:pr-10 pl-40 pr-40 mt-8 mb-68px">
                       <div className="flex flex-row justify-center items-center">
-                        <div className="mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full mr-5 dark:bg-brandLightOpacity5 bg-brandLightOpacity5 flex justify-center items-center content-center ">
-                          <Image src={Google} alt="google icon" />
+                        <div className="mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full mr-5 dark:bg-brandLightOpacity5 bg-iconBackground flex justify-center items-center content-center ">
+                          <Image src={theme === 'dark' ?  Google : GoogleLight} alt="google icon" />
                         </div>
-                        <div className="mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full ml-5 dark:bg-brandLightOpacity5 bg-brandLightOpacity5 flex justify-center items-center content-center ">
-                          <Image src={Discord} alt="google icon" />
+                        <div className="mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full ml-5 dark:bg-brandLightOpacity5 bg-iconBackground flex justify-center items-center content-center ">
+                          <Image src={theme === 'dark' ?  Discord : DiscordLight}  alt="google icon" />
                         </div>
                       </div>
                     </div>

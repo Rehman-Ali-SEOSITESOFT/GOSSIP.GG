@@ -55,7 +55,10 @@ const Page = () => {
       {menulist.map((el, i) => {
         return (
           openTab === i && (
-            <div className="max-w-[1440px] w-full m-auto mt-[-10px] tabtech border-t border-grayCard dark:border-brandLightOpacity10 p-0">
+            <div
+              className="max-w-[1440px] w-full m-auto mt-[-10px] tabtech border-t border-grayCard dark:border-brandLightOpacity10 p-0"
+              key={i}
+            >
               {el.data}
             </div>
           )
