@@ -40,7 +40,7 @@ const Header = () => {
     },
     {
       name: "tech",
-      link: "/",
+      link: "/tech",
     },
   ])
   const [searchOpen, setSearchOpen] = useState<Boolean>(true)
@@ -151,13 +151,13 @@ const Header = () => {
                         />
 
                         <div
-                          className={`absolute w-[240px] py-7	px-4 bg-brandLightOpacity20 	 dark:bg-brandDark1 right-[0] top-[60px]  left-auto  border border-grayCard dark:border-brandLightOpacity10 rounded-lg ${
+                          className={`absolute w-[240px] py-7	px-4 bg-white 	 dark:bg-brandDark1 right-[0] top-[60px]  left-auto  border border-grayCard dark:border-brandLightOpacity10 rounded-lg ${
                             profileShow ? "hidden" : "block"
                           } `}
                         >
                           {/* <Image src={downloadarrow} alt="Demo" /> */}
                           <div
-                            className={`${styles.triangleshap}  border-y-brandLightOpacity100	 dark:border-y-brandDark1`}
+                            className={`${styles.triangleshap}  border-b-[22px] border-b-white	 dark:border-y-brandDark1`}
                           ></div>
                           <div className="deail ">
                             <h2 className="text-lg dark:text-brand font-bold montserratfont">

@@ -58,6 +58,7 @@ module.exports = {
         "mx-14": { max: "1430px" },
         "mw-xl": { max: "1279px" },
         "mw-12": { max: "1200px" },
+        "mw-11": { max: "1100px" },
         // => @media (max-width: 1279px) { ... }
 
         "mw-lg": { max: "1024px" },

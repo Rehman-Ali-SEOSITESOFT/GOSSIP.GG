@@ -10,7 +10,7 @@ const Pagination = () => {
         <div className="flex w-full py-[88px]">
           <div className="w-[450px] m-auto">
             <div className="pagination flex justify-between items-center">
-              <div className="back-arrow inline-block bg-grayCard dark:bg-brandLightOpacity10 w-[32px] h-[32px] leading-[32px] flex justify-center items-center rounded-2xl ">
+              <div className="back-arrow inline-block bg-grayCard dark:bg-brandLightOpacity10 w-[32px] h-[32px] leading-[32px] flex justify-center items-center rounded-2xl cursor-pointer">
                 <Image
                   src={arrow}
                   alt="back-arrow"
@@ -52,7 +52,7 @@ const Pagination = () => {
                   10
                 </span>
               </div>
-              <div className="next-arrow inline-block bg-grayCard  dark:bg-brandLightOpacity10  w-[31px] h-[32px] leading-[32px] flex justify-center items-center  rounded-2xl">
+              <div className="next-arrow inline-block bg-grayCard  dark:bg-brandLightOpacity10  w-[31px] h-[32px] leading-[32px] flex justify-center items-center  rounded-2xl rotate-180	cursor-pointer">
                 <Image
                   src={arrow}
                   alt="back-arrow"
