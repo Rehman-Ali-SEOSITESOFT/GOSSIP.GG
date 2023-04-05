@@ -1,10 +1,10 @@
-"use client";
-import UserForYou from "@/components/Userprofile/UserForyou";
-import ProfileDetail from "@/components/Userprofile/UserProfile";
-import React, { useState } from "react";
+"use client"
+import UserForYou from "@/components/Userprofile/UserForyou"
+import ProfileDetail from "@/components/Userprofile/UserProfile"
+import React, { useState } from "react"
 
 const Page = () => {
-  const [openTab, setOpenTab] = useState(1);
+  const [openTab, setOpenTab] = useState(1)
 
   return (
     <section className="user-profile">
@@ -30,8 +30,8 @@ const Page = () => {
                       : "text-brandLightOpacity70 ")
                   }
                   onClick={(e) => {
-                    e.preventDefault();
-                    setOpenTab(1);
+                    e.preventDefault()
+                    setOpenTab(1)
                   }}
                   data-toggle="tab"
                   href="#link1"
@@ -49,8 +49,8 @@ const Page = () => {
                       : "text-brandLightOpacity70")
                   }
                   onClick={(e) => {
-                    e.preventDefault();
-                    setOpenTab(2);
+                    e.preventDefault()
+                    setOpenTab(2)
                   }}
                   data-toggle="tab"
                   href="#link2"
@@ -72,7 +72,7 @@ const Page = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

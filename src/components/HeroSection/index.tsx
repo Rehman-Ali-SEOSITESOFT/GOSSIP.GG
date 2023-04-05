@@ -1,14 +1,15 @@
-import Image from "next/image";
-import React, { useState } from "react";
-import leftside from "../../assets/images/hero/hero-section-left-side.png";
-import book1 from "../../assets/images/hero/right-side-01.png";
-import book2 from "../../assets/images/hero/right-side-012.png";
-import book3 from "../../assets/images/hero/right-side-03.png";
-import styles from "./herosection.module.css";
+"use client"
+import Image from "next/image"
+import React, { useState } from "react"
+import leftside from "../../assets/images/hero/hero-section-left-side.png"
+import book1 from "../../assets/images/hero/right-side-01.png"
+import book2 from "../../assets/images/hero/right-side-012.png"
+import book3 from "../../assets/images/hero/right-side-03.png"
+import styles from "./herosection.module.css"
 const HeroSection = () => {
   interface List {
-    name: string;
-    picture: any;
+    name: string
+    picture: any
   }
   const [item, setItem] = useState<List[]>([
     {
@@ -23,7 +24,7 @@ const HeroSection = () => {
       name: "Bayes Esports appoints York Scheunemann as COO",
       picture: book3,
     },
-  ]);
+  ])
   return (
     <section
       className={`pt-3 mw-md:pt-11 ${styles.herosection} mw-md:border-t border-brand dark:border-brandLightOpacity10	`}
@@ -79,7 +80,7 @@ const HeroSection = () => {
                         </div>
                       </div>
                     </div>
-                  );
+                  )
                 })}
               </div>
             </div>
@@ -87,7 +88,7 @@ const HeroSection = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default HeroSection;
+export default HeroSection

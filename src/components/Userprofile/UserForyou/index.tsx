@@ -1,5 +1,5 @@
-import Image from "next/image";
-import React from "react";
+import Image from "next/image"
+import React from "react"
 
 const UserForYou = () => {
   return (
@@ -44,10 +44,10 @@ const UserForYou = () => {
             </div>
             <div className="item-iamge-arrow"></div>
           </div>
-        );
+        )
       })}
     </div>
-  );
-};
+  )
+}
 
-export default UserForYou;
+export default UserForYou
