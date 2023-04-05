@@ -1,31 +1,31 @@
-"use client"
-import HeroSection from "@/components/HeroSection"
-import Trending from "@/components/Trending/Index"
-import React, { useState } from "react"
-import GamingGuides from "../../components/Gamings/GamingGuides/index"
-import LatestNews from "@/components/LatestNews/Index"
-import ViewMore from "@/components/Gamings/ViewMore/ViewMore"
-import ForYou from "@/components/ForYou/Index"
-import SectionSaprator from "@/components/SecSaprator"
-import styles from "./gaming.module.css"
-import GuideGaming from "@/components/Gamings/GuidesGaming/GuideGaming"
-import NewCategory from "../../components/Game/news-category/NewsCategory"
-import Guides from "@/components/Game/Guides/Guides"
-import Reviews from "@/components/Game/Reviews/Reviews"
-import Features from "@/components/Game/Features/Features"
-import All from "../../components/Game/All/index"
-const page = () => {
-  const [openTab, setOpenTab] = useState(0)
+"use client";
+import HeroSection from "@/components/HeroSection";
+import Trending from "@/components/Trending/Index";
+import React, { useState } from "react";
+import GamingGuides from "../../components/Gamings/GamingGuides/index";
+import LatestNews from "@/components/LatestNews/Index";
+import ViewMore from "@/components/Gamings/ViewMore/ViewMore";
+import ForYou from "@/components/ForYou/Index";
+import SectionSaprator from "@/components/SecSaprator";
+import styles from "./gaming.module.css";
+import GuideGaming from "@/components/Gamings/GuidesGaming/GuideGaming";
+import NewCategory from "../../components/Game/news-category/NewsCategory";
+import Guides from "@/components/Game/Guides/Guides";
+import Reviews from "@/components/Game/Reviews/Reviews";
+import Features from "@/components/Game/Features/Features";
+import All from "../../components/Game/All/index";
+const Page = () => {
+  const [openTab, setOpenTab] = useState(0);
   const menulist = [
     { name: "all", data: <All /> },
     { name: "News", data: <NewCategory /> },
     { name: "features", data: <Features /> },
     { name: "guides", data: <Guides /> },
     { name: "reviews", data: <Reviews /> },
-  ]
+  ];
   const hanldeOpenTab = (e: number) => {
-    setOpenTab(e)
-  }
+    setOpenTab(e);
+  };
 
   return (
     <>
@@ -50,7 +50,7 @@ const page = () => {
                     {el.name}
                   </a>
                 </li>
-              )
+              );
             })}
           </ul>
         </div>
@@ -73,11 +73,11 @@ const page = () => {
                 {el.data}
               </div>
             )
-          )
+          );
         })}
       </section>
     </>
-  )
-}
+  );
+};
 
-export default page
+export default Page;
