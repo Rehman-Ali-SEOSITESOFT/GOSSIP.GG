@@ -46,12 +46,12 @@ const WelcomeGossip = (props: any) => {
                 leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
               >
                 <Dialog.Panel
-                  className={`relative transform overflow-hidden rounded-lg  w-full text-left transition-all dark:bg-brandDark2 shadow-3xshadow p-5	border-2 rounded-lg	 dark:border-brandLightOpacity10 pb-11	`}
+                  className={`relative transform overflow-hidden rounded-lg  w-full text-left transition-all bg-bodycolor dark:bg-brandDark2 shadow-3xshadow p-5	border-2 rounded-lg	 dark:border-brandLightOpacity10 pb-11	`}
                 >
                   <div className="choiceModelMain text-center">
                     <div className="choiceheader pb-4 float-right">
                       <div
-                        className="icon flex  dark:bg-brandLightOpacity10  justify-center items-center w-[40px] h-[40px] rounded-3xl cursor-pointer"
+                        className="icon flex bg-arrowicon  dark:bg-brandLightOpacity10  justify-center items-center w-[40px] h-[40px] rounded-3xl cursor-pointer"
                         onClick={() => props.onClickOpenModal()}
                       >
                         <i className="text-xl fa-solid fa-xmark"></i>
@@ -76,12 +76,12 @@ const WelcomeGossip = (props: any) => {
                     <div className={` flex flex-col  py-8	`}>
                       <a
                         onClick={onClickOpenModal}
-                        className="done_btn w-300px bg-brand inline-block py-3	rounded-3xl	text-center m-auto text-lg	leading-6	mb-6 text-brandLightOpacity100	font-bold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold "
+                        className="done_btn w-300px bg-brand inline-block py-3	rounded-3xl	text-center m-auto text-lg	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-bold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold "
                       >
                         Continue
                       </a>
 
-                      <a className="skip_btn   w-300px border border-brandLightOpacity100 inline-block py-3	rounded-3xl	text-center m-auto text-lg leading-6 text-brandLightOpacity100 font-bold montserratfont	cursor-pointer  mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base  mw-sm:text-semibold ">
+                      <a className="skip_btn   w-300px border  border-brandDark2 dark:border-brandLightOpacity100 inline-block py-3	rounded-3xl	text-center m-auto text-lg leading-6 text-brandDark2 dark:text-brandLightOpacity100 font-bold montserratfont	cursor-pointer  mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base  mw-sm:text-semibold ">
                         Skip
                       </a>
                     </div>

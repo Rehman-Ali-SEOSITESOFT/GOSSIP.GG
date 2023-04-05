@@ -15,6 +15,7 @@ import EditProfileModal from "@/components/Modals/EditProfileModal";
 import { useRouter } from "next/navigation";
 import setting from "../../assets/profile/settings.png";
 import downloadarrow from "../../assets/profile/downarrow.png";
+import Link from 'next/link'
 const Header = () => {
   interface MenuList {
     name: string;
@@ -169,9 +170,12 @@ const Header = () => {
                             >
                               abc@xyz.in
                             </label>
+                            <Link href="/user-profile">
                             <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pt-2">
                               View Profile
                             </h5>
+                            </Link>
+                           
                           </div>
                           <div className="settings border-t border-b border-grayCard dark:border-brandLightOpacity10 my-3 py-3 pl-2">
                             <h5 className="text-base leading-5 montserratfont font-semibold	dark:text-brandLightOpacity100 ">
@@ -184,9 +188,11 @@ const Header = () => {
                                 />
                               </span>
                             </h5>
+                            <Link href="/edit-user-profile">
                             <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 py-3 pl-2">
                               Edit Profile
                             </h5>
+                            </Link>
                             <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pl-2">
                               Manage Preferences
                             </h5>
