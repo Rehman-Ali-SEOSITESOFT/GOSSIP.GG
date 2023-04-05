@@ -32,8 +32,8 @@ const Page = () => {
                       className={
                         "cursor-pointer capitalize montserratfont block  transition-all	duration-75 leading-loose	 " +
                         (openTab === index
-                          ? "scale-[1.1] text-brand font-bold border-b-2 border-brand"
-                          : "text-base font-normal text-brandLightOpacity100")
+                          ? "scale-[1.1] dark:text-brand text-brandDark2 font-bold border-b-2 dark:border-brand border-brandDark2"
+                          : "text-base font-normal dark:text-brandLightOpacity100 text-brandDark2")
                       }
                       onClick={() => hanldeOpenTab(index)}
                       data-toggle="tab"
