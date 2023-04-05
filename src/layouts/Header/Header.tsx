@@ -12,9 +12,11 @@ import styles from "./Header.module.css"
 import profile from "../../assets/profile/profile-icon.png"
 import LoginModal from "@/components/Modals/LoginModal"
 import EditProfileModal from "@/components/Modals/EditProfileModal"
-import { useRouter } from "next/navigation"
+import { useRouter, usePathname } from "next/navigation"
 import setting from "../../assets/profile/settings.png"
 import downloadarrow from "../../assets/profile/downarrow.png"
+import Link from "next/link"
+
 const Header = () => {
   interface MenuList {
     name: string
@@ -28,11 +30,11 @@ const Header = () => {
     },
     {
       name: "gossip",
-      link: "/",
+      link: "/gossip",
     },
     {
       name: "esports",
-      link: "/",
+      link: "/esports",
     },
     {
       name: "gaming",
@@ -47,6 +49,9 @@ const Header = () => {
   const [searchText, setSearchText] = useState<string>("")
   const [isLoggedIn, setIsLoggedIn] = useState<Boolean>(false)
   const router = useRouter()
+  const currentPage = usePathname()
+
+  console.log("router=============", currentPage)
   useEffect(() => {
     let user: any = localStorage.getItem("isLogin")
     setIsLoggedIn(user)
@@ -70,9 +75,9 @@ const Header = () => {
   }
 
   const onClicklogout = () => {
-    localStorage.removeItem("isLogin");
-    router.refresh();
-  };
+    localStorage.removeItem("isLogin")
+    router.refresh()
+  }
 
   return (
     <header className={`${styles.main_header} relative z-[2]`}>
@@ -93,12 +98,16 @@ const Header = () => {
                     {menu.map((elme, index) => {
                       return (
                         <li key={index}>
-                          <a
+                          <Link
                             href={elme.link}
-                            className="font-bold leading-5 no-underline uppercase text-brandLightOpacity100 hover:text-brand hover:font-extrabold sm:text-brandLightOpacity100  "
+                            className={`${
+                              currentPage === elme.link
+                                ? "text-brand text-[18px] sm:text-brand font-extrabold"
+                                : "text-brandLightOpacity100 text-base sm:text-brandLightOpacity100 font-bold"
+                            }   leading-5 no-underline uppercase  hover:text-brand hover:font-extrabold `}
                           >
                             {elme.name}
-                          </a>
+                          </Link>
                         </li>
                       )
                     })}
@@ -169,9 +178,11 @@ const Header = () => {
                             >
                               abc@xyz.in
                             </label>
-                            <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pt-2">
-                              View Profile
-                            </h5>
+                            <Link href="/user-profile">
+                              <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pt-2">
+                                View Profile
+                              </h5>
+                            </Link>
                           </div>
                           <div className="settings border-t border-b border-grayCard dark:border-brandLightOpacity10 my-3 py-3 pl-2">
                             <h5 className="text-base leading-5 montserratfont font-semibold	dark:text-brandLightOpacity100 ">
@@ -184,9 +195,11 @@ const Header = () => {
                                 />
                               </span>
                             </h5>
-                            <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 py-3 pl-2">
-                              Edit Profile
-                            </h5>
+                            <Link href="/edit-user-profile">
+                              <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 py-3 pl-2">
+                                Edit Profile
+                              </h5>
+                            </Link>
                             <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pl-2">
                               Manage Preferences
                             </h5>

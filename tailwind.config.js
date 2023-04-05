@@ -35,7 +35,7 @@ module.exports = {
         errorIndicator: "#d91618",
         // custom color
         white: "#ffffff",
-
+        iconBackground:'#ededed', 
         bodycolor: "#f8f8f8",
         grayCard: "rgba(34, 30, 31, 0.1)",
         grayCardHover: "rgba(34, 30, 31, 30%)",
@@ -43,7 +43,8 @@ module.exports = {
         textColorGray: "rgba(34, 30, 31, 0.7) ",
         secSaprator: "#ED4E50",
         userprofilebg: "#2a2627",
-
+        arrowicon:'#e3e2e2',
+        choosebox:'#e3e3e3',
         custom: {
           DEFAULT: "#363233",
         },

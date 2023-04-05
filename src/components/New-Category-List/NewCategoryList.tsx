@@ -1,34 +1,32 @@
-import Image from "next/image"
 import React, { useState } from "react"
-import downarrow from "../../../assets/user-for-you/down-arrow.png"
-import downarrowColor from "../../../assets/user-for-you/fill-down-arrow.png"
-import uparrow from "../../../assets/user-for-you/up-arrow.png"
-import uparrowColor from "../../../assets/user-for-you/fill-up-arrow.png"
-import comment from "../../../assets/user-for-you/comment.png"
-import bookmark from "../../../assets/user-for-you/bookmark.png"
-import bookmarkfill from "../../../assets/user-for-you/fill-bookmark.png"
-import sharedbtn from "../../../assets/user-for-you/share.png"
-import user1 from "../../../assets/user-for-you/user-1.png"
-import user2 from "../../../assets/user-for-you/user-2.png"
-import user3 from "../../../assets/user-for-you/user-3.png"
-import user4 from "../../../assets/user-for-you/user-4.png"
-import Pagination from "@/components/Pagination"
-const UserForYou = () => {
+import Image from "next/image"
+import downarrow from "../../assets/user-for-you/down-arrow.png"
+import downarrowColor from "../../assets/user-for-you/fill-down-arrow.png"
+import uparrow from "../../assets/user-for-you/up-arrow.png"
+import uparrowColor from "../../assets/user-for-you/fill-up-arrow.png"
+import comment from "../../assets/user-for-you/comment.png"
+import bookmark from "../../assets/user-for-you/bookmark.png"
+import bookmarkfill from "../../assets/user-for-you/fill-bookmark.png"
+import sharedbtn from "../../assets/user-for-you/share.png"
+import user1 from "../../assets/user-for-you/user-1.png"
+import user2 from "../../assets/user-for-you/user-2.png"
+import user3 from "../../assets/user-for-you/user-3.png"
+import user4 from "../../assets/user-for-you/user-4.png"
+import user5 from "../../assets/new-category/user5.png"
+import user6 from "../../assets/new-category/user6.png"
+
+const NewCategoryList = () => {
   const [userDetil, setUserDetail] = useState<any[]>([
     user1,
     user2,
     user3,
     user4,
+    user5,
+    user6,
   ])
   return (
     <>
       <div className="userforyou--items">
-        <p className="montserratfont font-normal text-base leading-5 text-textColorGray	dark:text-brandLightOpacity70 	">
-          <a href="#" className="underline underline-offset-4	">
-            Manage your preferences
-          </a>
-          &nbsp; to fine-tune this feed
-        </p>
         {userDetil.map((elemet, index) => {
           return (
             <div
@@ -135,9 +133,8 @@ const UserForYou = () => {
           )
         })}
       </div>
-      <Pagination />
     </>
   )
 }
 
-export default UserForYou
+export default NewCategoryList

@@ -38,7 +38,7 @@ const PasswrodChangeModal = (props: any) => {
                 leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                 leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
               >
-                <Dialog.Panel className="relative shadow-3xshadow  transform overflow-hidden rounded-lg dark:bg-brandDark2 bg-white text-left  transition-all sm:my-8 ">
+                <Dialog.Panel className="relative shadow-3xshadow  transform overflow-hidden rounded-lg dark:bg-brandDark2  text-left  transition-all sm:my-8 ">
                   <div className="bg-brandDark2">
                     <div className="h-[181px]">
                       <Image
@@ -54,13 +54,13 @@ const PasswrodChangeModal = (props: any) => {
                       </div>
                     </div>
                   </div>
-                  <div className="flex flex-col border-2 rounded-b-lg dark:border-r-brandLightOpacity10 dark:border-l-brandLightOpacity10 dark:border-b-brandLightOpacity10  dark:border-t-brandDark2 ">
+                  <div className="flex flex-col bg-bodycolor dark:bg-brandDark2 border-2 rounded-b-lg dark:border-r-brandLightOpacity10 dark:border-l-brandLightOpacity10 dark:border-b-brandLightOpacity10  dark:border-t-brandDark2 ">
                     <div className=" mw-sm:pl-10 mw-sm:pr-10 pl-30 pr-30  mb-9">
                       <div className="flex flex-col items-center  mt-126px pb-10">
-                        <p className="text-brandLightOpacity100 text-2xl montserratfont not-italic font-bold pb-6 mw-sm:text-lg ">
+                        <p className="text-brandDark2 dark:text-brandLightOpacity100 text-2xl montserratfont not-italic font-bold pb-6 mw-sm:text-lg ">
                           Password Changed
                         </p>
-                        <p className="montserratfont text-center mw-sm:w-[100%] w-[40%]  pt-11 pb-[77px] text-brandLightOpacity70 not-italic text-lg mw-sm:text-[16px]">
+                        <p className="montserratfont text-center mw-sm:w-[100%] w-[40%]  pt-11 pb-[77px] text-brandDark2 dark:text-brandLightOpacity70 not-italic text-lg mw-sm:text-[16px]">
                           Your Password has been reset successfully
                         </p>
                       </div>

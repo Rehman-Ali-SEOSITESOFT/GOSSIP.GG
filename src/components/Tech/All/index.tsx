@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import LatestNews from "@/components/LatestNews/Index";
 import AllHeroSection from "./HeroSection";
 import AllReviews from "./Reviews";
@@ -12,7 +13,7 @@ const MainTech = () => {
       <TechFecture />
       <AllDeail />
     </section>
-  );
-};
+  )
+}
 
-export default MainTech;
+export default MainTech

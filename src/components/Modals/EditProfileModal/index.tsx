@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import Image from "next/image";
 import Close from "../../../assets/images/modal/close.png";
+import CloseLight from "../../../assets/images/modal/close-light.png";
 import Info from "../../../assets/images/general/info.png";
 import Instgram from "../../../assets/images/footer/instagram.png";
 import Twitter from "../../../assets/images/footer/twitter.png";
@@ -15,9 +16,20 @@ import Banner3 from "../../../assets/images/profile/banner-3.png";
 import Logo1 from "../../../assets/images/profile/logo-1.png";
 import DisplaySlider from "./DisplayImageSlider";
 import BannerSlider from "./BannerImageSlider";
+import { useTheme } from "next-themes";
+import DarkInsta from '../../../assets/images/profile/dark-insta.png';
+import DarkTwitter from '../../../assets/images/profile/dark-twitter.png';
+import DarkInfo from '../../../assets/images/profile/dark-info.png';
+import LightGame from '../../../assets/images/profile/light-game.png';
+import LightAirplay from '../../../assets/images/profile/airplay-light.png';
+import LightNintendo from '../../../assets/images/profile/nintendo-light.png';
+import LightPhone from '../../../assets/images/profile/phone-light.png';
+import LightPlaystation from '../../../assets/images/profile/PlayStation-light.png';
+import LightXbox from '../../../assets/images/profile/xbox-light.png';
 const EditProfileModal = (props: any) => {
   const cancelButtonRef = useRef(null);
   const [openTab, setOpenTab] = useState<number | null>(1);
+  const { theme} = useTheme();
 
   interface GameList {
     name: string;
@@ -29,55 +41,54 @@ const EditProfileModal = (props: any) => {
     picture: any;
   }
 
-
   const item: GameList[] = [
     {
       name: "Valorant",
-      picture: Game,
+      picture: theme === 'dark' ?  Game : LightGame,
     },
     {
       name: "Valorant",
-      picture: Game,
+      picture: theme === 'dark' ?  Game : LightGame,
     },
     {
       name: "Valorant",
-      picture: Game,
+      picture: theme === 'dark' ?  Game : LightGame,
     },
     {
       name: "Valorant",
-      picture: Game,
+      picture: theme === 'dark' ?  Game : LightGame,
     },
     {
       name: "Valorant",
-      picture: Game,
+      picture: theme === 'dark' ?  Game : LightGame,
     },
     {
       name: "Valorant",
-      picture: Game,
+      picture: theme === 'dark' ?  Game : LightGame,
     },
     {
       name: "Valorant",
-      picture: Game,
+      picture: theme === 'dark' ?  Game : LightGame,
     },
     {
       name: "Valorant",
-      picture: Game,
+      picture: theme === 'dark' ?  Game : LightGame,
     },
     {
       name: "Valorant",
-      picture: Game,
+      picture: theme === 'dark' ?  Game : LightGame,
     },
     {
       name: "Valorant",
-      picture: Game,
+      picture: theme === 'dark' ?  Game : LightGame,
     },
     {
       name: "Valorant",
-      picture: Game,
+      picture: theme === 'dark' ?  Game : LightGame,
     },
     {
       name: "Valorant",
-      picture: Game,
+      picture: theme === 'dark' ?  Game : LightGame,
     },
   ];
   const [gameItems, setGameItems] = useState(item);
@@ -105,6 +116,30 @@ const EditProfileModal = (props: any) => {
     },
   ];
   const [platformItems, setPlatformItems] = useState(itemPlatform);
+
+  const itemPlatformDark: PlatformList[] = [
+    {
+      name: "PC",
+      picture: LightAirplay,
+    },
+    {
+      name: "Mobile",
+      picture: LightPhone,
+    },
+    {
+      name: "Playstation",
+      picture: LightPlaystation,
+    },
+    {
+      name: "Xbox",
+      picture: LightXbox,
+    },
+    {
+      name: "Nintendo",
+      picture: LightNintendo,
+    },
+  ];
+  const [platformDarkItems, setPlatformDarkItems] = useState(itemPlatformDark);
 
   return (
     <>
@@ -137,24 +172,24 @@ const EditProfileModal = (props: any) => {
                 leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                 leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
               >
-                <Dialog.Panel className="relative shadow-3xshadow  transform overflow-hidden rounded-lg dark:bg-brandDark2 bg-brandDark2 text-left  transition-all sm:my-8   border-2  dark:border-brandLightOpacity10   ">
-                  <div className="bg-brandDark2">
+                <Dialog.Panel className="relative shadow-3xshadow  transform overflow-hidden rounded-lg dark:bg-brandDark2 bg-bodycolor text-left  transition-all sm:my-8   border-2  dark:border-brandLightOpacity10   ">
+                  <div className="bg-bodycolor dark:bg-brandDark2">
                     <div className="flex flex-row justify-between mw-sm1:px-[10px]  pl-12 pt-4 pr-4">
                       <div className="">
-                        <p className="text-[24px] pb-[5px] text-brandLightOpacity100 font-bold montserratfont">
+                        <p className="text-[24px] pb-[5px] text-brandDark2 dark:text-brandLightOpacity100 font-bold montserratfont">
                           Edit Profile
                         </p>
-                        <p className="flex items-center text-xs text-brandLightOpacity70 font-normal montserratfont">
+                        <p className="flex items-center text-xs text-brandDark2 dark:text-brandLightOpacity70 font-normal montserratfont">
                           Naveen
-                          <span className="h-4 w-[1px]  mx-3 dark:bg-brandLightOpacity70 inline-block "></span>{" "}
+                          <span className="h-4 w-[1px]  mx-3 bg-brandDark2 opacity-70 dark:opcacity-100 dark:bg-brandLightOpacity70 inline-block "></span>
                           Joined Feb 2023
                         </p>
                       </div>
                       <div
                         onClick={() => props.onClickOpenModal()}
-                        className="h-10 w-10 rounded-full  dark:bg-brandLightOpacity5 flex justify-center items-center content-center"
+                        className="h-10 w-10 rounded-full  bg-arrowicon dark:bg-brandLightOpacity5 flex justify-center items-center content-center"
                       >
-                        <Image src={Close} alt="google icon" />
+                        <Image src={theme === 'dark' ? Close : CloseLight} alt="google icon" />
                       </div>
                     </div>
                   </div>
@@ -162,16 +197,16 @@ const EditProfileModal = (props: any) => {
                     <div className="flex flex-wrap">
                       <div className=" ">
                         <ul
-                          className="flex border dark:border-r-brandDark2  dark:border-l-brandDark2 dark:border-t-brandDark2 dark:border-b-brandLightOpacity10 mb-0 list-none flex-wrap pt-3 pb-2  flex-row"
+                          className="flex border  border-r-bodycolor border-l-bodycolor border-t-bodycolor dark:border-r-brandDark2  dark:border-l-brandDark2 dark:border-t-brandDark2 dark:border-b-brandLightOpacity10 mb-0 list-none flex-wrap pt-3 pb-2  flex-row"
                           role="tablist"
                         >
                           <li className="mw-sm1:mx-[10px] ml-[48px] mr-[36px]">
                             <a
                               className={
-                                "text-base mw-sm3:text-[10px] mw-sm1:text-[12px]  montserratfont  leading-normal " +
+                                "text-base mw-sm3:text-[10px] mw-sm1:text-[12px] outline-none  montserratfont  leading-normal " +
                                 (openTab === 1
-                                  ? "dark:text-brand pb-[8px] font-bold border-2 dark:border-b-brand dark:border-t-brandDark2 dark:border-r-brandDark2 dark:border-l-brandDark2"
-                                  : "dark:bg-brandDark2  font-normal dark:text-brandLightOpacity70")
+                                  ? "dark:text-brand pb-[8px] font-bold border-2 border-b-brandDark2 border-r-bodycolor border-l-bodycolor border-t-bodycolor dark:border-b-brand dark:border-t-brandDark2 dark:border-r-brandDark2 dark:border-l-brandDark2"
+                                  : "bg-bodycolor dark:bg-brandDark2  font-normal text-brandDark2 dark:text-brandLightOpacity70")
                               }
                               onClick={(e) => {
                                 e.preventDefault();
@@ -187,9 +222,9 @@ const EditProfileModal = (props: any) => {
                           <li className="mr-[36px] mw-sm1:mr-[10px]">
                             <a
                               className={
-                                "text-base mw-sm3:text-[10px] mw-sm1:text-[12px] montserratfont  leading-normal  " +
+                                "text-base mw-sm3:text-[10px] mw-sm1:text-[12px] outline-none montserratfont  leading-normal  " +
                                 (openTab === 2
-                                  ? "dark:text-brand pb-[8px] font-bold border-2 dark:border-b-brand dark:border-t-brandDark2 dark:border-r-brandDark2 dark:border-l-brandDark2"
+                                  ? "dark:text-brand pb-[8px] font-bold border-2 border-b-brandDark2 border-r-bodycolor border-l-bodycolor border-t-bodycolor dark:border-b-brand dark:border-t-brandDark2 dark:border-r-brandDark2 dark:border-l-brandDark2"
                                   : "dark:bg-brandDark2  font-nomral dark:text-brandLightOpacity70")
                               }
                               onClick={(e) => {
@@ -206,9 +241,9 @@ const EditProfileModal = (props: any) => {
                           <li className="mr-[90px] mw-sm1:mr-[0px]">
                             <a
                               className={
-                                "text-base mw-sm3:text-[10px] mw-sm1:text-[12px] montserratfont  leading-normal " +
+                                "text-base mw-sm3:text-[10px] mw-sm1:text-[12px] outline-none montserratfont  leading-normal " +
                                 (openTab === 3
-                                  ? "dark:text-brand pb-[8px] border-2 font-bold dark:border-b-brand dark:border-t-brandDark2 dark:border-r-brandDark2 dark:border-l-brandDark2"
+                                  ? "dark:text-brand pb-[8px] border-2 font-bold border-b-brandDark2 border-r-bodycolor border-l-bodycolor border-t-bodycolor dark:border-b-brand dark:border-t-brandDark2 dark:border-r-brandDark2 dark:border-l-brandDark2"
                                   : "dark:bg-brandDark2 font-nomral  dark:text-brandLightOpacity70")
                               }
                               onClick={(e) => {
@@ -223,7 +258,7 @@ const EditProfileModal = (props: any) => {
                             </a>
                           </li>
                         </ul>
-                        <div className="relative flex flex-col min-w-0 break-words bg-brandDark2 w-full shadow-lg rounded">
+                        <div className="relative flex flex-col min-w-0 break-words bg-bodycolor dark:bg-brandDark2 w-full shadow-lg rounded">
                           <div className="mw-sm1:px-[10px] px-12  flex-auto">
                             <div className="tab-content tab-space">
                               <div
@@ -231,49 +266,49 @@ const EditProfileModal = (props: any) => {
                                 id="link1"
                               >
                                 <div className="mt-7">
-                                  <p className="text-base text-brandLightOpacity100 montserratfont font-semibold ">
+                                  <p className="text-base text-brandDark2 dark:text-brandLightOpacity100 montserratfont font-semibold ">
                                     Mantra
                                   </p>
-                                  <p className=" pb-[16px] text-brandLightOpacity70 montserratfont text-xs font-normal">
+                                  <p className=" pb-[16px] text-brandDark2 dark:text-brandLightOpacity70 montserratfont text-xs font-normal">
                                     A oneliner you live by
                                   </p>
                                   <input
-                                    className="text-brandLightOpacity100 border-brandLightOpacity10 hover:border hover:border-[#ffffff] border rounded w-full h-12 py-2 px-6 bg-brandDark2 focus:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
+                                    className="text-brandDark2 dark:text-brandLightOpacity100 border-brandLightOpacity100 dark:border-brandLightOpacity10 hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-bodycolor dark:bg-brandDark2  focus:bg-white dark:focus:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
                                     id="live"
                                     type="text"
                                     placeholder=""
                                   />
-                                  <p className="pt-2 text-brandLightOpacity70 italic montserratfont text-xs font-normal">
+                                  <p className="pt-2 text-brandDark2 dark:text-brandLightOpacity70 italic montserratfont text-xs font-normal">
                                     52 Characters remaining
                                   </p>
                                 </div>
                                 <div className="mt-12">
-                                  <p className="text-base text-brandLightOpacity100 montserratfont font-semibold ">
+                                  <p className="text-base text-brandDark2 dark:text-brandLightOpacity100 montserratfont font-semibold ">
                                     About
                                   </p>
-                                  <p className=" pb-[16px] text-brandLightOpacity70 montserratfont text-xs font-normal">
+                                  <p className=" pb-[16px] text-brandDark2 dark:text-brandLightOpacity70 montserratfont text-xs font-normal">
                                     A brief description of yourself shown on
                                     your profile
                                   </p>
                                   <textarea
-                                    className="h-[115px] text-brandLightOpacity100 border-brandLightOpacity10 hover:border hover:border-[#ffffff] border rounded w-full h-12 py-2 px-6 bg-brandDark2 focus:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
+                                    className="h-[115px] text-brandDark2 dark:text-brandLightOpacity100 border-brandLightOpacity100 dark:border-brandLightOpacity10 hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-bodycolor dark:bg-brandDark2 focus:bg-white focus:outline-none focus:shadow-outline focus:border-brandDark2  dark:focus:border-[#ffffff]"
                                     id="textarea"
                                   />
-                                  <p className="pt-2 text-brandLightOpacity70 italic montserratfont text-xs font-normal">
+                                  <p className="pt-2 text-brandDark2 dark:text-brandLightOpacity70 italic montserratfont text-xs font-normal">
                                     180 Characters remaining
                                   </p>
                                 </div>
                                 <div className="mt-12">
-                                  <p className="text-base text-brandLightOpacity100 montserratfont font-semibold ">
+                                  <p className="text-base text-brandDark2 dark:text-brandLightOpacity100 montserratfont font-semibold ">
                                     Social Handles
                                   </p>
-                                  <p className=" pb-[16px] text-brandLightOpacity70 montserratfont text-xs font-normal">
+                                  <p className=" pb-[16px] text-brandDark2 dark:text-brandLightOpacity70 montserratfont text-xs font-normal">
                                     People who visit your profile will see your
                                     links
                                   </p>
                                   <div className="flex flex-row  items-center pb-2">
-                                    <Image src={Info} alt="Info" />
-                                    <p className="pl-2 montserratfont  font-normal text-brandLightOpacity70  text-xs ">
+                                    <Image src={theme === 'dark' ? Info : DarkInfo} alt="Info" />
+                                    <p className="pl-2 montserratfont  font-normal text-brandDark2 dark:text-brandLightOpacity70  text-xs ">
                                       Please provide your username
                                     </p>
                                   </div>
@@ -281,11 +316,11 @@ const EditProfileModal = (props: any) => {
                                     <div className="flex items-center mw-sm3:max-w-[100%] max-w-[45%]">
                                       <Image
                                         className="mr-2"
-                                        src={Instgram}
+                                        src={theme === 'dark' ? Instgram : DarkInsta} 
                                         alt="Instagram"
                                       />
                                       <input
-                                        className="text-brandLightOpacity100 border-brandLightOpacity10 hover:border hover:border-[#ffffff] border rounded w-full h-12 py-2 px-6 bg-brandDark2 focus:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
+                                        className="text-brandDark2 dark:text-brandLightOpacity100  dark:border-brandLightOpacity10 border-choosebox hover:border hover:border-brandDark2  dark:hover:border-[#ffffff] border rounded w-full h-12 py-2 px-6 bg-bodycolor dark:bg-brandDark2  focus:bg-white dark:focus:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
                                         id="live"
                                         type="text"
                                         placeholder=""
@@ -294,11 +329,11 @@ const EditProfileModal = (props: any) => {
                                     <div className="flex items-center mw-sm3:mt-2 mw-sm3:max-w-[100%] max-w-[45%]">
                                       <Image
                                         className="mr-2"
-                                        src={Twitter}
+                                        src={theme === 'dark' ? Twitter : DarkTwitter}
                                         alt="Twitter"
                                       />
                                       <input
-                                        className="text-brandLightOpacity100 border-brandLightOpacity10 hover:border hover:border-[#ffffff] border rounded w-full h-12 py-2 px-6 bg-brandDark2 focus:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
+                                        className="text-brandDark2 dark:text-brandLightOpacity100  dark:border-brandLightOpacity10 border-choosebox hover:border hover:border-brandDark2  dark:hover:border-[#ffffff] border rounded w-full h-12 py-2 px-6 bg-bodycolor dark:bg-brandDark2  focus:bg-white dark:focus:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
                                         id="live"
                                         type="text"
                                         placeholder=""
@@ -325,46 +360,46 @@ const EditProfileModal = (props: any) => {
                                     />
                                   </div>
                                 </div>
-                                <div className="border border-brandLightOpacity10 mt-[71px]"></div>
+                                <div className="border  border-choosebox  dark:border-brandLightOpacity10 mt-[71px]"></div>
                                 <div className="mt-4 max-w-[570px]">
-                                  <p className="text-base mb-4 text-brandLightOpacity100 montserratfont font-semibold ">
+                                  <p className="text-base mb-4 text-brandDark2 dark:text-brandLightOpacity100 montserratfont font-semibold ">
                                     Display Image
                                   </p>
                                    <div className="max-w-[500px] pl-9">
                                    <DisplaySlider/>
                                    </div>
                                 </div>
-                                <div className="border border-brandLightOpacity10 mt-[22px]"></div>
+                                <div className="border border-choosebox  dark:border-brandLightOpacity10 mt-[22px]"></div>
                                 <div className="mt-4">
-                                  <p className="text-base mb-4 text-brandLightOpacity100 montserratfont font-semibold ">
+                                  <p className="text-base mb-4 text-brandDark2 dark:text-brandLightOpacity100 montserratfont font-semibold ">
                                     Banner Image
                                   </p>
                                   <div className="max-w-[500px] pl-9">
                                    <BannerSlider/>
                                    </div>
                                 </div>
-                                <div className="border border-brandLightOpacity10 mt-4"></div>
+                                <div className="border border-choosebox  dark:border-brandLightOpacity10 mt-4"></div>
                               </div>
                               <div
                                 className={openTab === 3 ? "block mb-[147px]" : "hidden"}
                                 id="link3"
                               >
                                 <div className="mt-[41px] ">
-                                  <p className="mb-6 text-base text-brandLightOpacity100 montserratfont font-semibold">
+                                  <p className="mb-6 text-base text-brandDark2 dark:text-brandLightOpacity100 montserratfont font-semibold">
                                     Game
                                   </p>
-                                  <div className="flex flex-wrap max-w-[570px]  ">
+                                  <div className="flex flex-wrap max-w-[570px]">
                                     {gameItems.map((item, index) => (
                                       <div
                                         key={index}
-                                        className="min-w-fit mr-4   mb-4  mw-sm:mb-2 mw-sm:mr-2 flex items-center justify-around border border-[#ffffff]  rounded-lg h-11"
+                                        className="min-w-fit mr-4   mb-4  mw-sm:mb-2 mw-sm:mr-2 flex items-center justify-around border border-brandDark2 dark:border-[#ffffff]  rounded-lg h-11"
                                       >
                                         <Image
                                           className="ml-3 mr-2 mw-sm:mr-1 mw-sm:ml-2"
-                                          src={item.picture}
+                                          src={theme === 'dark' ? Game : LightGame}
                                           alt="game icon"
                                         />
-                                        <p className="mr-3 text-base mw-sm:mr-2 mw-sm:text-[14px] text-brandLightOpacity70 montserratfont font-normal ">
+                                        <p className="mr-3 text-base mw-sm:mr-2 mw-sm:text-[14px] text-brandDark2 dark:text-brandLightOpacity70 montserratfont font-normal ">
                                           {item.name}
                                         </p>
                                       </div>
@@ -372,25 +407,43 @@ const EditProfileModal = (props: any) => {
                                   </div>
                                 </div>
                                 <div className="mt-[88px]">
-                                  <p className="text-base mb-6 text-brandLightOpacity100 montserratfont font-semibold">
+                                  <p className="text-base mb-6 text-brandDark2 dark:text-brandLightOpacity100 montserratfont font-semibold">
                                     Platform
                                   </p>
                                   <div className="flex flex-wrap max-w-[570px]">
-                                    {platformItems.map((item, index) => (
+                                    {theme === 'dark' ? platformItems.map((item, index) => (
                                       <div
                                         key={index}
-                                        className="min-w-fit mr-4   mb-4  mw-sm:mb-2 mw-sm:mr-2 flex items-center justify-around border border-[#ffffff]  rounded-lg h-11"
+                                        className="min-w-fit mr-4   mb-4  mw-sm:mb-2 mw-sm:mr-2 flex items-center justify-around border border-brandDark2 dark:border-[#ffffff]  rounded-lg h-11"
                                       >
                                         <Image
                                           className="ml-3 mr-2 mw-sm:mr-1 mw-sm:ml-2"
                                           src={item.picture}
                                           alt="game icon"
                                         />
-                                        <p className="mr-3 text-base mw-sm:mr-2 mw-sm:text-[14px] text-brandLightOpacity70 montserratfont font-normal ">
+                                        <p className="mr-3 text-base mw-sm:mr-2 mw-sm:text-[14px] text-brandDark2 dark:text-brandLightOpacity70 montserratfont font-normal ">
                                           {item.name}
                                         </p>
                                       </div>
-                                    ))}
+                                    )) : 
+                                    platformDarkItems.map((item, index) => (
+                                      <div
+                                        key={index}
+                                        className="min-w-fit mr-4   mb-4  mw-sm:mb-2 mw-sm:mr-2 flex items-center justify-around border border-brandDark2 dark:border-[#ffffff]  rounded-lg h-11"
+                                      >
+                                        <Image
+                                          className="ml-3 mr-2 mw-sm:mr-1 mw-sm:ml-2"
+                                          src={item.picture}
+                                          alt="game icon"
+                                        />
+                                        <p className="mr-3 text-base mw-sm:mr-2 mw-sm:text-[14px] text-brandDark2 dark:text-brandLightOpacity70 montserratfont font-normal ">
+                                          {item.name}
+                                        </p>
+                                      </div>
+                                    ))
+                                    
+                                    
+                                    }
                                   </div>
                                 </div>
                               </div>
