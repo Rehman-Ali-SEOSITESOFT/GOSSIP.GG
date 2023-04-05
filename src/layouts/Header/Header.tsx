@@ -12,10 +12,11 @@ import styles from "./Header.module.css";
 import profile from "../../assets/profile/profile-icon.png";
 import LoginModal from "@/components/Modals/LoginModal";
 import EditProfileModal from "@/components/Modals/EditProfileModal";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname  } from "next/navigation";
 import setting from "../../assets/profile/settings.png";
 import downloadarrow from "../../assets/profile/downarrow.png";
-import Link from 'next/link'
+import Link from 'next/link';
+
 const Header = () => {
   interface MenuList {
     name: string
@@ -29,11 +30,11 @@ const Header = () => {
     },
     {
       name: "gossip",
-      link: "/",
+      link: "/gossip",
     },
     {
       name: "esports",
-      link: "/",
+      link: "/esports",
     },
     {
       name: "gaming",
@@ -47,7 +48,12 @@ const Header = () => {
   const [searchOpen, setSearchOpen] = useState<Boolean>(true)
   const [searchText, setSearchText] = useState<string>("")
   const [isLoggedIn, setIsLoggedIn] = useState<Boolean>(false)
-  const router = useRouter()
+  const router = useRouter();
+  const currentPage = usePathname();
+
+
+
+  console.log("router=============", currentPage)
   useEffect(() => {
     let user: any = localStorage.getItem("isLogin")
     setIsLoggedIn(user)
@@ -94,12 +100,12 @@ const Header = () => {
                     {menu.map((elme, index) => {
                       return (
                         <li key={index}>
-                          <a
+                          <Link
                             href={elme.link}
-                            className="font-bold leading-5 no-underline uppercase text-brandLightOpacity100 hover:text-brand hover:font-extrabold sm:text-brandLightOpacity100  "
+                            className={`${currentPage === elme.link ? 'text-brand text-[18px] sm:text-brand font-extrabold': 'text-brandLightOpacity100 text-base sm:text-brandLightOpacity100 font-bold' }   leading-5 no-underline uppercase  hover:text-brand hover:font-extrabold `}
                           >
                             {elme.name}
-                          </a>
+                          </Link>
                         </li>
                       )
                     })}
