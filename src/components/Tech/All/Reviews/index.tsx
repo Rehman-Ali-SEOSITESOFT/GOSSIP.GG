@@ -22,12 +22,12 @@ const AllReviews = () => {
                   <Image src={elem} alt="hello" className="w-full h-full" />
 
                   {index === 1 ? (
-                    <div className="picked dark:bg-brand dark:text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[18px]	">
+                    <div className="picked bg-arrowicon dark:bg-brand dark:text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[18px]	">
                       EDITOR&#39;S PICK
                     </div>
                   ) : null}
 
-                  <div className="review w-[60px] h-[60px] dark:bg-brand flex justify-center items-center rounded-[50px] absolute top-[8px] right-[8px]">
+                  <div className="review w-[60px] h-[60px] bg-arrowicon dark:bg-brand flex justify-center items-center rounded-[50px] absolute top-[8px] right-[8px]">
                     <span className="montserratfont font-bold text-lg leading-[22px] dark:text-brandLightOpacity100">
                       {index === 0 ? "4/5.5" : "4/5"}
                     </span>

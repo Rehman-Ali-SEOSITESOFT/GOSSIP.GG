@@ -1,7 +1,7 @@
 "use client"
 import MainTech from "@/components/Tech/All"
 import DeailTech from "@/components/Tech/Deals"
-import FeacturesTeach from "@/components/Tech/Feactures"
+import FeaturesTech from "@/components/Tech/Features"
 import NewsTech from "@/components/Tech/News"
 import ReviewTech from "@/components/Tech/Reviews"
 import Trending from "@/components/Trending/Index"
@@ -13,7 +13,7 @@ const Page = () => {
     { name: "all", data: <MainTech /> },
     { name: "News", data: <NewsTech /> },
     { name: "reviews", data: <ReviewTech /> },
-    { name: "features", data: <FeacturesTeach /> },
+    { name: "features", data: <FeaturesTech /> },
     { name: "deals", data: <DeailTech /> },
   ]
   const hanldeOpenTab = (e: number) => {
