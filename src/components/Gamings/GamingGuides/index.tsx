@@ -11,11 +11,16 @@ const index = () => {
       <section className="gaming_guide_wrapper">
         <div className="global-section-width">
           <div className="2xl:container">
-            <div className="feature_main_wrapper">
+            <div className="feature_main_wrapper pt-[52px]">
               <SectionSaprator title="Features" />
               <GamingFeatures />
+              <div className="mt-[16px]">
+                <ViewMore />
+              </div>
             </div>
-            <SectionSaprator title="Reviews" />
+            <div className="pt-[52px]">
+              <SectionSaprator title="Reviews" />
+            </div>
             <div className="reviews_main_wrapper">
               <Review />
             </div>

@@ -1,20 +1,33 @@
-"use client"
 import Image from "next/image"
 import React, { useState } from "react"
-import image1 from "../../../assets/gaming/odyssey.png"
-import image2 from "../../../assets/gaming/pubg.png"
-import image3 from "../../../assets/gaming/cod.png"
-import image4 from "../../../assets/gaming/odyssey.png"
-import bookmark from "../../../assets/gaming/bookmark.png"
-const Review = () => {
-  const [list, setList] = useState<any[]>([image1, image2, image3, image4])
+import image1 from "../../../../assets/gaming/odyssey.png"
+import image2 from "../../../../assets/gaming/pubg.png"
+import image3 from "../../../../assets/gaming/cod.png"
+import image4 from "../../../../assets/gaming/odyssey.png"
+import bookmark from "../../../../assets/gaming/bookmark.png"
+const ReviewCards = () => {
+  const [list, setList] = useState<any[]>([
+    image1,
+    image2,
+    image3,
+    image4,
+    image2,
+    image3,
+    image1,
+    image4,
+    image3,
+    image2,
+    image1,
+    image4,
+  ])
+
   return (
     <>
-      <div className="review_card_wrapper flex   flex-wrap justify-between">
+      <div className="review_card_wrapper flex mw-md:hidden  flex-wrap justify-between ">
         {list.map((ele, idx) => {
           return (
             <div
-              className="review_card_main_wrapper pb-[16px] mw-lg:w-2/5"
+              className="review_card_main_wrapper pb-[16px] mw-lg:w-2/5 pt-[48px]"
               key={idx}
             >
               <div className="img_wrapper relative">
@@ -49,4 +62,4 @@ const Review = () => {
   )
 }
 
-export default Review
+export default ReviewCards
