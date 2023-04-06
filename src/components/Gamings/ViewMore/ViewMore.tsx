@@ -10,7 +10,7 @@ const ViewMore = () => {
             href="#"
             className="montserratfont  dark:text-brandLightOpacity70  text-[brandLightOpacity70] font-medium text-base leading-5"
           >
-            View More <span>&#x3E;</span>
+            View more <span>&#x3E;</span>
             <span>&#x3E;</span>
             <span>&#x3E;</span>
           </a>
