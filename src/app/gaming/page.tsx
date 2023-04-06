@@ -1,14 +1,10 @@
 "use client"
-import HeroSection from "@/components/HeroSection"
+
 import Trending from "@/components/Trending/Index"
 import React, { useState } from "react"
-import GamingGuides from "../../components/Gamings/GamingGuides/index"
-import LatestNews from "@/components/LatestNews/Index"
-import ViewMore from "@/components/Gamings/ViewMore/ViewMore"
-import ForYou from "@/components/ForYou/Index"
-import SectionSaprator from "@/components/SecSaprator"
+
 import styles from "./gaming.module.css"
-import GuideGaming from "@/components/Gamings/GuidesGaming/GuideGaming"
+
 import NewCategory from "../../components/Game/news-category/NewsCategory"
 import Guides from "@/components/Game/Guides/Guides"
 import Reviews from "@/components/Game/Reviews/Reviews"
@@ -30,7 +26,7 @@ const Page = () => {
   return (
     <>
       <section className="gaming_page_wrapper">
-        <div className="w-full text-center pt-[26px] pb-[28px]">
+        <div className="w-full text-center pt-[26px] pb-[36px]">
           <ul className="flex w-[460px] m-auto justify-between">
             {menulist.map((el, index) => {
               return (
@@ -54,9 +50,14 @@ const Page = () => {
             })}
           </ul>
         </div>
-
-        <div className="gaming_tabs_width border-t border-b dark:border-brandLightOpacity10 ">
-          <Trending />
+        <div className={`global-section-width ${styles.trending_wrapper}`}>
+          <div className="2xl:container m-auto">
+            <div
+              className={`${styles.gaming_tabs_width} border-t border-b dark:border-brandLightOpacity10`}
+            >
+              <Trending />
+            </div>
+          </div>
         </div>
 
         <div className="guides_"></div>

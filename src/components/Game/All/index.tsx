@@ -13,13 +13,13 @@ const index = () => {
         <div className="gaming_tabs_hero_section pt-8 pb-[10px]">
           <HeroSection />
         </div>
-        <div className="latest_news">
+        <div className="latest_news mt-[88px]">
           <LatestNews />
         </div>
         <div className="latest_news">
           <div className="global-section-width">
             <div className="2xl:container">
-              <div className="view_latest_news pb-0 pt-[16px]">
+              <div className="view_latest_news pb-0 pt-[54px]">
                 <SectionSaprator title="Guides" />
               </div>
             </div>

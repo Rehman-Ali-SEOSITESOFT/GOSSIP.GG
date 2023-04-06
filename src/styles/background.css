@@ -1,0 +1,9 @@
+.home-herosection .left_side .overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.72) 8.73%,
+    rgba(0, 0, 0, 0) 62.42%,
+    rgba(0, 0, 0, 0.4) 108.83%,
+    rgba(0, 0, 0, 0.32) 108.84%
+  );
+}
