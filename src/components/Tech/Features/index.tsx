@@ -59,7 +59,7 @@ const FeaturesTech = () => {
                         <p className="robotoslub text-base leading-7 tracking-[0.03em] dark:text-brandLightOpacity90 text-textColor opacity-90 font-normal pb-5">
                           Lorem Ipsum is simply dummy text of the printing and
                           typesetting industry. Lorem Ipsum has been the
-                          industry's standard dummy text ever since the 1500s,
+                          industry&#39;s standard dummy text ever since the 1500s,
                           when an unknown printer took a galley of type and
                           scrambled it to make a type...
                         </p>
