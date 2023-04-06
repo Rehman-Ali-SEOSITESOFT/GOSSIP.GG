@@ -28,7 +28,7 @@ const AllDeail = () => {
                     <Image src={elem} alt="hello" className="w-full h-full" />
 
                     {index === 0 ? (
-                      <div className="picked dark:bg-brand dark:text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[8px]	">
+                      <div className="picked bg-arrowicon dark:bg-brand dark:text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[8px]	">
                         AMAZON DEALS
                       </div>
                     ) : null}

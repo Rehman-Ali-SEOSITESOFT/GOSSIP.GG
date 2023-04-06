@@ -1,0 +1,116 @@
+.single_item {
+  padding-bottom: 20px;
+}
+.single_item .image_wrapper {
+  width: 100%;
+  max-width: 200px;
+}
+.single_item .desc_wrapper {
+  padding: 0 15px 0 20px;
+}
+.desc_wrapper .line {
+  padding-left: 10px;
+  margin-left: 10px;
+}
+.single_item:last-child {
+  padding-bottom: 0;
+}
+
+.left_side {
+  position: relative;
+}
+.left_side .overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.72) 8.73%,
+    rgba(0, 0, 0, 0) 62.42%,
+    rgba(0, 0, 0, 0.4) 108.83%,
+    rgba(0, 0, 0, 0.32) 108.84%
+  );
+  position: absolute;
+  inset: 0;
+  border-radius: 3px;
+}
+.left_side img {
+  border-radius: 3px;
+}
+.left_side .title {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  right: 25px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+@media screen and (max-width: 1400px) {
+  .single_item {
+    padding-bottom: 10px;
+  }
+  .single_item .image_wrapper {
+    width: 100%;
+    max-width: 150px;
+  }
+  .single_item .desc_wrapper {
+    padding: 0 15px 0 15px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .left_side .title {
+    font-size: 20px;
+    line-height: normal;
+  }
+  .left_side img {
+    min-height: 400px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .single_item .desc_wrapper {
+    padding: 0 10px 0 12px;
+  }
+  .single_item {
+    border-left: 2px solid;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+  }
+
+  .single_item .image_wrapper {
+    height: 85px;
+    width: 100%;
+    max-width: 85px;
+  }
+  /* .single_item .image_wrapper {
+      width: 100%;
+      max-width: 100px;
+      height: 100px;
+    } */
+  .single_item .image_wrapper img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .single_item .desc_wrapper h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .left_side img {
+    min-height: 100%;
+    height: 100%;
+  }
+  .left_side .title {
+    bottom: 20px;
+    left: 15px;
+    right: 15px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

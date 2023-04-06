@@ -1,7 +1,7 @@
 import React from "react";
 
-const TechDeal = () => {
-  return <div>TechDeal</div>;
+const DeailTech = () => {
+  return <div>DeailTech</div>;
 };
 
-export default TechDeal;
+export default DeailTech;
