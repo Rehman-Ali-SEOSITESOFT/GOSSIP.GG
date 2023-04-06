@@ -18,7 +18,7 @@ const FeaturesTech = () => {
         <div className="flex">
           <div className="w-[calc(100%_-_250px)]">
             <div className="w-full pt-[22px]">
-              {["", "", "", ""].map((element, index) => {
+              {["", "", "", "", ""].map((element, index) => {
                 return (
                   <div
                     className="flex flex-col w-full max-w-[900px]  py-8 border-b border-grayCard dark:border-b-brandLightOpacity10 "
