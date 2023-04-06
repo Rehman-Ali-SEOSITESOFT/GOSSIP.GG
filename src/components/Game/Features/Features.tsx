@@ -65,30 +65,17 @@ const Features = () => {
                       </div>
                       <div className="second_half flex ">
                         <div className="item-iamge-description  flex flex-col justify-between	">
-                          <h2 className="montserratfont text-2xl	 leading-7 font-bold	 text-brandDark2 dark:text-brandLightOpacity100">
-                            Bayes Esports appoints York Scheunemann as COO of
-                            their company
+                          <h2 className="pt-[26px] pr-[30px]  montserratfont text-2xl	 leading-7 font-bold	 text-brandDark2 dark:text-brandLightOpacity100">
+                            The Last of Us Part II May Just be One of the Most
+                            Unconventional Stories Ever Told in Gaming
                           </h2>
-                          <small className="py-4	">
-                            <a
-                              href="#"
-                              className="underline text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2	"
-                            >
-                              John D
-                            </a>
-                            <span className="border-l border-l-brandDark2 pl-2 ml-2 border-brandDark2   dark:border-l-brandLightOpacity100 text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal">
-                              Jan 30th, 2023, 18:08
-                            </span>
-                            <span className="border-l border-l-brandDark2 pl-2 ml-2 border-brandDark2   dark:border-l-brandLightOpacity100  text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal">
-                              5 min read
-                            </span>
-                          </small>
-                          <p className="robotoslub text-base leading-7 tracking-[0.03em] dark:text-brandLightOpacity90 text-textColor opacity-90	font-normal pb-1">
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the
-                            industry&#39;s standard dummy text ever since the
-                            1500s, when an unknown printer took a galley of type
-                            and scrambled it to make a type...
+
+                          <p className="mt-[12px] pb-[18px] pr-[30px] robotoslub text-base leading-7 tracking-[0.03em] dark:text-brandLightOpacity90 text-textColor opacity-90	font-normal pb-1">
+                            "The Last of Us Part II may just be the most
+                            defining moment for storytelling in videogames. The
+                            game accomplishes a rare feat in storytelling by
+                            taking away one of the medium's key aspects,
+                            agency."
                           </p>
                           <div className="flex shared--btns items-center h-[35px]">
                             <div className="flex py-4 montserratfont mr-[126px]">

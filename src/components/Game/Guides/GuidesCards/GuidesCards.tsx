@@ -4,21 +4,40 @@ import image1 from "../../../../assets/select/image-react-1.png"
 import image2 from "../../../../assets/select/image-react-2.png"
 import image3 from "../../../../assets/select/image-react-3.png"
 import image4 from "../../../../assets/select/image-react-4.png"
-import bookmark from "../../../../assets/gaming/bookmark.png"
+import image5 from "../../../../assets/gaming-guides-feature/image5.png"
+import image6 from "../../../../assets/gaming-guides-feature/image6.png"
+import image7 from "../../../../assets/gaming-guides-feature/image7.png"
+import image8 from "../../../../assets/gaming-guides-feature/image8.png"
+import image9 from "../../../../assets/gaming-guides-feature/image9.png"
+import image10 from "../../../../assets/gaming-guides-feature/image10.png"
+import image11 from "../../../../assets/gaming-guides-feature/image11.png"
 
 const GuidesCards = () => {
-  const [list, setList] = useState<any[]>([image1, image2, image3, image4])
+  const [list, setList] = useState<any[]>([
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image11,
+    image8,
+    image9,
+    image10,
+    image11,
+  ])
   return (
     <>
-      <section className="guides_cards_inner_section">
+      <section className="guides_cards_inner_section ">
         <div className="flex mw-md:hidden  flex-wrap justify-between">
           {list.map((element, index) => {
             return (
               <div
-                className="w-[23.5%] mw-lg:w-[48%] mw-sm3:w-full"
+                className="w-[30%] mw-lg:w-[46%] mw-sm3:w-full pt-[48px]"
                 key={index}
               >
-                <div className="img-wrapper h-[230px] mw-lg:h-[200px] mw-sm:h-[180px] mw-sm3:h-[150px] rounded">
+                <div className="img-wrapper h-[230px] mw-lg:h-[295px] mw-sm:h-[180px] mw-sm3:h-[150px] rounded">
                   <Image
                     src={element}
                     alt="Demo"
