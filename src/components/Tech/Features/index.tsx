@@ -17,11 +17,11 @@ const FeaturesTech = () => {
       <div className="2xl:container">
         <div className="flex">
           <div className="w-[calc(100%_-_250px)]">
-            <div className="w-full">
+            <div className="w-full pt-[22px]">
               {["", "", "", ""].map((element, index) => {
                 return (
                   <div
-                    className="flex flex-col w-full max-w-[900px] "
+                    className="flex flex-col w-full max-w-[900px]  py-8 border-b border-grayCard dark:border-b-brandLightOpacity10 "
                     key={index}
                   >
                     <div className="top flex">
