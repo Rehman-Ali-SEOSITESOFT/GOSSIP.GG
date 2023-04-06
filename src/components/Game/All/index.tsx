@@ -15,13 +15,13 @@ const index = () => {
         </div>
         <div className="latest_news">
           <LatestNews />
-          <div className="global-section-width">
+          {/* <div className="global-section-width">
             <div className="2xl:container">
               <div className="view_latest_news pb-0 pt-[16px]">
                 <ViewMore />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="latest_news">
           <div className="global-section-width">
