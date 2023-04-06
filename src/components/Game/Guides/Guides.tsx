@@ -1,6 +1,6 @@
 import Filter from "@/components/Filter/Filter"
 import React from "react"
-import GuidesCards from "./GuidesCards/Guidescards"
+import GuidesCards from "./GuidesCards/GuidesCards"
 
 const Guides = () => {
   return (

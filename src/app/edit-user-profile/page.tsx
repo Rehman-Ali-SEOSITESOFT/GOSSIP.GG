@@ -4,9 +4,15 @@ import React, { useState } from "react";
 import notconnect from "../../assets/empty-user-proilfe/noun-connection.png";
 import nounlowfuel from "../../assets/empty-user-proilfe/noun-low-fuel.png";
 import EmptyProfileDetail from "@/components/Empty-profile/EditProfie";
+import ChoicePreferenceTopicModel from "@/components/Modals/ChoicePreferenceTopicsModel";
 
 const Page = () => {
-  const [openTab, setOpenTab] = useState(1);
+  const [openTab, setOpenTab] = useState<number | null>(1);
+  const [open, setOpen] = useState<boolean | null>(false);
+
+  const onClickOpenModal = () => {
+    setOpen(!open);
+  };
 
   return (
     <section className="user-profile">
@@ -70,9 +76,13 @@ const Page = () => {
                     are following.
                   </p>
                   <h5 className="text-brandDark2 dark:text-brandLightOpacity100 font-semibold test-base leading-5  montserratfont py-12 pb-28">
-                    Get started by{" "}
-                    <a href="#" className="underline underline-offset-4	">
-                      adding your preferences.
+                    Get started by
+                    <a
+                      href="#"
+                      onClick={() => onClickOpenModal()}
+                      className="underline underline-offset-4	"
+                    >
+                      &nbsp;adding your preferences.
                     </a>
                   </h5>
                   <Image
@@ -86,9 +96,9 @@ const Page = () => {
                 <div className="for-saved-section text-center ">
                   <h5 className="text-brandDark2 dark:text-brandLightOpacity100 font-semibold test-base leading-5  montserratfont pt-12	pb-7 ">
                     <a href="#" className="underline underline-offset-4 ">
-                      Continue reading
-                    </a>{" "}
-                    to save articles you like.{" "}
+                      Continue reading&nbsp;
+                    </a>
+                    to save articles you like.
                   </h5>
                   <Image
                     src={nounlowfuel}
@@ -101,6 +111,10 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <ChoicePreferenceTopicModel
+        open={open}
+        onClickOpenModal={onClickOpenModal}
+      />
     </section>
   );
 };

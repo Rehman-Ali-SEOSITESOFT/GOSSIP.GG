@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useRef, useState } from "react"
 import { Dialog, Transition } from "@headlessui/react"
 import styles from "./choicestyle.module.css"
-const ChoiceTopicModel = (props: any) => {
+const ChoicePreferenceTopicModel = (props: any) => {
   const cancelButtonRef = useRef(null)
 
   const [items, setItems] = useState<string[]>([
@@ -127,9 +127,14 @@ const ChoiceTopicModel = (props: any) => {
               >
                 <div className="choiceModelMain">
                   <div className="choiceheader pb-8 flex justify-between">
-                    <div className="icon flex bg-arrowicon  dark:bg-brandLightOpacity10 justify-center items-center w-[40px] h-[40px] rounded-3xl cursor-pointer	">
-                      <i className="text-xl fa-solid fa-angle-left"></i>
-                    </div>
+                  <div className="titlesection pl-[25px] pt-[15px]">
+                    <h3 className="font-bold montserratfont text-2xl leading-7 text-brandDark2	dark:text-brandLightOpacity100 pb-3.5	mw-sm:text-xl	">
+                      Choose topics to follow
+                    </h3>
+                    <p className="montserratfont text-brandDark2 dark:text-brandLightOpacity70 text-base	leading-5">
+                      You can always change these later.
+                    </p>
+                  </div>
                     <div
                       className="icon flex  bg-arrowicon dark:bg-brandLightOpacity10  justify-center items-center w-[40px] h-[40px] rounded-3xl cursor-pointer"
                       onClick={() => props.onClickOpenModal()}
@@ -137,16 +142,9 @@ const ChoiceTopicModel = (props: any) => {
                       <i className="text-xl fa-solid fa-xmark"></i>
                     </div>
                   </div>
-                  <div className="titlesection text-center">
-                    <h3 className="font-bold montserratfont text-2xl leading-7 text-brandDark2	dark:text-brandLightOpacity100 pb-3.5	mw-sm:text-xl	">
-                      Choose topics to follow.
-                    </h3>
-                    <p className="montserratfont text-brandDark2 dark:text-brandLightOpacity70 text-base	leading-5">
-                      You can always change these later.
-                    </p>
-                  </div>
+                  
                   <div
-                    className={`${styles.selecttopic} selecttopic p-4 pb-0  rounded border dark:border-brandLightOpacity10 bg-gradient-choicebg my-5 `}
+                    className={`${styles.selecttopic} selecttopic p-4 pb-0  rounded border dark:border-brandLightOpacity10  bg-gradient-choicebg my-5 `}
                   >
                     <div className="slectopitons overflow-scroll overflow-x-hidden scrollbar-thin scrollbar-thumb-choosebox	dark:scrollbar-thumb-custom2 dark:scrollbar-track-custom rounded h-[450px] flex flex-wrap  ">
                       {items.map((e, i) => {
@@ -190,4 +188,4 @@ const ChoiceTopicModel = (props: any) => {
   )
 }
 
-export default ChoiceTopicModel
+export default ChoicePreferenceTopicModel;

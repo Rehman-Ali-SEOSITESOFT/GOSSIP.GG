@@ -18,15 +18,15 @@ const AuthorEditProfile = () => {
   return (
     <>
       <div className={` banner_image  relative h-[190px]`}>
-        {theme === "light" ? (
+        {theme === "dark" ? (
           <Image
-            src={whitebanner}
+            src={bannerimg}
             className="banner w-full h-full object-cover  "
             alt="banner "
           />
         ) : (
           <Image
-            src={bannerimg}
+            src={whitebanner}
             className="banner w-full h-full object-cover  "
             alt="banner "
           />

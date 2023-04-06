@@ -21,18 +21,18 @@ const EmptyProfileDetail = () => {
   return (
     <>
       <div className={` banner_image  relative h-[190px]`}>
-        {theme === "light" ? (
+        {theme === "dark" ? (
           <Image
-            src={whitebanner}
-            className="banner w-full h-full object-cover  "
-            alt="banner "
-          />
+          src={bannerimg}
+          className="banner w-full h-full object-cover  "
+          alt="banner "
+        />
         ) : (
           <Image
-            src={bannerimg}
-            className="banner w-full h-full object-cover  "
-            alt="banner "
-          />
+          src={whitebanner}
+          className="banner w-full h-full object-cover  "
+          alt="banner "
+        />
         )}
         <div
           onClick={() => onClickOpenModal()}
