@@ -1,95 +1,61 @@
-import React, { Fragment, useEffect, useRef, useState } from "react"
-import { Dialog, Transition } from "@headlessui/react"
-import styles from "./choicestyle.module.css"
+import React, { Fragment, useEffect, useRef, useState } from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import styles from "./choicestyle.module.css";
 const ChoicePreferenceTopicModel = (props: any) => {
-  const cancelButtonRef = useRef(null)
-
-  const [items, setItems] = useState<string[]>([
-    "Gaming",
-    "Valorant",
-    "OTC",
-    "LOL",
-    "Floo Flames",
-    "Team Fury",
-    "Graphic card",
-    "Nvidia",
-    "Gaming",
-    "Valorant",
-    "OTC",
-    "LOL",
-    "Floo Flames",
-    "Team Fury",
-    "Graphic card",
-    "Nvidia",
-    "Gaming",
-    "Valorant",
-    "OTC",
-    "LOL",
-    "Floo Flames",
-    "Team Fury",
-    "Graphic card",
-    "Nvidia",
-    "Gaming",
-    "Valorant",
-    "OTC",
-    "LOL",
-    "Floo Flames",
-    "Team Fury",
-    "Graphic card",
-    "Nvidia",
-    "Gaming",
-    "Valorant",
-    "OTC",
-    "LOL",
-    "Floo Flames",
-    "Team Fury",
-    "Graphic card",
-    "Nvidia",
-    "Gaming",
-    "Valorant",
-    "OTC",
-    "LOL",
-    "Floo Flames",
-    "Team Fury",
-    "Graphic card",
-    "Nvidia",
-    "Gaming",
-    "Valorant",
-    "OTC",
-    "LOL",
-    "Floo Flames",
-    "Team Fury",
-    "Graphic card",
-    "Nvidia",
-    "Gaming",
-    "Valorant",
-    "OTC",
-    "LOL",
-    "Floo Flames",
-    "Team Fury",
-    "Graphic card",
-    "Nvidia",
-    "Gaming",
-    "Valorant",
-    "OTC",
-    "LOL",
-    "Floo Flames",
-    "Team Fury",
-    "Graphic card",
-    "Nvidia",
-  ])
-
-  let [addclass, setAdClass] = useState<number | null>(null)
-  let [text, setTest] = useState<number | null>(null)
-  const hanldeCheck = (event: any, id: number) => {
-    setTest(id)
-    setAdClass(id)
+  const cancelButtonRef = useRef(null);
+  interface infoList {
+    id: number;
+    name: string;
   }
 
-  const onClickDone = () => {
-    localStorage.setItem("isLogin", JSON.stringify(true))
-    props.onClickOpenModal()
-  }
+  const item: infoList[] = [
+    {
+      id: 1,
+      name: 'Feature',
+    },
+    {
+      id: 2,
+      name: 'News',
+    },
+    {
+      id: 3,
+      name: 'Hogwarts',
+    },
+    {
+      id: 4,
+      name: 'Xbox',
+    },
+    {
+      id: 5,
+      name: 'PC',
+    },
+    {
+      id: 6,
+      name: 'Mobile',
+    },
+    {
+      id: 7,
+      name: 'Floo Flames',
+    },
+    {
+      id: 8,
+      name: 'Flame Thrower',
+    },
+    {
+      id: 9,
+      name: 'Playsation',
+    },
+    {
+      id: 10,
+      name: 'PubG',
+    },
+    {
+      id: 11,
+      name: 'Guides',
+    },
+  ]
+  const [listItems, setListItems] = useState(item);
+  
 
   return (
     <Transition.Root show={props.open} as={Fragment}>
@@ -127,14 +93,14 @@ const ChoicePreferenceTopicModel = (props: any) => {
               >
                 <div className="choiceModelMain">
                   <div className="choiceheader pb-8 flex justify-between">
-                  <div className="titlesection pl-[25px] pt-[15px]">
-                    <h3 className="font-bold montserratfont text-2xl leading-7 text-brandDark2	dark:text-brandLightOpacity100 pb-3.5	mw-sm:text-xl	">
-                      Choose topics to follow
-                    </h3>
-                    <p className="montserratfont text-brandDark2 dark:text-brandLightOpacity70 text-base	leading-5">
-                      You can always change these later.
-                    </p>
-                  </div>
+                    <div className="titlesection pl-[25px] pt-[15px]">
+                      <h3 className="font-bold montserratfont text-2xl leading-7 text-brandDark2	dark:text-brandLightOpacity100 pb-3.5	mw-sm:text-xl	">
+                        Choose topics to follow
+                      </h3>
+                      <p className="montserratfont text-brandDark2 dark:text-brandLightOpacity70 text-base	leading-5">
+                        You can always change these later.
+                      </p>
+                    </div>
                     <div
                       className="icon flex  bg-arrowicon dark:bg-brandLightOpacity10  justify-center items-center w-[40px] h-[40px] rounded-3xl cursor-pointer"
                       onClick={() => props.onClickOpenModal()}
@@ -142,41 +108,384 @@ const ChoicePreferenceTopicModel = (props: any) => {
                       <i className="text-xl fa-solid fa-xmark"></i>
                     </div>
                   </div>
-                  
+
                   <div
                     className={`${styles.selecttopic} selecttopic p-4 pb-0  rounded border dark:border-brandLightOpacity10  bg-gradient-choicebg my-5 `}
                   >
                     <div className="slectopitons overflow-scroll overflow-x-hidden scrollbar-thin scrollbar-thumb-choosebox	dark:scrollbar-thumb-custom2 dark:scrollbar-track-custom rounded h-[450px] flex flex-wrap  ">
-                      {items.map((e, i) => {
-                        return (
-                          <div
-                            className={`box py-4 flex justify-center items-center w-[120px] h-[60px] mw-sm:w-[30%] mw-sm3:w-[45%]    text-center mr-3 mw-sm:mr-2 mw-sm:mb-2 	mb-3	montserratfont  font-medium leading-4	rounded hover:font-semibold  hover:text-brandDark2 dark:hover:text-brand hover:border hover:text-base hover:bg-white dark:hover:bg-brandDark2 hover:border-brandDark2 dark:hover:border-brand cursor-pointer ${
-                              addclass === i
-                                ? "active font-semibold text-brandDark2  dark:text-brand border text-base bg-white dark:bg-brandDark2 border-brandDark2 dark:border-brand "
-                                : " text-brandDark2 dark:text-brandLightOpacity70  bg-choosebox dark:bg-brandLightOpacity10 text-xs"
-                            } `}
-                            key={i}
-                            onClick={(e) => hanldeCheck(e, i)}
-                          >
-                            {e}
+                      <div className="pr-4   min-h-sceen w-[100%]">
+                        <div className="grid  max-w-xl mx-auto">
+                          <div className="bg-brandLightOpacity5 rounded min-h-fit mb-4 ">
+                            <details className="group">
+                              <summary className="group-open:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none">
+                                <div className="flex ">
+                                  <span className="pl-6 pr-[5px] text-base montserratfont font-semibold text-brandLightOpacity100">
+                                    Esports
+                                  </span>
+                                  <span className="transition group-open:rotate-180">
+                                    <svg
+                                      fill="none"
+                                      height="24"
+                                      shape-rendering="geometricPrecision"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="1.5"
+                                      viewBox="0 0 24 24"
+                                      width="24"
+                                    >
+                                      <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                  </span>
+                                </div>
+                                <div className="h-[32px] w-[91px] rounded-[20px] bg-brandLightOpacity10 mr-6 flex justify-center items-center">
+                                  <p className="font-medium montserratfont text-xs text-brandLightOpacity100">
+                                    Follow All
+                                  </p>
+                                </div>
+                              </summary>
+                              <div className="group-open:animate-fadeIn bg-brandDark2 ">
+                                <div className="flex flex-wrap max-w-[470px]  ml-4">
+                                 {listItems.map((item, index) => 
+                                  <div
+                                  key={index}
+                                  className="min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center    rounded bg-brandLightOpacity10"
+                                >
+                                  <p className=" text-xs  text-brandDark2 dark:text-brandLightOpacity70 montserratfont font-medium">
+                                    {item.name} 
+                                  </p>
+                                </div>
+                                 )}
+                                 
+                                </div>
+                              </div>
+                            </details>
                           </div>
-                        )
-                      })}
+                          <div className="bg-brandLightOpacity5 rounded min-h-fit mb-4 ">
+                            <details className="group">
+                              <summary className="group-open:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none">
+                                <div className="flex ">
+                                  <span className="pl-6 pr-[5px] text-base montserratfont font-semibold text-brandLightOpacity100">
+                                    Gaming
+                                  </span>
+                                  <span className="transition group-open:rotate-180">
+                                    <svg
+                                      fill="none"
+                                      height="24"
+                                      shape-rendering="geometricPrecision"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="1.5"
+                                      viewBox="0 0 24 24"
+                                      width="24"
+                                    >
+                                      <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                  </span>
+                                </div>
+                                <div className="h-[32px] w-[91px] rounded-[20px] bg-brandLightOpacity10 mr-6 flex justify-center items-center">
+                                  <p className="font-medium montserratfont text-xs text-brandLightOpacity100">
+                                    Follow All
+                                  </p>
+                                </div>
+                              </summary>
+                              <div className="group-open:animate-fadeIn bg-brandDark2 ">
+                                <div className="flex flex-wrap max-w-[470px]  ml-4">
+                                 {listItems.map((item, index) => 
+                                  <div
+                                  key={index}
+                                  className="min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center    rounded bg-brandLightOpacity10"
+                                >
+                                  <p className=" text-xs  text-brandDark2 dark:text-brandLightOpacity70 montserratfont font-medium">
+                                    {item.name} 
+                                  </p>
+                                </div>
+                                 )}
+                                 
+                                </div>
+                              </div>
+                            </details>
+                          </div>
+                          <div className="bg-brandLightOpacity5 rounded min-h-fit mb-4">
+                            <details className="group">
+                              <summary className="group-open:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none">
+                                <div className="flex ">
+                                  <span className="pl-6 pr-[5px] text-base montserratfont font-semibold text-brandLightOpacity100">
+                                    Tech
+                                  </span>
+                                  <span className="transition group-open:rotate-180">
+                                    <svg
+                                      fill="none"
+                                      height="24"
+                                      shape-rendering="geometricPrecision"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="1.5"
+                                      viewBox="0 0 24 24"
+                                      width="24"
+                                    >
+                                      <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                  </span>
+                                </div>
+                                <div className="h-[32px] w-[91px] rounded-[20px] bg-brandLightOpacity10 mr-6 flex justify-center items-center">
+                                  <p className="font-medium montserratfont text-xs text-brandLightOpacity100">
+                                    Follow All
+                                  </p>
+                                </div>
+                              </summary>
+                              <div className="group-open:animate-fadeIn bg-brandDark2 ">
+                                <div className="flex flex-wrap max-w-[470px]  ml-4">
+                                 {listItems.map((item, index) => 
+                                  <div
+                                  key={index}
+                                  className="min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center    rounded bg-brandLightOpacity10"
+                                >
+                                  <p className=" text-xs  text-brandDark2 dark:text-brandLightOpacity70 montserratfont font-medium">
+                                    {item.name} 
+                                  </p>
+                                </div>
+                                 )}
+                                 
+                                </div>
+                              </div>
+                            </details>
+                          </div>
+                          <div className="bg-brandLightOpacity5 rounded min-h-fit mb-4">
+                            <details className="group">
+                              <summary className="group-open:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none">
+                                <div className="flex ">
+                                  <span className="pl-6 pr-[5px] text-base montserratfont font-semibold text-brandLightOpacity100">
+                                    Team Fury
+                                  </span>
+                                  <span className="transition group-open:rotate-180">
+                                    <svg
+                                      fill="none"
+                                      height="24"
+                                      shape-rendering="geometricPrecision"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="1.5"
+                                      viewBox="0 0 24 24"
+                                      width="24"
+                                    >
+                                      <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                  </span>
+                                </div>
+                                <div className="h-[32px] w-[91px] rounded-[20px] bg-brandLightOpacity10 mr-6 flex justify-center items-center">
+                                  <p className="font-medium montserratfont text-xs text-brandLightOpacity100">
+                                    Follow All
+                                  </p>
+                                </div>
+                              </summary>
+                              <div className="group-open:animate-fadeIn bg-brandDark2 ">
+                                <div className="flex flex-wrap max-w-[470px]  ml-4">
+                                 {listItems.map((item, index) => 
+                                  <div
+                                  key={index}
+                                  className="min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center    rounded bg-brandLightOpacity10"
+                                >
+                                  <p className=" text-xs  text-brandDark2 dark:text-brandLightOpacity70 montserratfont font-medium">
+                                    {item.name} 
+                                  </p>
+                                </div>
+                                 )}
+                                 
+                                </div>
+                              </div>
+                            </details>
+                          </div>
+                          <div className="bg-brandLightOpacity5 rounded min-h-fit mb-4">
+                            <details className="group">
+                              <summary className="group-open:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none">
+                                <div className="flex ">
+                                  <span className="pl-6 pr-[5px] text-base montserratfont font-semibold text-brandLightOpacity100">
+                                  Xbox
+                                  </span>
+                                  <span className="transition group-open:rotate-180">
+                                    <svg
+                                      fill="none"
+                                      height="24"
+                                      shape-rendering="geometricPrecision"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="1.5"
+                                      viewBox="0 0 24 24"
+                                      width="24"
+                                    >
+                                      <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                  </span>
+                                </div>
+                                <div className="h-[32px] w-[91px] rounded-[20px] bg-brandLightOpacity10 mr-6 flex justify-center items-center">
+                                  <p className="font-medium montserratfont text-xs text-brandLightOpacity100">
+                                    Follow All
+                                  </p>
+                                </div>
+                              </summary>
+                              <div className="group-open:animate-fadeIn bg-brandDark2 ">
+                                <div className="flex flex-wrap max-w-[470px]  ml-4">
+                                 {listItems.map((item, index) => 
+                                  <div
+                                  key={index}
+                                  className="min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center    rounded bg-brandLightOpacity10"
+                                >
+                                  <p className=" text-xs  text-brandDark2 dark:text-brandLightOpacity70 montserratfont font-medium">
+                                    {item.name} 
+                                  </p>
+                                </div>
+                                 )}
+                                 
+                                </div>
+                              </div>
+                            </details>
+                          </div>
+                          <div className="bg-brandLightOpacity5 rounded min-h-fit mb-4">
+                            <details className="group">
+                              <summary className="group-open:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none">
+                                <div className="flex ">
+                                  <span className="pl-6 pr-[5px] text-base montserratfont font-semibold text-brandLightOpacity100">
+                                  Mobile
+                                  </span>
+                                  <span className="transition group-open:rotate-180">
+                                    <svg
+                                      fill="none"
+                                      height="24"
+                                      shape-rendering="geometricPrecision"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="1.5"
+                                      viewBox="0 0 24 24"
+                                      width="24"
+                                    >
+                                      <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                  </span>
+                                </div>
+                                <div className="h-[32px] w-[91px] rounded-[20px] bg-brandLightOpacity10 mr-6 flex justify-center items-center">
+                                  <p className="font-medium montserratfont text-xs text-brandLightOpacity100">
+                                    Follow All
+                                  </p>
+                                </div>
+                              </summary>
+                              <div className="group-open:animate-fadeIn bg-brandDark2 ">
+                                <div className="flex flex-wrap max-w-[470px]  ml-4">
+                                 {listItems.map((item, index) => 
+                                  <div
+                                  key={index}
+                                  className="min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center    rounded bg-brandLightOpacity10"
+                                >
+                                  <p className=" text-xs  text-brandDark2 dark:text-brandLightOpacity70 montserratfont font-medium">
+                                    {item.name} 
+                                  </p>
+                                </div>
+                                 )}
+                                 
+                                </div>
+                              </div>
+                            </details>
+                          </div>
+                          <div className="bg-brandLightOpacity5 rounded min-h-fit mb-4">
+                            <details className="group">
+                              <summary className="group-open:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none">
+                                <div className="flex ">
+                                  <span className="pl-6 pr-[5px] text-base montserratfont font-semibold text-brandLightOpacity100">
+                                  Deals
+                                  </span>
+                                  <span className="transition group-open:rotate-180">
+                                    <svg
+                                      fill="none"
+                                      height="24"
+                                      shape-rendering="geometricPrecision"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="1.5"
+                                      viewBox="0 0 24 24"
+                                      width="24"
+                                    >
+                                      <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                  </span>
+                                </div>
+                                <div className="h-[32px] w-[91px] rounded-[20px] bg-brandLightOpacity10 mr-6 flex justify-center items-center">
+                                  <p className="font-medium montserratfont text-xs text-brandLightOpacity100">
+                                    Follow All
+                                  </p>
+                                </div>
+                              </summary>
+                              <div className="group-open:animate-fadeIn bg-brandDark2 ">
+                                <div className="flex flex-wrap max-w-[470px]  ml-4">
+                                 {listItems.map((item, index) => 
+                                  <div
+                                  key={index}
+                                  className="min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center    rounded bg-brandLightOpacity10"
+                                >
+                                  <p className=" text-xs  text-brandDark2 dark:text-brandLightOpacity70 montserratfont font-medium">
+                                    {item.name} 
+                                  </p>
+                                </div>
+                                 )}
+                                 
+                                </div>
+                              </div>
+                            </details>
+                          </div>
+                            <div className="bg-brandLightOpacity5 rounded min-h-fit mb-4">
+                            <details className="group">
+                              <summary className="group-open:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none">
+                                <div className="flex ">
+                                  <span className="pl-6 pr-[5px] text-base montserratfont font-semibold text-brandLightOpacity100">
+                                    Deals
+                                  </span>
+                                  <span className="transition group-open:rotate-180">
+                                    <svg
+                                      fill="none"
+                                      height="24"
+                                      shape-rendering="geometricPrecision"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="1.5"
+                                      viewBox="0 0 24 24"
+                                      width="24"
+                                    >
+                                      <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                  </span>
+                                </div>
+                                <div className="h-[32px] w-[91px] rounded-[20px] bg-brandLightOpacity10 mr-6 flex justify-center items-center">
+                                  <p className="font-medium montserratfont text-xs text-brandLightOpacity100">
+                                    Follow All
+                                  </p>
+                                </div>
+                              </summary>
+                              <div className="group-open:animate-fadeIn bg-brandDark2 ">
+                                <div className="flex flex-wrap max-w-[470px]  ml-4">
+                                 {listItems.map((item, index) => 
+                                  <div
+                                  key={index}
+                                  className="min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center    rounded bg-brandLightOpacity10"
+                                >
+                                  <p className=" text-xs  text-brandDark2 dark:text-brandLightOpacity70 montserratfont font-medium">
+                                    {item.name} 
+                                  </p>
+                                </div>
+                                 )}
+                                 
+                                </div>
+                              </div>
+                            </details>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className={`${styles.btns} flex flex-col	`}>
-                    <a
-                      onClick={onClickDone}
-                      className={`done_btn w-300px bg-brand inline-block py-3	rounded-3xl	text-center m-auto text-lg	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-bold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold ${
-                        text === null ? "opacity-50	" : "opacity-100	"
-                      }  `}
-                    >
-                      Done
-                    </a>
-
-                    <a className="skip_btn   w-300px border border-brandDark2 dark:border-brandLightOpacity100 inline-block py-3	rounded-3xl	text-center m-auto text-lg leading-6 text-brandDark2 dark:text-brandLightOpacity100 font-bold montserratfont	cursor-pointer   mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base  mw-sm:text-semibold">
-                      Skip
-                    </a>
                   </div>
                 </div>
               </Dialog.Panel>
@@ -185,7 +494,7 @@ const ChoicePreferenceTopicModel = (props: any) => {
         </div>
       </Dialog>
     </Transition.Root>
-  )
-}
+  );
+};
 
 export default ChoicePreferenceTopicModel;
