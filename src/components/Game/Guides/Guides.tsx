@@ -1,10 +1,13 @@
 import Filter from "@/components/Filter/Filter"
 import React from "react"
 import GuidesCards from "./GuidesCards/GuidesCards"
+<<<<<<< HEAD
 import Pagination from "@/components/Pagination"
 import rog1 from "../../../assets/gaming-guides-feature/rog1.png"
 import rog2 from "../../../assets/gaming-guides-feature/rog2.png"
 import Image from "next/image"
+=======
+>>>>>>> 4ed076598d8d2c1e5670db63da01f19b56fde779
 
 const Guides = () => {
   return (

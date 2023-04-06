@@ -13,12 +13,17 @@ import user1 from "../../../assets/user-for-you/user-1.png";
 import user2 from "../../../assets/user-for-you/user-2.png";
 import user3 from "../../../assets/user-for-you/user-3.png";
 import user4 from "../../../assets/user-for-you/user-4.png";
+import user5 from "../../../assets/tech/hero-bg.png";
+import user6 from "../../../assets/tech/ne.png";
+
 import AsideBar from "../Asidebar";
 import Pagination from "@/components/Pagination";
+import FilterTabs from "../Filter";
 const NewsTech = () => {
-  const userDetil = [user1, user2, user3, user4];
+  const userDetil = [user1, user2, user3, user4, user5, user6];
   return (
     <section className="global-section-width">
+      <FilterTabs />
       <div className="2xl:container">
         <div className="flex">
           <div className="w-[calc(100%_-_250px)]">
@@ -33,7 +38,7 @@ const NewsTech = () => {
                       <Image
                         src={elemet}
                         alt="Image"
-                        className="max-w-[270px] w-auto rounded"
+                        className="max-w-[270px] h-full object-cover w-auto rounded"
                       />
                     </div>
                     <div className="item-iamge-description px-6 flex flex-col justify-between	">

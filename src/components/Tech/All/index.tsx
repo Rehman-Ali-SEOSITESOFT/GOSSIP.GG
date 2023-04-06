@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import LatestNews from "@/components/LatestNews/Index";
 import AllHeroSection from "./HeroSection";
 import AllReviews from "./Reviews";
-import TechFecture from "./Feature";
+import TechFeature from "./Feature";
 import AllDeail from "./Deails";
 const MainTech = () => {
   return (
@@ -10,10 +10,10 @@ const MainTech = () => {
       <AllHeroSection />
       <LatestNews />
       <AllReviews />
-      <TechFecture />
+      <TechFeature />
       <AllDeail />
     </section>
-  )
-}
+  );
+};
 
-export default MainTech
+export default MainTech;

@@ -13,6 +13,8 @@ import review10 from "../../../assets/tech/reviewtab/10.png";
 import review11 from "../../../assets/tech/reviewtab/11.png";
 import review12 from "../../../assets/tech/reviewtab/12.png";
 import AsideBar from "../Asidebar";
+import Pagination from "@/components/Pagination";
+import FilterTabs from "../Filter";
 
 const ReviewTech = () => {
   const imagesList = [
@@ -32,6 +34,8 @@ const ReviewTech = () => {
 
   return (
     <section className="global-section-width">
+      <FilterTabs />
+
       <div className="2xl:container">
         <div className="flex">
           <div className="w-[calc(100%_-_250px)]">
@@ -45,7 +49,7 @@ const ReviewTech = () => {
                     <div className="img-wrapper  h-[305px] mw-lg:h-[200px] mw-sm:h-[180px] mw-sm3:h-[150px] rounded relative">
                       <Image src={elem} alt="hello" className="w-full h-full" />
 
-                      <div className="review w-[60px] h-[60px] dark:bg-brand flex justify-center items-center rounded-[50px] absolute top-[8px] right-[8px]">
+                      <div className="review w-[60px] h-[60px] bg-arrowicon dark:bg-brand flex justify-center items-center rounded-[50px] absolute top-[8px] right-[8px]">
                         <span className="montserratfont font-bold text-lg leading-[22px] dark:text-brandLightOpacity100">
                           4/5
                         </span>
@@ -76,6 +80,7 @@ const ReviewTech = () => {
           </div>
           <AsideBar />
         </div>
+        <Pagination />
       </div>
     </section>
   );

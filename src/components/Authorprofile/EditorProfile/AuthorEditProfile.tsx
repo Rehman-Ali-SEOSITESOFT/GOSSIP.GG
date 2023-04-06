@@ -18,15 +18,15 @@ const AuthorEditProfile = () => {
   return (
     <>
       <div className={` banner_image  relative h-[190px]`}>
-        {theme === "light" ? (
+        {theme === "dark" ? (
           <Image
-            src={whitebanner}
+            src={bannerimg}
             className="banner w-full h-full object-cover  "
             alt="banner "
           />
         ) : (
           <Image
-            src={bannerimg}
+            src={whitebanner}
             className="banner w-full h-full object-cover  "
             alt="banner "
           />
@@ -55,7 +55,7 @@ const AuthorEditProfile = () => {
             <h3 className="title text-2xl leading-7	font-bold montserratfont text-brandDark2	 dark:text-brandLightOpacity100 ">
               John D.
             </h3>
-            <h5 className="rank text-lg leading-6 font-bold	tracking-[0.03em] text-brand dark:text-brandLightOpacity100 montserratfont py-2.5">
+            <h5 className="rank text-lg leading-6 font-bold	tracking-[0.03em] text-brand dark:text-brand montserratfont py-2.5">
               Esports Writer{" "}
               <Image src={icon} alt="" className="inline-block pt-[5px]" />
             </h5>

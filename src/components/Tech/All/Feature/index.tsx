@@ -5,7 +5,7 @@ import img1 from "../../../../assets/tech/f-1.png";
 import img2 from "../../../../assets/tech/f-2.png";
 import img3 from "../../../../assets/tech/f-3.png";
 import img4 from "../../../../assets/tech/f-4.png";
-const TechFecture = () => {
+const TechFeature = () => {
   const images = [img1, img2, img3, img4];
   return (
     <>
@@ -99,4 +99,4 @@ const TechFecture = () => {
   );
 };
 
-export default TechFecture;
+export default TechFeature;

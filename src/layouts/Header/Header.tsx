@@ -51,7 +51,7 @@ const Header = () => {
   const router = useRouter()
   const currentPage = usePathname()
 
-  console.log("router=============", currentPage)
+  console.log("theme=============", theme)
   useEffect(() => {
     let user: any = localStorage.getItem("isLogin")
     setIsLoggedIn(user)
@@ -216,7 +216,7 @@ const Header = () => {
                         onClick={onClickOpenModal}
                         className={`${styles.login__btn} ${styles.icons} text-brandLightOpacity100 bg-brandLightOpacity10 hover:bg-brandLightOpacity20`}
                       >
-                        <span> Login</span>
+                        <span>Log In</span>
                       </div>
                     )}
                     {/* <div
@@ -240,10 +240,10 @@ const Header = () => {
                       }
                     >
                       <span>
-                        {theme === "light" ? (
-                          <Image src={moon} alt="moon light icon" />
+                        {theme == "dark" ? (
+                          <Image src={sun} alt="sun icon" />
                         ) : (
-                          <Image src={sun} alt="moon light icon" />
+                          <Image src={moon} alt="moon icon" />
                         )}
                       </span>
                     </div>
