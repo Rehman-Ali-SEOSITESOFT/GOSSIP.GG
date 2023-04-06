@@ -1,24 +1,24 @@
-"use client";
-import MainTech from "@/components/Tech/All";
-import DeailTech from "@/components/Tech/Deals";
-import FeacturesTeach from "@/components/Tech/Feactures";
-import NewsTech from "@/components/Tech/News";
-import ReviewTech from "@/components/Tech/Reviews";
-import Trending from "@/components/Trending/Index";
-import React, { useState } from "react";
+"use client"
+import MainTech from "@/components/Tech/All"
+import DeailTech from "@/components/Tech/Deals"
+import FeacturesTeach from "@/components/Tech/Feactures"
+import NewsTech from "@/components/Tech/News"
+import ReviewTech from "@/components/Tech/Reviews"
+import Trending from "@/components/Trending/Index"
+import React, { useState } from "react"
 
 const Page = () => {
-  const [openTab, setOpenTab] = useState(0);
+  const [openTab, setOpenTab] = useState(0)
   const menulist = [
     { name: "all", data: <MainTech /> },
     { name: "News", data: <NewsTech /> },
     { name: "reviews", data: <ReviewTech /> },
     { name: "features", data: <FeacturesTeach /> },
     { name: "deals", data: <DeailTech /> },
-  ];
+  ]
   const hanldeOpenTab = (e: number) => {
-    setOpenTab(e);
-  };
+    setOpenTab(e)
+  }
   return (
     <section className="tech-page relative">
       <div className="global-section-width border-b border-grayCard dark:border-brandLightOpacity10 p-0  ">
@@ -32,8 +32,8 @@ const Page = () => {
                       className={
                         "cursor-pointer capitalize montserratfont block  transition-all	duration-75 leading-loose	 " +
                         (openTab === index
-                          ? "scale-[1.1] text-brand font-bold border-b-2 border-brand"
-                          : "text-base font-normal text-brandLightOpacity100")
+                          ? "scale-[1.1] dark:text-brand text-brandDark2 font-bold border-b-2 dark:border-brand border-brandDark2"
+                          : "text-base font-normal dark:text-brandLightOpacity100 text-brandDark2")
                       }
                       onClick={() => hanldeOpenTab(index)}
                       data-toggle="tab"
@@ -43,7 +43,7 @@ const Page = () => {
                       {el.name}
                     </a>
                   </li>
-                );
+                )
               })}
             </ul>
           </div>
@@ -62,10 +62,10 @@ const Page = () => {
               {el.data}
             </div>
           )
-        );
+        )
       })}
     </section>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page
