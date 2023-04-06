@@ -1,13 +1,12 @@
-import React, { useState } from "react"
-import leftside from "../../../../assets/tech/hero-bg.png"
-import book1 from "../../../../assets/tech/1.png"
-import book2 from "../../../../assets/tech/2.png"
-import book3 from "../../../../assets/tech/3.png"
 import Image from "next/image"
-import styles from "./style.module.css"
+import React, { useState } from "react"
+import leftside from "../../../../assets/images/hero/hero-section-left-side.png"
+import book1 from "../../../../assets/images/hero/right-side-01.png"
+import book2 from "../../../../assets/images/hero/right-side-012.png"
+import book3 from "../../../../assets/images/hero/right-side-03.png"
+import styles from "./styles.module.css"
 
-
-const AllHeroSection = () => {
+const HeroSection = () => {
   interface List {
     name: string
     picture: any
@@ -29,23 +28,19 @@ const AllHeroSection = () => {
   return (
     <>
       <div className="global-section-width  ">
-        <div className="2xl:container pt-12">
+        <div className="2xl:container pt-[12px]">
           <div className="flex mw-lg:flex-col">
             <div className="w-7/12 mw-xl:w-1/2 mw-lg:w-full ">
               <div
-                className={`left_side h-[450px] mx-14:h-[400px] mw-sm:h-[350px] mw-sm3:h-[300px] relative rounded	overflow-hidden`}
+                className={`${styles.left_side} h-[450px] mx-14:h-[400px] mw-sm:h-[350px] mw-sm3:h-[300px]`}
               >
                 <Image
                   src={leftside}
-                  className="w-full h-full object-cover rounded	"
+                  className="w-full h-full object-cover"
                   alt="demo"
                 />
-                <div
-                  className={`${styles.overlayallHeo} absolute inset-0 rounded	`}
-                ></div>
-                <h2
-                  className={` montserratfont font-extrabold	text-brandLightOpacity100 text-[22px] leading-7 absolute left-[25px] right-[25px] bottom-[25px]`}
-                >
+                <div className={styles.overlay}></div>
+                <h2 className={`${styles.title} text-brandLightOpacity100`}>
                   JONATHAN Stays Loyal to BGMI, No Plans to Shift to New State
                   Mobile Yet
                 </h2>
@@ -109,4 +104,4 @@ const AllHeroSection = () => {
   )
 }
 
-export default AllHeroSection
+export default HeroSection

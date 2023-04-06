@@ -49,7 +49,7 @@ const Features = () => {
                           className="max-w-[270px] w-auto rounded"
                         />
                         <div className="user_detail ml-[12px]">
-                          <h4 className="font-sec-saprate-18 leading-[22px] font-bold	text-[#E5E5E5]">
+                          <h4 className="font-sec-saprate-18 leading-[22px] font-bold	dark:text-[#E5E5E5]">
                             John D
                           </h4>
                           <h2 className="flex items-center font-sec-saprate-18 leading-[22px] font-bold	 text-[#ED4E50]">
@@ -58,7 +58,7 @@ const Features = () => {
                               <Image src={brandmarker} alt="" />
                             </span>
                           </h2>
-                          <p className="text-sm	leading-[17px] font-normal montserratfont	text-[#E5E5E5]">
+                          <p className="text-sm	leading-[17px] font-normal montserratfont	dark:text-[#E5E5E5]">
                             Jan 30th, 2023, 18:08 | 5 min read
                           </p>
                         </div>
