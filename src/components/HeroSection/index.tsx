@@ -70,7 +70,7 @@ const HeroSection = () => {
                         <h3 className="text-base font-bold  leading-5	 text-brandDark2 montserratfont dark:text-brandLightOpacity100 mw-11:h-[40px] mw-lg:h-auto  ">
                           {elem.name}
                         </h3>
-                        <p className="text-xs text-textColor robotoslub py-2.5 mx-14:py-2 mw-sm:hidden dark:text-brandLightOpacity90 mx-14:h-[70px] mx-14:overflow-hidden ">
+                        <p className="text-xs text-textColor robotoslub py-2.5 mx-14:py-2 mw-sm:hidden dark:text-brandLightOpacity90 mx-14:h-[70px] mx-14:overflow-hidden: ">
                           It is a long established fact that a reader will be
                           distracted by the readable content of a page when...
                         </p>
