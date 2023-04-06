@@ -71,11 +71,11 @@ const Features = () => {
                           </h2>
 
                           <p className="mt-[12px] pb-[18px] pr-[30px] robotoslub text-base leading-7 tracking-[0.03em] dark:text-brandLightOpacity90 text-textColor opacity-90	font-normal pb-1">
-                            "The Last of Us Part II may just be the most
+                            The Last of Us Part II may just be the most
                             defining moment for storytelling in videogames. The
                             game accomplishes a rare feat in storytelling by
                             taking away one of the medium&#39;s key aspects,
-                            agency."
+                            agency.
                           </p>
                           <div className="flex shared--btns items-center h-[35px]">
                             <div className="flex py-4 montserratfont mr-[126px]">
