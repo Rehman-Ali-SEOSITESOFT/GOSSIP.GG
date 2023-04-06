@@ -74,7 +74,7 @@ const Features = () => {
                             "The Last of Us Part II may just be the most
                             defining moment for storytelling in videogames. The
                             game accomplishes a rare feat in storytelling by
-                            taking away one of the medium's key aspects,
+                            taking away one of the medium&#39;s key aspects,
                             agency."
                           </p>
                           <div className="flex shared--btns items-center h-[35px]">
