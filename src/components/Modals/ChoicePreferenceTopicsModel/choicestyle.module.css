@@ -5,3 +5,9 @@
     rgba(49, 49, 49, 0.7) 100%
   );
 }
+
+
+
+.selecttopic_light{
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 92.11%, rgba(49, 49, 49, 0.7) 119.44%);
+}

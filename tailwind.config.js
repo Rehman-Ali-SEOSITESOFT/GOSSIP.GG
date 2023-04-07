@@ -45,6 +45,8 @@ module.exports = {
         userprofilebg: "#2a2627",
         arrowicon: "#e3e2e2",
         choosebox: "#e3e3e3",
+        modalChoose:'#d8d7d8',
+        modalBtn:'#cfcfcf',
         custom: {
           DEFAULT: "#363233",
         },
@@ -53,22 +55,16 @@ module.exports = {
         },
       },
       screens: {
-        "mw-2xl": { max: "1535px" },
-        // => @media (max-width: 1535px) { ... }
-
         "mx-14": { max: "1430px" },
         "mw-xl": { max: "1279px" },
         "mw-12": { max: "1200px" },
         "mw-11": { max: "1100px" },
         // => @media (max-width: 1279px) { ... }
-
         "mw-lg": { max: "1024px" },
         // => @media (max-width: 1023px) { ... }
-
         "mw-md": { max: "767px" },
         // => @media (max-width: 767px) { ... }
         "mw-sm1": { max: "690px" },
-
         "mw-sm": { max: "639px" },
         "mw-sm3": { max: "400px" },
         // => @media (max-width: 639px) { ... }
