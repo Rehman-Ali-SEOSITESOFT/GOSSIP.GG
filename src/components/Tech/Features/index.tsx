@@ -53,16 +53,16 @@ const FeaturesTech = () => {
                     </div>
                     <div className="center flex pt-7">
                       <div className="center-left ">
-                        <h2 className="montserratfont text-2xl leading-7 font-bold text-brandDark2 dark:text-brandLightOpacity100 pt-7 pb-3">
+                        <h2 className="montserratfont text-2xl leading-7 font-bold text-brandDark2 dark:text-brandLightOpacity100  pb-3">
                           The Last of Us Part II May Just be One of the Most
                           Unconventional Stories Ever Told in Gaming
                         </h2>
                         <p className="robotoslub text-base leading-7 tracking-[0.03em] dark:text-brandLightOpacity90 text-textColor opacity-90 font-normal pb-5">
                           Lorem Ipsum is simply dummy text of the printing and
                           typesetting industry. Lorem Ipsum has been the
-                          industry&#39;s standard dummy text ever since the 1500s,
-                          when an unknown printer took a galley of type and
-                          scrambled it to make a type...
+                          industry&#39;s standard dummy text ever since the
+                          1500s, when an unknown printer took a galley of type
+                          and scrambled it to make a type...
                         </p>
                       </div>
                       <div className="center-right pl-9  text-center">
@@ -83,10 +83,10 @@ const FeaturesTech = () => {
                     </div>
                     <div className="bottom flex shared--btns items-center h-[35px]">
                       <div className="flex py-4 montserratfont mr-[260px]">
-                        <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:text-brandLightOpacity70">
+                        <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                           News
                         </div>
-                        <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:text-brandLightOpacity70">
+                        <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                           Esports
                         </div>
                       </div>

@@ -239,7 +239,7 @@ const LatestNews = () => {
             })}
           </div>
         </div>
-        <div className="2xl:container">
+        {/* <div className="2xl:container">
           <div className="flex pt-2">
             <div className="w-full">
               <a
@@ -252,7 +252,7 @@ const LatestNews = () => {
               </a>
             </div>{" "}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
