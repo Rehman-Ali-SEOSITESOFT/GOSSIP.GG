@@ -66,7 +66,7 @@ const Footer = () => {
         {/* Mobile Footer Start */}
         <div className="hidden pt-5  pb-5 mw-lg:block">
           <Image src={MobileLogo} alt="Gossip GG" />
-          <p className={`pt-3 text-brandLightOpacity100  ${style.font_text2} `}>
+          <p className={`pt-3 text-brandLightOpacity100 montserratfont ${style.font_text2} `}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry&#39;s standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -74,15 +74,15 @@ const Footer = () => {
           </p>
           <div className="pt-7 flex flex-row justify-between">
             <div>
-              <ul className={`flex flex-col text-brandLightOpacity100 text-left  ${style.font_text2}   `}>
+              <ul className={`flex flex-col text-brandLightOpacity100 text-left montserratfont  ${style.font_text2}   `}>
                 <li>
-                  <a href="#">About us</a>
+                  <a  href="#">About us</a>
                 </li>
                 <li className="pt-1">
-                  <a href="#">Contact Us</a>
+                  <a  className="montserratfont" href="#">Contact Us</a>
                 </li>
                 <li className="pt-1">
-                  <a href="#">Careers</a>
+                  <a className="montserratfont" href="#">Careers</a>
                 </li>
               </ul>
             </div>
@@ -90,19 +90,19 @@ const Footer = () => {
             <div>
               <ul className={`flex flex-col text-brandLightOpacity100   ${style.font_text2}   text-right`}>
                 <li>
-                  <a href="#">Disclaimer</a>
+                  <a className="montserratfont" href="#">Disclaimer</a>
                 </li>
                 <li className="pt-1">
-                  <a href="#">Privacy Policy</a>
+                  <a  className="montserratfont" href="#">Privacy Policy</a>
                 </li>
                 <li className="pt-1">
-                  <a href="#">Terms of Use</a>
+                  <a className="montserratfont" href="#">Terms of Use</a>
                 </li>
               </ul>
             </div>
           </div>
-          <div className={`flex justify-center items-center pt-7  ${style.font_text2}  `}>
-            <p className="text-brandLightOpacity100">
+          <div className={`flex justify-center items-center pt-7   ${style.font_text2}  `}>
+            <p className="text-brandLightOpacity100 montserratfont ">
               (c) 2023 Gossip.gg - All Rights Reserved
             </p>
           </div>
