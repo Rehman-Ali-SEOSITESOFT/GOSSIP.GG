@@ -115,7 +115,9 @@ const LiveMatch = () => {
   return (
     <section className="live-matches mb-[88px]">
       <div className="global-section-width ">
-        <SectionSaprator title="LIVE MATCHES" />
+        <div className="pt-[88px]">
+          <SectionSaprator title="LIVE MATCHES" />
+        </div>
         <Slider className="live-matches-slider " {...settings}>
           {matchData.map((item, index) => (
             <div
@@ -137,9 +139,7 @@ const LiveMatch = () => {
                 </div>
                 {item.match_status !== "LIVE" ? (
                   <div className="bg-grayCard dark:bg-brandLightOpacity10 opacity-100 h-8 max-w-[25%]  text-[14px]  flex justify-center items-center rounded-sm min-w-fit">
-                    <p
-                      className='text-brandDark2 dark:text-brandLightOpacity100 opacity-70 montserratfont font-medium  text-[14px]  px-2 '
-                    >
+                    <p className="text-brandDark2 dark:text-brandLightOpacity100 opacity-70 montserratfont font-medium  text-[14px]  px-2 ">
                       {item.match_status}
                     </p>
                   </div>
