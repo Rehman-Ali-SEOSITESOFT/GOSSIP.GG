@@ -10,11 +10,11 @@ const Pagination = () => {
         <div className="flex w-full py-[88px]">
           <div className="w-[450px] m-auto">
             <div className="pagination flex justify-between items-center">
-              <div className="back-arrow inline-block bg-grayCard dark:bg-brandLightOpacity10 w-[32px] h-[32px] leading-[32px] flex justify-center items-center rounded-2xl cursor-pointer">
+              <div className="back-arrow inline-block bg-grayCard dark:bg-brandDark1 dark:hover:bg-brandLightOpacity10 w-[32px] h-[32px] leading-[32px] flex justify-center items-center rounded-2xl cursor-pointer">
                 <Image
                   src={arrow}
                   alt="back-arrow"
-                  className="brightness-0	dark:brightness-100	"
+                  className="	 brightness-0	dark:brightness-100	w-[9px]"
                 />
               </div>
               <div className="count-number flex items-center justify-between w-[calc(100%_-_100px)]	">
@@ -52,11 +52,11 @@ const Pagination = () => {
                   10
                 </span>
               </div>
-              <div className="next-arrow inline-block bg-grayCard  dark:bg-brandLightOpacity10  w-[31px] h-[32px] leading-[32px] flex justify-center items-center  rounded-2xl rotate-180	cursor-pointer">
+              <div className="next-arrow inline-block bg-grayCard  dark:bg-brandDark1 dark:hover:bg-brandLightOpacity10 w-[31px] h-[32px] leading-[32px] flex justify-center items-center  rounded-2xl rotate-180	cursor-pointer pr-[2px]">
                 <Image
                   src={arrow}
                   alt="back-arrow"
-                  className="brightness-0	dark:brightness-100	"
+                  className="brightness-0	dark:brightness-100	w-[9px] "
                 />
               </div>
             </div>

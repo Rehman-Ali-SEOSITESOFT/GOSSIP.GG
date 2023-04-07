@@ -1,16 +1,15 @@
-import React, { useState } from "react"
-import leftside from "../../../../assets/tech/hero-bg.png"
-import book1 from "../../../../assets/tech/1.png"
-import book2 from "../../../../assets/tech/2.png"
-import book3 from "../../../../assets/tech/3.png"
-import Image from "next/image"
-import styles from "./style.module.css"
-
-
+import React, { useState } from "react";
+import leftside from "../../../../assets/tech/hero-bg.png";
+import book1 from "../../../../assets/tech/1.png";
+import book2 from "../../../../assets/tech/2.png";
+import book3 from "../../../../assets/tech/3.png";
+import Image from "next/image";
+import styles from "./style.module.css";
+import bookmkark from "../../../../assets/tech/bookmark.png";
 const AllHeroSection = () => {
   interface List {
-    name: string
-    picture: any
+    name: string;
+    picture: any;
   }
   const [item, setItem] = useState<List[]>([
     {
@@ -25,7 +24,7 @@ const AllHeroSection = () => {
       name: "Bayes Esports appoints York Scheunemann as COO",
       picture: book3,
     },
-  ])
+  ]);
   return (
     <>
       <div className="global-section-width  ">
@@ -33,7 +32,7 @@ const AllHeroSection = () => {
           <div className="flex mw-lg:flex-col">
             <div className="w-7/12 mw-xl:w-1/2 mw-lg:w-full ">
               <div
-                className={`left_side h-[450px] mx-14:h-[400px] mw-sm:h-[350px] mw-sm3:h-[300px] relative rounded	overflow-hidden`}
+                className={`left_side h-[450px]  mw-sm:h-[350px] mw-sm3:h-[300px] relative rounded	overflow-hidden`}
               >
                 <Image
                   src={leftside}
@@ -52,7 +51,7 @@ const AllHeroSection = () => {
               </div>
             </div>
             <div className="w-5/12 mw-xl:w-1/2  mw-lg:w-full">
-              <div className="right-side pl-8 mx-14:pl-6 mw-lg:pl-0 mw-lg:py-5 h-[450px] mx-14:h-[400px]  mw-lg:h-auto flex flex-col justify-between">
+              <div className="right-side pl-8 mx-14:pl-6 mw-lg:pl-0 mw-lg:py-5 h-[450px]  mw-lg:h-auto flex flex-col justify-between">
                 {item.map((elem, index) => {
                   return (
                     <div className={` mw-sm:border-l-brand flex `} key={index}>
@@ -73,10 +72,10 @@ const AllHeroSection = () => {
                           distracted by the readable content of a page when...
                         </p> */}
                         <div className="tags flex pt-3.5 pb-3 montserratfont">
-                          <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:text-brandLightOpacity70">
+                          <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                             News
                           </div>
-                          <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:text-brandLightOpacity70">
+                          <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10    hover:text-brandDark2 dark:hover:bg-brandLightOpacity20    dark:hover:text-brandLightOpacity100    dark:text-brandLightOpacity70">
                             Esports
                           </div>
                         </div>
@@ -93,12 +92,16 @@ const AllHeroSection = () => {
                         </small>
                       </div>
                       <div className={"thumnail_wrapper"}>
-                        <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20  hover:bg-grayCardHover cursor-pointer rounded-3xl">
-                          <i className="fa-regular fa-bookmark "></i>{" "}
+                        <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20  hover:bg-borderEditProfile cursor-pointer rounded-3xl">
+                          <Image
+                            src={bookmkark}
+                            className=" brightness-0 dark:brightness-200"
+                            alt="book"
+                          />
                         </div>
                       </div>
                     </div>
-                  )
+                  );
                 })}
               </div>
             </div>
@@ -106,7 +109,7 @@ const AllHeroSection = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default AllHeroSection
+export default AllHeroSection;
