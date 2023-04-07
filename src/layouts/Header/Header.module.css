@@ -15,15 +15,16 @@
 }
 
 .header_container {
-  padding: 24px 65px;
-  background-image: url("../../assets/images/header/background.png");
+  /* padding: 24px 65px; */
   background-size: cover;
+
   margin-top: -1px;
 }
 
 .header__left .logo img {
   max-height: 22px;
-  max-width: fit-content;
+  width: 171px;
+  max-width: 100%;
 }
 
 .header__center ul li {
@@ -67,27 +68,26 @@
   max-width: 100%;
 }
 .serach_btn input {
-  background-color: #2f2a2b;
-  height: 41px;
+  /* height: 48px; */
   outline: none;
   border-radius: 24px;
   padding: 14px 20px;
-  font-family: "Montserrat";
+  /* font-family: "Montserrat"; */
   font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  color: #f1f1f1;
+  /* font-weight: 500; */
+  /* font-size: 16px; */
+  /* line-height: 20px; */
+  /* color: #f1f1f1; */
   cursor: pointer;
 }
-.serach_btn span {
+/* .serach_btn span {
   position: absolute;
   right: 15px;
   top: 12px;
-}
-.serach_btn span img {
+} */
+/* .serach_btn span img {
   width: 17px;
-}
+} */
 
 .header__right .profile_box {
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.5));
@@ -110,7 +110,7 @@
     padding: 0 20px 10px 20px;
   }
   .header_width .header_container {
-    padding: 20px 60px;
+    /* padding: 20px 60px; */
     padding-top: 15px;
     background-position: center;
   }
@@ -168,7 +168,7 @@
   }
 
   .header_width .header_container {
-    padding: 20px 16px;
+    /* padding: 20px 16px; */
 
     background-image: none;
     box-shadow: 0px 4px 8px rgba(237, 78, 80, 0.3);
@@ -292,7 +292,7 @@
 
 @media screen and (max-width: 400px) {
   .header_width .header_container {
-    padding: 15px 15px;
+    /* padding: 15px 15px; */
   }
 
   .header__left .logo img {
@@ -310,7 +310,7 @@
   }
 
   .header__right .login__btn {
-    min-width: 65px;
+    min-width: 72px;
     font-size: 16px;
   }
   .fixed__bottom__header ul li a {

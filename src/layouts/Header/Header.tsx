@@ -1,28 +1,27 @@
-"use client"
+"use client";
 
-import React, { useState, useEffect } from "react"
-import Image from "next/image"
-import logo from "../../assets/images/header/main-logo.png"
-import search from "../../assets/images/header/search.png"
-import moon from "../../assets/images/header/moon.png"
-import sun from "../../assets/images/header/sun.png"
-import close from "../../assets/images/header/close-search.png"
-import { useTheme } from "next-themes"
-import styles from "./Header.module.css"
-import profile from "../../assets/profile/profile-icon.png"
-import LoginModal from "@/components/Modals/LoginModal"
-import EditProfileModal from "@/components/Modals/EditProfileModal"
-import { useRouter, usePathname } from "next/navigation"
-import setting from "../../assets/profile/settings.png"
-import downloadarrow from "../../assets/profile/downarrow.png"
-import Link from "next/link"
-
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import logo from "../../assets/images/header/main-logo.png";
+import search from "../../assets/images/header/search.png";
+import moon from "../../assets/images/header/moon.png";
+import sun from "../../assets/images/header/sun.png";
+import close from "../../assets/images/header/close-search.png";
+import { useTheme } from "next-themes";
+import styles from "./Header.module.css";
+import profile from "../../assets/profile/profile-icon.png";
+import LoginModal from "@/components/Modals/LoginModal";
+import EditProfileModal from "@/components/Modals/EditProfileModal";
+import { useRouter, usePathname } from "next/navigation";
+import setting from "../../assets/profile/settings.png";
+import downloadarrow from "../../assets/profile/downarrow.png";
+import Link from "next/link";
 const Header = () => {
   interface MenuList {
-    name: string
-    link: string
+    name: string;
+    link: string;
   }
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme();
   const [menu, setMenu] = useState<MenuList[]>([
     {
       name: "Home",
@@ -44,48 +43,57 @@ const Header = () => {
       name: "tech",
       link: "/tech",
     },
-  ])
-  const [searchOpen, setSearchOpen] = useState<Boolean>(true)
-  const [searchText, setSearchText] = useState<string>("")
-  const [isLoggedIn, setIsLoggedIn] = useState<Boolean>(false)
-  const router = useRouter()
-  const currentPage = usePathname()
+  ]);
+  const [searchOpen, setSearchOpen] = useState<Boolean>(true);
+  const [searchText, setSearchText] = useState<string>("");
+  const [isLoggedIn, setIsLoggedIn] = useState<Boolean>(false);
+  const router = useRouter();
+  const currentPage = usePathname();
 
-  console.log("theme=============", theme)
   useEffect(() => {
-    let user: any = localStorage.getItem("isLogin")
-    setIsLoggedIn(user)
-    // router.refresh();
-  })
+    let user: any = localStorage.getItem("isLogin");
+    setIsLoggedIn(user);
+    setBgClassChange(theme === "dark" ? "header_dark_img" : "header_light_img");
+  }, []);
 
   const hanldeClose = () => {
-    setSearchOpen(!searchOpen)
-  }
+    setSearchOpen(!searchOpen);
+  };
   const hanldeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchText(e.target.value)
-  }
+    setSearchText(e.target.value);
+  };
   const hanldeSearch = () => {
-    console.log(searchText)
-  }
+    console.log(searchText);
+  };
 
-  const [open, setOpen] = useState(false)
-  const [profileShow, setProfileShow] = useState<Boolean>(true)
+  const [open, setOpen] = useState(false);
+  const [profileShow, setProfileShow] = useState<Boolean>(true);
   const onClickOpenModal = () => {
-    setOpen(!open)
-  }
+    setOpen(!open);
+  };
 
   const onClicklogout = () => {
-    localStorage.removeItem("isLogin")
-    router.refresh()
-  }
+    localStorage.removeItem("isLogin");
+    router.refresh();
+  };
+
+  const [bgClassChange, setBgClassChange] = useState<any>(
+    theme === "dark" ? "header_light_img" : "header_dark_img"
+  );
+  const hanldeChangeTheme = () => {
+    setBgClassChange(theme === "dark" ? "header_light_img" : "header_dark_img");
+    // setTimeout(() => {
+    setTheme(theme === "dark" ? "light" : "dark");
+    // }, 0);
+  };
 
   return (
     <header className={`${styles.main_header} relative z-[2]`}>
       <div className={`${styles.header_width} `}>
         <div
-          className={`2xl:container header_container ${styles.header_container}  mw-lg:bg-brandDark3 `}
+          className={`2xl:container header_container ${styles.header_container} ${bgClassChange}   mw-lg:bg-brandDark3 px-[65px] h-[90px]  mx-14:h-full mx-14:px-[60px] mx-14:py-[20px]  mw-lg:px-[16px] mw-sm3:px-[15px] mw-sm3:py-[15px]`}
         >
-          <div className="flex  flex-wrap items-center justify-between">
+          <div className="flex  h-full flex-wrap items-center justify-between">
             <div className={`xl:w-1/4 lg:w-1/5  w-3/6  ${styles.header__left}`}>
               <div className={styles.logo}>
                 <Image src={logo} alt="Gossip GG" />
@@ -109,7 +117,7 @@ const Header = () => {
                             {elme.name}
                           </Link>
                         </li>
-                      )
+                      );
                     })}
                   </ul>
                 </div>
@@ -125,12 +133,29 @@ const Header = () => {
                 <div className={`${styles.serach_btn} relative `}>
                   <input
                     value={searchText}
-                    className="w-full border-none "
+                    className="w-full border-none bg-brandLightOpacity10 placeholder:text-brandLightOpacity70 montserratfont font-medium test-base leading-5"
                     onChange={hanldeChange}
                     placeholder="Search"
                   />
-                  <span onClick={hanldeSearch}>
-                    <Image src={search} alt="search " />
+                  <span
+                    onClick={hanldeSearch}
+                    className="absolute top-[13px] right-7 "
+                  >
+                    <Image
+                      src={search}
+                      alt="search "
+                      className="w-[22px] h-[22px]"
+                    />
+                  </span>
+                  <span
+                    onClick={hanldeSearch}
+                    className="absolute h-8 flex items-center top-[8px] right-[60px] pr-4	border-r border-[#adacac]	 "
+                  >
+                    <Image
+                      src={close}
+                      alt="search "
+                      className="w-[22px] h-[22px]"
+                    />
                   </span>
                 </div>
               </div>
@@ -235,9 +260,7 @@ const Header = () => {
 
                     <div
                       className={`${styles.theme__btn} ${styles.icons} bg-brandLightOpacity10 hover:bg-brandLightOpacity20`}
-                      onClick={() =>
-                        setTheme(theme === "dark" ? "light" : "dark")
-                      }
+                      onClick={hanldeChangeTheme}
                     >
                       <span>
                         {theme == "dark" ? (
@@ -250,7 +273,7 @@ const Header = () => {
                   </>
                 ) : (
                   <div
-                    className={`${styles.close__btn} ${styles.icons}`}
+                    className={`${styles.close__btn} ${styles.icons} bg-brandLightOpacity10 hover:bg-brandLightOpacity20`}
                     onClick={hanldeClose}
                   >
                     <span>
@@ -280,7 +303,7 @@ const Header = () => {
                         {elme.name}
                       </a>
                     </li>
-                  )
+                  );
                 })}
               </ul>
             </div>
@@ -303,7 +326,7 @@ const Header = () => {
         welcomGossipModel={welcomGossipModel}
       /> */}
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
