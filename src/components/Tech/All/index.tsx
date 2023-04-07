@@ -8,7 +8,25 @@ const MainTech = () => {
   return (
     <section className="MainTech mt-[-5px] ">
       <AllHeroSection />
-      <LatestNews />
+      <div className="latest-news">
+        <LatestNews />
+        <div className="global-section-width">
+          <div className="2xl:container">
+            <div className="flex pt-2">
+              <div className="w-full">
+                <a
+                  href="#"
+                  className="text-textColorGray dark:text-brandLightOpacity70 montserratfont font-base  leading-5"
+                >
+                  View more <span>&gt;</span>
+                  <span>&gt;</span>
+                  <span>&gt;</span>
+                </a>
+              </div>{" "}
+            </div>
+          </div>{" "}
+        </div>
+      </div>
       <AllReviews />
       <TechFeature />
       <AllDeail />
