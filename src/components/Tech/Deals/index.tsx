@@ -77,7 +77,9 @@ const DeailTech = () => {
       </div>
       <FilterTabs />
       <div className="2xl:container">
-        <SectionSaprator title="ONGOING Deals" />
+        <div className="pt-16">
+          <SectionSaprator title="ONGOING Deals" />
+        </div>
         <div className="flex flex-wrap justify-between">
           {onGoing.slice(0, onGoingLimit).map((elem, index) => {
             return (
@@ -100,7 +102,11 @@ const DeailTech = () => {
                   </h4>
                   <div>
                     <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20    hover:bg-grayCardHover cursor-pointer rounded-3xl">
-                      <Image src={bookmark} alt="bookmkard" className=" brightness-0 dark:brightness-200"/>
+                      <Image
+                        src={bookmark}
+                        alt="bookmkard"
+                        className=" brightness-0 dark:brightness-200"
+                      />
                     </div>
                   </div>
                 </div>
