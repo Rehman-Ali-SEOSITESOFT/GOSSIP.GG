@@ -16,18 +16,21 @@ const AllDeail = () => {
           <SectionSaprator title="Deals" />
         </div>
         <div className="2xl:container pb-12">
-          <div className="flex justify-between">
+          <div className="w-full flex justify-between flex-wrap ">
             {imagesList.map((elem, index) => {
               return (
                 <div
+                  // className={
+                  //   index === 3
+                  //     ? "mr-[0] "
+                  //     : "mr-[25px] " + " w-[300px] mw-lg:w-[48%] mw-sm3:w-full "
+                  // }
                   className={
-                    index === 3
-                      ? "mr-[0] "
-                      : "mr-[25px] " + " w-[300px] mw-lg:w-[48%] mw-sm3:w-full "
+                    "w-[300px]  max-w-[24%] mw-xl:w-[280px] mw-xl:max-w-[23.5%] mw-lg:w-[48%] mw-lg:max-w-[48%] mw-sm3:w-full "
                   }
                   key={index}
                 >
-                  <div className="img-wrapper w-[300px]  h-[236px] mw-lg:h-[200px] mw-sm:h-[180px] mw-sm3:h-[150px] rounded relative">
+                  <div className="img-wrapper w-full  h-[236px]  mw-xl:h-[210px] mw-lg:h-[200px] mw-sm:h-[180px] mw-sm3:h-[150px] rounded relative">
                     <Image src={elem} alt="hello" className="w-full h-full" />
 
                     {index === 0 ? (

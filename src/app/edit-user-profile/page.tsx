@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import notconnect from "../../assets/empty-user-proilfe/noun-connection.png";
 import nounlowfuel from "../../assets/empty-user-proilfe/noun-low-fuel.png";
-import EmptyProfileDetail from "@/components/Empty-profile/EditProfie";
+import EmptyProfileDetail from "@/components/EmptyProfile/EditProfie";
 import ChoicePreferenceTopicModel from "@/components/Modals/ChoicePreferenceTopicsModel";
 
 const Page = () => {
