@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react"
 
 const EsportsEvents = () => {
-  return (
-    <div>EsportsEvents</div>
-  )
+  return <div>EsportsEvents</div>
 }
 
 export default EsportsEvents

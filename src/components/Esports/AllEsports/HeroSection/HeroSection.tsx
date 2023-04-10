@@ -3,6 +3,13 @@ import React, { useState } from "react"
 import leftside from "../../../../assets/images/hero/hero-section-left-side.png"
 import book1 from "../../../../assets/egaming/led.png"
 import book2 from "../../../../assets/egaming/chip.png"
+import icon1 from "../../../../assets/egaming/CITYPNG.png"
+import whiteteam from "../../../../assets/egaming/whiteteam.png"
+import blackteam from "../../../../assets/egaming/blackteam.png"
+import image1 from "../../../../assets/egaming/image1.png"
+import image2 from "../../../../assets/egaming/image2.png"
+import image3 from "../../../../assets/egaming/image3.png"
+import image4 from "../../../../assets/egaming/image4.png"
 import styles from "./styles.module.css"
 const HeroSection = () => {
   interface List {
@@ -23,8 +30,8 @@ const HeroSection = () => {
     <>
       <div className="global-section-width  ">
         <div className="2xl:container pt-[12px]">
-          <div className="flex mw-lg:flex-col">
-            <div className="w-7/12 mw-xl:w-1/2 mw-lg:w-full ">
+          <div className="flex mw-lg:flex-col justify-between">
+            <div className="w-[62%] mw-xl:w-1/2 mw-lg:w-full ">
               <div
                 className={`${styles.left_side} h-[450px] mx-14:h-[400px] mw-sm:h-[350px] mw-sm3:h-[300px]`}
               >
@@ -92,8 +99,239 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-            <div className="w- mw-xl:w-1/2  mw-lg:w-full">
-              <div className="versus_card_right_section bg-brandLightOpacity10 pt-[24px] pl-[24px] pr-[24px] h-[610px] rounded"></div>
+            <div className="w-[36%] mw-xl:w-1/2  mw-lg:w-full">
+              <div
+                className={`${styles.right_section} overflow-y-auto  versus_card_right_section bg-brandLightOpacity10 pt-[22px] pl-[24px] pr-[24px] h-[610px] rounded`}
+              >
+                <div className={`${styles.esporting_versus_wrapper}`}>
+                  <div className="first_battle">
+                    <div className="flex justify-between items-center">
+                      <div className="flex items-center">
+                        <Image src={icon1} alt="icon" />
+                        <p className="ml-[12px] montserratfont text-sm	leading-[17px] font-medium	text-brandLightOpacity70">
+                          LPL 2023 Spring
+                        </p>
+                      </div>
+                      <p className="montserratfont text-[#E5E5E5] text-sm	leading-[17px] font-semibold	tracking-wider uppercase	px-[8px] py-[5px] bg-[#D91618] rounded-sm	">
+                        Live
+                      </p>
+                    </div>
+                    <div className="teams_section mt-[16px] pb-[16px] flex justify-around border-b-2 border-brandLightOpacity10">
+                      <div className="first_team flex">
+                        <div>
+                          <Image src={whiteteam} alt="" />
+                        </div>
+                        <div className="ml-[12px]  text-center">
+                          <h4 className="montserratfont font-bold	 text-base	leading-[20px] text-[#E5E5E5]">
+                            Team Liquid
+                          </h4>
+                          <p className="montserratfont text-lg leading-[22px]	text-[#E5E5E5] font-bold	mt-[8px]">
+                            2
+                          </p>
+                        </div>
+                      </div>
+                      <div className="vs">
+                        <p className="montserratfont text-sm	leading-[17px] font-medium	text-brandLightOpacity70">
+                          VS
+                        </p>
+                      </div>
+                      <div className="second_team flex">
+                        <div>
+                          <Image src={blackteam} alt="" />
+                        </div>
+                        <div className="ml-[12px]  text-center">
+                          <h4 className="montserratfont font-bold	 text-base	leading-[20px] text-[#E5E5E5]">
+                            Team Spirit
+                          </h4>
+                          <p className="montserratfont text-lg leading-[22px]	text-[#E5E5E5] font-bold	mt-[8px]">
+                            0
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="teams_section2 mt-[16px] pb-[16px] flex justify-around border-b-2 border-brandLightOpacity10 flex-col	">
+                      <div className="flex justify-between items-center">
+                        <div className="flex items-center">
+                          <Image src={icon1} alt="icon" />
+                          <p className="ml-[12px] montserratfont text-sm	leading-[17px] font-medium	text-brandLightOpacity70">
+                            LPL 2023 Spring
+                          </p>
+                        </div>
+                        <p className="montserratfont text-[#E5E5E5] text-sm	leading-[17px] font-semibold	tracking-wider uppercase	px-[8px] py-[5px] bg-[#D91618] rounded-sm	">
+                          Live
+                        </p>
+                      </div>
+                      <div className="pt-[16px]">
+                        <div className="first_team flex relative pl-[42px]">
+                          <div>
+                            <Image
+                              src={image1}
+                              alt=""
+                              className="absolute z-[4]"
+                            />
+                            <Image
+                              src={image2}
+                              alt=""
+                              className="absolute left-[75px] z-[3]"
+                            />
+                            <Image
+                              src={image3}
+                              alt=""
+                              className="absolute left-[105px] z-[2]"
+                            />
+                            <Image
+                              src={image4}
+                              alt=""
+                              className="absolute left-[135px] z-[1]"
+                            />
+                          </div>
+                        </div>
+                        <div className="ml-[12px] ml-[90px] text-center">
+                          <h4 className="montserratfont font-medium	 text-base py-[14px]	leading-[20px] text-brandLightOpacity70">
+                            +10 more teams
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="teams_section2 mt-[16px] pb-[16px] flex justify-around border-b-2 border-brandLightOpacity10 flex-col	">
+                      <div className="flex justify-between items-center">
+                        <div className="flex items-center">
+                          <Image src={icon1} alt="icon" />
+                          <p className="ml-[12px] montserratfont text-sm	leading-[17px] font-medium	text-brandLightOpacity70">
+                            LPL 2023 Spring
+                          </p>
+                        </div>
+                        <p className="montserratfont text-brandLightOpacity70 text-sm	leading-[17px] font-medium		tracking-wider 	px-[8px] py-[5px] bg-brandLightOpacity10 rounded-sm	">
+                          In 32 mins
+                        </p>
+                      </div>
+                      <div className="pt-[16px]">
+                        <div className="first_team flex relative pl-[42px]">
+                          <div>
+                            <Image
+                              src={image1}
+                              alt=""
+                              className="absolute z-[4]"
+                            />
+                            <Image
+                              src={image2}
+                              alt=""
+                              className="absolute left-[75px] z-[3]"
+                            />
+                            <Image
+                              src={image3}
+                              alt=""
+                              className="absolute left-[105px] z-[2]"
+                            />
+                            <Image
+                              src={image4}
+                              alt=""
+                              className="absolute left-[135px] z-[1]"
+                            />
+                          </div>
+                        </div>
+                        <div className="ml-[12px] ml-[90px] text-center">
+                          <h4 className="montserratfont font-medium	 text-base py-[14px]	leading-[20px] text-brandLightOpacity70">
+                            +10 more teams
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="battle-4 pt-[16px]">
+                      <div className="flex justify-between items-center">
+                        <div className="flex items-center">
+                          <Image src={icon1} alt="icon" />
+                          <p className="ml-[12px] montserratfont text-sm	leading-[17px] font-medium	text-brandLightOpacity70">
+                            LPL 2023 Spring
+                          </p>
+                        </div>
+                        <p className="montserratfont text-[#E5E5E5] text-sm	leading-[17px] font-semibold	tracking-wider uppercase	px-[8px] py-[5px] bg-[#D91618] rounded-sm	">
+                          Live
+                        </p>
+                      </div>
+                      <div className="teams_section mt-[16px] pb-[16px] flex justify-around border-b-2 border-brandLightOpacity10">
+                        <div className="first_team flex">
+                          <div>
+                            <Image src={whiteteam} alt="" />
+                          </div>
+                          <div className="ml-[12px]  text-center">
+                            <h4 className="montserratfont font-bold	 text-base	leading-[20px] text-[#E5E5E5]">
+                              Team Liquid
+                            </h4>
+                            <p className="montserratfont text-lg leading-[22px]	text-[#E5E5E5] font-bold	mt-[8px]">
+                              2
+                            </p>
+                          </div>
+                        </div>
+                        <div className="vs">
+                          <p className="montserratfont text-sm	leading-[17px] font-medium	text-brandLightOpacity70">
+                            VS
+                          </p>
+                        </div>
+                        <div className="second_team flex">
+                          <div>
+                            <Image src={blackteam} alt="" />
+                          </div>
+                          <div className="ml-[12px]  text-center">
+                            <h4 className="montserratfont font-bold	 text-base	leading-[20px] text-[#E5E5E5]">
+                              Team Spirit
+                            </h4>
+                            <p className="montserratfont text-lg leading-[22px]	text-[#E5E5E5] font-bold	mt-[8px]">
+                              0
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="battle-5 pt-[16px]">
+                      <div className="flex justify-between items-center">
+                        <div className="flex items-center">
+                          <Image src={icon1} alt="icon" />
+                          <p className="ml-[12px] montserratfont text-sm	leading-[17px] font-medium	text-brandLightOpacity70">
+                            LPL 2023 Spring
+                          </p>
+                        </div>
+                        <p className="montserratfont text-brandLightOpacity70 text-sm	leading-[17px] font-medium	tracking-wider 	px-[8px] py-[5px] bg-brandLightOpacity10 rounded-sm	">
+                          Completed
+                        </p>
+                      </div>
+                      <div className="teams_section mt-[16px] pb-[16px] flex justify-around border-b-2 border-brandLightOpacity10">
+                        <div className="first_team flex">
+                          <div>
+                            <Image src={whiteteam} alt="" />
+                          </div>
+                          <div className="ml-[12px]  text-center">
+                            <h4 className="montserratfont font-bold	 text-base	leading-[20px] text-[#E5E5E5]">
+                              Team Liquid
+                            </h4>
+                            <p className="montserratfont text-lg leading-[22px]	text-[#E5E5E5] font-bold	mt-[8px]">
+                              2
+                            </p>
+                          </div>
+                        </div>
+                        <div className="vs">
+                          <p className="montserratfont text-sm	leading-[17px] font-medium	text-brandLightOpacity70">
+                            VS
+                          </p>
+                        </div>
+                        <div className="second_team flex">
+                          <div>
+                            <Image src={blackteam} alt="" />
+                          </div>
+                          <div className="ml-[12px]  text-center">
+                            <h4 className="montserratfont font-bold	 text-base	leading-[20px] text-[#E5E5E5]">
+                              Team Spirit
+                            </h4>
+                            <p className="montserratfont text-lg leading-[22px]	text-[#E5E5E5] font-bold	mt-[8px]">
+                              0
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
