@@ -4,6 +4,7 @@ import leftside from "../../../../assets/images/hero/hero-section-left-side.png"
 import book1 from "../../../../assets/images/hero/right-side-01.png"
 import book2 from "../../../../assets/images/hero/right-side-012.png"
 import book3 from "../../../../assets/images/hero/right-side-03.png"
+import bookmark from "../../../../assets/gaming/bookmark.png"
 import styles from "./styles.module.css"
 
 const HeroSection = () => {
@@ -89,7 +90,7 @@ const HeroSection = () => {
                       </div>
                       <div className={"thumnail_wrapper"}>
                         <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20  hover:bg-grayCardHover cursor-pointer rounded-3xl">
-                          <i className="fa-regular fa-bookmark "></i>{" "}
+                          <Image src={bookmark} alt="img" />
                         </div>
                       </div>
                     </div>
