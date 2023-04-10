@@ -21,7 +21,9 @@ export default function Home() {
 
   return (
     <section className="home-page">
-      <Trending />
+      <div className="pb-11  pt-6 mw-12:pb-7 mw-md:pb-[20px] mw-md:pt-[12px] ">
+        <Trending />
+      </div>
       <HeroSection />
       <EsportEvent />
       <LatestNews />

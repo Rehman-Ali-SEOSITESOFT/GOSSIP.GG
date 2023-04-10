@@ -101,7 +101,9 @@ const EsportEvent = () => {
   return (
     <section className="Esport-events">
       <div className="global-section-width">
-        <SectionSaprator title="ESPORTS EVENTS" />
+        <div className="pt-[88px] mw-lg:pt-[40px] ">
+          <SectionSaprator title="ESPORTS EVENTS" />
+        </div>
         <Slider {...settings}>
           {eventData.map((item, index) => (
             <div
@@ -125,17 +127,22 @@ const EsportEvent = () => {
                 <div
                   className={`${style.image_wrapper__event} flex flex-row  pt-2.5 `}
                 >
-                  <Image src={theme === 'dark' ? DarkLogo : Logo} alt="event logo" />
+                  <Image
+                    src={theme === "dark" ? DarkLogo : Logo}
+                    alt="event logo"
+                  />
                   <div className="flex flex-col pl-2">
                     <p
                       className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_esport_event_12} font-medium `}
                     >
-                     DEC 02, 2022 - JAN 18, 2023
+                      DEC 02, 2022 - JAN 18, 2023
                     </p>
                     <p
                       className={`${style.font_esport_event_12} text-brandDark2 dark:text-brandLightOpacity100 font-medium pt-1.5 flex items-center`}
                     >
-                      South Asia <span className="h-1 w-1 bg-brandDark2 opacity-70 dark:opacity-100  dark:bg-brandLightOpacity100 inline-block rounded-full ml-[7px] mr-[8px]"></span> Prizepool $4500
+                      South Asia{" "}
+                      <span className="h-1 w-1 bg-brandDark2 opacity-70 dark:opacity-100  dark:bg-brandLightOpacity100 inline-block rounded-full ml-[7px] mr-[8px]"></span>{" "}
+                      Prizepool $4500
                     </p>
                   </div>
                 </div>
@@ -158,17 +165,17 @@ const EsportEvent = () => {
           ))}
         </Slider>
         <div className="flex mt-4 mw-sm:hidden">
-            <div className="w-full">
-              <a
-                href="#"
-                className="text-textColorGray dark:text-brandLightOpacity70 montserratfont font-base  leading-5"
-              >
-                View more <span>&#x3E;</span>
-                <span>&#x3E;</span>
-                <span>&#x3E;</span>
-              </a>
-            </div>
+          <div className="w-full">
+            <a
+              href="#"
+              className="text-textColorGray dark:text-brandLightOpacity70 montserratfont font-base  leading-5"
+            >
+              View more <span>&#x3E;</span>
+              <span>&#x3E;</span>
+              <span>&#x3E;</span>
+            </a>
           </div>
+        </div>
       </div>
     </section>
   );

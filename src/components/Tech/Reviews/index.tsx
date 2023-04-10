@@ -15,7 +15,7 @@ import review12 from "../../../assets/tech/reviewtab/12.png";
 import AsideBar from "../Asidebar";
 import Pagination from "@/components/Pagination";
 import FilterTabs from "../Filter";
-
+import bookmark from "../../../assets/tech/bookmark.png";
 const ReviewTech = () => {
   const imagesList = [
     review1,
@@ -60,16 +60,20 @@ const ReviewTech = () => {
                         Check out the Great Indian Amazon Sale this month
                       </h4>
                       <div>
-                        <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20    hover:bg-grayCardHover cursor-pointer rounded-3xl">
-                          <i className="fa-regular fa-bookmark"></i>
+                        <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20    hover:bg-grayCardHover cursor-pointer rounded-3xl ">
+                          <Image
+                            src={bookmark}
+                            alt="demo"
+                            className=" brightness-0 dark:brightness-200"
+                          />
                         </div>
                       </div>
                     </div>
                     <div className="flex py-4 montserratfont">
-                      <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:text-brandLightOpacity70">
+                      <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                         News
                       </div>
-                      <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:text-brandLightOpacity70">
+                      <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                         Esports
                       </div>
                     </div>

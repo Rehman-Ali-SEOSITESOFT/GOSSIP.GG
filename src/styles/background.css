@@ -7,3 +7,11 @@
     rgba(0, 0, 0, 0.32) 108.84%
   );
 }
+
+.header_dark_img {
+  background-image: url("../assets/images/header/bg-dark.png");
+}
+
+.header_light_img {
+  background-image: url("../assets/images/header/bg-light.png");
+}

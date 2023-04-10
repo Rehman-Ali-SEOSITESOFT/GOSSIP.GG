@@ -147,6 +147,14 @@
   .trending .slick-next {
     right: 0 !important;
   }
+  .hero-section-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 40px;
+  }
 }
 
 @media screen and (max-width: 1024px) {

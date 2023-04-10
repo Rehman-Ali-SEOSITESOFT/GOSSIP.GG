@@ -5,12 +5,15 @@ import img1 from "../../../../assets/tech/f-1.png";
 import img2 from "../../../../assets/tech/f-2.png";
 import img3 from "../../../../assets/tech/f-3.png";
 import img4 from "../../../../assets/tech/f-4.png";
+import bookmark from "../../../../assets/tech/bookmark.png";
 const TechFeature = () => {
   const images = [img1, img2, img3, img4];
   return (
     <>
       <div className="global-section-width">
-        <SectionSaprator title="Features" />
+        <div className="pt-[88px]">
+          <SectionSaprator title="Features" />
+        </div>
         <div className="2xl:container">
           <div className="dark:bg-brandDark1 bg-white  rounded border-grayCard border">
             <div className="flex flex-wrap  pt-6 pb-3 px-8	 bg-white rounded dark:bg-brandDark1">
@@ -55,11 +58,11 @@ const TechFeature = () => {
                       <p className="user_name montserratfont text-xs font-medium dark:text-brandLightOpacity100 pt-[8px]">
                         -John D
                       </p>
-                      <div className="tags flex pt-3.5 pb-3 montserratfont ">
-                        <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:text-brandLightOpacity70">
+                      <div className="tags flex pt-3.5 pb-3 montserratfont">
+                        <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                           News
                         </div>
-                        <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:text-brandLightOpacity70">
+                        <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10    hover:text-brandDark2 dark:hover:bg-brandLightOpacity20    dark:hover:text-brandLightOpacity100    dark:text-brandLightOpacity70">
                           Esports
                         </div>
                       </div>
@@ -68,11 +71,15 @@ const TechFeature = () => {
                       className={index === 1 || index === 3 ? "py-0" : "pr-8"}
                     >
                       <div
-                        className={`bookmark text-textColorGray hover:text-textColor  dark:text-brandLightOpacity70 h-full border-b border-grayCard  dark:border-brandLightOpacity10 dark:hover:text-brandLightOpacity100 ${
+                        className={`bookmark text-textColorGray hover:text-textColor  dark:text-brandLightOpacity70 h-full border-b border-grayCard  dark:border-brandLightOpacity10 dark:hover:text-brandLightOpacity100 w-[12px] ${
                           index === 2 || index === 3 ? "border-b-0" : "border-b"
                         }`}
                       >
-                        <i className="fa-regular fa-bookmark cursor-pointer	"></i>
+                        <Image
+                          src={bookmark}
+                          alt=""
+                          className=" brightness-0 opacity-80 hover:opacity-100  dark:brightness-200"
+                        />
                       </div>
                     </div>
                   </div>

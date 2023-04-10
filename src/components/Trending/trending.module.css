@@ -1,5 +1,5 @@
 .trending {
-  padding: 25px 0 35px 0;
+  /* padding: 25px 0 35px 0; */
 }
 .trend_left {
   width: 12%;
@@ -49,7 +49,7 @@
 
 @media screen and (max-width: 768px) {
   .trending {
-    padding: 16px 0 30px 0;
+    /* padding: 16px 0 30px 0; */
     /* border-bottom: 1px solid $brandLightOpacity10; */
   }
   .trending .trend_left {
@@ -66,7 +66,7 @@
 
 @media screen and (max-width: 400px) {
   .trending {
-    padding: 10px 0 24px 0;
+    /* padding: 10px 0 24px 0; */
   }
 
   .trendingteass .tags {

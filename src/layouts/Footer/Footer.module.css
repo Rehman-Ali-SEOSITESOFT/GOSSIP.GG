@@ -4,14 +4,12 @@
 }
 
 .font_text2 {
-  font-family: "Montserrat";
   font-style: "medium";
   font-size: 16px;
 }
 
 @media (max-width: 639px) {
   .font_text2 {
-    font-family: "Montserrat";
     font-style: "medium";
     font-size: 10px;
   }
