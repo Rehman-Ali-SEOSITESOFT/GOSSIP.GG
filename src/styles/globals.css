@@ -132,6 +132,9 @@
 .trending .light-arrow.slick-slider button.slick-prev {
   top: -4px;
 }
+
+/* .exports-banner .dark-arrow.slick-slider button.slick-next,
+.exports-banner .dark-arrow.slick-slider button.slick-prev, */
 .trending .dark-arrow.slick-slider button.slick-next,
 .trending .dark-arrow.slick-slider button.slick-prev {
   background: linear-gradient(
@@ -141,6 +144,8 @@
     rgba(34, 30, 31, 0) 83.6%
   );
 }
+/* .exports-banner .light-arrow.slick-slider button.slick-next,
+.exports-banner .light-arrow.slick-slider button.slick-prev, */
 .trending .light-arrow.slick-slider button.slick-next,
 .trending .light-arrow.slick-slider button.slick-prev {
   background: linear-gradient(
@@ -182,6 +187,15 @@
 .light-arrow.slick-slider .slick-next:hover::before,
 .light-arrow.slick-slider .slick-prev:hover::before {
   background-color: var(--grayCard);
+}
+
+.exports-banner .dark-arrow.slick-slider .slick-next:hover::before,
+.exports-banner .dark-arrow.slick-slider .slick-prev:hover::before {
+  background-color: var(--brandLightOpacity10);
+}
+.exports-banner .light-arrow.slick-slider .slick-next:hover::before,
+.exports-banner .light-arrow.slick-slider .slick-prev:hover::before {
+  background-color: var(--brandLightOpacity90);
 }
 
 .dark-arrow.slick-slider .slick-next::after,
@@ -258,6 +272,21 @@
 .slick-next {
   right: -65px !important;
 }
+.exports-banner .slick-prev {
+  left: 24px !important;
+}
+.exports-banner .slick-next {
+  right: 24px !important;
+}
+.exports-banner .slick-prev:before,
+.exports-banner .slick-next:before {
+  opacity: 1;
+}
+/*
+.exports-banner .slick-prev:hover::before,
+.exports-banner .slick-next:hover::before {
+  opacity: 1;
+} */
 .trendingteass .slick-prev {
   left: -45px !important;
 }

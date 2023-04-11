@@ -21,22 +21,26 @@
 .deailslider .slick-slider button.slick-disabled {
   display: none !important;
 }
+.exports-banner .slick-dots,
 .deailslider .slick-dots {
   bottom: 24px !important;
 }
 .deailslider .slick-slide > div {
   height: 315px !important;
 }
+.exports-banner .slick-dots li,
 .deailslider .slick-dots li {
   width: 10px !important;
   height: 10px !important;
 }
+.exports-banner .slick-dots li button,
 .deailslider .slick-dots li button {
   width: 10px !important;
   height: 10px !important;
   padding: 0 !important;
   filter: none;
 }
+.exports-banner .slick-dots li button::before,
 .deailslider .slick-dots li button:before {
   width: 10px;
   height: 10px;
@@ -45,6 +49,7 @@
   border-radius: 10px;
   opacity: 1;
 }
+.exports-banner .slick-dots li.slick-active button:before,
 .deailslider .slick-dots li.slick-active button:before {
   background-color: #e5e5e5 !important;
   opacity: 1;

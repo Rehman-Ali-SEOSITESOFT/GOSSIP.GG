@@ -30,6 +30,7 @@ module.exports = {
         borderEditProfile: "rgba(34, 30, 31, 0.2)",
         // BRAND COLOR
         brand: "#ed4e50",
+        black: "#000000",
         // SEMANTIC COLORS
         successIndicator: "#008d52",
         errorIndicator: "#d91618",

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Valorant = () => {
-  return (
-    <div>Valorant</div>
-  )
-}
+  return <div>Valorant</div>;
+};
 
-export default Valorant
+export default Valorant;
