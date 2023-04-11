@@ -66,13 +66,13 @@ const FeaturesTech = () => {
                         </p>
                       </div>
                       <div className="center-right pl-9  text-center">
-                        <div className="up-arrow bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer">
+                        <div className="up-arrow bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer hover:bg-borderEditProfile">
                           <Image src={toparrow} alt="up arrow" />
                         </div>
                         <div className="count dark:text-brandLightOpacity100 montserratfont font-semibold text-base center leading-5 py-1  ">
                           17
                         </div>
-                        <div className="down-arrow bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer">
+                        <div className="down-arrow bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer  hover:bg-borderEditProfile">
                           <Image
                             src={bottomarrow}
                             alt="up arrow"
@@ -91,21 +91,21 @@ const FeaturesTech = () => {
                         </div>
                       </div>
                       <div className="shared-icons flex items-center">
-                        <div className="icon bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer">
+                        <div className="icon bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer  hover:bg-borderEditProfile">
                           <Image
                             src={comment}
                             alt="comment"
                             className="dark:brightness-200 brightness-0 "
                           />
                         </div>
-                        <div className="icon bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer mx-[28px]">
+                        <div className="icon bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer mx-[28px]  hover:bg-borderEditProfile">
                           <Image
                             src={bookmark}
                             alt="comment"
                             className="dark:brightness-200 brightness-0 "
                           />
                         </div>
-                        <div className="icon bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer">
+                        <div className="icon bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer  hover:bg-borderEditProfile">
                           <Image
                             src={shared}
                             alt="comment"

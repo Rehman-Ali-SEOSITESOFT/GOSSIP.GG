@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
@@ -12,21 +11,6 @@ import SectionSaprator from "../SecSaprator";
 import style from "./esportEvents.module.css";
 import { useTheme } from "next-themes";
 import DarkLine from "../../assets/images/general/dark-line.png";
-=======
-import React, { useState } from "react"
-import Slider from "react-slick"
-import Image from "next/image"
-import Card from "../../assets/images/esport-event/card.png"
-import Icon from "../../assets/images/esport-event/icon.png"
-import Logo from "../../assets/images/esport-event/logo.png"
-import DarkLogo from "../../assets/images/esport-event/logo-dark.png"
-import RightIcon from "../../assets/images/esport-event/right.png"
-import Line from "../../assets/images/general/Line.png"
-import SectionSaprator from "../SecSaprator"
-import style from "./esportEvents.module.css"
-import { useTheme } from "next-themes"
-import DarkLine from "../../assets/images/general/dark-line.png"
->>>>>>> 54d58180762e8c84f91a7c1b5caf8721ebaed1af
 const EsportEvent = () => {
   interface EventList {
     event_title: string
@@ -34,15 +18,11 @@ const EsportEvent = () => {
     country: string
     prize: string
   }
-<<<<<<< HEAD
   const { theme } = useTheme();
   const [isDarkTheme, setIsDarkTheme] = useState<string>("")
  useEffect(() =>{
   setIsDarkTheme(theme === "dark" ? "dark": "light");
  }, [theme]) 
-=======
-  const { theme } = useTheme()
->>>>>>> 54d58180762e8c84f91a7c1b5caf8721ebaed1af
   const [eventData, setEventData] = useState<EventList[]>([
     {
       event_title: "DOTA Pro Circuit 2023 Tour 1",
