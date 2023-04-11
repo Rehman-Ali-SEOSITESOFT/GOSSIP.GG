@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import trendingLight from "../../assets/globals/trending-light.png";
 import trendingDard from "../../assets/globals/trending-dark.png";
@@ -99,9 +99,15 @@ const Trending = () => {
       link: "/",
     },
   ]);
+  const { theme, setTheme } = useTheme();
+
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
+  useEffect(() => {
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
 
   return (
-    <section className={`${styles.trending} trending`}>
+    <section className={`${styles.trending} trending `}>
       <div className="global-section-width">
         <div className="2xl:container">
           <div className="flex items-center	">
@@ -120,7 +126,11 @@ const Trending = () => {
             </div>
             <Slider
               {...settings}
-              className={`${styles.trend_right} ${styles.trendingteass} trendingteass`}
+              className={`${styles.trend_right} ${
+                styles.trendingteass
+              } trendingteass ${
+                isDarkTheme === "dark" ? " dark-arrow" : " light-arrow"
+              }`}
             >
               {tags.map((item, index) => {
                 return (

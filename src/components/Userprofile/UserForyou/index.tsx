@@ -1,25 +1,25 @@
-import Image from "next/image"
-import React, { useState } from "react"
-import downarrow from "../../../assets/user-for-you/down-arrow.png"
-import downarrowColor from "../../../assets/user-for-you/fill-down-arrow.png"
-import uparrow from "../../../assets/user-for-you/up-arrow.png"
-import uparrowColor from "../../../assets/user-for-you/fill-up-arrow.png"
-import comment from "../../../assets/user-for-you/comment.png"
-import bookmark from "../../../assets/user-for-you/bookmark.png"
-import bookmarkfill from "../../../assets/user-for-you/fill-bookmark.png"
-import sharedbtn from "../../../assets/user-for-you/share.png"
-import user1 from "../../../assets/user-for-you/user-1.png"
-import user2 from "../../../assets/user-for-you/user-2.png"
-import user3 from "../../../assets/user-for-you/user-3.png"
-import user4 from "../../../assets/user-for-you/user-4.png"
-import Pagination from "@/components/Pagination"
+import Image from "next/image";
+import React, { useState } from "react";
+import downarrow from "../../../assets/user-for-you/down-arrow.png";
+import downarrowColor from "../../../assets/user-for-you/fill-down-arrow.png";
+import uparrow from "../../../assets/user-for-you/up-arrow.png";
+import uparrowColor from "../../../assets/user-for-you/fill-up-arrow.png";
+import comment from "../../../assets/user-for-you/comment.png";
+import bookmark from "../../../assets/user-for-you/bookmark.png";
+import bookmarkfill from "../../../assets/user-for-you/fill-bookmark.png";
+import sharedbtn from "../../../assets/user-for-you/share.png";
+import user1 from "../../../assets/user-for-you/user-1.png";
+import user2 from "../../../assets/user-for-you/user-2.png";
+import user3 from "../../../assets/user-for-you/user-3.png";
+import user4 from "../../../assets/user-for-you/user-4.png";
+import Pagination from "@/components/Pagination";
 const UserForYou = () => {
   const [userDetil, setUserDetail] = useState<any[]>([
     user1,
     user2,
     user3,
     user4,
-  ])
+  ]);
   return (
     <>
       <div className="userforyou--items">
@@ -70,10 +70,10 @@ const UserForYou = () => {
                 </p>
                 <div className="flex shared--btns items-center h-[35px]">
                   <div className="flex py-4 montserratfont mr-[126px]">
-                    <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:text-brandLightOpacity70">
+                    <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                       News
                     </div>
-                    <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:text-brandLightOpacity70">
+                    <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                       Esports
                     </div>
                   </div>
@@ -132,12 +132,12 @@ const UserForYou = () => {
                 </div>
               </div>
             </div>
-          )
+          );
         })}
       </div>
       <Pagination />
     </>
-  )
-}
+  );
+};
 
-export default UserForYou
+export default UserForYou;

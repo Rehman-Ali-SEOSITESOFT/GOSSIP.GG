@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { Fragment } from "react";
+
 import logo from "../../assets/images/header/main-logo.png";
 import search from "../../assets/images/header/search.png";
 import moon from "../../assets/images/header/moon.png";
@@ -16,6 +18,8 @@ import { useRouter, usePathname } from "next/navigation";
 import setting from "../../assets/profile/settings.png";
 import downloadarrow from "../../assets/profile/downarrow.png";
 import Link from "next/link";
+import { Menu, Transition } from "@headlessui/react";
+
 const Header = () => {
   interface MenuList {
     name: string;
@@ -49,7 +53,9 @@ const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState<Boolean>(false);
   const router = useRouter();
   const currentPage = usePathname();
-
+  function classNames(...classes: any) {
+    return classes.filter(Boolean).join(" ");
+  }
   useEffect(() => {
     let user: any = localStorage.getItem("isLogin");
     setIsLoggedIn(user);
@@ -91,7 +97,7 @@ const Header = () => {
     <header className={`${styles.main_header} relative z-[2]`}>
       <div className={`${styles.header_width} `}>
         <div
-          className={`2xl:container header_container ${styles.header_container} ${bgClassChange}   mw-lg:bg-brandDark3 px-[65px] h-[90px]  mx-14:h-full mx-14:px-[60px] mx-14:py-[20px]  mw-lg:px-[16px] mw-sm3:px-[15px] mw-sm3:py-[15px]`}
+          className={`2xl:container header_container ${styles.header_container} ${bgClassChange}   mw-lg:dark:bg-brandDark3 mw-lg:bg-brandDark2 px-[65px] h-[90px]  mx-14:h-full mx-14:px-[60px] mx-14:py-[20px]  mw-lg:px-[16px] mw-sm3:px-[15px] mw-sm3:py-[15px]`}
         >
           <div className="flex  h-full flex-wrap items-center justify-between">
             <div className={`xl:w-1/4 lg:w-1/5  w-3/6  ${styles.header__left}`}>
@@ -174,68 +180,112 @@ const Header = () => {
                       </span>
                     </div>
                     {isLoggedIn ? (
-                      <div
-                        className={`${styles.profile_box} px-4 cursor-pointer relative`}
+                      // <Image
+                      //   src={profile}
+                      //   alt="Demo"
+                      //   onClick={() => setProfileShow(!profileShow)}
+                      //   className="mw-sm:w-[35px] mw-sm:h-[35px]"
+                      // />
+                      <Menu
+                        as="div"
+                        className="relative inline-block text-left"
                       >
-                        <Image
-                          src={profile}
-                          alt="Demo"
-                          onClick={() => setProfileShow(!profileShow)}
-                          className="mw-sm:w-[35px] mw-sm:h-[35px]"
-                        />
+                        <Menu.Button className="px-4">
+                          <Image
+                            src={profile}
+                            alt="Demo"
+                            className="mw-sm:w-[35px] mw-sm:h-[35px]"
+                          />
+                        </Menu.Button>
 
-                        <div
-                          className={`absolute w-[240px] py-7	px-4 bg-white 	 dark:bg-brandDark1 right-[0] top-[60px]  left-auto  border border-grayCard dark:border-brandLightOpacity10 rounded-lg ${
-                            profileShow ? "hidden" : "block"
-                          } `}
+                        <Transition
+                          as={Fragment}
+                          enter="transition ease-out duration-100"
+                          enterFrom="transform opacity-0 scale-95"
+                          enterTo="transform opacity-100 scale-100"
+                          leave="transition ease-in duration-75"
+                          leaveFrom="transform opacity-100 scale-100"
+                          leaveTo="transform opacity-0 scale-95"
                         >
-                          {/* <Image src={downloadarrow} alt="Demo" /> */}
-                          <div
-                            className={`${styles.triangleshap}  border-b-[22px] border-b-white	 dark:border-y-brandDark1`}
-                          ></div>
-                          <div className="deail ">
-                            <h2 className="text-lg dark:text-brand font-bold montserratfont">
-                              Naveen
-                            </h2>
-                            <label
-                              htmlFor=""
-                              className="montserratfont text-xs	font-medium dark:text-brandLightOpacity70"
-                            >
-                              abc@xyz.in
-                            </label>
-                            <Link href="/user-profile">
-                              <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pt-2">
-                                View Profile
+                          <Menu.Items className="absolute py-7	px-4 bg-white  z-10  w-[240px] dark:bg-brandDark1 right-[5px] top-[60px]  left-auto  border border-grayCard dark:border-brandLightOpacity10 rounded-lg">
+                            <div
+                              className={`${styles.triangleshap}  border-b-[10px] border-b-white	 dark:border-y-brandDark1`}
+                            ></div>
+                            <div className="deail ">
+                              <h2 className="text-lg dark:text-brand font-bold montserratfont">
+                                Naveen
+                              </h2>
+                              <label
+                                htmlFor=""
+                                className="montserratfont text-xs	font-medium dark:text-brandLightOpacity70"
+                              >
+                                abc@xyz.in
+                              </label>
+                              <Menu.Item>
+                                {/* <Link href="/user-profile">
+                                  <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pt-2">
+                                    View Profile
+                                  </h5>
+                                </Link> */}
+                                {({ active }) => (
+                                  <Link
+                                    href="/user-profile"
+                                    // className={classNames(active)}
+                                  >
+                                    <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pt-2">
+                                      {" "}
+                                      View Profile
+                                    </h5>
+                                  </Link>
+                                )}
+                              </Menu.Item>
+                            </div>
+                            <div className="settings border-t border-b border-grayCard dark:border-brandLightOpacity10 my-3 py-3 pl-2">
+                              <h5 className="text-base leading-5 montserratfont font-semibold	dark:text-brandLightOpacity100 ">
+                                Settings
+                                <span>
+                                  <Image
+                                    src={setting}
+                                    alt=""
+                                    className="inline-block ml-3"
+                                  />
+                                </span>
                               </h5>
-                            </Link>
-                          </div>
-                          <div className="settings border-t border-b border-grayCard dark:border-brandLightOpacity10 my-3 py-3 pl-2">
-                            <h5 className="text-base leading-5 montserratfont font-semibold	dark:text-brandLightOpacity100 ">
-                              Settings
-                              <span>
-                                <Image
-                                  src={setting}
-                                  alt=""
-                                  className="inline-block ml-3"
-                                />
-                              </span>
-                            </h5>
-                            <Link href="/edit-user-profile">
-                              <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 py-3 pl-2">
+                              <Menu.Item>
+                                {/* <Link href="/user-profile">
+                                  <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pt-2">
+                                    View Profile
+                                  </h5>
+                                </Link> */}
+                                {({ active }) => (
+                                  <Link
+                                    href="/edit-user-profile"
+                                    // className={classNames(active)}
+                                  >
+                                    <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 py-3 pl-2">
+                                      {" "}
+                                      Edit Profile
+                                    </h5>
+                                  </Link>
+                                )}
+                              </Menu.Item>
+                              {/* <Link href="/edit-user-profile">
+                                <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 py-3 pl-2">
                                 Edit Profile
+                                </h5>
+                              </Link> */}
+                              <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pl-2">
+                                Manage Preferences
                               </h5>
-                            </Link>
-                            <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pl-2">
-                              Manage Preferences
-                            </h5>
-                          </div>
-                          <div onClick={onClicklogout} className="logout">
-                            <h5 className="text-brand dark:text-brandLightOpacity100 text-base leading-5 montserratfont">
-                              Log Out
-                            </h5>
-                          </div>
-                        </div>
-                      </div>
+                            </div>
+                            <div onClick={onClicklogout} className="logout">
+                              <h5 className="text-brand dark:text-brandLightOpacity100 text-base leading-5 montserratfont cursor-pointer">
+                                Log Out
+                              </h5>
+                            </div>
+                          </Menu.Items>
+                        </Transition>
+                      </Menu>
                     ) : (
                       <div
                         onClick={onClickOpenModal}

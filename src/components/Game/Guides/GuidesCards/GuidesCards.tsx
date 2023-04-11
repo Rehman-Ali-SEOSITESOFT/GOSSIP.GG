@@ -11,7 +11,7 @@ import image8 from "../../../../assets/gaming-guides-feature/image8.png"
 import image9 from "../../../../assets/gaming-guides-feature/image9.png"
 import image10 from "../../../../assets/gaming-guides-feature/image10.png"
 import image11 from "../../../../assets/gaming-guides-feature/image11.png"
-
+import bookmark from "../../../../assets/gaming/bookmark.png"
 const GuidesCards = () => {
   const [list, setList] = useState<any[]>([
     image1,
@@ -50,7 +50,7 @@ const GuidesCards = () => {
                   </h4>
                   <div>
                     <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20    hover:bg-grayCardHover cursor-pointer rounded-3xl">
-                      <i className="fa-regular fa-bookmark"></i>
+                      <Image src={bookmark} alt=" " />
                     </div>
                   </div>
                 </div>

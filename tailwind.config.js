@@ -45,8 +45,8 @@ module.exports = {
         userprofilebg: "#2a2627",
         arrowicon: "#e3e2e2",
         choosebox: "#e3e3e3",
-        modalChoose:'#d8d7d8',
-        modalBtn:'#cfcfcf',
+        modalChoose: "#d8d7d8",
+        modalBtn: "#cfcfcf",
         custom: {
           DEFAULT: "#363233",
         },

@@ -50,8 +50,8 @@ const ReviewCards = () => {
                     Adventure,Indie,Puzzle
                   </p>
                 </div>
-                <div className="bookmark_check rounded-full bg-grayCard w-8 h-8 dark:bg-brandLightOpacity10 flex items-center justify-center cursor-pointer dark:hover:bg-brandLightOpacity20    hover:bg-grayCardHover">
-                  <i className="fa-regular fa-bookmark"></i>
+                <div className=" he bookmark_check rounded-full bg-grayCard w-8 h-8 dark:bg-brandLightOpacity10 flex items-center justify-center cursor-pointer dark:hover:bg-brandLightOpacity20    hover:bg-grayCardHover">
+                  <Image src={bookmark} alt="bookmark" />
                 </div>
               </div>
             </div>

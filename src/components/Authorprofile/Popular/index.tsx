@@ -55,10 +55,10 @@ const PopularAuthor = () => {
                 </div>
                 <div className="save-tagss-wrap flex justify-between items-end px-4">
                   <div className="flex ">
-                    <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:text-brandLightOpacity70 montserratfont">
+                    <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                       News
                     </div>
-                    <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:text-brandLightOpacity70 montserratfont">
+                    <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                       Esports
                     </div>
                   </div>
@@ -79,7 +79,7 @@ const PopularAuthor = () => {
                       <Image
                         src={bookmark}
                         alt="bookmarked"
-                        className="brightness-0	dark:brightness-100"
+                        className=" brightness-0 opacity-80 hover:opacity-100  dark:brightness-200"
                       />
                     )}
                   </div>

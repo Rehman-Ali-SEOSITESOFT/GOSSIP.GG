@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import style from "./latestnew.module.css";
 import new1 from "../../assets/latest-news/news1.png";
@@ -10,11 +11,24 @@ import boomkark from "../../assets/latest-news/bookmark.png";
 import Image from "next/image";
 import SectionSaprator from "../SecSaprator";
 import { useTheme } from "next-themes";
+=======
+import React, { useState } from "react"
+import style from "./latestnew.module.css"
+import new1 from "../../assets/latest-news/news1.png"
+import new2 from "../../assets/latest-news/news2.png"
+import new3 from "../../assets/latest-news/news3.png"
+import new4 from "../../assets/latest-news/news4.png"
+import new5 from "../../assets/latest-news/news5.png"
+import new6 from "../../assets/latest-news/news6.png"
+import boomkark from "../../assets/latest-news/bookmark.png"
+import Image from "next/image"
+import SectionSaprator from "../SecSaprator"
+>>>>>>> 54d58180762e8c84f91a7c1b5caf8721ebaed1af
 
 const LatestNews = () => {
   interface List {
-    name: string;
-    picture: any;
+    name: string
+    picture: any
   }
   const item: List[] = [
     {
@@ -41,6 +55,7 @@ const LatestNews = () => {
       name: "demo ",
       picture: new6,
     },
+<<<<<<< HEAD
   ];
   const [items, setItems] = useState(item);
   const { theme } = useTheme();
@@ -48,6 +63,10 @@ const LatestNews = () => {
  useEffect(() =>{
   setIsDarkTheme(theme === "dark" ? "dark": "light");
  }, [theme]) 
+=======
+  ]
+  const [items, setItems] = useState(item)
+>>>>>>> 54d58180762e8c84f91a7c1b5caf8721ebaed1af
   return (
     <section className={style.latest_news_page}>
       <div className="global-section-width">
@@ -130,7 +149,7 @@ const LatestNews = () => {
                     </div>
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
           <div className="hidden mw-sm:hidden flex flex-wrap pt-5 pb-5  bg-white rounded dark:bg-brandDark1 mw-lg:flex ">
@@ -191,7 +210,7 @@ const LatestNews = () => {
                     </div>
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -241,7 +260,7 @@ const LatestNews = () => {
                     </div>
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -261,7 +280,7 @@ const LatestNews = () => {
         </div> */}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default LatestNews;
+export default LatestNews

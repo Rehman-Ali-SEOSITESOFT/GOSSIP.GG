@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import style from "./GamingFeatures.module.css";
-import image1 from "../../../assets/gaming/image1.png";
-import image2 from "../../../assets/gaming/image1.png";
-import image3 from "../../../assets/gaming/image1.png";
-import image4 from "../../../assets/gaming/image1.png";
-import bookmark from "../../../assets/gaming/bookmark.png";
-import Image from "next/image";
+import React, { useState } from "react"
+import style from "./GamingFeatures.module.css"
+import image1 from "../../../assets/gaming/image1.png"
+import image2 from "../../../assets/gaming/image1.png"
+import image3 from "../../../assets/gaming/image1.png"
+import image4 from "../../../assets/gaming/image1.png"
+import bookmark from "../../../assets/gaming/bookmark.png"
+import Image from "next/image"
 const GamingFeatures = () => {
   interface List {
-    name: string;
-    picture: any;
+    name: string
+    picture: any
   }
   const item: List[] = [
     {
@@ -28,18 +28,18 @@ const GamingFeatures = () => {
       name: "demo ",
       picture: image4,
     },
-  ];
-  const [items, setItems] = useState(item);
+  ]
+  const [items, setItems] = useState(item)
   return (
     <>
-      <div className="features_gaming_section dark:bg-brandDark1 bg-white p-6 px-7 rounded border-grayCard border">
+      <div className="features_gaming_section dark:bg-brandDark1 bg-white pt-[24px] pb-[24px] pl-[0px] pr-[0px]  rounded border-grayCard border">
         <div className="flex flex-wrap pt-0 pb-0  bg-white rounded dark:bg-brandDark1">
           {items.map((elem, index) => {
             return (
               <div
                 className={`w-1/2 ${
                   index === 0 || index === 1 ? "pt-0" : "pt-5"
-                } pl-5	 pr-5	 pb-0		  mw-12:w-1/2 mw-lg:w-full flex   ${
+                } pl-[32px]	 pr-[32px]	 pb-0		  mw-12:w-1/2 mw-lg:w-full flex   ${
                   style.news_items
                 }  border-grayCard  dark:border-brandLightOpacity10 ${
                   index === 1
@@ -86,12 +86,12 @@ const GamingFeatures = () => {
                   </div>
                 </div>
               </div>
-            );
+            )
           })}
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default GamingFeatures;
+export default GamingFeatures

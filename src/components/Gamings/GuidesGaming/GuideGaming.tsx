@@ -5,6 +5,7 @@ import image2 from "../../../assets/select/image-react-2.png"
 import image3 from "../../../assets/select/image-react-3.png"
 import image4 from "../../../assets/select/image-react-4.png"
 import ViewMore from "../ViewMore/ViewMore"
+import bookmark from "../../../assets/gaming/bookmark.png"
 const GuideGaming = () => {
   const [list, setList] = useState<any[]>([image1, image2, image3, image4])
 
@@ -33,7 +34,7 @@ const GuideGaming = () => {
                       </h4>
                       <div>
                         <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20    hover:bg-grayCardHover cursor-pointer rounded-3xl">
-                          <i className="fa-regular fa-bookmark"></i>
+                          <Image src={bookmark} alt="" />
                         </div>
                       </div>
                     </div>

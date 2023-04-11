@@ -16,7 +16,7 @@ const TechFeature = () => {
         </div>
         <div className="2xl:container">
           <div className="dark:bg-brandDark1 bg-white  rounded border-grayCard border">
-            <div className="flex flex-wrap  pt-6 pb-3 px-8	 bg-white rounded dark:bg-brandDark1">
+            <div className="flex flex-wrap  pt-6 pb-6 px-8	 bg-white rounded dark:bg-brandDark1">
               {images.map((elem, index) => {
                 return (
                   <div
@@ -31,7 +31,7 @@ const TechFeature = () => {
                       className={` w-full max-w-[60px] block  border-grayCard  dark:border-brandLightOpacity10  ${
                         index === 2 || index === 3
                           ? "border-b-0"
-                          : "border-b pb-3"
+                          : "border-b pb-6"
                       }`}
                     >
                       <Image
@@ -44,7 +44,7 @@ const TechFeature = () => {
                       className={`px-8 border-b border-grayCard  dark:border-brandLightOpacity10 ${
                         index === 2 || index === 3
                           ? "border-b-0"
-                          : "border-b pb-3"
+                          : "border-b pb-6"
                       }  `}
                     >
                       <h4 className="text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 capitalize ">
@@ -58,7 +58,7 @@ const TechFeature = () => {
                       <p className="user_name montserratfont text-xs font-medium dark:text-brandLightOpacity100 pt-[8px]">
                         -John D
                       </p>
-                      <div className="tags flex pt-3.5 pb-3 montserratfont">
+                      <div className="tags flex pt-3.5 montserratfont">
                         <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                           News
                         </div>
