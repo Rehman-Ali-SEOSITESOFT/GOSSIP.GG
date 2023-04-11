@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import React, { useState } from "react"
-import NewCategoryList from "@/components/New-Category-List/NewCategoryList"
+import NewCategoryList from "@/components/NewCategoryList/NewCategoryList"
 import rog2 from "../../../assets/new-category/rogImage.png"
 import rog1 from "../../../assets/new-category/roglargeImg.png"
 import Filter from "@/components/Filter/Filter"

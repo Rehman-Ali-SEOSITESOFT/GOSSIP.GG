@@ -133,7 +133,7 @@ const Header = () => {
                 <div className={`${styles.serach_btn} relative `}>
                   <input
                     value={searchText}
-                    className="w-full border-none bg-brandLightOpacity10 placeholder:text-brandLightOpacity70 montserratfont font-medium test-base leading-5"
+                    className="w-full border-none montserratfont bg-brandLightOpacity10 placeholder:text-brandLightOpacity70 montserratfont font-medium test-base leading-5"
                     onChange={hanldeChange}
                     placeholder="Search"
                   />

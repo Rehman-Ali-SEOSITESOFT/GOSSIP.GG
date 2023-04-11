@@ -64,7 +64,7 @@ const SignupModal = (props: any) => {
                       />
                       <div
                         onClick={() => props.onClickOpenModal()}
-                        className="h-10 w-10 rounded-full  dark:bg-brandLightOpacity5 flex justify-center items-center content-center absolute top-4 right-4 "
+                        className="h-10 w-10 rounded-full bg-brandLightOpacity5 hover:bg-[#353233] flex justify-center items-center content-center absolute top-4 right-4 "
                       >
                         <Image src={Close} alt="google icon" />
                       </div>
@@ -78,19 +78,19 @@ const SignupModal = (props: any) => {
                           Sign Up to Gossip.gg
                         </p>
                         <input
-                          className="text-base hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] font-medium  montserratfont border-brandLightOpacity10 dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
+                          className="text-base hover:border montserratfont hover:border-brandDark2 dark:hover:border-[#ffffff] font-medium  montserratfont border-brandLightOpacity10 dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
                           id="name"
                           type="text"
                           placeholder="Name"
                         />
                         <input
-                          className="text-base hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] font-medium  montserratfont border-brandLightOpacity10 mt-4 dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
+                          className="text-base hover:border  montserratfont hover:border-brandDark2 dark:hover:border-[#ffffff] font-medium  montserratfont border-brandLightOpacity10 mt-4 dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
                           id="email"
                           type="text"
                           placeholder="Email"
                         />
                         <input
-                          className="text-base font-medium hover:border hover:border-brandDark2 dark:hover:border-[#ffffff]  montserratfont border-brandLightOpacity10 mt-4 mb-38px dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6  bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
+                          className="text-base font-medium montserratfont hover:border hover:border-brandDark2 dark:hover:border-[#ffffff]  montserratfont border-brandLightOpacity10 mt-4 mb-38px dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6  bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
                           id="password"
                           type="password"
                           autoComplete="false"
@@ -126,10 +126,10 @@ const SignupModal = (props: any) => {
                     </div>
                     <div className="mw-sm:pl-10 mw-sm:pr-10 pl-40 pr-40 mt-8 mb-68px">
                       <div className="flex flex-row justify-center items-center">
-                        <div className="mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full mr-5 dark:bg-brandLightOpacity5 bg-iconBackground flex justify-center items-center content-center ">
+                        <div className=" hover:bg-borderEditProfile dark:hover:bg-[#353233] mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full mr-5 dark:bg-brandLightOpacity5 bg-iconBackground flex justify-center items-center content-center ">
                         <Image src={theme === 'dark' ?  Google : GoogleLight} alt="google icon" />
                         </div>
-                        <div className="mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full ml-5 dark:bg-brandLightOpacity5 bg-iconBackground flex justify-center items-center content-center ">
+                        <div className="hover:bg-borderEditProfile dark:hover:bg-[#353233] mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full ml-5 dark:bg-brandLightOpacity5 bg-iconBackground flex justify-center items-center content-center ">
                         <Image src={theme === 'dark' ?  Discord : DiscordLight}  alt="google icon" />
                         </div>
                       </div>

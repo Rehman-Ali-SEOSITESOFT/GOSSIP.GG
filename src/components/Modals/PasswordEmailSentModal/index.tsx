@@ -56,13 +56,13 @@ const PasswordEmailModal = (props: any) => {
                       />
                       <div
                         onClick={() => props.onClickOpenModal()}
-                        className="h-10 w-10 rounded-full  dark:bg-brandLightOpacity5 flex justify-center items-center content-center absolute top-4 right-4 "
+                        className="h-10 w-10 rounded-full  bg-brandLightOpacity5 hover:bg-[#353233] flex justify-center items-center content-center absolute top-4 right-4 "
                       >
                         <Image src={Close} alt="close icon" />
                       </div>
                       <div
                         onClick={() => props.onClickOpenModal()}
-                        className="h-10 w-10 rounded-full  dark:bg-brandLightOpacity5 flex justify-center items-center content-center absolute top-4 left-4 "
+                        className="h-10 w-10 rounded-full  bg-brandLightOpacity5 hover:bg-[#353233] flex justify-center items-center content-center absolute top-4 left-4 "
                       >
                         <Image src={Back} alt="back icon" />
                       </div>
@@ -93,7 +93,7 @@ const PasswordEmailModal = (props: any) => {
                           onClick={() => onClickOpenModal()}
                           className="bg-brand outline-none mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold"
                         >
-                          Ok
+                          OK
                         </button>
                         <p className="pt-3 pl-1.5 underline pb-48 font-medium montserratfont text-brandDark2 dark:text-brandLightOpacity70 text-xs">
                           Re-send email

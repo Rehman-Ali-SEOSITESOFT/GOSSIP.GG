@@ -71,16 +71,13 @@ const EmailModal = (props: any) => {
                       <button
                       onClick={() => onClickOpenModal()}
                       className="bg-brand mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold">
-                        Ok
+                        OK
                       </button>
                       <p className="pt-3 pl-1.5 underline pb-48 font-medium montserratfont text-brandDark2  dark:text-brandLightOpacity70 text-xs">
                        Re-send email
                       </p>
                     </div>
                   </div>
-
-                
-                
                 </div>
               </Dialog.Panel>
             </Transition.Child>

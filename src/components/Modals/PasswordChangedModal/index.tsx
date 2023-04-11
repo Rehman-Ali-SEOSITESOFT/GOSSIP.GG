@@ -69,7 +69,7 @@ const PasswrodChangeModal = (props: any) => {
                           onClick={() => props.onClickOpenModal()}
                           className="bg-brand mw-sm:w-60  outline-none mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold"
                         >
-                          Ok
+                          OK
                         </button>
                       </div>
                     </div>

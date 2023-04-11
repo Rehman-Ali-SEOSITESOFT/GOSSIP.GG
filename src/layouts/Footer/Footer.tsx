@@ -22,23 +22,23 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex flex-row">
-              <div className="h-10 w-10 rounded-3xl bg-brandDark1 flex justify-center  items-center">
+              <div className="h-10 w-10 dark:hover:bg-brandLightOpacity20  hover:bg-borderEditProfile cursor-pointer rounded-3xl bg-brandDark1 flex justify-center  items-center">
                 <Image src={Instgram} alt="Instagram Profile" />
               </div>
-              <div className="h-10 w-10 ml-10 rounded-3xl bg-brandDark1 flex justify-center  items-center">
+              <div className="h-10 dark:hover:bg-brandLightOpacity20  hover:bg-borderEditProfile cursor-pointer w-10 ml-10 rounded-3xl bg-brandDark1 flex justify-center  items-center">
                 <Image src={Twitter} alt="Twitter Profile" />
               </div>
             </div>
             <div>
               <ul className="flex flex-col text-brandLightOpacity100 text-base text-right font-text">
                 <li>
-                  <a href="#">About us</a>
+                  <a href="#" className="montserratfont">About us</a>
                 </li>
                 <li className="pt-1">
-                  <a href="#">Contact Us</a>
+                  <a href="#" className="montserratfont">Contact Us</a>
                 </li>
                 <li className="pt-1">
-                  <a href="#">Careers</a>
+                  <a href="#" className="montserratfont">Careers</a>
                 </li>
               </ul>
             </div>
@@ -46,18 +46,18 @@ const Footer = () => {
           <div>
             <ul className="flex flex-row text-brandLightOpacity100 pt-10 text-base font-text">
               <li>
-                <a href="#">Disclaimer</a>
+                <a href="#" className="montserratfont">Disclaimer</a>
               </li>
               <li className="pl-10">
-                <a href="#">Privacy Policy</a>
+                <a href="#" className="montserratfont">Privacy Policy</a>
               </li>
               <li className="pl-10">
-                <a href="#">Terms of Use</a>
+                <a href="#" className="montserratfont">Terms of Use</a>
               </li>
             </ul>
           </div>
           <div className="flex justify-center items-center pt-5 pb-7 text-base font-text">
-            <p className="text-brandLightOpacity100">
+            <p className="text-brandLightOpacity100 montserratfont">
               (c) 2023 Gossip.gg - All Rights Reserved
             </p>
           </div>
@@ -76,13 +76,13 @@ const Footer = () => {
             <div>
               <ul className={`flex flex-col text-brandLightOpacity100 text-left montserratfont  ${style.font_text2}   `}>
                 <li>
-                  <a  href="#">About us</a>
+                  <a  href="#" className="montserratfont">About us</a>
                 </li>
                 <li className="pt-1">
-                  <a  className="montserratfont" href="#">Contact Us</a>
+                  <a  href="#" className="montserratfont">Contact Us</a>
                 </li>
                 <li className="pt-1">
-                  <a className="montserratfont" href="#">Careers</a>
+                  <a  href="#" className="montserratfont">Careers</a>
                 </li>
               </ul>
             </div>

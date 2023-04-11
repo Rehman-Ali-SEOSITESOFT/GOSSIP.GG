@@ -65,13 +65,13 @@ const ForgotPasswordModal = (props: any) => {
                       />
                       <div
                         onClick={() => props.onClickOpenModal()}
-                        className="h-10 w-10 rounded-full  dark:bg-brandLightOpacity5 flex justify-center items-center content-center absolute top-4 right-4 "
+                        className="h-10 w-10 bg-brandLightOpacity5 hover:bg-[#353233]   cursor-pointer rounded-full   flex justify-center items-center content-center absolute top-4 right-4 "
                       >
                         <Image src={Close} alt="google icon" />
                       </div>
                       <div
                         onClick={() => props.onClickOpenModal()}
-                        className="h-10 w-10 rounded-full  dark:bg-brandLightOpacity5 flex justify-center items-center content-center absolute top-4 left-4 "
+                        className="h-10 w-10 bg-brandLightOpacity5 hover:bg-[#353233]  cursor-pointer rounded-full   flex justify-center items-center content-center absolute top-4 left-4 "
                       >
                         <Image src={Back} alt="back icon" />
                       </div>
@@ -86,7 +86,7 @@ const ForgotPasswordModal = (props: any) => {
                         </p>
                         <span className="montserratfont text-center  pb-8 text-brandDark2 dark:text-brandLightOpacity70 not-italic text-base mw-sm:text-[12px]">Please confirm your email so we can send<br/> you a link to reset your password.</span>
                         <input
-                          className="border-brandLightOpacity10 hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] mb-10 dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
+                          className="border-brandLightOpacity10 montserratfont hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] mb-10 dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
                           id="email"
                           type="text"
                           placeholder="Email"
@@ -120,10 +120,10 @@ const ForgotPasswordModal = (props: any) => {
                     </div>
                     <div className="mw-sm:pl-10 mw-sm:pr-10 pl-30 pr-30 mt-8 mb-[124px]">
                       <div className="flex flex-row justify-center items-center">
-                        <div className="mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full mr-5 bg-iconBackground dark:bg-brandLightOpacity5 bg-brandLightOpacity5 flex justify-center items-center content-center ">
+                        <div className="hover:bg-borderEditProfile dark:hover:bg-[#353233] mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full mr-5 bg-iconBackground dark:bg-brandLightOpacity5 bg-brandLightOpacity5 flex justify-center items-center content-center ">
                         <Image src={theme === 'dark' ?  Google : GoogleLight} alt="google icon" />
                         </div>
-                        <div className="mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full ml-5 bg-iconBackground dark:bg-brandLightOpacity5 bg-brandLightOpacity5 flex justify-center items-center content-center ">
+                        <div className="hover:bg-borderEditProfile dark:hover:bg-[#353233] mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full ml-5 bg-iconBackground dark:bg-brandLightOpacity5 bg-brandLightOpacity5 flex justify-center items-center content-center ">
                         <Image src={theme === 'dark' ?  Discord : DiscordLight}  alt="google icon" />
                         </div>
                       </div>

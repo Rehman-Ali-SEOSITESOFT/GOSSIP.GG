@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import style from "./latestnew.module.css";
 import new1 from "../../assets/latest-news/news1.png";
 import new2 from "../../assets/latest-news/news2.png";
@@ -9,6 +9,7 @@ import new6 from "../../assets/latest-news/news6.png";
 import boomkark from "../../assets/latest-news/bookmark.png";
 import Image from "next/image";
 import SectionSaprator from "../SecSaprator";
+import { useTheme } from "next-themes";
 
 const LatestNews = () => {
   interface List {
@@ -42,6 +43,11 @@ const LatestNews = () => {
     },
   ];
   const [items, setItems] = useState(item);
+  const { theme } = useTheme();
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("")
+ useEffect(() =>{
+  setIsDarkTheme(theme === "dark" ? "dark": "light");
+ }, [theme]) 
   return (
     <section className={style.latest_news_page}>
       <div className="global-section-width">

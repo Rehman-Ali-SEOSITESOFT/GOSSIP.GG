@@ -78,7 +78,7 @@ const ResetPasswordModal = (props: any) => {
                       />
                       <div
                         onClick={() => props.onClickOpenModal()}
-                        className="h-10 w-10 rounded-full  dark:bg-brandLightOpacity5 flex justify-center items-center content-center absolute top-4 right-4 "
+                        className="h-10 w-10 rounded-full bg-brandLightOpacity5 hover:bg-[#353233] flex justify-center items-center content-center absolute top-4 right-4 "
                       >
                         <Image src={Close} alt="google icon" />
                       </div>
@@ -106,7 +106,7 @@ const ResetPasswordModal = (props: any) => {
                              name="password"
                               type={show ? "text" : "password"}
                               placeholder="New Password"
-                              className="border-brandLightOpacity10 hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
+                              className="border-brandLightOpacity10  montserratfont hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
                             />
                             <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
                               <Image
@@ -122,7 +122,7 @@ const ResetPasswordModal = (props: any) => {
                              name="con-password"
                               type={showCon ? "text" : "password"}
                               placeholder="Re-enter Password"
-                              className="border-brandLightOpacity10 border hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
+                              className="border-brandLightOpacity10 montserratfont border hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
                             />
                             <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
                               <Image

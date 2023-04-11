@@ -7,14 +7,14 @@ import Logo3 from "../../../../assets/images/profile/logo-3.png";
 import Logo4 from "../../../../assets/images/profile/logo-4.png";
 import Logo5 from "../../../../assets/images/profile/logo-5.png";
 import Logo6 from "../../../../assets/images/profile/logo-6.png";
-
+import { useTheme } from "next-themes";
 const Carousel = () => {
   interface DisplayIamge {
     id: number;
     picture: any;
   }
 
-
+ const {theme} = useTheme();
    const itemDisplayImage: DisplayIamge[] = [
     {
       id: 1,
@@ -99,12 +99,18 @@ const Carousel = () => {
       },
     ],
   };
+  const [selecteitem, setSelectedItem] = useState<number>();
+  const onClickSelect = (i : number) =>{
+    setSelectedItem(i)
+  }
 
   return (
-    <Slider {...settings}>
+    <Slider className={`${theme === "dark" ? " dark-arrow" : " light-arrow"}`} {...settings}>
       {displayImageItems.map((i, index) => (
         <div key={index}>
-          <Image className="h-[60px] w-[60px]" src={i.picture} alt="logo" />
+          <Image className={`h-[60px] w-[60px]  ${selecteitem ===  index ? ' border rounded-full border-brandDar2 dark:border-brandLightOpacity100 ' : ''}`}
+          onClick={() => onClickSelect(index)}
+          src={i.picture} alt="logo" />
         </div>
       ))}
     </Slider>

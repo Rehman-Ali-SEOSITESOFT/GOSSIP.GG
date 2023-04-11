@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { useState, useEffect } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
 import Logo from "../../assets/images/live-match/logo.png";
@@ -21,6 +21,10 @@ const LiveMatch = () => {
     team_two_score: number;
   }
   const { theme } = useTheme();
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("")
+  useEffect(() =>{
+   setIsDarkTheme(theme === "dark" ? "dark": "light");
+  }, [theme]) 
   const [matchData, setMatchData] = useState<MatchList[]>([
     {
       match_title: "LPL 2023 Spring",
@@ -83,6 +87,15 @@ const LiveMatch = () => {
     // centerMode: true,
     responsive: [
       {
+        breakpoint: 1144,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true,
+        },
+      },
+      {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
@@ -118,7 +131,7 @@ const LiveMatch = () => {
         <div className="pt-[88px]">
           <SectionSaprator title="LIVE MATCHES" />
         </div>
-        <Slider className="live-matches-slider " {...settings}>
+        <Slider className={`live-matches-slider ${isDarkTheme === "dark" ? " dark-arrow" : " light-arrow"}`} {...settings}>
           {matchData.map((item, index) => (
             <div
               className="border  dark:border-brandLightOpacity10 bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1  dark:bg-brandDark1 border-inherit dark:border-brandDark1 border rounded"
@@ -128,7 +141,7 @@ const LiveMatch = () => {
                 <div className="flex items-center">
                   <Image
                     className="max-w-[100%] max-h-[100%]"
-                    src={theme === "dark" ? LogoDark : Logo}
+                    src={isDarkTheme === "dark" ? LogoDark : Logo}
                     alt="Live Match logo"
                   />
                   <p
@@ -139,14 +152,14 @@ const LiveMatch = () => {
                 </div>
                 {item.match_status !== "LIVE" ? (
                   <div className="bg-grayCard dark:bg-brandLightOpacity10 opacity-100 h-8 max-w-[25%]  text-[14px]  flex justify-center items-center rounded-sm min-w-fit">
-                    <p className="text-brandDark2 dark:text-brandLightOpacity100 opacity-70 montserratfont font-medium  text-[14px]  px-2 ">
+                    <p className="text-brandDark2 dark:text-brandLightOpacity100 opacity-70 montserratfont font-medium mw-sm3:text-[8px]  text-[14px]  px-2 ">
                       {item.match_status}
                     </p>
                   </div>
                 ) : (
                   <div className="bg-errorIndicator h-8 w-14 flex justify-center items-center rounded-sm min-w-fit">
                     <p
-                      className={`text-white montserratfont  text-[14px]  tracking-wider   `}
+                      className={`text-white montserratfont  text-[14px]  tracking-wider  mw-sm3:text-[8px]  `}
                     >
                       {item.match_status}
                     </p>
@@ -155,7 +168,8 @@ const LiveMatch = () => {
               </div>
               <div className="flex justify-center items-center mw-sm1:hidden">
                 <Image
-                  src={theme === "dark" ? DarkLine : Line}
+                  src={isDarkTheme === "dark" ? DarkLine : Line}
+                  className="w-[90%]"
                   alt="saprator line"
                 />
               </div>

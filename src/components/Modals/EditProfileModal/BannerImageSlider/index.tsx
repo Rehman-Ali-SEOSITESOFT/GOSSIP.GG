@@ -6,100 +6,17 @@ import Banner2 from "../../../../assets/images/profile/banner-2.png";
 import Banner3 from "../../../../assets/images/profile/banner-3.png";
 import Banner4 from "../../../../assets/images/profile/banner-4.png";
 import Image from "next/image";
+import { useTheme } from "next-themes";
+
 const BannerSlider = () => {
   interface BannerIamge {
     id: number;
     picture: any;
   }
 
-  //  const itemBannerImage: BannerIamge[] = [
-  //   {
-  //     id: 1,
-  //     picture: [
-  //       {
-  //         id: 1,
-  //         picture: Banner1,
-  //       },
-  //       {
-  //         id: 2,
-  //         picture: Banner2,
-  //       },
-  //       {
-  //         id: 3,
-  //         picture: Banner3,
-  //       },
-  //       {
-  //         id: 4,
-  //         picture: Banner4,
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     id: 2,
-  //     picture: [
-  //       {
-  //         id: 1,
-  //         picture: Banner1,
-  //       },
-  //       {
-  //         id: 2,
-  //         picture: Banner2,
-  //       },
-  //       {
-  //         id: 3,
-  //         picture: Banner3,
-  //       },
-  //       {
-  //         id: 4,
-  //         picture: Banner4,
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     id: 3,
-  //     picture: [
-  //       {
-  //         id: 1,
-  //         picture: Banner1,
-  //       },
-  //       {
-  //         id: 2,
-  //         picture: Banner2,
-  //       },
-  //       {
-  //         id: 3,
-  //         picture: Banner3,
-  //       },
-  //       {
-  //         id: 4,
-  //         picture: Banner4,
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     id: 4,
-  //     picture: [
-  //       {
-  //         id: 1,
-  //         picture: Banner1,
-  //       },
-  //       {
-  //         id: 2,
-  //         picture: Banner2,
-  //       },
-  //       {
-  //         id: 3,
-  //         picture: Banner3,
-  //       },
-  //       {
-  //         id: 4,
-  //         picture: Banner4,
-  //       },
-  //     ],
-  //   },
-
-  // ];
-
+  
+ 
+const {theme} = useTheme();
   const itemBannerImage: BannerIamge[] = [
     {
       id: 1,
@@ -153,15 +70,20 @@ const BannerSlider = () => {
     ],
   };
 
+  const [selecteitem, setSelectedItem] = useState<string>();
+  const onClickSelect = (n: number, i : number) =>{
+    setSelectedItem( n + "" + i)
+  }
+
   return (
-    <Slider {...settings} className="w-[100%]">
+    <Slider {...settings} className={`w-[100%] ${theme === "dark" ? " dark-arrow" : " light-arrow"}`}>
       {ImageItems.map((item, index) => (
         <div key={index} >
           <div className="grid grid-cols-2 gap-4">
-           <Image src={Banner4} className="h-[94px] max-w-[224px]" alt="banner"/>
-           <Image src={Banner3} className="h-[94px] max-w-[224px]" alt="banner"/>
-           <Image src={Banner1} className="h-[94px] max-w-[224px]" alt="banner"/>
-           <Image src={Banner2} className="h-[94px] max-w-[224px]" alt="banner"/>
+           <Image onClick={() => onClickSelect(1, index) } src={Banner4} className={`h-[94px] max-w-[224px] ${selecteitem === 1 + "" + index ? ' border border-brandDar2 dark:border-brandLightOpacity100 ' : ''}`  } alt="banner"/>
+           <Image onClick={() => onClickSelect(2, index) } src={Banner3} className={`h-[94px] max-w-[224px] ${selecteitem === 2 + "" + index ? ' border border-brandDar2 dark:border-brandLightOpacity100 ' : ''} `} alt="banner"/>
+           <Image onClick={() => onClickSelect(3, index) } src={Banner1} className={`h-[94px] max-w-[224px] ${selecteitem === 3 + "" + index ? ' border border-brandDar2 dark:border-brandLightOpacity100 ' : ''} `} alt="banner"/>
+           <Image onClick={() => onClickSelect(4, index) } src={Banner2} className={`h-[94px] max-w-[224px] ${selecteitem === 4 + "" + index ? ' border border-brandDar2 dark:border-brandLightOpacity100 ' : ''} `} alt="banner"/>
           </div>
         </div>
       ))}

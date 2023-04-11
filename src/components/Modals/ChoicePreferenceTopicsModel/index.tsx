@@ -288,7 +288,7 @@ const ChoicePreferenceTopicModel = (props: any) => {
                       </p>
                     </div>
                     <div
-                      className="icon flex  bg-arrowicon dark:bg-brandLightOpacity10  justify-center items-center w-[40px] h-[40px] rounded-3xl cursor-pointer"
+                      className="icon flex hover:bg-borderEditProfile cursor-pointer  bg-arrowicon dark:bg-brandLightOpacity10  justify-center items-center w-[40px] h-[40px] rounded-3xl cursor-pointer"
                       onClick={() => props.onClickOpenModal()}
                     >
                       <i className="text-xl fa-solid fa-xmark"></i>
