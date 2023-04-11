@@ -112,19 +112,31 @@
 .light-arrow.slick-slider button.slick-next {
   width: 124px;
   height: 40px;
-  top: 17px;
+  top: 50%;
 }
 .dark-arrow.slick-slider button.slick-prev,
 .light-arrow.slick-slider button.slick-prev {
   width: 124px;
   height: 40px;
-  top: 17px;
+  top: 44%;
   transform: matrix(-1, 0, 0, 1, 0, 0);
   z-index: 1;
-  top: -6px;
 }
-.dark-arrow.slick-slider button.slick-next,
-.dark-arrow.slick-slider button.slick-prev {
+
+.live-matches .dark-arrow.slick-slider button.slick-prev,
+.live-matches .light-arrow.slick-slider button.slick-prev {
+  top: 38%;
+}
+
+.trending .dark-arrow.slick-slider button.slick-prev,
+.trending .light-arrow.slick-slider button.slick-prev {
+  top: -4px;
+}
+
+/* .exports-banner .dark-arrow.slick-slider button.slick-next,
+.exports-banner .dark-arrow.slick-slider button.slick-prev, */
+.trending .dark-arrow.slick-slider button.slick-next,
+.trending .dark-arrow.slick-slider button.slick-prev {
   background: linear-gradient(
     270deg,
     var(--brandDark2) 15.85%,
@@ -132,8 +144,10 @@
     rgba(34, 30, 31, 0) 83.6%
   );
 }
-.light-arrow.slick-slider button.slick-next,
-.light-arrow.slick-slider button.slick-prev {
+/* .exports-banner .light-arrow.slick-slider button.slick-next,
+.exports-banner .light-arrow.slick-slider button.slick-prev, */
+.trending .light-arrow.slick-slider button.slick-next,
+.trending .light-arrow.slick-slider button.slick-prev {
   background: linear-gradient(
     270deg,
     var(--bodycolor) 15.85%,
@@ -148,7 +162,6 @@
   content: "";
   width: 40px;
   height: 40px;
-
   right: 7px;
   position: absolute;
   top: 0;
@@ -176,6 +189,15 @@
   background-color: var(--grayCard);
 }
 
+.exports-banner .dark-arrow.slick-slider .slick-next:hover::before,
+.exports-banner .dark-arrow.slick-slider .slick-prev:hover::before {
+  background-color: var(--brandLightOpacity10);
+}
+.exports-banner .light-arrow.slick-slider .slick-next:hover::before,
+.exports-banner .light-arrow.slick-slider .slick-prev:hover::before {
+  background-color: var(--brandLightOpacity90);
+}
+
 .dark-arrow.slick-slider .slick-next::after,
 .light-arrow.slick-slider .slick-next::after,
 .dark-arrow.slick-slider .slick-prev::after,
@@ -201,7 +223,7 @@
   background-image: url("../assets/trending-arrows/dark-arrow.png");
 }
 
-.deailslider .dark-arrow.slick-slider button.slick-next,
+/* .deailslider .dark-arrow.slick-slider button.slick-next,
 .deailslider .light-arrow.slick-slider button.slick-next {
   top: 50% !important;
   background: none;
@@ -210,7 +232,7 @@
 .deailslider .light-arrow.slick-slider button.slick-prev {
   top: 45% !important;
   background: none;
-}
+} */
 /* ARROW'S STYLE CLOSE */
 .font-sec-saprate-18 {
   font-family: "Montserrat";
@@ -250,6 +272,21 @@
 .slick-next {
   right: -65px !important;
 }
+.exports-banner .slick-prev {
+  left: 24px !important;
+}
+.exports-banner .slick-next {
+  right: 24px !important;
+}
+.exports-banner .slick-prev:before,
+.exports-banner .slick-next:before {
+  opacity: 1;
+}
+/*
+.exports-banner .slick-prev:hover::before,
+.exports-banner .slick-next:hover::before {
+  opacity: 1;
+} */
 .trendingteass .slick-prev {
   left: -45px !important;
 }
