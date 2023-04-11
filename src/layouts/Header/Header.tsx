@@ -51,7 +51,7 @@ const Header = () => {
   const [searchOpen, setSearchOpen] = useState<Boolean>(true);
   const [searchText, setSearchText] = useState<string>("");
   const [isLoggedIn, setIsLoggedIn] = useState<Boolean>(false);
-  const router = useRouter();
+
   const currentPage = usePathname();
   function classNames(...classes: any) {
     return classes.filter(Boolean).join(" ");
@@ -80,7 +80,9 @@ const Header = () => {
 
   const onClicklogout = () => {
     localStorage.removeItem("isLogin");
-    router.refresh();
+    setTimeout(() =>{
+      window.location.reload();
+     }, 500)
   };
 
   const [bgClassChange, setBgClassChange] = useState<any>(
