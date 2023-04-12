@@ -122,6 +122,9 @@ const Header = () => {
     setrRecentSearchList(newArr);
   };
 
+  const hanldeRemove = () => {
+    setSearchText("");
+  };
   return (
     <header className={`${styles.main_header} relative z-[2]`}>
       <div className={`${styles.header_width} `}>

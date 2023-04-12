@@ -5,7 +5,7 @@ const ExportsEventBanner = () => {
   return (
     <div className="ExportsEventBanner pt-11	">
       <div className="max-w-[1440px] w-full m-auto">
-        <div className="2xl:container exports-banner">
+        <div className="2xl:container exports-banner relative">
           <ExportEventBannerSlider />
         </div>
       </div>
