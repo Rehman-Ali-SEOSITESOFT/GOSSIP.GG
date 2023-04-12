@@ -103,7 +103,7 @@ const Bgmi = () => {
           </div>
           <div className="w-full pt-4 ">
             <a
-              href="#"
+              href="/viewmore?bgmi-events=bgmi-events"
               className="text-textColorGray dark:text-brandLightOpacity70 montserratfont font-base  leading-5 font-medium	 dark:hover:text-white hover:underline
               dark:hover:decoration-white 
               hover:decoration-black 

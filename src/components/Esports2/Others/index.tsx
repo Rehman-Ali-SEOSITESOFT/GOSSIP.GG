@@ -158,7 +158,7 @@ const Others = () => {
         </div>
 
         <div className="2xl:container">
-          <div className="flex  justify-between  flex-wrap">
+          <div className="flex  justify-between  flex-wrap ">
             {item.slice(0, itemLimit).map((ele, index) => {
               return (
                 <div

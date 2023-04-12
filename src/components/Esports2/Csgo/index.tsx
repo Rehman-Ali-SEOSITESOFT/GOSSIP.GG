@@ -11,7 +11,7 @@ import icon3 from "../../../assets/esports/v-mask-03.png";
 import chevronsright from "../../../assets/esports/chevrons-right.png";
 import Image from "next/image";
 import SectionSaprator from "@/components/SecSaprator";
-const Sogo = () => {
+const CsGo = () => {
   interface List {
     image: any;
     title: string;
@@ -40,7 +40,7 @@ const Sogo = () => {
     },
   ]);
   return (
-    <div className="Sogo-component">
+    <div className="CsGo-component">
       <div className="global-section-width">
         <div className="pt-16">
           <SectionSaprator title="CS:GO" />
@@ -104,7 +104,7 @@ const Sogo = () => {
           </div>
           <div className="w-full pt-4 ">
             <a
-              href="#"
+              href="/viewmore?csgo-events=csgo-events"
               className="text-textColorGray dark:text-brandLightOpacity70 montserratfont font-base  leading-5 font-medium	 dark:hover:text-white hover:underline
               dark:hover:decoration-white 
               hover:decoration-black 
@@ -122,4 +122,4 @@ const Sogo = () => {
   );
 };
 
-export default Sogo;
+export default CsGo;

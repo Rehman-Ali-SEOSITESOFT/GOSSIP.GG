@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Fragment } from "react";
-
 import logo from "../../assets/images/header/main-logo.png";
 import search from "../../assets/images/header/search.png";
 import moon from "../../assets/images/header/moon.png";
@@ -19,11 +18,16 @@ import setting from "../../assets/profile/settings.png";
 import downloadarrow from "../../assets/profile/downarrow.png";
 import Link from "next/link";
 import { Menu, Transition } from "@headlessui/react";
-
+import Cross from "../../assets/images/general/x.png";
+import Clock from "../../assets/images/general/clock.png";
 const Header = () => {
   interface MenuList {
     name: string;
     link: string;
+  }
+  interface searcList {
+    id: number;
+    name: string;
   }
   const { theme, setTheme } = useTheme();
   const [menu, setMenu] = useState<MenuList[]>([
@@ -48,20 +52,40 @@ const Header = () => {
       link: "/tech",
     },
   ]);
+  const [recentSearchList, setrRecentSearchList] = useState<searcList[]>([
+    {
+      id: 0,
+      name: "Hogwarts Championship Trophy Winner",
+    },
+    {
+      id: 1,
+      name: "Hogwarts Championship Date",
+    },
+    {
+      id: 2,
+      name: "Hogwarts Championship Trophy",
+    },
+  ]);
+
   const [searchOpen, setSearchOpen] = useState<Boolean>(true);
   const [searchText, setSearchText] = useState<string>("");
   const [isLoggedIn, setIsLoggedIn] = useState<Boolean>(false);
-
+  const [open, setOpen] = useState(false);
+  const [profileShow, setProfileShow] = useState<Boolean>(true);
+  const [bgClassChange, setBgClassChange] = useState<any>(
+    theme === "dark" ? "header_light_img" : "header_dark_img"
+  );
   const currentPage = usePathname();
-  function classNames(...classes: any) {
-    return classes.filter(Boolean).join(" ");
-  }
+
   useEffect(() => {
     let user: any = localStorage.getItem("isLogin");
     setIsLoggedIn(user);
     setBgClassChange(theme === "dark" ? "header_dark_img" : "header_light_img");
   }, []);
 
+  function classNames(...classes: any) {
+    return classes.filter(Boolean).join(" ");
+  }
   const hanldeClose = () => {
     setSearchOpen(!searchOpen);
   };
@@ -72,29 +96,35 @@ const Header = () => {
     console.log(searchText);
   };
 
-  const [open, setOpen] = useState(false);
-  const [profileShow, setProfileShow] = useState<Boolean>(true);
   const onClickOpenModal = () => {
     setOpen(!open);
   };
 
   const onClicklogout = () => {
     localStorage.removeItem("isLogin");
-    setTimeout(() =>{
+    setTimeout(() => {
       window.location.reload();
-     }, 500)
+    }, 500);
   };
 
-  const [bgClassChange, setBgClassChange] = useState<any>(
-    theme === "dark" ? "header_light_img" : "header_dark_img"
-  );
   const hanldeChangeTheme = () => {
     setBgClassChange(theme === "dark" ? "header_light_img" : "header_dark_img");
-    // setTimeout(() => {
     setTheme(theme === "dark" ? "light" : "dark");
-    // }, 0);
   };
 
+  const onClickCloseSearchList = () => {
+    setSearchText("");
+  };
+  const onClickRemoveItemList = (id: number) => {
+    let arr: Array<searcList> = [];
+    arr = [...recentSearchList];
+    let newArr: Array<searcList> = arr.filter((item) => item.id !== id);
+    setrRecentSearchList(newArr);
+  };
+
+  const hanldeRemove = () => {
+    setSearchText("");
+  };
   return (
     <header className={`${styles.main_header} relative z-[2]`}>
       <div className={`${styles.header_width} `}>
@@ -131,42 +161,79 @@ const Header = () => {
                 </div>
               </div>
             ) : (
-              <div
-                className={`xl:w-3/6 lg:w-1/1 ${
-                  searchOpen
-                    ? `${styles.seach__deve}`
-                    : `${styles.seach__deve} ${styles.open}`
-                } `}
-              >
-                <div className={`${styles.serach_btn} relative `}>
-                  <input
-                    value={searchText}
-                    className="w-full border-none montserratfont bg-brandLightOpacity10 placeholder:text-brandLightOpacity70 montserratfont font-medium test-base leading-5"
-                    onChange={hanldeChange}
-                    placeholder="Search"
-                  />
-                  <span
-                    onClick={hanldeSearch}
-                    className="absolute top-[13px] right-7 "
-                  >
-                    <Image
-                      src={search}
-                      alt="search "
-                      className="w-[22px] h-[22px]"
+              <>
+                <div
+                  className={`xl:w-3/6 lg:w-1/1 ${
+                    searchOpen
+                      ? `${styles.seach__deve}`
+                      : `${styles.seach__deve} ${styles.open}`
+                  } `}
+                >
+                  <div className={`${styles.serach_btn} relative   `}>
+                    <input
+                      value={searchText}
+                      className="w-full  montserratfont border border-brandLightOpacity10  bg-brandDark1 placeholder:text-brandLightOpacity70  text-brandLightOpacity70 montserratfont font-medium test-base leading-5"
+                      onChange={hanldeChange}
+                      placeholder="Search"
                     />
-                  </span>
-                  <span
-                    onClick={hanldeSearch}
-                    className="absolute h-8 flex items-center top-[8px] right-[60px] pr-4	border-r border-[#adacac]	 "
-                  >
-                    <Image
-                      src={close}
-                      alt="search "
-                      className="w-[22px] h-[22px]"
-                    />
-                  </span>
+                    <Link
+                      href="/search"
+                      className="absolute top-[13px] right-7 "
+                    >
+                      <Image
+                        src={search}
+                        alt="search "
+                        className="w-[22px] h-[22px]"
+                      />
+                    </Link>
+                    {searchText !== "" && (
+                      <>
+                        <span
+                          onClick={onClickCloseSearchList}
+                          className="absolute h-8 flex items-center top-[8px] right-[60px] pr-4	border-r border-[#adacac]	 "
+                        >
+                          <Image
+                            src={close}
+                            alt="search "
+                            className="w-[22px] h-[22px]"
+                          />
+                        </span>
+
+                        <div className="absolute shadow-3xshadow  rounded border-[2px] border-brandLightOpacity10 left-6 mt-[2px] bg-brandDark1 pb-2  w-[539px]">
+                          <div className="h-[44px]  px-4 flex items-center ">
+                            <p className="montserratfont text-brandLightOpacity100 font-normal text-sm">
+                              Recent Search
+                            </p>
+                          </div>
+                          {recentSearchList.length > 0 ? (
+                            recentSearchList.map((item, index) => (
+                              <div
+                                onClick={() => onClickRemoveItemList(item.id)}
+                                className="flex flex-row h-[44px]  px-4 hover:bg-brandLightOpacity10  justify-between items-center"
+                                key={index}
+                              >
+                                <div className="flex items-center ">
+                                  <Image src={Clock} alt="clock" />
+                                  <p className="montserratfont pl-[7px] text-brandLightOpacity100 font-normal text-sm ">
+                                    {item.name}
+                                  </p>
+                                </div>
+                                <Image src={Cross} alt="close" />
+                              </div>
+                            ))
+                          ) : (
+                            <div className="h-[44px]  px-4 flex items-center ">
+                            <p className="montserratfont text-brandLightOpacity100 font-normal text-sm">
+                              No search found
+                            </p>
+                          </div>
+                          )}
+                        </div>
+                      </>
+                    )}
+                  </div>
                 </div>
-              </div>
+              </>
             )}
 
             <div className={`xl:w-1/4 lg:w-1/5	w-3/6 ${styles.header__right}`}>
