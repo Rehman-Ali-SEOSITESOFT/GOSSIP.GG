@@ -61,7 +61,7 @@ const NewsEsports = () => {
                                 5 min read
                               </span>
                             </small>
-                            <p className="robotoslub text-base leading-7 tracking-[0.03em] dark:text-brandLightOpacity90 text-textColor opacity-90	font-normal pb-1">
+                            <p className="robotoslub text-base leading-7 tracking-[0.03em] dark:text-brandLightOpacity90 text-textColor opacity-90	font-normal pb-[20px]">
                               Lorem Ipsum is simply dummy text of the printing
                               and typesetting industry. Lorem Ipsum has been the
                               industry&#39;s standard dummy text ever since the

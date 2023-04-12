@@ -22,7 +22,8 @@
   border-right: none;
 }
 .news_desc,
-.news_img_wrap {
+.news_img_wrap,
+.book {
   border-bottom: 1px;
   border-style: solid;
   border-color: transparent;
@@ -30,8 +31,10 @@
 }
 .news_items:nth-child(3) .news_desc,
 .news_items:nth-child(3) .news_img_wrap,
+.news_items:nth-child(3) .book,
 .news_items:nth-child(4) .news_desc,
-.news_items:nth-child(4) .news_img_wrap {
+.news_items:nth-child(4) .news_img_wrap,
+.news_items:nth-child(4) .book {
   border-bottom: none;
   padding-bottom: 0px;
 }
