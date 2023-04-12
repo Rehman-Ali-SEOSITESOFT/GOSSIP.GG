@@ -93,6 +93,9 @@ const Header = () => {
     // }, 0);
   };
 
+  const hanldeRemove = () => {
+    setSearchText("");
+  };
   return (
     <header className={`${styles.main_header} relative z-[2]`}>
       <div className={`${styles.header_width} `}>
@@ -139,7 +142,7 @@ const Header = () => {
                 <div className={`${styles.serach_btn} relative `}>
                   <input
                     value={searchText}
-                    className="w-full border-none montserratfont bg-brandLightOpacity10 placeholder:text-brandLightOpacity70 montserratfont font-medium test-base leading-5"
+                    className="w-full border-none montserratfont bg-brandLightOpacity10 placeholder:text-brandLightOpacity70 text-brandLightOpacity70 montserratfont font-medium test-base leading-5"
                     onChange={hanldeChange}
                     placeholder="Search"
                   />
@@ -154,13 +157,13 @@ const Header = () => {
                     />
                   </span>
                   <span
-                    onClick={hanldeSearch}
+                    onClick={hanldeRemove}
                     className="absolute h-8 flex items-center top-[8px] right-[60px] pr-4	border-r border-[#adacac]	 "
                   >
                     <Image
                       src={close}
                       alt="search "
-                      className="w-[22px] h-[22px]"
+                      className="w-[22px] h-[22px] cursor-pointer"
                     />
                   </span>
                 </div>
