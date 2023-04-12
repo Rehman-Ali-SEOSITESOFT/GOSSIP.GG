@@ -88,7 +88,7 @@ const ProfileDetail = () => {
                     alt="pc"
                     className="inline-block mr-2 brightness-0	dark:brightness-100 "
                     src={pc}
-                  />{" "}
+                  />
                   <span>PC</span>
                 </div>
                 <div className="text-sm	leading-4	montserratfont font-normal	dark:text-brandLightOpacity100 border border-brandDark2 dark:border-brandLightOpacity100 rounded w-[103px] h-[35px] flex items-center justify-center ml-3">
@@ -96,7 +96,7 @@ const ProfileDetail = () => {
                     alt="pc"
                     src={valorant}
                     className="inline-block  mr-2 w-[20px] h-16px brightness-0	dark:brightness-100"
-                  />{" "}
+                  />
                   <span>Valorant</span>
                 </div>
               </div>
