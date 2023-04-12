@@ -15,6 +15,7 @@ import ForgotPasswordModal from "../ForgotPasswordModal";
 import { useTheme } from "next-themes";
 import EyeOff from "../../../assets/images/modal/eye.png";
 import Eye from "../../../assets/images/modal/eye-off.png";
+
 const LoginModal = (props: any) => {
   const cancelButtonRef = useRef(null);
   const { theme} = useTheme();
@@ -39,6 +40,18 @@ const LoginModal = (props: any) => {
   const onClickShowPassword = () => {
     setShow(!show);
   };
+
+
+
+  const onClickLogin =() =>{
+    localStorage.setItem("isLogin", JSON.stringify(true));
+   
+     props.onClickOpenModal();
+     setTimeout(() =>{
+      window.location.reload();
+     }, 500)
+  }
+
 
   return (
     <>
@@ -149,7 +162,9 @@ const LoginModal = (props: any) => {
                         </div>
                       </div>
                       <div className="flex flex-col items-center">
-                        <button className="bg-brand mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold">
+                        <button 
+                       onClick={() => onClickLogin()}
+                       className="bg-brand mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold">
                           Log In
                         </button>
                         <p className="pt-3 montserratfont text-brandDark2 dark:text-brandLightOpacity70 text-xs">

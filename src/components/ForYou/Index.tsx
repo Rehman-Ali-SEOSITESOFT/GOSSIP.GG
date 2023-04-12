@@ -37,7 +37,11 @@ const ForYou = () => {
                     </h4>
                     <div>
                       <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20  hover:bg-borderEditProfile cursor-pointer rounded-3xl">
-                        <Image src={bookmark} alt="bookmark" />
+                        <Image
+                          src={bookmark}
+                          alt="bookmark"
+                          className=" brightness-0 dark:brightness-200"
+                        />
                       </div>
                     </div>
                   </div>
@@ -73,7 +77,11 @@ const ForYou = () => {
                     </h4>
                     <div>
                       <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20  hover:bg-borderEditProfile cursor-pointer rounded-3xl">
-                        <Image src={bookmark} alt="bookmkard" />
+                        <Image
+                          src={bookmark}
+                          alt="bookmkard"
+                          className=" brightness-0 dark:brightness-200"
+                        />
                       </div>
                     </div>
                   </div>

@@ -77,14 +77,14 @@ const NewsTech = () => {
                           </div>
                         </div>
                         <div className="shared-icons flex items-center">
-                          <div className="icon bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer">
+                          <div className="icon bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer  hover:bg-borderEditProfile">
                             <Image
                               src={comment}
                               alt="up-arrow"
                               className="dark:brightness-200 brightness-0 "
                             />
                           </div>
-                          <div className="icon bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer mx-[28px]">
+                          <div className="icon bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer mx-[28px]  hover:bg-borderEditProfile">
                             <Image
                               src={
                                 index === 1 || index === 3
@@ -99,7 +99,7 @@ const NewsTech = () => {
                               }`}
                             />
                           </div>
-                          <div className="icon bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer">
+                          <div className="icon bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer  hover:bg-borderEditProfile">
                             <Image
                               src={sharedbtn}
                               alt="up-arrow"
@@ -110,7 +110,7 @@ const NewsTech = () => {
                       </div>
                     </div>
                     <div className="item-iamge-arrows text-center">
-                      <div className="up-arrow bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer">
+                      <div className="up-arrow bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer  hover:bg-borderEditProfile">
                         <Image
                           src={
                             index === 0 || index === 3 ? uparrowColor : uparrow
@@ -126,7 +126,7 @@ const NewsTech = () => {
                       <div className="count dark:text-brandLightOpacity100 montserratfont font-semibold	 text-base center	leading-5 py-1		">
                         17
                       </div>
-                      <div className="down-arrow bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer">
+                      <div className="down-arrow bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer  hover:bg-borderEditProfile">
                         <Image
                           src={index === 1 ? downarrowColor : downarrow}
                           alt="down-arrow"
