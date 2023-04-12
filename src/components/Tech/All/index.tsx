@@ -9,7 +9,7 @@ const MainTech = () => {
     <section className="MainTech mt-[-5px] ">
       <AllHeroSection />
       <div className="latest-news">
-        <LatestNews />
+        {/* <LatestNews />
         <div className="global-section-width">
           <div className="2xl:container">
             <div className="flex pt-2">
@@ -25,11 +25,11 @@ const MainTech = () => {
               </div>{" "}
             </div>
           </div>{" "}
-        </div>
+        </div> */}
       </div>
-      <AllReviews />
-      <TechFeature />
-      <AllDeail />
+      {/* <AllReviews /> */}
+      {/* <TechFeature /> */}
+      {/* <AllDeail /> */}
     </section>
   );
 };
