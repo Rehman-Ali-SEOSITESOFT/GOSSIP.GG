@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import trendingLight from "../../../assets/globals/trending-light.png";
 import trendingDard from "../../../assets/globals/trending-dark.png";
-import styles from "./relatedSlider.module.css";
+import styles from "./relatedslider.module.css";
 import { useTheme } from "next-themes";
 const RelatedTopics = () => {
   var settings = {
