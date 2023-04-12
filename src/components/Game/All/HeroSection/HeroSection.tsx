@@ -1,17 +1,24 @@
-import Image from "next/image"
-import React, { useState } from "react"
-import leftside from "../../../../assets/images/hero/hero-section-left-side.png"
-import book1 from "../../../../assets/images/hero/right-side-01.png"
-import book2 from "../../../../assets/images/hero/right-side-012.png"
-import book3 from "../../../../assets/images/hero/right-side-03.png"
-import bookmark from "../../../../assets/gaming/bookmark.png"
-import styles from "./styles.module.css"
-
+import Image from "next/image";
+import React, { useState, useEffect } from "react";
+import leftside from "../../../../assets/images/hero/hero-section-left-side.png";
+import book1 from "../../../../assets/images/hero/right-side-01.png";
+import book2 from "../../../../assets/images/hero/right-side-012.png";
+import book3 from "../../../../assets/images/hero/right-side-03.png";
+import bookmark from "../../../../assets/gaming/bookmark.png";
+import bookmarkDark from "../../../../assets/gaming/bookmark-dark.png";
+import styles from "./styles.module.css";
+import { useTheme } from "next-themes";
 const HeroSection = () => {
   interface List {
-    name: string
-    picture: any
+    name: string;
+    picture: any;
   }
+
+  const { theme } = useTheme();
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
+  useEffect(() => {
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   const [item, setItem] = useState<List[]>([
     {
       name: "MR Luna has announced he is stepping down as CEO",
@@ -25,7 +32,7 @@ const HeroSection = () => {
       name: "Bayes Esports appoints York Scheunemann as COO",
       picture: book3,
     },
-  ])
+  ]);
   return (
     <>
       <div className="global-section-width  ">
@@ -61,8 +68,7 @@ const HeroSection = () => {
                       </div>
                       <div className="desc_wrapper pr-5	pl-3.5		">
                         <h3 className="text-base font-bold  leading-5	 text-brandDark2 montserratfont dark:text-brandLightOpacity100 mw-11:h-[40px] mw-lg:h-auto overflow-hidden ">
-                          {" "}
-                          {elem.name}{" "}
+                          {elem.name}
                         </h3>
                         {/* <p className="text-xs text-textColor robotoslub py-2.5 mx-14:py-2 mw-sm:hidden dark:text-brandLightOpacity90   overflow-hidden">
                           It is a long established fact that a reader will be
@@ -78,9 +84,8 @@ const HeroSection = () => {
                         </div>
                         <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs mw-sm3:text-[10px]">
                           <span className="montserratfont">
-                            {" "}
-                            <i>3 hrs ago</i>{" "}
-                          </span>{" "}
+                            <i>3 hrs ago</i>
+                          </span>
                           <span
                             className={`border-l border-l-textColorGray pl-2 ml-2 border-textColorGray   dark:border-l-brandLightOpacity70   `}
                           >
@@ -90,11 +95,11 @@ const HeroSection = () => {
                       </div>
                       <div className={"thumnail_wrapper"}>
                         <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20  hover:bg-grayCardHover cursor-pointer rounded-3xl">
-                          <Image src={bookmark} alt="img" />
+                          <Image src={isDarkTheme === 'dark' ?  bookmark : bookmarkDark } alt="img" />
                         </div>
                       </div>
                     </div>
-                  )
+                  );
                 })}
               </div>
             </div>
@@ -102,7 +107,7 @@ const HeroSection = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;

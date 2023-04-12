@@ -22,10 +22,10 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex flex-row">
-              <div className="h-10 w-10 dark:hover:bg-brandLightOpacity20  hover:bg-borderEditProfile cursor-pointer rounded-3xl bg-brandDark1 flex justify-center  items-center">
+              <div className="h-10 w-10   hover:bg-brandLightOpacity20 cursor-pointer rounded-3xl bg-brandDark1 flex justify-center  items-center">
                 <Image src={Instgram} alt="Instagram Profile" />
               </div>
-              <div className="h-10 dark:hover:bg-brandLightOpacity20  hover:bg-borderEditProfile cursor-pointer w-10 ml-10 rounded-3xl bg-brandDark1 flex justify-center  items-center">
+              <div className="h-10 hover:bg-brandLightOpacity20   cursor-pointer w-10 ml-10 rounded-3xl bg-brandDark1 flex justify-center  items-center">
                 <Image src={Twitter} alt="Twitter Profile" />
               </div>
             </div>

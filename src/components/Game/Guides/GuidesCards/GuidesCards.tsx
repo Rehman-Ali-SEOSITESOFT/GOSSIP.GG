@@ -1,5 +1,5 @@
 import Image from "next/image"
-import React, { useState } from "react"
+import React, { useState , useEffect} from "react"
 import image1 from "../../../../assets/select/image-react-1.png"
 import image2 from "../../../../assets/select/image-react-2.png"
 import image3 from "../../../../assets/select/image-react-3.png"
@@ -12,7 +12,14 @@ import image9 from "../../../../assets/gaming-guides-feature/image9.png"
 import image10 from "../../../../assets/gaming-guides-feature/image10.png"
 import image11 from "../../../../assets/gaming-guides-feature/image11.png"
 import bookmark from "../../../../assets/gaming/bookmark.png"
+import bookmarkDark from "../../../../assets/gaming/bookmark-dark.png";
+import { useTheme } from "next-themes"
 const GuidesCards = () => {
+  const { theme } = useTheme();
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
+  useEffect(() => {
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   const [list, setList] = useState<any[]>([
     image1,
     image2,
@@ -50,7 +57,7 @@ const GuidesCards = () => {
                   </h4>
                   <div>
                     <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20    hover:bg-grayCardHover cursor-pointer rounded-3xl">
-                      <Image src={bookmark} alt=" " />
+                      <Image src={isDarkTheme === 'dark' ? bookmark : bookmarkDark} alt=" " />
                     </div>
                   </div>
                 </div>

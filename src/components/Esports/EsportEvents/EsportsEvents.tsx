@@ -61,7 +61,7 @@ const EsportsEvents = () => {
                 </div>
                 <p className="robotoslub text-base	leading-[27px] font-normal	text-brandLightOpacity90 tracking-[0.03em]">
                   Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
+                  typesetting industry. Lorem Ipsum has been the industry&#39;s
                   standard dummy text ever since the 1500s, when an unknown
                   printer took a galley of type and scrambled it to make a type
                   specimen book. It has survived not only five centuries.
@@ -72,7 +72,7 @@ const EsportsEvents = () => {
                   </h2>
                   <p className="robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] text-brandLightOpacity90">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
+                    typesetting industry. Lorem Ipsum has been the industry&#39;s
                     standard dummy text ever since the 1500s, when an unknown
                     printer took a galley of type and scrambled it to make a
                     type specimen book. It has survived not only five centuries,
@@ -81,7 +81,7 @@ const EsportsEvents = () => {
                   </p>
                   <p className="mt-[40px] robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] text-brandLightOpacity90">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
+                    typesetting industry. Lorem Ipsum has been the industry&#39;s
                     standard dummy text ever since the 1500s, when an unknown
                     printer took a galley of type and scrambled it to make a
                     type specimen book. It has survived not only five centuries,
