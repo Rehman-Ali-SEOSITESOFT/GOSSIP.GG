@@ -51,12 +51,14 @@
 .right_section {
   scrollbar-gutter: auto;
 }
+.right_section::-webkit-scrollbar-button {
+  height: 100px;
+}
 .right_section::-webkit-scrollbar {
   width: 8px;
-  max-height: 100px;
 }
 .right_section::-webkit-scrollbar-track {
-  background: #2e2a2b;
+  background: #363233;
 }
 .right_section::-webkit-scrollbar-thumb {
   border: 1px solid rgba(229, 229, 229, 0.2);

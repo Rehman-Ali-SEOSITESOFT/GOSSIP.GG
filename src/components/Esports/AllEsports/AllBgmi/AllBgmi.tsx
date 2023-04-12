@@ -1,6 +1,9 @@
 import SectionSaprator from "@/components/SecSaprator"
+import Image from "next/image"
 import React, { useState } from "react"
-import Card from "../../../../assets/esporting-events/image3.png"
+import ViewMore from "@/components/Gamings/ViewMore/ViewMore"
+import bookmark from "../../../../assets/latest-news/bookmark.png"
+import Card from "../../../../assets/esporting-events/image4.png"
 import Icon from "../../../../assets/images/esport-event/icon.png"
 import Logo from "../../../../assets/images/esport-event/logo.png"
 import DarkLogo from "../../../../assets/images/esport-event/logo-dark.png"
@@ -13,12 +16,9 @@ import image5 from "../../../../assets/esporting-events/image5.png"
 import image6 from "../../../../assets/esporting-events/image6.png"
 import image7 from "../../../../assets/esporting-events/image7.png"
 import icon1 from "../../../../assets/egaming/CITYPNG.png"
+import style from "./AllBgmi.module.css"
 import { useTheme } from "next-themes"
-import style from "./AllValorant.module.css"
-import Image from "next/image"
-import ViewMore from "@/components/Gamings/ViewMore/ViewMore"
-import bookmark from "../../../../assets/latest-news/bookmark.png"
-const AllValorant = () => {
+const AllBgmi = () => {
   const { theme } = useTheme()
   interface EventList {
     event_title: string
@@ -58,11 +58,11 @@ const AllValorant = () => {
   ])
   return (
     <>
-      <section className="valorant_wrapper">
-        <div className="global-section-width ">
-          <div className="2xl:contaier">
+      <section className="all_bgmi_wrapper">
+        <div className="global-section-width">
+          <div className="2xl:container">
             <div className="mt-[52px]">
-              <SectionSaprator title="Valorant" />
+              <SectionSaprator title="BGMI" />
             </div>
             <div className="valorant_card_section flex justify-between">
               <div className="w-[23%]	 rounded border  dark:border-brandLightOpacity10 bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1 dark:bg-brandDark1 border-inherit dark:border-brandDark1 border  p-2.5">
@@ -173,7 +173,7 @@ const AllValorant = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-[16px]">
+            <div className="mt-[16px] mb-[52px]">
               <ViewMore />
             </div>
           </div>
@@ -183,4 +183,4 @@ const AllValorant = () => {
   )
 }
 
-export default AllValorant
+export default AllBgmi
