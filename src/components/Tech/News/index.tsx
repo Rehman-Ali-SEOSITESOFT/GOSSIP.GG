@@ -1,26 +1,26 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
-import Image from "next/image";
-import downarrow from "../../../assets/user-for-you/down-arrow.png";
-import downarrowColor from "../../../assets/user-for-you/fill-down-arrow.png";
-import uparrow from "../../../assets/user-for-you/up-arrow.png";
-import uparrowColor from "../../../assets/user-for-you/fill-up-arrow.png";
-import comment from "../../../assets/user-for-you/comment.png";
-import bookmark from "../../../assets/user-for-you/bookmark.png";
-import bookmarkfill from "../../../assets/user-for-you/fill-bookmark.png";
-import sharedbtn from "../../../assets/user-for-you/share.png";
-import user1 from "../../../assets/user-for-you/user-1.png";
-import user2 from "../../../assets/user-for-you/user-2.png";
-import user3 from "../../../assets/user-for-you/user-3.png";
-import user4 from "../../../assets/user-for-you/user-4.png";
-import user5 from "../../../assets/tech/hero-bg.png";
-import user6 from "../../../assets/tech/ne.png";
+import Image from "next/image"
+import downarrow from "../../../assets/user-for-you/down-arrow.png"
+import downarrowColor from "../../../assets/user-for-you/fill-down-arrow.png"
+import uparrow from "../../../assets/user-for-you/up-arrow.png"
+import uparrowColor from "../../../assets/user-for-you/fill-up-arrow.png"
+import comment from "../../../assets/user-for-you/comment.png"
+import bookmark from "../../../assets/user-for-you/bookmark.png"
+import bookmarkfill from "../../../assets/user-for-you/fill-bookmark.png"
+import sharedbtn from "../../../assets/user-for-you/share.png"
+import user1 from "../../../assets/user-for-you/user-1.png"
+import user2 from "../../../assets/user-for-you/user-2.png"
+import user3 from "../../../assets/user-for-you/user-3.png"
+import user4 from "../../../assets/user-for-you/user-4.png"
+import user5 from "../../../assets/tech/hero-bg.png"
+import user6 from "../../../assets/tech/ne.png"
 
-import AsideBar from "../Asidebar";
-import Pagination from "@/components/Pagination";
-import FilterTabs from "../Filter";
+import AsideBar from "../Asidebar"
+import Pagination from "@/components/Pagination"
+import FilterTabs from "../Filter"
 const NewsTech = () => {
-  const userDetil = [user1, user2, user3, user4, user5, user6];
+  const userDetil = [user1, user2, user3, user4, user5, user6]
   return (
     <section className="global-section-width">
       <FilterTabs />
@@ -135,7 +135,7 @@ const NewsTech = () => {
                       </div>
                     </div>
                   </div>
-                );
+                )
               })}
             </div>
           </div>
@@ -144,7 +144,7 @@ const NewsTech = () => {
         <Pagination />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default NewsTech;
+export default NewsTech

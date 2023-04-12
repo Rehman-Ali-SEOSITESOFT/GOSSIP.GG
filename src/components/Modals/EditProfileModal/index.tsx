@@ -12,9 +12,6 @@ import Game3 from "../../../assets/images/profile/game3.png";
 import Game4 from "../../../assets/images/profile/game4.png";
 import Airplay from "../../../assets/images/profile/airplay.png";
 import Vector from "../../../assets/images/general/Vector.png";
-import Nitendo from "../../../assets/images/general/Nintendo.png";
-import Xbox from "../../../assets/images/general/Xbox.png";
-import Playstation from "../../../assets/images/general/PlayStation.png";
 import Banner3 from "../../../assets/images/profile/banner-3.png";
 import Logo1 from "../../../assets/images/profile/logo-1.png";
 import DisplaySlider from "./DisplayImageSlider";
@@ -23,12 +20,11 @@ import { useTheme } from "next-themes";
 import DarkInsta from '../../../assets/images/profile/dark-insta.png';
 import DarkTwitter from '../../../assets/images/profile/dark-twitter.png';
 import DarkInfo from '../../../assets/images/profile/dark-info.png';
-import LightGame from '../../../assets/images/profile/light-game.png';
 import LightAirplay from '../../../assets/images/profile/airplay-light.png';
-import LightNintendo from '../../../assets/images/profile/nintendo-light.png';
 import LightPhone from '../../../assets/images/profile/phone-light.png';
-import LightPlaystation from '../../../assets/images/profile/PlayStation-light.png';
-import LightXbox from '../../../assets/images/profile/xbox-light.png';
+import LightConsole from '../../../assets/images/profile/console.png';
+import Console from '../../../assets/images/profile/console-dark.png';
+
 const EditProfileModal = (props: any) => {
   const cancelButtonRef = useRef(null);
   const [openTab, setOpenTab] = useState<number | null>(1);
@@ -42,6 +38,7 @@ const EditProfileModal = (props: any) => {
   interface PlatformList {
     name: string;
     picture: any;
+    lightImage: any
   }
 
   const item: GameList[] = [
@@ -126,18 +123,32 @@ const EditProfileModal = (props: any) => {
     {
       name: "PC",
       picture: Airplay,
+      lightImage : LightAirplay
     },
     {
       name: "Mobile",
       picture: Vector,
+      lightImage: LightPhone
     },
     {
       name: "Console",
-      picture: Playstation,
+      picture:Console ,
+      lightImage: LightConsole
     },
   ];
-  const [platformItems, setPlatformItems] = useState(itemPlatform);
 
+  const [platformItems, setPlatformItems] = useState(itemPlatform);
+  const [selectedGame, setSelectedGame] = useState<number>();
+  const [selectedPlatform, setSelectedPlatform] = useState<number>();
+
+
+  const onClickSelectGame = (n: number) =>{
+    setSelectedGame(n);
+  }
+
+  const onClickSelectPlatform = (n: number) =>{
+    setSelectedPlatform(n);
+  }
   
   return (
     <>
@@ -393,14 +404,15 @@ const EditProfileModal = (props: any) => {
                                     {gameItems.map((item, index) => (
                                       <div
                                         key={index}
-                                        className="min-w-fit mr-4   mb-4  mw-sm:mb-2 mw-sm:mr-2 flex items-center justify-around border border-brandDark2 dark:border-[#ffffff]  rounded-lg h-11"
+                                        onClick={() => onClickSelectGame(index)}
+                                        className={`min-w-fit mr-4   mb-4  mw-sm:mb-2 mw-sm:mr-2 flex items-center justify-around border border-brandDark2 ${selectedGame === index ? 'bg-arrowicon dark:bg-brandDark2   dark:border-brand': 'dark:border-[#ffffff]' }   rounded-lg h-11`}
                                       >
                                         <Image
                                           className="ml-3 mr-2 mw-sm:mr-1 mw-sm:ml-2"
                                           src={item.picture}
                                           alt="game icon"
                                         />
-                                        <p className="mr-3 text-base mw-sm:mr-2 mw-sm:text-[14px] text-brandDark2 dark:text-brandLightOpacity70 montserratfont font-normal ">
+                                        <p className={`mr-3 ${selectedGame === index ? "text-brandDark2 font-semibold dark:text-brand":"text-brandDark2 dark:text-brandLightOpacity70 font-normal"}  hover:text-brandDark2 dark:hover:text-brandLightOpacity100 hover:font-semibold  text-base mw-sm:mr-2 mw-sm:text-[14px]  montserratfont  `}>
                                           {item.name}
                                         </p>
                                       </div>
@@ -411,21 +423,22 @@ const EditProfileModal = (props: any) => {
                                   <p className="text-base  text-brandDark2 dark:text-brandLightOpacity100 montserratfont font-semibold">
                                     Platform
                                   </p>
-                                  <p className=" mb-[14px] text-brandDark2 dark:text-brandLightOpacity70 montserratfont text-xs font-normal">
+                                  <p className={`mb-[14px] text-brandDark2 dark:text-brandLightOpacity70 montserratfont text-xs font-normal`}>
                                     Select one
                                   </p>
                                   <div className="flex flex-wrap max-w-[570px]">
                                     {platformItems.map((item, index) => (
                                       <div
                                         key={index}
-                                        className="min-w-fit mr-4   mb-4  mw-sm:mb-2 mw-sm:mr-2 flex items-center justify-around border border-brandDark2 dark:border-[#ffffff]  rounded-lg h-11"
+                                        onClick={() => onClickSelectPlatform(index)}
+                                        className={`min-w-fit mr-4   mb-4  mw-sm:mb-2 mw-sm:mr-2 flex items-center justify-around border ${selectedPlatform === index ? 'bg-arrowicon dark:bg-brandDark2   dark:border-brand': 'dark:border-[#ffffff] ' } border-brandDark2   rounded-lg h-11`}
                                       >
                                         <Image
                                           className="ml-3 mr-2 mw-sm:mr-1 mw-sm:ml-2"
-                                          src={item.picture}
+                                          src={theme === 'dark' ? item.picture : item.lightImage}
                                           alt="game icon"
                                         />
-                                        <p className="mr-3 text-base mw-sm:mr-2 mw-sm:text-[14px] text-brandDark2 dark:text-brandLightOpacity70 montserratfont font-normal ">
+                                        <p className={`mr-3 hover:text-brandDark2 dark:hover:text-brandLightOpacity100 hover:font-semibold ${selectedPlatform === index ? "text-brandDark2 font-semibold dark:text-brand":"text-brandDark2 dark:text-brandLightOpacity70 font-normal"} text-base mw-sm:mr-2 mw-sm:text-[14px]  montserratfont `}>
                                           {item.name}
                                         </p>
                                       </div>

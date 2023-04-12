@@ -4,6 +4,7 @@ import SectionSaprator from "@/components/SecSaprator"
 import LatestNews from "./LatestNews/LatestNews"
 import AllEsportsEvents from "./AllEsportsEvent/AllEsportsEvents"
 import AllValorant from "./Valorant/AllValorant"
+import AllBgmi from "./AllBgmi/AllBgmi"
 
 const AllEsports = () => {
   return (
@@ -20,6 +21,9 @@ const AllEsports = () => {
         </div>
         <div className="all_varo">
           <AllValorant />
+        </div>
+        <div className="all_bgmi">
+          <AllBgmi />
         </div>
       </section>
     </>

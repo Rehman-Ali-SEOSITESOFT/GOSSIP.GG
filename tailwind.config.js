@@ -41,7 +41,8 @@ module.exports = {
         grayCard: "rgba(34, 30, 31, 0.1)",
         grayCardHover: "rgba(34, 30, 31, 30%)",
         textColor: "rgba(34, 30, 31, 0.9)",
-        textColorGray: "rgba(34, 30, 31, 0.7) ",
+        textColorGray: "rgba(34, 30, 31, 0.7)",
+        commentBg: "rgba(46, 42, 43, 0.7)",
         secSaprator: "#ED4E50",
         userprofilebg: "#2a2627",
         arrowicon: "#e3e2e2",
@@ -89,4 +90,4 @@ module.exports = {
     },
   },
   plugins: [require("@tailwindcss/typography"), require("tailwind-scrollbar")],
-};
+}
