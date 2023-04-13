@@ -157,12 +157,8 @@ const NewsTech = () => {
                   key={index}
                 >
                   <div className="flex justify-between items-center">
-                    <div className="item-iamge-wrap w-full max-w-[295px] h-[250px] mw-sm3:h-[175px] pr-4">
-                      <Image
-                        src={elemet}
-                        alt="Image"
-                        className=" max-w-full w-full h-full object-cover w-auto rounded"
-                      />
+                    <div className="item-iamge-wrap w-full max-w-[295px] h-auto mw-sm3:h-[175px] pr-4">
+                      <Image src={elemet} alt="Image" className="rounded" />
                     </div>
                     <div className="item-iamge-arrows text-center">
                       <div className="up-arrow bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer  hover:bg-borderEditProfile">
