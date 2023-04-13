@@ -91,5 +91,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("tailwind-scrollbar"),  require('flowbite/plugin')],
+  plugins: [require("@tailwindcss/typography"), require("tailwind-scrollbar")],
 }
