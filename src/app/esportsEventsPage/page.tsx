@@ -30,7 +30,7 @@ import torurnament from "../../assets/esporting-events/tournament.png"
 import Image from "next/image"
 import style from "./esportsEventPage.module.css"
 import ValorantListing from "@/components/Esports/EsportEvents/ValorantListing/ValorantListing"
-const page = () => {
+const Page = () => {
   interface List {
     title: string
     icon: any
@@ -452,4 +452,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
