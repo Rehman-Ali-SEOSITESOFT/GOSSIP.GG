@@ -8,6 +8,7 @@ module.exports = {
   },
   content: [
     // Or if using `src` directory:
+    "./node_modules/flowbite-react/**/*.js",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
@@ -89,5 +90,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("tailwind-scrollbar")],
+  plugins: [require("@tailwindcss/typography"), require("tailwind-scrollbar"),  require('flowbite/plugin')],
 }
