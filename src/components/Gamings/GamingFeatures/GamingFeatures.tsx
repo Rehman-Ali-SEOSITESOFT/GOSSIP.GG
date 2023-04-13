@@ -80,9 +80,15 @@ const GamingFeatures = () => {
                     </div>
                   </div>
                 </div>
-                <div>
-                  <div className="bookmark text-textColorGray hover:text-textColor  dark:text-brandLightOpacity70 dark:hover:text-brandLightOpacity100">
-                    <i className="fa-regular fa-bookmark cursor-pointer	"></i>
+                <div
+                  className={`${style.book} border-grayCard dark:border-brandLightOpacity10`}
+                >
+                  <div className="bookmark flex items-center justify-center w-8 h-8 dark:text-brandLightOpacity100    cursor-pointer rounded-3xl">
+                    <Image
+                      src={bookmark}
+                      alt=""
+                      className=" brightness-0 dark:brightness-200"
+                    />
                   </div>
                 </div>
               </div>
