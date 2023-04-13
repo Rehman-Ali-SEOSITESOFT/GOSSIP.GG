@@ -324,4 +324,18 @@
   .global-section-width {
     padding: 0 16px;
   }
+  .hero-section-tech-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .hero-section-tech-title {
+    /* display: block; */
+    -webkit-line-clamp: 2;
+  }
 }

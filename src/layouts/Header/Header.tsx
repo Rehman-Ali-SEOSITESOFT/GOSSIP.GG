@@ -223,10 +223,10 @@ const Header = () => {
                             ))
                           ) : (
                             <div className="h-[44px]  px-4 flex items-center ">
-                            <p className="montserratfont text-brandLightOpacity100 font-normal text-sm">
-                              No search found
-                            </p>
-                          </div>
+                              <p className="montserratfont text-brandLightOpacity100 font-normal text-sm">
+                                No search found
+                              </p>
+                            </div>
                           )}
                         </div>
                       </>
@@ -237,7 +237,9 @@ const Header = () => {
             )}
 
             <div className={`xl:w-1/4 lg:w-1/5	w-3/6 ${styles.header__right}`}>
-              <div className={`${styles.header__right} flex justify-end `}>
+              <div
+                className={`${styles.header__right} flex justify-end items-center`}
+              >
                 {searchOpen ? (
                   <>
                     <div
@@ -257,9 +259,9 @@ const Header = () => {
                       // />
                       <Menu
                         as="div"
-                        className="relative inline-block text-left"
+                        className="relative inline-block text-left h-[40px] mw-sm:h-[35px] mw-sm3:h-[32px]"
                       >
-                        <Menu.Button className="px-4">
+                        <Menu.Button className="px-4 ">
                           <Image
                             src={profile}
                             alt="Demo"
