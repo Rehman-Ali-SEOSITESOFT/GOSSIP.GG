@@ -33,7 +33,7 @@ const FeaturesTech = () => {
                         <h2 className="title text-2xl leading-7 font-bold montserratfont text-brandDark2 dark:text-brandLightOpacity100 ">
                           John D
                         </h2>
-                        <h5 className="rank text-lg leading-[22px] font-bold tracking-[0.03em] text-brand dark:text-brand montserratfont">
+                        <h5 className="rank text-lg leading-[22px] font-bold tracking-[0.03em] text-brand dark:text-brand montserratfont h-[30px] mt-[-1px]">
                           Esports Writer
                           <Image
                             src={texticon}
@@ -41,7 +41,7 @@ const FeaturesTech = () => {
                             className="inline-block pt-[5px]"
                           />
                         </h5>
-                        <small className="py-4 ">
+                        <small className="">
                           <span className="border-brandDark2   dark:border-l-brandLightOpacity100 text-brandDark2 dark:text-brandLightOpacity100 text-sm montserratfont leading-4 font-normal">
                             Jan 30th, 2023, 18:08
                           </span>

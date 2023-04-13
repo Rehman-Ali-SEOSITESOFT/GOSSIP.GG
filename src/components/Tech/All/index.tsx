@@ -28,8 +28,8 @@ const MainTech = () => {
         </div>
       </div>
       <AllReviews />
-      {/* <TechFeature /> */}
-      {/* <AllDeail /> */}
+      <TechFeature />
+      <AllDeail />
     </section>
   );
 };
