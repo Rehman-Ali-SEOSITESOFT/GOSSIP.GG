@@ -12,11 +12,11 @@ const MainTech = () => {
         <LatestNews />
         <div className="global-section-width">
           <div className="2xl:container">
-            <div className="flex pt-2">
+            <div className="flex pt-2 ">
               <div className="w-full">
                 <a
                   href="#"
-                  className="text-textColorGray dark:text-brandLightOpacity70 montserratfont font-base  leading-5"
+                  className="text-textColorGray dark:text-brandLightOpacity70 montserratfont font-base  leading-5  mw-sm3:text-[10px]"
                 >
                   View more <span>&gt;</span>
                   <span>&gt;</span>

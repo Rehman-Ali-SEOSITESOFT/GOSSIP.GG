@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from "react"
-import style from "./latestnew.module.css"
-import new1 from "../../assets/latest-news/news1.png"
-import new2 from "../../assets/latest-news/news2.png"
-import new3 from "../../assets/latest-news/news3.png"
-import new4 from "../../assets/latest-news/news4.png"
-import new5 from "../../assets/latest-news/news5.png"
-import new6 from "../../assets/latest-news/news6.png"
-import boomkark from "../../assets/latest-news/bookmark.png"
-import Image from "next/image"
-import SectionSaprator from "../SecSaprator"
-import { useTheme } from "next-themes"
+import React, { useState, useEffect } from "react";
+import style from "./latestnew.module.css";
+import new1 from "../../assets/latest-news/news1.png";
+import new2 from "../../assets/latest-news/news2.png";
+import new3 from "../../assets/latest-news/news3.png";
+import new4 from "../../assets/latest-news/news4.png";
+import new5 from "../../assets/latest-news/news5.png";
+import new6 from "../../assets/latest-news/news6.png";
+import boomkark from "../../assets/latest-news/bookmark.png";
+import Image from "next/image";
+import SectionSaprator from "../SecSaprator";
+import { useTheme } from "next-themes";
 
 const LatestNews = () => {
   interface List {
-    name: string
-    picture: any
+    name: string;
+    picture: any;
   }
   const item: List[] = [
     {
@@ -41,17 +41,17 @@ const LatestNews = () => {
       name: "demo ",
       picture: new6,
     },
-  ]
-  const [items, setItems] = useState(item)
-  const { theme } = useTheme()
-  const [isDarkTheme, setIsDarkTheme] = useState<string>("")
+  ];
+  const [items, setItems] = useState(item);
+  const { theme } = useTheme();
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
   useEffect(() => {
-    setIsDarkTheme(theme === "dark" ? "dark" : "light")
-  }, [theme])
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   return (
     <section className={style.latest_news_page}>
       <div className="global-section-width">
-        <div className="pt-12">
+        <div className="pt-12 mw-lg:pt-7 mw-sm:pt-[16px]">
           <SectionSaprator title="Latest News" />
         </div>
         <div className="2xl:container border border-grayCard rounded dark:border-brandLightOpacity10 mw-sm:broder-0 mw-sm:hidden">
@@ -130,7 +130,7 @@ const LatestNews = () => {
                     </div>
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
           <div className="hidden mw-sm:hidden flex flex-wrap pt-5 pb-5  bg-white rounded dark:bg-brandDark1 mw-lg:flex ">
@@ -138,8 +138,10 @@ const LatestNews = () => {
               return (
                 <div
                   // p-5
-                  className={`w-1/3  mw-lg:w-1/2 flex ${style.responsive} border-r border-grayCard  dark:border-brandLightOpacity10
-                    `}
+                  className={`w-1/3  mw-lg:w-1/2 flex ${style.responsive} ${
+                    index === 0 || index === 1 ? "pt-0" : "pt-5"
+                  } border-r border-grayCard  dark:border-brandLightOpacity10
+                    px-[20px] h-[135px]`}
                   key={index}
                 >
                   <div
@@ -148,7 +150,7 @@ const LatestNews = () => {
                     <Image
                       src={elem.picture}
                       alt="Latest new"
-                      className="rounded-sm"
+                      className="rounded-sm min-h-[120px] h-full w-full max-w-[120px]"
                     />
                   </div>
                   <div
@@ -191,7 +193,7 @@ const LatestNews = () => {
                     </div>
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
@@ -241,7 +243,7 @@ const LatestNews = () => {
                     </div>
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
@@ -261,7 +263,7 @@ const LatestNews = () => {
         </div> */}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default LatestNews
+export default LatestNews;

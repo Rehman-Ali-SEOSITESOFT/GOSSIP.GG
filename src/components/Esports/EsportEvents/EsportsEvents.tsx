@@ -1,5 +1,5 @@
 import Image from "next/image"
-import React from "react"
+import React, { useState } from "react"
 import eyeIcon from "../../../assets/esporting-events/eye.png"
 import banner from "../../../assets/esporting-events/bannerimg1.png"
 import style from "./EsportsEvents.module.css"
@@ -11,7 +11,58 @@ import SectionSaprator from "@/components/SecSaprator"
 import user from "../../../assets/esporting-events/user1.png"
 import likes from "../../../assets/esporting-events/likes.png"
 import DropDown from "./EsportsEventDropdown/DropDown"
+import commentLogo from "../../../assets/esporting-events/commentLogo.png"
+import twitter from "../../../assets/esporting-events/twitter.png"
+import vrbox from "../../../assets/esporting-events/vrbox.png"
+import heart from "../../../assets/esporting-events/heart.png"
+import retweet from "../../../assets/esporting-events/retweet.png"
+import youtube from "../../../assets/esporting-events/youtube.png"
+import youtubepreview from "../../../assets/esporting-events/videopreview.png"
+import pinkman from "../../../assets/esporting-events/pinkman.png"
+import brandmark from "../../../assets/esporting-events/smallbrand.png"
+import cod from "../../../assets/esporting-events/cod2.png"
+import allup from "../../../assets/esporting-events/allup.png"
+import aiming from "../../../assets/esporting-events/aiming.png"
+import users from "../../../assets/esporting-events/userss.png"
+import cube from "../../../assets/esporting-events/cube.png"
+import trophy from "../../../assets/esporting-events/trophy.png"
+import earth from "../../../assets/esporting-events/earth.png"
+import profile from "../../../assets/esporting-events/profile.png"
+import torurnament from "../../../assets/esporting-events/tournament.png"
+import ValorantListing from "./ValorantListing/ValorantListing"
 const EsportsEvents = () => {
+  interface List {
+    title: string
+    icon: any
+    detail: string
+  }
+  const [list, setList] = useState<List[]>([
+    {
+      icon: users,
+      title: "Team Size",
+      detail: "5v5 + 2 sustitutes",
+    },
+    {
+      icon: cube,
+      title: "Format",
+      detail: "Single Elimination",
+    },
+    {
+      icon: trophy,
+      title: "Prizepool",
+      detail: "$35000",
+    },
+    {
+      icon: earth,
+      title: "Region",
+      detail: "Southeast Asia",
+    },
+    {
+      icon: profile,
+      title: "Sponsors",
+      detail: "Intel.DHL",
+    },
+  ])
   return (
     <>
       <section className="esports_events_wrapper_">
@@ -37,7 +88,9 @@ const EsportsEvents = () => {
                 <Image src={banner} alt="img" className="" />
               </div>
             </div>
-            <div className="intel_presents_valorant">
+            <div className="intel_presents_valorant flex justify-between">
+              {/* left section starts here */}
+
               <div className="w-[70%] mt-[48px]">
                 <h2 className="montserratfont text-[32px] leading-[39px]  text-[#E5E5E5] font-bold	">
                   Intel Presents Valorant Community Cup#19{" "}
@@ -151,15 +204,237 @@ const EsportsEvents = () => {
                       View More Comments
                     </p>
                   </div>
-                  <div className="update_wrapper">
+                  <div className="update_wrapper mb-[60px]">
                     <SectionSaprator title="Update" />
-                    <div className="udpates_">
-                      <h2>Show Updates for:</h2>
+                    <div className="udpates_ flex ">
+                      <h2 className="mr-[16px] mt-[4px]">Show Updates for:</h2>
                       <DropDown />
+                    </div>
+                  </div>
+                  <div className="comments_area_here_wrapper bg-commentBg rounded py-[26px] px-[82px] mb-[88px] ">
+                    <div
+                      className="first_comment_area border-b-2
+                  border-brandLightOpacity10"
+                    >
+                      <div className="flex justify-between">
+                        <div className="left_first_comment_area flex items-center">
+                          <Image src={commentLogo} alt="logo" />
+                          <div className="name_handle ml-[16px]">
+                            <h4 className="text-[#E5E5E5] text-[16px] leading-[20px] montserratfont font-semibold	">
+                              Gossip.GG
+                            </h4>
+                            <p className="pt-[4px] montserratfont text-[14px] leading-[17px] font-normal	text-brandLightOpacity70">
+                              @sportskeeda
+                            </p>
+                          </div>
+                        </div>
+                        <div className="right_first_comment_area">
+                          <Image src={twitter} alt="" />
+                        </div>
+                      </div>
+                      <div className="narrtation_and_image pt-[28px] px-[50px]">
+                        <h4 className="montserratfont text-[16px] leading-[20px] font-semibold	text-[#E5E5E5]">
+                          Can he win this time?
+                        </h4>
+                        <div className="flex justify-between items-center pt-[4px] pb-[8px]">
+                          <p className="montserratfont text-[16px] leading-[20px] font-normal text-[#47A0B4]">
+                            #gamerlife #gossipgg #esports
+                          </p>
+                          <p className="montserratfont text-[14px] leading-[17px] text-brandLightOpacity70">
+                            Jan 30th, 2023, 18:08
+                          </p>
+                        </div>
+                        <div>
+                          <Image src={vrbox} alt="" className="w-[100%]" />
+                          <div className="flex items-center pt-[20px] pb-[30px]">
+                            <div className="flex items-center ">
+                              <Image src={heart} alt="" />
+                              <p className="pl-[13px] montserratfont text-[16px] leading-[20px] font-normal text-[#fff]">
+                                162
+                              </p>
+                            </div>
+                            <div className="flex items-center ml-[8px]">
+                              <Image
+                                src={retweet}
+                                alt=""
+                                className="pt-[8px]"
+                              />
+                              <p className="pl-[4px] montserratfont text-[16px] leading-[20px] font-normal text-[#fff]">
+                                14
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="second_comment_wrapper pb-[36px] border-b-2
+                  border-brandLightOpacity10"
+                    >
+                      <div className="flex justify-between pt-[36px] upper_section ">
+                        <div className="left_first_comment_area flex items-center">
+                          <Image src={commentLogo} alt="logo" />
+                          <div className="name_handle ml-[16px]">
+                            <h4 className="text-[#E5E5E5] text-[16px] leading-[20px] montserratfont font-semibold	">
+                              Gossip.GG
+                            </h4>
+                            <p className="pt-[4px] montserratfont text-[14px] leading-[17px] font-normal	text-brandLightOpacity70">
+                              @Gossip.GG
+                            </p>
+                          </div>
+                        </div>
+                        <div className="right_second_comment_area">
+                          <Image src={youtube} alt="" />
+                        </div>
+                      </div>
+                      <div className="second_image_comment pt-[29px]">
+                        <Image
+                          src={youtubepreview}
+                          alt=""
+                          className="w-[100%]"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="third_comment flex item-center mt-[32px] pb-[32px] border-b-2
+                  border-brandLightOpacity10"
+                    >
+                      <div className="w-[40px] h-[40px]">
+                        <Image src={pinkman} alt="" />
+                      </div>
+                      <div className="content_area pl-[16px]">
+                        <div className="content_area_top">
+                          <h4 className="flex items-center montserratfont text-[18px] leading-[22px] font-bold text-[#ED4E50]">
+                            Esports Writer{" "}
+                            <span>
+                              <Image src={brandmark} alt="" />
+                            </span>
+                          </h4>
+                          <p className="montserratfont text-[12px] leading-[15px] font-normal text-brandLightOpacity70">
+                            John D &nbsp;|&nbsp; Jan 30th, 2023, 18:08
+                          </p>
+                        </div>
+                        <p className="pt-[16px] montserratfont font-normal text-[16px] leading-[27px] text-[#E5E5E5]">
+                          The Last Of Us Part 2 may just be one of the most
+                          unconventional stories ever told in gaming.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      className="third_comment flex item-center mt-[32px] pb-[32px] border-b-2
+                  border-brandLightOpacity10"
+                    >
+                      <div className="w-[40px] h-[40px]">
+                        <Image src={pinkman} alt="" />
+                      </div>
+                      <div className="content_area pl-[16px]">
+                        <div className="content_area_top">
+                          <h4 className="flex items-center montserratfont text-[18px] leading-[22px] font-bold text-[#ED4E50]">
+                            Esports Writer{" "}
+                            <span>
+                              <Image src={brandmark} alt="" />
+                            </span>
+                          </h4>
+                          <p className="montserratfont text-[12px] leading-[15px] font-normal text-brandLightOpacity70">
+                            John D &nbsp;|&nbsp; Jan 30th, 2023, 18:08
+                          </p>
+                        </div>
+                        <p className="pt-[16px] montserratfont font-normal text-[16px] leading-[27px] text-[#E5E5E5]">
+                          The Last Of Us Part 2 may just be one of the most
+                          unconventional stories ever told in gaming.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="third_comment flex item-center mt-[32px] pb-[32px] ">
+                      <div className="w-[40px] h-[40px]">
+                        <Image src={pinkman} alt="" />
+                      </div>
+                      <div className="content_area pl-[16px]">
+                        <div className="content_area_top">
+                          <h4 className="flex items-center montserratfont text-[18px] leading-[22px] font-bold text-[#ED4E50]">
+                            Esports Writer{" "}
+                            <span>
+                              <Image src={brandmark} alt="" />
+                            </span>
+                          </h4>
+                          <p className="montserratfont text-[12px] leading-[15px] font-normal text-brandLightOpacity70">
+                            John D &nbsp;|&nbsp; Jan 30th, 2023, 18:08
+                          </p>
+                        </div>
+                        <p className="pt-[16px] montserratfont font-normal text-[16px] leading-[27px] text-[#E5E5E5]">
+                          The Last Of Us Part 2 may just be one of the most
+                          unconventional stories ever told in gaming.
+                        </p>
+                        <Image
+                          src={cod}
+                          alt=""
+                          className="w-[100%] pt-[36px]"
+                        />
+                      </div>
+                    </div>
+                    <div className="last_comment  mt-[48px] pb-[32px] ">
+                      <div className="w-[60px] h-[60px] m-auto text-center">
+                        <Image src={allup} alt="" className="w-[100%]" />
+                      </div>
+                      <div className="content_area pt-[16px] text-center">
+                        <p className="montserratfont text-[14px] leading-[17px] font-medium	text-brandLightOpacity70 pb-[4px]">
+                          All Caught up
+                        </p>
+                        <p className="montserratfont font-medium text-[12px] leading-[15px] text-brandLightOpacity50 ">
+                          Check back tomorrow for latest updates
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              {/* left section ends here */}
+
+              {/* right section starts here */}
+
+              <div className="mt-[48px] w-[28%]">
+                <div className="valorant_sidebar_wrapper bg-[#2E2A2B] rounded px-[17px]">
+                  <div
+                    className={`${style.valo_aim} flex items-center pt-[41px] justify-center`}
+                  >
+                    <Image src={aiming} alt="" />
+                    <h4 className="pl-[18px] montserratfont capitalize text-[24px] leading-[29px] font-semibold text-[#E5E5E5]">
+                      valorant
+                    </h4>
+                  </div>
+                  <div className="listinng mt-[15px]">
+                    {list.map((e, idx) => {
+                      return (
+                        <div className="pb-[14px]" key={idx}>
+                          <ValorantListing
+                            icon={e.icon}
+                            detail={e.detail}
+                            title={e.title}
+                          />
+                        </div>
+                      )
+                    })}
+                    <div className="flex pl-[9px]   pb-[34px] pt-[16px]">
+                      <div className="w-[40px] h-[40px] bg-brandLightOpacity10 rounded-full flex items-center justify-center ">
+                        <Image src={torurnament} alt="icon" className=" " />
+                      </div>
+                      <div className="name_size pl-[30px] ">
+                        <h4 className="montserratfont text-[16px] leading-[20px] font-semibold text-[#E5E5E5s]">
+                          Tournament&nbsp;
+                        </h4>
+                        <p className="pt-[8px] montserratfont text-[14px] leading-[17px] font-medium	text-brandLightOpacity70">
+                          Starts&nbsp; . Mar 30th, 2023,18:08
+                        </p>
+                        <p className="pt-[8px] montserratfont text-[14px] leading-[17px] font-medium	text-brandLightOpacity70">
+                          Ends &nbsp; &nbsp;. Mar 30th, 2023,18:08
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* right section ends here */}
             </div>
           </div>
         </div>

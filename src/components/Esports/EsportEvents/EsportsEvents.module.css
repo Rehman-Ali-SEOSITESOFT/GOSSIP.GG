@@ -1,0 +1,25 @@
+.valo_aim {
+  position: relative;
+}
+.valo_aim:before {
+  content: "";
+  background-image: url("../../../assets/esporting-events/leftline.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 160px;
+  height: 28px;
+  position: absolute;
+  left: -70px;
+  bottom: -1px;
+}
+.valo_aim:after {
+  content: "";
+  background-image: url("../../../assets/esporting-events/rightline.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 160px;
+  height: 28px;
+  position: absolute;
+  right: -70px;
+  bottom: -1px;
+}

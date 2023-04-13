@@ -10,34 +10,36 @@ const AllReviews = () => {
   const imagesList = [review1, review2, review3, review4];
   return (
     <div className="global-section-width  ">
-      <div className="pt-12">
+      <div className="pt-12 mw-lg:pt-7 mw-sm:pt-[16px]">
         <SectionSaprator title="Reviews" />
       </div>
       <div className="2xl:container">
-        <div className="flex">
+        <div className="flex mw-xl:w-full mw-12:justify-between  mw-md:flex-wrap">
           {imagesList.map((elem, index) => {
             return (
               <div
-                className="w-[270px] mw-lg:w-[48%] mw-sm3:w-full mr-[40px]"
+                className={`w-[270px] mw-md:w-[48%]  mw-sm3:w-full  ${
+                  index === 3 ? "mr-0" : "mr-[40px] mw-xl:mr-[25px] mw-md:mr-0"
+                }`}
                 key={index}
               >
-                <div className="img-wrapper  h-[305px] mw-lg:h-[200px] mw-sm:h-[180px] mw-sm3:h-[150px] rounded relative">
+                <div className="img-wrapper  h-[305px] mw-lg:h-[200px] mw-sm:h-[180px] mw-sm3:h-[250px] rounded relative">
                   <Image src={elem} alt="hello" className="w-full h-full" />
 
                   {index === 1 ? (
-                    <div className="picked bg-arrowicon dark:bg-brand dark:text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[18px]	">
+                    <div className="picked bg-arrowicon dark:bg-brand dark:text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[18px]	mw-sm:text-sm ">
                       EDITOR&#39;S PICK
                     </div>
                   ) : null}
 
-                  <div className="review w-[60px] h-[60px] bg-arrowicon dark:bg-brand flex justify-center items-center rounded-[50px] absolute top-[8px] right-[8px]">
-                    <span className="montserratfont font-bold text-lg leading-[22px] dark:text-brandLightOpacity100">
+                  <div className="review w-[60px] h-[60px] bg-arrowicon dark:bg-brand flex justify-center items-center rounded-[50px] absolute top-[8px] right-[8px] mw-sm:w-[50px] mw-sm:h-[50px]">
+                    <span className="montserratfont font-bold text-lg leading-[22px] dark:text-brandLightOpacity100 mw-sm:text-sm ">
                       {index === 0 ? "4/5.5" : "4/5"}
                     </span>
                   </div>
                 </div>
                 <div className="description flex justify-between pt-3 ">
-                  <h4 className="text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 pr-2">
+                  <h4 className="text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 pr-2 mw-sm:text-sm	mw-sm:leading-[17px]">
                     Check out the Great Indian Amazon Sale this month
                   </h4>
                   <div>
@@ -68,7 +70,7 @@ const AllReviews = () => {
           <div className="w-full">
             <a
               href="#"
-              className="text-textColorGray dark:text-brandLightOpacity70 montserratfont font-base  leading-5"
+              className="text-textColorGray dark:text-brandLightOpacity70 montserratfont font-base  leading-5 mw-sm3:text-[10px]"
             >
               View more <span>&gt;</span>
               <span>&gt;</span>
