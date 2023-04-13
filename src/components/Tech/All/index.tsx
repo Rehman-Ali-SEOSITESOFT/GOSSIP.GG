@@ -29,7 +29,7 @@ const MainTech = () => {
       </div>
       <AllReviews />
       <TechFeature />
-      {/* <AllDeail /> */}
+      <AllDeail />
     </section>
   );
 };
