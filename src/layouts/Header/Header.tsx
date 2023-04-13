@@ -69,6 +69,7 @@ const Header = () => {
 
   const [searchOpen, setSearchOpen] = useState<Boolean>(true);
   const [searchText, setSearchText] = useState<string>("");
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
   const [isLoggedIn, setIsLoggedIn] = useState<Boolean>(false);
   const [open, setOpen] = useState(false);
   const [profileShow, setProfileShow] = useState<Boolean>(true);
@@ -81,7 +82,11 @@ const Header = () => {
     let user: any = localStorage.getItem("isLogin");
     setIsLoggedIn(user);
     setBgClassChange(theme === "dark" ? "header_dark_img" : "header_light_img");
+   
   }, []);
+  useEffect(() =>{
+    setIsDarkTheme(theme === "dark" ? "dark": "light")
+  }, [theme])
 
   function classNames(...classes: any) {
     return classes.filter(Boolean).join(" ");
@@ -384,7 +389,7 @@ const Header = () => {
                       onClick={hanldeChangeTheme}
                     >
                       <span>
-                        {theme == "dark" ? (
+                        {isDarkTheme == "dark" ? (
                           <Image src={sun} alt="sun icon" />
                         ) : (
                           <Image src={moon} alt="moon icon" />
