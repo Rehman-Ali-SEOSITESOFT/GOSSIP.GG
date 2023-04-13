@@ -28,7 +28,7 @@ const MainTech = () => {
         </div>
       </div>
       <AllReviews />
-      <TechFeature />
+      {/* <TechFeature /> */}
       <AllDeail />
     </section>
   );

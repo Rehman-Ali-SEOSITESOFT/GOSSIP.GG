@@ -176,8 +176,7 @@ const LatestNews = () => {
                       </span>
                       <span
                         className="border-l border-l-textColorGray pl-2 ml-2 border-textColorGray
-              dark:border-l-brandLightOpacity10
-              "
+              dark:border-l-brandLightOpacity10"
                       >
                         5 min read
                       </span>
@@ -188,8 +187,13 @@ const LatestNews = () => {
                       index === 2 || index === 3 ? "border-b-0" : "border-b"
                     } border-grayCard  dark:border-brandLightOpacity10`}
                   >
+                    {/* bookmark text-textColorGray hover:text-textColor  dark:text-brandLightOpacity70 dark:hover:text-brandLightOpacity100 w-[12px] */}
                     <div className="bookmark text-textColorGray hover:text-textColor  dark:text-brandLightOpacity70 dark:hover:text-brandLightOpacity100  w-[12px]">
-                      <Image src={boomkark} alt="bookmkar" />
+                      <Image
+                        src={boomkark}
+                        alt="bookmkar"
+                        className=" brightness-0 opacity-80 hover:opacity-100  dark:brightness-200"
+                      />
                     </div>
                   </div>
                 </div>
@@ -237,7 +241,11 @@ const LatestNews = () => {
                       </small>
                       <div className={`${style.thumnail_img}`}>
                         <div className="bookmark text-textColorGray hover:text-textColor  dark:text-brandLightOpacity70 dark:hover:text-brandLightOpacity100">
-                          <Image src={boomkark} alt="img" />
+                          <Image
+                            src={boomkark}
+                            alt="img"
+                            className=" brightness-0 opacity-80 hover:opacity-100  dark:brightness-200"
+                          />
                         </div>
                       </div>
                     </div>

@@ -159,7 +159,7 @@
 @media screen and (max-width: 1024px) {
   .main_header {
     padding: 0 0 10px 0;
-    position: relative;
+    /* position: relative; */
     /* overflow-y: hidden; */
   }
   .header_width {

@@ -63,6 +63,7 @@ module.exports = {
         "mw-11": { max: "1100px" },
         // => @media (max-width: 1279px) { ... }
         "mw-lg": { max: "1024px" },
+        "mw-9": { max: "900px" },
         // => @media (max-width: 1023px) { ... }
         "mw-md": { max: "767px" },
         // => @media (max-width: 767px) { ... }
