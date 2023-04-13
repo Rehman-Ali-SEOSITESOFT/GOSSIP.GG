@@ -1,36 +1,36 @@
-import Image from "next/image"
+"use client"
 import React, { useState } from "react"
-import eyeIcon from "../../../assets/esporting-events/eye.png"
-import banner from "../../../assets/esporting-events/bannerimg1.png"
-import style from "./EsportsEvents.module.css"
-import msg from "../../../assets/esporting-events/message.png"
-import bookmark from "../../../assets/esporting-events/bookmark.png"
-import forward from "../../../assets/esporting-events/forward.png"
-import typeComment from "../../../assets/esporting-events/typeComment.png"
+import eyeIcon from "../../assets/esporting-events/eye.png"
+import banner from "../../assets/esporting-events/bannerimg1.png"
+import msg from "../../assets/esporting-events/message.png"
+import bookmark from "../../assets/esporting-events/bookmark.png"
+import forward from "../../assets/esporting-events/forward.png"
+import typeComment from "../../assets/esporting-events/typeComment.png"
 import SectionSaprator from "@/components/SecSaprator"
-import user from "../../../assets/esporting-events/user1.png"
-import likes from "../../../assets/esporting-events/likes.png"
-import DropDown from "./EsportsEventDropdown/DropDown"
-import commentLogo from "../../../assets/esporting-events/commentLogo.png"
-import twitter from "../../../assets/esporting-events/twitter.png"
-import vrbox from "../../../assets/esporting-events/vrbox.png"
-import heart from "../../../assets/esporting-events/heart.png"
-import retweet from "../../../assets/esporting-events/retweet.png"
-import youtube from "../../../assets/esporting-events/youtube.png"
-import youtubepreview from "../../../assets/esporting-events/videopreview.png"
-import pinkman from "../../../assets/esporting-events/pinkman.png"
-import brandmark from "../../../assets/esporting-events/smallbrand.png"
-import cod from "../../../assets/esporting-events/cod2.png"
-import allup from "../../../assets/esporting-events/allup.png"
-import aiming from "../../../assets/esporting-events/aiming.png"
-import users from "../../../assets/esporting-events/userss.png"
-import cube from "../../../assets/esporting-events/cube.png"
-import trophy from "../../../assets/esporting-events/trophy.png"
-import earth from "../../../assets/esporting-events/earth.png"
-import profile from "../../../assets/esporting-events/profile.png"
-import torurnament from "../../../assets/esporting-events/tournament.png"
-import ValorantListing from "./ValorantListing/ValorantListing"
-const EsportsEvents = () => {
+import user from "../../assets/esporting-events/user1.png"
+import likes from "../../assets/esporting-events/likes.png"
+import commentLogo from "../../assets/esporting-events/commentLogo.png"
+import twitter from "../../assets/esporting-events/twitter.png"
+import vrbox from "../../assets/esporting-events/vrbox.png"
+import heart from "../../assets/esporting-events/heart.png"
+import retweet from "../../assets/esporting-events/retweet.png"
+import youtube from "../../assets/esporting-events/youtube.png"
+import youtubepreview from "../../assets/esporting-events/videopreview.png"
+import pinkman from "../../assets/esporting-events/pinkman.png"
+import brandmark from "../../assets/esporting-events/smallbrand.png"
+import cod from "../../assets/esporting-events/cod2.png"
+import allup from "../../assets/esporting-events/allup.png"
+import aiming from "../../assets/esporting-events/aiming.png"
+import users from "../../assets/esporting-events/userss.png"
+import cube from "../../assets/esporting-events/cube.png"
+import trophy from "../../assets/esporting-events/trophy.png"
+import earth from "../../assets/esporting-events/earth.png"
+import profile from "../../assets/esporting-events/profile.png"
+import torurnament from "../../assets/esporting-events/tournament.png"
+import Image from "next/image"
+import style from "./esportsEventPage.module.css"
+import ValorantListing from "@/components/Esports/EsportEvents/ValorantListing/ValorantListing"
+const page = () => {
   interface List {
     title: string
     icon: any
@@ -141,13 +141,28 @@ const EsportsEvents = () => {
                     five centuries, but also the leap into electronic
                     typesetting, remaining essentially unchanged.
                   </p>
-                  <div className="mt-[16px] mb-[60px]">
-                    <a
-                      href="#"
-                      className=" underline	montserratfont text-base	leading-[20px] tracking-[0.05em] text-brandLightOpacity70 font-medium	"
-                    >
-                      See More
-                    </a>
+                  <div className="rules_and_regulation">
+                    <h2 className="pt-[40px] pb-[24px] montserratfont text-[#E5E5E5] tracking-[0.05em] text-2xl	leading-[30px ] font-bold	">
+                      Rules And Regulations
+                    </h2>
+                    <p className="robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] text-brandLightOpacity90">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the
+                      industry&#39;s standard dummy text ever since the 1500s,
+                      when an unknown printer took a galley of type and
+                      scrambled it to make a type specimen book. It has survived
+                      not only five centuries, but also the leap into electronic
+                      typesetting, remaining essentially unchanged.
+                    </p>
+                    <p className="mt-[40px] robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] text-brandLightOpacity90">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the
+                      industry&#39;s standard dummy text ever since the 1500s,
+                      when an unknown printer took a galley of type and
+                      scrambled it to make a type specimen book. It has survived
+                      not only five centuries, but also the leap into electronic
+                      typesetting, remaining essentially unchanged.
+                    </p>
                   </div>
                   <div className={`${style.comments_section}`}>
                     <SectionSaprator title="Comments" />
@@ -204,13 +219,7 @@ const EsportsEvents = () => {
                       View More Comments
                     </p>
                   </div>
-                  <div className="update_wrapper mb-[60px]">
-                    <SectionSaprator title="Update" />
-                    <div className="udpates_ flex ">
-                      <h2 className="mr-[16px] mt-[4px]">Show Updates for:</h2>
-                      <DropDown />
-                    </div>
-                  </div>
+
                   <div className="comments_area_here_wrapper bg-commentBg rounded py-[26px] px-[82px] mb-[88px] ">
                     <div
                       className="first_comment_area border-b-2
@@ -443,4 +452,4 @@ const EsportsEvents = () => {
   )
 }
 
-export default EsportsEvents
+export default page
