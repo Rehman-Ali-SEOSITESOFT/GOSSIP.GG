@@ -5,11 +5,11 @@ import Image from "next/image";
 
 const AsideBar = () => {
   return (
-    <aside className="w-[250px] pt-12 ">
-      <div className="top-img mb-8">
-        <Image src={topimg} alt="top " className="ml-auto mr-0" />
-      </div>
-      <div className="top-img">
+    <aside className="w-[250px] pt-12  mw-lg:w-[230px]  ">
+      <div className="top-img sticky top-[50px] ">
+        <Image src={topimg} alt="top " className="ml-auto mr-0  mb-8" />
+        {/* </div>
+      <div className="top-img  sticky  "> */}
         <Image src={bottomimg} alt="bottom " className="ml-auto mr-0" />
       </div>
     </aside>

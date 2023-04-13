@@ -12,11 +12,11 @@ const AllDeail = () => {
   return (
     <>
       <div className="global-section-width ">
-        <div className="pt-12">
+        <div className="pt-12 mw-lg:pt-7 mw-sm:pt-[16px]">
           <SectionSaprator title="Deals" />
         </div>
         <div className="2xl:container pb-12">
-          <div className="w-full flex justify-between flex-wrap ">
+          <div className="flex mw-xl:w-full justify-between  mw-md:flex-wrap">
             {imagesList.map((elem, index) => {
               return (
                 <div
@@ -26,11 +26,11 @@ const AllDeail = () => {
                   //     : "mr-[25px] " + " w-[300px] mw-lg:w-[48%] mw-sm3:w-full "
                   // }
                   className={
-                    "w-[300px]  max-w-[24%] mw-xl:w-[280px] mw-xl:max-w-[23.5%] mw-lg:w-[48%] mw-lg:max-w-[48%] mw-sm3:w-full "
+                    "max-w-[300px] mx-14:max-w-[24%] w-full mw-md:max-w-[48%]  mw-sm3:max-w-full    "
                   }
                   key={index}
                 >
-                  <div className="img-wrapper w-full  h-[236px]  mw-xl:h-[210px] mw-lg:h-[200px] mw-sm:h-[180px] mw-sm3:h-[150px] rounded relative">
+                  <div className="img-wrapper w-full  h-[236px]  mw-xl:h-[210px] mw-lg:h-fit mw-sm3:h-[230px]	 rounded relative">
                     <Image src={elem} alt="hello" className="w-full h-full" />
 
                     {index === 0 ? (
@@ -47,7 +47,7 @@ const AllDeail = () => {
                     ) : null}
                   </div>
                   <div className="description flex justify-between pt-3 ">
-                    <h4 className="text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 pr-2">
+                    <h4 className="text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 pr-2 mw-lg:text-[15px] mw-sm:text-sm mw-sm:leading-[17px]">
                       Check out the Great Indian Amazon Sale this month
                     </h4>
                     <div>

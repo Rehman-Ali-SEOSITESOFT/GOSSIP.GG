@@ -11,7 +11,7 @@ const TechFeature = () => {
   return (
     <>
       <div className="global-section-width">
-        <div className="pt-[88px]">
+        <div className="pt-[88px]  mw-lg:pt-7 mw-sm:pt-[16px]">
           <SectionSaprator title="Features" />
         </div>
         <div className="2xl:container">
@@ -96,7 +96,7 @@ const TechFeature = () => {
                     key={index}
                   >
                     <div
-                      className={` w-[60px] h-[60px] max-w-[60px]  block  border-grayCard  dark:border-brandLightOpacity10`}
+                      className={` min-w-[60px] min-h-[60px] w-[60px]  block  border-grayCard  dark:border-brandLightOpacity10`}
                     >
                       <Image
                         src={elem}
@@ -104,17 +104,17 @@ const TechFeature = () => {
                         className=" min-w-full  rounded-sm object-cover	 "
                       />
                     </div>
-                    <div className="">
+                    <div className="pl-[10px]">
                       <h4 className="text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 capitalize tech-feature-title">
                         Hellblade: Senua&#39;s Sacrifice Might Just be One of
                         the Most Important Games of the Modern Era
                       </h4>
-                      <p className="font-normal	text-xs	robotoslub pt-[8px] dark:text-brandLightOpacity90 tech-feature-dec">
+                      <p className="font-normal	text-xs	robotoslub pt-[9px] mb-[9px] dark:text-brandLightOpacity90 tech-feature-dec">
                         It is a long established fact that a reader will be
                         distracted by the readable content of a page when...{" "}
                       </p>
                       <div className="flex justify-between">
-                        <p className="user_name montserratfont text-xs font-medium dark:text-brandLightOpacity100 pt-[8px]">
+                        <p className="user_name montserratfont text-xs font-medium dark:text-brandLightOpacity100 pt-[8px] ">
                           -John D
                         </p>
                         <div

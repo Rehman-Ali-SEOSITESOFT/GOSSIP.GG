@@ -131,7 +131,9 @@ const Header = () => {
     setSearchText("");
   };
   return (
-    <header className={`${styles.main_header} relative z-[2]`}>
+    <header
+      className={`${styles.main_header} relative z-[2] mw-lg:sticky top-0`}
+    >
       <div className={`${styles.header_width} `}>
         <div
           className={`2xl:container header_container ${styles.header_container} ${bgClassChange}   mw-lg:dark:bg-brandDark3 mw-lg:bg-brandDark2 px-[65px] h-[90px]  mx-14:h-full mx-14:px-[60px] mx-14:py-[20px]  mw-lg:px-[16px] mw-sm3:px-[15px] mw-sm3:py-[15px]`}
