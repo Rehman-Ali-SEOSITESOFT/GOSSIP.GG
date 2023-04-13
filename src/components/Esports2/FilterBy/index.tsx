@@ -1,8 +1,10 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import downarrow from "../../../assets/esports/down-arrow.png";
-import { MultiSelect } from "react-multi-select-component";
-
+// import { MultiSelect } from "react-multi-select-component";
+import { Menu, Transition } from "@headlessui/react";
+import Link from "next/link";
+import { Dropdown } from "flowbite-react";
 const FilterBy = () => {
   const [sortBy, setSortBy] = useState<string[]>([
     "Popularity",
@@ -31,27 +33,18 @@ const FilterBy = () => {
           FILTER by:
         </h5>
 
-        <div className="drop-down-selection flex">
-          <div className="w-[302px] h-60px dark:border-brandLightOpacity50 rounded-lg	">
-            <h1>hello </h1>
-            <div>
-              <h1>Select Fruits</h1>
-              <MultiSelect
-                options={options}
-                value={selected}
-                onChange={setSelected}
-                labelledBy="Select"
-                className="selected"
-              />
-            </div>
-          </div>
-        </div>
-        <p className="montserratfont font-medium text-sm leading-[17px]	dark:text-brandLightOpacity70">
+        <Dropdown label="Dropdown button">
+          <Dropdown.Item>Dashboard</Dropdown.Item>
+          <Dropdown.Item>Settings</Dropdown.Item>
+          <Dropdown.Item>Earnings</Dropdown.Item>
+          <Dropdown.Item>Sign out</Dropdown.Item>
+        </Dropdown>
+        {/* <p className="montserratfont font-medium text-sm leading-[17px]	dark:text-brandLightOpacity70">
           None applied
         </p>
         <p className="underline montserratfont text-sm font-medium	leading-[17px]	dark:text-brandLightOpacity70 cursor-pointer">
           Reset
-        </p>
+        </p> */}
         <h1 className="montserratfont dark:text-brandLightOpacity100 font-bold	text-lg	leading-[22px] py-8	">
           Showing 1-20 of 24 Events
         </h1>
