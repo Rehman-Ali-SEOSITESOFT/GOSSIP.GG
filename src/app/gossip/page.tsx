@@ -12,7 +12,7 @@ const Page = () => {
     { name: "All", data: <AllGossipe /> },
     { name: "Gaming", data: <Gaming /> },
     { name: "Streamer", data: <Streamer /> },
-    { name: "Esport", data: <Esports /> },
+    { name: "Esports", data: <Esports /> },
   ];
   const hanldeOpenTab = (e: number) => {
     setOpenTab(e);
