@@ -1,5 +1,5 @@
 import Image from "next/image"
-import React, { useState , useEffect} from "react"
+import React, { useState, useEffect } from "react"
 import image1 from "../../../../assets/select/image-react-1.png"
 import image2 from "../../../../assets/select/image-react-2.png"
 import image3 from "../../../../assets/select/image-react-3.png"
@@ -12,14 +12,14 @@ import image9 from "../../../../assets/gaming-guides-feature/image9.png"
 import image10 from "../../../../assets/gaming-guides-feature/image10.png"
 import image11 from "../../../../assets/gaming-guides-feature/image11.png"
 import bookmark from "../../../../assets/gaming/bookmark.png"
-import bookmarkDark from "../../../../assets/gaming/bookmark-dark.png";
+import bookmarkDark from "../../../../assets/gaming/bookmark-dark.png"
 import { useTheme } from "next-themes"
 const GuidesCards = () => {
-  const { theme } = useTheme();
-  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
+  const { theme } = useTheme()
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("")
   useEffect(() => {
-    setIsDarkTheme(theme === "dark" ? "dark" : "light");
-  }, [theme]);
+    setIsDarkTheme(theme === "dark" ? "dark" : "light")
+  }, [theme])
   const [list, setList] = useState<any[]>([
     image1,
     image2,
@@ -57,15 +57,18 @@ const GuidesCards = () => {
                   </h4>
                   <div>
                     <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20    hover:bg-grayCardHover cursor-pointer rounded-3xl">
-                      <Image src={isDarkTheme === 'dark' ? bookmark : bookmarkDark} alt=" " />
+                      <Image
+                        src={isDarkTheme === "dark" ? bookmark : bookmarkDark}
+                        alt=" "
+                      />
                     </div>
                   </div>
                 </div>
                 <div className="flex py-4 montserratfont">
-                  <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:text-brandLightOpacity70">
+                  <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                     News
                   </div>
-                  <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:text-brandLightOpacity70">
+                  <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                     Esports
                   </div>
                 </div>
