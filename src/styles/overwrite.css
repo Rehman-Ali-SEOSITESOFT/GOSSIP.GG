@@ -1,11 +1,13 @@
 /* /// Overwrite slick slider of esport section section/// */
 
 .Esport-events .slick-initialized .slick-list,
-.esorts_event_wrapper .slick-initialized .slick-list {
+.esorts_event_wrapper .slick-initialized .slick-list,
+.bgmi_slider .slick-initialized .slick-list {
   margin: 0 -16px;
 }
 .Esport-events .slick-initialized .slick-slide > div,
-.esorts_event_wrapper .slick-initialized .slick-slide > div {
+.esorts_event_wrapper .slick-initialized .slick-slide > div,
+.bgmi_slider .slick-initialized .slick-slide > div {
   padding: 0 16px;
 }
 

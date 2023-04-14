@@ -1,24 +1,25 @@
-"use client";
-import AllEsports from "@/components/Esports/AllEsports/AllEsports";
-import Bgmi from "@/components/Esports2/Bgmi";
-import EsportsEvents from "@/components/Esports/EsportEvents/EsportsEvents";
-import NewsEsports from "@/components/Esports/NewsEsports/NewsEsports";
-import Valorant from "@/components/Esports/Valorant/Valorant";
-import React, { useState } from "react";
-import styles from "./esports.module.css";
-import Trending from "@/components/Trending/Index";
+"use client"
+import AllEsports from "@/components/Esports/AllEsports/AllEsports"
+import Bgmi from "@/components/Esports2/Bgmi"
+import EsportsEvents from "@/components/Esports/EsportEvents/EsportsEvents"
+import NewsEsports from "@/components/Esports/NewsEsports/NewsEsports"
+import Valorant from "@/components/Esports/Valorant/Valorant"
+import React, { useState } from "react"
+import styles from "./esports.module.css"
+import Trending from "@/components/Trending/Index"
+import EsportsBgmi from "@/components/Esports/EsportsBgmi/EsportsBgmi"
 const Page = () => {
-  const [openTab, setOpenTab] = useState(0);
+  const [openTab, setOpenTab] = useState(0)
   const menulist = [
     { name: "all", data: <AllEsports /> },
     { name: "News", data: <NewsEsports /> },
     { name: "Esports Events", data: <EsportsEvents /> },
-    { name: "BGMI ", data: <Bgmi /> },
+    { name: "BGMI ", data: <EsportsBgmi /> },
     { name: "Valorant", data: <Valorant /> },
-  ];
+  ]
   const hanldeOpenTab = (e: number) => {
-    setOpenTab(e);
-  };
+    setOpenTab(e)
+  }
   return (
     <>
       <section className="esports_page_wrapper">
@@ -42,7 +43,7 @@ const Page = () => {
                     {el.name}
                   </a>
                 </li>
-              );
+              )
             })}
           </ul>
         </div>
@@ -70,11 +71,11 @@ const Page = () => {
                 {el.data}
               </div>
             )
-          );
+          )
         })}
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page
