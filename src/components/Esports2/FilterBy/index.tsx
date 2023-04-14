@@ -270,7 +270,7 @@ const FilterBy = () => {
                     {selectedGame.length === 1
                       ? gameList.filter(
                           (item) => item.id === selectedGame[0]
-                        )[0].id === "4"
+                        )[0].id !== "3"
                         ? gameList.filter(
                             (item) => item.id === selectedGame[0]
                           )[0].name
