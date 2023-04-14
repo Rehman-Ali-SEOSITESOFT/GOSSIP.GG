@@ -21,10 +21,10 @@ const LiveMatch = () => {
     team_two_score: number;
   }
   const { theme } = useTheme();
-  const [isDarkTheme, setIsDarkTheme] = useState<string>("")
-  useEffect(() =>{
-   setIsDarkTheme(theme === "dark" ? "dark": "light");
-  }, [theme]) 
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
+  useEffect(() => {
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   const [matchData, setMatchData] = useState<MatchList[]>([
     {
       match_title: "LPL 2023 Spring",
@@ -128,10 +128,15 @@ const LiveMatch = () => {
   return (
     <section className="live-matches mb-[88px]">
       <div className="global-section-width ">
-        <div className="pt-[88px]">
+        <div className="pt-[88px] mw-lg:pt-7 mw-sm:pt-[16px]">
           <SectionSaprator title="LIVE MATCHES" />
         </div>
-        <Slider className={`live-matches-slider ${isDarkTheme === "dark" ? " dark-arrow" : " light-arrow"}`} {...settings}>
+        <Slider
+          className={`live-matches-slider ${
+            isDarkTheme === "dark" ? " dark-arrow" : " light-arrow"
+          }`}
+          {...settings}
+        >
           {matchData.map((item, index) => (
             <div
               className="border  dark:border-brandLightOpacity10 bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1  dark:bg-brandDark1 border-inherit dark:border-brandDark1 border rounded"

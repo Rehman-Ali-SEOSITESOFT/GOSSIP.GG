@@ -13,7 +13,7 @@ const ForYou = () => {
   return (
     <section className="forYou">
       <div className="global-section-width">
-        <div className="pt-12">
+        <div className="pt-12 mw-lg:pt-7 mw-sm:pt-[16px]">
           <SectionSaprator title="for you" />
         </div>
         <div className="2xl:container">

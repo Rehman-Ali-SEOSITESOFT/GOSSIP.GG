@@ -59,6 +59,7 @@ module.exports = {
       },
       screens: {
         "mx-14": { max: "1430px" },
+        "mx-13": { max: "1330px" },
         "mw-xl": { max: "1279px" },
         "mw-12": { max: "1200px" },
         "mw-11": { max: "1100px" },
@@ -92,4 +93,4 @@ module.exports = {
     },
   },
   plugins: [require("@tailwindcss/typography"), require("tailwind-scrollbar")],
-}
+};
