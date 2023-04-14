@@ -54,6 +54,18 @@
   background-color: #e5e5e5 !important;
   opacity: 1;
 }
+
+@media screen and (max-width: 1024px) {
+  .deailslider .slick-slide > div {
+    height: 300px !important;
+  }
+}
+@media screen and (max-width: 639px) {
+  .deailslider .slick-slide > div {
+    height: 250px !important;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .Esport-events .slick-initialized .slick-list,
   .live-matches .slick-initialized .slick-list {

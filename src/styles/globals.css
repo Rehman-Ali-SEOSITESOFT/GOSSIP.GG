@@ -325,6 +325,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  .slick-prev {
+    left: -40px !important;
+  }
+  .slick-next {
+    right: -45px !important;
+  }
 }
 @media screen and (max-width: 1280px) {
   .news-title {
@@ -350,6 +356,12 @@
   .global-section-width {
     padding: 0 40px;
   }
+  .slick-prev {
+    left: -25px !important;
+  }
+  .slick-next {
+    right: -25px !important;
+  }
 }
 @media screen and (max-width: 1024px) {
   .global-section-width {
@@ -362,6 +374,12 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  .slick-prev {
+    left: 0px !important;
+  }
+  .slick-next {
+    right: 0px !important;
   }
 }
 

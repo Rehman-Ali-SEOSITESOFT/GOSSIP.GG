@@ -72,10 +72,12 @@ const DeailTech = () => {
 
   return (
     <section className="global-section-width">
-      <div className="slider pt-11">{/* <DealSlider /> */}</div>
+      <div className="slider pt-11 mw-lg:pt-9 mw-sm:pt-7">
+        <DealSlider />
+      </div>
       <FilterTabs />
       <div className="2xl:container">
-        <div className="pt-16">
+        <div className="pt-16 mw-lg:pt-7 mw-sm:pt-[16px]">
           <SectionSaprator title="ONGOING Deals" />
         </div>
         <div className="flex flex-wrap justify-between">
@@ -133,7 +135,7 @@ const DeailTech = () => {
         </div>
       </div>
       <div className="2xl:container">
-        <div className="pt-16">
+        <div className="pt-16 mw-lg:pt-7 mw-sm:pt-[16px]">
           <SectionSaprator title="upcomming  deals" />
         </div>
         <div className="flex flex-wrap justify-between">

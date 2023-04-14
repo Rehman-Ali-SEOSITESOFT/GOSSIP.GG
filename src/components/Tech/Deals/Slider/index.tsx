@@ -21,18 +21,18 @@ const DealSlider = () => {
         {...settings}
         className={` ${theme === "dark" ? " dark-arrow" : " light-arrow"}`}
       >
-        <div className="h-[315px]">
+        <div className="h-[315px]  mw-lg:h-[300px]  mw-sm:h-[250px]">
           <Image
             src={slider1}
             alt="img"
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full mw-sm:object-right	"
           />
         </div>
-        <div className="h-[315px]">
+        <div className="h-[315px]  mw-lg:h-[300px]  mw-sm:h-[250px]">
           <Image
             src={slider2}
             alt="img"
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full mw-sm:object-right"
           />
         </div>
       </Slider>
