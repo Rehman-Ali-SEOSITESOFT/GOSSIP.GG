@@ -53,7 +53,7 @@ const Esports = () => {
           </small>
           <p className="robotoslub font-normal mw-lg:text-[12px] pt-[16px] text-base text-brandLightOpacity90 ">
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
+            industry. Lorem Ipsum has been the industry&#39;s standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type...
           </p>
@@ -133,7 +133,7 @@ const Esports = () => {
           </small>
           <p className="robotoslub font-normal mw-lg:text-[12px] pt-[16px] text-base text-brandLightOpacity90 ">
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
+            industry. Lorem Ipsum has been the industry&#39;s standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type...
           </p>
@@ -209,7 +209,7 @@ const Esports = () => {
           </small>
           <p className="robotoslub font-normal mw-lg:text-[12px] pt-[16px] text-base text-brandLightOpacity90 ">
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
+            industry. Lorem Ipsum has been the industry&#39;s standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type...
           </p>
