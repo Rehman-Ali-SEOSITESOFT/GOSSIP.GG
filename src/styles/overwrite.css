@@ -1,11 +1,13 @@
 /* /// Overwrite slick slider of esport section section/// */
 
 .Esport-events .slick-initialized .slick-list,
-.esorts_event_wrapper .slick-initialized .slick-list {
+.esorts_event_wrapper .slick-initialized .slick-list,
+.bgmi_slider .slick-initialized .slick-list {
   margin: 0 -16px;
 }
 .Esport-events .slick-initialized .slick-slide > div,
-.esorts_event_wrapper .slick-initialized .slick-slide > div {
+.esorts_event_wrapper .slick-initialized .slick-slide > div,
+.bgmi_slider .slick-initialized .slick-slide > div {
   padding: 0 16px;
 }
 
@@ -54,6 +56,18 @@
   background-color: #e5e5e5 !important;
   opacity: 1;
 }
+
+@media screen and (max-width: 1024px) {
+  .deailslider .slick-slide > div {
+    height: 300px !important;
+  }
+}
+@media screen and (max-width: 639px) {
+  .deailslider .slick-slide > div {
+    height: 250px !important;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .Esport-events .slick-initialized .slick-list,
   .live-matches .slick-initialized .slick-list {

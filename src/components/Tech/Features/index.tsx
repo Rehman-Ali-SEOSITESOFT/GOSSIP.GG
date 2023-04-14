@@ -1,23 +1,23 @@
-import React from "react";
-import FilterTabs from "../Filter";
-import AsideBar from "../Asidebar";
-import Pagination from "@/components/Pagination";
-import toparrow from "../../../assets/user-for-you/fill-up-arrow.png";
-import bottomarrow from "../../../assets/user-for-you/down-arrow.png";
-import comment from "../../../assets/user-for-you/comment.png";
-import bookmark from "../../../assets/user-for-you/bookmark.png";
-import shared from "../../../assets/user-for-you/share.png";
-import feactureauthor from "../../../assets/tech/feature-author.png";
-import texticon from "../../../assets/author-profile/esport-icon.png";
-import Image from "next/image";
+import React from "react"
+import FilterTabs from "../Filter"
+import AsideBar from "../Asidebar"
+import Pagination from "@/components/Pagination"
+import toparrow from "../../../assets/user-for-you/fill-up-arrow.png"
+import bottomarrow from "../../../assets/user-for-you/down-arrow.png"
+import comment from "../../../assets/user-for-you/comment.png"
+import bookmark from "../../../assets/user-for-you/bookmark.png"
+import shared from "../../../assets/user-for-you/share.png"
+import feactureauthor from "../../../assets/tech/feature-author.png"
+import texticon from "../../../assets/author-profile/esport-icon.png"
+import Image from "next/image"
 const FeaturesTech = () => {
-  const item = [1, 2, 3, 4, 5];
+  const item = [1, 2, 3, 4, 5]
   return (
     <section className="FeaturesTeach global-section-width">
       <FilterTabs />
       <div className="2xl:container">
         <div className="flex">
-          <div className="w-[calc(100%_-_250px)]">
+          <div className="w-[calc(100%_-_250px)] mw-lg:w-[calc(100%_-_230px)]">
             <div className="w-full pt-[22px]">
               {item.map((element, index) => {
                 return (
@@ -115,7 +115,7 @@ const FeaturesTech = () => {
                       </div>
                     </div>
                   </div>
-                );
+                )
               })}
             </div>
           </div>
@@ -124,7 +124,7 @@ const FeaturesTech = () => {
         <Pagination />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default FeaturesTech;
+export default FeaturesTech

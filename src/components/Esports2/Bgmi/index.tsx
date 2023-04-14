@@ -1,21 +1,21 @@
-import React, { useState } from "react";
-import img1 from "../../../assets/esports/bgmi-01.png";
-import img2 from "../../../assets/esports/bgmi-02.png";
-import img3 from "../../../assets/esports/bgmi-03.png";
-import img4 from "../../../assets/esports/bgmi-04.png";
+import React, { useState } from "react"
+import img1 from "../../../assets/esports/bgmi-01.png"
+import img2 from "../../../assets/esports/bgmi-02.png"
+import img3 from "../../../assets/esports/bgmi-03.png"
+import img4 from "../../../assets/esports/bgmi-04.png"
 
-import icon1 from "../../../assets/esports/b-mask-01.png";
-import icon2 from "../../../assets/esports/b-mask-02.png";
-import icon3 from "../../../assets/esports/b-mask-03.png";
-import icon4 from "../../../assets/esports/b-mask-04.png";
-import chevronsright from "../../../assets/esports/chevrons-right.png";
-import Image from "next/image";
-import SectionSaprator from "@/components/SecSaprator";
+import icon1 from "../../../assets/esports/b-mask-01.png"
+import icon2 from "../../../assets/esports/b-mask-02.png"
+import icon3 from "../../../assets/esports/b-mask-03.png"
+import icon4 from "../../../assets/esports/b-mask-04.png"
+import chevronsright from "../../../assets/esports/chevrons-right.png"
+import Image from "next/image"
+import SectionSaprator from "@/components/SecSaprator"
 const Bgmi = () => {
   interface List {
-    image: any;
-    title: string;
-    icon_img: any;
+    image: any
+    title: string
+    icon_img: any
   }
   const [item, setTiems] = useState<List[]>([
     {
@@ -38,7 +38,7 @@ const Bgmi = () => {
       title: "LG Ultragear TEC Invitational S...",
       icon_img: icon4,
     },
-  ]);
+  ])
   return (
     <div className="bgmi-component">
       <div className="global-section-width">
@@ -98,7 +98,7 @@ const Bgmi = () => {
                     </div>
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
           <div className="w-full pt-4 ">
@@ -118,7 +118,7 @@ const Bgmi = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Bgmi;
+export default Bgmi

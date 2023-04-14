@@ -63,33 +63,32 @@ const HeroSection = () => {
                         className={` mw-sm:border-l-brand flex `}
                         key={index}
                       >
-                        <div className="w-full max-w-[200px]">
+                        <div className="max-w-[200px] w-full mw-11:max-w-[170px] mw-11:h-[130px]">
                           <Image
                             src={elem.picture}
                             alt="demo "
                             className="h-full object-cover"
                           />
                         </div>
-                        <div className="desc_wrapper pr-5	pl-3.5		">
-                          <h3 className="text-base font-bold  leading-5	 text-brandDark2 montserratfont dark:text-brandLightOpacity100 mw-11:h-[40px] mw-lg:h-auto overflow-hidden ">
-                            {elem.name}
+                        <div className="desc_wrapper pr-5	pl-3.5	mw-11:pr-3.5	mw-11:h-[130px] 	">
+                          <h3 className="text-base font-bold  leading-5	 text-brandDark2 montserratfont dark:text-brandLightOpacity100 mw-11:text-[15px] mw-lg:text-base ">
+                            {" "}
+                            {elem.name}{" "}
                           </h3>
-                          {/* <p className="text-xs text-textColor robotoslub py-2.5 mx-14:py-2 mw-sm:hidden dark:text-brandLightOpacity90   overflow-hidden">
-                          It is a long established fact that a reader will be
-                          distracted by the readable content of a page when...
-                        </p> */}
+
                           <div className="tags flex pt-3.5 pb-3 montserratfont">
-                            <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:text-brandLightOpacity70">
+                            <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                               News
                             </div>
-                            <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:text-brandLightOpacity70">
+                            <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10    hover:text-brandDark2 dark:hover:bg-brandLightOpacity20    dark:hover:text-brandLightOpacity100    dark:text-brandLightOpacity70">
                               Esports
                             </div>
                           </div>
                           <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs mw-sm3:text-[10px]">
                             <span className="montserratfont">
-                              <i>3 hrs ago</i>
-                            </span>
+                              {" "}
+                              <i>3 hrs ago</i>{" "}
+                            </span>{" "}
                             <span
                               className={`border-l border-l-textColorGray pl-2 ml-2 border-textColorGray   dark:border-l-brandLightOpacity70   `}
                             >
@@ -98,12 +97,11 @@ const HeroSection = () => {
                           </small>
                         </div>
                         <div className={"thumnail_wrapper"}>
-                          <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20  hover:bg-grayCardHover cursor-pointer rounded-3xl">
+                          <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20  hover:bg-borderEditProfile cursor-pointer rounded-3xl">
                             <Image
-                              src={
-                                isDarkTheme === "dark" ? bookmark : bookmarkDark
-                              }
-                              alt="img"
+                              src={bookmark}
+                              className=" brightness-0 dark:brightness-200"
+                              alt="book"
                             />
                           </div>
                         </div>

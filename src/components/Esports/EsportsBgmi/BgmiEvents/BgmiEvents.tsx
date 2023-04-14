@@ -1,28 +1,28 @@
-import React, { useEffect, useState } from "react";
-import Slider from "react-slick";
-import Image from "next/image";
-import Card from "../../assets/images/esport-event/card.png";
-import Icon from "../../assets/images/esport-event/icon.png";
-import Logo from "../../assets/images/esport-event/logo.png";
-import DarkLogo from "../../assets/images/esport-event/logo-dark.png";
-import RightIcon from "../../assets/images/esport-event/right.png";
-import Line from "../../assets/images/general/Line.png";
-import SectionSaprator from "../SecSaprator";
-import style from "./esportEvents.module.css";
-import { useTheme } from "next-themes";
-import DarkLine from "../../assets/images/general/dark-line.png";
-const EsportEvent = () => {
+import Image from "next/image"
+import React, { useEffect, useState } from "react"
+import { useTheme } from "next-themes"
+import DarkLine from "../../../../assets/images/general/dark-line.png"
+import Card from "../../../../assets/images/esport-event/card.png"
+import Icon from "../../../../assets/images/esport-event/icon.png"
+import Logo from "../../../../assets/images/esport-event/logo.png"
+import DarkLogo from "../../../../assets/images/esport-event/logo-dark.png"
+import RightIcon from "../../../../assets/images/esport-event/right.png"
+import Slider from "react-slick"
+import style from "./BgmiEvent.module.css"
+import Line from "../../../../assets/images/general/Line.png"
+
+const BgmiEvents = () => {
   interface EventList {
-    event_title: string;
-    date: string;
-    country: string;
-    prize: string;
+    event_title: string
+    date: string
+    country: string
+    prize: string
   }
-  const { theme } = useTheme();
-  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
+  const { theme } = useTheme()
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("")
   useEffect(() => {
-    setIsDarkTheme(theme === "dark" ? "dark" : "light");
-  }, [theme]);
+    setIsDarkTheme(theme === "dark" ? "dark" : "light")
+  }, [theme])
   const [eventData, setEventData] = useState<EventList[]>([
     {
       event_title: "DOTA Pro Circuit 2023 Tour 1",
@@ -60,8 +60,7 @@ const EsportEvent = () => {
       country: "South Asia",
       prize: " $4500",
     },
-  ]);
-
+  ])
   const settings = {
     dots: false,
     infinite: true,
@@ -109,14 +108,10 @@ const EsportEvent = () => {
         },
       },
     ],
-  };
-
+  }
   return (
-    <section className="Esport-events">
-      <div className="global-section-width">
-        <div className="pt-[88px] mw-lg:pt-7 mw-sm:pt-[16px] ">
-          <SectionSaprator title="ESPORTS EVENTS" />
-        </div>
+    <>
+      <section className="bgmi_slider">
         <Slider
           {...settings}
           className={`${
@@ -194,9 +189,9 @@ const EsportEvent = () => {
             </a>
           </div>
         </div>
-      </div>
-    </section>
-  );
-};
+      </section>
+    </>
+  )
+}
 
-export default EsportEvent;
+export default BgmiEvents

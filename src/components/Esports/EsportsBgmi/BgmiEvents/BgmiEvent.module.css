@@ -1,0 +1,21 @@
+.bgmi_slider .font_esport_event_16 {
+  font-family: "Montserrat";
+  font-size: 16px;
+}
+
+.bgmi_slider .font_esport_event_12 {
+  font-family: "Montserrat";
+  font-size: 12px;
+}
+@media (max-width: 690px) {
+  .bgmi_slider .live-matches .slick-initialized .slick-slide {
+    padding: 20px;
+  }
+  .bgmi_slider .image_wrapper__event img {
+    width: auto;
+    height: 50px;
+  }
+  .bgmi_slider .font_esport_event_12 {
+    font-size: 10px;
+  }
+}

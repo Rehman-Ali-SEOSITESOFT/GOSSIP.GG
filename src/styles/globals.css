@@ -325,14 +325,23 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  .slick-prev {
+    left: -40px !important;
+  }
+  .slick-next {
+    right: -45px !important;
+  }
 }
-@media screen and (max-width : 1280px){
-  .news-title{
+@media screen and (max-width: 1280px) {
+  .news-title {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
+  }
+  .global-section-width {
+    padding: 0 50px;
   }
 }
 @media screen and (max-width: 1100px) {
@@ -345,7 +354,13 @@
     text-overflow: ellipsis;
   }
   .global-section-width {
-    padding: 0 50px;
+    padding: 0 40px;
+  }
+  .slick-prev {
+    left: -25px !important;
+  }
+  .slick-next {
+    right: -25px !important;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -360,9 +375,22 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  .slick-prev {
+    left: 0px !important;
+  }
+  .slick-next {
+    right: 0px !important;
+  }
 }
 
 @media screen and (max-width: 639px) {
+  .review-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   .hero-section-tech-title {
     -webkit-line-clamp: 2;
   }
