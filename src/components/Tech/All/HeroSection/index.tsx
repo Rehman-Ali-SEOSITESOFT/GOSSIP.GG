@@ -120,7 +120,7 @@ const AllHeroSection = () => {
                 {item2.map((elem, index) => {
                   return (
                     <div
-                      className={` mw-sm:border-l-brand flex  mw-lg:w-[49%] mw-sm:w-full ${
+                      className={` mw-sm:border-l-2 pl-2 mw-sm:border-l-brand flex  mw-lg:w-[49%] mw-sm:w-full ${
                         index === 0 ? "mw-sm:mb-7" : "mb-0"
                       }`}
                       key={index}

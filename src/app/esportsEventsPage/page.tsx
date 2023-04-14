@@ -83,8 +83,7 @@ const page = () => {
           <div className="2xl:container">
             <div className="valo_community_cup mt-[44px]">
               <h2 className="montserratfont text-2xl   leading-[29px] font-bold	text-[#E5E5E5]">
-                {" "}
-                Valorant Community Cup#19{" "}
+                Valorant Community Cup#19
               </h2>
               <p className="mt-[10px] montserratfont text-[#008D52] font-medium	text-base	leading-[20px] ">
                 Registration Open
@@ -106,7 +105,7 @@ const page = () => {
 
               <div className="w-[70%] mt-[48px]">
                 <h2 className="montserratfont text-[32px] leading-[39px]  text-[#E5E5E5] font-bold	">
-                  Intel Presents Valorant Community Cup#19{" "}
+                  Intel Presents Valorant Community Cup#19
                 </h2>
                 <div className="mt-[20px]">
                   <p className="montserratfont font-normal leading-[17px] text-[#E5E5E5]	text-sm	">

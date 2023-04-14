@@ -61,8 +61,9 @@ const LatestNews = () => {
                 <div
                   className={`w-1/3 ${
                     index === 0 || index === 1 || index === 2 ? "pt-0" : "pt-5"
-                  } pl-5	 pr-5	 pb-0		  mw-12:w-1/3 mw-lg:w-full flex     ${
-                    style.news_items
+                  } pl-5	 pr-5	 pb-0		  mw-12:w-1/3 mw-lg:w-full flex    
+                  ${
+                    index === 2 || index === 5 ? "border-r-0" : "border-r "
                   } border-grayCard  dark:border-brandLightOpacity10 ${
                     index === 2
                       ? "mw-12:border-r-grayCard mw-12:dark:border-r-brandLightOpacity10"
@@ -71,16 +72,27 @@ const LatestNews = () => {
                   key={index}
                 >
                   <div
-                    className={`${style.news_img_wrap}  rounded-sm border-grayCard  mw-12:border-b-grayCard  dark:border-brandLightOpacity10 `}
+                    className={` ${
+                      index === 3 || index === 4 || index === 5
+                        ? "border-b-0 pb-[0]"
+                        : "border-b pb-[20px]"
+                    } rounded-sm border-grayCard  mw-12:border-b-grayCard  dark:border-brandLightOpacity10 max-w-[112px] min-w-[112px] min-h-[127px] mw-11:min-h-[90px]  mw-11:min-w-[90px] h-full  `}
                   >
                     <Image
                       src={elem.picture}
                       alt="Latest new"
-                      className="rounded-sm object-cover"
+                      className="rounded-sm w-full h-full object-cover"
                     />
                   </div>
-                  <div
+                  {/* <div
                     className={`${style.news_desc} border-grayCard dark:border-brandLightOpacity10`}
+                  > */}
+                  <div
+                    className={`px-[16px]  border-grayCard dark:border-brandLightOpacity10  ${
+                      index === 3 || index === 4 || index === 5
+                        ? "border-b-0 pb-[0]"
+                        : "border-b pb-[20px]"
+                    }`}
                   >
                     <h4
                       className={`${style.title_overHidden} text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100`}
@@ -145,7 +157,11 @@ const LatestNews = () => {
                   key={index}
                 >
                   <div
-                    className={`${style.news_img_wrap}  rounded-sm border-grayCard  mw-12:border-grayCard  dark:border-brandLightOpacity10 `}
+                    className={`${style.news_img_wrap}  rounded-sm ${
+                      index === 0 || index === 1
+                        ? "border-b pb-[15px]"
+                        : "border-b-0"
+                    } border-grayCard  mw-12:border-grayCard  dark:border-brandLightOpacity10 `}
                   >
                     <Image
                       src={elem.picture}
@@ -154,7 +170,13 @@ const LatestNews = () => {
                     />
                   </div>
                   <div
-                    className={`${style.news_desc} border-grayCard dark:border-brandLightOpacity10`}
+                    className={`${
+                      style.news_desc
+                    } border-grayCard dark:border-brandLightOpacity10 ${
+                      index === 0 || index === 1
+                        ? "border-b pb-[15px]"
+                        : "border-b-0"
+                    }`}
                   >
                     <h4
                       className={`${style.title_overHidden} text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100`}
@@ -176,8 +198,7 @@ const LatestNews = () => {
                       </span>
                       <span
                         className="border-l border-l-textColorGray pl-2 ml-2 border-textColorGray
-              dark:border-l-brandLightOpacity10
-              "
+              dark:border-l-brandLightOpacity10"
                       >
                         5 min read
                       </span>
@@ -188,8 +209,13 @@ const LatestNews = () => {
                       index === 2 || index === 3 ? "border-b-0" : "border-b"
                     } border-grayCard  dark:border-brandLightOpacity10`}
                   >
+                    {/* bookmark text-textColorGray hover:text-textColor  dark:text-brandLightOpacity70 dark:hover:text-brandLightOpacity100 w-[12px] */}
                     <div className="bookmark text-textColorGray hover:text-textColor  dark:text-brandLightOpacity70 dark:hover:text-brandLightOpacity100  w-[12px]">
-                      <Image src={boomkark} alt="bookmkar" />
+                      <Image
+                        src={boomkark}
+                        alt="bookmkar"
+                        className=" brightness-0 opacity-80 hover:opacity-100  dark:brightness-200"
+                      />
                     </div>
                   </div>
                 </div>
@@ -237,7 +263,11 @@ const LatestNews = () => {
                       </small>
                       <div className={`${style.thumnail_img}`}>
                         <div className="bookmark text-textColorGray hover:text-textColor  dark:text-brandLightOpacity70 dark:hover:text-brandLightOpacity100">
-                          <Image src={boomkark} alt="img" />
+                          <Image
+                            src={boomkark}
+                            alt="img"
+                            className=" brightness-0 opacity-80 hover:opacity-100  dark:brightness-200"
+                          />
                         </div>
                       </div>
                     </div>

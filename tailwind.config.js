@@ -59,11 +59,13 @@ module.exports = {
       },
       screens: {
         "mx-14": { max: "1430px" },
+        "mx-13": { max: "1330px" },
         "mw-xl": { max: "1279px" },
         "mw-12": { max: "1200px" },
         "mw-11": { max: "1100px" },
         // => @media (max-width: 1279px) { ... }
         "mw-lg": { max: "1024px" },
+        "mw-9": { max: "900px" },
         // => @media (max-width: 1023px) { ... }
         "mw-md": { max: "767px" },
         // => @media (max-width: 767px) { ... }
@@ -90,5 +92,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("tailwind-scrollbar"),  require('flowbite/plugin')],
-}
+  plugins: [require("@tailwindcss/typography"), require("tailwind-scrollbar")],
+};

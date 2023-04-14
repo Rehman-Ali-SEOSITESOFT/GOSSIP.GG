@@ -17,7 +17,7 @@ const FeaturesTech = () => {
       <FilterTabs />
       <div className="2xl:container">
         <div className="flex">
-          <div className="w-[calc(100%_-_250px)]">
+          <div className="w-[calc(100%_-_250px)] mw-lg:w-[calc(100%_-_230px)]">
             <div className="w-full pt-[22px]">
               {item.map((element, index) => {
                 return (

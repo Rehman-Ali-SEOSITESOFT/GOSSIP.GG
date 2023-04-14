@@ -72,22 +72,24 @@ const DeailTech = () => {
 
   return (
     <section className="global-section-width">
-      <div className="slider pt-11">
+      <div className="slider pt-11 mw-lg:pt-9 mw-sm:pt-7">
         <DealSlider />
       </div>
       <FilterTabs />
       <div className="2xl:container">
-        <div className="pt-16">
+        <div className="pt-16 mw-lg:pt-7 mw-sm:pt-[16px]">
           <SectionSaprator title="ONGOING Deals" />
         </div>
         <div className="flex flex-wrap justify-between">
           {onGoing.slice(0, onGoingLimit).map((elem, index) => {
             return (
               <div
-                className={" w-[300px] mw-lg:w-[48%] mw-sm3:w-full pb-4"}
+                className={
+                  "max-w-[300px] mb-[24px] mx-14:max-w-[24%] w-full mw-md:max-w-[48%]  mw-sm3:max-w-full    "
+                }
                 key={index}
               >
-                <div className="img-wrapper w-[300px]  h-[236px] mw-lg:h-[200px] mw-sm:h-[180px] mw-sm3:h-[150px] rounded relative">
+                <div className="img-wrapper  h-[250px] mw-lg:h-[200px] mw-sm:h-[180px] mw-sm3:h-[250px] rounded relative">
                   <Image src={elem} alt="hello" className="w-full h-full" />
 
                   {index === 0 || index === 4 || index === 8 || index === 12 ? (
@@ -123,7 +125,7 @@ const DeailTech = () => {
           })}
           <h5
             onClick={hanldeOnGoing}
-            className="cursor-pointer pt-2 text-center m-auto"
+            className="cursor-pointer pt-2 text-center m-auto mt-2"
           >
             <span className="montserratfont font-medium	capitalize text-base leading-5 dark:text-brandLightOpacity70 underline underline-offset-4	pr-2">
               See more
@@ -133,15 +135,19 @@ const DeailTech = () => {
         </div>
       </div>
       <div className="2xl:container">
-        <SectionSaprator title="upcomming  deals" />
+        <div className="pt-16 mw-lg:pt-7 mw-sm:pt-[16px]">
+          <SectionSaprator title="upcomming  deals" />
+        </div>
         <div className="flex flex-wrap justify-between">
           {upCommming.slice(0, upCommingLimit).map((elem, index) => {
             return (
               <div
-                className={" w-[300px] mw-lg:w-[48%] mw-sm3:w-full pb-4"}
+                className={
+                  "max-w-[300px]  mb-[24px] mx-14:max-w-[24%] w-full mw-md:max-w-[48%]  mw-sm3:max-w-full  "
+                }
                 key={index}
               >
-                <div className="img-wrapper w-[300px]  h-[236px] mw-lg:h-[200px] mw-sm:h-[180px] mw-sm3:h-[150px] rounded relative">
+                <div className="img-wrapper  h-[250px] mw-lg:h-[200px] mw-sm:h-[180px] mw-sm3:h-[250px] rounded relative">
                   <Image src={elem} alt="hello" className="w-full h-full" />
 
                   {index === 0 || index === 4 || index === 8 || index === 12 ? (
@@ -177,7 +183,7 @@ const DeailTech = () => {
           })}{" "}
           <h5
             onClick={hanldeUpcomming}
-            className="cursor-pointer pt-2 pb-28 text-center m-auto"
+            className="cursor-pointer pb-28 mw-sm1:pb-12 text-center pt-4 m-auto"
           >
             <span className="montserratfont font-medium	capitalize text-base leading-5 dark:text-brandLightOpacity70 underline underline-offset-4	pr-2">
               See more
