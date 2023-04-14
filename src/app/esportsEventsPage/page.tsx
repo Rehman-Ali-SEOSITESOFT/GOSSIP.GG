@@ -1,40 +1,40 @@
-"use client"
-import React, { useState } from "react"
-import eyeIcon from "../../assets/esporting-events/eye.png"
-import banner from "../../assets/esporting-events/bannerimg1.png"
-import msg from "../../assets/esporting-events/message.png"
-import bookmark from "../../assets/esporting-events/bookmark.png"
-import forward from "../../assets/esporting-events/forward.png"
-import typeComment from "../../assets/esporting-events/typeComment.png"
-import SectionSaprator from "@/components/SecSaprator"
-import user from "../../assets/esporting-events/user1.png"
-import likes from "../../assets/esporting-events/likes.png"
-import commentLogo from "../../assets/esporting-events/commentLogo.png"
-import twitter from "../../assets/esporting-events/twitter.png"
-import vrbox from "../../assets/esporting-events/vrbox.png"
-import heart from "../../assets/esporting-events/heart.png"
-import retweet from "../../assets/esporting-events/retweet.png"
-import youtube from "../../assets/esporting-events/youtube.png"
-import youtubepreview from "../../assets/esporting-events/videopreview.png"
-import pinkman from "../../assets/esporting-events/pinkman.png"
-import brandmark from "../../assets/esporting-events/smallbrand.png"
-import cod from "../../assets/esporting-events/cod2.png"
-import allup from "../../assets/esporting-events/allup.png"
-import aiming from "../../assets/esporting-events/aiming.png"
-import users from "../../assets/esporting-events/userss.png"
-import cube from "../../assets/esporting-events/cube.png"
-import trophy from "../../assets/esporting-events/trophy.png"
-import earth from "../../assets/esporting-events/earth.png"
-import profile from "../../assets/esporting-events/profile.png"
-import torurnament from "../../assets/esporting-events/tournament.png"
-import Image from "next/image"
-import style from "./esportsEventPage.module.css"
-import ValorantListing from "@/components/Esports/EsportEvents/ValorantListing/ValorantListing"
+"use client";
+import React, { useState } from "react";
+import eyeIcon from "../../assets/esporting-events/eye.png";
+import banner from "../../assets/esporting-events/bannerimg1.png";
+import msg from "../../assets/esporting-events/message.png";
+import bookmark from "../../assets/esporting-events/bookmark.png";
+import forward from "../../assets/esporting-events/forward.png";
+import typeComment from "../../assets/esporting-events/typeComment.png";
+import SectionSaprator from "@/components/SecSaprator";
+import user from "../../assets/esporting-events/user1.png";
+import likes from "../../assets/esporting-events/likes.png";
+import commentLogo from "../../assets/esporting-events/commentLogo.png";
+import twitter from "../../assets/esporting-events/twitter.png";
+import vrbox from "../../assets/esporting-events/vrbox.png";
+import heart from "../../assets/esporting-events/heart.png";
+import retweet from "../../assets/esporting-events/retweet.png";
+import youtube from "../../assets/esporting-events/youtube.png";
+import youtubepreview from "../../assets/esporting-events/videopreview.png";
+import pinkman from "../../assets/esporting-events/pinkman.png";
+import brandmark from "../../assets/esporting-events/smallbrand.png";
+import cod from "../../assets/esporting-events/cod2.png";
+import allup from "../../assets/esporting-events/allup.png";
+import aiming from "../../assets/esporting-events/aiming.png";
+import users from "../../assets/esporting-events/userss.png";
+import cube from "../../assets/esporting-events/cube.png";
+import trophy from "../../assets/esporting-events/trophy.png";
+import earth from "../../assets/esporting-events/earth.png";
+import profile from "../../assets/esporting-events/profile.png";
+import torurnament from "../../assets/esporting-events/tournament.png";
+import Image from "next/image";
+import style from "./esportsEventPage.module.css";
+import ValorantListing from "@/components/Esports/EsportEvents/ValorantListing/ValorantListing";
 const Page = () => {
   interface List {
-    title: string
-    icon: any
-    detail: string
+    title: string;
+    icon: any;
+    detail: string;
   }
   const [list, setList] = useState<List[]>([
     {
@@ -62,7 +62,7 @@ const Page = () => {
       title: "Sponsors",
       detail: "Intel.DHL",
     },
-  ])
+  ]);
   return (
     <>
       <section className="esports_events_wrapper_">
@@ -70,8 +70,7 @@ const Page = () => {
           <div className="2xl:container">
             <div className="valo_community_cup mt-[44px]">
               <h2 className="montserratfont text-2xl   leading-[29px] font-bold	text-[#E5E5E5]">
-                {" "}
-                Valorant Community Cup#19{" "}
+                Valorant Community Cup#19
               </h2>
               <p className="mt-[10px] montserratfont text-[#008D52] font-medium	text-base	leading-[20px] ">
                 Registration Open
@@ -93,7 +92,7 @@ const Page = () => {
 
               <div className="w-[70%] mt-[48px]">
                 <h2 className="montserratfont text-[32px] leading-[39px]  text-[#E5E5E5] font-bold	">
-                  Intel Presents Valorant Community Cup#19{" "}
+                  Intel Presents Valorant Community Cup#19
                 </h2>
                 <div className="mt-[20px]">
                   <p className="montserratfont font-normal leading-[17px] text-[#E5E5E5]	text-sm	">
@@ -314,7 +313,7 @@ const Page = () => {
                       <div className="content_area pl-[16px]">
                         <div className="content_area_top">
                           <h4 className="flex items-center montserratfont text-[18px] leading-[22px] font-bold text-[#ED4E50]">
-                            Esports Writer{" "}
+                            Esports Writer
                             <span>
                               <Image src={brandmark} alt="" />
                             </span>
@@ -339,7 +338,7 @@ const Page = () => {
                       <div className="content_area pl-[16px]">
                         <div className="content_area_top">
                           <h4 className="flex items-center montserratfont text-[18px] leading-[22px] font-bold text-[#ED4E50]">
-                            Esports Writer{" "}
+                            Esports Writer
                             <span>
                               <Image src={brandmark} alt="" />
                             </span>
@@ -361,7 +360,7 @@ const Page = () => {
                       <div className="content_area pl-[16px]">
                         <div className="content_area_top">
                           <h4 className="flex items-center montserratfont text-[18px] leading-[22px] font-bold text-[#ED4E50]">
-                            Esports Writer{" "}
+                            Esports Writer
                             <span>
                               <Image src={brandmark} alt="" />
                             </span>
@@ -421,7 +420,7 @@ const Page = () => {
                             title={e.title}
                           />
                         </div>
-                      )
+                      );
                     })}
                     <div className="flex pl-[9px]   pb-[34px] pt-[16px]">
                       <div className="w-[40px] h-[40px] bg-brandLightOpacity10 rounded-full flex items-center justify-center ">
@@ -449,7 +448,7 @@ const Page = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
