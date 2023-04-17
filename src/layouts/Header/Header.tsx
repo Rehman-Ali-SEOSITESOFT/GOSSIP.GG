@@ -134,9 +134,12 @@ const Header = () => {
 
   // /// for close dropdown on outside click
   const handleClickOutside = (e: any) => {
-    if (!headerSearchbarRef.current.contains(e.target)) {
-      setSearchText("");
-        }
+    if(headerSearchbarRef.current !== null){
+      if (!headerSearchbarRef.current.contains(e.target)) {
+        setSearchText("");
+          }
+    }
+   
   };
 
 
@@ -218,11 +221,12 @@ const Header = () => {
                         </span>
 
                         <div  className="absolute shadow-3xshadow  rounded border-[2px] border-brandLightOpacity10 left-6 mt-[2px] bg-brandDark1 pb-2  w-[539px]">
-                          <div className="h-[44px]  px-4 flex items-center ">
+                        {recentSearchList.length > 0 && <div className="h-[44px]  px-4 flex items-center ">
                             <p className="montserratfont text-brandLightOpacity100 font-normal text-sm">
                               Recent Search
                             </p>
                           </div>
+                         }
                           {recentSearchList.length > 0 ? (
                             recentSearchList.map((item, index) => (
                               <div
@@ -240,9 +244,9 @@ const Header = () => {
                               </div>
                             ))
                           ) : (
-                            <div className="h-[44px]  px-4 flex items-center ">
-                              <p className="montserratfont text-brandLightOpacity100 font-normal text-sm">
-                                No search found
+                            <div className="h-[44px]  flex justify-center items-center">
+                              <p className="montserratfont pt-2 text-brandLightOpacity100 font-normal text-sm">
+                                No matching results found.
                               </p>
                             </div>
                           )}
@@ -322,7 +326,7 @@ const Header = () => {
                                     // className={classNames(active)}
                                   >
                                     <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pt-2">
-                                      {" "}
+                                    
                                       View Profile
                                     </h5>
                                   </Link>
@@ -433,14 +437,14 @@ const Header = () => {
                 {menu.map((elme, index) => {
                   return (
                     <li key={index}>
-                      <a
+                      <Link
                         href={elme.link}
-                        className={`font-bold leading-5 no-underline uppercase text-brandLightOpacity100 hover:text-brand hover:font-extrabold text-brandLightOpacity100 mw-sm:text-brandLightOpacity70 ${
-                          index === 0 && `${styles.active}`
+                        className={`font-bold leading-5 no-underline uppercase  hover:text-brand hover:font-extrabold text-brandLightOpacity100 mw-sm:text-brandLightOpacity70 ${
+                          currentPage === elme.link && `${styles.active}`
                         }`}
                       >
                         {elme.name}
-                      </a>
+                      </Link>
                     </li>
                   );
                 })}
@@ -449,21 +453,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-
-      {/* <EditProfileModal open={open} onClickOpenModal={onClickOpenModal} /> */}
       <LoginModal open={open} onClickOpenModal={onClickOpenModal} />
-      {/* <PasswrodChangeModal open={open} onClickOpenModal={onClickOpenModal}/> */}
-      {/* <PasswordEmailModal open={open} onClickOpenModal={onClickOpenModal}/> */}
-      {/* <ForgotPasswordModal open={open} onClickOpenModal={onClickOpenModal}/> */}
-      {/* <ResetPasswordModal open={open} onClickOpenModal={onClickOpenModal}/> */}
-      {/* <ChoiceTopicModel
-        openmodel={choicModelOpen}
-        choicTopicModel={choicTopicModel}
-      /> */}
-      {/* <WelcomeGossip
-        welcomeGoggip={welcomeGoggip}
-        welcomGossipModel={welcomGossipModel}
-      /> */}
     </header>
   );
 };

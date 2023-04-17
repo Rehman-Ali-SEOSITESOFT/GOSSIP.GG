@@ -67,7 +67,7 @@ const EmptyProfileDetail = () => {
             <p className="joined-data text-textColorGray dark:text-brandLightOpacity70 font-medium montserratfont leading-4	 text-sm">
               Joined Feb 2023
             </p>
-            <p className="about-user-description montserratfont text-base leading-7 text-textColorGray	font-normal dark:text-brandLightOpacity70 pt-5 h-[100px]	 underline underline-offset-2">
+            <p className="hover:text-[#000000] dark:hover:text-[white] about-user-description montserratfont text-base leading-7 text-textColorGray	font-normal dark:text-brandLightOpacity70 pt-5 h-[100px]	 underline underline-offset-2">
               + Add description
             </p>
           </div>
