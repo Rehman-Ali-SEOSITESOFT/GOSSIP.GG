@@ -43,7 +43,7 @@ import image2 from "../../assets/esportevents2/image2.png"
 import image3 from "../../assets/esportevents2/image3.png"
 import image4 from "../../assets/esportevents2/image4.png"
 import image5 from "../../assets/esportevents2/image5.png"
-const page = () => {
+const Page = () => {
   interface List {
     title: string
     icon: any
@@ -551,4 +551,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

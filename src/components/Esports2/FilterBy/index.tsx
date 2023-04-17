@@ -13,6 +13,7 @@ import EsportClub from "../../../assets/images/filters/esport.png";
 import NOQWIN from "../../../assets/images/filters/nodwin.png";
 import Penta from "../../../assets/images/filters/penta.png";
 import Search from "../../../assets/images/filters/search.png";
+import { useTheme } from "next-themes";
 
 const FilterBy = () => {
   const [sortBy, setSortBy] = useState<string[]>([
@@ -213,26 +214,36 @@ const FilterBy = () => {
     setSelectedOrganizer([]);
   };
 
-  const onChangeGameSearch = (e: any) =>{
-     let copyArr = [...gameList];
-     let filterArr = copyArr.filter(item => item.name.toLowerCase().indexOf(e.target.value) > -1);
-    if(e.target.value !== ""){
-      setGameList(filterArr)
-    }else{
-      setGameList(itemGame)
+  const onChangeGameSearch = (e: any) => {
+    let copyArr = [...gameList];
+    let filterArr = copyArr.filter(
+      (item) => item.name.toLowerCase().indexOf(e.target.value) > -1
+    );
+    if (e.target.value !== "") {
+      setGameList(filterArr);
+    } else {
+      setGameList(itemGame);
     }
+  };
+
+  const onChangeOrganizerSearch = (e: any) => {
+    let copyArr = [...organizerList];
+    let filterArr = copyArr.filter(
+      (item) => item.name.toLowerCase().indexOf(e.target.value) > -1
+    );
+    if (e.target.value !== "") {
+      setOrganizerList(filterArr);
+    } else {
+      setOrganizerList(itemGame);
     }
+  };
 
-    const onChangeOrganizerSearch = (e: any) =>{
-      let copyArr = [...organizerList];
-      let filterArr = copyArr.filter(item => item.name.toLowerCase().indexOf(e.target.value) > -1);
-     if(e.target.value !== ""){
-       setOrganizerList(filterArr)
-     }else{
-      setOrganizerList(itemGame)
-     }
-     }
+  const { theme, setTheme } = useTheme();
 
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
+  useEffect(() => {
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   return (
     <div className="filter-by-esport-event pt-16	">
       <div className="global-section-width">
@@ -251,7 +262,10 @@ const FilterBy = () => {
               {selectedGame.filter((item) => item === "8").length === 1 ? (
                 "All"
               ) : selectedGame.length >= 2 ? (
-                <p className="montserratfont text-brandLightOpacity100"> {selectedGame.length + " " + "selected"}</p>
+                <p className="montserratfont dark:text-brandLightOpacity100">
+                  {" "}
+                  {selectedGame.length + " " + "selected"}
+                </p>
               ) : (
                 <div className="flex items-center">
                   {selectedGame.length === 1 ? (
@@ -270,7 +284,7 @@ const FilterBy = () => {
                     {selectedGame.length === 1
                       ? gameList.filter(
                           (item) => item.id === selectedGame[0]
-                        )[0].id === "4"
+                        )[0].id !== "3"
                         ? gameList.filter(
                             (item) => item.id === selectedGame[0]
                           )[0].name
@@ -299,17 +313,21 @@ const FilterBy = () => {
               </div>
             </div>
             {opendropDown1 && (
-              <div className=" shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-brandDark2 dark:border-brandLightOpacity10  m-h-[462px] w-[302px] bg-brandDark1">
+              <div className=" shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-brandDark2 dark:border-brandLightOpacity10 bg-bodycolor  m-h-[462px] w-[302px] dark:bg-brandDark1">
                 <div className="border-b-2 border-b-brandLightOpacity10 h-[60px] flex flex-row  items-center pl-[16px] pr-[20px]">
-                  <Image src={Search} alt="search"/>
-                  <input type="input"
-                  onChange={(e) => onChangeGameSearch(e)}
-                  className="bg-brandDark1 focus:outline-none focus:bg-brandDark1 hover:bg-brandDark1 focus:border-none w-[90%] text-brandLightOpacity100 ml-2 montserratfont" />
+                  <Image src={Search} alt="search" />
+                  <input
+                    type="input"
+                    onChange={(e) => onChangeGameSearch(e)}
+                    className="bg-brandDark1 focus:outline-none focus:bg-brandDark1 hover:bg-brandDark1 focus:border-none w-[90%] text-brandLightOpacity100 ml-2 montserratfont"
+                  />
                 </div>
                 {gameList.map((item, index) => (
                   <div
                     key={index}
-                    className="h-[60px] hover:bg-brandLightOpacity10  flex flex-row justify-between items-center pl-[16px] pr-[20px]"
+                    className={`h-[60px] hover:bg-brandLightOpacity10  flex flex-row justify-between items-center pl-[16px] pr-[20px] ${
+                      isDarkTheme === "dark" ? "darkchecked " : "lightcheched"
+                    }`}
                   >
                     <div className="flex items-center">
                       {item.image !== "" && (
@@ -349,7 +367,7 @@ const FilterBy = () => {
               onClick={() => onClickOpen2()}
               className=" px-4  flex flex-row justify-between items-center h-[60px] rounded-lg w-[302px] border border-brandDark2 dark:border-brandLightOpacity50"
             >
-              <p className="montserratfont text-brandLightOpacity100">
+              <div className="montserratfont text-brandLightOpacity100">
                 {selectedOrganizer.filter((item) => item === "4").length ===
                 1 ? (
                   "All"
@@ -378,7 +396,7 @@ const FilterBy = () => {
                     </p>
                   </div>
                 )}
-              </p>
+              </div>
               <div className="flex items-center">
                 {selectedOrganizer.length > 0 && (
                   <>
@@ -398,12 +416,18 @@ const FilterBy = () => {
               </div>
             </div>
             {opendropDown2 && (
-              <div className=" shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-brandDark2 dark:border-brandLightOpacity10  m-h-[462px] w-[302px] bg-brandDark1">
+              <div
+                className={` shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-brandDark2 dark:border-brandLightOpacity10  m-h-[462px] w-[302px] bg-brandDark1  ${
+                  isDarkTheme === "dark" ? "darkchecked " : "lightcheched"
+                }`}
+              >
                 <div className="border-b-2 border-b-brandLightOpacity10 h-[60px] flex flex-row  items-center pl-[16px] pr-[20px]">
-                  <Image src={Search} alt="search"/>
+                  <Image src={Search} alt="search" />
                   <input
-                  onChange={(e) => onChangeOrganizerSearch(e)}
-                  type="input" className="bg-brandDark1 focus:outline-none focus:bg-brandDark1 hover:bg-brandDark1 focus:border-none w-[90%] text-brandLightOpacity100 ml-2 montserratfont" />
+                    onChange={(e) => onChangeOrganizerSearch(e)}
+                    type="input"
+                    className="bg-brandDark1 focus:outline-none focus:bg-brandDark1 hover:bg-brandDark1 focus:border-none w-[90%] text-brandLightOpacity100 ml-2 montserratfont"
+                  />
                 </div>
                 {organizerList.map((item, index) => (
                   <div
@@ -474,7 +498,11 @@ const FilterBy = () => {
               </div>
             </div>
             {opendropDown3 && (
-              <div className="shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-brandDark2 dark:border-brandLightOpacity10  m-h-[462px] w-[302px] bg-brandDark1">
+              <div
+                className={`shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-brandDark2 dark:border-brandLightOpacity10  m-h-[462px] w-[302px] bg-brandDark1  ${
+                  isDarkTheme === "dark" ? "darkchecked " : "lightcheched"
+                }`}
+              >
                 {statusList.map((item, index) => (
                   <div
                     key={index}
@@ -536,7 +564,11 @@ const FilterBy = () => {
               </div>
             </div>
             {opendropDown4 && (
-              <div className="shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-brandDark2 dark:border-brandLightOpacity10  m-h-[462px] w-[302px] bg-brandDark1">
+              <div
+                className={`shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-brandDark2 dark:border-brandLightOpacity10  m-h-[462px] w-[302px] bg-brandDark1  ${
+                  isDarkTheme === "dark" ? "darkchecked " : "lightcheched"
+                }`}
+              >
                 {regionList.map((item, index) => (
                   <div
                     key={index}

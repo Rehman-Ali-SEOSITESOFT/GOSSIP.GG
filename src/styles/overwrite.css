@@ -57,6 +57,54 @@
   opacity: 1;
 }
 
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+
+  font: inherit;
+
+  width: 20px;
+  height: 20px;
+  border: 2px solid currentColor;
+  border-radius: 2px;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+.darkchecked input[type="checkbox"] {
+  border: 2px solid var(--brandLightOpacity100);
+}
+.lightcheched input[type="checkbox"] {
+  border: 2px solid var(--brandDark2);
+}
+input[type="checkbox"]::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+
+  /* clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%); */
+  transform: scale(0);
+  /* transform-origin: bottom left; */
+  transition: 120ms transform ease-in-out;
+  /* box-shadow: inset 1em 1em var(--form-control-color); */
+  /* Windows High Contrast Mode */
+  background-color: currentColor;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 2px;
+}
+.darkchecked input[type="checkbox"]::before {
+  background-image: url("../assets/images/general/checked.png");
+  background-color: var(--brandLightOpacity100);
+}
+.lightcheched input[type="checkbox"]::before {
+  background-image: url("../assets/images/general/light-checked.png");
+  background-color: var(--brandDark2);
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
 @media screen and (max-width: 1024px) {
   .deailslider .slick-slide > div {
     height: 300px !important;
