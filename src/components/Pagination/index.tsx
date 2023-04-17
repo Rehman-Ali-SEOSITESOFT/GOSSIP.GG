@@ -22,7 +22,7 @@ const Pagination = () => {
         <div className="flex w-full py-[88px] mw-md:py-[70px] mw-sm:py-[50px]">
           <div className="w-[450px] m-auto">
             <div className="pagination flex justify-between items-center">
-              <div className="back-arrow inline-block bg-grayCard dark:bg-brandDark1 dark:hover:bg-brandLightOpacity10 w-[32px] h-[32px] leading-[32px] flex justify-center items-center rounded-2xl cursor-pointer">
+              <div className="back-arrow inline-block bg-grayCard dark:bg-brandDark1 dark:hover:bg-brandLightOpacity10 w-[32px] h-[32px] leading-[32px] flex justify-center items-center rounded-2xl cursor-pointer hover:bg-borderEditProfile">
                 <Image
                   src={arrow}
                   alt="back-arrow"
@@ -77,7 +77,7 @@ const Pagination = () => {
                   );
                 })}
               </div>
-              <div className="next-arrow inline-block bg-grayCard  dark:bg-brandDark1 dark:hover:bg-brandLightOpacity10 w-[31px] h-[32px] leading-[32px] flex justify-center items-center  rounded-2xl rotate-180	cursor-pointer pr-[2px]">
+              <div className="next-arrow inline-block bg-grayCard hover:bg-borderEditProfile  dark:bg-brandDark1 dark:hover:bg-brandLightOpacity10 w-[31px] h-[32px] leading-[32px] flex justify-center items-center  rounded-2xl rotate-180	cursor-pointer pr-[2px]">
                 <Image
                   src={arrow}
                   alt="back-arrow"
