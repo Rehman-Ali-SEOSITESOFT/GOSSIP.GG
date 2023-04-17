@@ -19,7 +19,7 @@ const index = () => {
         <div className="latest_news">
           <div className="global-section-width">
             <div className="2xl:container">
-              <div className="view_latest_news pb-0 pt-[54px]">
+              <div className="view_latest_news pb-0 pt-[54px] ">
                 <SectionSaprator title="Guides" />
               </div>
             </div>

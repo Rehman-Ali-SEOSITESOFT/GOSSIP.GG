@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from "react"
 import eyeIcon from "../../../assets/esporting-events/eye.png"
-import banner from "../../../assets/esporting-events/bannerimg1.png"
+import banner from "../../../assets/esporting-events/banner_.webp"
 import msg from "../../../assets/esporting-events/message.png"
 import bookmark from "../../../assets/esporting-events/bookmark.png"
 import forward from "../../../assets/esporting-events/forward.png"
@@ -9,17 +9,6 @@ import typeComment from "../../../assets/esporting-events/typeComment.png"
 import SectionSaprator from "@/components/SecSaprator"
 import user from "../../../assets/esporting-events/user1.png"
 import likes from "../../../assets/esporting-events/likes.png"
-import commentLogo from "../../../assets/esporting-events/commentLogo.png"
-import twitter from "../../../assets/esporting-events/twitter.png"
-import vrbox from "../../../assets/esporting-events/vrbox.png"
-import heart from "../../../assets/esporting-events/heart.png"
-import retweet from "../../../assets/esporting-events/retweet.png"
-import youtube from "../../../assets/esporting-events/youtube.png"
-import youtubepreview from "../../../assets/esporting-events/videopreview.png"
-import pinkman from "../../../assets/esporting-events/pinkman.png"
-import brandmark from "../../../assets/esporting-events/smallbrand.png"
-import cod from "../../../assets/esporting-events/cod2.png"
-import allup from "../../../assets/esporting-events/allup.png"
 import aiming from "../../../assets/esporting-events/aiming.png"
 import users from "../../../assets/esporting-events/userss.png"
 import cube from "../../../assets/esporting-events/cube.png"
@@ -95,10 +84,13 @@ const Page = () => {
                 <Image src={eyeIcon} alt="" className="ml-[8px]" />
               </div>
             </div>
-            <div className="banner_esports_event_">
+            <div className="banner_esports_event_ relative">
               <div className="mt-[20px]">
                 <Image src={banner} alt="img" className="" />
               </div>
+              <button className="absolute right-[24px] bottom-[50px] bg-brandLightOpacity90 rounded-[20px] montserratfont text-[#221E1F] text-[16px] leading-[20px] font-semibold py-[10px] px-[16px]">
+                Registrations Open
+              </button>
             </div>
             <div className="intel_presents_valorant flex justify-between">
               {/* left section starts here */}

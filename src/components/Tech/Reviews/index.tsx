@@ -1,22 +1,22 @@
-import Image from "next/image";
-import React from "react";
-import review1 from "../../../assets/tech/reviewtab/1.png";
-import review2 from "../../../assets/tech/reviewtab/2.png";
-import review3 from "../../../assets/tech/reviewtab/3.png";
-import review4 from "../../../assets/tech/reviewtab/4.png";
-import review5 from "../../../assets/tech/reviewtab/5.png";
-import review6 from "../../../assets/tech/reviewtab/6.png";
-import review7 from "../../../assets/tech/reviewtab/7.png";
-import review8 from "../../../assets/tech/reviewtab/8.png";
-import review9 from "../../../assets/tech/reviewtab/9.png";
-import review10 from "../../../assets/tech/reviewtab/10.png";
-import review11 from "../../../assets/tech/reviewtab/11.png";
-import review12 from "../../../assets/tech/reviewtab/12.png";
-import AsideBar from "../Asidebar";
-import Pagination from "@/components/Pagination";
-import FilterTabs from "../Filter";
-import bookmark from "../../../assets/tech/bookmark.png";
-import addvertisement from "../../../assets/esports/advertisement.png";
+import Image from "next/image"
+import React from "react"
+import review1 from "../../../assets/tech/reviewtab/1.png"
+import review2 from "../../../assets/tech/reviewtab/2.png"
+import review3 from "../../../assets/tech/reviewtab/3.png"
+import review4 from "../../../assets/tech/reviewtab/4.png"
+import review5 from "../../../assets/tech/reviewtab/5.png"
+import review6 from "../../../assets/tech/reviewtab/6.png"
+import review7 from "../../../assets/tech/reviewtab/7.png"
+import review8 from "../../../assets/tech/reviewtab/8.png"
+import review9 from "../../../assets/tech/reviewtab/9.png"
+import review10 from "../../../assets/tech/reviewtab/10.png"
+import review11 from "../../../assets/tech/reviewtab/11.png"
+import review12 from "../../../assets/tech/reviewtab/12.png"
+import AsideBar from "../Asidebar"
+import Pagination from "@/components/Pagination"
+import FilterTabs from "../Filter"
+import bookmark from "../../../assets/tech/bookmark.png"
+import addvertisement from "../../../assets/esports/advertisement.png"
 const ReviewTech = () => {
   const imagesList = [
     review1,
@@ -31,7 +31,7 @@ const ReviewTech = () => {
     review10,
     review11,
     review12,
-  ];
+  ]
   const imagesList2 = [
     review1,
     review2,
@@ -44,7 +44,7 @@ const ReviewTech = () => {
     review9,
     review10,
     review11,
-  ];
+  ]
 
   return (
     <section className="global-section-width">
@@ -96,7 +96,7 @@ const ReviewTech = () => {
                       </div>
                     </div>
                   </div>
-                );
+                )
               })}
             </div>
           </div>
@@ -176,7 +176,7 @@ const ReviewTech = () => {
 
                   //   {/* )} */}
                   // </div>
-                );
+                )
               })}
             </div>
           </div>
@@ -184,7 +184,7 @@ const ReviewTech = () => {
         <Pagination />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ReviewTech;
+export default ReviewTech

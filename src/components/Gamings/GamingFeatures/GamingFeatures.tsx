@@ -43,8 +43,8 @@ const GamingFeatures = () => {
   const [items, setItems] = useState(item)
   return (
     <>
-      <div className="mw-lg:hidden features_gaming_section dark:bg-brandDark1 bg-white pt-[24px] pb-[24px] pl-[0px] pr-[0px]  rounded border-grayCard border">
-        <div className="flex flex-wrap pt-0 pb-0  bg-white rounded dark:bg-brandDark1 ">
+      <div className="mw-lg:hidden features_gaming_section dark:bg-brandDark1 bg-white pt-[24px] pb-[24px] pl-[0px] pr-[0px]  rounded border-grayCard border mw-sm:pb-[16px]">
+        <div className="flex flex-wrap pt-0 pb-0   bg-white rounded dark:bg-brandDark1 ">
           {items.map((elem, index) => {
             return (
               <div
@@ -107,33 +107,37 @@ const GamingFeatures = () => {
           })}
         </div>
       </div>
-      <div>
-        {items2.map((e, idx) => {
-          return (
-            <div className="main_feature_tab_version">
-              <div>
-                <Image src={image1} alt="profile" />
-              </div>
-              <div>
-                <h4>
-                  Bayes Esports appoints York Scheunemann as COO of reputed
-                </h4>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when...
-                </p>
+      <div className="hidden mw-lg:block ">
+        <div className="flex justify-between mw-sm:flex-col">
+          {items2.map((e, idx) => {
+            return (
+              <div
+                className="border dark:border-brandLightOpacity10  main_feature_tab_version w-[48%] mw-sm:w-[98%] mw-sm:mb-[16px] flex items-start dark:bg-[#2E2A2B] rounded pt-[10px] pl-[10px] pb-[14px] pr-[10px] "
+                key={idx}
+              >
+                <div className="w-[100px] h-[60px] mr-[9px]">
+                  <Image src={image1} alt="profile" className="w-full h-auto" />
+                </div>
                 <div>
-                  <p>-John Dasasasas</p>
-                  <Image
-                    src={bookmark}
-                    alt="bookmark"
-                    className="rounded-sm object-cover"
-                  />
+                  <h4 className="montserratfont text-[14px] leading-[17px] dark:text-[#E5E5E5] font-semibold mb-[10px]">
+                    Bayes Esports appoints York Scheunemann as COO of reputed
+                  </h4>
+                  <p className="robotoslub text-[12px] leading-[16px] font-normal dark:text-brandLightOpacity90 pb-[12px]">
+                    It is a long established fact that a reader will be
+                    distracted by the readable content of a page when...
+                  </p>
+                  <div className="flex justify-between items-center">
+                    <p className="montserratfont text-[12px] leading-[15px] dark:text-[#E5E5E5] ">
+                      -John Dasasasas
+                    </p>
+
+                    <Image src={bookmark} alt="bookmark" className="" />
+                  </div>
                 </div>
               </div>
-            </div>
-          )
-        })}
+            )
+          })}
+        </div>
       </div>
     </>
   )

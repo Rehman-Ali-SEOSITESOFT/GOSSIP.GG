@@ -18,7 +18,7 @@ const Reviews = () => {
                 <Filter />
               </div>
               <div className="flex justify-between relative">
-                <div className="w-9/12">
+                <div className="w-9/12 mw-md:w-[100%]">
                   <ReviewCards />
                 </div>
                 <RightSidebar />

@@ -11,20 +11,20 @@ const index = () => {
       <section className="gaming_guide_wrapper">
         <div className="global-section-width">
           <div className="2xl:container">
-            <div className="feature_main_wrapper pt-[52px]">
+            <div className="feature_main_wrapper pt-[52px] mw-sm:pt-[20px]">
               <SectionSaprator title="Features" />
               <GamingFeatures />
-              <div className="mt-[16px]">
+              <div className="mt-[16px] mw-sm:mt-[4px]">
                 <ViewMore />
               </div>
             </div>
-            <div className="pt-[52px]">
+            <div className="pt-[52px] mw-sm:pt-[20px] ">
               <SectionSaprator title="Reviews" />
             </div>
-            <div className="reviews_main_wrapper">
+            <div className="reviews_main_wrapper mw-sm:mt-[-12px]">
               <Review />
             </div>
-            <div className="view pb-[120px]">
+            <div className="view pb-[120px] mw-sm:pb-[40px]">
               <ViewMore />
             </div>
           </div>

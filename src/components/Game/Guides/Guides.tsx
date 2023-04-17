@@ -15,7 +15,7 @@ const Guides = () => {
             <div className="2xl:container">
               <Filter />
               <div className="guides_cards_wrappers_tabs flex justify-between	relative">
-                <div className="w-4/5">
+                <div className="w-4/5 mw-md:w-[100%]">
                   <GuidesCards />
                 </div>
                 <RightSidebar />

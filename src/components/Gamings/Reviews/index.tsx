@@ -21,20 +21,20 @@ const Review = () => {
         {list.map((ele, idx) => {
           return (
             <div
-              className="review_card_main_wrapper pb-[16px] mw-lg:w-2/5"
+              className="review_card_main_wrapper pb-[16px] mw-lg:pb-[0px] mw-lg:w-[49%] mw-lg:mb-[32px]"
               key={idx}
             >
               <div className="img_wrapper relative">
                 <Image src={ele} alt="Image" className=" mw-lg:w-[100%] " />
-                <div className="ratio absolute top-2 right-2.5 rounded-full w-[60px] h-[60px]	bg-brand flex justify-center items-center">
-                  <p className="text-[#E5E5E5] montserratfont text-lg font-bold leading-[22px]">
+                <div className="ratio absolute top-2 right-2.5 rounded-full w-[60px] h-[60px]	bg-brand flex justify-center items-center  mw-sm:h-[40px]  mw-sm:w-[40px]">
+                  <p className="text-[#E5E5E5] montserratfont text-lg font-bold leading-[22px]  mw-sm:text-[14px]  mw-sm:leading-[17px]">
                     4/5
                   </p>
                 </div>
               </div>
               <div className="review_card_content pt-[12px] flex justify-between">
                 <div className="title_disp">
-                  <h4 className="montserratfont font-bold text-base dark:text-[#E5E5E5] leading-5  text-[#221e1f]">
+                  <h4 className="montserratfont font-bold text-base dark:text-[#E5E5E5] leading-5  text-[#221e1f] mw-sm:text-[14px] mw-sm:text-semibold mw-sm:leading-[17px]">
                     One Piece Odyssey
                   </h4>
                   <p className="montserratfont text-sm font-normal  text-[#221e1f] dark:text-[#E5E5E5] leading-[17px] pt-[5px]">

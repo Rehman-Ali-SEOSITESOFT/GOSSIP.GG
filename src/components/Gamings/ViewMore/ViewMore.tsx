@@ -8,7 +8,7 @@ const ViewMore = () => {
         <div className="w-full flex items-center">
           <a
             href="#"
-            className="montserratfont  dark:text-brandLightOpacity70  text-[brandLightOpacity70] font-medium text-base leading-5"
+            className="montserratfont  dark:text-brandLightOpacity70  text-[brandLightOpacity70] font-medium text-base leading-5 mw-sm:text-[10px] mw-sm:leading-[12px]"
           >
             View more <span>&#x3E;</span>
             <span>&#x3E;</span>

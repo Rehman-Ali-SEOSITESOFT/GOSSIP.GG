@@ -82,7 +82,7 @@ const LatestNews = () => {
                           className={`${style.news_desc} border-grayCard dark:border-brandLightOpacity10`}
                         >
                           <h4
-                            className={`${style.title_overHidden} text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100`}
+                            className={`${style.title_overHidden} text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 `}
                           >
                             Bayes Esports appoints York Scheunemann as COO of
                             reputed gaming...
@@ -154,7 +154,7 @@ const LatestNews = () => {
                           className={`${style.news_desc} border-grayCard dark:border-brandLightOpacity10`}
                         >
                           <h4
-                            className={`${style.title_overHidden} text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100`}
+                            className={`${style.title_overHidden} text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 `}
                           >
                             Bayes Esports appoints York Scheunemann as COO of
                             reputed gaming...

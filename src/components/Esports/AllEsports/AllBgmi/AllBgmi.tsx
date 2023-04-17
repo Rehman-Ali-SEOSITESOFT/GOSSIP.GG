@@ -134,7 +134,7 @@ const AllBgmi = () => {
                           />
                         </div>
                         <div className="desc_wrapper 	pl-3.5		">
-                          <h3 className="text-base font-bold  leading-5	 text-brandDark2 montserratfont dark:text-brandLightOpacity100 mw-11:h-[40px] mw-lg:h-auto overflow-hidden ">
+                          <h3 className="text-base font-bold  leading-5	 text-brandDark2 montserratfont dark:text-brandLightOpacity100 mw-11:h-[40px] mw-lg:h-auto overflow-hidden pr-[38px]">
                             {elem.name}
                           </h3>
 
