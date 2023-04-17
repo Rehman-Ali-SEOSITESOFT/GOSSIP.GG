@@ -10,6 +10,7 @@ import { Providers } from "./providers";
 // import "bootstrap/dist/css/bootstrap.min.css";
 // JUST BG GRADIENT COLOR'S
 import "../styles/background.css";
+import { useTheme } from "next-themes";
 
 export default function RootLayout({
   children,

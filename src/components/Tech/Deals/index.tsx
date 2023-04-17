@@ -22,8 +22,10 @@ import upcomming8 from "../../../assets/tech/deals/upcomming-8.png";
 
 import SectionSaprator from "@/components/SecSaprator";
 import downextendicon from "../../../assets/tech/down-extend.png";
+import uparrow from "../../../assets/tech/uparrow.png";
 import DealSlider from "./Slider";
 import bookmark from "../../../assets/tech/bookmark.png";
+
 const DeailTech = () => {
   const [onGoing, setOnGoing] = useState<any[]>([
     ongoing1,
@@ -69,7 +71,12 @@ const DeailTech = () => {
   const hanldeUpcomming = () => {
     setUpCommingLimit(upCommingLimit + 8);
   };
-
+  const hanldeCloseGoingLimited = () => {
+    setOnGoingLimit(8);
+  };
+  const hanldeCloseUpCommingLimited = () => {
+    setUpCommingLimit(8);
+  };
   return (
     <section className="global-section-width">
       <div className="slider pt-11 mw-lg:pt-9 mw-sm:pt-7">
@@ -93,7 +100,7 @@ const DeailTech = () => {
                   <Image src={elem} alt="hello" className="w-full h-full" />
 
                   {index === 0 || index === 4 || index === 8 || index === 12 ? (
-                    <div className="picked bg-arrowicon dark:bg-brand dark:text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[8px]	">
+                    <div className="picked bg-arrowicon bg-brand text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[8px]	">
                       AMAZON DEALS
                     </div>
                   ) : null}
@@ -123,15 +130,35 @@ const DeailTech = () => {
               </div>
             );
           })}
-          <h5
-            onClick={hanldeOnGoing}
-            className="cursor-pointer pt-2 text-center m-auto mt-2"
-          >
-            <span className="montserratfont font-medium	capitalize text-base leading-5 dark:text-brandLightOpacity70 underline underline-offset-4	pr-2">
-              See more
-            </span>
-            <Image src={downextendicon} className="inline-block" alt="extend" />
-          </h5>
+          {onGoing.length === onGoingLimit ? (
+            <h5
+              onClick={hanldeCloseGoingLimited}
+              className="cursor-pointer pt-2 text-center m-auto mt-2"
+            >
+              <span className="montserratfont font-medium	capitalize text-base leading-5 dark:text-brandLightOpacity70 underline underline-offset-4	pr-2">
+                See less
+              </span>
+              <Image
+                src={uparrow}
+                className="inline-block dark:brightness-100	 brightness-0	"
+                alt="extend"
+              />
+            </h5>
+          ) : (
+            <h5
+              onClick={hanldeOnGoing}
+              className="cursor-pointer pt-2 text-center m-auto mt-2"
+            >
+              <span className="montserratfont font-medium	capitalize text-base leading-5 dark:text-brandLightOpacity70 underline underline-offset-4	pr-2">
+                See more
+              </span>
+              <Image
+                src={downextendicon}
+                className="inline-block dark:brightness-100	 brightness-0	"
+                alt="extend"
+              />
+            </h5>
+          )}
         </div>
       </div>
       <div className="2xl:container">
@@ -151,7 +178,7 @@ const DeailTech = () => {
                   <Image src={elem} alt="hello" className="w-full h-full" />
 
                   {index === 0 || index === 4 || index === 8 || index === 12 ? (
-                    <div className="picked bg-arrowicon dark:bg-brand dark:text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[8px]	">
+                    <div className="picked bg-arrowicon bg-brand text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[8px]	">
                       AMAZON DEALS
                     </div>
                   ) : null}
@@ -181,15 +208,35 @@ const DeailTech = () => {
               </div>
             );
           })}{" "}
-          <h5
-            onClick={hanldeUpcomming}
-            className="cursor-pointer pb-28 mw-sm1:pb-12 text-center pt-4 m-auto"
-          >
-            <span className="montserratfont font-medium	capitalize text-base leading-5 dark:text-brandLightOpacity70 underline underline-offset-4	pr-2">
-              See more
-            </span>
-            <Image src={downextendicon} className="inline-block" alt="extend" />
-          </h5>
+          {upCommming.length === upCommingLimit ? (
+            <h5
+              onClick={hanldeCloseUpCommingLimited}
+              className="cursor-pointer pb-28 mw-sm1:pb-12 text-center pt-4 m-auto"
+            >
+              <span className="montserratfont font-medium	capitalize text-base leading-5 dark:text-brandLightOpacity70 underline underline-offset-4	pr-2">
+                See Less
+              </span>
+              <Image
+                src={uparrow}
+                className="inline-block dark:brightness-100	 brightness-0"
+                alt="extend"
+              />
+            </h5>
+          ) : (
+            <h5
+              onClick={hanldeUpcomming}
+              className="cursor-pointer pb-28 mw-sm1:pb-12 text-center pt-4 m-auto"
+            >
+              <span className="montserratfont font-medium	capitalize text-base leading-5 dark:text-brandLightOpacity70 underline underline-offset-4	pr-2">
+                See more
+              </span>
+              <Image
+                src={downextendicon}
+                className="inline-block dark:brightness-100	 brightness-0"
+                alt="extend"
+              />
+            </h5>
+          )}
         </div>
       </div>
     </section>
