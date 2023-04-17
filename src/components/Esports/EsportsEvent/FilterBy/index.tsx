@@ -13,6 +13,7 @@ import EsportClub from "../../../../assets/images/filters/esport.png";
 import NOQWIN from "../../../../assets/images/filters/nodwin.png";
 import Penta from "../../../../assets/images/filters/penta.png";
 import Search from "../../../../assets/images/filters/search.png";
+import SearchLight from "../../../../assets/images/filters/search-light.png";
 import { useTheme } from "next-themes";
 
 const FilterBy = () => {
@@ -315,7 +316,7 @@ const FilterBy = () => {
             {opendropDown1 && (
               <div className=" shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-grayCard   dark:border-brandLightOpacity10 bg-bodycolor  m-h-[462px] w-[302px] dark:bg-brandDark1 ">
                 <div className="border-b-2 border-b-brandLightOpacity10 h-[60px] flex flex-row  items-center pl-[16px] pr-[20px]">
-                  <Image src={Search} alt="search" />
+                  <Image src={isDarkTheme ?  Search : SearchLight} alt="search" />
                   <input
                     type="input"
                     onChange={(e) => onChangeGameSearch(e)}
@@ -422,7 +423,8 @@ const FilterBy = () => {
                 }`}
               >
                 <div className="border-b-2 border-b-brandLightOpacity10 h-[60px] flex flex-row  items-center pl-[16px] pr-[20px]">
-                  <Image src={Search} alt="search" />
+                <Image src={isDarkTheme ?  Search : SearchLight} alt="search" />
+
                   <input
                     onChange={(e) => onChangeOrganizerSearch(e)}
                     type="input"
