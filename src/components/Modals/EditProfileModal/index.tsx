@@ -329,10 +329,11 @@ const EditProfileModal = (props: any) => {
                                         alt="Instagram"
                                       />
                                       <input
-                                        className="text-brandDark2 montserratfont dark:text-brandLightOpacity100  dark:border-brandLightOpacity10 border-choosebox hover:border hover:border-brandDark2  dark:hover:border-[#ffffff] border rounded w-full h-12 py-2 px-6 bg-bodycolor dark:bg-brandDark2  focus:bg-white dark:focus:bg-[#2a2627] focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
+                                        className="text-brandDark2 montserratfont dark:text-brandLightOpacity100  dark:border-brandLightOpacity10 border-choosebox hover:border hover:border-brandDark2  dark:hover:border-[#ffffff] border rounded w-full h-12  px-3 bg-bodycolor dark:bg-brandDark2  focus:bg-white dark:focus:bg-[#2a2627] focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
                                         id="live"
                                         type="text"
-                                        placeholder=""
+                                        placeholder="@username"
+
                                       />
                                     </div>
                                     <div className="flex items-center mw-sm3:mt-2 mw-sm3:max-w-[100%] max-w-[45%]">
@@ -342,10 +343,10 @@ const EditProfileModal = (props: any) => {
                                         alt="Twitter"
                                       />
                                       <input
-                                        className="text-brandDark2 montserratfont dark:text-brandLightOpacity100  dark:border-brandLightOpacity10 border-choosebox hover:border hover:border-brandDark2  dark:hover:border-[#ffffff] border rounded w-full h-12 py-2 px-6 bg-bodycolor dark:bg-brandDark2  focus:bg-white dark:focus:bg-[#2a2627] focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
+                                        className="text-brandDark2 montserratfont dark:text-brandLightOpacity100  dark:border-brandLightOpacity10 border-choosebox hover:border hover:border-brandDark2  dark:hover:border-[#ffffff] border rounded w-full h-12 px-3 bg-bodycolor dark:bg-brandDark2  focus:bg-white dark:focus:bg-[#2a2627] focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
                                         id="live"
                                         type="text"
-                                        placeholder=""
+                                        placeholder="@username"
                                       />
                                     </div>
                                   </div>
