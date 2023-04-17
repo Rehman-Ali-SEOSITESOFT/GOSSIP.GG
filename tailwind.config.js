@@ -48,6 +48,7 @@ module.exports = {
         userprofilebg: "#2a2627",
         arrowicon: "#e3e2e2",
         choosebox: "#e3e3e3",
+
         modalChoose: "#d8d7d8",
         modalBtn: "#cfcfcf",
         custom: {
@@ -56,6 +57,10 @@ module.exports = {
         custom2: {
           DEFAULT: "#282425",
         },
+        bodycustom: {
+          DEFAULT: "rgba(34, 30, 31, 0.5)",
+        },
+        darkScollorBarColor: "rgba(34, 30, 31, 0.5)",
       },
       screens: {
         "mx-14": { max: "1430px" },

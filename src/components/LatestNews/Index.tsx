@@ -10,7 +10,6 @@ import boomkark from "../../assets/latest-news/bookmark.png";
 import Image from "next/image";
 import SectionSaprator from "../SecSaprator";
 import { useTheme } from "next-themes";
-
 const LatestNews = () => {
   interface List {
     name: string;
