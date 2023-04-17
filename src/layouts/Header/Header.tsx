@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect ,useRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Fragment } from "react";
 import logo from "../../assets/images/header/main-logo.png";
@@ -29,7 +29,7 @@ const Header = () => {
     id: number;
     name: string;
   }
-  const headerSearchbarRef =useRef<any | null>(null);
+  const headerSearchbarRef = useRef<any | null>(null);
   const { theme, setTheme } = useTheme();
   const [menu, setMenu] = useState<MenuList[]>([
     {
@@ -127,22 +127,18 @@ const Header = () => {
     setrRecentSearchList(newArr);
   };
 
- 
   useEffect(() => {
     document.addEventListener("click", handleClickOutside, true);
   }, []);
 
   // /// for close dropdown on outside click
   const handleClickOutside = (e: any) => {
-    if(headerSearchbarRef.current !== null){
+    if (headerSearchbarRef.current !== null) {
       if (!headerSearchbarRef.current.contains(e.target)) {
         setSearchText("");
-          }
+      }
     }
-   
   };
-
-
 
   return (
     <header
@@ -154,9 +150,9 @@ const Header = () => {
         >
           <div className="flex  h-full flex-wrap items-center justify-between">
             <div className={`xl:w-1/4 lg:w-1/5  w-3/6  ${styles.header__left}`}>
-              <div className={styles.logo}>
+              <a href="/" className={styles.logo}>
                 <Image src={logo} alt="Gossip GG" />
-              </div>
+              </a>
             </div>
             {searchOpen ? (
               <div className={`${styles.header__center} xl:w-3/6 lg:w-1/1  `}>
@@ -190,7 +186,10 @@ const Header = () => {
                       : `${styles.seach__deve} ${styles.open}`
                   } `}
                 >
-                  <div ref={headerSearchbarRef} className={`${styles.serach_btn}  relative   `}>
+                  <div
+                    ref={headerSearchbarRef}
+                    className={`${styles.serach_btn}  relative   `}
+                  >
                     <input
                       value={searchText}
                       className="w-full  montserratfont border border-brandLightOpacity10  bg-brandDark1 placeholder:text-brandLightOpacity70  text-brandLightOpacity70 montserratfont font-medium test-base leading-5"
@@ -220,13 +219,14 @@ const Header = () => {
                           />
                         </span>
 
-                        <div  className="absolute shadow-3xshadow  rounded border-[2px] border-brandLightOpacity10 left-6 mt-[2px] bg-brandDark1 pb-2  w-[539px]">
-                        {recentSearchList.length > 0 && <div className="h-[44px]  px-4 flex items-center ">
-                            <p className="montserratfont text-brandLightOpacity100 font-normal text-sm">
-                              Recent Search
-                            </p>
-                          </div>
-                         }
+                        <div className="absolute shadow-3xshadow  rounded border-[2px] border-brandLightOpacity10 left-6  mw-12:left-0 mw-12:right-0	 mt-[2px] bg-brandDark1 pb-2  w-[539px] mw-12:w-full">
+                          {recentSearchList.length > 0 && (
+                            <div className="h-[44px]  px-4 flex items-center ">
+                              <p className="montserratfont text-brandLightOpacity100 font-normal text-sm">
+                                Recent Search
+                              </p>
+                            </div>
+                          )}
                           {recentSearchList.length > 0 ? (
                             recentSearchList.map((item, index) => (
                               <div
@@ -326,7 +326,6 @@ const Header = () => {
                                     // className={classNames(active)}
                                   >
                                     <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pt-2">
-                                    
                                       View Profile
                                     </h5>
                                   </Link>
