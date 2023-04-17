@@ -1,18 +1,18 @@
 import Image from "next/image";
 import React, { useState, useRef, useEffect } from "react";
-import downarrow from "../../../assets/esports/down-arrow.png";
-import Valorant from "../../../assets/images/filters/valorant.png";
-import Cross from "../../../assets/images/filters/x.png";
-import BGMI from "../../../assets/images/filters/bgmi.png";
-import CounterStrike from "../../../assets/images/filters/counter.png";
-import Dota from "../../../assets/images/filters/valorant.png";
-import ApexLengends from "../../../assets/images/filters/apex.png";
-import CallOfDuty from "../../../assets/images/filters/call.png";
-import AgeOfEmpire from "../../../assets/images/filters/age.png";
-import EsportClub from "../../../assets/images/filters/esport.png";
-import NOQWIN from "../../../assets/images/filters/nodwin.png";
-import Penta from "../../../assets/images/filters/penta.png";
-import Search from "../../../assets/images/filters/search.png";
+import downarrow from "../../../../assets/esports/down-arrow.png";
+import Valorant from "../../../../assets/images/filters/valorant.png";
+import Cross from "../../../../assets/images/filters/x.png";
+import BGMI from "../../../../assets/images/filters/bgmi.png";
+import CounterStrike from "../../../../assets/images/filters/counter.png";
+import Dota from "../../../../assets/images/filters/valorant.png";
+import ApexLengends from "../../../../assets/images/filters/apex.png";
+import CallOfDuty from "../../../../assets/images/filters/call.png";
+import AgeOfEmpire from "../../../../assets/images/filters/age.png";
+import EsportClub from "../../../../assets/images/filters/esport.png";
+import NOQWIN from "../../../../assets/images/filters/nodwin.png";
+import Penta from "../../../../assets/images/filters/penta.png";
+import Search from "../../../../assets/images/filters/search.png";
 import { useTheme } from "next-themes";
 
 const FilterBy = () => {

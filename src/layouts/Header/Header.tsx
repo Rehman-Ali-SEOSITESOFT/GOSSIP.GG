@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect ,useRef} from "react";
 import Image from "next/image";
 import { Fragment } from "react";
 import logo from "../../assets/images/header/main-logo.png";
@@ -29,6 +29,7 @@ const Header = () => {
     id: number;
     name: string;
   }
+  const headerSearchbarRef =useRef<any | null>(null);
   const { theme, setTheme } = useTheme();
   const [menu, setMenu] = useState<MenuList[]>([
     {
@@ -126,9 +127,20 @@ const Header = () => {
     setrRecentSearchList(newArr);
   };
 
-  const hanldeRemove = () => {
-    setSearchText("");
+ 
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside, true);
+  }, []);
+
+  // /// for close dropdown on outside click
+  const handleClickOutside = (e: any) => {
+    if (!headerSearchbarRef.current.contains(e.target)) {
+      setSearchText("");
+        }
   };
+
+
+
   return (
     <header
       className={`${styles.main_header} relative z-[10] mw-lg:sticky top-0`}
@@ -175,7 +187,7 @@ const Header = () => {
                       : `${styles.seach__deve} ${styles.open}`
                   } `}
                 >
-                  <div className={`${styles.serach_btn} relative   `}>
+                  <div ref={headerSearchbarRef} className={`${styles.serach_btn}  relative   `}>
                     <input
                       value={searchText}
                       className="w-full  montserratfont border border-brandLightOpacity10  bg-brandDark1 placeholder:text-brandLightOpacity70  text-brandLightOpacity70 montserratfont font-medium test-base leading-5"
@@ -205,7 +217,7 @@ const Header = () => {
                           />
                         </span>
 
-                        <div className="absolute shadow-3xshadow  rounded border-[2px] border-brandLightOpacity10 left-6 mt-[2px] bg-brandDark1 pb-2  w-[539px]">
+                        <div  className="absolute shadow-3xshadow  rounded border-[2px] border-brandLightOpacity10 left-6 mt-[2px] bg-brandDark1 pb-2  w-[539px]">
                           <div className="h-[44px]  px-4 flex items-center ">
                             <p className="montserratfont text-brandLightOpacity100 font-normal text-sm">
                               Recent Search

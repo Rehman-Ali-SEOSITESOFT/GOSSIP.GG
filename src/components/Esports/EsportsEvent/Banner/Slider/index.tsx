@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
-import slider1 from "../../../../assets/esports/exports-event-banner.png";
-import slider2 from "../../../../assets/esports/exports-event-banner.png";
+import slider1 from "../../../../../assets/esports/exports-event-banner.png";
+import slider2 from "../../../../../assets/esports/exports-event-banner.png";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 const ExportEventBannerSlider = () => {

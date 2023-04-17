@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image"
 import React, { useState } from "react"
 import eyeIcon from "../../../assets/esporting-events/eye.png"
@@ -30,7 +31,7 @@ import earth from "../../../assets/esporting-events/earth.png"
 import profile from "../../../assets/esporting-events/profile.png"
 import torurnament from "../../../assets/esporting-events/tournament.png"
 import ValorantListing from "./ValorantListing/ValorantListing"
-const EsportsEvents = () => {
+const Page = () => {
   interface List {
     title: string
     icon: any
@@ -443,4 +444,4 @@ const EsportsEvents = () => {
   )
 }
 
-export default EsportsEvents
+export default Page

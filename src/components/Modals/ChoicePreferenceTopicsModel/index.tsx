@@ -303,7 +303,7 @@ const ChoicePreferenceTopicModel = (props: any) => {
                         <div className="grid  max-w-xl mx-auto">
                           <div className="rounded min-h-fit  mb-4">
                             <details className="group">
-                              <summary className={`${esportList.length > 0 ? 'bg-modalChoose':'bg-iconBackground'}  group-open:bg-modalChoose dark:bg-brandLightOpacity5  dark:group-open:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brandDark2 dark:group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none`}>
+                              <summary className={`${esportList.length > 0 ? 'bg-modalChoose':'bg-iconBackground'}   group-open:bg-modalChoose  hover:bg-modalChoose dark:bg-brandLightOpacity5  dark:group-open:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brandDark2 dark:group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none`}>
                                 <div className="flex ">
                                   <span className={`${esportList.length > 0 ? 'dark:text-brand text-brandDark2' : 'dark:text-brandLightOpacity100 text-brandDark2'} pl-6 pr-[5px] text-base montserratfont font-semibold `}>
                                     Esports
@@ -326,8 +326,8 @@ const ChoicePreferenceTopicModel = (props: any) => {
                                 </div>
                                 <div 
                                 onClick={() => onClickFollowArr('esportList')}
-                                className="h-[32px] w-[91px] rounded-[20px] bg-modalBtn dark:bg-brandLightOpacity10 mr-6 flex justify-center items-center">
-                                  <p className="font-medium montserratfont text-xs text-brandDark2 dark:text-brandLightOpacity100">
+                                className="h-[32px] w-[91px] rounded-[20px]  bg-modalBtn dark:bg-brandLightOpacity10 mr-6 flex justify-center items-center">
+                                  <p className="font-medium montserratfont text-xs  text-brandDark2 dark:text-brandLightOpacity100">
                                   {esportList.length > 0 ? `Clear (${esportList.length})` : 'Follow All'}
                                   </p>
                                 </div>
@@ -337,7 +337,7 @@ const ChoicePreferenceTopicModel = (props: any) => {
                                   {listItems.map((item, index) => (
                                     <div
                                       key={index}
-                                      className={`${esportList.filter(i => i.name === item.name).length > 0 ? 'bg-white dark:bg-brandDark2 border border-brandDark2  dark:border-brand' :  'bg-choosebox dark:bg-brandLightOpacity10' }   min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center    rounded `}
+                                      className={`${esportList.filter(i => i.name === item.name).length > 0 ? 'bg-white dark:bg-brandDark2 border  border-brandDark2  dark:border-brand' :  'bg-choosebox dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 hover:bg-modalChoose' }   min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center    rounded cursor-pointer `}
                                       onClick={() => onClickEsportList(item.name, item.id)}
                                     >
                                       <p className={`${esportList.filter(i => i.name === item.name).length > 0 ? 'text-brandDark2 dark:text-brand' : "text-brandDark2 opacity-70 dark:opacity-100 dark:text-brandLightOpacity70" } text-xs   montserratfont font-medium`}>
@@ -351,7 +351,7 @@ const ChoicePreferenceTopicModel = (props: any) => {
                           </div>
                           <div className="rounded min-h-fit  mb-4">
                             <details className="group">
-                              <summary className={`${gamingList.length > 0 ? 'bg-modalChoose':'bg-iconBackground'}  group-open:bg-modalChoose dark:bg-brandLightOpacity5  dark:group-open:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brandDark2 dark:group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none`}>
+                              <summary className={`${gamingList.length > 0 ? 'bg-modalChoose':'bg-iconBackground'}  group-open:bg-modalChoose  hover:bg-modalChoose dark:bg-brandLightOpacity5  dark:group-open:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brandDark2 dark:group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none`}>
                                 <div className="flex ">
                                   <span className={`${gamingList.length > 0 ? 'dark:text-brand text-brandDark2' : 'dark:text-brandLightOpacity100 text-brandDark2'} pl-6 pr-[5px] text-base montserratfont font-semibold `}>
                                     Gaming
@@ -385,7 +385,7 @@ const ChoicePreferenceTopicModel = (props: any) => {
                                   {listItems.map((item, index) => (
                                     <div
                                       key={index}
-                                      className={`${gamingList.filter(i => i.name === item.name).length > 0 ? 'bg-white dark:bg-brandDark2 border border-brandDark2  dark:border-brand' :  'bg-choosebox dark:bg-brandLightOpacity10' }   min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center    rounded `}
+                                      className={`${gamingList.filter(i => i.name === item.name).length > 0 ? 'bg-white dark:bg-brandDark2 border border-brandDark2  dark:border-brand' :  'bg-choosebox dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 hover:bg-modalChoose' }   min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center  cursor-pointer  rounded `}
                                       onClick={() => onClickGamingList(item.name, item.id)}
                                     >
                                       <p className={`${gamingList.filter(i => i.name === item.name).length > 0 ? 'text-brandDark2 dark:text-brand' : "text-brandDark2 opacity-70 dark:opacity-100 dark:text-brandLightOpacity70" } text-xs   montserratfont font-medium`}>
@@ -399,7 +399,7 @@ const ChoicePreferenceTopicModel = (props: any) => {
                           </div>
                           <div className="rounded min-h-fit  mb-4">
                             <details className="group">
-                              <summary className={`${techList.length > 0 ? 'bg-modalChoose':'bg-iconBackground'}  group-open:bg-modalChoose dark:bg-brandLightOpacity5  dark:group-open:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brandDark2 dark:group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none`}>
+                              <summary className={`${techList.length > 0 ? 'bg-modalChoose':'bg-iconBackground'}  group-open:bg-modalChoose  hover:bg-modalChoose dark:bg-brandLightOpacity5  dark:group-open:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brandDark2 dark:group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none`}>
                                 <div className="flex ">
                                   <span className={`${techList.length > 0 ? 'dark:text-brand text-brandDark2' : 'dark:text-brandLightOpacity100 text-brandDark2'} pl-6 pr-[5px] text-base montserratfont font-semibold `}>
                                     Tech
@@ -433,7 +433,7 @@ const ChoicePreferenceTopicModel = (props: any) => {
                                   {listItems.map((item, index) => (
                                     <div
                                       key={index}
-                                      className={`${techList.filter(i => i.name === item.name).length > 0 ? 'bg-white dark:bg-brandDark2 border border-brandDark2  dark:border-brand' :  'bg-choosebox dark:bg-brandLightOpacity10' }   min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center    rounded `}
+                                      className={`${techList.filter(i => i.name === item.name).length > 0 ? 'bg-white dark:bg-brandDark2 border border-brandDark2  dark:border-brand' :  'bg-choosebox dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 hover:bg-modalChoose' }   min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center  cursor-pointer  rounded `}
                                       onClick={() => onClickTechList(item.name, item.id)}
                                     >
                                       <p className={`${techList.filter(i => i.name === item.name).length > 0 ? 'text-brandDark2 dark:text-brand' : "text-brandDark2 opacity-70 dark:opacity-100 dark:text-brandLightOpacity70" } text-xs   montserratfont font-medium`}>
@@ -447,7 +447,7 @@ const ChoicePreferenceTopicModel = (props: any) => {
                           </div>
                             <div className="rounded min-h-fit  mb-4">
                             <details className="group">
-                              <summary className={`${teamList.length > 0 ? 'bg-modalChoose':'bg-iconBackground'}  group-open:bg-modalChoose dark:bg-brandLightOpacity5  dark:group-open:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brandDark2 dark:group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none`}>
+                              <summary className={`${teamList.length > 0 ? 'bg-modalChoose':'bg-iconBackground'}  group-open:bg-modalChoose  hover:bg-modalChoose dark:bg-brandLightOpacity5  dark:group-open:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brandDark2 dark:group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none`}>
                                 <div className="flex ">
                                   <span className={`${teamList.length > 0 ? 'dark:text-brand text-brandDark2' : 'dark:text-brandLightOpacity100 text-brandDark2'} pl-6 pr-[5px] text-base montserratfont font-semibold `}>
                                     Team Fury
@@ -481,7 +481,7 @@ const ChoicePreferenceTopicModel = (props: any) => {
                                   {listItems.map((item, index) => (
                                     <div
                                       key={index}
-                                      className={`${teamList.filter(i => i.name === item.name).length > 0 ? 'bg-white dark:bg-brandDark2 border border-brandDark2  dark:border-brand' :  'bg-choosebox dark:bg-brandLightOpacity10' }   min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center    rounded `}
+                                      className={`${teamList.filter(i => i.name === item.name).length > 0 ? 'bg-white dark:bg-brandDark2 border border-brandDark2  dark:border-brand' :  'bg-choosebox dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 hover:bg-modalChoose' }   min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center  cursor-pointer   rounded `}
                                       onClick={() => onClickTeamList(item.name, item.id)}
                                     >
                                       <p className={`${teamList.filter(i => i.name === item.name).length > 0 ? 'text-brandDark2 dark:text-brand' : "text-brandDark2 opacity-70 dark:opacity-100 dark:text-brandLightOpacity70" } text-xs   montserratfont font-medium`}>
@@ -495,7 +495,7 @@ const ChoicePreferenceTopicModel = (props: any) => {
                           </div>
                             <div className="rounded min-h-fit  mb-4">
                             <details className="group">
-                              <summary className={`${xboxList.length > 0 ? 'bg-modalChoose':'bg-iconBackground'}  group-open:bg-modalChoose dark:bg-brandLightOpacity5  dark:group-open:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brandDark2 dark:group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none`}>
+                              <summary className={`${xboxList.length > 0 ? 'bg-modalChoose':'bg-iconBackground'}  group-open:bg-modalChoose  hover:bg-modalChoose dark:bg-brandLightOpacity5  dark:group-open:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brandDark2 dark:group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none`}>
                                 <div className="flex ">
                                   <span className={`${xboxList.length > 0 ? 'dark:text-brand text-brandDark2' : 'dark:text-brandLightOpacity100 text-brandDark2'} pl-6 pr-[5px] text-base montserratfont font-semibold `}>
                                     Xbox
@@ -529,7 +529,7 @@ const ChoicePreferenceTopicModel = (props: any) => {
                                   {listItems.map((item, index) => (
                                     <div
                                       key={index}
-                                      className={`${xboxList.filter(i => i.name === item.name).length > 0 ? 'bg-white dark:bg-brandDark2 border border-brandDark2  dark:border-brand' :  'bg-choosebox dark:bg-brandLightOpacity10' }   min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center    rounded `}
+                                      className={`${xboxList.filter(i => i.name === item.name).length > 0 ? 'bg-white dark:bg-brandDark2 border border-brandDark2  dark:border-brand' :  'bg-choosebox dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 hover:bg-modalChoose' }   min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center  cursor-pointer  rounded `}
                                       onClick={() => onClickXboxList(item.name, item.id)}
                                     >
                                       <p className={`${xboxList.filter(i => i.name === item.name).length > 0 ? 'text-brandDark2 dark:text-brand' : "text-brandDark2 opacity-70 dark:opacity-100 dark:text-brandLightOpacity70" } text-xs   montserratfont font-medium`}>
@@ -543,7 +543,7 @@ const ChoicePreferenceTopicModel = (props: any) => {
                           </div>
                             <div className="rounded min-h-fit  mb-4">
                             <details className="group">
-                              <summary className={`${mobileList.length > 0 ? 'bg-modalChoose':'bg-iconBackground'}  group-open:bg-modalChoose dark:bg-brandLightOpacity5  dark:group-open:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brandDark2 dark:group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none`}>
+                              <summary className={`${mobileList.length > 0 ? 'bg-modalChoose':'bg-iconBackground'}  group-open:bg-modalChoose  hover:bg-modalChoose dark:bg-brandLightOpacity5  dark:group-open:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brandDark2 dark:group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none`}>
                                 <div className="flex ">
                                   <span className={`${mobileList.length > 0 ? 'dark:text-brand text-brandDark2' : 'dark:text-brandLightOpacity100 text-brandDark2'} pl-6 pr-[5px] text-base montserratfont font-semibold `}>
                                     Mobile
@@ -577,7 +577,7 @@ const ChoicePreferenceTopicModel = (props: any) => {
                                   {listItems.map((item, index) => (
                                     <div
                                       key={index}
-                                      className={`${mobileList.filter(i => i.name === item.name).length > 0 ? 'bg-white dark:bg-brandDark2 border border-brandDark2  dark:border-brand' :  'bg-choosebox dark:bg-brandLightOpacity10' }   min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center    rounded `}
+                                      className={`${mobileList.filter(i => i.name === item.name).length > 0 ? 'bg-white dark:bg-brandDark2 border border-brandDark2  dark:border-brand' :  'bg-choosebox dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 hover:bg-modalChoose' }   min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center  cursor-pointer  rounded `}
                                       onClick={() => onClickMobileList(item.name, item.id)}
                                     >
                                       <p className={`${mobileList.filter(i => i.name === item.name).length > 0 ? 'text-brandDark2 dark:text-brand' : "text-brandDark2 opacity-70 dark:opacity-100 dark:text-brandLightOpacity70" } text-xs   montserratfont font-medium`}>
@@ -591,7 +591,7 @@ const ChoicePreferenceTopicModel = (props: any) => {
                           </div>
                             <div className="rounded min-h-fit  mb-4">
                             <details className="group">
-                              <summary className={`${dealList.length > 0 ? 'bg-modalChoose':'bg-iconBackground'}  group-open:bg-modalChoose dark:bg-brandLightOpacity5  dark:group-open:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brandDark2 dark:group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none`}>
+                              <summary className={`${dealList.length > 0 ? 'bg-modalChoose':'bg-iconBackground'}  group-open:bg-modalChoose  hover:bg-modalChoose dark:bg-brandLightOpacity5  dark:group-open:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brandDark2 dark:group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none`}>
                                 <div className="flex ">
                                   <span className={`${dealList.length > 0 ? 'dark:text-brand text-brandDark2' : 'dark:text-brandLightOpacity100 text-brandDark2'} pl-6 pr-[5px] text-base montserratfont font-semibold `}>
                                     Deals
@@ -625,7 +625,7 @@ const ChoicePreferenceTopicModel = (props: any) => {
                                   {listItems.map((item, index) => (
                                     <div
                                       key={index}
-                                      className={`${dealList.filter(i => i.name === item.name).length > 0 ? 'bg-white dark:bg-brandDark2 border border-brandDark2  dark:border-brand' :  'bg-choosebox dark:bg-brandLightOpacity10' }   min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center    rounded `}
+                                      className={`${dealList.filter(i => i.name === item.name).length > 0 ? 'bg-white dark:bg-brandDark2 border border-brandDark2  dark:border-brand' :  'bg-choosebox dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 hover:bg-modalChoose' }   min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center cursor-pointer   rounded `}
                                       onClick={() => onClickDealList(item.name, item.id)}
                                     >
                                       <p className={`${dealList.filter(i => i.name === item.name).length > 0 ? 'text-brandDark2 dark:text-brand' : "text-brandDark2 opacity-70 dark:opacity-100 dark:text-brandLightOpacity70" } text-xs   montserratfont font-medium`}>
@@ -639,7 +639,7 @@ const ChoicePreferenceTopicModel = (props: any) => {
                           </div>
                             <div className="rounded min-h-fit  mb-4">
                             <details className="group">
-                              <summary className={`${goosipList.length > 0 ? 'bg-modalChoose':'bg-iconBackground'}  group-open:bg-modalChoose dark:bg-brandLightOpacity5  dark:group-open:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brandDark2 dark:group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none`}>
+                              <summary className={`${goosipList.length > 0 ? 'bg-modalChoose':'bg-iconBackground'}  group-open:bg-modalChoose  hover:bg-modalChoose dark:bg-brandLightOpacity5  dark:group-open:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brandDark2 dark:group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none`}>
                                 <div className="flex ">
                                   <span className={`${goosipList.length > 0 ? 'dark:text-brand text-brandDark2' : 'dark:text-brandLightOpacity100 text-brandDark2'} pl-6 pr-[5px] text-base montserratfont font-semibold `}>
                                     Gossip
@@ -673,7 +673,7 @@ const ChoicePreferenceTopicModel = (props: any) => {
                                   {listItems.map((item, index) => (
                                     <div
                                       key={index}
-                                      className={`${goosipList.filter(i => i.name === item.name).length > 0 ? 'bg-white dark:bg-brandDark2 border border-brandDark2  dark:border-brand' :  'bg-choosebox dark:bg-brandLightOpacity10' }   min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center    rounded `}
+                                      className={`${goosipList.filter(i => i.name === item.name).length > 0 ? 'bg-white dark:bg-brandDark2 border border-brandDark2  dark:border-brand' :  'bg-choosebox dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 hover:bg-modalChoose' }   min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center  cursor-pointer   rounded `}
                                       onClick={() => onClickGossipeList(item.name, item.id)}
                                     >
                                       <p className={`${goosipList.filter(i => i.name === item.name).length > 0 ? 'text-brandDark2 dark:text-brand' : "text-brandDark2 opacity-70 dark:opacity-100 dark:text-brandLightOpacity70" } text-xs   montserratfont font-medium`}>
@@ -687,7 +687,7 @@ const ChoicePreferenceTopicModel = (props: any) => {
                           </div>
                             <div className="rounded min-h-fit  mb-4">
                             <details className="group">
-                              <summary className={`${deal2List.length > 0 ? 'bg-modalChoose':'bg-iconBackground'}  group-open:bg-modalChoose dark:bg-brandLightOpacity5  dark:group-open:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brandDark2 dark:group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none`}>
+                              <summary className={`${deal2List.length > 0 ? 'bg-modalChoose':'bg-iconBackground'}  group-open:bg-modalChoose  hover:bg-modalChoose dark:bg-brandLightOpacity5  dark:group-open:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity10 group-open:rounded group-open:border-l-2 group-open:border-l-brandDark2 dark:group-open:border-l-brand h-[64px] flex justify-between items-center font-medium cursor-pointer list-none`}>
                                 <div className="flex ">
                                   <span className={`${deal2List.length > 0 ? 'dark:text-brand text-brandDark2' : 'dark:text-brandLightOpacity100 text-brandDark2'} pl-6 pr-[5px] text-base montserratfont font-semibold `}>
                                     Deals
@@ -721,7 +721,7 @@ const ChoicePreferenceTopicModel = (props: any) => {
                                   {listItems.map((item, index) => (
                                     <div
                                       key={index}
-                                      className={`${deal2List.filter(i => i.name === item.name).length > 0 ? 'bg-white dark:bg-brandDark2 border border-brandDark2  dark:border-brand' :  'bg-choosebox dark:bg-brandLightOpacity10' }   min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center    rounded `}
+                                      className={`${deal2List.filter(i => i.name === item.name).length > 0 ? 'bg-white dark:bg-brandDark2 border border-brandDark2  dark:border-brand' :  'bg-choosebox dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 hover:bg-modalChoose' }   min-w-fit px-2 mr-4  py-[6px]  mt-4  flex items-center justify-center cursor-pointer  rounded `}
                                       onClick={() => onClickDeal2List(item.name, item.id)}
                                     >
                                       <p className={`${deal2List.filter(i => i.name === item.name).length > 0 ? 'text-brandDark2 dark:text-brand' : "text-brandDark2 opacity-70 dark:opacity-100 dark:text-brandLightOpacity70" } text-xs   montserratfont font-medium`}>
