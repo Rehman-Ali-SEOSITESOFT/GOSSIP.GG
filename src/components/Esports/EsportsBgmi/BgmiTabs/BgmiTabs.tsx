@@ -38,10 +38,10 @@ const BgmiTabs = () => {
           return (
             <Link
               href={item.link}
-              className={`${styles.tags} bg-grayCard 
-                    text-textColorGray hover:text-brandDark2 hover:bg-borderEditProfile dark:bg-brandLightOpacity10 dark:text-brandLightOpacity70 
-                    dark:hover:text-brandLightOpacity100
-                    dark:hover:bg-brandLightOpacity20 `}
+              className={`${styles.tags} trending_tags__F18X1 bg-grayCard 
+              text-textColorGray hover:text-brandDark2 hover:bg-borderEditProfile dark:bg-brandLightOpacity10 dark:text-brandLightOpacity70 
+              dark:hover:text-brandLightOpacity100
+              dark:hover:bg-brandLightOpacity20 `}
               key={index}
             >
               <span>{item.name}</span>

@@ -46,12 +46,16 @@ const ReviewCards = () => {
                   <p className="montserratfont text-sm font-normal  text-[#221e1f] dark:text-[#E5E5E5] leading-[17px] pt-[5px]">
                     Panic Barn
                   </p>
-                  <p className="  text-xs italic leading-[15px] font-normal brandLightOpacity70 pt-[5px]">
+                  <p className=" montserratfont text-xs italic leading-[15px] font-normal brandLightOpacity70 pt-[5px]">
                     Adventure,Indie,Puzzle
                   </p>
                 </div>
                 <div className=" he bookmark_check rounded-full bg-grayCard w-8 h-8 dark:bg-brandLightOpacity10 flex items-center justify-center cursor-pointer dark:hover:bg-brandLightOpacity20    hover:bg-grayCardHover">
-                  <Image src={bookmark} alt="bookmark" />
+                  <Image
+                    src={bookmark}
+                    alt="bookmark"
+                    className=" brightness-0 dark:brightness-200"
+                  />
                 </div>
               </div>
             </div>

@@ -13,7 +13,7 @@ const index = () => {
         <div className="gaming_tabs_hero_section pt-8 pb-[10px]">
           <HeroSection />
         </div>
-        <div className="latest_news mt-[44px] mw-lg:mt-[0px] ">
+        <div className="latest_news mt-[30px] mw-lg:mt-[0px] ">
           <LatestNews />
         </div>
         <div className="latest_news">

@@ -29,11 +29,22 @@ const GamingFeatures = () => {
       picture: image4,
     },
   ]
+  const data: List[] = [
+    {
+      name: "demo ",
+      picture: image1,
+    },
+    {
+      name: "demo ",
+      picture: image2,
+    },
+  ]
+  const [items2, setItems2] = useState(data)
   const [items, setItems] = useState(item)
   return (
     <>
-      <div className="features_gaming_section dark:bg-brandDark1 bg-white pt-[24px] pb-[24px] pl-[0px] pr-[0px]  rounded border-grayCard border">
-        <div className="flex flex-wrap pt-0 pb-0  bg-white rounded dark:bg-brandDark1">
+      <div className="mw-lg:hidden features_gaming_section dark:bg-brandDark1 bg-white pt-[24px] pb-[24px] pl-[0px] pr-[0px]  rounded border-grayCard border">
+        <div className="flex flex-wrap pt-0 pb-0  bg-white rounded dark:bg-brandDark1 ">
           {items.map((elem, index) => {
             return (
               <div
@@ -62,11 +73,11 @@ const GamingFeatures = () => {
                 >
                   <h4 className="text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 pr-[16px]">
                     Hellblade: Senua&#39;s Sacrifice Might Just be One of the
-                    Most Important Games of the Modern Era
+                    Most Important Games of the Modern era
                   </h4>
-                  <p className="font-normal	text-xs	robotoslub pt-[8px] text-brandLightOpacity90">
+                  <p className="font-normal	text-xs	robotoslub pt-[8px] dark:text-brandLightOpacity90">
                     It is a long established fact that a reader will be
-                    distracted by the readable content of a page when...{" "}
+                    distracted by the readable content of a page when...
                   </p>
                   <p className="user_name montserratfont text-xs font-medium dark:text-[#E5E5E5] pt-[8px]">
                     -John D
@@ -95,6 +106,34 @@ const GamingFeatures = () => {
             )
           })}
         </div>
+      </div>
+      <div>
+        {items2.map((e, idx) => {
+          return (
+            <div className="main_feature_tab_version">
+              <div>
+                <Image src={image1} alt="profile" />
+              </div>
+              <div>
+                <h4>
+                  Bayes Esports appoints York Scheunemann as COO of reputed
+                </h4>
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when...
+                </p>
+                <div>
+                  <p>-John Dasasasas</p>
+                  <Image
+                    src={bookmark}
+                    alt="bookmark"
+                    className="rounded-sm object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          )
+        })}
       </div>
     </>
   )
