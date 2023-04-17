@@ -37,7 +37,6 @@ const Page = () => {
                       }
                       onClick={() => hanldeOpenTab(index)}
                       data-toggle="tab"
-                      // href={`#link${index}`}
                       role="tablist"
                     >
                       {el.name}

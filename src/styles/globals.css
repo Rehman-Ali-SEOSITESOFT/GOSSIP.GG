@@ -27,22 +27,22 @@
   /* // SEMANTIC COLORS */
   --successIndicator: #008d52;
   --errorIndicator: #d91618;
+  scrollbar-width: thin !important;
 }
 
 /* // GLOBAL SECTION WIDTH */
 body::-webkit-scrollbar {
-  width: 8px;
-  border-radius: 8px;
+  width: 8px !important;
+  border-radius: 8px !important;
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--brandDark2);
+  border-radius: 8px !important;
 }
 
 body::-webkit-scrollbar-thumb {
-  background: rgba(34, 30, 31, 0.5);
   border: 1px solid rgba(229, 229, 229, 0.2);
-  border-radius: 8px;
+  border-radius: 8px !important;
 }
 
 .global-section-width {

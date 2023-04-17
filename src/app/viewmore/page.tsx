@@ -1,6 +1,6 @@
 "use client";
-import ExportsEventBanner from "@/components/Esports2/Banner";
-import FilterBy from "@/components/Esports2/FilterBy";
+import ExportsEventBanner from "@/components/Esports/EsportsEvent/Banner";
+import FilterBy from "@/components/Esports/EsportsEvent/FilterBy";
 import React, { useState } from "react";
 import img1 from "../../assets/esports/other-01.png";
 import img2 from "../../assets/esports/other-02.png";

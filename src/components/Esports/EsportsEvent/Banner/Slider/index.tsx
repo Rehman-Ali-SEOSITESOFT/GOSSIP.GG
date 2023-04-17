@@ -44,10 +44,10 @@ const ExportEventBannerSlider = () => {
           />
         </div>
       </Slider>
-      <div className="w-[192px] h-[40px] dark:bg-brandLightOpacity90 rounded-3xl flex items-center justify-center  absolute right-[24px] bottom-[41px]	">
+      <div className="w-[192px] h-[40px] bg-brandLightOpacity90 rounded-3xl  flex items-center justify-center  absolute right-[24px] bottom-[41px]	">
         <a
           href="#"
-          className="montserratfont font-semibold test-base leading-5 dark:text-brandDark2 l"
+          className="montserratfont font-semibold test-base leading-5 text-brandDark2 "
         >
           Registrations Open
         </a>

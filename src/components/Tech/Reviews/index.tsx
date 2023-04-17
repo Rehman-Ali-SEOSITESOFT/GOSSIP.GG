@@ -128,8 +128,8 @@ const ReviewTech = () => {
                               className="w-full h-full mw-11:object-cover rounded"
                             />
 
-                            <div className="review w-[60px] h-[60px] bg-arrowicon dark:bg-brand flex justify-center items-center rounded-[50px] absolute top-[8px] right-[8px] mw-sm:w-[40px] mw-sm:h-[40px]">
-                              <span className="montserratfont font-bold text-lg leading-[22px] dark:text-brandLightOpacity100 mw-sm:text-sm ">
+                            <div className="review w-[60px] h-[60px] bg-arrowicon bg-brand flex justify-center items-center rounded-[50px] absolute top-[8px] right-[8px] mw-sm:w-[40px] mw-sm:h-[40px]">
+                              <span className="montserratfont font-bold text-lg leading-[22px] text-brandLightOpacity100 mw-sm:text-sm ">
                                 4/5
                               </span>
                             </div>
@@ -160,6 +160,7 @@ const ReviewTech = () => {
                       </>
                     )}
                   </>
+<<<<<<< HEAD
                   // {index === 6 || index === 7 ? "" : ""}
                   // <div
                   //   className="w-[270px] mw-12:w-[31%] mr-[40px] mx-13:mr-[25px]  mw-xl:mr-[0] mt-12 mw-lg:w-[48%] mw-lg:mt-[20px]"
@@ -177,6 +178,9 @@ const ReviewTech = () => {
                   //   {/* )} */}
                   // </div>
                 )
+=======
+                );
+>>>>>>> 1c56871e72aa8318d085e80b4b9b02cf9548c3fe
               })}
             </div>
           </div>
