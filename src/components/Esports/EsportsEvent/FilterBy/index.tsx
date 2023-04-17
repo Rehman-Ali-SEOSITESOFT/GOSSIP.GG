@@ -1,18 +1,18 @@
 import Image from "next/image";
 import React, { useState, useRef, useEffect } from "react";
-import downarrow from "../../../assets/esports/down-arrow.png";
-import Valorant from "../../../assets/images/filters/valorant.png";
-import Cross from "../../../assets/images/filters/x.png";
-import BGMI from "../../../assets/images/filters/bgmi.png";
-import CounterStrike from "../../../assets/images/filters/counter.png";
-import Dota from "../../../assets/images/filters/valorant.png";
-import ApexLengends from "../../../assets/images/filters/apex.png";
-import CallOfDuty from "../../../assets/images/filters/call.png";
-import AgeOfEmpire from "../../../assets/images/filters/age.png";
-import EsportClub from "../../../assets/images/filters/esport.png";
-import NOQWIN from "../../../assets/images/filters/nodwin.png";
-import Penta from "../../../assets/images/filters/penta.png";
-import Search from "../../../assets/images/filters/search.png";
+import downarrow from "../../../../assets/esports/down-arrow.png";
+import Valorant from "../../../../assets/images/filters/valorant.png";
+import Cross from "../../../../assets/images/filters/x.png";
+import BGMI from "../../../../assets/images/filters/bgmi.png";
+import CounterStrike from "../../../../assets/images/filters/counter.png";
+import Dota from "../../../../assets/images/filters/valorant.png";
+import ApexLengends from "../../../../assets/images/filters/apex.png";
+import CallOfDuty from "../../../../assets/images/filters/call.png";
+import AgeOfEmpire from "../../../../assets/images/filters/age.png";
+import EsportClub from "../../../../assets/images/filters/esport.png";
+import NOQWIN from "../../../../assets/images/filters/nodwin.png";
+import Penta from "../../../../assets/images/filters/penta.png";
+import Search from "../../../../assets/images/filters/search.png";
 import { useTheme } from "next-themes";
 
 const FilterBy = () => {
@@ -313,13 +313,13 @@ const FilterBy = () => {
               </div>
             </div>
             {opendropDown1 && (
-              <div className=" shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-brandDark2 dark:border-brandLightOpacity10 bg-bodycolor  m-h-[462px] w-[302px] dark:bg-brandDark1">
+              <div className=" shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-grayCard   dark:border-brandLightOpacity10 bg-bodycolor  m-h-[462px] w-[302px] dark:bg-brandDark1 ">
                 <div className="border-b-2 border-b-brandLightOpacity10 h-[60px] flex flex-row  items-center pl-[16px] pr-[20px]">
                   <Image src={Search} alt="search" />
                   <input
                     type="input"
                     onChange={(e) => onChangeGameSearch(e)}
-                    className="bg-brandDark1 focus:outline-none focus:bg-brandDark1 hover:bg-brandDark1 focus:border-none w-[90%] text-brandLightOpacity100 ml-2 montserratfont"
+                    className="dark:bg-brandDark1  focus:outline-none dark:focus:bg-brandDark1 dark:hover:bg-brandDark1 bg-bodycolor focus:border-none w-[90%] text-brandLightOpacity100 ml-2 montserratfont"
                   />
                 </div>
                 {gameList.map((item, index) => (
@@ -334,7 +334,7 @@ const FilterBy = () => {
                         <Image src={item.image} alt="icons" />
                       )}
                       <p
-                        className={`text-brandLightOpacity100 montserratfont leading-[20px] text-base font-normal ${
+                        className={`text-textColor dark:text-brandLightOpacity100  montserratfont leading-[20px] text-base font-normal  ${
                           item.image !== "" ? "pl-[16px]" : "pl-[50px]"
                         }`}
                       >
@@ -616,10 +616,10 @@ const FilterBy = () => {
               return (
                 <p
                   key={index}
-                  className={`py-2.5 px-4 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 rounded-[20px] mr-[8px] inline-block montserratfont font-medium test-base leading-5 cursor-pointer  ${
+                  className={`py-2.5 px-4 dark:bg-brandLightOpacity10 hover:bg-borderEditProfile dark:hover:bg-brandLightOpacity20 hover:text-brandDark2 bg-grayCard text-textColorGray dark:text-brandLightOpacity100 rounded-[20px] mr-[8px] inline-block montserratfont xtest-base leading-5 cursor-pointer font-semibold  ${
                     sort === index
-                      ? "border dark:border-brandLightOpacity100 dark:bg-brandLightOpacity10"
-                      : "border-0"
+                      ? "border dark:border-brandLightOpacity100 dark:bg-brandLightOpacity10 border-brandDark2 bg-white text-brandDark2 "
+                      : "border-0 brandDark2"
                   }`}
                   onClick={() => hanldeSorting(index)}
                 >

@@ -67,8 +67,8 @@ const ReviewTech = () => {
                         className="w-full h-full mw-11:object-cover rounded"
                       />
 
-                      <div className="review w-[60px] h-[60px] bg-arrowicon dark:bg-brand flex justify-center items-center rounded-[50px] absolute top-[8px] right-[8px] mw-sm:w-[50px] mw-sm:h-[50px]">
-                        <span className="montserratfont font-bold text-lg leading-[22px] dark:text-brandLightOpacity100 mw-sm:text-sm ">
+                      <div className="review w-[60px] h-[60px] bg-arrowicon bg-brand flex justify-center items-center rounded-[50px] absolute top-[8px] right-[8px] mw-sm:w-[50px] mw-sm:h-[50px]">
+                        <span className="montserratfont font-bold text-lg leading-[22px] text-brandLightOpacity100 mw-sm:text-sm ">
                           4/5
                         </span>
                       </div>
