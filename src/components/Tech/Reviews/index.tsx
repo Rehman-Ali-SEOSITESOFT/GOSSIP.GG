@@ -160,27 +160,7 @@ const ReviewTech = () => {
                       </>
                     )}
                   </>
-<<<<<<< HEAD
-                  // {index === 6 || index === 7 ? "" : ""}
-                  // <div
-                  //   className="w-[270px] mw-12:w-[31%] mr-[40px] mx-13:mr-[25px]  mw-xl:mr-[0] mt-12 mw-lg:w-[48%] mw-lg:mt-[20px]"
-                  //   key={index}
-                  // >
-                  //   {/* {index === 6 || index === 7 ? (
-                  //     <div className="w-full pl-[40px] py-[8px] mw-sm3:pl-[10px]">
-                  //       <h4 className="montserratfont font-medium text-xs leading-[15px] dark:text-brandLightOpacity70 text-textColor pb-[10px]">
-                  //         Advertisement
-                  //       </h4>
-                  //       <Image src={addvertisement} alt="demo" />
-                  //     </div>
-                  //   ) : ( */}
-
-                  //   {/* )} */}
-                  // </div>
                 )
-=======
-                );
->>>>>>> 1c56871e72aa8318d085e80b4b9b02cf9548c3fe
               })}
             </div>
           </div>
