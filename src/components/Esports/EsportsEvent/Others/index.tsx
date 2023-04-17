@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import img1 from "../../../assets/esports/other-01.png";
-import img2 from "../../../assets/esports/other-02.png";
-import img3 from "../../../assets/esports/other-03.png";
-import img4 from "../../../assets/esports/other-04.png";
-import img5 from "../../../assets/esports/other-05.png";
-import img6 from "../../../assets/esports/other-06.png";
-import img7 from "../../../assets/esports/other-07.png";
-import img8 from "../../../assets/esports/other-08.png";
+import img1 from "../../../../assets/esports/other-01.png";
+import img2 from "../../../../assets/esports/other-02.png";
+import img3 from "../../../../assets/esports/other-03.png";
+import img4 from "../../../../assets/esports/other-04.png";
+import img5 from "../../../../assets/esports/other-05.png";
+import img6 from "../../../../assets/esports/other-06.png";
+import img7 from "../../../../assets/esports/other-07.png";
+import img8 from "../../../../assets/esports/other-08.png";
 
-import icon1 from "../../../assets/esports/v-mask-01.png";
-import icon2 from "../../../assets/esports/b-mask-02.png";
-import icon3 from "../../../assets/esports/v-mask-03.png";
-
-import chevronsright from "../../../assets/esports/chevrons-right.png";
+import icon1 from "../../../../assets/esports/v-mask-01.png";
+import icon2 from "../../../../assets/esports/b-mask-02.png";
+import icon3 from "../../../../assets/esports/v-mask-03.png";
+import Link from "next/link";
+import chevronsright from "../../../../assets/esports/chevrons-right.png";
 import Image from "next/image";
 import SectionSaprator from "@/components/SecSaprator";
 const Others = () => {
@@ -161,8 +161,8 @@ const Others = () => {
           <div className="flex  justify-between  flex-wrap ">
             {item.slice(0, itemLimit).map((ele, index) => {
               return (
-                <div
-                  key={index}
+                <Link
+                href="/esports/event-details"
                   className="w-[300px] max-w-[24%] rounded border  dark:border-brandLightOpacity10 bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1 dark:bg-brandDark1 border-inherit dark:border-brandDark1 border  p-2.5 mb-8"
                 >
                   <div className="img-wrapper h-[150px]">
@@ -209,7 +209,7 @@ const Others = () => {
                       </a>
                     </div>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>

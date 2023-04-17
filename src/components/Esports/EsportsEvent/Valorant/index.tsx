@@ -1,55 +1,58 @@
-import React, { useState } from "react"
-import img1 from "../../../assets/esports/bgmi-01.png"
-import img2 from "../../../assets/esports/bgmi-02.png"
-import img3 from "../../../assets/esports/bgmi-03.png"
-import img4 from "../../../assets/esports/bgmi-04.png"
+import React, { useState } from "react";
+import img1 from "../../../../assets/esports/valorant-01.png";
+import img2 from "../../../../assets/esports/valorant-02.png";
+import img3 from "../../../../assets/esports/valorant-03.png";
+import img4 from "../../../../assets/esports/valorant-04.png";
 
-import icon1 from "../../../assets/esports/b-mask-01.png"
-import icon2 from "../../../assets/esports/b-mask-02.png"
-import icon3 from "../../../assets/esports/b-mask-03.png"
-import icon4 from "../../../assets/esports/b-mask-04.png"
-import chevronsright from "../../../assets/esports/chevrons-right.png"
-import Image from "next/image"
-import SectionSaprator from "@/components/SecSaprator"
-const Bgmi = () => {
+import icon1 from "../../../../assets/esports/v-mask-01.png";
+import icon2 from "../../../../assets/esports/v-mask-02.png";
+import icon3 from "../../../../assets/esports/v-mask-03.png";
+import icon4 from "../../../../assets/esports/v-mask-04.png";
+import chevronsright from "../../../../assets/esports/chevrons-right.png";
+import Image from "next/image";
+import SectionSaprator from "@/components/SecSaprator";
+import Link from "next/link";
+const Valorant = () => {
   interface List {
-    image: any
-    title: string
-    icon_img: any
+    image: any;
+    title: string;
+    icon_img: any;
   }
   const [item, setTiems] = useState<List[]>([
     {
       image: img1,
-      title: "AMD Ryzen TEC Invitational Se...",
+      title: "Valorant Champion Cup II",
       icon_img: icon1,
     },
     {
       image: img2,
-      title: "Penta Collegiate League - BGMI",
+      title: "Break of First Light",
       icon_img: icon2,
     },
     {
       image: img3,
-      title: "Legends Rise Championship 20...",
+      title: "TEC Valorant 1v1 Gold Series",
       icon_img: icon3,
     },
     {
       image: img4,
-      title: "LG Ultragear TEC Invitational S...",
+      title: "Wolfoxy - Valorant 5X5 - #382",
       icon_img: icon4,
     },
-  ])
+  ]);
   return (
-    <div className="bgmi-component">
+    <div className="valorant-component">
       <div className="global-section-width">
-        <div className="pt-14">
-          <SectionSaprator title="Bgmi" />
+        <div className="pt-16">
+          <SectionSaprator title="Valorant" />
         </div>
+
         <div className="2xl:container">
           <div className="flex  justify-between  flex-wrap">
             {item.map((ele, index) => {
               return (
-                <div
+                <Link
+                href="/esports/event-detail"
                   key={index}
                   className="w-[300px] max-w-[24%] rounded border  dark:border-brandLightOpacity10 bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1 dark:bg-brandDark1 border-inherit dark:border-brandDark1 border  p-2.5"
                 >
@@ -97,19 +100,19 @@ const Bgmi = () => {
                       </a>
                     </div>
                   </div>
-                </div>
-              )
+                </Link>
+              );
             })}
           </div>
           <div className="w-full pt-4 ">
             <a
-              href="/viewmore?bgmi-events=bgmi-events"
+              href="/viewmore?valorant-events=valorant-events"
               className="text-textColorGray dark:text-brandLightOpacity70 montserratfont font-base  leading-5 font-medium	 dark:hover:text-white hover:underline
               dark:hover:decoration-white 
               hover:decoration-black 
               hover:text-black"
             >
-              <span className="view-more">View all BGMI events</span>
+              <span className="view-more"> View all Valorant events</span>
               <span>&gt;</span>
               <span>&gt;</span>
               <span>&gt;</span>
@@ -118,7 +121,7 @@ const Bgmi = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Bgmi
+export default Valorant;

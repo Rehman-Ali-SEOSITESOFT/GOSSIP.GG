@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-import img1 from "../../../assets/esports/valorant-01.png";
-import img2 from "../../../assets/esports/valorant-02.png";
-import img3 from "../../../assets/esports/valorant-03.png";
-import img4 from "../../../assets/esports/valorant-04.png";
+import img1 from "../../../../assets/esports/csgo-01.png";
+import img2 from "../../../../assets/esports/csgo-02.png";
+import img3 from "../../../../assets/esports/csgo-03.png";
+import img4 from "../../../../assets/esports/csgo-04.png";
 
-import icon1 from "../../../assets/esports/v-mask-01.png";
-import icon2 from "../../../assets/esports/v-mask-02.png";
-import icon3 from "../../../assets/esports/v-mask-03.png";
-import icon4 from "../../../assets/esports/v-mask-04.png";
-import chevronsright from "../../../assets/esports/chevrons-right.png";
+import icon1 from "../../../../assets/esports/v-mask-01.png";
+
+import icon3 from "../../../../assets/esports/v-mask-03.png";
+
+import chevronsright from "../../../../assets/esports/chevrons-right.png";
 import Image from "next/image";
 import SectionSaprator from "@/components/SecSaprator";
-const Valorant = () => {
+import Link from "next/link";
+const CsGo = () => {
   interface List {
     image: any;
     title: string;
@@ -20,38 +21,38 @@ const Valorant = () => {
   const [item, setTiems] = useState<List[]>([
     {
       image: img1,
-      title: "Valorant Champion Cup II",
-      icon_img: icon1,
+      title: "Lenovo Tech World India Editi...",
+      icon_img: icon3,
     },
     {
       image: img2,
-      title: "Break of First Light",
-      icon_img: icon2,
+      title: "1v1 War Arena",
+      icon_img: icon1,
     },
     {
       image: img3,
-      title: "TEC Valorant 1v1 Gold Series",
+      title: "Dell Gaming TEC Pro League S...",
       icon_img: icon3,
     },
     {
       image: img4,
-      title: "Wolfoxy - Valorant 5X5 - #382",
-      icon_img: icon4,
+      title: "CS:GO Re-ignite Tour 1 2023",
+      icon_img: icon1,
     },
   ]);
   return (
-    <div className="valorant-component">
+    <div className="CsGo-component">
       <div className="global-section-width">
         <div className="pt-16">
-          <SectionSaprator title="Valorant" />
+          <SectionSaprator title="CS:GO" />
         </div>
 
         <div className="2xl:container">
           <div className="flex  justify-between  flex-wrap">
             {item.map((ele, index) => {
               return (
-                <div
-                  key={index}
+                <Link
+                href="/esports/event-details"
                   className="w-[300px] max-w-[24%] rounded border  dark:border-brandLightOpacity10 bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1 dark:bg-brandDark1 border-inherit dark:border-brandDark1 border  p-2.5"
                 >
                   <div className="img-wrapper h-[150px]">
@@ -98,19 +99,19 @@ const Valorant = () => {
                       </a>
                     </div>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>
           <div className="w-full pt-4 ">
             <a
-              href="/viewmore?valorant-events=valorant-events"
+              href="/viewmore?csgo-events=csgo-events"
               className="text-textColorGray dark:text-brandLightOpacity70 montserratfont font-base  leading-5 font-medium	 dark:hover:text-white hover:underline
               dark:hover:decoration-white 
               hover:decoration-black 
               hover:text-black"
             >
-              <span className="view-more"> View all Valorant events</span>
+              <span className="view-more"> View all CS:GO events</span>
               <span>&gt;</span>
               <span>&gt;</span>
               <span>&gt;</span>
@@ -122,4 +123,4 @@ const Valorant = () => {
   );
 };
 
-export default Valorant;
+export default CsGo;
