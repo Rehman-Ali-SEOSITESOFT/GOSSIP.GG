@@ -1,10 +1,10 @@
-import Image from "next/image";
-import React, { useState } from "react";
-import laptop from "../../../assets/tech/filter/laptop.png";
-import desktop from "../../../assets/tech/filter/desktop.png";
-import accessorie from "../../../assets/tech/filter/accessorie.png";
-import game from "../../../assets/tech/filter/game.png";
-import component from "../../../assets/tech/filter/component.png";
+import Image from "next/image"
+import React, { useState } from "react"
+import laptop from "../../../assets/tech/filter/laptop.png"
+import desktop from "../../../assets/tech/filter/desktop.png"
+import accessorie from "../../../assets/tech/filter/accessorie.png"
+import game from "../../../assets/tech/filter/game.png"
+import component from "../../../assets/tech/filter/component.png"
 const FilterTabs = () => {
   const images = [
     { picture: laptop, name: "Laptops" },
@@ -13,10 +13,10 @@ const FilterTabs = () => {
     { picture: game, name: "Games" },
     { picture: component, name: "Components" },
     { picture: null, name: "Others" },
-  ];
+  ]
 
-  const [no, setNo] = useState<number>(0);
-  const hadldeclick = (e: number) => setNo(e);
+  const [no, setNo] = useState<number>(0)
+  const hadldeclick = (e: number) => setNo(e)
 
   return (
     <div className="FilterTabs pt-16 mw-xl:pt-12 mw-md:pt-[20px]">
@@ -57,12 +57,12 @@ const FilterTabs = () => {
                   {element.name}
                 </span>
               </div>
-            );
+            )
           })}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default FilterTabs;
+export default FilterTabs

@@ -16,6 +16,7 @@ import user5 from "../../../assets/tech/hero-bg.png"
 import user6 from "../../../assets/tech/ne.png"
 import AsideBar from "@/components/Tech/Asidebar"
 import Pagination from "@/components/Pagination"
+import RightSidebar from "@/components/Game/rightbar2/RightSidebar"
 
 const NewsEsports = () => {
   const userDetil = [user1, user2, user3, user4, user5, user6]
@@ -142,7 +143,7 @@ const NewsEsports = () => {
                     })}
                   </div>
                 </div>
-                <AsideBar />
+                <RightSidebar />
               </div>
               <Pagination />
             </div>
