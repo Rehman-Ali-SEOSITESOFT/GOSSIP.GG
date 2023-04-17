@@ -64,7 +64,7 @@ const Esports = () => {
             </span>
           </div>
           <div className=" flex flex-row justify-between border-t border-b  dark:border-t-brandLightOpacity10 dark:border-b-brandLightOpacity10">
-            <div className="my-[22px] item-iamge-arrows text-center flex flex-row">
+            <div className="my-[22px] item-iamge-arrows text-center flex flex-row items-center">
               <div className="up-arrow bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer  hover:bg-borderEditProfile">
                 <Image
                   src={uparrowColor}
@@ -142,7 +142,7 @@ const Esports = () => {
           </p>
           <Image className="my-[24px]" src={Post2} alt="post" />
           <div className=" flex flex-row justify-between border-t border-b dark:border-t-brandLightOpacity10 dark:border-b-brandLightOpacity10">
-            <div className="my-[22px] item-iamge-arrows text-center flex flex-row">
+            <div className="my-[22px] item-iamge-arrows text-center flex flex-row items-center">
               <div className="up-arrow bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer  hover:bg-borderEditProfile">
                 <Image
                   src={uparrowColor}
@@ -220,7 +220,7 @@ const Esports = () => {
           </p>
           <Image className="my-[24px]" src={Post3} alt="post" />
           <div className=" flex flex-row justify-between border-t border-b dark:border-t-brandLightOpacity10 dark:border-b-brandLightOpacity10">
-            <div className="my-[22px] item-iamge-arrows text-center flex flex-row">
+            <div className="my-[22px] item-iamge-arrows text-center flex flex-row items-center">
               <div className="up-arrow bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer  hover:bg-borderEditProfile">
                 <Image
                   src={uparrowColor}

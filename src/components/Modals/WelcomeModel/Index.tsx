@@ -92,7 +92,7 @@ const WelcomeGossip = (props: any) => {
                         Continue
                       </a>
 
-                      <a className="skip_btn   w-300px border  border-brandDark2 dark:border-brandLightOpacity100 inline-block py-3	rounded-3xl	text-center m-auto text-lg leading-6 text-brandDark2 dark:text-brandLightOpacity100 font-bold montserratfont	cursor-pointer  mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base  mw-sm:text-semibold ">
+                      <a className="dark:hover:bg-[#353233] hover:bg-arrowicon skip_btn   w-300px border  border-brandDark2 dark:border-brandLightOpacity100 inline-block py-3	rounded-3xl	text-center m-auto text-lg leading-6 text-brandDark2 dark:text-brandLightOpacity100 font-bold montserratfont	cursor-pointer  mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base  mw-sm:text-semibold ">
                         Skip
                       </a>
                     </div>                     

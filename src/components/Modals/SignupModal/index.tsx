@@ -12,6 +12,8 @@ import { useTheme } from "next-themes";
 import GoogleLight from "../../../assets/images/modal/google-light.png";
 import DiscordLight from "../../../assets/images/modal/discord-light.png";
 import LightLogo from "../../../assets/images/modal/light-logo.png";
+import EyeOff from "../../../assets/images/modal/eye.png";
+import Eye from "../../../assets/images/modal/eye-off.png";
 
 const SignupModal = (props: any) => {
   const cancelButtonRef = useRef(null);
@@ -22,6 +24,12 @@ const SignupModal = (props: any) => {
       props.onClickOpenModal();
     }
     setOpen(!open);
+  };
+
+  const [show, setShow] = useState<boolean | null>(false);
+
+  const onClickShowPassword = () => {
+    setShow(!show);
   };
   return (
     <>
@@ -89,13 +97,22 @@ const SignupModal = (props: any) => {
                           type="text"
                           placeholder="Email"
                         />
-                        <input
-                          className="text-base font-medium montserratfont hover:border hover:border-brandDark2 dark:hover:border-[#ffffff]  montserratfont border-brandLightOpacity10 mt-4 mb-38px dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6  bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
-                          id="password"
-                          type="password"
-                          autoComplete="false"
-                          placeholder="Create Password"
-                        />
+                        <div className="relative w-[100%] mt-4 mb-38px">
+                          <input
+                            name="password"
+                            type={show ? "text" : "password"}
+                            placeholder="Create Password"
+                            className="border-brandLightOpacity10 montserratfont  hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
+                          />
+                          <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
+                            <Image
+                              className=""
+                              src={show ? Eye : EyeOff}
+                              alt="password icon"
+                              onClick={() => onClickShowPassword()}
+                            />
+                          </div>
+                        </div>
                       </div>
 
                       <div className="flex flex-col items-center">
