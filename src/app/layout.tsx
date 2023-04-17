@@ -26,7 +26,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body>
+      <body className="scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  dark:scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2">
         <Providers>
           <main className="gossip bg-bodycolor dark:bg-brandDark2">
             <Header />
