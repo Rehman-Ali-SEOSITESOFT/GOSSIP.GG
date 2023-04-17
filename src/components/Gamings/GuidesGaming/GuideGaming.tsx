@@ -20,14 +20,14 @@ const GuideGaming = () => {
       <section className="Guides_wrapper">
         <div className="global-section-width">
           <div className="2xl:container">
-            <div className="flex mw-md:hidden  flex-wrap justify-between">
+            <div className="flex  flex-wrap justify-between">
               {list.map((element, index) => {
                 return (
                   <div
-                    className="w-[23.5%] mw-lg:w-[48%] mw-sm3:w-full"
+                    className="w-[23.5%] mw-lg:w-[48%] mw-sm1:w-[98%] mw-sm3:w-full"
                     key={index}
                   >
-                    <div className="img-wrapper h-[230px] mw-lg:h-[200px] mw-sm:h-[180px] mw-sm3:h-[150px] rounded">
+                    <div className="img-wrapper h-[230px] mw-lg:h-[200px] mw-sm1:h-[236px] mw-sm:h-[180px] mw-sm3:h-[150px] rounded">
                       <Image
                         src={element}
                         alt="Demo"
