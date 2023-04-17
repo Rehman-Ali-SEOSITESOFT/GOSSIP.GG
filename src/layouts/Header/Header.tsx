@@ -82,11 +82,10 @@ const Header = () => {
     let user: any = localStorage.getItem("isLogin");
     setIsLoggedIn(user);
     setBgClassChange(theme === "dark" ? "header_dark_img" : "header_light_img");
-   
   }, []);
-  useEffect(() =>{
-    setIsDarkTheme(theme === "dark" ? "dark": "light")
-  }, [theme])
+  useEffect(() => {
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
 
   function classNames(...classes: any) {
     return classes.filter(Boolean).join(" ");
@@ -132,7 +131,7 @@ const Header = () => {
   };
   return (
     <header
-      className={`${styles.main_header} relative z-[99] mw-lg:sticky top-0`}
+      className={`${styles.main_header} relative z-[10] mw-lg:sticky top-0`}
     >
       <div className={`${styles.header_width} `}>
         <div
