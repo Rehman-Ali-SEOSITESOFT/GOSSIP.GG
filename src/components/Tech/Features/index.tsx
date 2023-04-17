@@ -1,17 +1,20 @@
-import React from "react"
-import FilterTabs from "../Filter"
-import AsideBar from "../Asidebar"
-import Pagination from "@/components/Pagination"
-import toparrow from "../../../assets/user-for-you/fill-up-arrow.png"
-import bottomarrow from "../../../assets/user-for-you/down-arrow.png"
-import comment from "../../../assets/user-for-you/comment.png"
-import bookmark from "../../../assets/user-for-you/bookmark.png"
-import shared from "../../../assets/user-for-you/share.png"
-import feactureauthor from "../../../assets/tech/feature-author.png"
-import texticon from "../../../assets/author-profile/esport-icon.png"
-import Image from "next/image"
+import React from "react";
+import FilterTabs from "../Filter";
+import AsideBar from "../Asidebar";
+import Pagination from "@/components/Pagination";
+import toparrow from "../../../assets/user-for-you/fill-up-arrow.png";
+import bottomarrow from "../../../assets/user-for-you/down-arrow.png";
+import comment from "../../../assets/user-for-you/comment.png";
+import bookmark from "../../../assets/user-for-you/bookmark.png";
+import shared from "../../../assets/user-for-you/share.png";
+import feactureauthor from "../../../assets/tech/feature-author.png";
+import texticon from "../../../assets/author-profile/esport-icon.png";
+import textIconColor from "../../../assets/author-profile/esport-icon-2.png";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 const FeaturesTech = () => {
-  const item = [1, 2, 3, 4, 5]
+  const { theme, setTheme } = useTheme();
+  const item = [1, 2, 3, 4, 5];
   return (
     <section className="FeaturesTeach global-section-width">
       <FilterTabs />
@@ -35,11 +38,19 @@ const FeaturesTech = () => {
                         </h2>
                         <h5 className="rank text-lg leading-[22px] font-bold tracking-[0.03em] text-brand dark:text-brand montserratfont h-[30px] mt-[-1px]">
                           Esports Writer
-                          <Image
-                            src={texticon}
-                            alt="text-icon"
-                            className="inline-block pt-[5px]"
-                          />
+                          {theme === "dark" ? (
+                            <Image
+                              src={texticon}
+                              alt="text-icon"
+                              className="inline-block pt-[5px]"
+                            />
+                          ) : (
+                            <Image
+                              src={textIconColor}
+                              alt="text-icon"
+                              className="inline-block ml-[4px]"
+                            />
+                          )}
                         </h5>
                         <small className="">
                           <span className="border-brandDark2   dark:border-l-brandLightOpacity100 text-brandDark2 dark:text-brandLightOpacity100 text-sm montserratfont leading-4 font-normal">
@@ -115,7 +126,7 @@ const FeaturesTech = () => {
                       </div>
                     </div>
                   </div>
-                )
+                );
               })}
             </div>
           </div>
@@ -124,7 +135,7 @@ const FeaturesTech = () => {
         <Pagination />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default FeaturesTech
+export default FeaturesTech;
