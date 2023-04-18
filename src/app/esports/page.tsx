@@ -1,30 +1,30 @@
-"use client"
-import AllEsports from "@/components/Esports/AllEsports/AllEsports"
-import EsportsEvents from "@/components/Esports/EsportsEvent"
+"use client";
+import AllEsports from "@/components/Esports/AllEsports/AllEsports";
+import EsportsEvents from "@/components/Esports/EsportsEvent";
 // import EsportsEvents from "@/components/Esports/EsportEvents/EsportsEvents"
-import NewsEsports from "@/components/Esports/NewsEsports/NewsEsports"
-import Valorant from "@/components/Esports/Valorant/Valorant"
-import React, { useState } from "react"
-import styles from "./esports.module.css"
-import Trending from "@/components/Trending/Index"
-import EsportsBgmi from "@/components/Esports/EsportsBgmi/EsportsBgmi"
+import NewsEsports from "@/components/Esports/NewsEsports/NewsEsports";
+import Valorant from "@/components/Esports/Valorant/Valorant";
+import React, { useState } from "react";
+import styles from "./esports.module.css";
+import Trending from "@/components/Trending/Index";
+import EsportsBgmi from "@/components/Esports/EsportsBgmi/EsportsBgmi";
 const Page = () => {
-  const [openTab, setOpenTab] = useState(0)
+  const [openTab, setOpenTab] = useState(2);
   const menulist = [
     { name: "all", data: <AllEsports /> },
     { name: "News", data: <NewsEsports /> },
     { name: "Esports Events", data: <EsportsEvents /> },
     { name: "BGMI ", data: <EsportsBgmi /> },
     { name: "Valorant", data: <Valorant /> },
-  ]
+  ];
   const hanldeOpenTab = (e: number) => {
-    setOpenTab(e)
-  }
+    setOpenTab(e);
+  };
   return (
     <>
       <section className="esports_page_wrapper">
-        <div className="w-full text-center pt-[26px] pb-[36px]">
-          <ul className="flex w-[460px] m-auto justify-between">
+        <div className="w-full mw-sm:overflow-scroll text-center pt-[26px] pb-[36px]">
+          <ul className="flex w-[460px] 	 m-auto justify-between">
             {menulist.map((el, index) => {
               return (
                 <li key={index}>
@@ -43,7 +43,7 @@ const Page = () => {
                     {el.name}
                   </a>
                 </li>
-              )
+              );
             })}
           </ul>
         </div>
@@ -71,11 +71,11 @@ const Page = () => {
                 {el.data}
               </div>
             )
-          )
+          );
         })}
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
