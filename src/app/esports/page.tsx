@@ -47,6 +47,7 @@ const Page = () => {
             })}
           </ul>
         </div>
+        
         <div className={`global-section-width ${styles.trending_wrapper}`}>
           <div className="2xl:container m-auto">
             <div
