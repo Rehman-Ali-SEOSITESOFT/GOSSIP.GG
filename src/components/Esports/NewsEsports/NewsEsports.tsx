@@ -51,14 +51,14 @@ const NewsEsports = () => {
                             <small className="py-4	">
                               <a
                                 href="#"
-                                className="underline text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2	"
+                                className="underline text-brandDark2 mr-[21px] dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2	"
                               >
                                 John D
                               </a>
-                              <span className="border-l border-l-brandDark2 pl-2 ml-2 border-brandDark2   dark:border-l-brandLightOpacity100 text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal">
+                              <span className="border-l border-l-brandDark2 pl-[18px] mr-[18px] border-brandDark2   dark:border-l-brandLightOpacity100 text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal">
                                 Jan 30th, 2023, 18:08
                               </span>
-                              <span className="border-l border-l-brandDark2 pl-2 ml-2 border-brandDark2   dark:border-l-brandLightOpacity100  text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal">
+                              <span className="border-l border-l-brandDark2 pl-[18px] border-brandDark2   dark:border-l-brandLightOpacity100  text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal">
                                 5 min read
                               </span>
                             </small>

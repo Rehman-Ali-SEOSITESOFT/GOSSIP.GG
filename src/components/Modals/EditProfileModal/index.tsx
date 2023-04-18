@@ -406,7 +406,7 @@ const EditProfileModal = (props: any) => {
                                       <div
                                         key={index}
                                         onClick={() => onClickSelectGame(index)}
-                                        className={`min-w-fit mr-4   mb-4  mw-sm:mb-2 mw-sm:mr-2 flex items-center justify-around border border-brandDark2 ${selectedGame === index ? 'bg-arrowicon dark:bg-brandDark2   dark:border-brand': 'dark:border-[#ffffff]' }   rounded-lg h-11`}
+                                        className={`min-w-fit mr-4   mb-4  mw-sm:mb-2 mw-sm:mr-2 flex items-center justify-around border border-brandDark2 ${selectedGame === index ? 'bg-arrowicon dark:bg-brandDark2   dark:border-brand': 'dark:border-[#ffffff]' }   rounded h-11`}
                                       >
                                         <Image
                                           className="ml-3 mr-2 mw-sm:mr-1 mw-sm:ml-2"
@@ -432,7 +432,7 @@ const EditProfileModal = (props: any) => {
                                       <div
                                         key={index}
                                         onClick={() => onClickSelectPlatform(index)}
-                                        className={`min-w-fit mr-4   mb-4  mw-sm:mb-2 mw-sm:mr-2 flex items-center justify-around border ${selectedPlatform === index ? 'bg-arrowicon dark:bg-brandDark2   dark:border-brand': 'dark:border-[#ffffff] ' } border-brandDark2   rounded-lg h-11`}
+                                        className={`min-w-fit mr-4   mb-4  mw-sm:mb-2 mw-sm:mr-2 flex items-center justify-around border ${selectedPlatform === index ? 'bg-arrowicon dark:bg-brandDark2   dark:border-brand': 'dark:border-[#ffffff] ' } border-brandDark2   rounded h-11`}
                                       >
                                         <Image
                                           className="ml-3 mr-2 mw-sm:mr-1 mw-sm:ml-2"
