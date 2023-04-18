@@ -16,7 +16,7 @@ const Valorant = () => {
           <div className="top_section pt-[44px] flex justify-between pb-[42px]">
             <div className="w-[70%]">
               <h4 className="montserratfont text-[32px] leading-[39px] font-bold dark:text-[#E5E5E5] pb-[16px]">
-                Battlegrounds Mobile India
+                Valorant
               </h4>
               <p className="montserratfont text-[14px] leading-[17px] font-normal dark:text-[#E5E5E5]">
                 First Person Shooter &nbsp; | &nbsp; Simulation Video Game
