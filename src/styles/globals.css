@@ -419,3 +419,10 @@ body::-webkit-scrollbar-thumb {
     -webkit-line-clamp: 3;
   }
 }
+@media screen and (max-width: 400px) {
+  .esport-event-valorant-title {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+  }
+}

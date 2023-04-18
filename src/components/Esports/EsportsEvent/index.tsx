@@ -29,8 +29,8 @@ const Page = () => {
     },
   };
   return (
-    <section className="exports-event pb-[88px]">
-      {/* <ExportsEventBanner /> */}
+    <section className="exports-event pb-[88px] mw-md:pb-12	">
+      <ExportsEventBanner />
       {/* <FilterBy /> */}
       <Valorant responsive={responsive} />
       <Bgmi responsive={responsive} />
