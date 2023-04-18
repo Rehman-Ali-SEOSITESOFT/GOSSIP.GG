@@ -260,25 +260,27 @@ const FilterBy = () => {
     setIsDarkTheme(theme === "dark" ? "dark" : "light");
   }, [theme]);
   return (
-    <div className="filter-by-esport-event pt-16	">
+    <div className="filter-by-esport-event pt-11 mw-9:pt-9	 mw-md:pt-8	 ">
       <div className="global-section-width">
         <h5 className="montserratfont font-semibold	text-base leading-5 dark:text-brandLightOpacity100 uppercase">
           FILTER by:
         </h5>
-        <div ref={dropDownRef} className="flex flex-row justify-between">
-          <div className="">
-            <p className="pt-[13px] pb-[6px] pl-[8px] montserratfont text-sm dark:text-brandLightOpacity100 text-brandDark2  ">
+        <div
+          ref={dropDownRef}
+          className="flex flex-row justify-between mw-9:flex-wrap"
+        >
+          <div className="last relative  mw-12:w-[24%] mw-9:w-[48%]">
+            <p className="pt-[13px] pb-[6px] pl-[8px] montserratfont text-sm dark:text-brandLightOpacity100 text-brandDark2  mw-sm3:text-xs">
               Game
             </p>
             <div
               onClick={() => onClickOpen1()}
-              className="  px-4 drop1 flex flex-row justify-between items-center h-[60px] rounded-lg w-[302px] border border-brandDark2 dark:border-brandLightOpacity50"
+              className="  px-4 drop1 flex flex-row justify-between items-center h-[60px] rounded-lg w-[302px] mx-13:w-[270px]  mw-sm1:h-[45px] mw-12:w-[100%] mw-sm1:rounded border border-brandDark2 dark:border-brandLightOpacity50"
             >
               {selectedGame.filter((item) => item === "8").length === 1 ? (
                 "All"
               ) : selectedGame.length >= 2 ? (
-                <p className="montserratfont text-brandDark2  dark:text-brandLightOpacity100">
-                  
+                <p className="montserratfont text-brandDark2  dark:text-brandLightOpacity100 mw-sm:text-xs mw-sm:leading-normal	">
                   {selectedGame.length + " " + "selected"}
                 </p>
               ) : (
@@ -291,11 +293,12 @@ const FilterBy = () => {
                         )[0].image
                       }
                       alt="icons"
+                      className="mw-sm:min-w-[25px] mw-sm:w-[32px]"
                     />
                   ) : (
                     ""
                   )}
-                  <p className="montserratfont text-[14px] font-normal pl-[16px]">
+                  <p className="montserratfont text-[14px] font-normal pl-[16px] mw-sm:pl-[5px] mw-sm:text-xs mw-sm:leading-normal	">
                     {selectedGame.length === 1
                       ? gameList.filter(
                           (item) => item.id === selectedGame[0]
@@ -316,21 +319,27 @@ const FilterBy = () => {
                       onClick={() => onClickRemoveGame()}
                       src={isDarkTheme === "dark" ? Cross : CrossLight}
                       alt="arrow icon"
+                      className="mw-sm:w-[15px]"
                     />
-                    <span className="mx-[16px] h-[36px] w-[1px]  bg-brandDark2  dark:bg-brandLightOpacity50"></span>
+                    <span className="mx-[16px] h-[36px] w-[1px] mw-sm:mx-[10px] mw-sm:h-[25px]  bg-brandDark2  dark:bg-brandLightOpacity50"></span>
                   </>
                 )}
                 <Image
-                  className={`${opendropDown1 ? "rotate-180" : "rotate-0"}`}
-                  src={isDarkTheme === 'dark' ?  downarrow: LightArrow}
+                  className={`${
+                    opendropDown1 ? "rotate-180" : "rotate-0"
+                  } mw-sm:w-[12px]  mw-sm:min-w-[12px] `}
+                  src={isDarkTheme === "dark" ? downarrow : LightArrow}
                   alt="arrow icon"
                 />
               </div>
             </div>
             {opendropDown1 && (
-              <div className=" shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-grayCard   dark:border-brandLightOpacity10 bg-bodycolor  m-h-[462px] w-[302px] dark:bg-brandDark1 ">
+              <div className=" shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-grayCard   dark:border-brandLightOpacity10 bg-bodycolor  m-h-[462px] w-[302px]  mw-9:z-[999]  dark:bg-brandDark1 ">
                 <div className="border-b-2  dark:border-b-brandLightOpacity10 h-[60px] flex flex-row  items-center pl-[16px] pr-[20px]">
-                  <Image src={isDarkTheme === "dark" ?  Search : SearchLight} alt="search" />
+                  <Image
+                    src={isDarkTheme === "dark" ? Search : SearchLight}
+                    alt="search"
+                  />
                   <input
                     type="input"
                     onChange={(e) => onChangeGameSearch(e)}
@@ -346,10 +355,14 @@ const FilterBy = () => {
                   >
                     <div className="flex items-center">
                       {item.image !== "" && (
-                        <Image src={item.image} alt="icons" />
+                        <Image
+                          src={item.image}
+                          alt="icons"
+                          className="mw-sm:min-w-[32px] mw-sm:max-w-[32px]"
+                        />
                       )}
                       <p
-                        className={`text-brandDark1 dark:bg-brandDark1  focus:outline-none dark:focus:bg-brandDark1 dark:hover:bg-brandDark1 bg-bodycolor focus:border-none w-[90%] dark:text-brandLightOpacity100 ml-2 montserratfont  montserratfont leading-[20px] text-base font-normal  ${
+                        className={`text-brandDark1 dark:bg-brandDark1  focus:outline-none dark:focus:bg-brandDark1 dark:hover:bg-brandDark1 bg-bodycolor focus:border-none w-[90%] dark:text-brandLightOpacity100 ml-2 montserratfont  montserratfont leading-[20px] text-base font-normal   ${
                           item.image !== "" ? "pl-[16px]" : "pl-[50px]"
                         }`}
                       >
@@ -374,15 +387,15 @@ const FilterBy = () => {
               </div>
             )}
           </div>
-          <div className="">
-            <p className="pt-[13px] pb-[6px] pl-[8px] montserratfont text-sm dark:text-brandLightOpacity100 text-brandDark2  ">
+          <div className="relative mw-12:w-[24%]  mw-9:w-[48%]">
+            <p className="pt-[13px] pb-[6px] pl-[8px] montserratfont text-sm dark:text-brandLightOpacity100 text-brandDark2  mw-sm3:text-xs">
               Tournament Organizer
             </p>
             <div
               onClick={() => onClickOpen2()}
-              className=" px-4  flex flex-row justify-between items-center h-[60px] rounded-lg w-[302px] border border-brandDark2 dark:border-brandLightOpacity50"
+              className=" px-4  flex flex-row justify-between items-center h-[60px] mw-sm1:h-[45px]   rounded-lg w-[302px] mx-13:w-[270px] mw-12:w-[100%] mw-sm1:rounded border border-brandDark2 dark:border-brandLightOpacity50"
             >
-              <div className="montserratfont text-brandDark1 dark:text-brandLightOpacity100">
+              <div className="montserratfont text-brandDark1 dark:text-brandLightOpacity100 mw-sm:text-xs mw-sm:leading-normal	">
                 {selectedOrganizer.filter((item) => item === "4").length ===
                 1 ? (
                   "All"
@@ -398,11 +411,12 @@ const FilterBy = () => {
                           )[0].image
                         }
                         alt="icons"
+                        className="mw-sm:min-w-[25px] mw-sm:w-[32px]"
                       />
                     ) : (
                       ""
                     )}
-                    <p className="montserratfont text-[14px] font-normal pl-[16px]">
+                    <p className="montserratfont text-[14px] font-normal pl-[16px] mw-sm:pl-[5px]  mw-sm:text-xs mw-sm:leading-normal	">
                       {selectedOrganizer.length === 1
                         ? organizerList.filter(
                             (item) => item.id === selectedOrganizer[0]
@@ -419,25 +433,31 @@ const FilterBy = () => {
                       onClick={() => onClickRemoveOrganizer()}
                       src={isDarkTheme === "dark" ? Cross : CrossLight}
                       alt="arrow icon"
+                      className="mw-sm:min-w-[15px]"
                     />
-                    <span className="mx-[16px] h-[36px] w-[1px]  bg-brandDark2  dark:bg-brandLightOpacity50"></span>
+                    <span className="mx-[16px] h-[36px] w-[1px] mw-sm:mx-[10px] mw-sm:h-[25px]  bg-brandDark2  dark:bg-brandLightOpacity50"></span>
                   </>
                 )}
                 <Image
-                  className={`${opendropDown2 ? "rotate-180" : "rotate-0"}`}
-                  src={isDarkTheme === 'dark' ?  downarrow: LightArrow}
+                  className={`${
+                    opendropDown2 ? "rotate-180" : "rotate-0"
+                  } mw-sm:w-[12px]  mw-sm:min-w-[12px] `}
+                  src={isDarkTheme === "dark" ? downarrow : LightArrow}
                   alt="arrow icon"
                 />
               </div>
             </div>
             {opendropDown2 && (
               <div
-                className={` shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-brandDark2   m-h-[462px] w-[302px] border-grayCard dark:border-brandLightOpacity10 bg-bodycolor dark:bg-brandDark1  ${
+                className={` shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-brandDark2   m-h-[462px] w-[302px]   border-grayCard dark:border-brandLightOpacity10 bg-bodycolor dark:bg-brandDark1 mw-9:z-[999] mw-sm1:right-0 mw-sm1:left-auto ${
                   isDarkTheme === "dark" ? "darkchecked " : "lightcheched"
                 }`}
               >
                 <div className="border-b-2 dark:border-b-brandLightOpacity10 h-[60px] flex flex-row  items-center pl-[16px] pr-[20px]">
-                <Image src={isDarkTheme === "dark" ?  Search : SearchLight} alt="search" />
+                  <Image
+                    src={isDarkTheme === "dark" ? Search : SearchLight}
+                    alt="search"
+                  />
                   <input
                     onChange={(e) => onChangeOrganizerSearch(e)}
                     type="input"
@@ -451,10 +471,14 @@ const FilterBy = () => {
                   >
                     <div className="flex items-center">
                       {item.image !== "" && (
-                        <Image src={item.image} alt="icons" />
+                        <Image
+                          src={item.image}
+                          alt="icons"
+                          className="mw-sm:min-w-[32px] mw-sm:max-w-[32px]"
+                        />
                       )}
                       <p
-                        className={`montserratfont text-brandDark2 dark:text-brandLightOpacity100 text-base font-normal ${
+                        className={`montserratfont text-brandDark2 dark:text-brandLightOpacity100 text-base font-normal  ${
                           item.image !== "" ? "pl-[16px]" : "pl-[60px]"
                         }`}
                       >
@@ -479,15 +503,15 @@ const FilterBy = () => {
               </div>
             )}
           </div>
-          <div className="">
-            <p className="pt-[13px] pb-[6px] pl-[8px] montserratfont text-sm dark:text-brandLightOpacity100 text-brandDark2  ">
+          <div className="relative mw-12:w-[24%]  mw-9:w-[48%]">
+            <p className="pt-[13px] pb-[6px] pl-[8px] montserratfont text-sm dark:text-brandLightOpacity100 text-brandDark2 mw-sm3:text-xs ">
               Status
             </p>
             <div
               onClick={() => onClickOpen3()}
-              className=" px-4  flex flex-row justify-between items-center h-[60px] rounded-lg w-[302px] border border-brandDark2 dark:border-brandLightOpacity50"
+              className=" px-4  flex flex-row justify-between items-center h-[60px] mw-sm1:h-[45px]   rounded-lg w-[302px] mx-13:w-[270px] mw-12:w-[100%] border border-brandDark2 dark:border-brandLightOpacity50 mw-sm1:rounded"
             >
-              <p className="montserratfont text-brandDark1 dark:text-brandLightOpacity100">
+              <p className="montserratfont text-brandDark1 dark:text-brandLightOpacity100 mw-sm:text-xs mw-sm:leading-normal	">
                 {selectedStatus.filter((item) => item === "All").length === 1
                   ? "All"
                   : selectedStatus.length >= 2
@@ -501,20 +525,23 @@ const FilterBy = () => {
                       onClick={() => onClickRemoveStatus()}
                       src={isDarkTheme === "dark" ? Cross : CrossLight}
                       alt="arrow icon"
+                      className="mw-sm:w-[15px]"
                     />
-                    <span className="mx-[16px] h-[36px] w-[1px] bg-brandDark2  dark:bg-brandLightOpacity50"></span>
+                    <span className="mx-[16px] h-[36px] w-[1px] mw-sm:mx-[10px] mw-sm:h-[25px] bg-brandDark2  dark:bg-brandLightOpacity50"></span>
                   </>
                 )}
                 <Image
-                  className={`${opendropDown3 ? "rotate-180" : "rotate-0"}`}
-                  src={isDarkTheme === 'dark' ?  downarrow: LightArrow}
+                  className={`${
+                    opendropDown3 ? "rotate-180" : "rotate-0"
+                  } mw-sm:w-[12px]  mw-sm:min-w-[12px] `}
+                  src={isDarkTheme === "dark" ? downarrow : LightArrow}
                   alt="arrow icon"
                 />
               </div>
             </div>
             {opendropDown3 && (
               <div
-                className={`shadow-3xshadow absolute border-grayCard mt-[4px] rounded-lg border-2 border-brandDark2  m-h-[462px] w-[302px] dark:border-brandLightOpacity10 bg-bodycolor dark:bg-brandDark1  ${
+                className={`shadow-3xshadow absolute border-grayCard mt-[4px] rounded-lg border-2 border-brandDark2  m-h-[462px] w-[302px]  dark:border-brandLightOpacity10 bg-bodycolor dark:bg-brandDark1   ${
                   isDarkTheme === "dark" ? "darkchecked " : "lightcheched"
                 }`}
               >
@@ -523,7 +550,7 @@ const FilterBy = () => {
                     key={index}
                     className="h-[60px] hover:bg-brandLightOpacity10  flex flex-row justify-between items-center pl-[16px] pr-[20px]"
                   >
-                    <p className="montserratfont text-brandDark2 dark:text-brandLightOpacity100 text-base font-normal pl-[8px]">
+                    <p className="montserratfont text-brandDark2 dark:text-brandLightOpacity100 text-base font-normal pl-[8px] ">
                       {item}
                     </p>
                     <input
@@ -545,15 +572,15 @@ const FilterBy = () => {
               </div>
             )}
           </div>
-          <div className="">
-            <p className="pt-[13px] pb-[6px] pl-[8px] montserratfont text-sm dark:text-brandLightOpacity100 text-brandDark2  ">
+          <div className="relative mw-12:w-[24%]  mw-9:w-[48%]">
+            <p className="pt-[13px] pb-[6px] pl-[8px] montserratfont text-sm dark:text-brandLightOpacity100 text-brandDark2   mw-sm3:text-xs">
               Region
             </p>
             <div
               onClick={() => onClickOpen4()}
-              className=" px-4  flex flex-row justify-between items-center h-[60px] rounded-lg w-[302px] border border-brandDark2 dark:border-brandLightOpacity50"
+              className=" px-4  flex flex-row justify-between items-center h-[60px] mw-sm1:h-[45px]   rounded-lg w-[302px] mx-13:w-[270px] mw-12:w-[100%] border border-brandDark2 dark:border-brandLightOpacity50 mw-sm1:rounded"
             >
-              <p className="montserratfont text-brandDark1 dark:text-brandLightOpacity100">
+              <p className="montserratfont text-brandDark1 dark:text-brandLightOpacity100 mw-sm:text-xs mw-sm:leading-normal	">
                 {selectedRegion.filter((item) => item === "All").length === 1
                   ? "All"
                   : selectedRegion.length >= 2
@@ -567,20 +594,23 @@ const FilterBy = () => {
                       onClick={() => onClickRemoveRegion()}
                       src={isDarkTheme === "dark" ? Cross : CrossLight}
                       alt="arrow icon"
+                      className="mw-sm:w-[15px]"
                     />
-                    <span className="mx-[16px] h-[36px] w-[1px]  bg-brandDark2  dark:bg-brandLightOpacity50"></span>
+                    <span className="mx-[16px] h-[36px] w-[1px] mw-sm:mx-[10px] mw-sm:h-[25px]  bg-brandDark2  dark:bg-brandLightOpacity50"></span>
                   </>
                 )}
                 <Image
-                  className={`${opendropDown4 ? "rotate-180" : "rotate-0"}`}
-                  src={isDarkTheme === 'dark' ?  downarrow: LightArrow}
+                  className={`${
+                    opendropDown4 ? "rotate-180" : "rotate-0"
+                  } mw-sm:w-[12px]  mw-sm:min-w-[12px] `}
+                  src={isDarkTheme === "dark" ? downarrow : LightArrow}
                   alt="arrow icon"
                 />
               </div>
             </div>
             {opendropDown4 && (
               <div
-                className={`shadow-3xshadow absolute border-grayCard mt-[4px] rounded-lg border-2 border-brandDark2   m-h-[462px] w-[302px] dark:border-brandLightOpacity10 bg-bodycolor dark:bg-brandDark1  ${
+                className={`shadow-3xshadow absolute border-grayCard mt-[4px] rounded-lg border-2 border-brandDark2   m-h-[462px] w-[302px] right-0 left-auto  mw-9:right-auto mw-9:left-0   dark:border-brandLightOpacity10 bg-bodycolor dark:bg-brandDark1 mw-sm1:left-auto mw-sm1:right-0 ${
                   isDarkTheme === "dark" ? "darkchecked " : "lightcheched"
                 }`}
               >
@@ -589,7 +619,7 @@ const FilterBy = () => {
                     key={index}
                     className="h-[60px] hover:bg-brandLightOpacity10  flex flex-row justify-between items-center pl-[16px] pr-[20px]"
                   >
-                    <p className="montserratfont text-brandDark2 dark:text-brandLightOpacity100 text-base font-normal pl-[8px]">
+                    <p className="montserratfont text-brandDark2 dark:text-brandLightOpacity100 text-base font-normal pl-[8px] ">
                       {item}
                     </p>
                     <input
@@ -612,18 +642,17 @@ const FilterBy = () => {
             )}
           </div>
         </div>
-
-        {/* <p className="montserratfont font-medium text-sm leading-[17px]	dark:text-brandLightOpacity70">
+        <p className="montserratfont font-medium text-sm leading-[17px]	dark:text-brandLightOpacity70 pt-[8px]">
           None applied
         </p>
-        <p className="underline montserratfont text-sm font-medium	leading-[17px]	dark:text-brandLightOpacity70 cursor-pointer">
+        {/* <p className="underline montserratfont text-sm font-medium	leading-[17px]	dark:text-brandLightOpacity70 cursor-pointer">
           Reset
         </p> */}
-        <h1 className="montserratfont dark:text-brandLightOpacity100 font-bold	text-lg	leading-[22px] py-8	">
+        <h1 className="montserratfont dark:text-brandLightOpacity100 font-bold	text-lg	leading-[22px] py-8 mw-md:py-5 mw-md:text-base	">
           Showing 1-20 of 24 Events
         </h1>
-        <div className="sorby flex items-center">
-          <h2 className="montserratfont font-semibold	text-base leading-5 dark:text-brandLightOpacity100 uppercase inline-block mr-[17px]">
+        <div className="sorby flex items-center mw-md:flex-col mw-md:items-start">
+          <h2 className="montserratfont font-semibold	text-base leading-5 dark:text-brandLightOpacity100 uppercase inline-block mr-[17px] mw-md:pb-[16px]">
             SORT by:
           </h2>
           <div className="">
@@ -631,7 +660,7 @@ const FilterBy = () => {
               return (
                 <p
                   key={index}
-                  className={`py-2.5 px-4 dark:bg-brandLightOpacity10 hover:bg-borderEditProfile dark:hover:bg-brandLightOpacity20 hover:text-brandDark2 bg-grayCard text-textColorGray dark:text-brandLightOpacity100 rounded-[20px] mr-[8px] inline-block montserratfont xtest-base leading-5 cursor-pointer font-semibold  ${
+                  className={`py-2.5 px-4 dark:bg-brandLightOpacity10 hover:bg-borderEditProfile dark:hover:bg-brandLightOpacity20 hover:text-brandDark2 bg-grayCard text-textColorGray dark:text-brandLightOpacity100 rounded-[20px] mr-[8px] inline-block montserratfont xtest-base leading-5 cursor-pointer font-semibold mw-md:mb-[16px] mw-md:text-sm mw-sm3:text-xs ${
                     sort === index
                       ? "border dark:border-brandLightOpacity100 dark:bg-brandLightOpacity10 border-brandDark2 bg-white text-brandDark2 "
                       : "border-0 brandDark2"

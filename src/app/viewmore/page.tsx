@@ -17,6 +17,12 @@ import icon3 from "../../assets/esports/v-mask-03.png";
 import chevronsright from "../../assets/esports/chevrons-right.png";
 import Image from "next/image";
 import Pagination from "@/components/Pagination";
+import Trending from "@/components/Trending/Index";
+import AllEsports from "@/components/Esports/AllEsports/AllEsports";
+import NewsEsports from "@/components/Esports/NewsEsports/NewsEsports";
+import EsportsBgmi from "@/components/Esports/EsportsBgmi/EsportsBgmi";
+import EsportsEvents from "@/components/Esports/EsportsEvent";
+import Valorant from "@/components/Esports/Valorant/Valorant";
 
 const Page = () => {
   interface List {
@@ -146,8 +152,48 @@ const Page = () => {
       icon_img: icon3,
     },
   ]);
+  const [openTab, setOpenTab] = useState(2);
+  const menulist = [
+    { name: "all", data: <AllEsports /> },
+    { name: "News", data: <NewsEsports /> },
+    { name: "Esports Events", data: <EsportsEvents /> },
+    { name: "BGMI ", data: <EsportsBgmi /> },
+    { name: "Valorant", data: <Valorant /> },
+  ];
+  const hanldeOpenTab = (e: number) => {
+    setOpenTab(e);
+  };
   return (
     <section className="viewmore-esport-2">
+      <div className="w-full mw-sm:overflow-scroll text-center pt-[26px] pb-[36px]">
+        <ul className="flex w-[460px] 	 m-auto justify-between">
+          {menulist.map((el, index) => {
+            return (
+              <li key={index}>
+                <a
+                  className={
+                    "cursor-pointer capitalize montserratfont block  transition-all	duration-75 leading-loose	 " +
+                    (openTab === index
+                      ? "scale-[1.1] dark:text-brand text-brandDark2 font-bold border-b-2 dark:border-brand border-brandDark2"
+                      : "text-base font-normal dark:text-brandLightOpacity100 text-brandDark2")
+                  }
+                  onClick={() => hanldeOpenTab(index)}
+                  data-toggle="tab"
+                  // href={`#link${index}`}
+                  role="tablist"
+                >
+                  {el.name}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+      <div className=" border-y border-grayCard dark:border-brandLightOpacity10 global-section-width">
+        <div className="py-4">
+          <Trending />
+        </div>
+      </div>
       <ExportsEventBanner />
       <FilterBy />
       <div className="view-more">

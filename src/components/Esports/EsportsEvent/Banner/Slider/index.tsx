@@ -44,7 +44,7 @@ const ExportEventBannerSlider = () => {
           />
         </div>
       </Slider>
-      <div className="w-[192px] h-[40px] mw-sm3:w-full mw-sm3:h-auto mw-sm3:px-1.5 mw-sm3:px-1 bg-brandLightOpacity90 rounded-3xl  flex items-center justify-center  absolute right-[24px] bottom-[41px] mw-sm1:text-sm mw-sm3:text-xs	">
+      <div className="w-[192px] h-[40px] mw-sm3:w-fit mw-sm3:h-auto mw-sm3:px-2 mw-sm3:py-1.5 bg-brandLightOpacity90 rounded-3xl  flex items-center justify-center  absolute right-[24px] bottom-[41px] mw-sm1:text-sm mw-sm3:text-xs	">
         <a
           href="#"
           className="montserratfont font-semibold test-base leading-5 text-brandDark2 "

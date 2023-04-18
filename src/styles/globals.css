@@ -418,6 +418,12 @@ body::-webkit-scrollbar-thumb {
   .tech-feature-dec {
     -webkit-line-clamp: 3;
   }
+  .exports-banner .slick-prev {
+    left: 10px !important;
+  }
+  .exports-banner .slick-next {
+    right: 10px !important;
+  }
 }
 @media screen and (max-width: 400px) {
   .esport-event-valorant-title {
