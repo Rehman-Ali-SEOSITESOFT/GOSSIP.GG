@@ -42,7 +42,7 @@ const Valorant = () => {
 
           <div className="bgmi_events">
             <div className="heading">
-              <SectionSaprator title="BGMI EVENTS" />
+              <SectionSaprator title="Valorant EVENTS" />
             </div>
             <div>
               <BgmiEvents />
@@ -50,7 +50,7 @@ const Valorant = () => {
           </div>
           <div className="bgmi_news third_section">
             <div className="bgmi_news_heading pt-[48px]">
-              <SectionSaprator title="BGMI NEWS" />
+              <SectionSaprator title="Valorant NEWS" />
             </div>
             <div className="flex justify-between relative">
               <div className="w-[78%]">
