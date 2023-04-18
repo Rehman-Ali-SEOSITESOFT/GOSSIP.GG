@@ -56,11 +56,9 @@ const Page = () => {
             </div>
           </div>
         </div>
-
         <div className="py-4">
           <Trending />
         </div>
-
         {menulist.map((el, i) => {
           return (
             openTab === i && (
