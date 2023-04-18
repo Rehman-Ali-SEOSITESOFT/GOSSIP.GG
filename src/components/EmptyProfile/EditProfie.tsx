@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import bannerimg from "../../assets/user-profile/banner.png";
 import whitebanner from "../../assets/user-profile/white-banner.png";
@@ -12,16 +12,19 @@ import { useTheme } from "next-themes";
 import EditProfileModal from "../Modals/EditProfileModal";
 const EmptyProfileDetail = () => {
   const { theme, setTheme } = useTheme();
-
   const [open, setOpen] = useState<boolean | null>(false);
 
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
+  useEffect(() => {
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   const onClickOpenModal = () => {
     setOpen(!open);
   };
   return (
     <>
       <div className={` banner_image  relative h-[190px]`}>
-        {theme === "dark" ? (
+        {isDarkTheme === "dark" ? (
           <Image
           src={bannerimg}
           className="banner w-full h-full object-cover  "
@@ -61,7 +64,7 @@ const EmptyProfileDetail = () => {
             <h3 className="title text-2xl leading-7	font-bold montserratfont text-brandDark2	 dark:text-brandLightOpacity100 ">
               Naveen
             </h3>
-            <p className="about-user-description montserratfont text-base leading-7 text-brandDark2	font-normal test-textColorGray dark:text-brandLightOpacity70 pt-5  underline underline-offset-2		">
+            <p className="hover:text-[#000000] dark:hover:text-[white] about-user-description montserratfont text-base leading-7 text-textColorGray	font-normal test-textColorGray dark:text-brandLightOpacity70 pt-5  underline underline-offset-2		">
               + Add mantra
             </p>
             <p className="joined-data text-textColorGray dark:text-brandLightOpacity70 font-medium montserratfont leading-4	 text-sm">
@@ -77,7 +80,7 @@ const EmptyProfileDetail = () => {
                 Currently playing:
               </h4>
               <div className="flex items-center">
-                <p className="about-user-description montserratfont text-base leading-7  test-textColorGray	font-normal dark:text-brandLightOpacity70 pt-5	 underline underline-offset-2">
+                <p className=" hover:text-[#000000] dark:hover:text-[white] about-user-description montserratfont text-textColorGray text-base leading-7  test-textColorGray	font-normal dark:text-brandLightOpacity70 pt-5	 underline underline-offset-2">
                   + Add game
                 </p>
               </div>
@@ -85,7 +88,7 @@ const EmptyProfileDetail = () => {
             <div className="more flex justify-between">
               <div className="saved border-l-2 border-brandDark2 dark:border-brand pl-4	 ">
                 <h4 className="text-base leading-5 font-semibold text-brandDark2  dark:text-brandLightOpacity100 montserratfont capitalize mb-4	">
-                  saved
+                  saved:
                 </h4>
                 <p className="montserratfont test-base leading-5 font-normal dark:text-brandLightOpacity100 text-brandDark2 ">
                   -
@@ -93,9 +96,9 @@ const EmptyProfileDetail = () => {
               </div>
               <div className="social-link border-l-2 border-brandDark2  dark:border-brand pl-4	 ">
                 <h4 className="text-base leading-5 font-semibold dark:text-brandLightOpacity100 montserratfont capitalize mb-2.5	">
-                  Social Links:
+                  Social Handles:
                 </h4>
-                <div className="image flex  test-textColorGray dark:text-brandLightOpacity70  underline underline-offset-2">
+                <div className="hover:text-[#000000] dark:hover:text-[white] image flex  test-textColorGray text-textColorGray dark:text-brandLightOpacity70  underline underline-offset-2">
                   + Add
                 </div>
               </div>

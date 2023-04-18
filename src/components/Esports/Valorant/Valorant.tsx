@@ -28,9 +28,15 @@ const Valorant = () => {
     <section className="esports-bgmi_wrapper">
       <div className="global-section-width">
         <div className="2xl:container ">
+<<<<<<< HEAD
           <div className="top_section pt-[44px] flex justify-between pb-[42px] mw-lg:flex-col-reverse">
             <div className="w-[70%] mw-lg:w-[100%]">
               <h4 className="montserratfont text-[32px] leading-[39px] font-bold dark:text-[#E5E5E5] pb-[16px] mw-lg:text-[24px] mw-sm:text-[16px] mw-sm:leading-[20px]">
+=======
+          <div className="top_section pt-[44px] flex justify-between pb-[42px]">
+            <div className="w-[70%]">
+              <h4 className="montserratfont text-[32px] leading-[39px] font-bold dark:text-[#E5E5E5] pb-[16px]">
+>>>>>>> 365c1c983221fe5c1fa9917ff3c7477bb7d80d46
                 Valorant
               </h4>
               <p className="montserratfont text-[14px] leading-[17px] font-normal dark:text-[#E5E5E5] mw-sm:text-[12px]">
@@ -57,7 +63,7 @@ const Valorant = () => {
 
           <div className="bgmi_events">
             <div className="heading">
-              <SectionSaprator title="BGMI EVENTS" />
+              <SectionSaprator title="Valorant EVENTS" />
             </div>
             <div>
               <BgmiEvents />
@@ -65,7 +71,7 @@ const Valorant = () => {
           </div>
           <div className="bgmi_news third_section">
             <div className="bgmi_news_heading pt-[48px]">
-              <SectionSaprator title="BGMI NEWS" />
+              <SectionSaprator title="Valorant NEWS" />
             </div>
             <div className="mw-lg:hidden  flex justify-between relative">
               <div className="w-[78%]">

@@ -255,9 +255,9 @@ const ChoiceTopicModel = (props: any) => {
                       {listItems.map((e, i) => {
                         return (
                           <div
-                            className={`box py-4  flex justify-center items-center w-[120px] h-[60px] mw-sm:w-[30%] mw-sm3:w-[45%]    text-center mr-3 mw-sm:mr-2 mw-sm:mb-2 	mb-3	montserratfont  font-medium leading-4	rounded    cursor-pointer ${selectedArr.filter((item: { id: number }) => item.id === e.id).length > 0 
-                                ? "active font-semibold text-brandDark2  dark:text-brand border text-base bg-white dark:bg-brandDark2 border-brandDark2 dark:border-brand "
-                                : " hover:bg-[#cdcccd]  hover:text-brandDark2 dark:hover:text-brandLightOpacity100    dark:hover:bg-[#494647] text-brandDark2 dark:text-brandLightOpacity70  bg-choosebox dark:bg-brandLightOpacity10 text-xs"
+                            className={`box py-4  flex justify-center items-center w-[120px] h-[60px] mw-sm:w-[30%] mw-sm3:w-[45%]    text-center mr-3 mw-sm:mr-2 mw-sm:mb-2 	mb-3	montserratfont   leading-4	rounded    cursor-pointer ${selectedArr.filter((item: { id: number }) => item.id === e.id).length > 0 
+                                ? "active font-semibold text-brandDark2  dark:text-brand border text-base bg-white dark:bg-brandDark2 border-brandDark2 dark:border-brand  "
+                                : " hover:bg-[#cdcccd]  hover:text-brandDark2 dark:hover:text-brandLightOpacity100    dark:hover:bg-[#494647] text-brandDark2 dark:text-brandLightOpacity70 font-medium  bg-choosebox dark:bg-brandLightOpacity10 text-sm"
                               } `}
                             key={i}
                             onClick={() => onClickList(e.name, e.id)}

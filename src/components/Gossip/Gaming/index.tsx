@@ -30,7 +30,7 @@ const Gaming = () => {
           <div className="bg-gradient-to-r from-brandDark2 h-0.5  min-w-[86%] ml-3 dark:from-secSaprator mw-sm:hidden"></div>
         </div>
         </div>
-        <div className=" min-w-[100%] mt-[44px] mb-[24px] rounded bg-white dark:bg-brandDark1">
+        <div className=" min-w-[100%] mb-[24px] rounded bg-white dark:bg-brandDark1">
         <div className="px-[24px] py-[24px]">
           <p className="montserratfont mw-lg:text-[14px] font-bold  text-brandDark2 dark:text-brandLightOpacity100 text-[24px]">
             Bayes Esports appoints York Scheunemann as COO of their company

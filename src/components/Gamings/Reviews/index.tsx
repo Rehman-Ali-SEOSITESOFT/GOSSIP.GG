@@ -40,7 +40,7 @@ const Review = () => {
                   <p className="montserratfont text-sm font-normal  text-[#221e1f] dark:text-[#E5E5E5] leading-[17px] pt-[5px]">
                     Panic Barn
                   </p>
-                  <p className="montserratfont  text-xs italic leading-[15px] font-normal brandLightOpacity70 pt-[5px]">
+                  <p className="montserratfont  text-xs italic leading-[15px] font-normal dark:text-brandLightOpacity70 text-brandDark2 pt-[5px]">
                     Adventure,Indie,Puzzle
                   </p>
                 </div>

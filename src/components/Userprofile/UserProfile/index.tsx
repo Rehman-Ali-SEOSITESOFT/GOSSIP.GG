@@ -1,10 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef , useEffect} from "react";
 import Image from "next/image";
 import bannerimg from "../../../assets/user-profile/banner.png";
 import whitebanner from "../../../assets/user-profile/white-banner.png";
 import profileimg from "../../../assets/user-profile/profile.png";
 import pc from "../../../assets/user-profile/airplay.png";
-import valorant from "../../../assets/user-profile/valorant.png";
+import valorant from "../../../assets/profile/valorant.png";
+import console from "../../../assets/profile/console.png";
 import twitter from "../../../assets/user-profile/twitter.png";
 import instagram from "../../../assets/user-profile/instagram.png";
 import editprofile from "../../../assets/user-profile/edit.png";
@@ -13,8 +14,11 @@ import { useTheme } from "next-themes";
 import EditProfileModal from "@/components/Modals/EditProfileModal";
 const ProfileDetail = () => {
   const { theme, setTheme } = useTheme();
- 
   const [open, setOpen] = useState<boolean | null>(false);
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
+  useEffect(() => {
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
 
   const onClickOpenModal = () => {
     setOpen(!open);
@@ -22,7 +26,7 @@ const ProfileDetail = () => {
   return (
     <>
       <div className={` ${styles.banner_image}  relative h-[190px]`}>
-      {theme === "dark" ? (
+      {isDarkTheme === "dark" ? (
           <Image
             src={bannerimg}
             className="banner w-full h-full object-cover  "
@@ -62,10 +66,10 @@ const ProfileDetail = () => {
             <h3 className="title text-2xl leading-7	font-bold montserratfont text-brandDark2	 dark:text-brandLightOpacity100 ">
               Naveen
             </h3>
-            <h5 className="rank text-lg leading-6 font-normal		tracking-[0.03em]	 text-brandDark2 dark:text-brandLightOpacity100 robotoslub py-2.5	">
+            <h5 className="rank text-lg leading-6 font-semibold		montserratfont	tracking-[0.03em]	 text-brandDark2 dark:text-brandLightOpacity100  py-2.5	">
               I&#39;m not a player, I&#39;m a gamer.
             </h5>
-            <p className="joined-data text-textColorGray dark:text-brandLightOpacity70 font-medium montserratfont leading-4	 text-sm">
+            <p className="joined-data text-textColorGray montserratfont dark:text-brandLightOpacity70 font-medium montserratfont leading-4	 text-sm">
               Joined Feb 2023
             </p>
             <p className="about-user-description montserratfont text-base leading-7 text-brandDark2	font-normal dark:text-brandLightOpacity100 pt-5	">
@@ -82,22 +86,22 @@ const ProfileDetail = () => {
               <div className="flex items-center">
                 <div
                   className="text-sm	leading-4 montserratfont font-normal	dark:text-brandLightOpacity100 
-                border border-brandDark2 dark:border-brandLightOpacity100 rounded w-[75px] h-[35px] flex items-center justify-center	"
+                border border-brandDark2 dark:border-brandLightOpacity100 rounded w-[116px] h-[44px] flex items-center justify-center	"
                 >
                   <Image
-                    alt="pc"
-                    className="inline-block mr-2 brightness-0	dark:brightness-100 "
-                    src={pc}
-                  />
-                  <span>PC</span>
-                </div>
-                <div className="text-sm	leading-4	montserratfont font-normal	dark:text-brandLightOpacity100 border border-brandDark2 dark:border-brandLightOpacity100 rounded w-[103px] h-[35px] flex items-center justify-center ml-3">
-                  <Image
-                    alt="pc"
+                    alt="valorant game"
+                    className="inline-block mr-2 "
                     src={valorant}
-                    className="inline-block  mr-2 w-[20px] h-16px brightness-0	dark:brightness-100"
                   />
-                  <span>Valorant</span>
+                  <span className="dark:text-brandLightOpacity70 text-base">Valorant</span>
+                </div>
+                <div className="text-sm	leading-4	montserratfont font-normal	dark:text-brandLightOpacity100 border border-brandDark2 dark:border-brandLightOpacity100 rounded w-[121px] h-[44px] flex items-center justify-center ml-4">
+                  <Image
+                    alt="consol"
+                    src={console}
+                    className="inline-block  mr-2 w-[20px] h-16px brightness-0	dark:brightness-100 "
+                  />
+                  <span className="dark:text-brandLightOpacity70 text-base">Console</span>
                 </div>
               </div>
             </div>
@@ -112,7 +116,7 @@ const ProfileDetail = () => {
               </div>
               <div className="social-link border-l-2 border-brandDark2  dark:border-brand pl-4	 ">
                 <h4 className="text-base leading-5 font-semibold dark:text-brandLightOpacity100 montserratfont capitalize mb-2.5	">
-                  Social Links:
+                  Social Handles:
                 </h4>
                 <div className="image flex">
                   <Image

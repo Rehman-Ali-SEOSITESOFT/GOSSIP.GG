@@ -119,7 +119,8 @@ const DeailTech = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex py-4 montserratfont">
+                <p className="montserratfont py-[8px] text-brandDark2 dark:text-brandLightOpacity100 font-medium text-sm">13 Feb - 18  Mar</p>
+                <div className="flex montserratfont">
                   <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                     News
                   </div>
@@ -197,7 +198,8 @@ const DeailTech = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex py-4 montserratfont">
+                <p className="montserratfont py-[8px] text-brandDark2 dark:text-brandLightOpacity100 font-medium text-sm">13 Feb - 18  Mar</p>
+                <div className="flex montserratfont">
                   <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                     News
                   </div>
