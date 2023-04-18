@@ -71,17 +71,21 @@ const Page = () => {
         <div className="global-section-width">
           <div className="2xl:container">
             <div className="valo_community_cup mt-[44px]">
-              <h2 className="montserratfont text-2xl   leading-[29px] font-bold	text-[#E5E5E5]">
+              <h2 className="montserratfont text-2xl   leading-[29px] font-bold	dark:text-[#E5E5E5]">
                 Valorant Community Cup#19
               </h2>
               <p className="mt-[10px] montserratfont text-[#008D52] font-medium	text-base	leading-[20px] ">
                 Registration Open
               </p>
               <div className="flex mt-[10px]">
-                <p className="montserratfont text-sm	leading-[17px] font-medium	text-brandLightOpacity70">
+                <p className="montserratfont text-sm	leading-[17px] font-medium	dark:text-brandLightOpacity70">
                   200
                 </p>
-                <Image src={eyeIcon} alt="" className="ml-[8px]" />
+                <Image
+                  src={eyeIcon}
+                  alt=""
+                  className="ml-[8px]  brightness-0 dark:brightness-200"
+                />
               </div>
             </div>
             <div className="banner_esports_event_ relative">
@@ -92,31 +96,49 @@ const Page = () => {
                 Registrations Open
               </button>
             </div>
-            <div className="intel_presents_valorant flex justify-between">
+            <div className="intel_presents_valorant flex justify-between relative">
               {/* left section starts here */}
 
               <div className="w-[70%] mt-[48px]">
-                <h2 className="montserratfont text-[32px] leading-[39px]  text-[#E5E5E5] font-bold	">
+                <h2 className="montserratfont text-[32px] leading-[39px]  dark:text-[#E5E5E5] font-bold	">
                   Intel Presents Valorant Community Cup#19
                 </h2>
                 <div className="mt-[20px]">
-                  <p className="montserratfont font-normal leading-[17px] text-[#E5E5E5]	text-sm	">
+                  <p className="montserratfont font-normal leading-[17px] dark:text-[#E5E5E5]	text-sm	">
                     <span>John D</span> &nbsp; | &nbsp;Jan 30th,2023,18:08
                     &nbsp; |&nbsp; 5 min read
                   </p>
                 </div>
                 <div className="flex items-center mt-[20px] pb-[32px]">
                   <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20  hover:bg-grayCardHover cursor-pointer rounded-3xl	mr-[28px]">
-                    <Image src={msg} alt="" width={14} height={14} />
+                    <Image
+                      src={msg}
+                      alt=""
+                      width={14}
+                      height={14}
+                      className="brightness-0 dark:brightness-200"
+                    />
                   </div>
                   <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20  hover:bg-grayCardHover cursor-pointer rounded-3xl	mr-[28px]">
-                    <Image src={bookmark} alt="" width={14} height={14} />
+                    <Image
+                      src={bookmark}
+                      alt=""
+                      width={14}
+                      height={14}
+                      className="brightness-0 dark:brightness-200"
+                    />
                   </div>
                   <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20  hover:bg-grayCardHover cursor-pointer rounded-3xl		">
-                    <Image src={forward} alt="" width={14} height={14} />
+                    <Image
+                      src={forward}
+                      alt=""
+                      width={14}
+                      height={14}
+                      className="brightness-0 dark:brightness-200"
+                    />
                   </div>
                 </div>
-                <p className="robotoslub text-base	leading-[27px] font-normal	text-brandLightOpacity90 tracking-[0.03em]">
+                <p className="robotoslub text-base	leading-[27px] font-normal	dark:text-brandLightOpacity90 tracking-[0.03em]">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry&#39;s
                   standard dummy text ever since the 1500s, when an unknown
@@ -124,10 +146,10 @@ const Page = () => {
                   specimen book. It has survived not only five centuries.
                 </p>
                 <div className="about_tournament">
-                  <h2 className="pt-[40px] pb-[24px] montserratfont text-[#E5E5E5] tracking-[0.05em] text-2xl	leading-[30px ] font-bold	">
+                  <h2 className="pt-[40px] pb-[24px] montserratfont dark:text-[#E5E5E5] tracking-[0.05em] text-2xl	leading-[30px ] font-bold	">
                     About The Tournament
                   </h2>
-                  <p className="robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] text-brandLightOpacity90">
+                  <p className="robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the
                     industry&#39;s standard dummy text ever since the 1500s,
@@ -136,7 +158,7 @@ const Page = () => {
                     five centuries, but also the leap into electronic
                     typesetting, remaining essentially unchanged.
                   </p>
-                  <p className="mt-[40px] robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] text-brandLightOpacity90">
+                  <p className="mt-[40px] robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the
                     industry&#39;s standard dummy text ever since the 1500s,
@@ -146,10 +168,10 @@ const Page = () => {
                     typesetting, remaining essentially unchanged.
                   </p>
                   <div className="rules_and_regulation">
-                    <h2 className="pt-[40px] pb-[24px] montserratfont text-[#E5E5E5] tracking-[0.05em] text-2xl	leading-[30px ] font-bold	">
+                    <h2 className="pt-[40px] pb-[24px] montserratfont dark:text-[#E5E5E5] tracking-[0.05em] text-2xl	leading-[30px ] font-bold	">
                       Rules And Regulations
                     </h2>
-                    <p className="robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] text-brandLightOpacity90">
+                    <p className="robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90">
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the
                       industry&#39;s standard dummy text ever since the 1500s,
@@ -158,7 +180,7 @@ const Page = () => {
                       not only five centuries, but also the leap into electronic
                       typesetting, remaining essentially unchanged.
                     </p>
-                    <p className="mt-[40px] robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] text-brandLightOpacity90">
+                    <p className="mt-[40px] robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90">
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the
                       industry&#39;s standard dummy text ever since the 1500s,
@@ -168,17 +190,17 @@ const Page = () => {
                       typesetting, remaining essentially unchanged.
                     </p>
                     <div className="royal_battle_field pt-[64px] pb-[39px] w-[80%] m-auto">
-                      <Image src={map} alt="" className=" " />
-                      <p className="montserratfont text-[14px] leading-[17px] font-medium text-brandLightOpacity70 pt-[8px ]">
+                      <Image src={map} alt="" />
+                      <p className="montserratfont text-[14px] leading-[17px] font-medium dark:text-brandLightOpacity70 pt-[8px ]">
                         Image credit: Hogwarts.com
                       </p>
                     </div>
                   </div>
                   <div className="format_eliminations pb-[48px]">
-                    <h2 className=" pb-[24px] montserratfont text-[#E5E5E5] tracking-[0.05em] text-2xl	leading-[30px ] font-bold	">
+                    <h2 className=" pb-[24px] montserratfont dark:text-[#E5E5E5] tracking-[0.05em] text-2xl	leading-[30px ] font-bold	">
                       Formats And Eliminations
                     </h2>
-                    <p className="robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] text-brandLightOpacity90">
+                    <p className="robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90">
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the
                       industry&#39;s standard dummy text ever since the 1500s,
@@ -187,7 +209,7 @@ const Page = () => {
                       not only five centuries, but also the leap into electronic
                       typesetting, remaining essentially unchanged.
                     </p>
-                    <p className="mt-[40px] robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] text-brandLightOpacity90">
+                    <p className="mt-[40px] robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90">
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the
                       industry&#39;s standard dummy text ever since the 1500s,
@@ -197,13 +219,13 @@ const Page = () => {
                       typesetting, remaining essentially unchanged.
                     </p>
                   </div>
-                  <div className="user_detail items-center flex pt-[53px] pb-[55px] border-t-2 border-b-2 border-brandLightOpacity10">
+                  <div className="user_detail items-center flex pt-[53px] pb-[55px] border-t-2 border-b-2 dark:border-brandLightOpacity10 border-[#000]">
                     <div className="user_detail_section_left_side w-[32%] flex border-r-2 border-[#ED4E50]">
                       <div className="image_wrap">
                         <Image src={image1} alt="" />
                       </div>
                       <div className="ml-[12px]">
-                        <h4 className="montserratfont text-[18px] leading-[22px] font-bold text-[#E5E5E5]">
+                        <h4 className="montserratfont text-[18px] leading-[22px] font-bold dark:text-[#E5E5E5]">
                           John Dafgafgafg
                         </h4>
                         <p className="flex pt-[4px] items-center montserratfont text-[18px] font-bold leading-[22px] text-[#ED4E50]">
@@ -214,22 +236,38 @@ const Page = () => {
                         </p>
                         <div className="flex mt-[7px]">
                           <a href="#" className="mr-[16px]">
-                            <Image src={insta} alt="" />
+                            <Image
+                              src={insta}
+                              alt=""
+                              className="brightness-0 dark:brightness-200"
+                            />
                           </a>
                           <a href="#" className="mr-[16px]">
-                            <Image src={twitters} alt="" />
+                            <Image
+                              src={twitters}
+                              alt=""
+                              className="brightness-0 dark:brightness-200"
+                            />
                           </a>
                           <a href="#" className="mr-[16px]">
-                            <Image src={mail} alt="" />
+                            <Image
+                              src={mail}
+                              alt=""
+                              className="brightness-0 dark:brightness-200"
+                            />
                           </a>
                           <a href="#" className="mr-[16px]">
-                            <Image src={linkedin} alt="" />
+                            <Image
+                              src={linkedin}
+                              alt=""
+                              className="brightness-0 dark:brightness-200"
+                            />
                           </a>
                         </div>
                       </div>
                     </div>
                     <div className="right_side_user_detail_section w-[65%] ">
-                      <p className="ml-[15px] montserratfont text-[16px] leading-[27px] font-normal text-[#E5E5E5]">
+                      <p className="ml-[15px] montserratfont text-[16px] leading-[27px] font-normal dark:text-[#E5E5E5]">
                         John is a professional Dota 2 player and a winner of
                         multiple championships. He has been a freelance Esports
                         journalist since 2013.professional Dota 2 player and a
@@ -255,7 +293,7 @@ const Page = () => {
                         />
                       </div>
                     </div>
-                    <div className="arrows  w-[65%] flex ml-[150px]">
+                    <div className="arrows  w-[65%] flex ml-[150px] items-center">
                       <div className="up-arrow bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer">
                         <Image src={upwordarrow} alt="" className="" />
                       </div>
@@ -274,7 +312,7 @@ const Page = () => {
                   <div className="pt-[58px] pb-[60px]">
                     <a
                       href="#"
-                      className="montserratfont underline text-[16px] leading-[20px] font-medium text-brandLightOpacity70"
+                      className="montserratfont underline text-[16px] leading-[20px] font-medium dark:text-brandLightOpacity70"
                     >
                       See Less
                     </a>
@@ -282,7 +320,7 @@ const Page = () => {
 
                   <div className={`${style.comments_section}`}>
                     <SectionSaprator title="Comments" />
-                    <p className="mt-[-16px] montserratfont font-normal	text-xs	leading-[15px] text-brandLightOpacity70">
+                    <p className="mt-[-16px] montserratfont font-normal	text-xs	leading-[15px] dark:text-brandLightOpacity70">
                       250 Comments
                     </p>
                   </div>
@@ -296,7 +334,7 @@ const Page = () => {
                       <input
                         placeholder="Type a Comment"
                         type="text"
-                        className="block focus:outline-none text-[12px] w-[75%] border-b-2 border-l-0 border-t-0 border-r-0 text-brandLightOpacity70 border-brandLightOpacity10 bg-transparent placeholder:montserratfont placeholder:text-[12px] "
+                        className="block focus:outline-none text-[12px] w-[75%] border-b-2 border-l-0 border-t-0 border-r-0 text-brandLightOpacity70 dark:border-brandLightOpacity10  bg-transparent placeholder:montserratfont placeholder:text-[12px] "
                       />
                     </div>
 
@@ -472,7 +510,7 @@ const Page = () => {
                   </div>
 
                   <div className="mb-[33px]">
-                    <p className="montserratfont text-[12px] leading-[15px] font-normal	text-brandLightOpacity70 cursor-pointer">
+                    <p className="montserratfont text-[12px] leading-[15px] font-normal	dark:text-brandLightOpacity70 cursor-pointer">
                       View Less Comments
                     </p>
                   </div>
@@ -492,8 +530,8 @@ const Page = () => {
 
               {/* right section starts here */}
 
-              <div className="mt-[48px] w-[28%]">
-                <div className="valorant_sidebar_wrapper bg-[#2E2A2B] rounded px-[17px]">
+              <div className="mt-[48px] w-[28%] mb-[88px]">
+                <div className="valorant_sidebar_wrapper dark:bg-[#2E2A2B] bg-[#6A6868] rounded px-[17px] sticky top-[120px]">
                   <div
                     className={`${style.valo_aim} flex items-center pt-[41px] justify-center`}
                   >
@@ -519,7 +557,7 @@ const Page = () => {
                         <Image src={torurnament} alt="icon" className=" " />
                       </div>
                       <div className="name_size pl-[30px] ">
-                        <h4 className="montserratfont text-[16px] leading-[20px] font-semibold text-[#E5E5E5s]">
+                        <h4 className="montserratfont text-[16px] leading-[20px] font-semibold text-[#E5E5E5]">
                           Tournament&nbsp;
                         </h4>
                         <p className="pt-[8px] montserratfont text-[14px] leading-[17px] font-medium	text-brandLightOpacity70">
