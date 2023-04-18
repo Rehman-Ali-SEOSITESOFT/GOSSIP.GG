@@ -166,7 +166,7 @@ const Page = () => {
   return (
     <section className="viewmore-esport-2">
       <div className="w-full mw-sm:overflow-scroll text-center pt-[26px] pb-[36px]">
-        <ul className="flex w-[460px] 	 m-auto justify-between">
+        <ul className="flex max-w-[460px] mw-sm:max-w-[300px]  w-full m-auto justify-between">
           {menulist.map((el, index) => {
             return (
               <li key={index}>
