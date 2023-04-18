@@ -50,14 +50,14 @@ const UserForYou = () => {
                 <small className="py-4	">
                   <a
                     href="#"
-                    className="underline text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2	"
+                    className="underline text-brandDark2 mr-[21px] dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2	"
                   >
                     John D
                   </a>
-                  <span className="border-l border-l-brandDark2 pl-2 ml-2 border-brandDark2   dark:border-l-brandLightOpacity100 text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal">
+                  <span className="border-l border-l-brandDark2 pl-[18px] mr-[18px] border-brandDark2   dark:border-l-brandLightOpacity100 text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal">
                     Jan 30th, 2023, 18:08
                   </span>
-                  <span className="border-l border-l-brandDark2 pl-2 ml-2 border-brandDark2   dark:border-l-brandLightOpacity100  text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal">
+                  <span className="border-l border-l-brandDark2 pl-[18px]  border-brandDark2   dark:border-l-brandLightOpacity100  text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal">
                     5 min read
                   </span>
                 </small>
@@ -68,12 +68,12 @@ const UserForYou = () => {
                   printer took a galley of type and scrambled it to make a
                   type...
                 </p>
-                <div className="flex shared--btns items-center h-[35px]">
-                  <div className="flex py-4 montserratfont mr-[126px]">
-                    <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
+                <div className="flex pt-[14px] shared--btns items-center h-[35px]">
+                  <div className="flex  montserratfont mr-[126px]">
+                    <div className="montserratfont text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                       News
                     </div>
-                    <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
+                    <div className="montserratfont text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                       Esports
                     </div>
                   </div>

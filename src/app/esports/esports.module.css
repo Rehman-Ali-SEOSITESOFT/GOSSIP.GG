@@ -6,3 +6,6 @@
   padding-top: 16px !important;
   padding-bottom: 16px !important;
 }
+.for_your_section .forYou .section-saprator {
+  display: none !important;
+}

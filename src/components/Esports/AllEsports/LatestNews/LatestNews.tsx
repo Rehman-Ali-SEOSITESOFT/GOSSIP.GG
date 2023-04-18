@@ -47,7 +47,7 @@ const LatestNews = () => {
       <section className="esport_wrapper">
         <div className="global-section-width  ">
           <div className="2xl:container">
-            <div className="mt-[86px]">
+            <div className="mt-[86px] mw-lg:mt-[27px]">
               <SectionSaprator title="Latest News" />
             </div>
             <div>

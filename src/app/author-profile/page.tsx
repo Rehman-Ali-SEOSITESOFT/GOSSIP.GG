@@ -1,6 +1,8 @@
 "use client";
 
+import AllAuthor from "@/components/Authorprofile/All";
 import AuthorEditProfile from "@/components/Authorprofile/EditorProfile/AuthorEditProfile";
+import FeaturedAuhor from "@/components/Authorprofile/Featured";
 import PopularAuthor from "@/components/Authorprofile/Popular";
 
 import React, { useState } from "react";
@@ -83,13 +85,13 @@ const Page = () => {
             </ul>
             <div className="tab-content tab-space w-full pt-12	">
               <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                <h1 className="mb-12">All</h1>
+              <AllAuthor />
               </div>
               <div className={openTab === 2 ? "block" : "hidden"} id="link2">
                 <PopularAuthor />
               </div>
               <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-                <h1 className="mb-12">Feactured</h1>
+              <FeaturedAuhor />
               </div>
             </div>
           </div>

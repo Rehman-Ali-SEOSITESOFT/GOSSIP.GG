@@ -1,22 +1,26 @@
-import Pagination from "@/components/Pagination";
-import React, { useState } from "react";
-import img1 from "../../../assets/user-saved/1.png";
-import img2 from "../../../assets/user-saved/2.png";
-import img3 from "../../../assets/user-saved/3.png";
-import img4 from "../../../assets/user-saved/4.png";
-import img5 from "../../../assets/user-saved/5.png";
-import img6 from "../../../assets/user-saved/6.png";
-import img7 from "../../../assets/user-saved/7.png";
-import img8 from "../../../assets/user-saved/8.png";
-import img9 from "../../../assets/user-saved/9.png";
-import img10 from "../../../assets/user-saved/10.png";
-import img11 from "../../../assets/user-saved/11.png";
-import img12 from "../../../assets/user-saved/12.png";
+import Pagination from "@/components/Pagination"
+import React, { useState } from "react"
+import img1 from "../../../assets/user-saved/1.png"
+import img2 from "../../../assets/user-saved/2.png"
+import img3 from "../../../assets/user-saved/3.png"
+import img4 from "../../../assets/user-saved/4.png"
+import img5 from "../../../assets/user-saved/5.png"
+import img6 from "../../../assets/user-saved/6.png"
+import img7 from "../../../assets/user-saved/7.png"
+import img8 from "../../../assets/user-saved/8.png"
+import img9 from "../../../assets/user-saved/9.png"
+import img10 from "../../../assets/user-saved/10.png"
+import img11 from "../../../assets/user-saved/11.png"
+import img12 from "../../../assets/user-saved/12.png"
+import img13 from "../../../assets/user-saved/12.png"
+import img14 from "../../../assets/user-saved/12.png"
+import img15 from "../../../assets/user-saved/12.png"
+import img16 from "../../../assets/user-saved/12.png"
+import bookmark from "../../../assets/author-profile/bookmark.png"
+import bookmakred from "../../../assets/user-for-you/fill-bookmark.png"
+import Image from "next/image"
 
-import bookmakred from "../../../assets/user-for-you/fill-bookmark.png";
-import Image from "next/image";
-
-const UserSaved = () => {
+const AllAuthor = () => {
   const items = [
     img1,
     img2,
@@ -30,7 +34,11 @@ const UserSaved = () => {
     img10,
     img11,
     img12,
-  ];
+    img13,
+    img14,
+    img15,
+    img16,
+  ]
   return (
     <>
       <div className="saved-component">
@@ -62,21 +70,35 @@ const UserSaved = () => {
                     </div>
                   </div>
                   <div className="icon  cursor-pointer">
-                    <Image
-                      src={bookmakred}
-                      alt="bookmarked"
-                      className="brightness-0	dark:brightness-100"
-                    />
+                    {index === 1 ||
+                    index === 3 ||
+                    index === 5 ||
+                    index === 7 ||
+                    index === 9 ||
+                    index === 10 ||
+                    index === 11 ? (
+                      <Image
+                        src={bookmakred}
+                        alt="bookmarked"
+                        className="brightness-0	dark:brightness-100"
+                      />
+                    ) : (
+                      <Image
+                        src={bookmark}
+                        alt="bookmarked"
+                        className=" brightness-0 opacity-80 hover:opacity-100  dark:brightness-200"
+                      />
+                    )}
                   </div>
                 </div>
               </div>
-            );
+            )
           })}
         </div>
       </div>
       <Pagination />
     </>
-  );
-};
+  )
+}
 
-export default UserSaved;
+export default AllAuthor

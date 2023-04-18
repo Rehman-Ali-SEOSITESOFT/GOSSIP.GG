@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import Image from "next/image";
 import bannerimg from "../../../assets/user-profile/banner.png";
 import whitebanner from "../../../assets/user-profile/white-banner.png";
@@ -10,15 +10,19 @@ import instagram from "../../../assets/user-profile/instagram.png";
 import linkined from "../../../assets/author-profile/linkedin.png";
 import mail from "../../../assets/author-profile/mail.png";
 import icon from "../../../assets/author-profile/esport-icon.png";
+import lighticon from "../../../assets/images/modal/light-logo.png";
 import editprofile from "../../../assets/user-profile/edit.png";
 import { useTheme } from "next-themes";
 const AuthorEditProfile = () => {
   const { theme, setTheme } = useTheme();
-
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
+  useEffect(() => {
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   return (
     <>
       <div className={` banner_image  relative h-[190px]`}>
-        {theme === "dark" ? (
+        {isDarkTheme === "dark" ? (
           <Image
             src={bannerimg}
             className="banner w-full h-full object-cover  "
@@ -36,7 +40,7 @@ const AuthorEditProfile = () => {
             src={editprofile}
             alt="edit user"
             className="inline-block w-[20px] h-[20px] mr-2	"
-          />{" "}
+          />
           <span className="text-base  font-semibold leading-5 text-white	dark:text-brandLightOpacity100	montserratfont">
             Edit Profile
           </span>
@@ -56,8 +60,8 @@ const AuthorEditProfile = () => {
               John D.
             </h3>
             <h5 className="rank text-lg leading-6 font-bold	tracking-[0.03em] text-brand dark:text-brand montserratfont py-2.5">
-              Esports Writer{" "}
-              <Image src={icon} alt="" className="inline-block pt-[5px]" />
+              Esports Writer
+              <Image src={isDarkTheme === "dark" ? icon : lighticon} alt="" className="inline-block dark:pt-[5px] pt-[0px] h-[28px] w-[28px] dark:h-[40px] dark:w-[38px]" />
             </h5>
             <p className="joined-data text-textColorGray dark:text-brandLightOpacity70 font-medium montserratfont leading-4	 text-sm">
               Joined Feb 2023
@@ -80,14 +84,14 @@ const AuthorEditProfile = () => {
               </div>
               <div className="social-link border-l-2 border-brandDark2  dark:border-brand pl-4	 ">
                 <h4 className="text-base leading-5 font-semibold dark:text-brandLightOpacity100 montserratfont capitalize mb-2.5	">
-                  Social Links:
+                  Social Handles:
                 </h4>
                 <div className="image flex">
                   <Image
                     src={instagram}
                     alt=""
                     className="w-[24px] h-[24px] mr-4 brightness-0	dark:brightness-100		"
-                  />{" "}
+                  />
                   <Image
                     src={twitter}
                     alt=""

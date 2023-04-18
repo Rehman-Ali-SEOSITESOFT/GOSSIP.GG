@@ -86,10 +86,7 @@ const HeroSection = () => {
                             {" "}
                             {elem.name}{" "}
                           </h3>
-                          {/* <p className="text-xs text-textColor robotoslub py-2.5 mx-14:py-2 mw-sm:hidden dark:text-brandLightOpacity90   overflow-hidden">
-                          It is a long established fact that a reader will be
-                          distracted by the readable content of a page when...
-                        </p> */}
+
                           <div className="tags flex pt-3.5 pb-3 montserratfont">
                             <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                               News

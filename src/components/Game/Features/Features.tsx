@@ -7,11 +7,14 @@ import comment from "../../../assets/user-for-you/comment.png"
 import bookmark from "../../../assets/user-for-you/bookmark.png"
 import shared from "../../../assets/user-for-you/share.png"
 import feactureauthor from "../../../assets/tech/feature-author.png"
-import texticon from "../../../assets/author-profile/esport-icon.png"
 import Pagination from "@/components/Pagination"
 import RightSidebar from "../rightbar2/RightSidebar"
+import texticon from "../../../assets/author-profile/esport-icon.png";
+import textIconColor from "../../../assets/author-profile/esport-icon-2.png";
+import { useTheme } from "next-themes"
 const Features = () => {
-  const item = [1, 2, 3, 4, 5]
+  const item = [1, 2, 3, 4, 5];
+  const {theme} = useTheme();
   return (
     <>
       <section className="gaming_features_tab_wrapper">
@@ -39,17 +42,25 @@ const Features = () => {
                             </h2>
                             <h5 className="rank text-lg leading-[22px] font-bold tracking-[0.03em] text-brand dark:text-brand montserratfont h-[30px] mt-[-1px]">
                               Esports Writer
-                              <Image
-                                src={texticon}
-                                alt="text-icon"
-                                className="inline-block pt-[5px]"
-                              />
+                              {theme === "dark" ? (
+                            <Image
+                              src={texticon}
+                              alt="text-icon"
+                              className="inline-block pt-[5px]"
+                            />
+                          ) : (
+                            <Image
+                              src={textIconColor}
+                              alt="text-icon"
+                              className="inline-block ml-[4px]"
+                            />
+                          )}
                             </h5>
                             <small className="">
                               <span className="border-brandDark2   dark:border-l-brandLightOpacity100 text-brandDark2 dark:text-brandLightOpacity100 text-sm montserratfont leading-4 font-normal">
                                 Jan 30th, 2023, 18:08
                               </span>
-                              <span className="border-l border-l-brandDark2 pl-2 ml-2 border-brandDark2   dark:border-l-brandLightOpacity100  text-brandDark2 dark:text-brandLightOpacity100 text-sm montserratfont leading-4 font-normal">
+                              <span className="border-l border-l-brandDark2 pl-3 ml-3 border-brandDark2   dark:border-l-brandLightOpacity100  text-brandDark2 dark:text-brandLightOpacity100 text-sm montserratfont leading-4 font-normal">
                                 5 min read
                               </span>
                             </small>

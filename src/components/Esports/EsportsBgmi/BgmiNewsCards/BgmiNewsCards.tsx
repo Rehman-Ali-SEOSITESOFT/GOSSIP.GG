@@ -29,6 +29,20 @@ const BgmiNewsCards = () => {
     img11,
     img12,
   ]
+  const items2 = [
+    img1,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
+    img7,
+    img8,
+    img9,
+    img10,
+    img11,
+    img12,
+  ]
   return (
     <>
       <div className="saved-component">
