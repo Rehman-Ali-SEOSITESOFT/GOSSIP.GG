@@ -11,6 +11,7 @@ import { Providers } from "./providers";
 // JUST BG GRADIENT COLOR'S
 import "../styles/background.css";
 import { useTheme } from "next-themes";
+import "react-multi-carousel/lib/styles.css";
 
 export default function RootLayout({
   children,

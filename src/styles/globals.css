@@ -357,6 +357,13 @@ body::-webkit-scrollbar-thumb {
   .global-section-width {
     padding: 0 50px;
   }
+  .esport-event-valorant-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 @media screen and (max-width: 1100px) {
   .tech-feature-dec,

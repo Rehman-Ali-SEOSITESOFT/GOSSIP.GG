@@ -105,6 +105,9 @@ input[type="checkbox"]:checked::before {
   transform: scale(1);
 }
 
+.exports-event button.react-multiple-carousel__arrow {
+  display: none !important;
+}
 @media screen and (max-width: 1024px) {
   .deailslider .slick-slide > div {
     height: 300px !important;

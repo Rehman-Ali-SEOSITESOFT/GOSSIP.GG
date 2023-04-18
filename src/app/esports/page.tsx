@@ -9,7 +9,7 @@ import styles from "./esports.module.css"
 import Trending from "@/components/Trending/Index"
 import EsportsBgmi from "@/components/Esports/EsportsBgmi/EsportsBgmi"
 const Page = () => {
-  const [openTab, setOpenTab] = useState(0)
+  const [openTab, setOpenTab] = useState(2)
   const menulist = [
     { name: "all", data: <AllEsports /> },
     { name: "News", data: <NewsEsports /> },
