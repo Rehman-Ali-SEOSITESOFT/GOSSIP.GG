@@ -24,7 +24,6 @@ import muser6 from "../../../assets/esports/m-news-06.png"
 import add from "../../../assets/esports/advertisement.png"
 import Filter from "@/components/Filter/Filter"
 import Pagination from "@/components/Pagination"
-import AsideBar from "@/components/Tech/Asidebar"
 import RightSidebar from "../rightbar2/RightSidebar"
 const page = () => {
   const userDetil = [user1, user2, user3, user4, user5, user6]

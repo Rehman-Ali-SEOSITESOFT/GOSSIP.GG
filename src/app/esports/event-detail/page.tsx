@@ -268,7 +268,11 @@ const Page = () => {
                           </p>
                         </div>
                         <div>
-                          <Image src={vrbox} alt="" className="w-[100%]" />
+                          <Image
+                            src={vrbox}
+                            alt=""
+                            className="w-[496px] m-auto"
+                          />
                           <div className="flex items-center pt-[20px] pb-[30px]">
                             <div className="flex items-center ">
                               <Image src={heart} alt="" />

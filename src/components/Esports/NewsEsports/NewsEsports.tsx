@@ -22,6 +22,7 @@ import muser3 from "../../../assets/esports/m-news-03.png"
 import muser4 from "../../../assets/esports/m-news-04.png"
 import muser5 from "../../../assets/esports/m-news-05.png"
 import muser6 from "../../../assets/esports/m-news-06.png"
+import add from "../../../assets/esports/advertisement.png"
 const NewsEsports = () => {
   const userDetil = [user1, user2, user3, user4, user5, user6]
   const mobileuser = [muser1, muser2, muser3, muser4, muser5, muser6]

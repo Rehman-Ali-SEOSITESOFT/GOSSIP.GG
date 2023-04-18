@@ -16,10 +16,7 @@ const BgmiTabs = () => {
       name: "Flame Throwers",
       link: "/tag-search",
     },
-    {
-      name: "Hogwarts Championship",
-      link: "/tag-search",
-    },
+
     {
       name: "Fire",
       link: "/tag-search",
