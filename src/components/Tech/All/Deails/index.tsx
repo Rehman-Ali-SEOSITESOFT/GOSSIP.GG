@@ -32,7 +32,6 @@ const AllDeail = () => {
                 >
                   <div className="img-wrapper w-full  h-[236px]  mw-xl:h-[210px] mw-lg:h-fit mw-sm3:h-[150px]	 rounded relative">
                     <Image src={elem} alt="hello" className="w-full h-full" />
-
                     {index === 0 ? (
                       <div className="picked bg-arrowicon bg-brand text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[8px] mw-sm:h-auto	 mw-sm:w-auto mw-sm:p-1 mw-sm:text-[12px]">
                         AMAZON DEALS
