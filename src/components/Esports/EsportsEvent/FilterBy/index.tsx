@@ -334,15 +334,10 @@ const FilterBy = (props?: any) => {
                 />
               </div>
             </div>
-            {/* // scrollbar-thin 
-              // scrollbar-thumb:!rounded-lg 
-              // scrollbar-thumb-choosebox 
-              // scrollbar-thumb-brandLightOpacity50
-              // dark:scrollbar-thumb-darkScollorBarColor
-              // scrollbar-track-[transparent] */}
+
             {opendropDown1 && (
               <div
-                className={`shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-grayCard   dark:border-brandLightOpacity10 bg-bodycolor w-[302px]   dark:bg-brandDark1   mw-9:z-[1]  min-h-min	 max-h-[462px] overflow-x-hidden  scrollbar-thin  scrollbar-thumb-brandLightOpacity50 dark:scrollbar-thumb-darkScollorBarColor scrollbar-track-[transparent] ${
+                className={`shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-grayCard   dark:border-brandLightOpacity10 bg-bodycolor w-[302px]   dark:bg-brandDark1  z-[2]  min-h-min	 max-h-[462px] overflow-x-hidden  scrollbar-thin  scrollbar-thumb-brandLightOpacity50 dark:scrollbar-thumb-darkScollorBarColor scrollbar-track-[transparent] ${
                   isDarkTheme === "dark"
                     ? "dark-custom--scroll--filer "
                     : "light-custom--scroll--filer"
@@ -463,7 +458,7 @@ const FilterBy = (props?: any) => {
             {opendropDown2 && (
               <div
                 className={` shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-brandDark2    w-[302px]   border-grayCard dark:border-brandLightOpacity10 bg-bodycolor dark:bg-brandDark1  mw-sm1:right-0 mw-sm1:left-auto 
-                mw-9:z-[1]  min-h-min	 max-h-[462px] overflow-x-hidden  scrollbar-thin  scrollbar-thumb-brandLightOpacity50 dark:scrollbar-thumb-darkScollorBarColor scrollbar-track-[transparent] ${
+                z-[2]  min-h-min	 max-h-[462px] overflow-x-hidden  scrollbar-thin  scrollbar-thumb-brandLightOpacity50 dark:scrollbar-thumb-darkScollorBarColor scrollbar-track-[transparent] ${
                   isDarkTheme === "dark"
                     ? "dark-custom--scroll--filer "
                     : "light-custom--scroll--filer"
