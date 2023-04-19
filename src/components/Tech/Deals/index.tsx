@@ -100,7 +100,7 @@ const DeailTech = () => {
                   <Image src={elem} alt="hello" className="w-full h-full" />
 
                   {index === 0 || index === 4 || index === 8 || index === 12 ? (
-                    <div className="picked bg-arrowicon bg-brand text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[8px]	">
+                    <div className="picked bg-arrowicon bg-brand text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[8px]  mw-sm:text-sm	">
                       AMAZON DEALS
                     </div>
                   ) : null}
@@ -181,7 +181,7 @@ const DeailTech = () => {
                   <Image src={elem} alt="hello" className="w-full h-full" />
 
                   {index === 0 || index === 4 || index === 8 || index === 12 ? (
-                    <div className="picked bg-arrowicon bg-brand text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[8px]	">
+                    <div className="picked bg-arrowicon bg-brand text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[8px]	  mw-sm:text-sm">
                       AMAZON DEALS
                     </div>
                   ) : null}

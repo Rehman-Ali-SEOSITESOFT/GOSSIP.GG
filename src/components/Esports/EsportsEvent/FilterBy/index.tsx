@@ -369,8 +369,13 @@ const FilterBy = (props?: any) => {
                           className="mw-sm:min-w-[32px] mw-sm:max-w-[32px]"
                         />
                       )}
+                      {/* <p
+                        className={`text-brandDark1 dark:bg-brandDark1  focus:outline-none  dark:hover:bg-brandDark1 bg-bodycolor focus:border-none w-[90%] dark:text-brandLightOpacity100 ml-2 montserratfont  leading-[20px] text-base font-normal   ${
+                          item.image !== "" ? "pl-[16px]" : "pl-[50px]"
+                        }`}
+                      > */}
                       <p
-                        className={`text-brandDark1 dark:bg-brandDark1  focus:outline-none dark:focus:bg-brandDark1 dark:hover:bg-brandDark1 bg-bodycolor focus:border-none w-[90%] dark:text-brandLightOpacity100 ml-2 montserratfont  montserratfont leading-[20px] text-base font-normal   ${
+                        className={`text-brandDark1 focus:outline-none  focus:border-none w-[90%] dark:text-brandLightOpacity100 ml-2 montserratfont  leading-[20px] text-base font-normal   ${
                           item.image !== "" ? "pl-[16px]" : "pl-[50px]"
                         }`}
                       >

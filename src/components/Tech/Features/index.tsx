@@ -18,7 +18,7 @@ const FeaturesTech = () => {
   return (
     <section className="FeaturesTeach global-section-width">
       <FilterTabs />
-      <div className="2xl:container">
+      {/* <div className="2xl:container">
         <div className="flex">
           <div className="w-[calc(100%_-_250px)] mw-lg:w-[calc(100%_-_230px)]">
             <div className="w-full pt-[22px]">
@@ -133,7 +133,7 @@ const FeaturesTech = () => {
           <AsideBar />
         </div>
         <Pagination />
-      </div>
+      </div> */}
     </section>
   );
 };
