@@ -102,7 +102,7 @@ const SignupModal = (props: any) => {
                             name="password"
                             type={show ? "text" : "password"}
                             placeholder="Create Password"
-                            className="border-brandLightOpacity10 montserratfont  hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
+                            className="border-brandLightOpacity10 font-medium montserratfont  hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
                           />
                           <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
                             <Image
@@ -114,7 +114,6 @@ const SignupModal = (props: any) => {
                           </div>
                         </div>
                       </div>
-
                       <div className="flex flex-col items-center">
                         <button
                           onClick={() => onClickOpenModal()}
@@ -133,7 +132,6 @@ const SignupModal = (props: any) => {
                         </p>
                       </div>
                     </div>
-
                     <div className="flex flex-row items-center justify-center ">
                       <div className="bg-gradient-to-l mw-sm:min-w-[25%] min-w-[35%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
                       <p className="px-2 montserratfont mw-sm:text-sm text-lg font-bold">

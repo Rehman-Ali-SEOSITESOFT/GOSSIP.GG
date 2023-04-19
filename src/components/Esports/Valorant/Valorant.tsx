@@ -28,9 +28,15 @@ const Valorant = () => {
     <section className="esports-bgmi_wrapper">
       <div className="global-section-width">
         <div className="2xl:container ">
+<<<<<<< HEAD
           <div className="top_section pt-[44px] flex justify-between pb-[42px] mw-lg:flex-col-reverse">
             <div className="w-[70%] mw-lg:w-[100%]">
               <h4 className="montserratfont text-[32px] leading-[39px] font-bold dark:text-[#E5E5E5] pb-[16px] mw-lg:text-[24px] mw-sm:text-[16px] mw-sm:leading-[20px]">
+=======
+          <div className="top_section pt-[44px] flex justify-between pb-[42px]">
+            <div className="w-[70%]">
+              <h4 className="montserratfont text-[32px] leading-[39px] font-bold dark:text-[#E5E5E5] pb-[16px]">
+>>>>>>> b211465bc4aec26ca4f97759806838e1a8d04a66
                 Valorant
               </h4>
               <p className="montserratfont text-[14px] leading-[17px] font-normal dark:text-[#E5E5E5] mw-sm:text-[12px]">
@@ -111,10 +117,10 @@ const Valorant = () => {
                             </div>
                             <div className="save-tagss-wrap flex justify-between items-end ">
                               <div className="flex ">
-                                <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
+                                <div className="montserratfont text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                                   News
                                 </div>
-                                <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
+                                <div className="montserratfont text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                                   Esports
                                 </div>
                               </div>

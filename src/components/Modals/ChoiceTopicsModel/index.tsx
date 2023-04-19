@@ -213,7 +213,6 @@ const ChoiceTopicModel = (props: any) => {
         >
           <div className="fixed inset-0 bg-brandDark1 bg-opacity-80 transition-opacity" />
         </Transition.Child>
-
         <div className="fixed inset-0 z-10 overflow-y-auto  ">
           <div className="flex w-full max-w-[624px]	m-auto  min-h-full  items-center justify-center py-8">
             <Transition.Child

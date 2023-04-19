@@ -15,6 +15,7 @@ import LoginModal from "@/components/Modals/LoginModal";
 import EditProfileModal from "@/components/Modals/EditProfileModal";
 import { useRouter, usePathname } from "next/navigation";
 import setting from "../../assets/profile/settings.png";
+import settingLight from "../../assets/profile/setting-light.png";
 import downloadarrow from "../../assets/profile/downarrow.png";
 import Link from "next/link";
 import { Menu, Transition } from "@headlessui/react";
@@ -337,7 +338,7 @@ const Header = () => {
                                 Settings
                                 <span>
                                   <Image
-                                    src={setting}
+                                    src={isDarkTheme === 'dark' ? setting : settingLight}
                                     alt=""
                                     className="inline-block ml-3"
                                   />
@@ -371,7 +372,7 @@ const Header = () => {
                               </h5>
                             </div>
                             <div onClick={onClicklogout} className="logout">
-                              <h5 className="text-brand dark:text-brandLightOpacity100 text-base leading-5 montserratfont cursor-pointer">
+                              <h5 className="text-brandDark2 dark:text-brandLightOpacity100 text-base leading-5 montserratfont cursor-pointer">
                                 Log Out
                               </h5>
                             </div>

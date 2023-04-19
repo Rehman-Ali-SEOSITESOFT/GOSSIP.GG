@@ -6,6 +6,7 @@ import Others from "./Others";
 import CsGo from "./Csgo";
 import Valorant from "./Valorant/index";
 import React from "react";
+import Trending from "@/components/Trending/Index";
 
 const Page = () => {
   const responsive = {
@@ -31,7 +32,7 @@ const Page = () => {
   return (
     <section className="exports-event pb-[88px] mw-md:pb-12	">
       <ExportsEventBanner />
-      {/* <FilterBy /> */}
+      <FilterBy />
       <Valorant responsive={responsive} />
       <Bgmi responsive={responsive} />
       <CsGo responsive={responsive} />

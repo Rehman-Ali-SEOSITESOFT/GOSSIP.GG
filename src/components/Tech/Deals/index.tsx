@@ -92,21 +92,21 @@ const DeailTech = () => {
             return (
               <div
                 className={
-                  "max-w-[300px] mb-[24px] mx-14:max-w-[24%] w-full mw-md:max-w-[48%]  mw-sm3:max-w-full    "
+                  "max-w-[300px] mb-[24px] mx-14:max-w-[24%] w-full mw-md:max-w-[48%]      "
                 }
                 key={index}
               >
-                <div className="img-wrapper  h-[250px] mw-lg:h-[200px] mw-sm:h-[180px] mw-sm3:h-[250px] rounded relative">
+                <div className="img-wrapper  h-[250px] mw-lg:h-[200px] mw-sm:h-[180px] mw-sm3:h-[150px] rounded relative">
                   <Image src={elem} alt="hello" className="w-full h-full" />
 
                   {index === 0 || index === 4 || index === 8 || index === 12 ? (
-                    <div className="picked bg-arrowicon bg-brand text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[8px]	">
+                    <div className="picked bg-arrowicon bg-brand text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[8px]  mw-sm:text-sm	">
                       AMAZON DEALS
                     </div>
                   ) : null}
                 </div>
                 <div className="description flex justify-between pt-3 ">
-                  <h4 className="text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 pr-2">
+                  <h4 className="text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 pr-2 deail-tab-com-title">
                     Check out the Great Indian Amazon Sale this month
                   </h4>
                   <div>
@@ -119,12 +119,14 @@ const DeailTech = () => {
                     </div>
                   </div>
                 </div>
-                <p className="montserratfont py-[8px] text-brandDark2 dark:text-brandLightOpacity100 font-medium text-sm">13 Feb - 18  Mar</p>
+                <p className="montserratfont py-[8px] text-brandDark2 dark:text-brandLightOpacity100 font-medium text-sm">
+                  13 Feb - 18 Mar
+                </p>
                 <div className="flex montserratfont">
-                  <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
+                  <div className="montserratfont text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                     News
                   </div>
-                  <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
+                  <div className="montserratfont text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                     Esports
                   </div>
                 </div>
@@ -171,21 +173,21 @@ const DeailTech = () => {
             return (
               <div
                 className={
-                  "max-w-[300px]  mb-[24px] mx-14:max-w-[24%] w-full mw-md:max-w-[48%]  mw-sm3:max-w-full  "
+                  "max-w-[300px]  mb-[24px] mx-14:max-w-[24%] w-full mw-md:max-w-[48%]   "
                 }
                 key={index}
               >
-                <div className="img-wrapper  h-[250px] mw-lg:h-[200px] mw-sm:h-[180px] mw-sm3:h-[250px] rounded relative">
+                <div className="img-wrapper  h-[250px] mw-lg:h-[200px] mw-sm:h-[180px] mw-sm3:h-[150px] rounded relative">
                   <Image src={elem} alt="hello" className="w-full h-full" />
 
                   {index === 0 || index === 4 || index === 8 || index === 12 ? (
-                    <div className="picked bg-arrowicon bg-brand text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[8px]	">
+                    <div className="picked bg-arrowicon bg-brand text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[8px]	  mw-sm:text-sm">
                       AMAZON DEALS
                     </div>
                   ) : null}
                 </div>
                 <div className="description flex justify-between pt-3 ">
-                  <h4 className="text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 pr-2">
+                  <h4 className="text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 pr-2 deail-tab-com-title">
                     Check out the Great Indian Amazon Sale this month
                   </h4>
                   <div>
@@ -198,12 +200,14 @@ const DeailTech = () => {
                     </div>
                   </div>
                 </div>
-                <p className="montserratfont py-[8px] text-brandDark2 dark:text-brandLightOpacity100 font-medium text-sm">13 Feb - 18  Mar</p>
+                <p className="montserratfont py-[8px] text-brandDark2 dark:text-brandLightOpacity100 font-medium text-sm">
+                  13 Feb - 18 Mar
+                </p>
                 <div className="flex montserratfont">
-                  <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
+                  <div className="montserratfont text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                     News
                   </div>
-                  <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
+                  <div className="montserratfont text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                     Esports
                   </div>
                 </div>

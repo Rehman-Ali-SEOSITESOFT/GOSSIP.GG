@@ -1,52 +1,87 @@
-import React from "react"
-import pc from "../../assets/lightgameFilter/pc.png"
-import mobile from "../../assets/new-category/mobile.png"
-import console from "../../assets/new-category/console.png"
-import Image from "next/image"
+"use client";
+import React, { useEffect, useState } from "react";
+import pc from "../../assets/new-category/d-desktop.png";
+import mobile from "../../assets/new-category/d-mobile.png";
+import console from "../../assets/new-category/d-game.png";
+
+import d_a_pc from "../../assets/new-category/d-a-desktop.png";
+import d_a_mobile from "../../assets/new-category/d-a-mobile.png";
+import d_a_console from "../../assets/new-category/d-a-game.png";
+
+import l_pc from "../../assets/new-category/l-desktop.png";
+import l_mobile from "../../assets/new-category/l-mobile.png";
+import L_console from "../../assets/new-category/l-game.png";
+
+import Image from "next/image";
+import { useTheme } from "next-themes";
 const Filter = () => {
+  const images = [
+    { l_pic: l_pc, d_ac_pic: d_a_pc, pic: pc, name: "Laptops" },
+    { l_pic: l_mobile, d_ac_pic: d_a_mobile, pic: mobile, name: "Laptops" },
+    { l_pic: L_console, d_ac_pic: d_a_console, pic: console, name: "Laptops" },
+  ];
+  const [no, setNo] = useState<number>(0);
+  const hadldeclick = (e: number) => setNo(e);
+  const { theme, setTheme } = useTheme();
+  const [isDarkTheme, setIsDarkTheme] = useState<any>("");
+  useEffect(() => {
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   return (
     <>
-      <div className="filter_section flex items-center mt-[64px] mb-[16px]">
-        <div className="filter_  mr-[16px]">
+      <div className="filter_section flex items-center mt-[64px] mb-[16px] mw-md:mt-[20px] mw-sm:flex-col mw-sm:items-start">
+        <div className="filter_  mr-[16px] mw-sm:mb-[16px] ">
           <h4 className="text-base leading-5 montserratfont font-semibold	uppercase">
             Filters:
           </h4>
         </div>
-        <div className="flex items-center mw-sm3:overflow-x-scroll">
-          <button className="flex montserratfont text-base leading-5  dark:text-[#ED4E50] items-center py-[10px] border dark:border-[#ED4E50] border-[#221E1F] px-[12px] rounded mr-[24px] mw-md:mr-[11px] mw-md:text-[14px] mw-md:leading-[17px] mw-sm:p-[8px]">
-            <span className="inline mr-[8px]">
-              <Image
-                src={pc}
-                alt="pc icon"
-                className="inline mw-lg:min-w-[14px] mw-lg:min-h-[10px] dark:brightness-[9.3] brightness-[0.5]"
-              />
-            </span>
-            PC
-          </button>
-          <button className="flex montserratfont text-base leading-5 dark:text-brandLightOpacity70 items-center py-[10px] px-[12px] dark:border border  dark:border-[#E5E5E5] border-[#221E1F] rounded mr-[24px] mw-md:mr-[11px] mw-md:text-[14px] mw-md:leading-[17px] mw-sm:p-[8px]">
-            <span className="inline mr-[8px]">
-              <Image
-                src={mobile}
-                alt="mobile"
-                className="inline mw-lg:min-w-[14px] mw-lg:min-h-[10px] dark:brightness-[1.3] brightness-[0.3]"
-              />
-            </span>{" "}
-            Mobile
-          </button>
-          <button className="flex montserratfont text-base leading-5 dark:text-brandLightOpacity70 items-center py-[10px] px-[12px] border dark:border-[#E5E5E5] border-[#221E1F] rounded mr-[24px] mw-md:mr-[11px] mw-md:text-[14px] mw-md:leading-[17px] mw-sm:p-[8px]">
-            <span className="inline mr-[8px]">
-              <Image
-                src={console}
-                alt="console"
-                className="inline mw-lg:min-w-[14px] mw-lg:min-h-[10px] dark:brightness-[1.3] brightness-[0.3]"
-              />
-            </span>{" "}
-            Console
-          </button>
+        <div className="flex ">
+          {images.map((element, index) => {
+            return (
+              <div
+                className={`flex items-center border  rounded px-3.5 py-2.5 mw-sm:p-2 mw-sm:h-fit mr-6 mw-xl:mr-[11px] 
+                 cursor-pointer ${
+                   no === index
+                     ? "dark:border-brand border-brandDark2 bg-grayCard"
+                     : "dark:border-brandLightOpacity100 border-brandDark2"
+                 } `}
+                key={index}
+                onClick={() => hadldeclick(index)}
+              >
+                {element.pic && (
+                  <Image
+                    src={
+                      no === index
+                        ? isDarkTheme === "dark"
+                          ? element.d_ac_pic
+                          : element.l_pic
+                        : isDarkTheme === "dark"
+                        ? element.pic
+                        : element.l_pic
+                    }
+                    alt="name"
+                    className="inline mw-lg:min-w-[20px] mw-lg:min-h-[20px]   mw-sm:min-h-[16px]   mw-sm:min-w-[16px]  mw-sm:w-full"
+                  />
+                )}
+
+                <span
+                  className={` ${
+                    element.pic ? "pl-2  mw-sm:pl-1" : "pl-0"
+                  }  inline montserratfont  text-base mw-sm:text-sm leading-5  ${
+                    no === index
+                      ? "dark:text-brand font-semibold"
+                      : "dark:text-brandLightOpacity70 font-medium hover:dark:text-brandLightOpacity100 text-textColorGray hover:text-brandDark2 "
+                  }`}
+                >
+                  {element.name}
+                </span>
+              </div>
+            );
+          })}
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Filter
+export default Filter;
