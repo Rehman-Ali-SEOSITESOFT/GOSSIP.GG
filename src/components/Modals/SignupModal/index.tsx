@@ -114,7 +114,6 @@ const SignupModal = (props: any) => {
                           </div>
                         </div>
                       </div>
-
                       <div className="flex flex-col items-center">
                         <button
                           onClick={() => onClickOpenModal()}
@@ -133,7 +132,6 @@ const SignupModal = (props: any) => {
                         </p>
                       </div>
                     </div>
-
                     <div className="flex flex-row items-center justify-center ">
                       <div className="bg-gradient-to-l mw-sm:min-w-[25%] min-w-[35%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
                       <p className="px-2 montserratfont mw-sm:text-sm text-lg font-bold">
