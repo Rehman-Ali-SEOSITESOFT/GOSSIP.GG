@@ -102,7 +102,7 @@ const SignupModal = (props: any) => {
                             name="password"
                             type={show ? "text" : "password"}
                             placeholder="Create Password"
-                            className="border-brandLightOpacity10 montserratfont  hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
+                            className="border-brandLightOpacity10 font-medium montserratfont  hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
                           />
                           <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
                             <Image
