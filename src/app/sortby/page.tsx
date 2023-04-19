@@ -293,7 +293,7 @@ const Page = () => {
                     key={index}
                     className="w-[48%] mw-sm1:w-full rounded border  dark:border-brandLightOpacity10 bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1 dark:bg-brandDark1 border-inherit dark:border-brandDark1 border  p-2.5 mw-9:mb-[16px] flex "
                   >
-                    <div className="img-wrapper h-[120px] w-[145px] min-w-[145px] mw-sm3:h-[110px] mw-sm3:min-w-[120px] relative">
+                    <div className="img-wrapper h-[120px] w-[145px] min-w-[145px] mw-sm3:h-[110px] mw-sm3:min-w-[110px] relative">
                       <Image
                         src={ele.image}
                         alt={ele.title}
