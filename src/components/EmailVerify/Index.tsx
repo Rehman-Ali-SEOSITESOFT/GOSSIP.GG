@@ -6,7 +6,7 @@ const EmailVerify = () => {
       <div className="global-section-width">
         <div className="2xl:container">
           <div className="w-full">
-            <p className="text-base mw-sm:text-sm	 leading-5 montserratfont font-semibold dark:text-brandLightOpacity100">
+            <p className="text-base mw-sm:text-sm	 leading-5 montserratfont font-semibold text-brandLightOpacity100">
               Please verify your account to access all of our features.{" "}
               <a href="" className="underline underline-offset-2	">
                 Re-send email
