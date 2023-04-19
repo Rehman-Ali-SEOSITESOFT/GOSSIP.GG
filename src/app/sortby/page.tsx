@@ -24,9 +24,9 @@ import EsportsBgmi from "@/components/Esports/EsportsBgmi/EsportsBgmi";
 import EsportsEvents from "@/components/Esports/EsportsEvent";
 import Valorant from "@/components/Esports/Valorant/Valorant";
 import marked from "../../assets/esports/markedtype-icon.png";
-
+import { useSearchParams } from "next/navigation";
+import Carousel from "react-multi-carousel";
 import Link from "next/link";
-
 const Page = () => {
   interface List {
     image: any;
@@ -166,7 +166,28 @@ const Page = () => {
   const hanldeOpenTab = (e: number) => {
     setOpenTab(e);
   };
-
+  const searchParams = useSearchParams();
+  const sortnum = Number(searchParams?.get("search"));
+  const responsive = {
+    tablet: {
+      breakpoint: { max: 639, min: 360 },
+      items: 1,
+      paritialVisibilityGutter: 200,
+      arrows: false,
+    },
+    tablet2: {
+      breakpoint: { max: 510, min: 460 },
+      items: 1,
+      paritialVisibilityGutter: 150,
+      arrows: false,
+    },
+    mobile: {
+      breakpoint: { max: 460, min: 360 },
+      items: 1,
+      paritialVisibilityGutter: 60,
+      arrows: false,
+    },
+  };
   return (
     <section className="viewmore-esport-2">
       <div className="w-full mw-sm:overflow-scroll text-center pt-[26px] pb-[36px]">
@@ -199,7 +220,7 @@ const Page = () => {
         </div>
       </div>
       <ExportsEventBanner />
-      <FilterBy />
+      <FilterBy sort={sortnum} />
       <div className="view-more">
         <div className="global-section-width">
           <div className="2xl:container">
@@ -208,7 +229,7 @@ const Page = () => {
                 return (
                   <div
                     key={index}
-                    className="w-[300px] max-w-[24%] mw-9:max-w-[48%] mw-9:w-full rounded border  dark:border-brandLightOpacity10 bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1 dark:bg-brandDark1 border-inherit dark:border-brandDark1 border  p-2.5 mw-9:mb-[20px] mt-16 mw-9:mt-8"
+                    className="w-[300px] max-w-[24%] mw-9:max-w-[48%] mw-9:w-full rounded border  dark:border-brandLightOpacity10 bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1 dark:bg-brandDark1 border-inherit dark:border-brandDark1 border  p-2.5 mw-9:mb-[20px] mt-16  mw-9:mt-8"
                   >
                     <div className="img-wrapper h-[150px] relative">
                       <Image

@@ -17,8 +17,9 @@ import Search from "../../../../assets/images/filters/search.png";
 import SearchLight from "../../../../assets/images/filters/search-light.png";
 import LightArrow from "../../../../assets/images/filters/lightdown.png";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
-const FilterBy = () => {
+const FilterBy = (props?: any) => {
   const [sortBy, setSortBy] = useState<string[]>([
     "Popularity",
     "Recently Added",
@@ -26,7 +27,7 @@ const FilterBy = () => {
     "A to Z",
     "Z to A",
   ]);
-  const [sort, setSort] = useState<number | null>(null);
+  const [sort, setSort] = useState<number | null>(props?.sort || null);
   const hanldeSorting = (num: number) => {
     setSort(num);
   };
@@ -267,7 +268,7 @@ const FilterBy = () => {
         </h5>
         <div
           ref={dropDownRef}
-          className="flex flex-row justify-between mw-9:flex-wrap"
+          className="flex flex-row justify-between mw-9:flex-wrap overflow-visible"
         >
           <div className="last relative  mw-12:w-[24%] mw-9:w-[48%]">
             <p className="pt-[13px] pb-[6px] pl-[8px] montserratfont text-sm dark:text-brandLightOpacity100 text-brandDark2  mw-sm3:text-xs">
@@ -275,7 +276,7 @@ const FilterBy = () => {
             </p>
             <div
               onClick={() => onClickOpen1()}
-              className="  px-4 drop1 flex flex-row justify-between items-center h-[60px] rounded-lg w-[302px] mx-13:w-[270px]  mw-sm1:h-[45px] mw-12:w-[100%] mw-sm1:rounded border border-brandDark2 dark:border-brandLightOpacity50"
+              className="  px-4 drop1 flex flex-row justify-between items-center h-[60px] rounded-lg w-[302px] mx-13:w-[270px]  mw-sm1:h-[45px] mw-12:w-[100%] mw-sm1:rounded border border-brandDark2 dark:border-brandLightOpacity50 "
             >
               {selectedGame.filter((item) => item === "8").length === 1 ? (
                 "All"
@@ -333,8 +334,15 @@ const FilterBy = () => {
                 />
               </div>
             </div>
+
             {opendropDown1 && (
-              <div className=" shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-grayCard   dark:border-brandLightOpacity10 bg-bodycolor  m-h-[462px] w-[302px]  mw-9:z-[999]  dark:bg-brandDark1 ">
+              <div
+                className={`shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-grayCard   dark:border-brandLightOpacity10 bg-bodycolor w-[302px]   dark:bg-brandDark1  z-[2]  min-h-min	 max-h-[462px] overflow-x-hidden  scrollbar-thin  scrollbar-thumb-brandLightOpacity50 dark:scrollbar-thumb-darkScollorBarColor scrollbar-track-[transparent] ${
+                  isDarkTheme === "dark"
+                    ? "dark-custom--scroll--filer "
+                    : "light-custom--scroll--filer"
+                }`}
+              >
                 <div className="border-b-2  dark:border-b-brandLightOpacity10 h-[60px] flex flex-row  items-center pl-[16px] pr-[20px]">
                   <Image
                     src={isDarkTheme === "dark" ? Search : SearchLight}
@@ -449,9 +457,12 @@ const FilterBy = () => {
             </div>
             {opendropDown2 && (
               <div
-                className={` shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-brandDark2   m-h-[462px] w-[302px]   border-grayCard dark:border-brandLightOpacity10 bg-bodycolor dark:bg-brandDark1 mw-9:z-[999] mw-sm1:right-0 mw-sm1:left-auto ${
-                  isDarkTheme === "dark" ? "darkchecked " : "lightcheched"
-                }`}
+                className={` shadow-3xshadow absolute mt-[4px] rounded-lg border-2 border-brandDark2    w-[302px]   border-grayCard dark:border-brandLightOpacity10 bg-bodycolor dark:bg-brandDark1  mw-sm1:right-0 mw-sm1:left-auto 
+                z-[2]  min-h-min	 max-h-[462px] overflow-x-hidden  scrollbar-thin  scrollbar-thumb-brandLightOpacity50 dark:scrollbar-thumb-darkScollorBarColor scrollbar-track-[transparent] ${
+                  isDarkTheme === "dark"
+                    ? "dark-custom--scroll--filer "
+                    : "light-custom--scroll--filer"
+                } `}
               >
                 <div className="border-b-2 dark:border-b-brandLightOpacity10 h-[60px] flex flex-row  items-center pl-[16px] pr-[20px]">
                   <Image
@@ -467,7 +478,9 @@ const FilterBy = () => {
                 {organizerList.map((item, index) => (
                   <div
                     key={index}
-                    className="h-[60px] hover:bg-brandLightOpacity10  flex flex-row justify-between items-center pl-[16px] pr-[20px]"
+                    className={`h-[60px] hover:bg-brandLightOpacity10  flex flex-row justify-between items-center pl-[16px] pr-[20px] ${
+                      isDarkTheme === "dark" ? "darkchecked " : "lightcheched"
+                    }`}
                   >
                     <div className="flex items-center">
                       {item.image !== "" && (
@@ -541,14 +554,20 @@ const FilterBy = () => {
             </div>
             {opendropDown3 && (
               <div
-                className={`shadow-3xshadow absolute border-grayCard mt-[4px] rounded-lg border-2 border-brandDark2  m-h-[462px] w-[302px]  dark:border-brandLightOpacity10 bg-bodycolor dark:bg-brandDark1   ${
-                  isDarkTheme === "dark" ? "darkchecked " : "lightcheched"
-                }`}
+                className={`shadow-3xshadow absolute border-grayCard mt-[4px] rounded-lg border-2 border-brandDark2  m-h-[462px] w-[302px]  dark:border-brandLightOpacity10 bg-bodycolor dark:bg-brandDark1  
+                min-h-min	 max-h-[462px] overflow-x-hidden  scrollbar-thin  scrollbar-thumb-brandLightOpacity50 dark:scrollbar-thumb-darkScollorBarColor scrollbar-track-[transparent] ${
+                  isDarkTheme === "dark"
+                    ? "dark-custom--scroll--filer "
+                    : "light-custom--scroll--filer"
+                } `}
               >
                 {statusList.map((item, index) => (
                   <div
                     key={index}
-                    className="h-[60px] hover:bg-brandLightOpacity10  flex flex-row justify-between items-center pl-[16px] pr-[20px]"
+                    className={`h-[60px] hover:bg-brandLightOpacity10  flex flex-row justify-between items-center pl-[16px] pr-[20px] 
+                    ${
+                      isDarkTheme === "dark" ? "darkchecked " : "lightcheched"
+                    }`}
                   >
                     <p className="montserratfont text-brandDark2 dark:text-brandLightOpacity100 text-base font-normal pl-[8px] ">
                       {item}
@@ -610,14 +629,20 @@ const FilterBy = () => {
             </div>
             {opendropDown4 && (
               <div
-                className={`shadow-3xshadow absolute border-grayCard mt-[4px] rounded-lg border-2 border-brandDark2   m-h-[462px] w-[302px] right-0 left-auto  mw-9:right-auto mw-9:left-0   dark:border-brandLightOpacity10 bg-bodycolor dark:bg-brandDark1 mw-sm1:left-auto mw-sm1:right-0 ${
-                  isDarkTheme === "dark" ? "darkchecked " : "lightcheched"
-                }`}
+                className={`shadow-3xshadow absolute border-grayCard mt-[4px] rounded-lg border-2 border-brandDark2   m-h-[462px] w-[302px] right-0 left-auto  mw-9:right-auto mw-9:left-0   dark:border-brandLightOpacity10 bg-bodycolor dark:bg-brandDark1 mw-sm1:left-auto mw-sm1:right-0
+                min-h-min	 max-h-[462px] overflow-x-hidden  scrollbar-thin  scrollbar-thumb-brandLightOpacity50 dark:scrollbar-thumb-darkScollorBarColor scrollbar-track-[transparent] ${
+                  isDarkTheme === "dark"
+                    ? "dark-custom--scroll--filer "
+                    : "light-custom--scroll--filer"
+                } `}
               >
                 {regionList.map((item, index) => (
                   <div
                     key={index}
-                    className="h-[60px] hover:bg-brandLightOpacity10  flex flex-row justify-between items-center pl-[16px] pr-[20px]"
+                    className={`h-[60px] hover:bg-brandLightOpacity10  flex flex-row justify-between items-center pl-[16px] pr-[20px] 
+                    ${
+                      isDarkTheme === "dark" ? "darkchecked " : "lightcheched"
+                    }`}
                   >
                     <p className="montserratfont text-brandDark2 dark:text-brandLightOpacity100 text-base font-normal pl-[8px] ">
                       {item}
@@ -658,7 +683,8 @@ const FilterBy = () => {
           <div className="">
             {sortBy.map((el, index) => {
               return (
-                <p
+                <Link
+                  href={`sortby?search=${index}`}
                   key={index}
                   className={`py-2.5 px-4 dark:bg-brandLightOpacity10 hover:bg-borderEditProfile dark:hover:bg-brandLightOpacity20 hover:text-brandDark2 bg-grayCard text-textColorGray dark:text-brandLightOpacity100 rounded-[20px] mr-[8px] inline-block montserratfont xtest-base leading-5 cursor-pointer font-semibold mw-md:mb-[16px] mw-md:text-sm mw-sm3:text-xs ${
                     sort === index
@@ -668,7 +694,7 @@ const FilterBy = () => {
                   onClick={() => hanldeSorting(index)}
                 >
                   {el}
-                </p>
+                </Link>
               );
             })}
           </div>

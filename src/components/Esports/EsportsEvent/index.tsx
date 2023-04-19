@@ -6,6 +6,7 @@ import Others from "./Others";
 import CsGo from "./Csgo";
 import Valorant from "./Valorant/index";
 import React from "react";
+import Trending from "@/components/Trending/Index";
 
 const Page = () => {
   const responsive = {

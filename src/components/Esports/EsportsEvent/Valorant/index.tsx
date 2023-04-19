@@ -13,6 +13,7 @@ import Image from "next/image";
 import SectionSaprator from "@/components/SecSaprator";
 import Link from "next/link";
 import Carousel from "react-multi-carousel";
+import marked from "../../../../assets/esports/markedtype-icon.png";
 
 const Valorant = (props: any) => {
   interface List {
@@ -62,12 +63,20 @@ const Valorant = (props: any) => {
                   key={index}
                   className="w-[300px] max-w-[24%] mw-9:max-w-[48%] mw-9:w-full rounded border  dark:border-brandLightOpacity10 bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1 dark:bg-brandDark1 border-inherit dark:border-brandDark1 border  p-2.5 mw-9:mb-[20px]"
                 >
-                  <div className="img-wrapper h-[150px]">
+                  <div className="img-wrapper h-[150px] relative">
                     <Image
                       src={ele.image}
                       alt={ele.title}
                       className="w-full h-full rounded-sm	object-cover"
                     />
+
+                    <div className="absolute w-[32px] h-[32px] left-[10px] top-[10px]">
+                      <Image
+                        src={marked}
+                        alt="marked"
+                        className="h-full w-full object-cover rounded"
+                      />
+                    </div>
                   </div>
                   <div className="detail">
                     <h4 className="text-brandDark2 dark:text-brandLightOpacity100  font-bold montserratfont texe-base leading-5  pt-4 esport-event-valorant-title">
@@ -125,12 +134,19 @@ const Valorant = (props: any) => {
                     key={index}
                     className="w-full max-w-[97%]  rounded border  dark:border-brandLightOpacity10 bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1 dark:bg-brandDark1 border-inherit dark:border-brandDark1 border  p-2.5 mw-9:mb-[20px]"
                   >
-                    <div className="img-wrapper h-[150px]">
+                    <div className="img-wrapper h-[150px] relative">
                       <Image
                         src={ele.image}
                         alt={ele.title}
                         className="w-full h-full rounded-sm	object-cover"
                       />
+                      <div className="absolute w-[32px] h-[32px] left-[10px] top-[10px]">
+                        <Image
+                          src={marked}
+                          alt="marked"
+                          className="h-full w-full object-cover rounded"
+                        />
+                      </div>
                     </div>
                     <div className="detail">
                       <h4 className="text-brandDark2 dark:text-brandLightOpacity100  font-bold montserratfont texe-base leading-5  pt-4 esport-event-valorant-title">
