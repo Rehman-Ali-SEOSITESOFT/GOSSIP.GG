@@ -47,8 +47,8 @@ const Valorant = (props: any) => {
     <div className="valorant-component">
       <div className="global-section-width">
         <div className="pt-16 mw-lg:pt-7 mw-sm:pt-[10px]">
-          <div className="section-saprator flex flex-row items-center pb-[24px]  overflow-hidden mw-xl:m-0	">
-            <p className="text-brandDark2 font-bold font-sec-saprate-18 dark:text-secSaprator w-auto min-w-fit mw-sm:pt-5  mw-sm:w-full uppercase">
+          <div className="section-saprator flex flex-row items-center pb-[24px] mw-sm:pb-[16px] overflow-hidden mw-xl:m-0	">
+            <p className="text-brandDark2 font-bold font-sec-saprate-18 dark:text-secSaprator w-auto min-w-fit mw-sm:pt-0  mw-sm:w-full uppercase">
               Valorant
             </p>
             <div className="bg-gradient-to-r from-brandDark2 h-0.5  min-w-[86%] ml-3 dark:from-secSaprator mw-sm:hidden"></div>
