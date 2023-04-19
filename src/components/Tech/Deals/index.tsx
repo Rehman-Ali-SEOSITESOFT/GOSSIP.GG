@@ -96,7 +96,7 @@ const DeailTech = () => {
                 }
                 key={index}
               >
-                <div className="img-wrapper  h-[250px] mw-lg:h-[200px] mw-sm:h-[180px] mw-sm3:h-[160px] rounded relative">
+                <div className="img-wrapper  h-[250px] mw-lg:h-[200px] mw-sm:h-[180px] mw-sm3:h-[150px] rounded relative">
                   <Image src={elem} alt="hello" className="w-full h-full" />
 
                   {index === 0 || index === 4 || index === 8 || index === 12 ? (
@@ -177,7 +177,7 @@ const DeailTech = () => {
                 }
                 key={index}
               >
-                <div className="img-wrapper  h-[250px] mw-lg:h-[200px] mw-sm:h-[180px] mw-sm3:h-[160px] rounded relative">
+                <div className="img-wrapper  h-[250px] mw-lg:h-[200px] mw-sm:h-[180px] mw-sm3:h-[150px] rounded relative">
                   <Image src={elem} alt="hello" className="w-full h-full" />
 
                   {index === 0 || index === 4 || index === 8 || index === 12 ? (

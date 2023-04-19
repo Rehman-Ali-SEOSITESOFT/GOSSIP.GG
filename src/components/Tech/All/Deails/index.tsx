@@ -26,20 +26,20 @@ const AllDeail = () => {
                   //     : "mr-[25px] " + " w-[300px] mw-lg:w-[48%] mw-sm3:w-full "
                   // }
                   className={
-                    "max-w-[300px] mx-14:max-w-[24%] w-full mw-md:max-w-[48%]  mw-sm3:max-w-full    "
+                    "max-w-[300px] mx-14:max-w-[24%] w-full mw-md:max-w-[48%]   "
                   }
                   key={index}
                 >
-                  <div className="img-wrapper w-full  h-[236px]  mw-xl:h-[210px] mw-lg:h-fit mw-sm3:h-[230px]	 rounded relative">
+                  <div className="img-wrapper w-full  h-[236px]  mw-xl:h-[210px] mw-lg:h-fit mw-sm3:h-[150px]	 rounded relative">
                     <Image src={elem} alt="hello" className="w-full h-full" />
 
                     {index === 0 ? (
-                      <div className="picked bg-arrowicon bg-brand text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[8px]	">
+                      <div className="picked bg-arrowicon bg-brand text-brandLightOpacity100 montserratfont font-bold text-base leading-5 text-center w-[148px] h-[40px] flex items-center justify-center rounded-r absolute left-0 top-[8px] mw-sm:h-auto	 mw-sm:w-auto mw-sm:p-1 mw-sm:text-[12px]">
                         AMAZON DEALS
                       </div>
                     ) : null}
                     {index === 0 ? (
-                      <div className="review w-[40px] h-[40px] bg-brand flex justify-center items-center rounded-[50px] absolute top-[8px] right-[8px]">
+                      <div className="review w-[40px] h-[40px] mw-sm:w-[35px] mw-sm:h-[35px] bg-brand flex justify-center items-center rounded-[50px] absolute top-[8px] right-[8px]">
                         <span className="montserratfont font-bold text-lg leading-[22px] text-brandLightOpacity100">
                           <Image src={deailamazon} alt="amazol deail" />
                         </span>
@@ -47,7 +47,7 @@ const AllDeail = () => {
                     ) : null}
                   </div>
                   <div className="description flex justify-between pt-3 ">
-                    <h4 className="text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 pr-2 mw-lg:text-[15px] mw-sm:text-sm mw-sm:leading-[17px]">
+                    <h4 className="text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 pr-2 mw-lg:text-[15px] mw-sm:text-sm mw-sm:leading-[17px] deail-tab-com-title">
                       Check out the Great Indian Amazon Sale this month
                     </h4>
                     <div>
