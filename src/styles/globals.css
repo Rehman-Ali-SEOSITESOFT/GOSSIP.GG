@@ -20,6 +20,8 @@
   --brandDark3: #141313;
   --grayCardHover: rgba(34, 30, 31, 30%);
   --grayCard: rgba(34, 30, 31, 0.1);
+  --darkscroll-border: rgba(229, 229, 229, 0.2);
+  --lightscroll-border: rgba(34, 30, 31, 0.2);
 
   /* // BRAND COLOR */
   --brand: #ed4e50;
@@ -41,7 +43,15 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  border: 1px solid rgba(229, 229, 229, 0.2);
+  border: 1px solid var(--darkscroll-border);
+  border-radius: 8px !important;
+}
+.dark-custom--scroll--filer::-webkit-scrollbar-thumb {
+  border-radius: 8px !important;
+  border: 1px solid var(--darkscroll-border);
+}
+.light-custom--scroll--filer::-webkit-scrollbar-thumb {
+  border: 1px solid var(--lightscroll-border);
   border-radius: 8px !important;
 }
 
@@ -388,7 +398,7 @@ body::-webkit-scrollbar-thumb {
   .global-section-width {
     padding: 0 16px;
   }
-
+  .esport-event-valorant-title2,
   .hero-section-tech-title {
     display: -webkit-box;
     -webkit-line-clamp: 2;

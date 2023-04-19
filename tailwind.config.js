@@ -6,6 +6,7 @@ module.exports = {
     enabled: true,
     content: ["./src/**/*.tsx"],
   },
+
   content: [
     // Or if using `src` directory:
     "./node_modules/flowbite-react/**/*.js",
@@ -98,4 +99,7 @@ module.exports = {
     },
   },
   plugins: [require("@tailwindcss/typography"), require("tailwind-scrollbar")],
-}
+  variants: {
+    scrollbar: ["rounded"],
+  },
+};
