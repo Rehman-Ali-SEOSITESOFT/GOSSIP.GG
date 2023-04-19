@@ -2,6 +2,7 @@
 import React, { useState } from "react"
 import eyeIcon from "../../../assets/esporting-events/eye.png"
 import banner from "../../../assets/esporting-events/banner_.webp"
+import tabImage from "../../../assets/esportevents2/tabVersionImage.png"
 import msg from "../../../assets/esporting-events/message.png"
 import bookmark from "../../../assets/esporting-events/bookmark.png"
 import forward from "../../../assets/esporting-events/forward.png"
@@ -67,49 +68,54 @@ const Page = () => {
   ])
   return (
     <>
-      <section className="esports_events_wrapper_">
+      <section className={`${style.esports_events_wrapper_2}`}>
         <div className="global-section-width">
           <div className="2xl:container">
             <div className="valo_community_cup mt-[44px]">
-              <h2 className="montserratfont text-2xl   leading-[29px] font-bold	dark:text-[#E5E5E5]">
+              <h2 className="montserratfont text-2xl   leading-[29px] font-bold	dark:text-[#E5E5E5] mw-sm:text-[16px] mw-sm:leading-[20px]">
                 Valorant Community Cup#19
               </h2>
-              <p className="mt-[10px] montserratfont text-[#008D52] font-medium	text-base	leading-[20px] ">
+              <p className="mt-[10px] montserratfont text-[#008D52] font-medium	text-base	leading-[20px] mw-sm:mt-[4px] mw-sm:text-[14px]">
                 Registration Open
               </p>
-              <div className="flex mt-[10px]">
+              <div className="flex mt-[10px] mw-sm:mt-[4px]">
                 <p className="montserratfont text-sm	leading-[17px] font-medium	dark:text-brandLightOpacity70">
                   200
                 </p>
                 <Image
                   src={eyeIcon}
                   alt=""
-                  className="ml-[8px]  brightness-0 dark:brightness-200"
+                  className="ml-[8px] brightness-0 dark:brightness-200"
                 />
               </div>
             </div>
             <div className="banner_esports_event_ relative">
               <div className="mt-[20px]">
-                <Image src={banner} alt="img" className="" />
+                <Image src={banner} alt="img" className="mw-9:hidden" />
+                <Image
+                  src={tabImage}
+                  alt="img"
+                  className="hidden mw-9:block w-[100%]"
+                />
               </div>
-              <button className="absolute right-[24px] bottom-[50px] bg-brandLightOpacity90 rounded-[20px] montserratfont text-[#221E1F] text-[16px] leading-[20px] font-semibold py-[10px] px-[16px]">
+              <button className="absolute right-[24px] bottom-[50px] bg-brandLightOpacity90 rounded-[20px] montserratfont text-[#221E1F] text-[16px] leading-[20px] font-semibold py-[10px] px-[16px]          mw-9:text-[14px] mw-sm:text-[12px] mw-sm:bottom-[30px] mw-sm:right-[14px] mw-sm:py-[8px] mw-sm:px-[12px]">
                 Registrations Open
               </button>
             </div>
-            <div className="intel_presents_valorant flex justify-between relative">
+            <div className="intel_presents_valorant flex justify-between relative mw-9:flex-col-reverse">
               {/* left section starts here */}
 
-              <div className="w-[70%] mt-[48px]">
-                <h2 className="montserratfont text-[32px] leading-[39px]  dark:text-[#E5E5E5] font-bold	">
+              <div className="w-[70%] mt-[48px] mx-13:w-[65%] mw-11:w-[60%] mw-9:w-[100%] mw-9:mb-[0px] mw-9:mt-[36px]">
+                <h2 className="montserratfont text-[32px] leading-[39px]  dark:text-[#E5E5E5] font-bold	mw-11:text-[26px] mw-9:text-[22px] mw-sm:text-[18px] mw-sm:leading-[24px]">
                   Intel Presents Valorant Community Cup#19
                 </h2>
-                <div className="mt-[20px]">
+                <div className="mt-[20px] mw-11:mt-[16px]">
                   <p className="montserratfont font-normal leading-[17px] dark:text-[#E5E5E5]	text-sm	">
                     <span>John D</span> &nbsp; | &nbsp;Jan 30th,2023,18:08
                     &nbsp; |&nbsp; 5 min read
                   </p>
                 </div>
-                <div className="flex items-center mt-[20px] pb-[32px]">
+                <div className="flex items-center mt-[20px] pb-[32px] mw-11:mt-[17px] mw-11:pb-[24px]">
                   <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20  hover:bg-grayCardHover cursor-pointer rounded-3xl	mr-[28px]">
                     <Image
                       src={msg}
@@ -138,7 +144,7 @@ const Page = () => {
                     />
                   </div>
                 </div>
-                <p className="robotoslub text-base	leading-[27px] font-normal	dark:text-brandLightOpacity90 tracking-[0.03em]">
+                <p className="robotoslub text-base	leading-[27px] font-normal	dark:text-brandLightOpacity90 tracking-[0.03em] mw-sm:text-[16px] mw-sm:leading-[22px]">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry&#39;s
                   standard dummy text ever since the 1500s, when an unknown
@@ -146,10 +152,10 @@ const Page = () => {
                   specimen book. It has survived not only five centuries.
                 </p>
                 <div className="about_tournament">
-                  <h2 className="pt-[40px] pb-[24px] montserratfont dark:text-[#E5E5E5] tracking-[0.05em] text-2xl	leading-[30px ] font-bold	">
+                  <h2 className="pt-[40px] pb-[24px] montserratfont dark:text-[#E5E5E5] tracking-[0.05em] text-2xl	leading-[30px ] font-bold	 mw-11:pt-[24px] mw-sm:text-[16px]  mw-sm:py-[16px]">
                     About The Tournament
                   </h2>
-                  <p className="robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90">
+                  <p className="robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90 mw-sm:text-[16px]">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the
                     industry&#39;s standard dummy text ever since the 1500s,
@@ -158,7 +164,7 @@ const Page = () => {
                     five centuries, but also the leap into electronic
                     typesetting, remaining essentially unchanged.
                   </p>
-                  <p className="mt-[40px] robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90">
+                  <p className="mt-[40px] robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90 mw-sm:text-[16px] mw-sm:mt-[16px]">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the
                     industry&#39;s standard dummy text ever since the 1500s,
@@ -168,10 +174,10 @@ const Page = () => {
                     typesetting, remaining essentially unchanged.
                   </p>
                   <div className="rules_and_regulation">
-                    <h2 className="pt-[40px] pb-[24px] montserratfont dark:text-[#E5E5E5] tracking-[0.05em] text-2xl	leading-[30px ] font-bold	">
+                    <h2 className="pt-[40px] pb-[24px] montserratfont dark:text-[#E5E5E5] tracking-[0.05em] text-2xl	leading-[30px ] font-bold	 mw-11:pt-[24px] mw-sm:text-[16px]  mw-sm:py-[16px]">
                       Rules And Regulations
                     </h2>
-                    <p className="robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90">
+                    <p className="robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90 mw-sm:text-[16px] mw-sm:mt-[16px]">
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the
                       industry&#39;s standard dummy text ever since the 1500s,
@@ -180,7 +186,7 @@ const Page = () => {
                       not only five centuries, but also the leap into electronic
                       typesetting, remaining essentially unchanged.
                     </p>
-                    <p className="mt-[40px] robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90">
+                    <p className="mt-[40px] robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90 mw-sm:text-[16px] mw-sm:mt-[16px]">
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the
                       industry&#39;s standard dummy text ever since the 1500s,
@@ -189,7 +195,7 @@ const Page = () => {
                       not only five centuries, but also the leap into electronic
                       typesetting, remaining essentially unchanged.
                     </p>
-                    <div className="royal_battle_field pt-[64px] pb-[39px] w-[80%] m-auto">
+                    <div className="royal_battle_field pt-[64px] pb-[39px] w-[80%] m-auto  mw-sm:py-[20px]">
                       <Image src={map} alt="" />
                       <p className="montserratfont text-[14px] leading-[17px] font-medium dark:text-brandLightOpacity70 pt-[8px ]">
                         Image credit: Hogwarts.com
@@ -197,10 +203,10 @@ const Page = () => {
                     </div>
                   </div>
                   <div className="format_eliminations pb-[48px]">
-                    <h2 className=" pb-[24px] montserratfont dark:text-[#E5E5E5] tracking-[0.05em] text-2xl	leading-[30px ] font-bold	">
+                    <h2 className=" pb-[24px] montserratfont dark:text-[#E5E5E5] tracking-[0.05em] text-2xl	leading-[30px ] font-bold	 mw-11:pt-[24px] mw-sm:text-[16px]  mw-sm:py-[16px]">
                       Formats And Eliminations
                     </h2>
-                    <p className="robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90">
+                    <p className="robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90 mw-sm:text-[16px] mw-sm:mt-[16px]">
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the
                       industry&#39;s standard dummy text ever since the 1500s,
@@ -209,7 +215,7 @@ const Page = () => {
                       not only five centuries, but also the leap into electronic
                       typesetting, remaining essentially unchanged.
                     </p>
-                    <p className="mt-[40px] robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90">
+                    <p className="mt-[40px] robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90 mw-sm:text-[16px] mw-sm:mt-[16px]">
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the
                       industry&#39;s standard dummy text ever since the 1500s,
@@ -219,8 +225,8 @@ const Page = () => {
                       typesetting, remaining essentially unchanged.
                     </p>
                   </div>
-                  <div className="user_detail items-center flex pt-[53px] pb-[55px] border-t-2 border-b-2 dark:border-brandLightOpacity10 border-[#000]">
-                    <div className="user_detail_section_left_side w-[32%] flex border-r-2 border-[#ED4E50]">
+                  <div className="user_detail items-center flex pt-[53px] pb-[55px] border-t-2 border-b-2 dark:border-brandLightOpacity10  mw-9:flex-col mw-9:items-start mw-9:py-[20px]">
+                    <div className="user_detail_section_left_side w-[32%] flex border-r-2 border-[#ED4E50] mw-9:w-[98%] mw-9:border-r-[0]">
                       <div className="image_wrap">
                         <Image src={image1} alt="" />
                       </div>
@@ -234,7 +240,7 @@ const Page = () => {
                             <Image src={stroke} alt="" />
                           </span>
                         </p>
-                        <div className="flex mt-[7px]">
+                        <div className="flex mt-[7px] mw-9:mb-[7px]">
                           <a href="#" className="mr-[16px]">
                             <Image
                               src={insta}
@@ -266,8 +272,8 @@ const Page = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="right_side_user_detail_section w-[65%] ">
-                      <p className="ml-[15px] montserratfont text-[16px] leading-[27px] font-normal dark:text-[#E5E5E5]">
+                    <div className="right_side_user_detail_section w-[65%] mw-9:w-[98%] ">
+                      <p className="ml-[15px] montserratfont text-[16px] leading-[27px] font-normal dark:text-[#E5E5E5] mw-sm:text-[14px] mw-sm:ml-[0px]  mw-sm:leading-[18px] mw-sm3:text-[12px] mw-sm3:leading-[14px]">
                         John is a professional Dota 2 player and a winner of
                         multiple championships. He has been a freelance Esports
                         journalist since 2013.professional Dota 2 player and a
@@ -276,7 +282,7 @@ const Page = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="tags_wrapper pt-[32px] flex ">
+                  <div className="tags_wrapper pt-[32px] flex  mw-sm:pt-[20px]">
                     <div className="share_forward flex w-[32%]">
                       <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20    hover:bg-grayCardHover cursor-pointer rounded-3xl mr-[32px]">
                         <Image
@@ -309,10 +315,10 @@ const Page = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="pt-[58px] pb-[60px]">
+                  <div className="pt-[58px] pb-[60px]  mw-sm:py-[20px]">
                     <a
                       href="#"
-                      className="montserratfont underline text-[16px] leading-[20px] font-medium dark:text-brandLightOpacity70"
+                      className="montserratfont underline text-[16px] leading-[20px] font-medium dark:text-brandLightOpacity70  mw-sm:text-[12px]"
                     >
                       See Less
                     </a>
@@ -320,11 +326,11 @@ const Page = () => {
 
                   <div className={`${style.comments_section}`}>
                     <SectionSaprator title="Comments" />
-                    <p className="mt-[-16px] montserratfont font-normal	text-xs	leading-[15px] dark:text-brandLightOpacity70">
+                    <p className="mt-[-16px] montserratfont font-normal	text-xs	leading-[15px] dark:text-brandLightOpacity70 ">
                       250 Comments
                     </p>
                   </div>
-                  <div className="mt-[24px] mb-[12px] leave_comment_section bg-commentBg rounded w-[100%] py-[12px] px-[34px]">
+                  <div className="mt-[24px] mb-[12px] leave_comment_section dark:bg-commentBg bg-[#fff] rounded w-[100%] py-[12px] px-[34px] mw-sm3:py-[12px] mw-sm3:px-[6px]">
                     <div className="type_comment flex">
                       <Image
                         src={typeComment}
@@ -334,7 +340,7 @@ const Page = () => {
                       <input
                         placeholder="Type a Comment"
                         type="text"
-                        className="block focus:outline-none text-[12px] w-[75%] border-b-2 border-l-0 border-t-0 border-r-0 text-brandLightOpacity70 dark:border-brandLightOpacity10  bg-transparent placeholder:montserratfont placeholder:text-[12px] "
+                        className="block focus:outline-none text-[12px] w-[75%] border-b-2 border-l-0 border-t-0 border-r-0 dark:text-brandLightOpacity70 dark:border-brandLightOpacity10  bg-transparent placeholder:montserratfont placeholder:text-[12px] "
                       />
                     </div>
 
@@ -343,26 +349,30 @@ const Page = () => {
                         <Image src={user} alt="" className="mr-[16px] " />
                         <div className="comment_area ">
                           <div className="name_time flex mb-[8px]">
-                            <h6 className=" montserratfont leading-[15px] text-[12px] font-semibold text-[#E5E5E5]">
+                            <h6 className=" montserratfont leading-[15px] text-[12px] font-semibold dark:text-[#E5E5E5]">
                               GameForLife
                             </h6>
-                            <p className="montserratfont text-[12px] leading-[15px] font-normal text-brandLightOpacity70	ml-[8px]">
+                            <p className="montserratfont text-[12px] leading-[15px] font-normal dark:text-brandLightOpacity70	ml-[8px]">
                               5 mins ago
                             </p>
                           </div>
-                          <p className="montserratfont text-[14px] leading-[17px] text-brandLightOpacity70 font-medium	">
+                          <p className="montserratfont text-[14px] leading-[17px] dark:text-brandLightOpacity70 font-medium	">
                             This is the best feature in the Hogwarts Universe!
                           </p>
                           <div className="likes_replays flex mt-[8px]">
                             <div className="flex items-center mr-[28px]">
-                              <Image src={likes} alt="" className="mr-[8px]" />
-                              <p className="montserratfont text-[12px] leading-[15px] text-brandLightOpacity70 font-normal	">
+                              <Image
+                                src={likes}
+                                alt=""
+                                className="mr-[8px] dark:brightness-[1.5] brightness-[0.5]"
+                              />
+                              <p className="montserratfont text-[12px] leading-[15px] dark:text-brandLightOpacity70 font-normal	">
                                 34
                               </p>
                             </div>
                             <a
                               href="#"
-                              className="montserratfont text-[12px] leading-[15px] font-semibold text-[#E5E5E5]"
+                              className="montserratfont text-[12px] leading-[15px] font-semibold dark:text-[#E5E5E5]"
                             >
                               Reply
                             </a>
@@ -374,14 +384,14 @@ const Page = () => {
                           <Image src={image2} alt="" className="mr-[16px] " />
                           <div className="comment_area ">
                             <div className="name_time flex mb-[8px]">
-                              <h6 className=" montserratfont leading-[15px] text-[12px] font-semibold text-[#E5E5E5]">
+                              <h6 className=" montserratfont leading-[15px] text-[12px] font-semibold dark:text-[#E5E5E5]">
                                 HogwartzzGrl
                               </h6>
-                              <p className="montserratfont text-[12px] leading-[15px] font-normal text-brandLightOpacity70	ml-[8px]">
+                              <p className="montserratfont text-[12px] leading-[15px] font-normal dark:text-brandLightOpacity70	ml-[8px]">
                                 yesterday
                               </p>
                             </div>
-                            <p className="montserratfont text-[14px] leading-[17px] text-brandLightOpacity70 font-medium	">
+                            <p className="montserratfont text-[14px] leading-[17px] dark:text-brandLightOpacity70 font-medium	">
                               I can’t imagine playing the game without Floo
                               Flames, it’s my most favorite thing ever!
                             </p>
@@ -390,15 +400,15 @@ const Page = () => {
                                 <Image
                                   src={likes}
                                   alt=""
-                                  className="mr-[8px]"
+                                  className="mr-[8px] dark:brightness-[1.5] brightness-[0.5]"
                                 />
-                                <p className="montserratfont text-[12px] leading-[15px] text-brandLightOpacity70 font-normal	">
+                                <p className="montserratfont text-[12px] leading-[15px] dark:text-brandLightOpacity70 font-normal	">
                                   34
                                 </p>
                               </div>
                               <a
                                 href="#"
-                                className="montserratfont text-[12px] leading-[15px] font-semibold text-[#E5E5E5]"
+                                className="montserratfont text-[12px] leading-[15px] font-semibold dark:text-[#E5E5E5]"
                               >
                                 Reply
                               </a>
@@ -409,14 +419,14 @@ const Page = () => {
                           <Image src={image3} alt="" className="mr-[16px] " />
                           <div className="comment_area ">
                             <div className="name_time flex mb-[8px]">
-                              <h6 className=" montserratfont leading-[15px] text-[12px] font-semibold text-[#E5E5E5]">
+                              <h6 className=" montserratfont leading-[15px] text-[12px] font-semibold dark:text-[#E5E5E5]">
                                 HogwartzzGrl
                               </h6>
-                              <p className="montserratfont text-[12px] leading-[15px] font-normal text-brandLightOpacity70	ml-[8px]">
+                              <p className="montserratfont text-[12px] leading-[15px] font-normal dark:text-brandLightOpacity70	ml-[8px]">
                                 yesterday
                               </p>
                             </div>
-                            <p className="montserratfont text-[14px] leading-[17px] text-brandLightOpacity70 font-medium	">
+                            <p className="montserratfont text-[14px] leading-[17px] dark:text-brandLightOpacity70 font-medium	">
                               I can’t imagine playing the game without Floo
                               Flames, it’s my most favorite thing ever!
                             </p>
@@ -425,15 +435,15 @@ const Page = () => {
                                 <Image
                                   src={likes}
                                   alt=""
-                                  className="mr-[8px]"
+                                  className="mr-[8px] dark:brightness-[1.5] brightness-[0.5]"
                                 />
-                                <p className="montserratfont text-[12px] leading-[15px] text-brandLightOpacity70 font-normal	">
+                                <p className="montserratfont text-[12px] leading-[15px] dark:text-brandLightOpacity70 font-normal	">
                                   34
                                 </p>
                               </div>
                               <a
                                 href="#"
-                                className="montserratfont text-[12px] leading-[15px] font-semibold text-[#E5E5E5]"
+                                className="montserratfont text-[12px] leading-[15px] font-semibold dark:text-[#E5E5E5]"
                               >
                                 Reply
                               </a>
@@ -444,14 +454,14 @@ const Page = () => {
                           <Image src={image4} alt="" className="mr-[16px] " />
                           <div className="comment_area ">
                             <div className="name_time flex mb-[8px]">
-                              <h6 className=" montserratfont leading-[15px] text-[12px] font-semibold text-[#E5E5E5]">
+                              <h6 className=" montserratfont leading-[15px] text-[12px] font-semibold dark:text-[#E5E5E5]">
                                 HogwartzzGrl
                               </h6>
-                              <p className="montserratfont text-[12px] leading-[15px] font-normal text-brandLightOpacity70	ml-[8px]">
+                              <p className="montserratfont text-[12px] leading-[15px] font-normal dark:text-brandLightOpacity70	ml-[8px]">
                                 yesterday
                               </p>
                             </div>
-                            <p className="montserratfont text-[14px] leading-[17px] text-brandLightOpacity70 font-medium	">
+                            <p className="montserratfont text-[14px] leading-[17px] dark:text-brandLightOpacity70 font-medium	">
                               I can’t imagine playing the game without Floo
                               Flames, it’s my most favorite thing ever!
                             </p>
@@ -460,15 +470,15 @@ const Page = () => {
                                 <Image
                                   src={likes}
                                   alt=""
-                                  className="mr-[8px]"
+                                  className="mr-[8px] dark:brightness-[1.5] brightness-[0.5]"
                                 />
-                                <p className="montserratfont text-[12px] leading-[15px] text-brandLightOpacity70 font-normal	">
+                                <p className="montserratfont text-[12px] leading-[15px] dark:text-brandLightOpacity70 font-normal	">
                                   34
                                 </p>
                               </div>
                               <a
                                 href="#"
-                                className="montserratfont text-[12px] leading-[15px] font-semibold text-[#E5E5E5]"
+                                className="montserratfont text-[12px] leading-[15px] font-semibold dark:text-[#E5E5E5]"
                               >
                                 Reply
                               </a>
@@ -480,26 +490,30 @@ const Page = () => {
                         <Image src={image5} alt="" className="mr-[16px] " />
                         <div className="comment_area ">
                           <div className="name_time flex mb-[8px]">
-                            <h6 className=" montserratfont leading-[15px] text-[12px] font-semibold text-[#E5E5E5]">
+                            <h6 className=" montserratfont leading-[15px] text-[12px] font-semibold dark:text-[#E5E5E5]">
                               GameForLife
                             </h6>
-                            <p className="montserratfont text-[12px] leading-[15px] font-normal text-brandLightOpacity70	ml-[8px]">
+                            <p className="montserratfont text-[12px] leading-[15px] font-normal dark:text-brandLightOpacity70	ml-[8px]">
                               5 mins ago
                             </p>
                           </div>
-                          <p className="montserratfont text-[14px] leading-[17px] text-brandLightOpacity70 font-medium	">
+                          <p className="montserratfont text-[14px] leading-[17px] dark:text-brandLightOpacity70 font-medium	">
                             This is the best feature in the Hogwarts Universe!
                           </p>
                           <div className="likes_replays flex mt-[8px]">
                             <div className="flex items-center mr-[28px]">
-                              <Image src={likes} alt="" className="mr-[8px]" />
-                              <p className="montserratfont text-[12px] leading-[15px] text-brandLightOpacity70 font-normal	">
+                              <Image
+                                src={likes}
+                                alt=""
+                                className="mr-[8px] dark:brightness-[1.5] brightness-[0.5]"
+                              />
+                              <p className="montserratfont text-[12px] leading-[15px] dark:text-brandLightOpacity70 font-normal	">
                                 34
                               </p>
                             </div>
                             <a
                               href="#"
-                              className="montserratfont text-[12px] leading-[15px] font-semibold text-[#E5E5E5]"
+                              className="montserratfont text-[12px] leading-[15px] font-semibold dark:text-[#E5E5E5]"
                             >
                               Reply
                             </a>
@@ -518,9 +532,9 @@ const Page = () => {
                     <SectionSaprator title="Updates" />
                   </div>
                   <div
-                    className={`${style.updates_area_here_wrapper} text-center bg-commentBg rounded px-[82px] mb-[88px]`}
+                    className={`${style.updates_area_here_wrapper} text-center dark:bg-commentBg bg-[#fff] rounded px-[82px] mb-[88px]`}
                   >
-                    <h4 className="montserratfont text-[32px] leading-[39px] font-bold text-[#fff] ">
+                    <h4 className="montserratfont text-[32px] leading-[39px] font-bold dark:text-[#fff]  mw-sm:text-[22px]">
                       5 Days To Go!
                     </h4>
                   </div>
@@ -530,13 +544,13 @@ const Page = () => {
 
               {/* right section starts here */}
 
-              <div className="mt-[48px] w-[28%] mb-[88px]">
-                <div className="valorant_sidebar_wrapper dark:bg-[#2E2A2B] bg-[#6A6868] rounded px-[17px] sticky top-[120px]">
+              <div className="mt-[48px] w-[28%] mb-[88px] mx-13:w-[34%] mw-11:w-[38%] mw-9:w-[100%] mw-9:mb-[0px]">
+                <div className="valorant_sidebar_wrapper dark:bg-[#2E2A2B] bg-[#fff] rounded px-[17px] sticky top-[120px] mw-9:block">
                   <div
                     className={`${style.valo_aim} flex items-center pt-[41px] justify-center`}
                   >
                     <Image src={aiming} alt="" />
-                    <h4 className="pl-[18px] montserratfont capitalize text-[24px] leading-[29px] font-semibold text-[#E5E5E5]">
+                    <h4 className="pl-[18px] montserratfont capitalize text-[24px] leading-[29px] font-semibold dark:text-[#E5E5E5]">
                       valorant
                     </h4>
                   </div>
@@ -553,17 +567,21 @@ const Page = () => {
                       )
                     })}
                     <div className="flex pl-[9px]   pb-[34px] pt-[16px]">
-                      <div className="w-[40px] h-[40px] bg-brandLightOpacity10 rounded-full flex items-center justify-center ">
-                        <Image src={torurnament} alt="icon" className=" " />
+                      <div className="w-[40px] h-[40px]  rounded-full flex items-center justify-center bg-[#E9E8E9] dark:bg-brandLightOpacity10">
+                        <Image
+                          src={torurnament}
+                          alt="icon"
+                          className="dark:brightness-[1.5] brightness-[0.5] "
+                        />
                       </div>
                       <div className="name_size pl-[30px] ">
-                        <h4 className="montserratfont text-[16px] leading-[20px] font-semibold text-[#E5E5E5]">
+                        <h4 className="montserratfont text-[16px] leading-[20px] font-semibold dark:text-[#E5E5E5]">
                           Tournament&nbsp;
                         </h4>
-                        <p className="pt-[8px] montserratfont text-[14px] leading-[17px] font-medium	text-brandLightOpacity70">
+                        <p className="pt-[8px] montserratfont text-[14px] leading-[17px] font-medium	dark:text-brandLightOpacity70">
                           Starts&nbsp; . Mar 30th, 2023,18:08
                         </p>
-                        <p className="pt-[8px] montserratfont text-[14px] leading-[17px] font-medium	text-brandLightOpacity70">
+                        <p className="pt-[8px] montserratfont text-[14px] leading-[17px] font-medium	dark:text-brandLightOpacity70">
                           Ends &nbsp; &nbsp;. Mar 30th, 2023,18:08
                         </p>
                       </div>

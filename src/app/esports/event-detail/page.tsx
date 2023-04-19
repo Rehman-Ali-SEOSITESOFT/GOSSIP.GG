@@ -2,7 +2,8 @@
 import Image from "next/image"
 import React, { useState } from "react"
 import eyeIcon from "../../../assets/esporting-events/eye.png"
-import banner from "../../../assets/esporting-events/bannerimg1.png"
+import banner from "../../../assets/esporting-events/banner_.webp"
+import tabImage from "../../../assets/esportevents2/tabVersionImage.png"
 import style from "./EsportsEvents.module.css"
 import msg from "../../../assets/esporting-events/message.png"
 import bookmark from "../../../assets/esporting-events/bookmark.png"
@@ -30,8 +31,10 @@ import trophy from "../../../assets/esporting-events/trophy.png"
 import earth from "../../../assets/esporting-events/earth.png"
 import profile from "../../../assets/esporting-events/profile.png"
 import torurnament from "../../../assets/esporting-events/tournament.png"
-import ValorantListing from "./ValorantListing/ValorantListing"
+import ValorantListing from "./ValorantListing/ValorantListing" ;
+import { useTheme } from "next-themes"
 const Page = () => {
+  const {theme} = useTheme();
   interface List {
     title: string
     icon: any
@@ -70,14 +73,13 @@ const Page = () => {
         <div className="global-section-width">
           <div className="2xl:container">
             <div className="valo_community_cup mt-[44px]">
-              <h2 className="montserratfont text-2xl   leading-[29px] font-bold	dark:text-[#E5E5E5]">
-                {" "}
-                Valorant Community Cup#19{" "}
+              <h2 className="montserratfont text-2xl   leading-[29px] font-bold	dark:text-[#E5E5E5] mw-sm:text-[16px] mw-sm:leading-[20px]">
+                Valorant Community Cup#19
               </h2>
-              <p className="mt-[10px] montserratfont text-[#008D52] font-medium	text-base	leading-[20px] ">
+              <p className="mt-[10px] montserratfont text-[#008D52] font-medium	text-base	leading-[20px]  mw-sm:mt-[4px] mw-sm:text-[14px]">
                 Registration Open
               </p>
-              <div className="flex mt-[10px]">
+              <div className="flex mt-[10px] mw-sm:mt-[4px]">
                 <p className="montserratfont text-sm	leading-[17px] font-medium	dark:text-brandLightOpacity70">
                   200
                 </p>
@@ -88,25 +90,33 @@ const Page = () => {
                 />
               </div>
             </div>
-            <div className="banner_esports_event_">
+            <div className="banner_esports_event_ relative">
               <div className="mt-[20px]">
-                <Image src={banner} alt="img" className="" />
+                <Image src={banner} alt="img" className="mw-9:hidden" />
+                <Image
+                  src={tabImage}
+                  alt="img"
+                  className="hidden mw-9:block w-[100%]"
+                />
               </div>
+              <button className="absolute right-[24px] bottom-[50px] bg-brandLightOpacity90 rounded-[20px] montserratfont text-[#221E1F] text-[16px] leading-[20px] font-semibold py-[10px] px-[16px]   mw-9:text-[14px] mw-sm:text-[12px] mw-sm:bottom-[30px] mw-sm:right-[14px] mw-sm:py-[8px] mw-sm:px-[12px]">
+                Registrations Open
+              </button>
             </div>
-            <div className="intel_presents_valorant flex justify-between relative">
+            <div className="intel_presents_valorant flex justify-between relative mw-9:flex-col-reverse">
               {/* left section starts here */}
 
-              <div className="w-[70%] mt-[48px]">
-                <h2 className="montserratfont text-[32px] leading-[39px]  dark:text-[#E5E5E5] font-bold	">
-                  Intel Presents Valorant Community Cup#19{" "}
+              <div className="w-[70%] mt-[48px] mx-13:w-[65%] mw-11:w-[60%] mw-9:w-[100%] mw-9:mb-[0px] mw-9:mt-[36px]">
+                <h2 className="montserratfont text-[32px] leading-[39px]  dark:text-[#E5E5E5] font-bold	mw-11:text-[26px] mw-9:text-[22px] mw-sm:text-[18px] mw-sm:leading-[24px]">
+                  Intel Presents Valorant Community Cup#19
                 </h2>
-                <div className="mt-[20px]">
+                <div className="mt-[20px] mw-11:mt-[16px]">
                   <p className="montserratfont font-normal leading-[17px] dark:text-[#E5E5E5]	text-sm	">
                     <span>John D</span> &nbsp; | &nbsp;Jan 30th,2023,18:08
                     &nbsp; |&nbsp; 5 min read
                   </p>
                 </div>
-                <div className="flex items-center mt-[20px] pb-[32px]">
+                <div className="flex items-center mt-[20px] pb-[32px] mw-11:mt-[17px] mw-11:pb-[24px]">
                   <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20  hover:bg-grayCardHover cursor-pointer rounded-3xl	mr-[28px]">
                     <Image
                       src={msg}
@@ -135,7 +145,7 @@ const Page = () => {
                     />
                   </div>
                 </div>
-                <p className="robotoslub text-base	leading-[27px] font-normal	dark:text-brandLightOpacity90 tracking-[0.03em]">
+                <p className="robotoslub text-base	leading-[27px] font-normal	dark:text-brandLightOpacity90 tracking-[0.03em] mw-sm:text-[16px] mw-sm:leading-[22px]">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry&#39;s
                   standard dummy text ever since the 1500s, when an unknown
@@ -143,10 +153,10 @@ const Page = () => {
                   specimen book. It has survived not only five centuries.
                 </p>
                 <div className="about_tournament">
-                  <h2 className="pt-[40px] pb-[24px] montserratfont dark:text-[#E5E5E5] tracking-[0.05em] text-2xl	leading-[30px ] font-bold	">
+                  <h2 className="pt-[40px] pb-[24px] montserratfont dark:text-[#E5E5E5] tracking-[0.05em] text-2xl	leading-[30px ] font-bold	 mw-11:pt-[24px] mw-sm:text-[16px]  mw-sm:py-[16px]">
                     About The Tournament
                   </h2>
-                  <p className="robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90">
+                  <p className="robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90 mw-sm:text-[16px]">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the
                     industry&#39;s standard dummy text ever since the 1500s,
@@ -155,7 +165,7 @@ const Page = () => {
                     five centuries, but also the leap into electronic
                     typesetting, remaining essentially unchanged.
                   </p>
-                  <p className="mt-[40px] robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90">
+                  <p className="mt-[40px] robotoslub font-normal	text-base	leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90 mw-sm:text-[16px] mw-sm:mt-[16px]">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the
                     industry&#39;s standard dummy text ever since the 1500s,
@@ -164,10 +174,10 @@ const Page = () => {
                     five centuries, but also the leap into electronic
                     typesetting, remaining essentially unchanged.
                   </p>
-                  <div className="mt-[16px] mb-[60px]">
+                  <div className="mt-[16px] mb-[60px] mw-sm3:mb-[20px]">
                     <a
                       href="#"
-                      className=" underline	montserratfont text-base	leading-[20px] tracking-[0.05em] dark:text-brandLightOpacity70 font-medium	"
+                      className=" underline	montserratfont text-base	leading-[20px] tracking-[0.05em] dark:text-brandLightOpacity70 font-medium	mw-sm3:text-[10px] mw-sm3:leading-[12px]"
                     >
                       See More
                     </a>
@@ -178,7 +188,7 @@ const Page = () => {
                       250 Comments
                     </p>
                   </div>
-                  <div className="mt-[24px] mb-[12px] leave_comment_section bg-commentBg  rounded w-[100%] py-[12px] px-[34px]">
+                  <div className="mt-[24px] mb-[12px] leave_comment_section dark:bg-commentBg bg-[#fff]  rounded w-[100%] py-[12px] px-[34px] mw-sm3:py-[12px] mw-sm3:px-[6px]">
                     <div className="type_comment flex">
                       <Image
                         src={typeComment}
@@ -188,33 +198,37 @@ const Page = () => {
                       <input
                         placeholder="Type a Comment"
                         type="text"
-                        className="block text-[12px] w-[75%] border-b-2 text-brandLightOpacity70 border-brandLightOpacity10 bg-transparent placeholder:montserratfont placeholder:text-[12px] focus:outline-none"
+                        className="block text-[12px] w-[75%] border-b-2 dark:text-brandLightOpacity70 dark:border-brandLightOpacity10 bg-transparent placeholder:montserratfont placeholder:text-[12px] focus:outline-none"
                       />
                     </div>
                     <div className="comment_shown mt-[21px] flex items-center">
                       <Image src={user} alt="" className="mr-[16px] " />
                       <div className="comment_area ">
                         <div className="name_time flex mb-[8px]">
-                          <h6 className=" montserratfont leading-[15px] text-[12px] font-semibold text-[#E5E5E5]">
+                          <h6 className=" montserratfont leading-[15px] text-[12px] font-semibold dark:text-[#E5E5E5]">
                             GameForLife
                           </h6>
-                          <p className="montserratfont text-[12px] leading-[15px] font-normal text-brandLightOpacity70	ml-[8px]">
+                          <p className="montserratfont text-[12px] leading-[15px] font-normal dark:text-brandLightOpacity70	ml-[8px]">
                             5 mins ago
                           </p>
                         </div>
-                        <p className="montserratfont text-[14px] leading-[17px] text-brandLightOpacity70 font-medium	">
+                        <p className="montserratfont text-[14px] leading-[17px] dark:text-brandLightOpacity70 font-medium	mw-sm3:text-[12px] mw-sm3:leading-[15px]">
                           This is the best feature in the Hogwarts Universe!
                         </p>
                         <div className="likes_replays flex mt-[8px]">
                           <div className="flex items-center mr-[28px]">
-                            <Image src={likes} alt="" className="mr-[8px]" />
-                            <p className="montserratfont text-[12px] leading-[15px] text-brandLightOpacity70 font-normal	">
+                            <Image
+                              src={likes}
+                              alt=""
+                              className="mr-[8px] dark:brightness-[1.5] brightness-[0.5]"
+                            />
+                            <p className="montserratfont text-[12px] leading-[15px] dark:text-brandLightOpacity70 font-normal	">
                               34
                             </p>
                           </div>
                           <a
                             href="#"
-                            className="montserratfont text-[12px] leading-[15px] font-semibold text-[#E5E5E5]"
+                            className="montserratfont text-[12px] leading-[15px] font-semibold dark:text-[#E5E5E5]"
                           >
                             Reply
                           </a>
@@ -222,19 +236,21 @@ const Page = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="mb-[33px]">
-                    <p className="montserratfont text-[12px] leading-[15px] font-normal	text-brandLightOpacity70 cursor-pointer">
+                  <div className="mb-[33px] mw-sm3:mb-[24px]">
+                    <p className="montserratfont text-[12px] leading-[15px] font-normal	dark:text-brandLightOpacity70 cursor-pointer mw-sm3:text-[10px] mx-sw3:leaing-[12px]">
                       View More Comments
                     </p>
                   </div>
-                  <div className="update_wrapper mb-[60px]">
+                  <div className="update_wrapper mb-[60px] mw-sm3:mb-[24px]">
                     <SectionSaprator title="Update" />
-                    <div className="udpates_ flex ">
-                      <h2 className="mr-[16px] mt-[4px]">Show Updates for:</h2>
+                    <div className="udpates_ flex mw-sm:justify-between">
+                      <h2 className="montserratfont font-bold leading-[15px] dark:text-[#E5E5E5] mr-[16px] mt-[4px] mw-sm:text-[12px]">
+                        Show Updates for:
+                      </h2>
                       <DropDown />
                     </div>
                   </div>
-                  <div className="comments_area_here_wrapper bg-commentBg rounded py-[26px] px-[82px] mb-[88px] ">
+                  <div className="comments_area_here_wrapper dark:bg-commentBg bg-[#fff] rounded py-[26px] px-[82px] mb-[88px]  mw-sm:py-[25px] mw-sm:px-[20px]">
                     <div
                       className="first_comment_area border-b-2
                   border-brandLightOpacity10"
@@ -243,10 +259,10 @@ const Page = () => {
                         <div className="left_first_comment_area flex items-center">
                           <Image src={commentLogo} alt="logo" />
                           <div className="name_handle ml-[16px]">
-                            <h4 className="text-[#E5E5E5] text-[16px] leading-[20px] montserratfont font-semibold	">
+                            <h4 className="dark:text-[#E5E5E5] text-[16px] leading-[20px] montserratfont font-semibold	mw-sm:text-[14px] mw-sm:leading-[17px]">
                               Gossip.GG
                             </h4>
-                            <p className="pt-[4px] montserratfont text-[14px] leading-[17px] font-normal	text-brandLightOpacity70">
+                            <p className="pt-[4px] montserratfont text-[14px] leading-[17px] font-normal	dark:text-brandLightOpacity70 mw-sm:text-[12px] mw-sm:leading-[15px]">
                               @sportskeeda
                             </p>
                           </div>
@@ -256,14 +272,14 @@ const Page = () => {
                         </div>
                       </div>
                       <div className="narrtation_and_image pt-[28px] px-[50px]">
-                        <h4 className="montserratfont text-[16px] leading-[20px] font-semibold	text-[#E5E5E5]">
+                        <h4 className="montserratfont text-[16px] leading-[20px] font-semibold	dark:text-[#E5E5E5]   mw-sm:text-[14px] mw-sm:leading-[17px]">
                           Can he win this time?
                         </h4>
                         <div className="flex justify-between items-center pt-[4px] pb-[8px]">
-                          <p className="montserratfont text-[16px] leading-[20px] font-normal text-[#47A0B4]">
+                          <p className="montserratfont text-[16px] leading-[20px] font-normal text-[#47A0B4] mw-sm:text-[12px] mw-sm:leading-[15px]">
                             #gamerlife #gossipgg #esports
                           </p>
-                          <p className="montserratfont text-[14px] leading-[17px] text-brandLightOpacity70">
+                          <p className="montserratfont text-[14px] leading-[17px] dark:text-brandLightOpacity70  mw-sm:text-[10px] mw-sm:leading-[12px]">
                             Jan 30th, 2023, 18:08
                           </p>
                         </div>
@@ -276,7 +292,7 @@ const Page = () => {
                           <div className="flex items-center pt-[20px] pb-[30px]">
                             <div className="flex items-center ">
                               <Image src={heart} alt="" />
-                              <p className="pl-[13px] montserratfont text-[16px] leading-[20px] font-normal text-[#fff]">
+                              <p className="pl-[13px] montserratfont text-[16px] leading-[20px] font-normal dark:text-[#fff]">
                                 162
                               </p>
                             </div>
@@ -286,7 +302,7 @@ const Page = () => {
                                 alt=""
                                 className="pt-[8px]"
                               />
-                              <p className="pl-[4px] montserratfont text-[16px] leading-[20px] font-normal text-[#fff]">
+                              <p className="pl-[4px] montserratfont text-[16px] leading-[20px] font-normal dark:text-[#fff]">
                                 14
                               </p>
                             </div>
@@ -302,10 +318,10 @@ const Page = () => {
                         <div className="left_first_comment_area flex items-center">
                           <Image src={commentLogo} alt="logo" />
                           <div className="name_handle ml-[16px]">
-                            <h4 className="text-[#E5E5E5] text-[16px] leading-[20px] montserratfont font-semibold	">
+                            <h4 className="dark:text-[#E5E5E5] text-[16px] leading-[20px] montserratfont font-semibold	mw-sm:text-[14px] mw-sm:leading-[17px]">
                               Gossip.GG
                             </h4>
-                            <p className="pt-[4px] montserratfont text-[14px] leading-[17px] font-normal	text-brandLightOpacity70">
+                            <p className="pt-[4px] montserratfont text-[14px] leading-[17px] font-normal	dark:text-brandLightOpacity70 mw-sm:text-[12px] mw-sm:leading-[15px]">
                               @Gossip.GG
                             </p>
                           </div>
@@ -324,24 +340,28 @@ const Page = () => {
                     </div>
                     <div
                       className="third_comment flex item-center mt-[32px] pb-[32px] border-b-2
-                  border-brandLightOpacity10"
+                  border-brandLightOpacity10 mw-sm:py-[20px] mw-sm:mt-[0px]"
                     >
-                      <div className="w-[40px] h-[40px]">
-                        <Image src={pinkman} alt="" />
+                      <div className="w-[40px] h-[40px] mw-sm:w-[70px]">
+                        <Image
+                          src={pinkman}
+                          alt=""
+                          className="mw-sm:w-[50px]"
+                        />
                       </div>
                       <div className="content_area pl-[16px]">
                         <div className="content_area_top">
-                          <h4 className="flex items-center montserratfont text-[18px] leading-[22px] font-bold text-[#ED4E50]">
+                          <h4 className="flex items-center montserratfont text-[18px] leading-[22px] font-bold text-[#ED4E50] mw-sm:text-[14px] mw-sm:leading-[17px]">
                             Esports Writer{" "}
                             <span>
                               <Image src={brandmark} alt="" />
                             </span>
                           </h4>
-                          <p className="montserratfont text-[12px] leading-[15px] font-normal text-brandLightOpacity70">
+                          <p className="montserratfont text-[12px] leading-[15px] font-normal dark:text-brandLightOpacity70">
                             John D &nbsp;|&nbsp; Jan 30th, 2023, 18:08
                           </p>
                         </div>
-                        <p className="pt-[16px] montserratfont font-normal text-[16px] leading-[27px] text-[#E5E5E5]">
+                        <p className="pt-[16px] montserratfont font-normal text-[16px] leading-[27px] dark:text-[#E5E5E5] mw-sm:text-[12px] mw-sm:leading-[27px]">
                           The Last Of Us Part 2 may just be one of the most
                           unconventional stories ever told in gaming.
                         </p>
@@ -349,65 +369,77 @@ const Page = () => {
                     </div>
                     <div
                       className="third_comment flex item-center mt-[32px] pb-[32px] border-b-2
-                  border-brandLightOpacity10"
+                  border-brandLightOpacity10 mw-sm:py-[20px] mw-sm:mt-[0px]"
                     >
-                      <div className="w-[40px] h-[40px]">
-                        <Image src={pinkman} alt="" />
+                      <div className="w-[40px] h-[40px] mw-sm:w-[70px]">
+                        <Image
+                          src={pinkman}
+                          alt=""
+                          className="mw-sm:w-[50px]"
+                        />
                       </div>
                       <div className="content_area pl-[16px]">
                         <div className="content_area_top">
-                          <h4 className="flex items-center montserratfont text-[18px] leading-[22px] font-bold text-[#ED4E50]">
+                          <h4 className="flex items-center montserratfont text-[18px] leading-[22px] font-bold text-[#ED4E50] mw-sm:text-[14px] mw-sm:leading-[17px]">
                             Esports Writer{" "}
                             <span>
                               <Image src={brandmark} alt="" />
                             </span>
                           </h4>
-                          <p className="montserratfont text-[12px] leading-[15px] font-normal text-brandLightOpacity70">
+                          <p className="montserratfont text-[12px] leading-[15px] font-normal dark:text-brandLightOpacity70">
                             John D &nbsp;|&nbsp; Jan 30th, 2023, 18:08
                           </p>
                         </div>
-                        <p className="pt-[16px] montserratfont font-normal text-[16px] leading-[27px] text-[#E5E5E5]">
+                        <p className="pt-[16px] montserratfont font-normal text-[16px] leading-[27px] dark:text-[#E5E5E5] mw-sm:text-[12px] mw-sm:leading-[27px]">
                           The Last Of Us Part 2 may just be one of the most
                           unconventional stories ever told in gaming.
                         </p>
                       </div>
                     </div>
-                    <div className="third_comment flex item-center mt-[32px] pb-[32px] ">
-                      <div className="w-[40px] h-[40px]">
-                        <Image src={pinkman} alt="" />
+                    <div className="third_comment flex item-center mt-[32px] pb-[32px] mw-sm:pb-[20px] ">
+                      <div className="w-[40px] h-[40px] mw-sm:w-[70px]">
+                        <Image
+                          src={pinkman}
+                          alt=""
+                          className="mw-sm:w-[50px]"
+                        />
                       </div>
                       <div className="content_area pl-[16px]">
                         <div className="content_area_top">
-                          <h4 className="flex items-center montserratfont text-[18px] leading-[22px] font-bold text-[#ED4E50]">
+                          <h4 className="flex items-center montserratfont text-[18px] leading-[22px] font-bold text-[#ED4E50] mw-sm:text-[14px] mw-sm:leading-[17px]">
                             Esports Writer{" "}
                             <span>
                               <Image src={brandmark} alt="" />
                             </span>
                           </h4>
-                          <p className="montserratfont text-[12px] leading-[15px] font-normal text-brandLightOpacity70">
+                          <p className="montserratfont text-[12px] leading-[15px] font-normal dark:text-brandLightOpacity70">
                             John D &nbsp;|&nbsp; Jan 30th, 2023, 18:08
                           </p>
                         </div>
-                        <p className="pt-[16px] montserratfont font-normal text-[16px] leading-[27px] text-[#E5E5E5]">
+                        <p className="pt-[16px] montserratfont font-normal text-[16px] leading-[27px] dark:text-[#E5E5E5] mw-sm:text-[12px] mw-sm:leading-[27px]">
                           The Last Of Us Part 2 may just be one of the most
                           unconventional stories ever told in gaming.
                         </p>
                         <Image
                           src={cod}
                           alt=""
-                          className="w-[100%] pt-[36px]"
+                          className="w-[100%] pt-[36px] mw-sm:pt-[18px]"
                         />
                       </div>
                     </div>
                     <div className="last_comment  mt-[48px] pb-[32px] ">
                       <div className="w-[60px] h-[60px] m-auto text-center">
-                        <Image src={allup} alt="" className="w-[100%]" />
+                        <Image
+                          src={allup}
+                          alt=""
+                          className="w-[100%] dark:brightness-[1.5] brightness-[0.5]"
+                        />
                       </div>
                       <div className="content_area pt-[16px] text-center">
-                        <p className="montserratfont text-[14px] leading-[17px] font-medium	text-brandLightOpacity70 pb-[4px]">
+                        <p className="montserratfont text-[14px] leading-[17px] font-medium	dark:text-brandLightOpacity70 pb-[4px]">
                           All Caught up
                         </p>
-                        <p className="montserratfont font-medium text-[12px] leading-[15px] text-brandLightOpacity50 ">
+                        <p className="montserratfont font-medium text-[12px] leading-[15px] dark:text-brandLightOpacity50 ">
                           Check back tomorrow for latest updates
                         </p>
                       </div>
@@ -419,13 +451,13 @@ const Page = () => {
 
               {/* right section starts here */}
 
-              <div className="mt-[48px] w-[28%] mb-[88px]">
-                <div className="valorant_sidebar_wrapper dark:bg-[#2E2A2B] bg-[#6A6868] rounded px-[17px] sticky top-[120px] ">
+              <div className="mt-[48px] w-[28%] mb-[88px] mx-13:w-[34%] mw-11:w-[38%] mw-9:w-[100%] mw-9:mb-[0px]">
+                <div className="valorant_sidebar_wrapper dark:bg-[#2E2A2B] bg-[#fff] rounded px-[17px] sticky top-[120px] mw-9:block">
                   <div
-                    className={`${style.valo_aim} flex items-center pt-[41px] justify-center`}
+                    className={`${ theme === 'dark' ?  style.dark_valo_aim :  style.valo_aim}  flex items-center pt-[41px] justify-center`}
                   >
                     <Image src={aiming} alt="" />
-                    <h4 className="pl-[18px] montserratfont capitalize text-[24px] leading-[29px] font-semibold text-[#E5E5E5]">
+                    <h4 className="pl-[18px] montserratfont capitalize text-[24px] leading-[29px] font-semibold dark:text-[#E5E5E5]">
                       valorant
                     </h4>
                   </div>
@@ -442,17 +474,21 @@ const Page = () => {
                       )
                     })}
                     <div className="flex pl-[9px]   pb-[34px] pt-[16px]">
-                      <div className="w-[40px] h-[40px] bg-brandLightOpacity10 rounded-full flex items-center justify-center ">
-                        <Image src={torurnament} alt="icon" className=" " />
+                      <div className="w-[40px] h-[40px] bg-brandLightOpacity10 rounded-full flex items-center justify-center bg-[#E9E8E9] dark:bg-brandLightOpacity10">
+                        <Image
+                          src={torurnament}
+                          alt="icon"
+                          className="dark:brightness-[1.5] brightness-[0.5] "
+                        />
                       </div>
                       <div className="name_size pl-[30px] ">
-                        <h4 className="montserratfont text-[16px] leading-[20px] font-semibold text-[#E5E5E5]">
+                        <h4 className="montserratfont text-[16px] leading-[20px] font-semibold dark:text-[#E5E5E5]">
                           Tournament&nbsp;
                         </h4>
-                        <p className="pt-[8px] montserratfont text-[14px] leading-[17px] font-medium	text-brandLightOpacity70">
+                        <p className="pt-[8px] montserratfont text-[14px] leading-[17px] font-medium	dark:text-brandLightOpacity70">
                           Starts&nbsp; . Mar 30th, 2023,18:08
                         </p>
-                        <p className="pt-[8px] montserratfont text-[14px] leading-[17px] font-medium	text-brandLightOpacity70">
+                        <p className="pt-[8px] montserratfont text-[14px] leading-[17px] font-medium	dark:text-brandLightOpacity70">
                           Ends &nbsp; &nbsp;. Mar 30th, 2023,18:08
                         </p>
                       </div>

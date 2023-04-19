@@ -8,10 +8,13 @@ const DropDown = () => {
   return (
     <>
       <div className={`${style.maindropdownWrapper}`}>
-        <Menu as="div" className={`${style.mainwrap} relative inline-block text-left`}>
+        <Menu
+          as="div"
+          className={`${style.mainwrap} relative inline-block text-left`}
+        >
           <div>
             <Menu.Button
-              className={` ${style.buttonDrop} montserratfont justify-between inline-flex w-full justify-center gap-x-1.5 rounded-md dark:bg-white px-3 py-2 text-sm font-semibold dark:text-gray-900 shadow-sm hover:bg-gray-50`}
+              className={` ${style.buttonDrop} montserratfont justify-between inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white  text-[#000] px-3 py-2 text-sm font-semibold dark:text-[red] shadow-sm hover:bg-gray-50`}
             >
               Last Week
             </Menu.Button>
@@ -27,7 +30,7 @@ const DropDown = () => {
             leaveTo="transform opacity-0 scale-95"
           >
             <Menu.Items
-              className={`${style.menuitemwrapper} dark:bg-[#2e2a2b] absolute right-0 z-10 mt-2 w-[380px] origin-top-right   focus:outline-none`}
+              className={`${style.menuitemwrapper} dark:bg-[#2e2a2b] absolute right-0 z-10 mt-2 w-[380px] origin-top-right   focus:outline-none mw-sm:w-[200px]`}
             >
               <div className="py-1">
                 <Menu.Item>

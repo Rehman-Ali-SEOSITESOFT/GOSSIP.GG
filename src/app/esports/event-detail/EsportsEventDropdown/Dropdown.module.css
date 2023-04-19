@@ -27,3 +27,13 @@
 .maindropdownWrapper a:hover {
   background-color: #403d3e;
 }
+@media screen and (max-width: 600px) {
+  .buttonDrop {
+    width: 250px !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .buttonDrop {
+    width: 200px !important;
+  }
+}

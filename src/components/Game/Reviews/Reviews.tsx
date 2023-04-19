@@ -79,7 +79,7 @@ const Reviews = () => {
                           </div>
                           <div className="description flex justify-between pt-3 ">
                             <h4 className="text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 pr-2">
-                              Check out the Great Indian Amazon Sale this month
+                              One Piece Odyssey
                             </h4>
                             <div>
                               <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20    hover:bg-grayCardHover cursor-pointer rounded-3xl ">
@@ -91,13 +91,13 @@ const Reviews = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="flex py-4 montserratfont">
-                            <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
-                              News
-                            </div>
-                            <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
-                              Esports
-                            </div>
+                          <div className="pb-[4px] montserratfont">
+                            <p className="text-[14px] leading-[17px] montserratfont text-[#E5E5E5] font-normal">
+                              Panic Barn
+                            </p>
+                            <p className="montserratfont text-[12px] font-normal leading-[15px] text-brandLightOpacity70  italic pt-[4px]">
+                              Adventure, indie, puzzle
+                            </p>
                           </div>
                         </div>
                       )
@@ -140,8 +140,7 @@ const Reviews = () => {
                                 </div>
                                 <div className="description flex justify-between pt-3 ">
                                   <h4 className="text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 pr-2 review-title mw-sm:text-sm mw-sm:leading-[17px] mw-sm:font-semibold">
-                                    Check out the Great Indian Amazon Sale this
-                                    month
+                                    One Piece Odyssey
                                   </h4>
                                   <div>
                                     <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20    hover:bg-grayCardHover cursor-pointer rounded-3xl ">
@@ -153,13 +152,13 @@ const Reviews = () => {
                                     </div>
                                   </div>
                                 </div>
-                                <div className="flex py-4 montserratfont">
-                                  <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
-                                    News
-                                  </div>
-                                  <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
-                                    Esports
-                                  </div>
+                                <div className="pb-[4px] montserratfont">
+                                  <p className="text-[14px] leading-[17px] montserratfont text-[#E5E5E5] font-normal">
+                                    Panic Barn
+                                  </p>
+                                  <p className="montserratfont text-[12px] font-normal leading-[15px] text-brandLightOpacity70  italic pt-[4px]">
+                                    Adventure, indie, puzzle
+                                  </p>
                                 </div>
                               </div>
                             </>

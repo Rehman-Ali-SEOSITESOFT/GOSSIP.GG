@@ -6,3 +6,91 @@
   padding-top: 96px;
   padding-bottom: 74px;
 }
+.esports_events_wrapper_2 .valo_aim {
+  position: relative;
+}
+.esports_events_wrapper_2 .valo_aim:before {
+  content: "";
+  background-image: url("../../../assets/esporting-events/leftline.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 160px;
+  height: 28px;
+  position: absolute;
+  left: -70px;
+  bottom: -1px;
+}
+.esports_events_wrapper_2 .valo_aim:after {
+  content: "";
+  background-image: url("../../../assets/esporting-events/rightline.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 160px;
+  height: 28px;
+  position: absolute;
+  right: -70px;
+  bottom: -1px;
+}
+@media screen and (max-width: 900px) {
+  .esports_events_wrapper_2 .valo_aim:before {
+    left: 150px;
+  }
+  .esports_events_wrapper_2 .valo_aim:after {
+    right: 150px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .esports_events_wrapper_2 .valo_aim:before {
+    left: 100px;
+    width: 140px;
+  }
+  .esports_events_wrapper_2 .valo_aim:after {
+    right: 100px;
+    width: 140px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .esports_events_wrapper_2 .valo_aim:before {
+    left: 60px;
+  }
+  .esports_events_wrapper_2 .valo_aim:after {
+    right: 60px;
+  }
+}
+@media screen and (max-width: 585px) {
+  .esports_events_wrapper_2 .valo_aim:before {
+    left: 35px;
+  }
+  .esports_events_wrapper_2 .valo_aim:after {
+    right: 35px;
+  }
+}
+@media screen and (max-width: 535px) {
+  .esports_events_wrapper_2 .valo_aim:before {
+    left: 0px;
+  }
+  .esports_events_wrapper_2 .valo_aim:after {
+    right: 0px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .esports_events_wrapper_2 .valo_aim:before {
+    left: -30px;
+    width: 128px;
+  }
+  .esports_events_wrapper_2 .valo_aim:after {
+    right: -30px;
+    width: 128px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .esports_events_wrapper_2 .valo_aim:before {
+    left: -32px;
+    width: 110px;
+  }
+
+  .esports_events_wrapper_2 .valo_aim:after {
+    right: -32px;
+    width: 110px;
+  }
+}
