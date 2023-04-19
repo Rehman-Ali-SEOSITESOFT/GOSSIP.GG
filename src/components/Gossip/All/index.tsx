@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Post1 from "../../../assets/images/gossip/post1.png";
 import Post2 from "../../../assets/images/gossip/post2.png";
 import Post3 from "../../../assets/images/gossip/post3.png";
@@ -9,16 +9,26 @@ import bookmark from "../../../assets/user-for-you/bookmark.png";
 import sharedbtn from "../../../assets/user-for-you/share.png";
 import typeComment from "../../../assets/esporting-events/typeComment.png";
 import user from "../../../assets/esporting-events/user1.png";
-import likes from "../../../assets/esporting-events/likes.png";
+import ThumbDark from "../../../assets/images/gossip/default-dark.png";
+import hoverDark from "../../../assets/images/gossip/hover-dark.png";
+import Clickedark from "../../../assets/images/gossip/click-dark.png";
 import image2 from "../../../assets/esportevents2/image2.png";
 import image3 from "../../../assets/esportevents2/image3.png";
 import image4 from "../../../assets/esportevents2/image4.png";
 import image5 from "../../../assets/esportevents2/image5.png";
-import ThumbRed from "../../../assets/images/gossip/thumb-red.png";
+import ThumbDefault from "../../../assets/images/gossip/default.png";
+import ThumbHoverd from "../../../assets/images/gossip/hover.png";
+import ThumbClicked from "../../../assets/images/gossip/clickced.png";
 import Complete from "../../../assets/images/gossip/complete.png";
-
+import CompleteLight from "../../../assets/images/gossip/complete-light.png";
 import Image from "next/image";
+import { useTheme } from "next-themes"; 
 const AllSection = () => {
+  const { theme } = useTheme();
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
+  useEffect(() => {
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   return (
     <section className="w-[778px]  mw-lg:px-[20px] ">
       <div className=" min-w-[100%] mt-[44px] mb-[24px] rounded bg-white dark:bg-brandDark1">
@@ -285,7 +295,7 @@ const AllSection = () => {
                   </p>
                   <div className="likes_replays flex mt-[8px]">
                     <div className="flex items-center mr-[28px]">
-                      <Image src={likes} alt="" className="mr-[8px]" />
+                      <Image src={isDarkTheme === 'dark' ? ThumbDark : ThumbDefault} alt="" className="mr-[8px]  hover:brightness-100" />
                       <p className="montserratfont text-[12px] leading-[15px] text-textColor dark:text-brandLightOpacity70 font-normal	">
                         34
                       </p>
@@ -316,7 +326,7 @@ const AllSection = () => {
                     </p>
                     <div className="likes_replays flex mt-[8px]">
                       <div className="flex items-center mr-[28px]">
-                        <Image src={ThumbRed} alt="" className="mr-[8px]" />
+                        <Image src={isDarkTheme === 'dark' ? ThumbDark : ThumbDefault} alt="" className="mr-[8px]" />
                         <p className="montserratfont text-[12px] leading-[15px] text-textcolor dark:text-brandLightOpacity70 font-normal	">
                           34
                         </p>
@@ -346,7 +356,7 @@ const AllSection = () => {
                     </p>
                     <div className="likes_replays flex mt-[8px]">
                       <div className="flex items-center mr-[28px]">
-                        <Image src={ThumbRed} alt="" className="mr-[8px]" />
+                        <Image src={isDarkTheme === 'dark' ? Clickedark : ThumbClicked} alt="" className="mr-[8px]" />
                         <p className="montserratfont text-[12px] leading-[15px] text-textcolor dark:text-brandLightOpacity70 font-normal	">
                           34
                         </p>
@@ -376,7 +386,7 @@ const AllSection = () => {
                     </p>
                     <div className="likes_replays flex mt-[8px]">
                       <div className="flex items-center mr-[28px]">
-                        <Image src={ThumbRed} alt="" className="mr-[8px]" />
+                        <Image src={isDarkTheme === 'dark' ? Clickedark : ThumbClicked} alt="" className="mr-[8px]" />
                         <p className="montserratfont text-[12px] leading-[15px] text-textColor dark:text-brandLightOpacity70 font-normal	">
                           34
                         </p>
@@ -404,11 +414,11 @@ const AllSection = () => {
                   </div>
                   <p className="montserratfont text-[14px] leading-[17px] text-textcolor dark:text-brandLightOpacity70 font-medium	">
                     I can’t imagine playing the game without Floo Flames, it’s
-                    my most favorite thing ever!{" "}
+                    my most favorite thing ever!
                   </p>
                   <div className="likes_replays flex mt-[8px]">
                     <div className="flex items-center mr-[28px]">
-                      <Image src={ThumbRed} alt="" className="mr-[8px]" />
+                      <Image src={isDarkTheme === 'dark' ? Clickedark :ThumbClicked} alt="" className="mr-[8px]" />
                       <p className="montserratfont text-[12px] leading-[15px] text-textcolor dark:text-brandLightOpacity70 font-normal	">
                         34
                       </p>
@@ -433,11 +443,11 @@ const AllSection = () => {
         </div>
       </div>
       <div className="min-w-[100%] mt-[80px] mb-[88px] justify-center items-center flex flex-col ">
-        <Image src={Complete} alt="complete load" />
-        <p className="montserratfont pt-[15px] text-brandDark1 dark:text-brandLightOpacity70 text-sm">
+        <Image src={isDarkTheme === 'dark' ?  Complete: CompleteLight} alt="complete load" />
+        <p className="montserratfont pt-[15px] text-brandDark1 opacity-70  dark:opacity-100 dark:text-brandLightOpacity70 text-sm">
           All caught up
         </p>
-        <p className="montserratfont pt-[4px] text-brandDark1 dark:text-brandLightOpacity50 text-xs">
+        <p className="montserratfont pt-[4px] text-brandDark1 opacity-50  dark:opacity-100 dark:text-brandLightOpacity50 text-xs">
           Check back tomorrow for latest updates
         </p>
       </div>
