@@ -29,7 +29,7 @@ const HeroSection = () => {
   ]);
   return (
     <section
-      className={`pt-3 mw-md:pt-11 home-herosection mw-md:border-t border-brand dark:border-brandLightOpacity10	`}
+      className={`pt-3 mw-md:pt-11 home-herosection mw-md:border-t border-grayCard  dark:border-brandLightOpacity10	`}
     >
       <div className="global-section-width">
         <div className="2xl:container">
