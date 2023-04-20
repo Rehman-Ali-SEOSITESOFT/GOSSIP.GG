@@ -398,6 +398,8 @@ body::-webkit-scrollbar-thumb {
   .global-section-width {
     padding: 0 16px;
   }
+  .feature-desc,
+  .feature-title,
   .esport-event-valorant-title2,
   .hero-section-tech-title {
     display: -webkit-box;
@@ -405,6 +407,9 @@ body::-webkit-scrollbar-thumb {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  .feature-desc {
+    -webkit-line-clamp: 3;
   }
   .slick-prev {
     left: 0px !important;

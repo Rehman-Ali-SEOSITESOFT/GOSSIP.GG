@@ -118,7 +118,7 @@ const TechFeature = () => {
                           -John D
                         </p>
                         <div
-                          className={`bookmark text-textColorGray hover:text-textColor  dark:text-brandLightOpacity70 h-full border-b border-grayCard  dark:border-brandLightOpacity10 dark:hover:text-brandLightOpacity100 w-[12px] `}
+                          className={`bookmark text-textColorGray hover:text-textColor  dark:text-brandLightOpacity70 h-full  dark:hover:text-brandLightOpacity100 w-[12px] `}
                         >
                           <Image
                             src={bookmark}

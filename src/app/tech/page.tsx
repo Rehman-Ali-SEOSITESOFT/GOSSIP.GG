@@ -8,7 +8,7 @@ import Trending from "@/components/Trending/Index";
 import React, { useState } from "react";
 
 const Page = () => {
-  const [openTab, setOpenTab] = useState(0);
+  const [openTab, setOpenTab] = useState(3);
   const menulist = [
     { name: "all", data: <MainTech /> },
     { name: "News", data: <NewsTech /> },
