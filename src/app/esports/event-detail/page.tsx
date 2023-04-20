@@ -31,38 +31,50 @@ import trophy from "../../../assets/esporting-events/trophy.png"
 import earth from "../../../assets/esporting-events/earth.png"
 import profile from "../../../assets/esporting-events/profile.png"
 import torurnament from "../../../assets/esporting-events/tournament.png"
-import ValorantListing from "./ValorantListing/ValorantListing" ;
+import ValorantListing from "./ValorantListing/ValorantListing"
+import darkuserss from "../../../assets/esporting-events/darkusers.png"
+import darkcube from "../../../assets/esporting-events/darkcube.png"
+import darktrophy from "../../../assets/esporting-events/darktrophy.png"
+import darkearth from "../../../assets/esporting-events/darkearth.png"
+import darkprofile from "../../../assets/esporting-events/darkProfile.png"
+import darkclock from "../../../assets/esporting-events/darkclock.png"
 import { useTheme } from "next-themes"
 const Page = () => {
-  const {theme} = useTheme();
+  const { theme } = useTheme()
   interface List {
     title: string
-    icon: any
     detail: string
+    lighticon: any
+    darkicon: any
   }
   const [list, setList] = useState<List[]>([
     {
-      icon: users,
+      lighticon: users,
+      darkicon: darkuserss,
       title: "Team Size",
       detail: "5v5 + 2 sustitutes",
     },
     {
-      icon: cube,
+      lighticon: cube,
+      darkicon: darkcube,
       title: "Format",
       detail: "Single Elimination",
     },
     {
-      icon: trophy,
+      lighticon: trophy,
+      darkicon: darktrophy,
       title: "Prizepool",
       detail: "$35000",
     },
     {
-      icon: earth,
+      lighticon: earth,
+      darkicon: darkearth,
       title: "Region",
       detail: "Southeast Asia",
     },
     {
-      icon: profile,
+      lighticon: profile,
+      darkicon: darkprofile,
       title: "Sponsors",
       detail: "Intel.DHL",
     },
@@ -454,7 +466,9 @@ const Page = () => {
               <div className="mt-[48px] w-[28%] mb-[88px] mx-13:w-[34%] mw-11:w-[38%] mw-9:w-[100%] mw-9:mb-[0px]">
                 <div className="valorant_sidebar_wrapper dark:bg-[#2E2A2B] bg-[#fff] rounded px-[17px] sticky top-[120px] mw-9:block">
                   <div
-                    className={`${ theme === 'dark' ?  style.dark_valo_aim :  style.valo_aim}  flex items-center pt-[41px] justify-center`}
+                    className={`${
+                      theme === "dark" ? style.dark_valo_aim : style.valo_aim
+                    }  flex items-center pt-[41px] justify-center`}
                   >
                     <Image src={aiming} alt="" />
                     <h4 className="pl-[18px] montserratfont capitalize text-[24px] leading-[29px] font-semibold dark:text-[#E5E5E5]">

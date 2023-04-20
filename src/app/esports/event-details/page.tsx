@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import eyeIcon from "../../../assets/esporting-events/eye.png"
 import banner from "../../../assets/esporting-events/banner_.webp"
 import tabImage from "../../../assets/esportevents2/tabVersionImage.png"
@@ -33,35 +33,56 @@ import image2 from "../../../assets/esportevents2/image2.png"
 import image3 from "../../../assets/esportevents2/image3.png"
 import image4 from "../../../assets/esportevents2/image4.png"
 import image5 from "../../../assets/esportevents2/image5.png"
+import darkuserss from "../../../assets/esporting-events/darkusers.png"
+import darkcube from "../../../assets/esporting-events/darkcube.png"
+import darktrophy from "../../../assets/esporting-events/darktrophy.png"
+import darkearth from "../../../assets/esporting-events/darkearth.png"
+import darkprofile from "../../../assets/esporting-events/darkProfile.png"
+import darkclock from "../../../assets/esporting-events/darkclock.png"
+
+import { useTheme } from "next-themes"
 const Page = () => {
+  const { theme } = useTheme()
   interface List {
     title: string
-    icon: any
     detail: string
+    lighticon: any
+    darkicon: any
   }
+  const [isDarkTheme, setIsDarkTheme] = useState<string>()
+
+  useEffect(() => {
+    setIsDarkTheme(theme === "dark" ? "dark" : "light")
+  }, [theme])
+
   const [list, setList] = useState<List[]>([
     {
-      icon: users,
+      lighticon: users,
+      darkicon: darkuserss,
       title: "Team Size",
       detail: "5v5 + 2 sustitutes",
     },
     {
-      icon: cube,
+      lighticon: cube,
+      darkicon: darkcube,
       title: "Format",
       detail: "Single Elimination",
     },
     {
-      icon: trophy,
+      lighticon: trophy,
+      darkicon: darktrophy,
       title: "Prizepool",
       detail: "$35000",
     },
     {
-      icon: earth,
+      lighticon: earth,
+      darkicon: darkearth,
       title: "Region",
       detail: "Southeast Asia",
     },
     {
-      icon: profile,
+      lighticon: profile,
+      darkicon: darkprofile,
       title: "Sponsors",
       detail: "Intel.DHL",
     },
@@ -547,7 +568,11 @@ const Page = () => {
               <div className="mt-[48px] w-[28%] mb-[88px] mx-13:w-[34%] mw-11:w-[38%] mw-9:w-[100%] mw-9:mb-[0px]">
                 <div className="valorant_sidebar_wrapper dark:bg-[#2E2A2B] bg-[#fff] rounded px-[17px] sticky top-[120px] mw-9:block">
                   <div
-                    className={`${style.valo_aim} flex items-center pt-[41px] justify-center`}
+                    className={`${
+                      isDarkTheme === "dark"
+                        ? style.dark_valo_aim
+                        : style.valo_aim
+                    } flex items-center pt-[41px] justify-center`}
                   >
                     <Image src={aiming} alt="" />
                     <h4 className="pl-[18px] montserratfont capitalize text-[24px] leading-[29px] font-semibold dark:text-[#E5E5E5]">
@@ -559,7 +584,9 @@ const Page = () => {
                       return (
                         <div className="pb-[14px]" key={idx}>
                           <ValorantListing
-                            icon={e.icon}
+                            // icon={e.icon}
+                            lighticon={e.lighticon}
+                            darkicon={e.darkicon}
                             detail={e.detail}
                             title={e.title}
                           />
@@ -569,9 +596,9 @@ const Page = () => {
                     <div className="flex pl-[9px]   pb-[34px] pt-[16px]">
                       <div className="w-[40px] h-[40px]  rounded-full flex items-center justify-center bg-[#E9E8E9] dark:bg-brandLightOpacity10">
                         <Image
-                          src={torurnament}
+                          src={isDarkTheme === "dark" ? torurnament : darkclock}
                           alt="icon"
-                          className="dark:brightness-[1.5] brightness-[0.5] "
+                          className=" "
                         />
                       </div>
                       <div className="name_size pl-[30px] ">
