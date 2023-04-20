@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image"
-import React, { useState } from "react"
 import eyeIcon from "../../../assets/esporting-events/eye.png"
 import banner from "../../../assets/esporting-events/banner_.webp"
 import tabImage from "../../../assets/esportevents2/tabVersionImage.png"
@@ -38,15 +37,22 @@ import darktrophy from "../../../assets/esporting-events/darktrophy.png"
 import darkearth from "../../../assets/esporting-events/darkearth.png"
 import darkprofile from "../../../assets/esporting-events/darkProfile.png"
 import darkclock from "../../../assets/esporting-events/darkclock.png"
+import React, { useState, useRef, useEffect } from "react"
 import { useTheme } from "next-themes"
+import YouTube from "react-youtube"
+import downarrow from "../../../assets/esports/down-arrow.png"
+import LightArrow from "../../../assets/images/filters/lightdown.png"
+
 const Page = () => {
   const { theme } = useTheme()
+
   interface List {
     title: string
-    detail: string
     lighticon: any
     darkicon: any
+    detail: string
   }
+
   const [list, setList] = useState<List[]>([
     {
       lighticon: users,
@@ -79,6 +85,52 @@ const Page = () => {
       detail: "Intel.DHL",
     },
   ])
+  const opts = {
+    width: "100%",
+    height: "390",
+    playerVars: {
+      autoplay: 1,
+    },
+  }
+
+  const _onReady = (event: any) => {
+    event.target.pauseVideo()
+  }
+  //////////////////////////
+  const dropDownRef = useRef<any | null>(null)
+  const [opendropDown, setOpenDropdown] = useState<Boolean>(false)
+  const [selectedValue, setSelectedValue] = useState<string>()
+  const [dropDownList, setDropDownList] = useState<string[]>([
+    "Today",
+    "Yesterday",
+    "Last Week",
+    "Last 10 Days",
+  ])
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside, true)
+  }, [])
+  // /// for close dropdown on outside click
+  const handleClickOutside = (e: any) => {
+    if (dropDownRef.current !== null) {
+      if (!dropDownRef.current.contains(e.target)) {
+        setOpenDropdown(false)
+      }
+    }
+  }
+
+  const onClickOpen = () => {
+    setOpenDropdown(!opendropDown)
+  }
+
+  const onSelectValue = (e: any) => {
+    setSelectedValue(e)
+  }
+
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("")
+  useEffect(() => {
+    setIsDarkTheme(theme === "dark" ? "dark" : "light")
+  }, [theme])
+
   return (
     <>
       <section className="esports_events_wrapper_">
@@ -255,17 +307,67 @@ const Page = () => {
                   </div>
                   <div className="update_wrapper mb-[60px] mw-sm3:mb-[24px]">
                     <SectionSaprator title="Update" />
-                    <div className="udpates_ flex mw-sm:justify-between">
+                    <div className="udpates_ flex flex-row items-center mw-sm:justify-between">
                       <h2 className="montserratfont font-bold leading-[15px] dark:text-[#E5E5E5] mr-[16px] mt-[4px] mw-sm:text-[12px]">
                         Show Updates for:
                       </h2>
-                      <DropDown />
+                      <div
+                        ref={dropDownRef}
+                        className=" relative mw-12:w-[40%]  mw-9:w-[48%]"
+                      >
+                        <div
+                          onClick={() => onClickOpen()}
+                          className=" px-4  flex flex-row justify-between items-center h-[60px] mw-sm1:h-[45px]   rounded-lg w-[302px] mx-13:w-[270px] mw-12:w-[100%] border border-brandDark2 dark:border-brandLightOpacity50 mw-sm1:rounded"
+                        >
+                          <p className="montserratfont font-semibold text-brandDark1 dark:text-brandLightOpacity100 mw-sm:text-xs mw-sm:leading-normal	">
+                            {selectedValue}
+                          </p>
+                          <div className="flex items-center">
+                            <Image
+                              className={`${
+                                opendropDown ? "rotate-180" : "rotate-0"
+                              } mw-sm:w-[12px]  mw-sm:min-w-[12px] `}
+                              src={
+                                isDarkTheme === "dark" ? downarrow : LightArrow
+                              }
+                              alt="arrow icon"
+                            />
+                          </div>
+                        </div>
+                        {opendropDown && (
+                          <div
+                            className={`shadow-3xshadow absolute border-grayCard mt-[4px] rounded-lg border-2 border-brandDark2   m-h-[462px] w-[302px] right-0 left-auto  mw-9:right-auto mw-9:left-0   dark:border-brandLightOpacity10 bg-bodycolor dark:bg-brandDark1 mw-sm1:left-auto mw-sm1:right-0
+                                  min-h-min	 max-h-[462px] overflow-x-hidden  scrollbar-thin  scrollbar-thumb-brandLightOpacity50 dark:scrollbar-thumb-darkScollorBarColor scrollbar-track-[transparent] ${
+                                    isDarkTheme === "dark"
+                                      ? "dark-custom--scroll--filer "
+                                      : "light-custom--scroll--filer"
+                                  } `}
+                          >
+                            {dropDownList.map((item, index) => (
+                              <div
+                                key={index}
+                                className={`h-[44px] hover:bg-brandLightOpacity10  flex flex-row justify-between items-center pl-[16px] pr-[20px] 
+                                 ${
+                                   isDarkTheme === "dark"
+                                     ? "darkchecked "
+                                     : "lightcheched"
+                                 }`}
+                                onClick={() => onSelectValue(item)}
+                              >
+                                <p className="montserratfont text-brandDark2 dark:text-brandLightOpacity100 text-base  pl-[8px] ">
+                                  {item}
+                                </p>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
                   <div className="comments_area_here_wrapper dark:bg-commentBg bg-[#fff] rounded py-[26px] px-[82px] mb-[88px]  mw-sm:py-[25px] mw-sm:px-[20px]">
                     <div
                       className="first_comment_area border-b-2
-                  border-brandLightOpacity10"
+                       border-brandLightOpacity10"
                     >
                       <div className="flex justify-between">
                         <div className="left_first_comment_area flex items-center">
@@ -343,10 +445,15 @@ const Page = () => {
                         </div>
                       </div>
                       <div className="second_image_comment pt-[29px]">
-                        <Image
+                        {/* <Image
                           src={youtubepreview}
                           alt=""
                           className="w-[100%]"
+                        /> */}
+                        <YouTube
+                          videoId="sTnm5jvjgjM"
+                          opts={opts}
+                          onReady={_onReady}
                         />
                       </div>
                     </div>
@@ -364,7 +471,7 @@ const Page = () => {
                       <div className="content_area pl-[16px]">
                         <div className="content_area_top">
                           <h4 className="flex items-center montserratfont text-[18px] leading-[22px] font-bold text-[#ED4E50] mw-sm:text-[14px] mw-sm:leading-[17px]">
-                            Esports Writer{" "}
+                            Esports Writer
                             <span>
                               <Image src={brandmark} alt="" />
                             </span>
@@ -467,7 +574,9 @@ const Page = () => {
                 <div className="valorant_sidebar_wrapper dark:bg-[#2E2A2B] bg-[#fff] rounded px-[17px] sticky top-[120px] mw-9:block">
                   <div
                     className={`${
-                      theme === "dark" ? style.dark_valo_aim : style.valo_aim
+                      isDarkTheme === "dark"
+                        ? style.dark_valo_aim
+                        : style.valo_aim
                     }  flex items-center pt-[41px] justify-center`}
                   >
                     <Image src={aiming} alt="" />
@@ -480,7 +589,8 @@ const Page = () => {
                       return (
                         <div className="pb-[14px]" key={idx}>
                           <ValorantListing
-                            icon={e.icon}
+                            lighticon={e.lighticon}
+                            darkicon={e.darkicon}
                             detail={e.detail}
                             title={e.title}
                           />
@@ -488,12 +598,8 @@ const Page = () => {
                       )
                     })}
                     <div className="flex pl-[9px]   pb-[34px] pt-[16px]">
-                      <div className="w-[40px] h-[40px] bg-brandLightOpacity10 rounded-full flex items-center justify-center bg-[#E9E8E9] dark:bg-brandLightOpacity10">
-                        <Image
-                          src={torurnament}
-                          alt="icon"
-                          className="dark:brightness-[1.5] brightness-[0.5] "
-                        />
+                      <div className="w-[40px] h-[40px] dark:bg-brandLightOpacity10 rounded-full flex items-center justify-center bg-[#E9E8E9] dark:bg-brandLightOpacity10">
+                        <Image src={torurnament} alt="icon" className="" />
                       </div>
                       <div className="name_size pl-[30px] ">
                         <h4 className="montserratfont text-[16px] leading-[20px] font-semibold dark:text-[#E5E5E5]">
