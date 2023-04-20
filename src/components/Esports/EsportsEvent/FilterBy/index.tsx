@@ -133,12 +133,15 @@ const FilterBy = (props?: any) => {
 
   // /// for close dropdown on outside click
   const handleClickOutside = (e: any) => {
-    if (!dropDownRef.current.contains(e.target)) {
-      setOpenDropdown1(false);
-      setOpenDropdown2(false);
-      setOpenDropdown3(false);
-      setOpenDropdown4(false);
+    if(dropDownRef.current !== null){
+      if (!dropDownRef.current.contains(e.target)) {
+        setOpenDropdown1(false);
+        setOpenDropdown2(false);
+        setOpenDropdown3(false);
+        setOpenDropdown4(false);
+      }
     }
+    
   };
   const onClickOpen1 = () => {
     setOpenDropdown1(!opendropDown1);
