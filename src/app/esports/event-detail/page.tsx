@@ -1,122 +1,135 @@
-"use client";
-import Image from "next/image";
-import React, { useState, useRef, useEffect } from "react";
-import eyeIcon from "../../../assets/esporting-events/eye.png";
-import banner from "../../../assets/esporting-events/banner_.webp";
-import tabImage from "../../../assets/esportevents2/tabVersionImage.png";
-import style from "./EsportsEvents.module.css";
-import msg from "../../../assets/esporting-events/message.png";
-import bookmark from "../../../assets/esporting-events/bookmark.png";
-import forward from "../../../assets/esporting-events/forward.png";
-import typeComment from "../../../assets/esporting-events/typeComment.png";
-import SectionSaprator from "@/components/SecSaprator";
-import user from "../../../assets/esporting-events/user1.png";
-import likes from "../../../assets/esporting-events/likes.png";
-import DropDown from "./EsportsEventDropdown/DropDown";
-import commentLogo from "../../../assets/esporting-events/commentLogo.png";
-import twitter from "../../../assets/esporting-events/twitter.png";
-import vrbox from "../../../assets/esporting-events/vrbox.png";
-import heart from "../../../assets/esporting-events/heart.png";
-import retweet from "../../../assets/esporting-events/retweet.png";
-import youtube from "../../../assets/esporting-events/youtube.png";
-import youtubepreview from "../../../assets/esporting-events/videopreview.png";
-import pinkman from "../../../assets/esporting-events/pinkman.png";
-import brandmark from "../../../assets/esporting-events/smallbrand.png";
-import cod from "../../../assets/esporting-events/cod2.png";
-import allup from "../../../assets/esporting-events/allup.png";
-import aiming from "../../../assets/esporting-events/aiming.png";
-import users from "../../../assets/esporting-events/userss.png";
-import cube from "../../../assets/esporting-events/cube.png";
-import trophy from "../../../assets/esporting-events/trophy.png";
-import earth from "../../../assets/esporting-events/earth.png";
-import profile from "../../../assets/esporting-events/profile.png";
-import torurnament from "../../../assets/esporting-events/tournament.png";
-import ValorantListing from "./ValorantListing/ValorantListing";
-import { useTheme } from "next-themes";
-import YouTube from "react-youtube";
-import downarrow from "../../../assets/esports/down-arrow.png";
-import LightArrow from "../../../assets/images/filters/lightdown.png";
+"use client"
+import Image from "next/image"
+import eyeIcon from "../../../assets/esporting-events/eye.png"
+import banner from "../../../assets/esporting-events/banner_.webp"
+import tabImage from "../../../assets/esportevents2/tabVersionImage.png"
+import style from "./EsportsEvents.module.css"
+import msg from "../../../assets/esporting-events/message.png"
+import bookmark from "../../../assets/esporting-events/bookmark.png"
+import forward from "../../../assets/esporting-events/forward.png"
+import typeComment from "../../../assets/esporting-events/typeComment.png"
+import SectionSaprator from "@/components/SecSaprator"
+import user from "../../../assets/esporting-events/user1.png"
+import likes from "../../../assets/esporting-events/likes.png"
+import DropDown from "./EsportsEventDropdown/DropDown"
+import commentLogo from "../../../assets/esporting-events/commentLogo.png"
+import twitter from "../../../assets/esporting-events/twitter.png"
+import vrbox from "../../../assets/esporting-events/vrbox.png"
+import heart from "../../../assets/esporting-events/heart.png"
+import retweet from "../../../assets/esporting-events/retweet.png"
+import youtube from "../../../assets/esporting-events/youtube.png"
+import youtubepreview from "../../../assets/esporting-events/videopreview.png"
+import pinkman from "../../../assets/esporting-events/pinkman.png"
+import brandmark from "../../../assets/esporting-events/smallbrand.png"
+import cod from "../../../assets/esporting-events/cod2.png"
+import allup from "../../../assets/esporting-events/allup.png"
+import aiming from "../../../assets/esporting-events/aiming.png"
+import users from "../../../assets/esporting-events/userss.png"
+import cube from "../../../assets/esporting-events/cube.png"
+import trophy from "../../../assets/esporting-events/trophy.png"
+import earth from "../../../assets/esporting-events/earth.png"
+import profile from "../../../assets/esporting-events/profile.png"
+import torurnament from "../../../assets/esporting-events/tournament.png"
+import ValorantListing from "./ValorantListing/ValorantListing"
+import darkuserss from "../../../assets/esporting-events/darkusers.png"
+import darkcube from "../../../assets/esporting-events/darkcube.png"
+import darktrophy from "../../../assets/esporting-events/darktrophy.png"
+import darkearth from "../../../assets/esporting-events/darkearth.png"
+import darkprofile from "../../../assets/esporting-events/darkProfile.png"
+import darkclock from "../../../assets/esporting-events/darkclock.png"
+import React, { useState, useRef, useEffect } from "react"
+import { useTheme } from "next-themes"
+import YouTube from "react-youtube"
+import downarrow from "../../../assets/esports/down-arrow.png"
+import LightArrow from "../../../assets/images/filters/lightdown.png"
 
 const Page = () => {
-  const { theme } = useTheme();
+  const { theme } = useTheme()
 
   interface List {
-    title: string;
-    icon: any;
-    detail: string;
+    title: string
+    lighticon: any
+    darkicon: any
+    detail: string
   }
+
   const [list, setList] = useState<List[]>([
     {
-      icon: users,
+      lighticon: users,
+      darkicon: darkuserss,
       title: "Team Size",
       detail: "5v5 + 2 sustitutes",
     },
     {
-      icon: cube,
+      lighticon: cube,
+      darkicon: darkcube,
       title: "Format",
       detail: "Single Elimination",
     },
     {
-      icon: trophy,
+      lighticon: trophy,
+      darkicon: darktrophy,
       title: "Prizepool",
       detail: "$35000",
     },
     {
-      icon: earth,
+      lighticon: earth,
+      darkicon: darkearth,
       title: "Region",
       detail: "Southeast Asia",
     },
     {
-      icon: profile,
+      lighticon: profile,
+      darkicon: darkprofile,
       title: "Sponsors",
       detail: "Intel.DHL",
     },
-  ]);
+  ])
   const opts = {
+    width: "100%",
     height: "390",
-    width: "640",
     playerVars: {
       autoplay: 1,
     },
-  };
+  }
 
   const _onReady = (event: any) => {
-    event.target.pauseVideo();
-  };
+    event.target.pauseVideo()
+  }
   //////////////////////////
-  const dropDownRef = useRef<any | null>(null);
-  const [opendropDown, setOpenDropdown] = useState<Boolean>(false);
-  const [selectedValue, setSelectedValue] = useState<string>();
+  const dropDownRef = useRef<any | null>(null)
+  const [opendropDown, setOpenDropdown] = useState<Boolean>(false)
+  const [selectedValue, setSelectedValue] = useState<string>()
   const [dropDownList, setDropDownList] = useState<string[]>([
     "Today",
     "Yesterday",
     "Last Week",
     "Last 10 Days",
-  ]);
+  ])
   useEffect(() => {
-    document.addEventListener("click", handleClickOutside, true);
-  }, []);
+    document.addEventListener("click", handleClickOutside, true)
+  }, [])
   // /// for close dropdown on outside click
   const handleClickOutside = (e: any) => {
     if (dropDownRef.current !== null) {
       if (!dropDownRef.current.contains(e.target)) {
-        setOpenDropdown(false);
+        setOpenDropdown(false)
       }
     }
-  };
+  }
 
   const onClickOpen = () => {
-    setOpenDropdown(!opendropDown);
-  };
+    setOpenDropdown(!opendropDown)
+  }
 
   const onSelectValue = (e: any) => {
-    setSelectedValue(e);
-  };
+    setSelectedValue(e)
+  }
 
-  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("")
   useEffect(() => {
-    setIsDarkTheme(theme === "dark" ? "dark" : "light");
-  }, [theme]);
+    setIsDarkTheme(theme === "dark" ? "dark" : "light")
+  }, [theme])
 
   return (
     <>
@@ -300,7 +313,7 @@ const Page = () => {
                       </h2>
                       <div
                         ref={dropDownRef}
-                        className=" relative mw-12:w-[24%]  mw-9:w-[48%]"
+                        className=" relative mw-12:w-[40%]  mw-9:w-[48%]"
                       >
                         <div
                           onClick={() => onClickOpen()}
@@ -311,8 +324,9 @@ const Page = () => {
                           </p>
                           <div className="flex items-center">
                             <Image
-                              className={`${opendropDown ? "rotate-180" : "rotate-0"
-                                } mw-sm:w-[12px]  mw-sm:min-w-[12px] `}
+                              className={`${
+                                opendropDown ? "rotate-180" : "rotate-0"
+                              } mw-sm:w-[12px]  mw-sm:min-w-[12px] `}
                               src={
                                 isDarkTheme === "dark" ? downarrow : LightArrow
                               }
@@ -323,18 +337,22 @@ const Page = () => {
                         {opendropDown && (
                           <div
                             className={`shadow-3xshadow absolute border-grayCard mt-[4px] rounded-lg border-2 border-brandDark2   m-h-[462px] w-[302px] right-0 left-auto  mw-9:right-auto mw-9:left-0   dark:border-brandLightOpacity10 bg-bodycolor dark:bg-brandDark1 mw-sm1:left-auto mw-sm1:right-0
-                                  min-h-min	 max-h-[462px] overflow-x-hidden  scrollbar-thin  scrollbar-thumb-brandLightOpacity50 dark:scrollbar-thumb-darkScollorBarColor scrollbar-track-[transparent] ${isDarkTheme === "dark"
-                                ? "dark-custom--scroll--filer "
-                                : "light-custom--scroll--filer"
-                              } `}
+                                  min-h-min	 max-h-[462px] overflow-x-hidden  scrollbar-thin  scrollbar-thumb-brandLightOpacity50 dark:scrollbar-thumb-darkScollorBarColor scrollbar-track-[transparent] ${
+                                    isDarkTheme === "dark"
+                                      ? "dark-custom--scroll--filer "
+                                      : "light-custom--scroll--filer"
+                                  } `}
                           >
                             {dropDownList.map((item, index) => (
                               <div
                                 key={index}
                                 className={`h-[44px] hover:bg-brandLightOpacity10  flex flex-row justify-between items-center pl-[16px] pr-[20px] 
-                                 ${isDarkTheme === "dark" ? "darkchecked " : "lightcheched"
-                                  }`}
-                                  onClick={() => onSelectValue(item)}
+                                 ${
+                                   isDarkTheme === "dark"
+                                     ? "darkchecked "
+                                     : "lightcheched"
+                                 }`}
+                                onClick={() => onSelectValue(item)}
                               >
                                 <p className="montserratfont text-brandDark2 dark:text-brandLightOpacity100 text-base  pl-[8px] ">
                                   {item}
@@ -348,9 +366,9 @@ const Page = () => {
                   </div>
                   <div className="comments_area_here_wrapper dark:bg-commentBg bg-[#fff] rounded py-[26px] px-[82px] mb-[88px]  mw-sm:py-[25px] mw-sm:px-[20px]">
                     <div
-                        className="first_comment_area border-b-2
+                      className="first_comment_area border-b-2
                        border-brandLightOpacity10"
-                     >
+                    >
                       <div className="flex justify-between">
                         <div className="left_first_comment_area flex items-center">
                           <Image src={commentLogo} alt="logo" />
@@ -555,8 +573,11 @@ const Page = () => {
               <div className="mt-[48px] w-[28%] mb-[88px] mx-13:w-[34%] mw-11:w-[38%] mw-9:w-[100%] mw-9:mb-[0px]">
                 <div className="valorant_sidebar_wrapper dark:bg-[#2E2A2B] bg-[#fff] rounded px-[17px] sticky top-[120px] mw-9:block">
                   <div
-                    className={`${theme === "dark" ? style.dark_valo_aim : style.valo_aim
-                      }  flex items-center pt-[41px] justify-center`}
+                    className={`${
+                      isDarkTheme === "dark"
+                        ? style.dark_valo_aim
+                        : style.valo_aim
+                    }  flex items-center pt-[41px] justify-center`}
                   >
                     <Image src={aiming} alt="" />
                     <h4 className="pl-[18px] montserratfont capitalize text-[24px] leading-[29px] font-semibold dark:text-[#E5E5E5]">
@@ -568,20 +589,17 @@ const Page = () => {
                       return (
                         <div className="pb-[14px]" key={idx}>
                           <ValorantListing
-                            icon={e.icon}
+                            lighticon={e.lighticon}
+                            darkicon={e.darkicon}
                             detail={e.detail}
                             title={e.title}
                           />
                         </div>
-                      );
+                      )
                     })}
                     <div className="flex pl-[9px]   pb-[34px] pt-[16px]">
-                      <div className="w-[40px] h-[40px] bg-brandLightOpacity10 rounded-full flex items-center justify-center bg-[#E9E8E9] dark:bg-brandLightOpacity10">
-                        <Image
-                          src={torurnament}
-                          alt="icon"
-                          className="dark:brightness-[1.5] brightness-[0.5] "
-                        />
+                      <div className="w-[40px] h-[40px] dark:bg-brandLightOpacity10 rounded-full flex items-center justify-center bg-[#E9E8E9] dark:bg-brandLightOpacity10">
+                        <Image src={torurnament} alt="icon" className="" />
                       </div>
                       <div className="name_size pl-[30px] ">
                         <h4 className="montserratfont text-[16px] leading-[20px] font-semibold dark:text-[#E5E5E5]">
@@ -605,7 +623,7 @@ const Page = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

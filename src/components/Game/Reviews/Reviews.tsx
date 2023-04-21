@@ -1,5 +1,5 @@
 import Filter from "@/components/Filter/Filter"
-import React , {useEffect, useState}from "react"
+import React, { useEffect, useState } from "react"
 import ReviewCards from "./ReviewCards/ReviewCards"
 import bookmarkDark from "../../../assets/gaming/bookmark-dark.png"
 
@@ -85,25 +85,28 @@ const Reviews = () => {
                             </div>
                           </div>
                           <div className="review_card_content pt-[12px] flex justify-between">
-                <div className="title_disp">
-                  <h4 className="montserratfont font-bold text-base dark:text-[#E5E5E5] leading-5  text-[#221e1f] mw-sm:text-[14px] mw-sm:text-semibold mw-sm:leading-[17px]">
-                    One Piece Odyssey
-                  </h4>
-                  <p className="montserratfont text-sm font-normal  text-[#221e1f] dark:text-[#E5E5E5] leading-[17px] pt-[5px]">
-                    Panic Barn
-                  </p>
-                  <p className="montserratfont  text-xs italic leading-[15px] font-normal dark:text-brandLightOpacity70 text-brandDark2 pt-[5px]">
-                    Adventure,Indie,Puzzle
-                  </p>
-                </div>
-                <div className="bookmark_check rounded-full bg-grayCard w-8 h-8 dark:bg-brandLightOpacity10 flex items-center justify-center cursor-pointer dark:hover:bg-brandLightOpacity20    hover:bg-grayCardHover">
-                  <Image
-                    src={isDarkTheme === "dark" ? bookmark : bookmarkDark}
-                    alt="bookmark"
-                  />
-                </div>
-              </div>
-                         
+                            <div className="title_disp">
+                              <h4 className="montserratfont font-bold text-base dark:text-[#E5E5E5] leading-5  text-[#221e1f] mw-sm:text-[14px] mw-sm:text-semibold mw-sm:leading-[17px]">
+                                One Piece Odyssey
+                              </h4>
+                              <p className="montserratfont text-sm font-normal  text-[#221e1f] dark:text-[#E5E5E5] leading-[17px] pt-[5px]">
+                                Panic Barn
+                              </p>
+                              <p className="montserratfont  text-xs italic leading-[15px] font-normal dark:text-brandLightOpacity70 text-brandDark2 pt-[5px]">
+                                Adventure,Indie,Puzzle
+                              </p>
+                            </div>
+                            <div className="bookmark_check rounded-full bg-grayCard w-8 h-8 dark:bg-brandLightOpacity10 flex items-center justify-center cursor-pointer dark:hover:bg-brandLightOpacity20    hover:bg-grayCardHover">
+                              <Image
+                                src={
+                                  isDarkTheme === "dark"
+                                    ? bookmark
+                                    : bookmarkDark
+                                }
+                                alt="bookmark"
+                              />
+                            </div>
+                          </div>
                         </div>
                       )
                     })}
@@ -118,7 +121,10 @@ const Reviews = () => {
                       return (
                         <>
                           {index === 6 ? (
-                            <div className="border-y	b border-y-grayCard dark:border-y-brandLightOpacity10 w-full pl-[40px] py-8 mw-sm3:pl-[10px]">
+                            <div
+                              className="border-y	b border-y-grayCard dark:border-y-brandLightOpacity10 w-full pl-[40px] py-8 mw-sm3:pl-[10px]"
+                              key={index}
+                            >
                               <h4 className="montserratfont font-medium text-xs leading-[15px] dark:text-brandLightOpacity70 text-textColor pb-[10px]">
                                 Advertisement
                               </h4>
