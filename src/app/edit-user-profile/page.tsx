@@ -19,7 +19,7 @@ const Page = () => {
       <div className="user-section-width">
         <div className="2xl:container">
           <div className="flex">
-            <div className="w-full border border-borderEditProfile dark:border-brandLightOpacity10 rounded-lg bg-white dark:bg-userprofilebg mt-[78px] mb-[88px]">
+            <div className="w-full border border-borderEditProfile dark:border-brandLightOpacity10 rounded-lg bg-white dark:bg-userprofilebg mt-[78px] mb-[88px] mw-11:mt-[50px]  mw-11:mb-[60px]">
               <EmptyProfileDetail />
             </div>
           </div>
@@ -68,7 +68,7 @@ const Page = () => {
                 </a>
               </li>
             </ul>
-            <div className="tab-content tab-space w-full pt-12 h-full min-h-[800px]	">
+            <div className="tab-content tab-space w-full pt-12 h-full min-h-[800px] mw-md:min-h-[800px]	">
               <div className={openTab === 1 ? "block" : "hidden"} id="link1">
                 <div className="for-you-section text-center">
                   <p className="montserratfont font-normal text-base leading-5 dark:text-brandLightOpacity100 text-brandDark2">
