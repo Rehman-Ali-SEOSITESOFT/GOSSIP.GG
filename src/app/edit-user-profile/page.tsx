@@ -68,7 +68,7 @@ const Page = () => {
                 </a>
               </li>
             </ul>
-            <div className="tab-content tab-space w-full pt-12 h-full min-h-[800px] mw-md:min-h-[800px]	">
+            <div className="tab-content tab-space w-full pt-12 h-full min-h-[800px] mw-md:min-h-[600px]	">
               <div className={openTab === 1 ? "block" : "hidden"} id="link1">
                 <div className="for-you-section text-center">
                   <p className="montserratfont font-normal text-base leading-5 dark:text-brandLightOpacity100 text-brandDark2">
