@@ -1,28 +1,28 @@
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
-import DarkLine from "../../../../assets/images/general/dark-line.png";
-import Card from "../../../../assets/images/esport-event/card.png";
-import Icon from "../../../../assets/images/esport-event/icon.png";
-import Logo from "../../../../assets/images/esport-event/logo.png";
-import DarkLogo from "../../../../assets/images/esport-event/logo-dark.png";
-import RightIcon from "../../../../assets/images/esport-event/right.png";
-import Slider from "react-slick";
-import style from "./BgmiEvent.module.css";
-import Line from "../../../../assets/images/general/Line.png";
-import Carousel from "react-multi-carousel";
-const BgmiEvents = () => {
+import Image from "next/image"
+import React, { useEffect, useState } from "react"
+import { useTheme } from "next-themes"
+import DarkLine from "../../../../assets/images/general/dark-line.png"
+import Card from "../../../../assets/images/esport-event/card.png"
+import Icon from "../../../../assets/images/esport-event/icon.png"
+import Logo from "../../../../assets/images/esport-event/logo.png"
+import DarkLogo from "../../../../assets/images/esport-event/logo-dark.png"
+import RightIcon from "../../../../assets/images/esport-event/right.png"
+import Slider from "react-slick"
+import style from "./BgmiEvent.module.css"
+import Line from "../../../../assets/images/general/Line.png"
+import Carousel from "react-multi-carousel"
+const BgmiEvents = (props: any) => {
   interface EventList {
-    event_title: string;
-    date: string;
-    country: string;
-    prize: string;
+    event_title: string
+    date: string
+    country: string
+    prize: string
   }
-  const { theme } = useTheme();
-  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
+  const { theme } = useTheme()
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("")
   useEffect(() => {
-    setIsDarkTheme(theme === "dark" ? "dark" : "light");
-  }, [theme]);
+    setIsDarkTheme(theme === "dark" ? "dark" : "light")
+  }, [theme])
   const [eventData, setEventData] = useState<EventList[]>([
     {
       event_title: "DOTA Pro Circuit 2023 Tour 1",
@@ -60,7 +60,7 @@ const BgmiEvents = () => {
       country: "South Asia",
       prize: " $4500",
     },
-  ]);
+  ])
   const settings = {
     dots: false,
     infinite: true,
@@ -97,18 +97,18 @@ const BgmiEvents = () => {
           arrows: false,
         },
       },
-      {
-        breakpoint: 500,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          arrows: false,
-          centerMode: true,
-        },
-      },
+      // {
+      //   breakpoint: 500,
+      //   settings: {
+      //     slidesToShow: 1,
+      //     slidesToScroll: 1,
+      //     infinite: true,
+      //     arrows: false,
+      //     centerMode: true,
+      //   },
+      // },
     ],
-  };
+  }
   const responsive = {
     tablet: {
       breakpoint: { max: 639, min: 360 },
@@ -128,11 +128,11 @@ const BgmiEvents = () => {
       paritialVisibilityGutter: 60,
       arrows: false,
     },
-  };
+  }
   return (
     <>
       <section className="bgmi_slider">
-        <div className="block mw-sm:hidden slider-arrows">
+        <div className="block mw-sm:hidden">
           <Slider
             {...settings}
             className={`${
@@ -141,7 +141,7 @@ const BgmiEvents = () => {
           >
             {eventData.map((item, index) => (
               <div
-                className="rounded border  dark:border-brandLightOpacity10 bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1 dark:bg-brandDark1 border-inherit dark:border-brandDark1 border  p-2.5"
+                className="rounded   dark:border-brandLightOpacity10 bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1 dark:bg-brandDark1 border-inherit dark:border-brandDark1 border  p-2.5"
                 key={index}
               >
                 <div className="">
@@ -201,7 +201,7 @@ const BgmiEvents = () => {
         </div>
         <div className="hidden mw-sm:block slider-arrows">
           <Carousel
-            responsive={responsive}
+            responsive={props.responsive}
             className="valorant-slider"
             ssr
             partialVisbile
@@ -209,7 +209,7 @@ const BgmiEvents = () => {
           >
             {eventData.map((item, index) => (
               <div
-                className="rounded border  dark:border-brandLightOpacity10 bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1 dark:bg-brandDark1 border-inherit dark:border-brandDark1 border  p-2.5"
+                className="rounded   dark:border-brandLightOpacity10 bg-white hover:border-brandDark1 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] hover:shadow-[0_0_8px_0_#e5e5e5] m-1 dark:bg-brandDark1 border-inherit dark:border-brandDark1 border  p-2.5"
                 key={index}
               >
                 <div className="">
@@ -281,7 +281,7 @@ const BgmiEvents = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default BgmiEvents;
+export default BgmiEvents
