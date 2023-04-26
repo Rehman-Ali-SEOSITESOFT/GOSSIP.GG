@@ -109,7 +109,7 @@ const Carousel = () => {
   }
 
   return (
-    <Slider className={`${theme === "dark" ? " dark-arrow" : " light-arrow"}`} {...settings}>
+    <Slider className={`displayImageProfile ${theme === "dark" ? " dark-arrow" : " light-arrow"}`} {...settings}>
       {displayImageItems.map((i, index) => (
         <div key={index}>
           <Image className={`h-[60px] w-[60px]  ${selecteitem ===  index ? ' border rounded-full border-brandDar2 dark:border-brandLightOpacity100 ' : ''}`}
