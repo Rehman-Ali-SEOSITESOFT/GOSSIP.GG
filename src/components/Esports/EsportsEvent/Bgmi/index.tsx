@@ -183,7 +183,9 @@ const Bgmi = (props: any) => {
               hover:decoration-black 
               hover:text-black"
             >
-              <span className="view-more">View all BGMI events</span>
+              <span className="view-more">
+                View all BGMI events &nbsp;&nbsp;
+              </span>
               <span>&gt;</span>
               <span>&gt;</span>
               <span>&gt;</span>

@@ -31,7 +31,7 @@ const RelatedTopics = () => {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
-          arrows: false,
+          arrows: true,
         },
       },
     ],
@@ -112,7 +112,6 @@ const RelatedTopics = () => {
         <div className="2xl:container">
           <div className="flex items-center	">
             <div className={`${styles.trend_left}`}>
-              
               <h4
                 className={`inline-block ${styles.font_styls} text-brandDark2 dark:text-brandLightOpacity100 `}
               >

@@ -43,20 +43,20 @@ const ProfileDetail = () => {
         )}
         <div
           onClick={() => onClickOpenModal()}
-          className="dark:bg-brandLightOpacity10 bg-borderEditProfile dark:hover:bg-brandLightOpacity20 rounded-3xl inline-block px-4	 py-2.5 absolute top-6	right-6	 cursor-pointer	"
+          className="dark:bg-brandLightOpacity10 bg-borderEditProfile dark:hover:bg-brandLightOpacity20 rounded-3xl inline-block px-4	 py-2.5 absolute top-6	right-6	 cursor-pointer mw-sm1:py-1.5 mw-sm1:px-3	"
         >
           <Image
             src={editprofile}
             alt="edit user"
             className="inline-block w-[20px] h-[20px] mr-2	"
           />
-          <span className="text-base  font-semibold leading-5 text-white	dark:text-brandLightOpacity100	montserratfont">
+          <span className="text-base  font-semibold leading-5 text-white	dark:text-brandLightOpacity100	montserratfont mw-sm1:text-sm ">
             Edit Profile
           </span>
         </div>
       </div>
       <div className="profile_description relative">
-        <div className="profle-image ml-[50px]  mt-[-80px] h-[160px] w-[160px] mw-lg:ml-[30px] mw-lg:h-[140px] mw-lg:w-[140px]  mw-sm1:w-[100px] mw-sm1:h-[100px] ">
+        <div className="profle-image ml-[50px]  mt-[-80px] h-[160px] w-[160px] mw-lg:ml-[30px] mw-lg:h-[140px] mw-lg:w-[140px]  mw-sm1:w-[80px] mw-sm1:h-[80px] mw-sm1:mt-[-50px] ">
           <Image
             src={profileimg}
             className="w-full h-full object-cover"

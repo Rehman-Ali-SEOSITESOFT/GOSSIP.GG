@@ -27,7 +27,7 @@ const GuideGaming = () => {
                     className="w-[23.5%] mw-lg:w-[48%] mw-sm1:w-[98%] mw-sm3:w-full"
                     key={index}
                   >
-                    <div className="img-wrapper h-[230px] mw-lg:h-[200px] mw-sm1:h-[236px] mw-sm:h-[180px] mw-sm3:h-[150px] rounded">
+                    <div className="img-wrapper h-[230px] mw-lg:h-[200px] mw-md:h-[236px] rounded">
                       <Image
                         src={element}
                         alt="Demo"

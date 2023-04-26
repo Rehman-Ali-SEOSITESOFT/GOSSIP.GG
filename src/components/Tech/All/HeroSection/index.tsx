@@ -42,9 +42,9 @@ const AllHeroSection = () => {
       <div className="global-section-width  ">
         <div className="2xl:container pt-12  mw-sm:pt-7">
           <div className="flex mw-lg:flex-col">
-            <div className="w-7/12 mw-xl:w-1/2 mw-11:h-[420px]  mw-sm:h-[345px] mw-lg:w-full ">
+            <div className="w-7/12 mw-xl:w-1/2 mw-11:h-[420px]  mw-sm:h-[280px] mw-sm3:h-[215px] mw-lg:w-full ">
               <div
-                className={`left_side h-[450px] mw-11:h-[420px] mw-sm:h-[345px] relative rounded	overflow-hidden`}
+                className={`left_side h-[450px] mw-11:h-[420px] mw-sm:h-[280px] mw-sm3:h-[215px] relative rounded	overflow-hidden`}
               >
                 <Image
                   src={leftside}

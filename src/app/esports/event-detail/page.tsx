@@ -599,7 +599,11 @@ const Page = () => {
                     })}
                     <div className="flex pl-[9px]   pb-[34px] pt-[16px]">
                       <div className="w-[40px] h-[40px] dark:bg-brandLightOpacity10 rounded-full flex items-center justify-center bg-[#E9E8E9] dark:bg-brandLightOpacity10">
-                        <Image src={torurnament} alt="icon" className="" />
+                        <Image
+                          src={isDarkTheme === "dark" ? torurnament : darkclock}
+                          alt="icon"
+                          className=" "
+                        />
                       </div>
                       <div className="name_size pl-[30px] ">
                         <h4 className="montserratfont text-[16px] leading-[20px] font-semibold dark:text-[#E5E5E5]">

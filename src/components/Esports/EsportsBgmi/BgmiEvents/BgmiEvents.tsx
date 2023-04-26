@@ -232,6 +232,7 @@ const BgmiEvents = (props: any) => {
                     <Image
                       src={isDarkTheme === "dark" ? DarkLogo : Logo}
                       alt="event logo"
+                      className="mw-sm3:w-[30px] mw-sm3:h-[30px]"
                     />
                     <div className="flex flex-col pl-2">
                       <p

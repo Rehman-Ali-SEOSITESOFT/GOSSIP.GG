@@ -297,7 +297,7 @@ const Others = (props: any) => {
             {item.length === itemLimit ? (
               <div className="w-fit m-auto	 pt-14 text-center ">
                 <p
-                  className="text-textColorGray dark:text-brandLightOpacity70 montserratfont font-base  leading-5 font-medium	 dark:hover:text-white underline
+                  className="text-textColorGray dark:text-brandLightOpacity70 montserratfont font-base  leading-5 font-medium	 dark:hover:text-white underline 
               dark:hover:decoration-white 
               hover:decoration-black 
               hover:text-black cursor-pointer"

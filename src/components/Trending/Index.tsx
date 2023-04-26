@@ -32,7 +32,7 @@ const Trending = () => {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
-          arrows: false,
+          arrows: true,
         },
       },
     ],
@@ -116,7 +116,7 @@ const Trending = () => {
               <Image
                 src={trendingLight}
                 alt="trending"
-                className={` inline-block w-5  brightness-0 dark:brightness-100		`}
+                className={` inline-block w-5  brightness-0 dark:brightness-100	mw-sm1:relative mw-sm1:z-[2]	`}
               />
 
               <h4
