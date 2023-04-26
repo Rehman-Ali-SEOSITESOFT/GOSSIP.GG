@@ -92,7 +92,7 @@ const DeailTech = () => {
             return (
               <div
                 className={
-                  "max-w-[300px] mb-[24px] mx-14:max-w-[24%] w-full mw-md:max-w-[48%]      "
+                  "max-w-[300px] mb-[24px] mx-14:max-w-[24%] w-full mw-md:max-w-[48%]"
                 }
                 key={index}
               >
