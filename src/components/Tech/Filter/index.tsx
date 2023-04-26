@@ -61,7 +61,7 @@ const FilterTabs = () => {
                    no === index
                      ? "dark:border-brand border-brandDark2 bg-grayCard"
                      : "dark:border-brandLightOpacity100 border-brandDark2"
-                 } mw-9:mb-4`}
+                 } mw-9:mb-4 mw-sm:mr-[6px]`}
                 key={index}
                 onClick={() => hadldeclick(index)}
               >

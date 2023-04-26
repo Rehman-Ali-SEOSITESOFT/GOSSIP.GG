@@ -1,24 +1,24 @@
-import Image from "next/image"
-import React, { useState, useEffect } from "react"
-import leftside from "../../../../assets/images/hero/hero-section-left-side.png"
-import book1 from "../../../../assets/images/hero/right-side-01.png"
-import book2 from "../../../../assets/images/hero/right-side-012.png"
-import book3 from "../../../../assets/images/hero/right-side-03.png"
-import bookmark from "../../../../assets/gaming/bookmark.png"
-import bookmarkDark from "../../../../assets/gaming/bookmark-dark.png"
-import styles from "./styles.module.css"
-import { useTheme } from "next-themes"
+import Image from "next/image";
+import React, { useState, useEffect } from "react";
+import leftside from "../../../../assets/images/hero/hero-section-left-side.png";
+import book1 from "../../../../assets/images/hero/right-side-01.png";
+import book2 from "../../../../assets/images/hero/right-side-012.png";
+import book3 from "../../../../assets/images/hero/right-side-03.png";
+import bookmark from "../../../../assets/gaming/bookmark.png";
+import bookmarkDark from "../../../../assets/gaming/bookmark-dark.png";
+import styles from "./styles.module.css";
+import { useTheme } from "next-themes";
 const HeroSection = () => {
   interface List {
-    name: string
-    picture: any
+    name: string;
+    picture: any;
   }
 
-  const { theme } = useTheme()
-  const [isDarkTheme, setIsDarkTheme] = useState<string>("")
+  const { theme } = useTheme();
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
   useEffect(() => {
-    setIsDarkTheme(theme === "dark" ? "dark" : "light")
-  }, [theme])
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   const [item, setItem] = useState<List[]>([
     {
       name: "MR Luna has announced he is stepping down as CEO",
@@ -32,7 +32,7 @@ const HeroSection = () => {
       name: "Bayes Esports appoints York Scheunemann as COO",
       picture: book3,
     },
-  ])
+  ]);
 
   const [item2, setItem2] = useState<List[]>([
     {
@@ -43,16 +43,16 @@ const HeroSection = () => {
       name: "Bayes Esports appoints York Scheunemann as COO of reputed gaming company      ",
       picture: book2,
     },
-  ])
+  ]);
   return (
     <>
       <section className={`${styles.mainGameAllWrapper}`}>
         <div className="global-section-width  ">
           <div className="2xl:container pt-[12px]">
             <div className="flex mw-lg:flex-col">
-              <div className="w-7/12 mw-xl:w-1/2 mw-11:h-[420px]  mw-sm:h-[345px] mw-lg:w-full  ">
+              <div className="w-7/12 mw-xl:w-1/2 mw-11:h-[420px]  mw-sm:h-[280px] mw-sm3:h-[215px] mw-lg:w-full  ">
                 <div
-                  className={`${styles.left_side} h-[450px]  mw-11:h-[420px] mw-sm:h-[345px] relative rounded	overflow-hidden`}
+                  className={`${styles.left_side} h-[450px]  mw-11:h-[420px] mw-sm:h-[280px] mw-sm3:h-[215px] relative rounded	overflow-hidden`}
                 >
                   <Image
                     src={leftside}
@@ -117,7 +117,7 @@ const HeroSection = () => {
                           </div>
                         </div>
                       </div>
-                    )
+                    );
                   })}
                 </div>
                 <div className="hidden mw-lg:flex  right-side pl-8 mx-14:pl-6 mw-lg:pl-0 mw-lg:py-[28px] h-[450px] mw-11:h-[420px]  mw-lg:h-auto mw-lg:flex-row mw-sm:flex-col  mw-lg:h-auto  justify-between">
@@ -175,7 +175,7 @@ const HeroSection = () => {
                           </div>
                         </div>
                       </div>
-                    )
+                    );
                   })}
                 </div>
               </div>
@@ -184,7 +184,7 @@ const HeroSection = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;
