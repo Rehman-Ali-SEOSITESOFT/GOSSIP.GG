@@ -159,14 +159,14 @@ const LiveMatch = (props: any) => {
                   </div>
                   {item.match_status !== "LIVE" ? (
                     <div className="bg-grayCard dark:bg-brandLightOpacity10 opacity-100 h-8 max-w-[25%]  text-[14px]  flex justify-center items-center rounded-sm min-w-fit">
-                      <p className="text-brandDark2 dark:text-brandLightOpacity100 opacity-70 montserratfont font-medium mw-sm3:text-[8px]  text-[14px]  px-2 ">
+                      <p className="text-brandDark2 dark:text-brandLightOpacity100 opacity-70 montserratfont font-medium mw-sm3:font-semibold mw-sm3:text-[10px]  text-[14px]  px-2 ">
                         {item.match_status}
                       </p>
                     </div>
                   ) : (
                     <div className="bg-errorIndicator h-8 w-14 flex justify-center items-center rounded-sm min-w-fit">
                       <p
-                        className={`text-white montserratfont  text-[14px]  tracking-wider  mw-sm3:text-[8px]  `}
+                        className={`text-white montserratfont  text-[14px]  tracking-wider  mw-sm3:font-semibold mw-sm3:text-[10px]  `}
                       >
                         {item.match_status}
                       </p>
@@ -287,14 +287,14 @@ const LiveMatch = (props: any) => {
                   </div>
                   {item.match_status !== "LIVE" ? (
                     <div className="bg-grayCard dark:bg-brandLightOpacity10 opacity-100 h-8 max-w-[25%]  text-[14px]  flex justify-center items-center rounded-sm min-w-fit">
-                      <p className="text-brandDark2 dark:text-brandLightOpacity100 opacity-70 montserratfont font-medium mw-sm3:text-[8px]  text-[14px]  px-2 ">
+                      <p className="text-brandDark2 dark:text-brandLightOpacity100 opacity-70 montserratfont font-medium mw-sm3:font-semibold mw-sm3:text-[10px]  text-[14px]  px-2 ">
                         {item.match_status}
                       </p>
                     </div>
                   ) : (
                     <div className="bg-errorIndicator h-8 w-14 flex justify-center items-center rounded-sm min-w-fit">
                       <p
-                        className={`text-white montserratfont  text-[14px]  tracking-wider  mw-sm3:text-[8px]  `}
+                        className={`text-white montserratfont  text-[14px]  tracking-wider  mw-sm3:font-semibold mw-sm3:text-[10px]  `}
                       >
                         {item.match_status}
                       </p>

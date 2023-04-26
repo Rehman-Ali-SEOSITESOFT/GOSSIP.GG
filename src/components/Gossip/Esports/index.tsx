@@ -34,7 +34,7 @@ const Esports = () => {
           <p className="montserratfont mw-lg:text-[14px] font-bold  text-brandDark2 dark:text-brandLightOpacity100 text-[24px]">
             Bayes Esports appoints York Scheunemann as COO of their company
           </p>
-          <small className="pt-[16px]">
+          <small className="pt-[16px] mw-sm1:hidden">
             <a
               href="#"
               className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
@@ -51,12 +51,34 @@ const Esports = () => {
               5 min read
             </span>
           </small>
-          <p className="robotoslub font-normal mw-lg:text-[12px] pt-[16px] text-base text-textColor dark:text-brandLightOpacity90 ">
+          <p className="robotoslub mw-sm1:text-sm font-normal mw-lg:text-[12px] pt-[16px] text-base text-textColor dark:text-brandLightOpacity90 ">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry&#39;s standard dummy
             text ever since the 1500s, when an unknown printer took a galley of
             type and scrambled it to make a type...
           </p>
+          <small className="hidden   pt-[16px] mw-sm1:block">
+           <div className="flex justify-between">
+           <a
+              href="#"
+              className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
+            >
+             John B. Watson
+            </a>
+            <div >
+            <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
+              7 months ago
+            </span>
+            <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
+
+            <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
+              5 min read
+            </span>
+        
+            </div>
+           </div>
+           
+          </small>
           <div className="relative">
             <Image className="my-[24px]" src={Post1} alt="post" />
             <span className="absolute right-[0px] mw-lg:top-[22px] top-[24px] bg-brand  flex items-center justify-center montserratfont text-brandLightOpacity100 h-[40px] w-[80px] mw-lg:h-[30px] mw-lg:w-[72px] mw-lg:text-[14px] font-bold text-base">
@@ -117,7 +139,7 @@ const Esports = () => {
           <p className="montserratfont font-bold mw-lg:text-[14px] text-brandDark2 dark:text-brandLightOpacity100 text-[24px]">
             Bayes Esports appoints York Scheunemann as COO of their company
           </p>
-          <small className="pt-[16px]">
+          <small className="pt-[16px] mw-sm1:hidden">
             <a
               href="#"
               className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
@@ -125,7 +147,7 @@ const Esports = () => {
               John D
             </a>
             <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
-            <span className="  border-brandDark2 mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
+            <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
               Jan 30th, 2023, 18:08
             </span>
             <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
@@ -134,12 +156,34 @@ const Esports = () => {
               5 min read
             </span>
           </small>
-          <p className="robotoslub font-normal mw-lg:text-[12px] pt-[16px] text-base text-textColor dark:text-brandLightOpacity90 ">
+          <p className="robotoslub mw-sm1:text-sm font-normal mw-lg:text-[12px] pt-[16px] text-base text-textColor dark:text-brandLightOpacity90 ">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry&#39;s standard dummy
             text ever since the 1500s, when an unknown printer took a galley of
             type and scrambled it to make a type...
           </p>
+          <small className="hidden   pt-[16px] mw-sm1:block">
+           <div className="flex justify-between">
+           <a
+              href="#"
+              className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
+            >
+             John B. Watson
+            </a>
+            <div >
+            <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
+              7 months ago
+            </span>
+            <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
+
+            <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
+              5 min read
+            </span>
+        
+            </div>
+           </div>
+           
+          </small>
           <Image className="my-[24px]" src={Post2} alt="post" />
           <div className=" flex flex-row justify-between border-t border-b dark:border-t-brandLightOpacity10 dark:border-b-brandLightOpacity10">
             <div className="my-[22px] item-iamge-arrows text-center flex flex-row items-center">
@@ -195,29 +239,51 @@ const Esports = () => {
           <p className="montserratfont font-bold mw-lg:text-[14px]  text-brandDark2 dark:text-brandLightOpacity100 text-[24px]">
             Bayes Esports appoints York Scheunemann as COO of their company
           </p>
-          <small className="pt-[16px]">
+          <small className="pt-[16px] mw-sm1:hidden">
             <a
               href="#"
-              className="underline text-brandDark2 mw-lg:text-[12px] dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
+              className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
             >
               John D
             </a>
             <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
-            <span className="  border-brandDark2n mw-lg:text-[12px]  text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
+            <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
               Jan 30th, 2023, 18:08
             </span>
-            <span className="mx-[18px]   mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
+            <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
 
-            <span className=" border-brandDark2  mw-lg:text-[12px]  text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
+            <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
               5 min read
             </span>
           </small>
-          <p className="robotoslub font-normal mw-lg:text-[12px] pt-[16px] text-base text-textColor dark:text-brandLightOpacity90 ">
+          <p className="robotoslub mw-sm1:text-sm font-normal mw-lg:text-[12px] pt-[16px] text-base text-textColor dark:text-brandLightOpacity90 ">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry&#39;s standard dummy
             text ever since the 1500s, when an unknown printer took a galley of
             type and scrambled it to make a type...
           </p>
+          <small className="hidden   pt-[16px] mw-sm1:block">
+           <div className="flex justify-between">
+           <a
+              href="#"
+              className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
+            >
+             John B. Watson
+            </a>
+            <div >
+            <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
+              7 months ago
+            </span>
+            <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
+
+            <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
+              5 min read
+            </span>
+        
+            </div>
+           </div>
+           
+          </small>
           <Image className="my-[24px]" src={Post3} alt="post" />
           <div className=" flex flex-row justify-between border-t border-b dark:border-t-brandLightOpacity10 dark:border-b-brandLightOpacity10">
             <div className="my-[22px] item-iamge-arrows text-center flex flex-row items-center">

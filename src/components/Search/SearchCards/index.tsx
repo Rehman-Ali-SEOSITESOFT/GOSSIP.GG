@@ -39,8 +39,8 @@ const SearchCard = () => {
           <p className="montserratfont pt-[14px] text-2xl font-bold text-brandDark2 dark:text-brandLightOpacity100">Hogwarts Championship</p>
           <p className="montserratfont pt-[12px] pb-[48px] text-lg font-normal text-brandDark2 dark:text-brandLightOpacity100">1-15 of 237 results</p>
         </div>
-      <div className="saved-component">
-        <div className="items flex flex-wrap justify-between">
+      <div className="saved-component mw-sm1:flex mw-sm1:justify-center mw-sm1:items-center">
+        <div className="items mw-sm2:flex flex-wrap justify-between ">
           {items.map((ele, index) => {
             return (
               <div
@@ -75,7 +75,7 @@ const SearchCard = () => {
                     />
                   </div> */}
                   <div className="flex flex-row items-center justify-center">
-                  <span className="montserratfont pr-[12px] italic text-xs dark:text-brandLightOpacity70 text-brandDark2">1 month ago</span>
+                  <span className="montserratfont pr-[12px] italic text-xs dark:text-brandLightOpacity70 text-brandDark2 mw-sm1:hidden">1 month ago</span>
                   <div className="bookmark text-textColorGray hover:text-textColor  dark:text-brandLightOpacity70 dark:hover:text-brandLightOpacity100 w-[12px]">
                      
                       <Image

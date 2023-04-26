@@ -129,6 +129,10 @@ const FilterBy = (props?: any) => {
   ]);
   useEffect(() => {
     document.addEventListener("click", handleClickOutside, true);
+    setSelectedRegion(['All']);
+    setSelectedGame(['8']);
+    setSelectedStatus(["All"]);
+    setSelectedOrganizer(["4"])
   }, []);
 
   // /// for close dropdown on outside click
@@ -263,6 +267,9 @@ const FilterBy = (props?: any) => {
   useEffect(() => {
     setIsDarkTheme(theme === "dark" ? "dark" : "light");
   }, [theme]);
+  
+  console.log("selectedGame====", selectedGame)
+  
   return (
     <div className="filter-by-esport-event pt-11 mw-9:pt-9	 mw-md:pt-8	 ">
       <div className="global-section-width">
@@ -449,7 +456,7 @@ const FilterBy = (props?: any) => {
                       onClick={() => onClickRemoveOrganizer()}
                       src={isDarkTheme === "dark" ? Cross : CrossLight}
                       alt="arrow icon"
-                      className="mw-sm:min-w-[15px]"
+                      className="mw-sm:w-[15px]"
                     />
                     <span className="mx-[16px] h-[36px] w-[1px] mw-sm:mx-[10px] mw-sm:h-[25px]  bg-brandDark2  dark:bg-brandLightOpacity50"></span>
                   </>

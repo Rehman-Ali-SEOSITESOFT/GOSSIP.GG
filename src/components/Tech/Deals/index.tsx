@@ -166,7 +166,7 @@ const DeailTech = () => {
       </div>
       <div className="2xl:container">
         <div className="pt-16 mw-lg:pt-7 mw-sm:pt-[16px]">
-          <SectionSaprator title="Upcomming  Deals" />
+          <SectionSaprator title="Upcoming  Deals" />
         </div>
         <div className="flex flex-wrap justify-between">
           {upCommming.slice(0, upCommingLimit).map((elem, index) => {

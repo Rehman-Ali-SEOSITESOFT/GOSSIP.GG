@@ -76,6 +76,7 @@ module.exports = {
         "mw-md": { max: "767px" },
         // => @media (max-width: 767px) { ... }
         "mw-sm1": { max: "690px" },
+        "mw-sm2": { min: "691px" },
         "mw-sm": { max: "639px" },
         "mw-sm3": { max: "400px" },
         // => @media (max-width: 639px) { ... }
