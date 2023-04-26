@@ -209,7 +209,7 @@ const EsportEvent = (props: any) => {
                 </div>
                 <div>
                   <p
-                    className={`text-brandDark2 dark:text-brandLightOpacity100 mw-xl:text-[15px]  font-bold ${style.font_esport_event_16} pt-4`}
+                    className={`text-brandDark2 dark:text-brandLightOpacity100 mw-xl:text-[15px]  font-bold ${style.font_esport_event_16} pt-4 mw-sm3:text-[12px] mw-sm3:leading-[15px]`}
                   >
                     DOTA Pro Circuit 2023 Tour 1
                   </p>
@@ -219,15 +219,16 @@ const EsportEvent = (props: any) => {
                     <Image
                       src={isDarkTheme === "dark" ? DarkLogo : Logo}
                       alt="event logo"
+                      className="mw-sm:w-[30px] mw-sm:h-[30px]"
                     />
                     <div className="flex flex-col pl-2">
                       <p
-                        className={`text-brandDark2 dark:text-brandLightOpacity100   ${style.font_esport_event_12} font-medium `}
+                        className={`text-brandDark2 dark:text-brandLightOpacity100   ${style.font_esport_event_12} font-medium montserratfont  `}
                       >
                         DEC 02, 2022 - JAN 18, 2023
                       </p>
                       <p
-                        className={`${style.font_esport_event_12}   text-brandDark2 dark:text-brandLightOpacity100 font-medium pt-1.5 flex items-center`}
+                        className={`${style.font_esport_event_12}   text-brandDark2 dark:text-brandLightOpacity100 font-medium  flex items-center`}
                       >
                         South Asia
                         <span className="h-1 w-1 bg-brandDark2 opacity-70 dark:opacity-100    dark:bg-brandLightOpacity100 inline-block rounded-full ml-[7px] mr-[8px]"></span>{" "}

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import LatestNews from "@/components/LatestNews/Index";
-import AllHeroSection from "./HeroSection";
-import AllReviews from "./Reviews";
-import TechFeature from "./Feature";
-import AllDeail from "./Deails";
+import React, { useState } from "react"
+import LatestNews from "@/components/LatestNews/Index"
+import AllHeroSection from "./HeroSection"
+import AllReviews from "./Reviews"
+import TechFeature from "./Feature"
+import AllDeail from "./Deails"
 const MainTech = () => {
   return (
     <section className="MainTech mt-[-5px] ">
@@ -31,7 +31,7 @@ const MainTech = () => {
       <TechFeature />
       <AllDeail />
     </section>
-  );
-};
+  )
+}
 
-export default MainTech;
+export default MainTech
