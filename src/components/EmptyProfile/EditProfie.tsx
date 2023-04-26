@@ -54,7 +54,7 @@ const EmptyProfileDetail = () => {
         </div>
       </div>
       <div className="profile_description relative">
-        <div className="profle-image mt-[-80px] h-[160px] w-[160px] mw-lg:ml-[30px] mw-lg:h-[140px] mw-lg:w-[140px]  mw-sm1:w-[80px] mw-sm1:h-[80px] mw-sm1:mt-[-50px]">
+        <div className="profle-image ml-[50px]  mt-[-80px] h-[160px] w-[160px] mw-lg:ml-[30px] mw-lg:h-[140px] mw-lg:w-[140px]  mw-sm1:w-[80px] mw-sm1:h-[80px] mw-sm1:mt-[-50px] ">
           <Image
             src={profileimg}
             className="w-full h-full object-cover"
