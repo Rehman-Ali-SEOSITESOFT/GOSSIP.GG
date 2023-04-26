@@ -188,7 +188,10 @@ const CsGo = (props: any) => {
               hover:decoration-black 
               hover:text-black"
             >
-              <span className="view-more"> View all CS:GO events</span>
+              <span className="view-more">
+                {" "}
+                View all CS:GO events &nbsp;&nbsp;
+              </span>
               <span>&gt;</span>
               <span>&gt;</span>
               <span>&gt;</span>

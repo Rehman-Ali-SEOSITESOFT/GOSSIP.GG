@@ -198,7 +198,10 @@ const Valorant = (props: any) => {
               hover:decoration-black 
               hover:text-black"
             >
-              <span className="view-more"> View all Valorant events</span>
+              <span className="view-more">
+                {" "}
+                View all Valorant events &nbsp;&nbsp;
+              </span>
               <span>&gt;</span>
               <span>&gt;</span>
               <span>&gt;</span>
