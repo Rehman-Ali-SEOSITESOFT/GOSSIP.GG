@@ -21,6 +21,7 @@ import Link from "next/link";
 import { Menu, Transition } from "@headlessui/react";
 import Cross from "../../assets/images/general/x.png";
 import Clock from "../../assets/images/general/clock.png";
+import barndlogo from "../../assets/images/header/brand-responsive.png";
 const Header = () => {
   interface MenuList {
     name: string;
@@ -185,8 +186,13 @@ const Header = () => {
                     searchOpen
                       ? `${styles.seach__deve}`
                       : `${styles.seach__deve} ${styles.open}`
-                  } `}
+                  } mw-lg:flex mw-lg:items-center mw-lg:dark:bg-brandDark3 mw-lg:bg-brandDark2`}
                 >
+                  <Image
+                    src={barndlogo}
+                    alt="img"
+                    className="hidden mw-lg:block mw-lg:mr-5 mw-sm:mr-2"
+                  />
                   <div
                     ref={headerSearchbarRef}
                     className={`${styles.serach_btn}  relative   `}
@@ -204,7 +210,7 @@ const Header = () => {
                       <Image
                         src={search}
                         alt="search "
-                        className="w-[22px] h-[22px]"
+                        className="w-[22px] h-[22px] mw-lg:w-[17px] mw-lg:h-[17px] "
                       />
                     </Link>
                     {searchText !== "" && (
@@ -338,7 +344,11 @@ const Header = () => {
                                 Settings
                                 <span>
                                   <Image
-                                    src={isDarkTheme === 'dark' ? setting : settingLight}
+                                    src={
+                                      isDarkTheme === "dark"
+                                        ? setting
+                                        : settingLight
+                                    }
                                     alt=""
                                     className="inline-block ml-3"
                                   />

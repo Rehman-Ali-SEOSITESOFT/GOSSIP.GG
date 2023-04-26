@@ -133,7 +133,7 @@ const FilterBy = (props?: any) => {
 
   // /// for close dropdown on outside click
   const handleClickOutside = (e: any) => {
-    if(dropDownRef.current !== null){
+    if (dropDownRef.current !== null) {
       if (!dropDownRef.current.contains(e.target)) {
         setOpenDropdown1(false);
         setOpenDropdown2(false);
@@ -141,7 +141,6 @@ const FilterBy = (props?: any) => {
         setOpenDropdown4(false);
       }
     }
-    
   };
   const onClickOpen1 = () => {
     setOpenDropdown1(!opendropDown1);
@@ -302,7 +301,7 @@ const FilterBy = (props?: any) => {
                   ) : (
                     ""
                   )}
-                  <p className="montserratfont text-[14px] font-normal pl-[16px] mw-sm:pl-[5px] mw-sm:text-xs mw-sm:leading-normal	">
+                  <p className="montserratfont text-[14px] font-normal pl-[16px] mw-sm:pl-[5px] mw-sm:text-xs mw-sm:leading-normal overflow--text--fikter	">
                     {selectedGame.length === 1
                       ? gameList.filter(
                           (item) => item.id === selectedGame[0]
@@ -432,7 +431,7 @@ const FilterBy = (props?: any) => {
                     ) : (
                       ""
                     )}
-                    <p className="montserratfont text-[14px] font-normal pl-[16px] mw-sm:pl-[5px]  mw-sm:text-xs mw-sm:leading-normal	">
+                    <p className="montserratfont text-[14px] font-normal pl-[16px] mw-sm:pl-[5px]  mw-sm:text-xs mw-sm:leading-normal	overflow--text--fikter">
                       {selectedOrganizer.length === 1
                         ? organizerList.filter(
                             (item) => item.id === selectedOrganizer[0]
@@ -532,7 +531,7 @@ const FilterBy = (props?: any) => {
               onClick={() => onClickOpen3()}
               className=" px-4  flex flex-row justify-between items-center h-[60px] mw-sm1:h-[45px]   rounded-lg w-[302px] mx-13:w-[270px] mw-12:w-[100%] border border-brandDark2 dark:border-brandLightOpacity50 mw-sm1:rounded"
             >
-              <p className="montserratfont text-brandDark1 dark:text-brandLightOpacity100 mw-sm:text-xs mw-sm:leading-normal	">
+              <p className="montserratfont text-brandDark1 dark:text-brandLightOpacity100 mw-sm:text-xs mw-sm:leading-normal	overflow--text--fikter">
                 {selectedStatus.filter((item) => item === "All").length === 1
                   ? "All"
                   : selectedStatus.length >= 2
@@ -577,7 +576,7 @@ const FilterBy = (props?: any) => {
                       isDarkTheme === "dark" ? "darkchecked " : "lightcheched"
                     }`}
                   >
-                    <p className="montserratfont text-brandDark2 dark:text-brandLightOpacity100 text-base font-normal pl-[8px] ">
+                    <p className="montserratfont text-brandDark2 dark:text-brandLightOpacity100 text-base font-normal pl-[8px] mw-sm:h-[18px] mw-sm:overflow-hidden">
                       {item}
                     </p>
                     <input
@@ -607,7 +606,7 @@ const FilterBy = (props?: any) => {
               onClick={() => onClickOpen4()}
               className=" px-4  flex flex-row justify-between items-center h-[60px] mw-sm1:h-[45px]   rounded-lg w-[302px] mx-13:w-[270px] mw-12:w-[100%] border border-brandDark2 dark:border-brandLightOpacity50 mw-sm1:rounded"
             >
-              <p className="montserratfont text-brandDark1 dark:text-brandLightOpacity100 mw-sm:text-xs mw-sm:leading-normal	">
+              <p className="montserratfont text-brandDark1 dark:text-brandLightOpacity100 mw-sm:text-xs mw-sm:leading-normal	overflow--text--fikter">
                 {selectedRegion.filter((item) => item === "All").length === 1
                   ? "All"
                   : selectedRegion.length >= 2
