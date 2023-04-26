@@ -1,4 +1,4 @@
-import React, { useState, useRef , useEffect} from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import bannerimg from "../../../assets/user-profile/banner.png";
 import whitebanner from "../../../assets/user-profile/white-banner.png";
@@ -25,8 +25,10 @@ const ProfileDetail = () => {
   };
   return (
     <>
-      <div className={` ${styles.banner_image}  relative h-[190px]`}>
-      {isDarkTheme === "dark" ? (
+      <div
+        className={` ${styles.banner_image}  relative h-[190px] mw-sm1:h-[150px] mw-sm:h-[110px]`}
+      >
+        {isDarkTheme === "dark" ? (
           <Image
             src={bannerimg}
             className="banner w-full h-full object-cover  "
@@ -54,31 +56,31 @@ const ProfileDetail = () => {
         </div>
       </div>
       <div className="profile_description relative">
-        <div className="profle-image ml-[50px]  mt-[-80px] h-[160px] w-[160px] ">
+        <div className="profle-image ml-[50px]  mt-[-80px] h-[160px] w-[160px] mw-lg:ml-[30px] mw-lg:h-[140px] mw-lg:w-[140px]  mw-sm1:w-[100px] mw-sm1:h-[100px] ">
           <Image
             src={profileimg}
             className="w-full h-full object-cover"
             alt="profile-image"
           />
         </div>
-        <div className="profile_detail flex  justify-between pt-[15px] pr-[95px] pb-[50px] pl-[80px]">
-          <div className="about-user w-[55%] border-l-2 border-brandDark2	dark:border-brand pl-3.5">
+        <div className="profile_detail flex  justify-between pt-[15px] pr-[95px] mw-11:pr-[60px] pb-[50px] pl-[80px]  mw-lg:pl-[50px] mw-md:pr-[30px] mw-md:pl-[30px] mw-sm1:flex-col">
+          <div className="about-user w-[55%] mw-9:w-[50%] border-l-2 border-brandDark2	dark:border-brand pl-3.5 mw-sm1:w-full mw-sm1:mb-[20px]">
             <h3 className="title text-2xl leading-7	font-bold montserratfont text-brandDark2	 dark:text-brandLightOpacity100 ">
               Naveen
             </h3>
-            <h5 className="rank text-lg leading-6 font-semibold		montserratfont	tracking-[0.03em]	 text-brandDark2 dark:text-brandLightOpacity100  py-2.5	">
+            <h5 className="rank text-lg leading-6 font-semibold		montserratfont	tracking-[0.03em]	 text-brandDark2 dark:text-brandLightOpacity100  py-2.5 mw-md:text-base	">
               I&#39;m not a player, I&#39;m a gamer.
             </h5>
             <p className="joined-data text-textColorGray montserratfont dark:text-brandLightOpacity70 font-medium montserratfont leading-4	 text-sm">
               Joined Feb 2023
             </p>
-            <p className="about-user-description montserratfont text-base leading-7 text-brandDark2	font-normal dark:text-brandLightOpacity100 pt-5	">
+            <p className="about-user-description montserratfont text-base leading-7 text-brandDark2	font-normal dark:text-brandLightOpacity100 pt-5 mw-sm1:text-sm mw-sm1:pt-2	">
               Naveen has been a passionate Esports fan since he was a kid. He
               has been a freelance Esports player since 2014 and has been on the
               Gossip team since the start.
             </p>
           </div>
-          <div className="about-rank w-[45%] pl-[80px] flex justify-between flex-col">
+          <div className="about-rank w-[45%] mw-9:w-[50%] pl-[80px]  mw-9:pl-[50px] flex justify-between flex-col mw-md:pl-[30px]  mw-sm1:pl-[0] mw-sm1:w-full ">
             <div className="plyaing-detail pl-3.5 border-l-2 border-brandDark2 dark:border-brand pl-4		">
               <h4 className="text-base dark:text-brandLightOpacity100 montserratfont leading-5 font-semibold pb-2	">
                 Currently playing:
@@ -93,7 +95,9 @@ const ProfileDetail = () => {
                     className="inline-block mr-2 "
                     src={valorant}
                   />
-                  <span className="dark:text-brandLightOpacity70 text-base">Valorant</span>
+                  <span className="dark:text-brandLightOpacity70 text-base mw-sm1:text-sm">
+                    Valorant
+                  </span>
                 </div>
                 <div className="text-sm	leading-4	montserratfont font-normal	dark:text-brandLightOpacity100 border border-brandDark2 dark:border-brandLightOpacity100 rounded w-[121px] h-[44px] flex items-center justify-center ml-4">
                   <Image
@@ -101,11 +105,13 @@ const ProfileDetail = () => {
                     src={console}
                     className="inline-block  mr-2 w-[20px] h-16px brightness-0	dark:brightness-100 "
                   />
-                  <span className="dark:text-brandLightOpacity70 text-base">Console</span>
+                  <span className="dark:text-brandLightOpacity70 text-base mw-sm1:text-sm">
+                    Console
+                  </span>
                 </div>
               </div>
             </div>
-            <div className="more flex justify-between">
+            <div className="more mw-sm1:mt-[20px] flex justify-between">
               <div className="saved border-l-2 border-brandDark2 dark:border-brand pl-4	 ">
                 <h4 className="text-base leading-5 font-semibold text-brandDark2  dark:text-brandLightOpacity100 montserratfont capitalize mb-4	">
                   saved
@@ -122,12 +128,12 @@ const ProfileDetail = () => {
                   <Image
                     src={instagram}
                     alt=""
-                    className="w-[24px] h-[24px] mr-4 brightness-0	dark:brightness-100		"
+                    className="w-[24px] h-[24px] mw-sm1:w-[18px] mw-sm1:h-[18px] mr-4 brightness-0	dark:brightness-100		"
                   />
                   <Image
                     src={twitter}
                     alt=""
-                    className="w-[24px] h-[24px] brightness-0	dark:brightness-100"
+                    className="w-[24px] h-[24px]  mw-sm1:w-[18px] mw-sm1:h-[18px] brightness-0	dark:brightness-100"
                   />
                 </div>
               </div>
