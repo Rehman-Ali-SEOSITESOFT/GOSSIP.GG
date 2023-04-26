@@ -22,7 +22,7 @@ import bookmakred from "../../../assets/user-for-you/fill-bookmark.png"
 import Pagination from "@/components/Pagination"
 import EsportsRightSidebar from "../EsportsRightSidebar/EsportsRightSidebar"
 import addvertisement from "../../../assets/esports/advertisement.png"
-
+import mobileImg from "../../../assets/esprotsbgmi/mobilePubg.png"
 const EsportsBgmi = () => {
   const responsive = {
     tablet: {
@@ -71,8 +71,11 @@ const EsportsBgmi = () => {
                 </p>
               </div>
               <div className="w-[26%] mw-lg:w-[100%] mw-lg:pb-[24px]">
-                <div className="img_wrapper">
+                <div className="img_wrapper mw-sm:hidden">
                   <Image src={image1} alt="" />
+                </div>
+                <div className="mobile_image_wrapper hidden mw-sm:block">
+                  <Image src={mobileImg} alt="" />
                 </div>
               </div>
             </div>
