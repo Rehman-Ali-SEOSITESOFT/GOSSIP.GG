@@ -95,7 +95,7 @@ const LatestNews = () => {
                     }`}
                   >
                     <h4
-                      className={`${style.title_overHidden} text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100`}
+                      className={`${style.title_overHidden} text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 `}
                     >
                       Bayes Esports appoints York Scheunemann as COO of reputed
                       gaming...
@@ -240,7 +240,7 @@ const LatestNews = () => {
                     />
                   </div>
                   <div className={`${style.news_desc} pl-3`}>
-                    <h4 className="text-sm leading-4 text-brandDark2 font-semibold montserratfont dark:text-brandLightOpacity100">
+                    <h4 className="text-sm leading-4 text-brandDark2 font-semibold montserratfont dark:text-brandLightOpacity100 tech-feature-dec">
                       Bayes Esports appoints York Scheunemann as COO of reputed
                       gaming...
                     </h4>
