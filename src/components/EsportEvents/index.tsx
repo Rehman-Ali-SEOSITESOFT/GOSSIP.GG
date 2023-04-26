@@ -117,7 +117,7 @@ const EsportEvent = (props: any) => {
     <section className="Esport-events">
       <div className="global-section-width">
         <div className="pt-[88px] mw-lg:pt-7 mw-sm:pt-[16px] ">
-          <SectionSaprator title="ESPORTS EVENTS" />
+          <SectionSaprator title="Esports Events" />
         </div>
         <div className="block mw-sm:hidden">
           <Slider

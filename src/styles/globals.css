@@ -327,6 +327,13 @@ body::-webkit-scrollbar-thumb {
   border-radius: 8px;
 }
 
+
+.title-desktop-view{
+  text-transform: uppercase;
+}
+
+
+
 @media screen and (max-width: 1430px) {
   .global-section-width {
     padding: 0 70px;

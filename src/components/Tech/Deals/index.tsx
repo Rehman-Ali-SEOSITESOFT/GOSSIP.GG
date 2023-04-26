@@ -85,7 +85,7 @@ const DeailTech = () => {
       <FilterTabs />
       <div className="2xl:container">
         <div className="pt-16 mw-lg:pt-7 mw-sm:pt-[16px]">
-          <SectionSaprator title="ONGOING Deals" />
+          <SectionSaprator title="Ongoing Deals" />
         </div>
         <div className="flex flex-wrap justify-between">
           {onGoing.slice(0, onGoingLimit).map((elem, index) => {
@@ -166,7 +166,7 @@ const DeailTech = () => {
       </div>
       <div className="2xl:container">
         <div className="pt-16 mw-lg:pt-7 mw-sm:pt-[16px]">
-          <SectionSaprator title="upcomming  deals" />
+          <SectionSaprator title="Upcomming  Deals" />
         </div>
         <div className="flex flex-wrap justify-between">
           {upCommming.slice(0, upCommingLimit).map((elem, index) => {

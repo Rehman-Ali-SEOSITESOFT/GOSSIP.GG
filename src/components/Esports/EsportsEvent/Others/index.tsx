@@ -157,7 +157,7 @@ const Others = (props: any) => {
     <div className="others-component">
       <div className="global-section-width">
         <div className="pt-16 mw-lg:pt-7 mw-sm:pt-[16px]">
-          <SectionSaprator title="OTHERS" />
+          <SectionSaprator title="Others" />
         </div>
 
         <div className="2xl:container">
