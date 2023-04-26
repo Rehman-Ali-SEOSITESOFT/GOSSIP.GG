@@ -123,15 +123,15 @@ const HeroSection = () => {
                         <h3 className="text-base font-bold  leading-5	 text-brandDark2 montserratfont dark:text-brandLightOpacity100    ">
                           {elem.name}
                         </h3>
-                        <p className="text-xs text-textColor robotoslub py-2.5 mx-14:py-2 mw-sm:hidden dark:text-brandLightOpacity90 hero-section-description ">
+                        <p className="text-xs text-textColor robotoslub py-2.5 mx-14:py-2 mw-sm:hidden dark:text-brandLightOpacity100 hero-section-description ">
                           It is a long established fact that a reader will be
                           distracted by the readable content of a page when...
                         </p>
-                        <small className="text-textColorGray dark:text-brandLightOpacity70  text-xs mw-sm3:text-[10px] pt-2  ">
-                          <span className="montserratfont">
+                        <small className="text-textColorGray dark:text-brandLightOpacity100  text-xs pt-2  ">
+                          <span className="montserratfont text-xs	">
                             <i>3 hrs ago</i>
                           </span>
-                          <span className="border-l border-l-textColorGray pl-2 ml-2 border-textColorGray   dark:border-l-brandLightOpacity70   ">
+                          <span className="border-l border-l-textColorGray pl-2 ml-2 border-textColorGray  text-xs	  dark:border-l-brandLightOpacity100   ">
                             5 min read
                           </span>
                         </small>

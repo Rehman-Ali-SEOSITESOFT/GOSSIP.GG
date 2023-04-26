@@ -457,6 +457,28 @@ body::-webkit-scrollbar-thumb {
   .exports-banner .slick-next {
     right: 10px !important;
   }
+  .trending .dark-arrow.slick-slider .slick-next::after,
+  .trending .light-arrow.slick-slider .slick-next::after,
+  .trending .dark-arrow.slick-slider .slick-prev::after,
+  .trending .light-arrow.slick-slider .slick-prev::after,
+  .trending .dark-arrow.slick-slider .slick-next:before,
+  .trending .dark-arrow.slick-slider .slick-prev:before,
+  .trending .light-arrow.slick-slider .slick-next:before,
+  .trending .light-arrow.slick-slider .slick-prev:before {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+  .trending .dark-arrow.slick-slider button.slick-next,
+  .trending .light-arrow.slick-slider button.slick-next {
+    width: 20px;
+    height: 40px;
+  }
+  .trending .dark-arrow.slick-slider button.slick-prev,
+  .trending .light-arrow.slick-slider button.slick-prev {
+    width: 80px;
+    height: 40px;
+  }
 }
 @media screen and (max-width: 400px) {
   .esport-event-valorant-title {

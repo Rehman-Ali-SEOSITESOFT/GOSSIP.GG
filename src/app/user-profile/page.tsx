@@ -25,7 +25,7 @@ const Page = () => {
               <li className="">
                 <a
                   className={
-                    "text-base mw-sm3:text-[10px] mw-sm1:text-[12px]  montserratfont  leading-5   capitalize  pb-[8px]  " +
+                    "text-base  mw-sm1:text-sm  montserratfont  leading-5   capitalize  pb-[8px]  " +
                     (openTab === 1
                       ? " dark:text-brand border-b-2 border-brandDark2   dark:border-b-brand font-bold	"
                       : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-normal  ")
@@ -41,10 +41,10 @@ const Page = () => {
                   For You
                 </a>
               </li>
-              <li className="pl-[72px]">
+              <li className="pl-[72px]  mw-md:pl-[30px]">
                 <a
                   className={
-                    "text-base mw-sm3:text-[10px] mw-sm1:text-[12px]  montserratfont  leading-5   capitalize  pb-[8px]  " +
+                    "text-base  mw-sm:text-sm montserratfont  leading-5   capitalize  pb-[8px]  " +
                     (openTab === 2
                       ? " dark:text-brand border-b-2 border-brandDark2   dark:border-b-brand font-bold	"
                       : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-normal  ")

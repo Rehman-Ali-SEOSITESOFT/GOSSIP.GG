@@ -169,7 +169,7 @@ const Page = () => {
 
   return (
     <section className="viewmore-esport-2">
-      <div className="w-full  pt-[25px] pb-[30px] mw-lg:pt-[15px] mw-lg:pb-[20px]  mw-lg:sticky top-[71px] mw-sm3:top-[63px] mw-lg:z-[8] bg-bodycolor dark:bg-brandDark2">
+      <div className="w-full  pt-[25px] pb-[30px] mw-lg:pt-[15px] mw-lg:pb-[20px]  mw-lg:sticky top-[71px] mw-sm3:top-[62px] mw-lg:z-[8] bg-bodycolor dark:bg-brandDark2">
         <ul className="flex max-w-[460px] mw-sm:max-w-[350px]  w-full m-auto justify-between ">
           {menulist.map((el, index) => {
             return (
