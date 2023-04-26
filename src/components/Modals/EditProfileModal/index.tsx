@@ -359,12 +359,12 @@ const EditProfileModal = (props: any) => {
                                 <div>
                                   <div className="mt-8 ">
                                     <Image
-                                      className=""
+                                      className="mw-sm1:h-[120px]"
                                       src={Banner3}
                                       alt="Banner"
                                     />
                                     <Image
-                                      className="absolute top-20 left-[90px]"
+                                      className="absolute  mw-sm1:left-[40px] mw-sm1:h-[80px] mw-sm1:w-[80px] mw-sm1:top-[6.5rem] top-20 left-[90px]"
                                       src={Logo1}
                                       alt="Logo"
                                     />
@@ -375,7 +375,7 @@ const EditProfileModal = (props: any) => {
                                   <p className="text-base mb-4 text-brandDark2 dark:text-brandLightOpacity100 montserratfont font-semibold ">
                                     Display Image
                                   </p>
-                                   <div className="max-w-[500px] pl-9">
+                                   <div className="  max-w-[500px] pl-9">
                                    <DisplaySlider/>
                                    </div>
                                 </div>
@@ -385,7 +385,7 @@ const EditProfileModal = (props: any) => {
                                     Banner Image
                                   </p>
                                   <div className="max-w-[500px] pl-9">
-                                   <BannerSlider/>
+                                   {/* <BannerSlider/> */}
                                    </div>
                                 </div>
                                 <div className="border border-choosebox  dark:border-brandLightOpacity10 mt-4"></div>
