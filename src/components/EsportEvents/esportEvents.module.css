@@ -13,9 +13,15 @@
   }
   .image_wrapper__event img {
     width: auto;
-    height: 50px;
+    height: 40px;
   }
   .font_esport_event_12 {
     font-size: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .image_wrapper__event img {
+    width: 30px;
+    height: 30px;
   }
 }
