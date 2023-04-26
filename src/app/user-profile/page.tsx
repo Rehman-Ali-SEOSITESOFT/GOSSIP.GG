@@ -12,7 +12,7 @@ const Page = () => {
       <div className="user-section-width">
         <div className="2xl:container">
           <div className="flex">
-            <div className="w-full border border-borderEditProfile dark:border-brandLightOpacity10 rounded-lg bg-white dark:bg-userprofilebg mt-[78px] mb-[88px]">
+            <div className="w-full border border-borderEditProfile dark:border-brandLightOpacity10 rounded-lg bg-white dark:bg-userprofilebg mt-[78px] mb-[88px] mw-11:mt-[50px]  mw-11:mb-[60px]">
               <ProfileDetail />
             </div>
           </div>

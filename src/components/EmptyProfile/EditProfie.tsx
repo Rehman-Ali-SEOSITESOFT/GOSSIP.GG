@@ -23,19 +23,21 @@ const EmptyProfileDetail = () => {
   };
   return (
     <>
-      <div className={` banner_image  relative h-[190px]`}>
+      <div
+        className={` banner_image  relative h-[190px] mw-sm1:h-[150px]  mw-sm:h-[110px]`}
+      >
         {isDarkTheme === "dark" ? (
           <Image
-          src={bannerimg}
-          className="banner w-full h-full object-cover  "
-          alt="banner "
-        />
+            src={bannerimg}
+            className="banner w-full h-full object-cover  "
+            alt="banner "
+          />
         ) : (
           <Image
-          src={whitebanner}
-          className="banner w-full h-full object-cover  "
-          alt="banner "
-        />
+            src={whitebanner}
+            className="banner w-full h-full object-cover  "
+            alt="banner "
+          />
         )}
         <div
           onClick={() => onClickOpenModal()}
@@ -52,15 +54,15 @@ const EmptyProfileDetail = () => {
         </div>
       </div>
       <div className="profile_description relative">
-        <div className="profle-image ml-[50px]  mt-[-80px] h-[160px] w-[160px] ">
+        <div className="profle-image ml-[50px]  mt-[-80px] h-[160px] w-[160px] mw-lg:ml-[30px] mw-lg:h-[140px] mw-lg:w-[140px]  mw-sm1:w-[100px] mw-sm1:h-[100px]">
           <Image
             src={profileimg}
             className="w-full h-full object-cover"
             alt="profile-image"
           />
         </div>
-        <div className="profile_detail flex  justify-between pt-[15px] pr-[95px] pb-[50px] pl-[80px]">
-          <div className="about-user w-[55%] border-l-2 border-brandDark2	dark:border-brand pl-3.5">
+        <div className="profile_detail flex  justify-between pt-[15px] pr-[95px] mw-11:pr-[60px] pb-[50px] pl-[80px]  mw-lg:pl-[50px] mw-md:pr-[30px] mw-md:pl-[30px] mw-sm1:flex-col ">
+          <div className="about-user w-[55%] mw-9:w-[50%] border-l-2 border-brandDark2	dark:border-brand pl-3.5 mw-sm1:w-full mb-[20px]">
             <h3 className="title text-2xl leading-7	font-bold montserratfont text-brandDark2	 dark:text-brandLightOpacity100 ">
               Naveen
             </h3>
@@ -74,7 +76,7 @@ const EmptyProfileDetail = () => {
               + Add description
             </p>
           </div>
-          <div className="about-rank w-[45%] pl-[80px] flex justify-between flex-col">
+          <div className="about-rank w-[45%] pl-[80px] mw-9:w-[50%] pl-[80px] mw-lg:pl-[50px] flex justify-between flex-col mw-sm1:pl-0 mw-sm1:w-full">
             <div className="plyaing-detail pl-3.5 border-l-2 border-brandDark2 dark:border-brand pl-4		">
               <h4 className="text-base dark:text-brandLightOpacity100 montserratfont leading-5 font-semibold pb-2	">
                 Currently playing:

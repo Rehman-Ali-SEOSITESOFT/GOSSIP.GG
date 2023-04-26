@@ -23,6 +23,26 @@ import img12 from "../../../assets/user-saved/12.png"
 import bookmark from "../../../assets/author-profile/bookmark.png"
 import bookmakred from "../../../assets/user-for-you/fill-bookmark.png"
 const Valorant = () => {
+  const responsive = {
+    tablet: {
+      breakpoint: { max: 639, min: 360 },
+      items: 1,
+      paritialVisibilityGutter: 200,
+      arrows: false,
+    },
+    tablet2: {
+      breakpoint: { max: 510, min: 460 },
+      items: 1,
+      paritialVisibilityGutter: 150,
+      arrows: false,
+    },
+    mobile: {
+      breakpoint: { max: 460, min: 360 },
+      items: 1,
+      paritialVisibilityGutter: 60,
+      arrows: false,
+    },
+  }
   const items2 = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img11]
   return (
     <section className="esports-bgmi_wrapper">
@@ -60,7 +80,7 @@ const Valorant = () => {
               <SectionSaprator title="Valorant Events" />
             </div>
             <div>
-              <BgmiEvents />
+              <BgmiEvents responsive={responsive} />
             </div>
           </div>
           <div className="bgmi_news third_section">

@@ -34,25 +34,27 @@ const UserSaved = () => {
   return (
     <>
       <div className="saved-component">
-        <div className="items flex flex-wrap justify-between">
+        <div className="items flex flex-wrap  justify-between mw-12:justify-between">
           {items.map((ele, index) => {
             return (
               <div
-                className={`item py-4 rounded-sm w-[328px] h-[328px]  dark:bg-brandDark1 bg-white border border-grayCard	flex flex-col justify-between ${
-                  index === 9 || index === 10 || index === 11 ? "mb-0" : "mb-12"
+                className={`item p-4 mw-sm:p-2 rounded-sm w-[328px] h-[328px] mw-12:h-auto mw-11:max-w-[32%]  dark:bg-brandDark1 bg-white border border-grayCard mw-md:max-w-[48%] 	flex flex-col justify-between mx-14:mr-12 mw-md:h-auto  mw-xl:mr-8 mw-12:mr-0  ${
+                  index === 9 || index === 10 || index === 11
+                    ? "mb-0"
+                    : "mb-12 mw-md:mb-8"
                 }`}
                 key={index}
               >
-                <div className="save-img-wrap">
+                <div className="save-img-wrap ">
                   <Image src={ele} alt="Imag" className="m-auto" />
                 </div>
                 <div className="save-title-wrap">
-                  <h4 className="montserratfont font-bold text-base leading-5 dark:text-brandLightOpacity100 text-brandDark2  pl-4">
+                  <h4 className="montserratfont font-bold text-base leading-5 dark:text-brandLightOpacity100 text-brandDark2 foryou-user-title mw-12:my-4 mw-sm:my-2 mw-sm:text-sm ">
                     Check out the Great Indian Amazon Sale this month from this
                     day onw...
                   </h4>
                 </div>
-                <div className="save-tagss-wrap flex justify-between items-end px-4">
+                <div className="save-tagss-wrap flex justify-between items-end ">
                   <div className="flex ">
                     <div className="montserratfont text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                       News

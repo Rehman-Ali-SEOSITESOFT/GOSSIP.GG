@@ -12,7 +12,9 @@ import image3 from "../../../../assets/egaming/image3.png"
 import bookmark from "../../../../assets/latest-news/bookmark.png"
 import image4 from "../../../../assets/egaming/image4.png"
 import styles from "./styles.module.css"
+import { useTheme } from "next-themes"
 const HeroSection = () => {
+  const { theme } = useTheme()
   interface List {
     name: string
     picture: any
@@ -43,6 +45,7 @@ const HeroSection = () => {
         <div className="global-section-width  ">
           <div className="2xl:container pt-[12px]">
             <div className="flex mw-lg:flex-col justify-between">
+              {/* left section start here */}
               <div className="w-[62%] mw-xl:w-[55%] mw-lg:w-full ">
                 <div
                   className={`${styles.left_side} h-[450px] mx-14:h-[400px] ] mw-sm:h-[350px] mw-sm3:h-[300px]`}
@@ -132,10 +135,8 @@ const HeroSection = () => {
                             </div>
                             <div className="desc_wrapper pr-5	pl-3.5	mw-11:pr-3.5	mw-11:h-[130px] mw-sm:h-[100px]	">
                               <h3 className="text-base font-bold  leading-5	 text-brandDark2 montserratfont dark:text-brandLightOpacity100 mw-11:text-[15px] mw-lg:text-base hero-section-tech-title mw-sm:text-sm mw-sm:leading-[17px]">
-                                {" "}
-                                {elem.name}{" "}
+                                {elem.name}
                               </h3>
-
                               <div className="tags flex pt-3.5 pb-3 mw-sm:pt-2.5 mw-sm:pb-2    montserratfont">
                                 <div className="montserratfont text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                                   News
@@ -146,9 +147,8 @@ const HeroSection = () => {
                               </div>
                               <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs mw-sm3:text-[10px]">
                                 <span className="montserratfont">
-                                  {" "}
-                                  <i>3 hrs ago</i>{" "}
-                                </span>{" "}
+                                  <i>3 hrs ago</i>
+                                </span>
                                 <span
                                   className={`border-l border-l-textColorGray pl-2 ml-2 border-textColorGray   dark:border-l-brandLightOpacity70   `}
                                 >
@@ -224,9 +224,14 @@ const HeroSection = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-[36%] mw-xl:w-[42%]  mw-lg:w-full">
+              {/* left section ends here */}
+
+              {/*right sections starts here  */}
+              <div className="w-[36%] mw-xl:w-[42%]  mw-lg:w-full bg-brandLightOpacity10 pr-[5px] border-2 dark:border-brandLightOpacity10 ">
                 <div
-                  className={`${styles.right_section} overflow-y-auto border-2 dark:border-brandLightOpacity10  versus_card_right_section bg-brandLightOpacity10 pt-[22px] pl-[24px] pr-[24px] h-[610px] rounded mw-14:h-[562px]`}
+                  className={`${
+                    theme === "dark" ? styles.right_section : styles.sec_section
+                  } overflow-y-auto  versus_card_right_section pt-[22px] pl-[24px]  h-[610px] rounded mw-14:h-[562px] pr-[10px] pr-[24px]`}
                 >
                   <div className={`${styles.esporting_versus_wrapper}`}>
                     <div className="first_battle">
@@ -416,7 +421,7 @@ const HeroSection = () => {
                               LPL 2023 Spring
                             </p>
                           </div>
-                          <p className="montserratfont text-brandLightOpacity70 text-sm	leading-[17px] font-medium	tracking-wider 	px-[8px] py-[5px] bg-brandLightOpacity10 rounded-sm	mw-sm:text-[14px] mw-sm:leading-[15px]">
+                          <p className="montserratfont dark:text-brandLightOpacity70 text-sm	leading-[17px] font-medium	tracking-wider 	px-[8px] py-[5px] bg-brandLightOpacity10 rounded-sm	mw-sm:text-[14px] mw-sm:leading-[15px]">
                             Completed
                           </p>
                         </div>
@@ -458,6 +463,7 @@ const HeroSection = () => {
                   </div>
                 </div>
               </div>
+              {/*right sections ends here  */}
             </div>
           </div>
         </div>

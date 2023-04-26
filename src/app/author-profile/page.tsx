@@ -15,7 +15,7 @@ const Page = () => {
       <div className="user-section-width">
         <div className="2xl:container">
           <div className="flex">
-            <div className="w-full border border-borderEditProfile dark:border-brandLightOpacity10 rounded-lg bg-white dark:bg-userprofilebg mt-[78px] mb-[88px]">
+            <div className="w-full border border-borderEditProfile dark:border-brandLightOpacity10 rounded-lg bg-white dark:bg-userprofilebg mt-[78px] mb-[88px] mw-11:mt-[50px]  mw-11:mb-[60px]">
               <AuthorEditProfile />
             </div>
           </div>
@@ -85,13 +85,13 @@ const Page = () => {
             </ul>
             <div className="tab-content tab-space w-full pt-12	">
               <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-              <AllAuthor />
+                <AllAuthor />
               </div>
               <div className={openTab === 2 ? "block" : "hidden"} id="link2">
                 <PopularAuthor />
               </div>
               <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-              <FeaturedAuhor />
+                <FeaturedAuhor />
               </div>
             </div>
           </div>

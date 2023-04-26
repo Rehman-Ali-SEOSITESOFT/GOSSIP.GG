@@ -1,30 +1,50 @@
-import BgmiTabs from "@/components/Esports/EsportsBgmi/BgmiTabs/BgmiTabs";
-import React from "react";
-import image1 from "../../../assets/esprotsbgmi/image1.png";
-import Image from "next/image";
-import SectionSaprator from "@/components/SecSaprator";
-import BgmiEvents from "./BgmiEvents/BgmiEvents";
-import BgmiNewsCards from "./BgmiNewsCards/BgmiNewsCards";
-import img1 from "../../../assets/user-saved/1.png";
-import img2 from "../../../assets/user-saved/2.png";
-import img3 from "../../../assets/user-saved/3.png";
-import img4 from "../../../assets/user-saved/4.png";
-import img5 from "../../../assets/user-saved/5.png";
-import img6 from "../../../assets/user-saved/6.png";
-import img7 from "../../../assets/user-saved/7.png";
-import img8 from "../../../assets/user-saved/8.png";
-import img9 from "../../../assets/user-saved/9.png";
-import img10 from "../../../assets/user-saved/10.png";
-import img11 from "../../../assets/user-saved/11.png";
-import img12 from "../../../assets/user-saved/12.png";
-import bookmark from "../../../assets/author-profile/bookmark.png";
-import bookmakred from "../../../assets/user-for-you/fill-bookmark.png";
-import Pagination from "@/components/Pagination";
-import EsportsRightSidebar from "../EsportsRightSidebar/EsportsRightSidebar";
-import addvertisement from "../../../assets/esports/advertisement.png";
-
+import BgmiTabs from "@/components/Esports/EsportsBgmi/BgmiTabs/BgmiTabs"
+import React from "react"
+import image1 from "../../../assets/esprotsbgmi/image1.png"
+import Image from "next/image"
+import SectionSaprator from "@/components/SecSaprator"
+import BgmiEvents from "./BgmiEvents/BgmiEvents"
+import BgmiNewsCards from "./BgmiNewsCards/BgmiNewsCards"
+import img1 from "../../../assets/user-saved/1.png"
+import img2 from "../../../assets/user-saved/2.png"
+import img3 from "../../../assets/user-saved/3.png"
+import img4 from "../../../assets/user-saved/4.png"
+import img5 from "../../../assets/user-saved/5.png"
+import img6 from "../../../assets/user-saved/6.png"
+import img7 from "../../../assets/user-saved/7.png"
+import img8 from "../../../assets/user-saved/8.png"
+import img9 from "../../../assets/user-saved/9.png"
+import img10 from "../../../assets/user-saved/10.png"
+import img11 from "../../../assets/user-saved/11.png"
+import img12 from "../../../assets/user-saved/12.png"
+import bookmark from "../../../assets/author-profile/bookmark.png"
+import bookmakred from "../../../assets/user-for-you/fill-bookmark.png"
+import Pagination from "@/components/Pagination"
+import EsportsRightSidebar from "../EsportsRightSidebar/EsportsRightSidebar"
+import addvertisement from "../../../assets/esports/advertisement.png"
+import mobileImg from "../../../assets/esprotsbgmi/mobilePubg.png"
 const EsportsBgmi = () => {
-  const items2 = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img11];
+  const responsive = {
+    tablet: {
+      breakpoint: { max: 639, min: 360 },
+      items: 1,
+      paritialVisibilityGutter: 200,
+      arrows: false,
+    },
+    tablet2: {
+      breakpoint: { max: 510, min: 460 },
+      items: 1,
+      paritialVisibilityGutter: 150,
+      arrows: false,
+    },
+    mobile: {
+      breakpoint: { max: 460, min: 360 },
+      items: 1,
+      paritialVisibilityGutter: 60,
+      arrows: false,
+    },
+  }
+  const items2 = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img11]
   return (
     <>
       <section className="esports-bgmi_wrapper">
@@ -51,8 +71,11 @@ const EsportsBgmi = () => {
                 </p>
               </div>
               <div className="w-[26%] mw-lg:w-[100%] mw-lg:pb-[24px]">
-                <div className="img_wrapper">
+                <div className="img_wrapper mw-sm:hidden">
                   <Image src={image1} alt="" />
+                </div>
+                <div className="mobile_image_wrapper hidden mw-sm:block">
+                  <Image src={mobileImg} alt="" />
                 </div>
               </div>
             </div>
@@ -62,7 +85,7 @@ const EsportsBgmi = () => {
                 <SectionSaprator title="BGMI Events" />
               </div>
               <div className="">
-                <BgmiEvents />
+                <BgmiEvents responsive={responsive} />
               </div>
             </div>
             <div className="bgmi_news third_section">
@@ -146,7 +169,7 @@ const EsportsBgmi = () => {
                           </>
                         )}
                       </>
-                    );
+                    )
                   })}
                 </div>
               </div>
@@ -158,7 +181,7 @@ const EsportsBgmi = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default EsportsBgmi;
+export default EsportsBgmi
