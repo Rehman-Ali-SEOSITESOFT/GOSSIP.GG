@@ -32,7 +32,7 @@ const Review = () => {
                   </p>
                 </div>
               </div>
-              <div className="review_card_content pt-[12px] flex justify-between">
+              <div className="review_card_content pt-[12px] flex justify-between mw-md:hidden">
                 <div className="title_disp">
                   <h4 className="montserratfont font-bold text-base dark:text-[#E5E5E5] leading-5  text-[#221e1f] mw-sm:text-[14px] mw-sm:text-semibold mw-sm:leading-[17px]">
                     One Piece Odyssey
@@ -49,6 +49,29 @@ const Review = () => {
                     src={isDarkTheme === "dark" ? bookmark : bookmarkDark}
                     alt="bookmark"
                   />
+                </div>
+              </div>
+              <div className="mobile_card_wrapper hidden mw-md:block">
+                <div className="title_mobile_v mt-[8px]">
+                  <h4 className="montserratfont font-bold text-base dark:text-[#E5E5E5] leading-5  text-[#221e1f] mw-sm:text-[14px] mw-sm:text-semibold mw-sm:leading-[17px]">
+                    One Piece Odyssey
+                  </h4>
+                  <div className="sub_tag_wrapper flex justify-between items-center">
+                    <div className="">
+                      <p className="montserratfont text-sm font-normal  text-[#221e1f] dark:text-[#E5E5E5] leading-[17px] pt-[5px]">
+                        Panic Barn
+                      </p>
+                      <p className="montserratfont  text-xs italic leading-[15px] font-normal dark:text-brandLightOpacity70 text-brandDark2 pt-[5px]">
+                        Adventure
+                      </p>
+                    </div>
+                    <div className="mt-[11px] bookmark_check rounded-full bg-grayCard w-8 h-8 dark:bg-brandLightOpacity10 flex items-center justify-center cursor-pointer dark:hover:bg-brandLightOpacity20    hover:bg-grayCardHover">
+                      <Image
+                        src={isDarkTheme === "dark" ? bookmark : bookmarkDark}
+                        alt="bookmark"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

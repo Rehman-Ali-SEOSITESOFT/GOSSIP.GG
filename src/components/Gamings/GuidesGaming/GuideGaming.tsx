@@ -35,8 +35,9 @@ const GuideGaming = () => {
                       />
                     </div>
                     <div className="description flex justify-between pt-3	">
-                      <h4 className="text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 pr-2">
-                        Check out the Great Indian Amazon Sale this month
+                      <h4 className="montserratfont  text-brandDark2 dark:text-brandLightOpacity100 news-title   text-base font-semibold leading-[17px] pr-[19px] mw-sm:text-[14px] mw-sm:leading-[17px]">
+                        Bayes Esports appoints York Scheunemann as COO of
+                        reputed gaming company
                       </h4>
                       <div>
                         <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20    hover:bg-grayCardHover cursor-pointer rounded-3xl">

@@ -222,7 +222,7 @@ const BgmiEvents = (props: any) => {
                 </div>
                 <div>
                   <p
-                    className={`text-brandDark2 dark:text-brandLightOpacity100 mw-xl:text-[15px]  font-bold ${style.font_esport_event_16} pt-4`}
+                    className={`montserratfont text-brandDark2 dark:text-brandLightOpacity100 mw-xl:text-[15px]  font-bold ${style.font_esport_event_16} pt-4 mw-sm:text-[12px] mw-sm:leading-[15px] `}
                   >
                     DOTA Pro Circuit 2023 Tour 1
                   </p>
@@ -235,12 +235,12 @@ const BgmiEvents = (props: any) => {
                     />
                     <div className="flex flex-col pl-2">
                       <p
-                        className={`text-brandDark2 dark:text-brandLightOpacity100   ${style.font_esport_event_12} font-medium `}
+                        className={`montserratfont text-brandDark2 dark:text-brandLightOpacity100   ${style.font_esport_event_12} font-medium mw-sm:text-[14px] mw-sm:leading-[16px] mw-sm3:text-[10px] mw-sm3:leading-[12px]`}
                       >
                         DEC 02, 2022 - JAN 18, 2023
                       </p>
                       <p
-                        className={`${style.font_esport_event_12}   text-brandDark2 dark:text-brandLightOpacity100 font-medium pt-1.5 flex items-center`}
+                        className={`${style.font_esport_event_12} montserratfont  text-brandDark2 dark:text-brandLightOpacity100 font-medium pt-1.5 flex items-center mw-sm:text-[14px] mw-sm:leading-[16px] mw-sm3:text-[10px] mw-sm3:leading-[12px]`}
                       >
                         South Asia
                         <span className="h-1 w-1 bg-brandDark2 opacity-70 dark:opacity-100    dark:bg-brandLightOpacity100 inline-block rounded-full ml-[7px] mr-[8px]"></span>{" "}
@@ -257,7 +257,7 @@ const BgmiEvents = (props: any) => {
                 </div>
                 <div className="flex flex-row justify-center items-center pt-3">
                   <p
-                    className={`text-brandDark2 dark:text-brandLightOpacity100 ${style.font_esport_event_12} font-medium pr-1.5 `}
+                    className={`montserratfont text-brandDark2 dark:text-brandLightOpacity100 ${style.font_esport_event_12} font-medium pr-1.5 mw-sm:text-[14px] mw-sm:leading-[16px] mw-sm3:text-[10px] mw-sm3:leading-[12px]`}
                   >
                     Registration Open
                   </p>
