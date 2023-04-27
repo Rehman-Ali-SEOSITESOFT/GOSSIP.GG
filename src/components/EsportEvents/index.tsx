@@ -1,30 +1,30 @@
-import React, { useEffect, useState } from "react"
-import Slider from "react-slick"
-import Image from "next/image"
-import Card from "../../assets/images/esport-event/card.png"
-import Icon from "../../assets/images/esport-event/icon.png"
-import Logo from "../../assets/images/esport-event/logo.png"
-import DarkLogo from "../../assets/images/esport-event/logo-dark.png"
-import RightIcon from "../../assets/images/esport-event/right.png"
-import Line from "../../assets/images/general/Line.png"
-import SectionSaprator from "../SecSaprator"
-import style from "./esportEvents.module.css"
-import { useTheme } from "next-themes"
-import DarkLine from "../../assets/images/general/dark-line.png"
-import Carousel from "react-multi-carousel"
+import React, { useEffect, useState } from "react";
+import Slider from "react-slick";
+import Image from "next/image";
+import Card from "../../assets/images/esport-event/card.png";
+import Icon from "../../assets/images/esport-event/icon.png";
+import Logo from "../../assets/images/esport-event/logo.png";
+import DarkLogo from "../../assets/images/esport-event/logo-dark.png";
+import RightIcon from "../../assets/images/esport-event/right.png";
+import Line from "../../assets/images/general/Line.png";
+import SectionSaprator from "../SecSaprator";
+import style from "./esportEvents.module.css";
+import { useTheme } from "next-themes";
+import DarkLine from "../../assets/images/general/dark-line.png";
+import Carousel from "react-multi-carousel";
 
 const EsportEvent = (props: any) => {
   interface EventList {
-    event_title: string
-    date: string
-    country: string
-    prize: string
+    event_title: string;
+    date: string;
+    country: string;
+    prize: string;
   }
-  const { theme } = useTheme()
-  const [isDarkTheme, setIsDarkTheme] = useState<string>("")
+  const { theme } = useTheme();
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
   useEffect(() => {
-    setIsDarkTheme(theme === "dark" ? "dark" : "light")
-  }, [theme])
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   const [eventData, setEventData] = useState<EventList[]>([
     {
       event_title: "DOTA Pro Circuit 2023 Tour 1",
@@ -62,7 +62,7 @@ const EsportEvent = (props: any) => {
       country: "South Asia",
       prize: " $4500",
     },
-  ])
+  ]);
 
   const settings = {
     dots: false,
@@ -111,7 +111,7 @@ const EsportEvent = (props: any) => {
       //   },
       // },
     ],
-  }
+  };
 
   return (
     <section className="Esport-events">
@@ -269,7 +269,7 @@ const EsportEvent = (props: any) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default EsportEvent
+export default EsportEvent;
