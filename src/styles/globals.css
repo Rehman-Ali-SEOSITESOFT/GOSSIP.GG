@@ -61,6 +61,12 @@ body::-webkit-scrollbar-thumb {
   margin: auto;
   padding: 0 80px;
 }
+.global-section-width-article {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 100px;
+}
 
 .user-section-width {
   width: 100%;
@@ -68,7 +74,6 @@ body::-webkit-scrollbar-thumb {
   margin: auto;
   padding: 0 190px;
 }
-
 
 /* .dark-arrow.slick-slider button {
   background-color: var(--brandDark1);
@@ -334,15 +339,12 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
-
-.bannerImageProfile button.slick-prev
-{
-  top:35% !important
+.bannerImageProfile button.slick-prev {
+  top: 35% !important;
 }
 
-.displayImageProfile button.slick-prev
-{
-  top:18% !important
+.displayImageProfile button.slick-prev {
+  top: 18% !important;
 }
 
 @media screen and (max-width: 1430px) {
