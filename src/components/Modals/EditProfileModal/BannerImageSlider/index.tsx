@@ -91,4 +91,5 @@ const {theme} = useTheme();
   );
 };
 
+
 export default BannerSlider;
