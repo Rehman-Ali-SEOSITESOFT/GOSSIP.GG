@@ -11,7 +11,6 @@ import image5 from "../../../assets/esportevents2/image5.png";
 import ThumbDefault from "../../../assets/images/gossip/default.png";
 import Clickedark from "../../../assets/images/gossip/click-dark.png";
 import ThumbClicked from "../../../assets/images/gossip/clickced.png";
-import SectionSaprator from "@/components/SecSaprator";
 
 const Comments = () => {
   const { theme } = useTheme();

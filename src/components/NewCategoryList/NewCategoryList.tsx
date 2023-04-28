@@ -1,19 +1,19 @@
-import React, { useState } from "react"
-import Image from "next/image"
-import downarrow from "../../assets/user-for-you/down-arrow.png"
-import downarrowColor from "../../assets/user-for-you/fill-down-arrow.png"
-import uparrow from "../../assets/user-for-you/up-arrow.png"
-import uparrowColor from "../../assets/user-for-you/fill-up-arrow.png"
-import comment from "../../assets/user-for-you/comment.png"
-import bookmark from "../../assets/user-for-you/bookmark.png"
-import bookmarkfill from "../../assets/user-for-you/fill-bookmark.png"
-import sharedbtn from "../../assets/user-for-you/share.png"
-import user1 from "../../assets/user-for-you/user-1.png"
-import user2 from "../../assets/user-for-you/user-2.png"
-import user3 from "../../assets/user-for-you/user-3.png"
-import user4 from "../../assets/user-for-you/user-4.png"
-import user5 from "../../assets/new-category/user5.png"
-import user6 from "../../assets/new-category/user6.png"
+import React, { useState } from "react";
+import Image from "next/image";
+import downarrow from "../../assets/user-for-you/down-arrow.png";
+import downarrowColor from "../../assets/user-for-you/fill-down-arrow.png";
+import uparrow from "../../assets/user-for-you/up-arrow.png";
+import uparrowColor from "../../assets/user-for-you/fill-up-arrow.png";
+import comment from "../../assets/user-for-you/comment.png";
+import bookmark from "../../assets/user-for-you/bookmark.png";
+import bookmarkfill from "../../assets/user-for-you/fill-bookmark.png";
+import sharedbtn from "../../assets/user-for-you/share.png";
+import user1 from "../../assets/user-for-you/user-1.png";
+import user2 from "../../assets/user-for-you/user-2.png";
+import user3 from "../../assets/user-for-you/user-3.png";
+import user4 from "../../assets/user-for-you/user-4.png";
+import user5 from "../../assets/new-category/user5.png";
+import user6 from "../../assets/new-category/user6.png";
 
 const NewCategoryList = () => {
   const [userDetil, setUserDetail] = useState<any[]>([
@@ -23,7 +23,7 @@ const NewCategoryList = () => {
     user4,
     user5,
     user6,
-  ])
+  ]);
   return (
     <>
       <section className="newCategory_list">
@@ -131,12 +131,12 @@ const NewCategoryList = () => {
                   </div>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default NewCategoryList
+export default NewCategoryList;

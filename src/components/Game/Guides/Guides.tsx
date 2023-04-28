@@ -1,10 +1,9 @@
-import Filter from "@/components/Filter/Filter"
-import React from "react"
-import GuidesCards from "./GuidesCards/GuidesCards"
-import Pagination from "@/components/Pagination"
-
-import Image from "next/image"
-import RightSidebar from "../rightbar2/RightSidebar"
+import Filter from "@/components/Filter/Filter";
+import React from "react";
+import GuidesCards from "./GuidesCards/GuidesCards";
+import Pagination from "@/components/Pagination";
+import Image from "next/image";
+import RightSidebar from "../rightbar2/RightSidebar";
 
 const Guides = () => {
   return (
@@ -28,7 +27,7 @@ const Guides = () => {
         </section>
       </>
     </>
-  )
-}
+  );
+};
 
-export default Guides
+export default Guides;

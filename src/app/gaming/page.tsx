@@ -1,27 +1,24 @@
-"use client"
+"use client";
 
-import Trending from "@/components/Trending/Index"
-import React, { useState } from "react"
-
-import styles from "./gaming.module.css"
-
-import NewCategory from "../../components/Game/news-category/NewsCategory"
-import Guides from "@/components/Game/Guides/Guides"
-import Reviews from "@/components/Game/Reviews/Reviews"
-import Features from "@/components/Game/Features/Features"
-import All from "../../components/Game/All/index"
+import Trending from "@/components/Trending/Index";
+import React, { useState } from "react";
+import NewCategory from "../../components/Game/news-category/NewsCategory";
+import Guides from "@/components/Game/Guides/Guides";
+import Reviews from "@/components/Game/Reviews/Reviews";
+import Features from "@/components/Game/Features/Features";
+import All from "../../components/Game/All/index";
 const Page = () => {
-  const [openTab, setOpenTab] = useState(0)
+  const [openTab, setOpenTab] = useState(0);
   const menulist = [
     { name: "all", data: <All /> },
     { name: "News", data: <NewCategory /> },
     { name: "features", data: <Features /> },
     { name: "guides", data: <Guides /> },
     { name: "reviews", data: <Reviews /> },
-  ]
+  ];
   const hanldeOpenTab = (e: number) => {
-    setOpenTab(e)
-  }
+    setOpenTab(e);
+  };
 
   return (
     <>
@@ -42,13 +39,12 @@ const Page = () => {
                         }
                         onClick={() => hanldeOpenTab(index)}
                         data-toggle="tab"
-                        // href={`#link${index}`}
                         role="tablist"
                       >
                         {el.name}
                       </a>
                     </li>
-                  )
+                  );
                 })}
               </ul>
             </div>
@@ -69,11 +65,11 @@ const Page = () => {
                 {el.data}
               </div>
             )
-          )
+          );
         })}
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

@@ -10,7 +10,6 @@ import img5 from "../../assets/esports/other-05.png";
 import img6 from "../../assets/esports/other-06.png";
 import img7 from "../../assets/esports/other-07.png";
 import img8 from "../../assets/esports/other-08.png";
-
 import icon1 from "../../assets/esports/v-mask-01.png";
 import icon2 from "../../assets/esports/b-mask-02.png";
 import icon3 from "../../assets/esports/v-mask-03.png";
@@ -204,7 +203,6 @@ const Page = () => {
                   }
                   onClick={() => hanldeOpenTab(index)}
                   data-toggle="tab"
-                  // href={`#link${index}`}
                   role="tablist"
                 >
                   {el.name}
@@ -273,7 +271,7 @@ const Page = () => {
                           href="#"
                           className="montserratfont font-medium  text-xs leading-[15px]  capitalize  text-brandDark2 dark:text-brandLightOpacity100  "
                         >
-                          registration open{" "}
+                          registration open
                           <Image
                             src={chevronsright}
                             alt="arro"
@@ -312,7 +310,6 @@ const Page = () => {
                         {/* esport-event-valorant-title */}
                         {ele.title}
                       </h4>
-                      {/* <div className="flex flex-row  py-2.5 "> */}
                       <div className="flex flex-col">
                         <p className="text-brandDark2 dark:text-brandLightOpacity100 text-xs montserratfont	leading-[15px] uppercase  font-medium   ">
                           DEC 02, 2022 - JAN 18, 2023
@@ -322,7 +319,6 @@ const Page = () => {
                           <span className="h-1 w-1 bg-brandDark2 opacity-70 dark:opacity-100    dark:bg-brandLightOpacity100 inline-block rounded-full ml-[2px] mr-[2px] text-xs"></span>
                           Prizepool $4500
                         </p>
-                        {/* </div> */}
                       </div>
                       <div className="flex items-center">
                         <div className="icon-img w-[28px] h-[28px] min-w-[28px] min-h-[28px]">
@@ -338,7 +334,7 @@ const Page = () => {
                             href="/esports/event-detail"
                             className="montserratfont font-medium  text-[10px] leading-[12px]  capitalize  text-brandDark2 dark:text-brandLightOpacity100  "
                           >
-                            registration open{" "}
+                            registration open
                             <Image
                               src={chevronsright}
                               alt="arro"

@@ -1,22 +1,22 @@
 // import "../styles/styles.scss";
-import "../styles/globals.css"
-import Header from "@/layouts/Header/Header"
-import Footer from "@/layouts/Footer/Footer"
+import "../styles/globals.css";
+import Header from "@/layouts/Header/Header";
+import Footer from "@/layouts/Footer/Footer";
 // Import css files
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-import { Providers } from "./providers"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { Providers } from "./providers";
 
 // import "bootstrap/dist/css/bootstrap.min.css";
 // JUST BG GRADIENT COLOR'S
-import "../styles/background.css"
-import { useTheme } from "next-themes"
-import "react-multi-carousel/lib/styles.css"
+import "../styles/background.css";
+import { useTheme } from "next-themes";
+import "react-multi-carousel/lib/styles.css";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -37,5 +37,5 @@ export default function RootLayout({
         </Providers>
       </body>
     </html>
-  )
+  );
 }

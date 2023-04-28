@@ -1,11 +1,11 @@
-import Image from "next/image"
-import React, { useState } from "react"
-import image1 from "../../../../assets/gaming/odyssey.png"
-import image2 from "../../../../assets/gaming/pubg.png"
-import image3 from "../../../../assets/gaming/cod.png"
-import image4 from "../../../../assets/gaming/odyssey.png"
-import bookmark from "../../../../assets/gaming/bookmark.png"
-import addvertisement from "../../../../assets/esports/advertisement.png"
+import Image from "next/image";
+import React, { useState } from "react";
+import image1 from "../../../../assets/gaming/odyssey.png";
+import image2 from "../../../../assets/gaming/pubg.png";
+import image3 from "../../../../assets/gaming/cod.png";
+import image4 from "../../../../assets/gaming/odyssey.png";
+import bookmark from "../../../../assets/gaming/bookmark.png";
+import addvertisement from "../../../../assets/esports/advertisement.png";
 
 const ReviewCards = () => {
   const [list, setList] = useState<any[]>([
@@ -21,7 +21,7 @@ const ReviewCards = () => {
     image2,
     image1,
     image4,
-  ])
+  ]);
   const imagesList2 = [
     image1,
     image2,
@@ -35,7 +35,7 @@ const ReviewCards = () => {
     image2,
     image1,
     image4,
-  ]
+  ];
   return (
     <>
       <div className="review_card_wrapper flex mw-md:hidden  flex-wrap justify-between ">
@@ -74,7 +74,7 @@ const ReviewCards = () => {
                 </div>
               </div>
             </div>
-          )
+          );
         })}
       </div>
       <div className="hidden mw-md:flex">
@@ -135,13 +135,13 @@ const ReviewCards = () => {
                     </>
                   )}
                 </>
-              )
+              );
             })}
           </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ReviewCards
+export default ReviewCards;

@@ -73,7 +73,6 @@
   height: 80px;
 }
 .sec_section::-webkit-scrollbar-track {
-  /* background: red; */
   border-radius: 8px;
 }
 .sec_section::-webkit-scrollbar-thumb {
@@ -124,11 +123,7 @@
     width: 100%;
     max-width: 85px;
   }
-  /* .single_item .image_wrapper {
-        width: 100%;
-        max-width: 100px;
-        height: 100px;
-      } */
+
   .single_item .image_wrapper img {
     height: 100%;
     width: 100%;

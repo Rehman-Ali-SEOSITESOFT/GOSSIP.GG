@@ -44,8 +44,7 @@ const AllEsports = () => {
             </div>
             <BgmiEvents responsive={responsive} />
           </div>
-          {/* <AllEsportsEvents /> */}
-        </div>
+         </div>
         <div className="all_varo">
           <AllValorant />
         </div>

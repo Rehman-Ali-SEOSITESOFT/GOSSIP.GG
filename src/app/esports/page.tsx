@@ -1,11 +1,9 @@
 "use client"
 import AllEsports from "@/components/Esports/AllEsports/AllEsports"
 import EsportsEvents from "@/components/Esports/EsportsEvent"
-// import EsportsEvents from "@/components/Esports/EsportEvents/EsportsEvents"
 import NewsEsports from "@/components/Esports/NewsEsports/NewsEsports"
 import Valorant from "@/components/Esports/Valorant/Valorant"
 import React, { useState } from "react"
-import styles from "./esports.module.css"
 import Trending from "@/components/Trending/Index"
 import EsportsBgmi from "@/components/Esports/EsportsBgmi/EsportsBgmi"
 const Page = () => {
@@ -39,7 +37,6 @@ const Page = () => {
                         }
                         onClick={() => hanldeOpenTab(index)}
                         data-toggle="tab"
-                        // href={`#link${index}`}
                         role="tablist"
                       >
                         {el.name}

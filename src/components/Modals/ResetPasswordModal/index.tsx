@@ -14,7 +14,7 @@ import { useTheme } from "next-themes";
 
 const ResetPasswordModal = (props: any) => {
   const cancelButtonRef = useRef(null);
-  const { theme} = useTheme();
+  const { theme } = useTheme();
 
   const [open, setOpen] = useState<boolean | null>(false);
   const [show, setShow] = useState<boolean | null>(false);
@@ -34,8 +34,6 @@ const ResetPasswordModal = (props: any) => {
   const onClickShowConPassword = () => {
     setShowCon(!showCon);
   };
-
-  
 
   return (
     <>
@@ -87,62 +85,52 @@ const ResetPasswordModal = (props: any) => {
                   <div className="flex flex-col bg-bodycolor dark:bg-brandDark2 border-2 rounded-b-lg dark:border-r-brandLightOpacity10 dark:border-l-brandLightOpacity10 dark:border-b-brandLightOpacity10  dark:border-t-brandDark2 ">
                     <div className=" mw-sm:pl-10 mw-sm:pr-10 pl-40 pr-40  mb-9">
                       <div className="flex flex-col items-center ">
-                      <Image src={theme === 'dark' ? Logo : LightLogo} alt="logo" />
+                        <Image
+                          src={theme === "dark" ? Logo : LightLogo}
+                          alt="logo"
+                        />
                         <p className="text-brandDark2 dark:text-brandLightOpacity100 text-2xl montserratfont not-italic font-bold pb-6 mw-sm:text-lg ">
                           Reset Password
                         </p>
-                        {/* <div>
-                        <input
-                          className="border-brandLightOpacity10 border rounded w-full h-12 py-2 px-6 bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-[#ffffff]"
-                          id="password"
-                          type="password"
-                          placeholder="New Password"
-                        />
-                        <Image className="absolute top-4 right-4" src={Eye} alt="password icon" />
 
-                        </div> */}   
-                          <div className="relative w-[100%]">
-                            <input
-                             name="password"
-                              type={show ? "text" : "password"}
-                              placeholder="New Password"
-                              className="border-brandLightOpacity10  montserratfont hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
+                        <div className="relative w-[100%]">
+                          <input
+                            name="password"
+                            type={show ? "text" : "password"}
+                            placeholder="New Password"
+                            className="border-brandLightOpacity10  montserratfont hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
+                          />
+                          <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
+                            <Image
+                              className=""
+                              src={show ? Eye : EyeOff}
+                              alt="password icon"
+                              onClick={() => onClickShowPassword()}
                             />
-                            <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
-                              <Image
-                                className=""
-                                src={show ? Eye : EyeOff}
-                                alt="password icon"
-                                onClick={() => onClickShowPassword()}
-                              />
-                            </div>
                           </div>
-                          <div className="relative w-[100%] mt-[33px] mb-[39px]">
-                            <input
-                             name="con-password"
-                              type={showCon ? "text" : "password"}
-                              placeholder="Re-enter Password"
-                              className="border-brandLightOpacity10 montserratfont border hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
+                        </div>
+                        <div className="relative w-[100%] mt-[33px] mb-[39px]">
+                          <input
+                            name="con-password"
+                            type={showCon ? "text" : "password"}
+                            placeholder="Re-enter Password"
+                            className="border-brandLightOpacity10 montserratfont border hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
+                          />
+                          <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
+                            <Image
+                              className=""
+                              src={showCon ? Eye : EyeOff}
+                              alt="password icon"
+                              onClick={() => onClickShowConPassword()}
                             />
-                            <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
-                              <Image
-                                className=""
-                                src={showCon ? Eye : EyeOff}
-                                alt="password icon"
-                                onClick={() => onClickShowConPassword()}
-                              />
-                            </div>
                           </div>
-                        
-                        
-
-                      
+                        </div>
                       </div>
-
                       <div className="flex flex-col items-center mb-[289px]">
                         <button
-                        onClick={onClickOpenModal}
-                        className="bg-brand mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold">
+                          onClick={onClickOpenModal}
+                          className="bg-brand mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold"
+                        >
                           Submit
                         </button>
                       </div>

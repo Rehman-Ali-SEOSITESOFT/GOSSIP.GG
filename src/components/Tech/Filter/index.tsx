@@ -1,18 +1,15 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-
 import laptop from "../../../assets/tech/filter/d-laptop.png";
 import desktop from "../../../assets/tech/filter/d-desktop.png";
 import accessorie from "../../../assets/tech/filter/d-accessories.png";
 import game from "../../../assets/tech/filter/d-game.png";
 import component from "../../../assets/tech/filter/d-component.png";
-
 import d_a_laptop from "../../../assets/tech/filter/d-a-laptop.png";
 import d_a_desktop from "../../../assets/tech/filter/d-a-desktop.png";
 import d_a_accesories from "../../../assets/tech/filter/d-a-accessories.png";
 import d_a_game from "../../../assets/tech/filter/d-a-game.png";
 import d_a_component from "../../../assets/tech/filter/d-a-component.png";
-
 import l_laptop from "../../../assets/tech/filter/l-laptop.png";
 import l_desktop from "../../../assets/tech/filter/l-desktop.png";
 import l_accesories from "../../../assets/tech/filter/l-accessories.png";

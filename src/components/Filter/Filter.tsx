@@ -1,32 +1,29 @@
-"use client"
-import React, { useEffect, useState } from "react"
-import pc from "../../assets/new-category/d-desktop.png"
-import mobile from "../../assets/new-category/d-mobile.png"
-import console from "../../assets/new-category/d-game.png"
-
-import d_a_pc from "../../assets/new-category/d-a-desktop.png"
-import d_a_mobile from "../../assets/new-category/d-a-mobile.png"
-import d_a_console from "../../assets/new-category/d-a-game.png"
-
-import l_pc from "../../assets/new-category/l-desktop.png"
-import l_mobile from "../../assets/new-category/l-mobile.png"
-import L_console from "../../assets/new-category/l-game.png"
-
-import Image from "next/image"
-import { useTheme } from "next-themes"
+"use client";
+import React, { useEffect, useState } from "react";
+import pc from "../../assets/new-category/d-desktop.png";
+import mobile from "../../assets/new-category/d-mobile.png";
+import console from "../../assets/new-category/d-game.png";
+import d_a_pc from "../../assets/new-category/d-a-desktop.png";
+import d_a_mobile from "../../assets/new-category/d-a-mobile.png";
+import d_a_console from "../../assets/new-category/d-a-game.png";
+import l_pc from "../../assets/new-category/l-desktop.png";
+import l_mobile from "../../assets/new-category/l-mobile.png";
+import L_console from "../../assets/new-category/l-game.png";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 const Filter = () => {
   const images = [
     { l_pic: l_pc, d_ac_pic: d_a_pc, pic: pc, name: "PC" },
     { l_pic: l_mobile, d_ac_pic: d_a_mobile, pic: mobile, name: "Mobile" },
     { l_pic: L_console, d_ac_pic: d_a_console, pic: console, name: "Console" },
-  ]
-  const [no, setNo] = useState<number>(0)
-  const hadldeclick = (e: number) => setNo(e)
-  const { theme, setTheme } = useTheme()
-  const [isDarkTheme, setIsDarkTheme] = useState<any>("")
+  ];
+  const [no, setNo] = useState<number>(0);
+  const hadldeclick = (e: number) => setNo(e);
+  const { theme, setTheme } = useTheme();
+  const [isDarkTheme, setIsDarkTheme] = useState<any>("");
   useEffect(() => {
-    setIsDarkTheme(theme === "dark" ? "dark" : "light")
-  }, [theme])
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   return (
     <>
       <div className="filter_section flex items-center mt-[64px] mb-[16px] mw-md:mt-[20px] mw-sm:flex-col mw-sm:items-start">
@@ -76,12 +73,12 @@ const Filter = () => {
                   {element.name}
                 </span>
               </div>
-            )
+            );
           })}
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Filter
+export default Filter;

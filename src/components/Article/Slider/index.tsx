@@ -1,18 +1,6 @@
-import React, { Component, useEffect, useState, useRef } from "react";
+import React, {  useEffect, useState, useRef } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
-import Image1 from "../../../assets/images/article/slider1.png";
-import Image2 from "../../../assets/images/article/slider2.png";
-import Image3 from "../../../assets/images/article/slider3.png";
-import Image4 from "../../../assets/images/article/slider4.png";
-import Image4Big from "../../../assets/images/article/slider-4-big.png";
-import Image5 from "../../../assets/images/article/slider5.png";
-import TechImage1 from "../../../assets/images/article/tech1.png";
-import TechImage2 from "../../../assets/images/article/tech2.png";
-import TechImage3 from "../../../assets/images/article/tech3.png";
-import TechImage4 from "../../../assets/images/article/tech4.png";
-import TechImage4Big from "../../../assets/images/article/tech-big-1.png";
-import TechImage5 from "../../../assets/images/article/tech5.png";
 import { useTheme } from "next-themes";
 const NavSlider = (props: any) => {
   const slider1 = useRef<any | null>();
@@ -30,8 +18,7 @@ const NavSlider = (props: any) => {
     infinite: true,
     arrows: false,
   };
-  // let product_id = '';
-  useEffect(() => {
+   useEffect(() => {
     // for slick carousel
     setNav1(slider1.current);
     setNav2(slider2.current);
@@ -39,10 +26,8 @@ const NavSlider = (props: any) => {
   const settingss = {
     slidesToShow: 3,
     slidesToScroll: 1,
-
     centerMode: true,
     centerPadding: "60px",
-    //  dots: true,
     arrows: true,
     focusOnSelect: true,
     infinite: true,

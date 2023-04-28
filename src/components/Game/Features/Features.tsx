@@ -1,20 +1,20 @@
-import Filter from "@/components/Filter/Filter"
-import Image from "next/image"
-import React, { useState } from "react"
-import toparrow from "../../../assets/user-for-you/fill-up-arrow.png"
-import bottomarrow from "../../../assets/user-for-you/down-arrow.png"
-import comment from "../../../assets/user-for-you/comment.png"
-import bookmark from "../../../assets/user-for-you/bookmark.png"
-import shared from "../../../assets/user-for-you/share.png"
-import feactureauthor from "../../../assets/tech/feature-author.png"
-import Pagination from "@/components/Pagination"
-import RightSidebar from "../rightbar2/RightSidebar"
-import texticon from "../../../assets/author-profile/esport-icon.png"
-import textIconColor from "../../../assets/author-profile/esport-icon-2.png"
-import { useTheme } from "next-themes"
+import Filter from "@/components/Filter/Filter";
+import Image from "next/image";
+import React from "react";
+import toparrow from "../../../assets/user-for-you/fill-up-arrow.png";
+import bottomarrow from "../../../assets/user-for-you/down-arrow.png";
+import comment from "../../../assets/user-for-you/comment.png";
+import bookmark from "../../../assets/user-for-you/bookmark.png";
+import shared from "../../../assets/user-for-you/share.png";
+import feactureauthor from "../../../assets/tech/feature-author.png";
+import Pagination from "@/components/Pagination";
+import RightSidebar from "../rightbar2/RightSidebar";
+import texticon from "../../../assets/author-profile/esport-icon.png";
+import textIconColor from "../../../assets/author-profile/esport-icon-2.png";
+import { useTheme } from "next-themes";
 const Features = () => {
-  const item = [1, 2, 3, 4, 5]
-  const { theme } = useTheme()
+  const item = [1, 2, 3, 4, 5];
+  const { theme } = useTheme();
   return (
     <>
       <section className="gaming_features_tab_wrapper">
@@ -133,7 +133,7 @@ const Features = () => {
                           </div>
                         </div>
                       </div>
-                    )
+                    );
                   })}
                 </div>
               </div>
@@ -240,7 +240,7 @@ const Features = () => {
                         </div>
                       </div>
                     </div>
-                  )
+                  );
                 })}
               </div>
             </div>
@@ -251,7 +251,7 @@ const Features = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Features
+export default Features;

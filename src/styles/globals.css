@@ -46,10 +46,12 @@ body::-webkit-scrollbar-thumb {
   border: 1px solid var(--darkscroll-border);
   border-radius: 8px !important;
 }
+
 .dark-custom--scroll--filer::-webkit-scrollbar-thumb {
   border-radius: 8px !important;
   border: 1px solid var(--darkscroll-border);
 }
+
 .light-custom--scroll--filer::-webkit-scrollbar-thumb {
   border: 1px solid var(--lightscroll-border);
   border-radius: 8px !important;
@@ -61,6 +63,7 @@ body::-webkit-scrollbar-thumb {
   margin: auto;
   padding: 0 80px;
 }
+
 .global-section-width-article {
   width: 100%;
   max-width: 1440px;
@@ -75,64 +78,6 @@ body::-webkit-scrollbar-thumb {
   padding: 0 190px;
 }
 
-/* .dark-arrow.slick-slider button {
-  background-color: var(--brandDark1);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.dark-arrow.slick-slider button:hover {
-  background-color: var(--brandLightOpacity10);
-}
-.light-arrow.slick-slider button {
-  background-color: var(--brandLightOpacity100);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.light-arrow.slick-slider button:hover {
-  background-color: var(--grayCard);
-}
-.slick-slider button {
-  width: 40px;
-  height: 40px;
-  border-radius: 25px;
-  z-index: 1;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-}
-.dark-arrow.slick-slider .slick-next:before,
-.dark-arrow.slick-slider .slick-prev:before {
-  content: "";
-  background-image: url("../assets/trending-arrows/light-arrow.png");
-}
-
-.light-arrow.slick-slider .slick-next:before,
-.light-arrow.slick-slider .slick-prev:before {
-  content: "";
-  background-image: url("../assets/trending-arrows/dark-arrow.png");
-}
-.light-arrow.slick-slider .slick-prev:before,
-.dark-arrow.slick-slider .slick-prev:before {
-  transform: rotate(180deg);
-  width: 10px;
-  height: 17px;
-}
-.light-arrow.slick-slider .slick-next:before,
-.dark-arrow.slick-slider .slick-next:before {
-  width: 10px;
-  height: 17px;
-}
-
-.light-arrow.slick-slider .slick-next,
-.dark-arrow.slick-slider .slick-next {
-  padding-left: 4px;
-}
-
-.dark-arrow.slick-slider .slick-next:before,
-.dark-arrow.slick-slider .slick-prev:before,
-.light-arrow.slick-slider .slick-next:before,
-.light-arrow.slick-slider .slick-prev:before {
-  background-repeat: no-repeat;
-} */
-
 /* GLOBAL ARROW SETTING CLOSE */
 
 /* ARROW'S STYLE START */
@@ -143,6 +88,7 @@ body::-webkit-scrollbar-thumb {
   height: 40px;
   top: 50%;
 }
+
 .dark-arrow.slick-slider button.slick-prev,
 .light-arrow.slick-slider button.slick-prev {
   width: 124px;
@@ -167,28 +113,22 @@ body::-webkit-scrollbar-thumb {
   top: -4px;
 }
 
-/* .exports-banner .dark-arrow.slick-slider button.slick-next,
-.exports-banner .dark-arrow.slick-slider button.slick-prev, */
 .trending .dark-arrow.slick-slider button.slick-next,
 .trending .dark-arrow.slick-slider button.slick-prev {
-  background: linear-gradient(
-    270deg,
-    var(--brandDark2) 15.85%,
-    var(--brandDark2) 56.62%,
-    rgba(34, 30, 31, 0) 83.6%
-  );
+  background: linear-gradient(270deg,
+      var(--brandDark2) 15.85%,
+      var(--brandDark2) 56.62%,
+      rgba(34, 30, 31, 0) 83.6%);
 }
-/* .exports-banner .light-arrow.slick-slider button.slick-next,
-.exports-banner .light-arrow.slick-slider button.slick-prev, */
+
 .trending .light-arrow.slick-slider button.slick-next,
 .trending .light-arrow.slick-slider button.slick-prev {
-  background: linear-gradient(
-    270deg,
-    var(--bodycolor) 15.85%,
-    var(--bodycolor) 56.62%,
-    rgba(34, 30, 31, 0) 83.6%
-  );
+  background: linear-gradient(270deg,
+      var(--bodycolor) 15.85%,
+      var(--bodycolor) 56.62%,
+      rgba(34, 30, 31, 0) 83.6%);
 }
+
 .dark-arrow.slick-slider .slick-next:before,
 .dark-arrow.slick-slider .slick-prev:before,
 .light-arrow.slick-slider .slick-next:before,
@@ -210,14 +150,17 @@ body::-webkit-scrollbar-thumb {
 .dark-arrow.slick-slider .slick-prev:before {
   background-color: var(--brandDark1);
 }
+
 .light-arrow.slick-slider .slick-next:before,
 .light-arrow.slick-slider .slick-prev:before {
   background-color: var(--brandLightOpacity100);
 }
+
 .dark-arrow.slick-slider .slick-next:hover::before,
 .dark-arrow.slick-slider .slick-prev:hover::before {
   background-color: var(--brandLightOpacity10);
 }
+
 .light-arrow.slick-slider .slick-next:hover::before,
 .light-arrow.slick-slider .slick-prev:hover::before {
   background-color: var(--grayCard);
@@ -227,6 +170,7 @@ body::-webkit-scrollbar-thumb {
 .exports-banner .dark-arrow.slick-slider .slick-prev:hover::before {
   background-color: var(--brandLightOpacity10);
 }
+
 .exports-banner .light-arrow.slick-slider .slick-next:hover::before,
 .exports-banner .light-arrow.slick-slider .slick-prev:hover::before {
   background-color: var(--brandLightOpacity90);
@@ -245,6 +189,7 @@ body::-webkit-scrollbar-thumb {
   background-repeat: no-repeat;
   top: 12px;
 }
+
 .dark-arrow.slick-slider .slick-next::after,
 .dark-arrow.slick-slider .slick-prev::after {
   content: "";
@@ -255,18 +200,9 @@ body::-webkit-scrollbar-thumb {
 .light-arrow.slick-slider .slick-prev::after {
   content: "";
   background-image: url("../assets/trending-arrows/dark-arrow.png");
+
 }
 
-/* .deailslider .dark-arrow.slick-slider button.slick-next,
-.deailslider .light-arrow.slick-slider button.slick-next {
-  top: 50% !important;
-  background: none;
-}
-.deailslider .dark-arrow.slick-slider button.slick-prev,
-.deailslider .light-arrow.slick-slider button.slick-prev {
-  top: 45% !important;
-  background: none;
-} */
 /* ARROW'S STYLE CLOSE */
 .font-sec-saprate-18 {
   font-family: "Montserrat";
@@ -276,9 +212,11 @@ body::-webkit-scrollbar-thumb {
 .f_it {
   font-style: italic;
 }
+
 .montserratfont {
   font-family: "Montserrat", sans-serif;
 }
+
 .robotoslub {
   font-family: "Roboto Slab", serif;
 }
@@ -300,32 +238,32 @@ body::-webkit-scrollbar-thumb {
 .trendingteass .slick-prev {
   top: 14px;
 }
-.article-pages-slide {
-}
+
 .slick-prev {
   left: -60px !important;
 }
+
 .slick-next {
   right: -65px !important;
 }
+
 .exports-banner .slick-prev {
   left: 24px !important;
 }
+
 .exports-banner .slick-next {
   right: 24px !important;
 }
+
 .exports-banner .slick-prev:before,
 .exports-banner .slick-next:before {
   opacity: 1;
 }
-/*
-.exports-banner .slick-prev:hover::before,
-.exports-banner .slick-next:hover::before {
-  opacity: 1;
-} */
+
 .trendingteass .slick-prev {
   left: -45px !important;
 }
+
 /* SCROLL */
 .choiceselect .slectopitons::-webkit-scrollbar {
   width: 10px !important;
@@ -346,9 +284,11 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
 .article-trend-title {
   -webkit-line-clamp: 3;
 }
+
 .bannerImageProfile button.slick-prev {
   top: 35% !important;
 }
@@ -356,6 +296,7 @@ body::-webkit-scrollbar-thumb {
 .displayImageProfile button.slick-prev {
   top: 18% !important;
 }
+
 .article-slider-dark .slick-current img {
   border: solid 2px #e5e5e5 !important;
 }
@@ -365,14 +306,17 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 1430px) {
+
   .global-section-width-article,
   .user-section-width,
   .global-section-width {
     padding: 0 70px;
   }
+
   .trending .slick-next {
     right: 0 !important;
   }
+
   .hero-section-description {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -381,6 +325,7 @@ body::-webkit-scrollbar-thumb {
     text-overflow: ellipsis;
     height: 40px;
   }
+
   .news-desc {
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -388,13 +333,16 @@ body::-webkit-scrollbar-thumb {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
   .slick-prev {
     left: -40px !important;
   }
+
   .slick-next {
     right: -45px !important;
   }
 }
+
 @media screen and (max-width: 1280px) {
   .news-title {
     display: -webkit-box;
@@ -403,11 +351,13 @@ body::-webkit-scrollbar-thumb {
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
   }
+
   .global-section-width-article,
   .user-section-width,
   .global-section-width {
     padding: 0 50px;
   }
+
   .esport-event-valorant-title {
     display: -webkit-box;
     -webkit-line-clamp: 1;
@@ -416,6 +366,7 @@ body::-webkit-scrollbar-thumb {
     text-overflow: ellipsis;
   }
 }
+
 @media screen and (max-width: 1100px) {
   .about-user-description {
     display: -webkit-box;
@@ -434,23 +385,29 @@ body::-webkit-scrollbar-thumb {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
   .global-section-width-article,
   .global-section-width {
     padding: 0 40px;
   }
+
   .slick-prev {
     left: -25px !important;
   }
+
   .slick-next {
     right: -25px !important;
   }
 }
+
 @media screen and (max-width: 1024px) {
+
   .global-section-width-article,
   .user-section-width,
   .global-section-width {
     padding: 0 16px;
   }
+
   .feature-desc,
   .feature-title,
   .esport-event-valorant-title2,
@@ -465,15 +422,18 @@ body::-webkit-scrollbar-thumb {
   .feature-desc {
     -webkit-line-clamp: 3;
   }
+
   .slick-prev {
     left: 0px !important;
   }
+
   .slick-next {
     right: 0px !important;
   }
 }
 
 @media screen and (max-width: 639px) {
+
   .deail-tab-com-title,
   .review-title {
     display: -webkit-box;
@@ -482,18 +442,23 @@ body::-webkit-scrollbar-thumb {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
   .hero-section-tech-title {
     -webkit-line-clamp: 2;
   }
+
   .tech-feature-dec {
     -webkit-line-clamp: 3;
   }
+
   .exports-banner .slick-prev {
     left: 10px !important;
   }
+
   .exports-banner .slick-next {
     right: 10px !important;
   }
+
   .trending .dark-arrow.slick-slider .slick-next::after,
   .trending .light-arrow.slick-slider .slick-next::after,
   .trending .dark-arrow.slick-slider .slick-prev::after,
@@ -506,17 +471,20 @@ body::-webkit-scrollbar-thumb {
     width: 0;
     height: 0;
   }
+
   .trending .dark-arrow.slick-slider button.slick-next,
   .trending .light-arrow.slick-slider button.slick-next {
     width: 20px;
     height: 40px;
   }
+
   .trending .dark-arrow.slick-slider button.slick-prev,
   .trending .light-arrow.slick-slider button.slick-prev {
     width: 80px;
     height: 40px;
   }
 }
+
 @media screen and (max-width: 400px) {
   .esport-event-valorant-title {
     font-size: 12px;

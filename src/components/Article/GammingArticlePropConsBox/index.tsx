@@ -37,15 +37,7 @@ const GammingArticlePropConsBox = () => {
                     90000
                   </span>
                 </p>
-                {/* <p className="flex items-center pl-[10px] mw-sm:hidden">
-                  <Image src={d_c} alt="amazaon" />
-                  <span className="block montserratfont font-medium text-base leading-5 dark:text-brandLightOpacity30 pl-[5px] line-through">
-                    90000
-                  </span>
-                </p>
-                <p className="block montserratfont text-medium text-base leading-5 dark:text-brandLightOpacity70 pl-[10px]">
-                  (15% off)
-                </p> */}
+              
               </div>
               <p className="montserratfont font-normal text-sm leading-[17px] dark:text-white text-brandDark2 pb-[5px] ">
                 Release date : 14/4/23
@@ -80,10 +72,10 @@ const GammingArticlePropConsBox = () => {
                 Ergonomic design
               </li>
               <li className="font-medium text-base leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity100 text-brandDark1 montserratfont  mw-md:text-sm ">
-                Sharp low light mode{" "}
+                Sharp low light mode
               </li>
               <li className="font-medium text-base leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity100 text-brandDark1 montserratfont  mw-md:text-sm ">
-                Android one certified{" "}
+                Android one certified
               </li>
             </ul>
           </div>
@@ -93,15 +85,15 @@ const GammingArticlePropConsBox = () => {
             </h5>
             <ul className="list-disc pl-10px mr-[20px]	ml-[45px] py-6	mw-md:ml-[30px] mw-md:mr-[15px]">
               <li className="font-medium text-base leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity100 text-brandDark1 montserratfont mw-md:text-sm ">
-                {" "}
-                Warm Tinge hDR photos{" "}
+                
+                Warm Tinge hDR photos
               </li>
               <li className="font-medium text-base leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity100 text-brandDark1 montserratfont  mw-md:text-sm ">
                 HDR playback not on netflix and amazon prime
               </li>
               <li className="font-medium text-base leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity100 text-brandDark1 montserratfont mw-md:text-sm ">
                 Punch hole is much bigger as compared to other phones with a
-                similar design{" "}
+                similar design
               </li>
             </ul>
           </div>

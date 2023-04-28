@@ -12,8 +12,6 @@ import img9 from "../../../assets/user-saved/9.png";
 import img10 from "../../../assets/user-saved/10.png";
 import img11 from "../../../assets/user-saved/11.png";
 import img12 from "../../../assets/user-saved/12.png";
-import bookmark from "../../../assets/author-profile/bookmark.png";
-
 import bookmakred from "../../../assets/user-for-you/fill-bookmark.png";
 import Image from "next/image";
 

@@ -3,14 +3,9 @@ import React, { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import styles from "./AbsBannerArticle.module.css"
-import { useTheme } from "next-themes"
 import NavSlider from "@/components/Article/Slider"
 const AbsBannerArticle = (props: any) => {
-  const { theme, setTheme } = useTheme()
-  const [isDarkTheme, setIsDarkTheme] = useState<string>("")
-  useEffect(() => {
-    setIsDarkTheme(theme === "dark" ? "dark" : "light")
-  }, [theme])
+
   return (
     <>
       <section className="article_banner_wrapper global-section-width-article">
@@ -20,7 +15,6 @@ const AbsBannerArticle = (props: any) => {
             <div className="w-[calc(100%_-_0px)] mw-lg:w-[calc(100%_-_0px)] mx-14:w-[70%]">
               <div className="w-full">
                 <div className="image_wrapper  h-[460px] w-[956px] mx-14:w-[750px] mw-xl:h-[auto] mw-12:w-[650px] mw-12:h-[auto] mw-11:w-[600px] mw-9:w-[100%] ">
-                  {/* <Image src={bannerImage} alt="banner image" className="" /> */}
                   <Image
                     src={props.bannerImage}
                     alt="banner image"
@@ -126,10 +120,10 @@ const AbsBannerArticle = (props: any) => {
                   LATEST
                 </h4>
                 <p className="montserratfont text-[16px] leading-[20px] font-bold dark:text-[#E5E5E5] pb-[20px] mw-12:text-[14px] mw-12:leading-[18px] mw-12:pb-[16px]">
-                  MR Luna has announced he is stepping down as CEO{" "}
+                  MR Luna has announced he is stepping down as CEO
                 </p>
                 <p className="montserratfont text-[16px] leading-[20px] font-bold dark:text-[#E5E5E5] pb-[20px] mw-12:text-[14px] mw-12:leading-[18px] mw-12:pb-[16px]">
-                  Legends of Runnetera 2023 Roadmap{" "}
+                  Legends of Runnetera 2023 Roadmap
                 </p>
                 <p className="montserratfont text-[16px] leading-[20px] font-bold dark:text-[#E5E5E5] pb-[20px] mw-12:text-[14px] mw-12:leading-[18px] mw-12:pb-[16px]">
                   What will Arcane Season 2 be about?

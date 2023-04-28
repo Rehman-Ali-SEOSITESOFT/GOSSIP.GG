@@ -1,26 +1,26 @@
-"use client"
-import AbsBannerArticle from "@/components/AbsArticleContent/AbsBannerArticle/AbsBannerArticle"
-import AbsHeadingArticle from "@/components/AbsArticleContent/AbsHeadingArticle/AbsHeadingArticle"
-import React, { useState } from "react"
-import bannerImage from "../../../assets/articlebannerimage/banner4.png"
-import four from "../../../assets/articlebannerimage/two.png"
-import ListBox from "@/components/Article/Listing"
-import Comments from "@/components/Article/Comments"
-import UserLogoSection from "@/components/Article/UserInfoSection"
-import ReadMoreLikeThis from "@/components/Article/ReadMore"
-import AbsArticleBreadCrum from "@/components/AbsArticleContent/AbsArticleBreadCrum/AbsArticleBreadCrum"
+"use client";
+import AbsBannerArticle from "@/components/AbsArticleContent/AbsBannerArticle/AbsBannerArticle";
+import AbsHeadingArticle from "@/components/AbsArticleContent/AbsHeadingArticle/AbsHeadingArticle";
+import React, { useState } from "react";
+import bannerImage from "../../../assets/articlebannerimage/banner4.png";
+import four from "../../../assets/articlebannerimage/two.png";
+import ListBox from "@/components/Article/Listing";
+import Comments from "@/components/Article/Comments";
+import UserLogoSection from "@/components/Article/UserInfoSection";
+import ReadMoreLikeThis from "@/components/Article/ReadMore";
+import AbsArticleBreadCrum from "@/components/AbsArticleContent/AbsArticleBreadCrum/AbsArticleBreadCrum";
 
 const Page = () => {
   interface List {
-    bannerImage: any
-    lowerImage: any
+    bannerImage: any;
+    lowerImage: any;
   }
   const [list, setList] = useState<List[]>([
     {
       bannerImage: bannerImage,
       lowerImage: four,
     },
-  ])
+  ]);
   return (
     <section>
       <div>
@@ -41,7 +41,7 @@ const Page = () => {
                 lowerImage={e.lowerImage}
               />
             </div>
-          )
+          );
         })}
       </div>
       <div className="pt-12">
@@ -55,7 +55,7 @@ const Page = () => {
       </div>
       <ReadMoreLikeThis />
     </section>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

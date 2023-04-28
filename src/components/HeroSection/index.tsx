@@ -7,7 +7,6 @@ import book2 from "../../assets/images/hero/right-side-012.png";
 import book3 from "../../assets/images/hero/right-side-03.png";
 import bookmark from "../../assets/images/hero/bookmark.png";
 import ClickBookmark from "../../assets/images/hero/click-markup.png";
-// import styles from "./herosection.module.css"
 const HeroSection = () => {
   interface List {
     name: string;

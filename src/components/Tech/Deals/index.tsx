@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Image from "next/image";
-
 import FilterTabs from "../Filter";
 import ongoing1 from "../../../assets/tech/deals/ongoing-1.png";
 import ongoing2 from "../../../assets/tech/deals/ongoing-2.png";
@@ -10,7 +9,6 @@ import ongoing5 from "../../../assets/tech/deals/ongoing-5.png";
 import ongoing6 from "../../../assets/tech/deals/ongoing-6.png";
 import ongoing7 from "../../../assets/tech/deals/ongoing-7.png";
 import ongoing8 from "../../../assets/tech/deals/ongoing-8.png";
-
 import upcomming1 from "../../../assets/tech/deals/upcomming-1.png";
 import upcomming2 from "../../../assets/tech/deals/upcomming-2.png";
 import upcomming3 from "../../../assets/tech/deals/upcomming-3.png";
@@ -19,7 +17,6 @@ import upcomming5 from "../../../assets/tech/deals/upcomming-5.png";
 import upcomming6 from "../../../assets/tech/deals/upcomming-6.png";
 import upcomming7 from "../../../assets/tech/deals/upcomming-7.png";
 import upcomming8 from "../../../assets/tech/deals/upcomming-8.png";
-
 import SectionSaprator from "@/components/SecSaprator";
 import downextendicon from "../../../assets/tech/down-extend.png";
 import uparrow from "../../../assets/tech/uparrow.png";
@@ -242,7 +239,7 @@ const DeailTech = () => {
                 </div>
               </div>
             );
-          })}{" "}
+          })}
           {upCommming.length === upCommingLimit ? (
             <h5
               onClick={hanldeCloseUpCommingLimited}

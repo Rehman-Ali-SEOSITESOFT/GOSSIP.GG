@@ -84,9 +84,7 @@ const LatestNews = () => {
                       className="rounded-sm w-full h-full object-cover"
                     />
                   </div>
-                  {/* <div
-                    className={`${style.news_desc} border-grayCard dark:border-brandLightOpacity10`}
-                  > */}
+
                   <div
                     className={`px-[16px]  border-grayCard dark:border-brandLightOpacity10  ${
                       index === 3 || index === 4 || index === 5
@@ -209,7 +207,6 @@ const LatestNews = () => {
                       index === 2 || index === 3 ? "border-b-0" : "border-b"
                     } border-grayCard  dark:border-brandLightOpacity10`}
                   >
-                    {/* bookmark text-textColorGray hover:text-textColor  dark:text-brandLightOpacity70 dark:hover:text-brandLightOpacity100 w-[12px] */}
                     <div className="bookmark text-textColorGray hover:text-textColor  dark:text-brandLightOpacity70 dark:hover:text-brandLightOpacity100  w-[12px]">
                       <Image
                         src={boomkark}
@@ -277,20 +274,6 @@ const LatestNews = () => {
             })}
           </div>
         </div>
-        {/* <div className="2xl:container">
-          <div className="flex pt-2">
-            <div className="w-full">
-              <a
-                href="#"
-                className="text-textColorGray dark:text-brandLightOpacity70 montserratfont font-base  leading-5"
-              >
-                View more <span>&gt;</span>
-                <span>&gt;</span>
-                <span>&gt;</span>
-              </a>
-            </div>{" "}
-          </div>
-        </div> */}
       </div>
     </section>
   );

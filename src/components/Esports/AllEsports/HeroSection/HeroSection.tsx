@@ -1,23 +1,23 @@
-import Image from "next/image"
-import React, { useState } from "react"
-import leftside from "../../../../assets/images/hero/hero-section-left-side.png"
-import book1 from "../../../../assets/egaming/led.png"
-import book2 from "../../../../assets/egaming/chip.png"
-import icon1 from "../../../../assets/egaming/CITYPNG.png"
-import whiteteam from "../../../../assets/egaming/whiteteam.png"
-import blackteam from "../../../../assets/egaming/blackteam.png"
-import image1 from "../../../../assets/egaming/image1.png"
-import image2 from "../../../../assets/egaming/image2.png"
-import image3 from "../../../../assets/egaming/image3.png"
-import bookmark from "../../../../assets/latest-news/bookmark.png"
-import image4 from "../../../../assets/egaming/image4.png"
-import styles from "./styles.module.css"
-import { useTheme } from "next-themes"
+import Image from "next/image";
+import React, { useState } from "react";
+import leftside from "../../../../assets/images/hero/hero-section-left-side.png";
+import book1 from "../../../../assets/egaming/led.png";
+import book2 from "../../../../assets/egaming/chip.png";
+import icon1 from "../../../../assets/egaming/CITYPNG.png";
+import whiteteam from "../../../../assets/egaming/whiteteam.png";
+import blackteam from "../../../../assets/egaming/blackteam.png";
+import image1 from "../../../../assets/egaming/image1.png";
+import image2 from "../../../../assets/egaming/image2.png";
+import image3 from "../../../../assets/egaming/image3.png";
+import bookmark from "../../../../assets/latest-news/bookmark.png";
+import image4 from "../../../../assets/egaming/image4.png";
+import styles from "./styles.module.css";
+import { useTheme } from "next-themes";
 const HeroSection = () => {
-  const { theme } = useTheme()
+  const { theme } = useTheme();
   interface List {
-    name: string
-    picture: any
+    name: string;
+    picture: any;
   }
   const [item, setItem] = useState<List[]>([
     {
@@ -28,7 +28,7 @@ const HeroSection = () => {
       name: "Bayes Esports appoints York Scheunemann as COO of reputed gaming...",
       picture: book2,
     },
-  ])
+  ]);
   const [item2, setItem2] = useState<List[]>([
     {
       name: "Bayes Esports appoints York Scheunemann as COO of reputed gaming company      ",
@@ -38,7 +38,7 @@ const HeroSection = () => {
       name: "Bayes Esports appoints York Scheunemann as COO of reputed gaming company      ",
       picture: book2,
     },
-  ])
+  ]);
   return (
     <>
       <section className="esport_all_wrapper">
@@ -63,60 +63,6 @@ const HeroSection = () => {
                 </div>
                 <div className="bottom_image_section mt-[28px] mw-lg:mt-[0px]">
                   <div className="esport_hero_cardss ">
-                    {/* section */}
-                    {/* <div className="mw-lg:hidden right-side pl-8 mx-14:pl-6 mw-lg:pl-0 mw-lg:py-5 h-[450px] mw-11:h-[420px]  mw-lg:h-auto flex flex-col justify-between ">
-                      {item.map((elem, index) => {
-                        return (
-                          <div
-                            className={` mw-sm:border-l-brand flex `}
-                            key={index}
-                          >
-                            <div className="max-w-[200px] w-full mw-11:max-w-[170px] mw-11:h-[130px]">
-                              <Image
-                                src={elem.picture}
-                                alt="demo "
-                                className="h-full object-cover"
-                              />
-                            </div>
-                            <div className="desc_wrapper pr-5	pl-3.5	mw-11:pr-3.5	mw-11:h-[130px] 	">
-                              <h3 className="text-base font-bold  leading-5	 text-brandDark2 montserratfont dark:text-brandLightOpacity100 mw-11:text-[15px] mw-lg:text-base ">
-                                {" "}
-                                {elem.name}{" "}
-                              </h3>
-
-                              <div className="tags flex pt-3.5 pb-3 montserratfont">
-                                <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
-                                  News
-                                </div>
-                                <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10    hover:text-brandDark2 dark:hover:bg-brandLightOpacity20    dark:hover:text-brandLightOpacity100    dark:text-brandLightOpacity70">
-                                  Esports
-                                </div>
-                              </div>
-                              <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs mw-sm3:text-[10px]">
-                                <span className="montserratfont">
-                                  {" "}
-                                  <i>3 hrs ago</i>{" "}
-                                </span>{" "}
-                                <span
-                                  className={`border-l border-l-textColorGray pl-2 ml-2 border-textColorGray   dark:border-l-brandLightOpacity70   `}
-                                >
-                                  5 min read
-                                </span>
-                              </small>
-                            </div>
-                            <div className={"thumnail_wrapper"}>
-                              <div className="bookmark flex items-center justify-center w-8 h-8 bg-grayCard dark:text-brandLightOpacity100 dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20  hover:bg-borderEditProfile cursor-pointer rounded-3xl">
-                                <Image
-                                  src={bookmark}
-                                  className=" brightness-0 dark:brightness-200"
-                                  alt="book"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        )
-                      })}
-                    </div> */}
                     <div className="hidden mw-lg:flex  right-side pl-8 mx-14:pl-6 mw-lg:pl-0 mw-lg:py-[28px] h-[450px] mw-11:h-[420px]  mw-lg:h-auto mw-lg:flex-row mw-sm:flex-col  mw-lg:h-auto  justify-between">
                       {item2.map((elem, index) => {
                         return (
@@ -166,7 +112,7 @@ const HeroSection = () => {
                               </div>
                             </div>
                           </div>
-                        )
+                        );
                       })}
                     </div>
 
@@ -218,7 +164,7 @@ const HeroSection = () => {
                               </div>
                             </div>
                           </div>
-                        )
+                        );
                       })}
                     </div>
                   </div>
@@ -469,7 +415,7 @@ const HeroSection = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;

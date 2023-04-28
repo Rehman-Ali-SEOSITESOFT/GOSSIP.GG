@@ -17,7 +17,7 @@ import Eye from "../../../assets/images/modal/eye-off.png";
 
 const SignupModal = (props: any) => {
   const cancelButtonRef = useRef(null);
-  const { theme} = useTheme();
+  const { theme } = useTheme();
   const [open, setOpen] = useState<boolean | null>(false);
   const onClickOpenModal = () => {
     if (!open) {
@@ -81,7 +81,10 @@ const SignupModal = (props: any) => {
                   <div className="flex flex-col bg-bodycolor dark:bg-brandDark2  border-2 rounded-b-lg dark:border-r-brandLightOpacity10 dark:border-l-brandLightOpacity10 dark:border-b-brandLightOpacity10  dark:border-t-brandDark2">
                     <div className=" mw-sm:pl-10 mw-sm:pr-10 pl-40 pr-40  mb-9">
                       <div className="flex flex-col items-center ">
-                      <Image src={theme === 'dark' ? Logo : LightLogo} alt="logo" />
+                        <Image
+                          src={theme === "dark" ? Logo : LightLogo}
+                          alt="logo"
+                        />
                         <p className="text-brandDark2 dark:text-brandLightOpacity100 text-2xl montserratfont not-italic font-bold pb-6 mw-sm:text-lg ">
                           Sign Up to Gossip.gg
                         </p>
@@ -142,10 +145,16 @@ const SignupModal = (props: any) => {
                     <div className="mw-sm:pl-10 mw-sm:pr-10 pl-40 pr-40 mt-8 mb-68px">
                       <div className="flex flex-row justify-center items-center">
                         <div className=" hover:bg-borderEditProfile dark:hover:bg-[#353233] mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full mr-5 dark:bg-brandLightOpacity5 bg-iconBackground flex justify-center items-center content-center ">
-                        <Image src={theme === 'dark' ?  Google : GoogleLight} alt="google icon" />
+                          <Image
+                            src={theme === "dark" ? Google : GoogleLight}
+                            alt="google icon"
+                          />
                         </div>
                         <div className="hover:bg-borderEditProfile dark:hover:bg-[#353233] mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full ml-5 dark:bg-brandLightOpacity5 bg-iconBackground flex justify-center items-center content-center ">
-                        <Image src={theme === 'dark' ?  Discord : DiscordLight}  alt="google icon" />
+                          <Image
+                            src={theme === "dark" ? Discord : DiscordLight}
+                            alt="google icon"
+                          />
                         </div>
                       </div>
                     </div>

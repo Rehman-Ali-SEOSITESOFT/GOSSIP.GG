@@ -1,30 +1,30 @@
-import SectionSaprator from "@/components/SecSaprator"
-import Image from "next/image"
-import React, { useState } from "react"
-import ViewMore from "@/components/Gamings/ViewMore/ViewMore"
-import bookmark from "../../../../assets/latest-news/bookmark.png"
-import Card from "../../../../assets/esporting-events/image4.png"
-import Icon from "../../../../assets/images/esport-event/icon.png"
-import Logo from "../../../../assets/images/esport-event/logo.png"
-import DarkLogo from "../../../../assets/images/esport-event/logo-dark.png"
-import RightIcon from "../../../../assets/images/esport-event/right.png"
-import DarkLine from "../../../../assets/images/general/dark-line.png"
-import Line from "../../../../assets/images/general/Line.png"
-import book1 from "../../../../assets/egaming/led.png"
-import book2 from "../../../../assets/egaming/chip.png"
-import image5 from "../../../../assets/esporting-events/image5.png"
-import image6 from "../../../../assets/esporting-events/image6.png"
-import image7 from "../../../../assets/esporting-events/image7.png"
-import icon1 from "../../../../assets/egaming/CITYPNG.png"
-import style from "./AllBgmi.module.css"
-import { useTheme } from "next-themes"
+import SectionSaprator from "@/components/SecSaprator";
+import Image from "next/image";
+import React, { useState } from "react";
+import ViewMore from "@/components/Gamings/ViewMore/ViewMore";
+import bookmark from "../../../../assets/latest-news/bookmark.png";
+import Card from "../../../../assets/esporting-events/image4.png";
+import Icon from "../../../../assets/images/esport-event/icon.png";
+import Logo from "../../../../assets/images/esport-event/logo.png";
+import DarkLogo from "../../../../assets/images/esport-event/logo-dark.png";
+import RightIcon from "../../../../assets/images/esport-event/right.png";
+import DarkLine from "../../../../assets/images/general/dark-line.png";
+import Line from "../../../../assets/images/general/Line.png";
+import book1 from "../../../../assets/egaming/led.png";
+import book2 from "../../../../assets/egaming/chip.png";
+import image5 from "../../../../assets/esporting-events/image5.png";
+import image6 from "../../../../assets/esporting-events/image6.png";
+import image7 from "../../../../assets/esporting-events/image7.png";
+import icon1 from "../../../../assets/egaming/CITYPNG.png";
+import style from "./AllBgmi.module.css";
+import { useTheme } from "next-themes";
 const AllBgmi = () => {
-  const { theme } = useTheme()
+  const { theme } = useTheme();
   interface EventList {
-    event_title: string
-    date: string
-    country: string
-    prize: string
+    event_title: string;
+    date: string;
+    country: string;
+    prize: string;
   }
   const [eventData, setEventData] = useState<EventList[]>([
     {
@@ -33,10 +33,10 @@ const AllBgmi = () => {
       country: "South Asia",
       prize: " $4500",
     },
-  ])
+  ]);
   interface List {
-    name: string
-    picture: any
+    name: string;
+    picture: any;
   }
   const [item, setItem] = useState<List[]>([
     {
@@ -55,7 +55,7 @@ const AllBgmi = () => {
       name: "Bayes Esports appoints York Scheunemann as COO of reputed gaming...",
       picture: image5,
     },
-  ])
+  ]);
   const [item2, setItem2] = useState<List[]>([
     {
       name: "Bayes Esports appoints York Scheunemann as COO of reputed gaming...",
@@ -65,7 +65,7 @@ const AllBgmi = () => {
       name: "Bayes Esports appoints York Scheunemann as COO of reputed gaming...",
       picture: image6,
     },
-  ])
+  ]);
   return (
     <>
       <section className="all_bgmi_wrapper">
@@ -106,8 +106,8 @@ const AllBgmi = () => {
                       <p
                         className={`${style.font_esport_event_12} text-brandDark2 dark:text-brandLightOpacity100 font-medium pt-1.5 flex items-center`}
                       >
-                        South Asia{" "}
-                        <span className="h-1 w-1 bg-brandDark2 opacity-70 dark:opacity-100  dark:bg-brandLightOpacity100 inline-block rounded-full ml-[7px] mr-[8px]"></span>{" "}
+                        South Asia
+                        <span className="h-1 w-1 bg-brandDark2 opacity-70 dark:opacity-100  dark:bg-brandLightOpacity100 inline-block rounded-full ml-[7px] mr-[8px]"></span>
                         Prizepool $4500
                       </p>
                     </div>
@@ -158,9 +158,9 @@ const AllBgmi = () => {
                           </div>
                           <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs mw-sm3:text-[10px]">
                             <span className="montserratfont">
-                              {" "}
-                              <i>3 hrs ago</i>{" "}
-                            </span>{" "}
+                              
+                              <i>3 hrs ago</i>
+                            </span>
                             <span
                               className={`border-l border-l-textColorGray pl-2 ml-2 border-textColorGray   dark:border-l-brandLightOpacity70   `}
                             >
@@ -178,7 +178,7 @@ const AllBgmi = () => {
                           </div>
                         </div>
                       </div>
-                    )
+                    );
                   })}
                 </div>
               </div>
@@ -211,9 +211,9 @@ const AllBgmi = () => {
                         </div>
                         <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs mw-sm3:text-[10px]">
                           <span className="montserratfont">
-                            {" "}
-                            <i>3 hrs ago</i>{" "}
-                          </span>{" "}
+                            
+                            <i>3 hrs ago</i>
+                          </span>
                           <span
                             className={`border-l border-l-textColorGray pl-2 ml-2 border-textColorGray   dark:border-l-brandLightOpacity70   `}
                           >
@@ -231,7 +231,7 @@ const AllBgmi = () => {
                         </div>
                       </div>
                     </div>
-                  )
+                  );
                 })}
               </div>
             </div>
@@ -242,7 +242,7 @@ const AllBgmi = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default AllBgmi
+export default AllBgmi;

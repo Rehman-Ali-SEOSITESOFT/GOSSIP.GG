@@ -1,15 +1,15 @@
-import React, { useState } from "react"
-import style from "./GamingFeatures.module.css"
-import image1 from "../../../assets/gaming/image1.png"
-import image2 from "../../../assets/gaming/image1.png"
-import image3 from "../../../assets/gaming/image1.png"
-import image4 from "../../../assets/gaming/image1.png"
-import bookmark from "../../../assets/gaming/bookmark.png"
-import Image from "next/image"
+import React, { useState } from "react";
+import style from "./GamingFeatures.module.css";
+import image1 from "../../../assets/gaming/image1.png";
+import image2 from "../../../assets/gaming/image1.png";
+import image3 from "../../../assets/gaming/image1.png";
+import image4 from "../../../assets/gaming/image1.png";
+import bookmark from "../../../assets/gaming/bookmark.png";
+import Image from "next/image";
 const GamingFeatures = () => {
   interface List {
-    name: string
-    picture: any
+    name: string;
+    picture: any;
   }
   const item: List[] = [
     {
@@ -28,7 +28,7 @@ const GamingFeatures = () => {
       name: "demo ",
       picture: image4,
     },
-  ]
+  ];
   const data: List[] = [
     {
       name: "demo ",
@@ -38,9 +38,9 @@ const GamingFeatures = () => {
       name: "demo ",
       picture: image2,
     },
-  ]
-  const [items2, setItems2] = useState(data)
-  const [items, setItems] = useState(item)
+  ];
+  const [items2, setItems2] = useState(data);
+  const [items, setItems] = useState(item);
   return (
     <>
       <div className="mw-lg:hidden features_gaming_section dark:bg-brandDark1 bg-white pt-[24px] pb-[24px] pl-[0px] pr-[0px]  rounded border-grayCard border mw-sm:pb-[16px]">
@@ -103,7 +103,7 @@ const GamingFeatures = () => {
                   </div>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>
@@ -135,12 +135,12 @@ const GamingFeatures = () => {
                   </div>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default GamingFeatures
+export default GamingFeatures;

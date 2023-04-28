@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from "react"
-import Image from "next/image"
-import image1 from "../../../assets/select/image-react-1.png"
-import image2 from "../../../assets/select/image-react-2.png"
-import image3 from "../../../assets/select/image-react-3.png"
-import image4 from "../../../assets/select/image-react-4.png"
-import ViewMore from "../ViewMore/ViewMore"
-import bookmark from "../../../assets/gaming/bookmark.png"
-import bookmarkDark from "../../../assets/gaming/bookmark-dark.png"
-import { useTheme } from "next-themes"
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import image1 from "../../../assets/select/image-react-1.png";
+import image2 from "../../../assets/select/image-react-2.png";
+import image3 from "../../../assets/select/image-react-3.png";
+import image4 from "../../../assets/select/image-react-4.png";
+import ViewMore from "../ViewMore/ViewMore";
+import bookmark from "../../../assets/gaming/bookmark.png";
+import bookmarkDark from "../../../assets/gaming/bookmark-dark.png";
+import { useTheme } from "next-themes";
 const GuideGaming = () => {
-  const [list, setList] = useState<any[]>([image1, image2, image3, image4])
-  const { theme } = useTheme()
-  const [isDarkTheme, setIsDarkTheme] = useState<string>("")
+  const [list, setList] = useState<any[]>([image1, image2, image3, image4]);
+  const { theme } = useTheme();
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
   useEffect(() => {
-    setIsDarkTheme(theme === "dark" ? "dark" : "light")
-  }, [theme])
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   return (
     <>
       <section className="Guides_wrapper">
@@ -59,7 +59,7 @@ const GuideGaming = () => {
                       </div>
                     </div>
                   </div>
-                )
+                );
               })}
             </div>
             <ViewMore />
@@ -67,7 +67,7 @@ const GuideGaming = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default GuideGaming
+export default GuideGaming;

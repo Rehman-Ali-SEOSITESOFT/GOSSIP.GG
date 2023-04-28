@@ -122,13 +122,7 @@ const LoginModal = (props: any) => {
                           type="text"
                           placeholder="Email"
                         />
-                        {/* <input
-                          className="border-brandLightOpacity10 mt-4 mb-38px hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6  bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline  focus:border-brandDark2 dark:focus:border-[#ffffff]"
-                          id="password"
-                          type="password"
-                          autoComplete="false"
-                          placeholder="Password"
-                        /> */}
+
                         <div className="relative w-[100%] mt-4 mb-38px">
                           <input
                             name="password"

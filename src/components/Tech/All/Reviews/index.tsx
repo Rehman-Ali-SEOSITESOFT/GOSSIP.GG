@@ -1,13 +1,13 @@
-import Image from "next/image"
-import React from "react"
-import review1 from "../../../../assets/tech/reviews-01.png"
-import review2 from "../../../../assets/tech/reviews-02.png"
-import review3 from "../../../../assets/tech/reviews-03.png"
-import review4 from "../../../../assets/tech/reviews-04.png"
-import SectionSaprator from "@/components/SecSaprator"
-import bookmark from "../../../../assets/tech/bookmark.png"
+import Image from "next/image";
+import React from "react";
+import review1 from "../../../../assets/tech/reviews-01.png";
+import review2 from "../../../../assets/tech/reviews-02.png";
+import review3 from "../../../../assets/tech/reviews-03.png";
+import review4 from "../../../../assets/tech/reviews-04.png";
+import SectionSaprator from "@/components/SecSaprator";
+import bookmark from "../../../../assets/tech/bookmark.png";
 const AllReviews = () => {
-  const imagesList = [review1, review2, review3, review4]
+  const imagesList = [review1, review2, review3, review4];
   return (
     <div className="global-section-width  ">
       <div className="pt-12 mw-lg:pt-7 mw-sm:pt-[16px]">
@@ -72,7 +72,7 @@ const AllReviews = () => {
                   </div>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>
@@ -87,11 +87,11 @@ const AllReviews = () => {
               <span>&gt;</span>
               <span>&gt;</span>
             </a>
-          </div>{" "}
+          </div>
         </div>
-      </div>{" "}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default AllReviews
+export default AllReviews;

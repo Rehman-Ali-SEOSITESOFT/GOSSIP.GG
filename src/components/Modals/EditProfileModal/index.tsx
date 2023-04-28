@@ -17,18 +17,18 @@ import Logo1 from "../../../assets/images/profile/logo-1.png";
 import DisplaySlider from "./DisplayImageSlider";
 import BannerSlider from "./BannerImageSlider";
 import { useTheme } from "next-themes";
-import DarkInsta from '../../../assets/images/profile/dark-insta.png';
-import DarkTwitter from '../../../assets/images/profile/dark-twitter.png';
-import DarkInfo from '../../../assets/images/profile/dark-info.png';
-import LightAirplay from '../../../assets/images/profile/airplay-light.png';
-import LightPhone from '../../../assets/images/profile/phone-light.png';
-import LightConsole from '../../../assets/images/profile/console.png';
-import Console from '../../../assets/images/profile/console-dark.png';
+import DarkInsta from "../../../assets/images/profile/dark-insta.png";
+import DarkTwitter from "../../../assets/images/profile/dark-twitter.png";
+import DarkInfo from "../../../assets/images/profile/dark-info.png";
+import LightAirplay from "../../../assets/images/profile/airplay-light.png";
+import LightPhone from "../../../assets/images/profile/phone-light.png";
+import LightConsole from "../../../assets/images/profile/console.png";
+import Console from "../../../assets/images/profile/console-dark.png";
 
 const EditProfileModal = (props: any) => {
   const cancelButtonRef = useRef(null);
   const [openTab, setOpenTab] = useState<number | null>(1);
-  const { theme} = useTheme();
+  const { theme } = useTheme();
 
   interface GameList {
     name: string;
@@ -38,7 +38,7 @@ const EditProfileModal = (props: any) => {
   interface PlatformList {
     name: string;
     picture: any;
-    lightImage: any
+    lightImage: any;
   }
 
   const item: GameList[] = [
@@ -114,8 +114,6 @@ const EditProfileModal = (props: any) => {
       name: "Dota 2",
       picture: Game2,
     },
-    
-   
   ];
   const [gameItems, setGameItems] = useState(item);
 
@@ -123,17 +121,17 @@ const EditProfileModal = (props: any) => {
     {
       name: "PC",
       picture: Airplay,
-      lightImage : LightAirplay
+      lightImage: LightAirplay,
     },
     {
       name: "Mobile",
       picture: Vector,
-      lightImage: LightPhone
+      lightImage: LightPhone,
     },
     {
       name: "Console",
-      picture:Console ,
-      lightImage: LightConsole
+      picture: Console,
+      lightImage: LightConsole,
     },
   ];
 
@@ -141,15 +139,14 @@ const EditProfileModal = (props: any) => {
   const [selectedGame, setSelectedGame] = useState<number>();
   const [selectedPlatform, setSelectedPlatform] = useState<number>();
 
-
-  const onClickSelectGame = (n: number) =>{
+  const onClickSelectGame = (n: number) => {
     setSelectedGame(n);
-  }
+  };
 
-  const onClickSelectPlatform = (n: number) =>{
+  const onClickSelectPlatform = (n: number) => {
     setSelectedPlatform(n);
-  }
-  
+  };
+
   return (
     <>
       <Transition.Root show={props.open} as={Fragment}>
@@ -198,7 +195,10 @@ const EditProfileModal = (props: any) => {
                         onClick={() => props.onClickOpenModal()}
                         className="h-10 w-10 rounded-full dark:hover:bg-[#353233] hover:bg-borderEditProfile cursor-pointer  bg-arrowicon dark:bg-brandLightOpacity5 flex justify-center items-center content-center"
                       >
-                        <Image src={theme === 'dark' ? Close : CloseLight} alt="google icon" />
+                        <Image
+                          src={theme === "dark" ? Close : CloseLight}
+                          alt="google icon"
+                        />
                       </div>
                     </div>
                   </div>
@@ -271,7 +271,9 @@ const EditProfileModal = (props: any) => {
                           <div className="mw-sm1:px-[10px] px-12  flex-auto">
                             <div className="tab-content tab-space">
                               <div
-                                className={openTab === 1 ? "block mb-[85px]" : "hidden"}
+                                className={
+                                  openTab === 1 ? "block mb-[85px]" : "hidden"
+                                }
                                 id="link1"
                               >
                                 <div className="mt-7">
@@ -316,7 +318,10 @@ const EditProfileModal = (props: any) => {
                                     links
                                   </p>
                                   <div className="flex flex-row  items-center pb-2">
-                                    <Image src={theme === 'dark' ? Info : DarkInfo} alt="Info" />
+                                    <Image
+                                      src={theme === "dark" ? Info : DarkInfo}
+                                      alt="Info"
+                                    />
                                     <p className="pl-2 montserratfont  font-normal text-brandDark2 dark:text-brandLightOpacity70  text-xs ">
                                       Please provide your username
                                     </p>
@@ -325,7 +330,11 @@ const EditProfileModal = (props: any) => {
                                     <div className="flex items-center mw-sm3:max-w-[100%] max-w-[45%]">
                                       <Image
                                         className="mr-2"
-                                        src={theme === 'dark' ? Instgram : DarkInsta} 
+                                        src={
+                                          theme === "dark"
+                                            ? Instgram
+                                            : DarkInsta
+                                        }
                                         alt="Instagram"
                                       />
                                       <input
@@ -333,13 +342,16 @@ const EditProfileModal = (props: any) => {
                                         id="live"
                                         type="text"
                                         placeholder="@username"
-
                                       />
                                     </div>
                                     <div className="flex items-center mw-sm3:mt-2 mw-sm3:max-w-[100%] max-w-[45%]">
                                       <Image
                                         className="mr-2"
-                                        src={theme === 'dark' ? Twitter : DarkTwitter}
+                                        src={
+                                          theme === "dark"
+                                            ? Twitter
+                                            : DarkTwitter
+                                        }
                                         alt="Twitter"
                                       />
                                       <input
@@ -353,7 +365,9 @@ const EditProfileModal = (props: any) => {
                                 </div>
                               </div>
                               <div
-                                className={openTab === 2 ? "block mb-6" : "hidden"}
+                                className={
+                                  openTab === 2 ? "block mb-6" : "hidden"
+                                }
                                 id="link2"
                               >
                                 <div>
@@ -375,9 +389,9 @@ const EditProfileModal = (props: any) => {
                                   <p className="text-base mb-4 text-brandDark2 dark:text-brandLightOpacity100 montserratfont font-semibold ">
                                     Display Image
                                   </p>
-                                   <div className="mw-sm3:max-w-[320px] mw-sm5:max-w-[350px] mw-sm:max-w-[450px] mw-sm4:max-w-[400px]  max-w-[500px] pl-9">
-                                   <DisplaySlider/>
-                                   </div>
+                                  <div className="mw-sm3:max-w-[320px] mw-sm5:max-w-[350px] mw-sm:max-w-[450px] mw-sm4:max-w-[400px]  max-w-[500px] pl-9">
+                                    <DisplaySlider />
+                                  </div>
                                 </div>
                                 <div className="border border-choosebox  dark:border-brandLightOpacity10 mt-[22px]"></div>
                                 <div className="mt-4">
@@ -385,13 +399,15 @@ const EditProfileModal = (props: any) => {
                                     Banner Image
                                   </p>
                                   <div className="mw-sm3:max-w-[320px] mw-sm5:max-w-[350px] mw-sm:max-w-[450px] mw-sm4:max-w-[400px] max-w-[500px] pl-9">
-                                   <BannerSlider/>
-                                   </div>
+                                    <BannerSlider />
+                                  </div>
                                 </div>
                                 <div className="border border-choosebox  dark:border-brandLightOpacity10 mt-4"></div>
                               </div>
                               <div
-                                className={openTab === 3 ? "block mb-[25px]" : "hidden"}
+                                className={
+                                  openTab === 3 ? "block mb-[25px]" : "hidden"
+                                }
                                 id="link3"
                               >
                                 <div className="mt-[41px] ">
@@ -406,14 +422,24 @@ const EditProfileModal = (props: any) => {
                                       <div
                                         key={index}
                                         onClick={() => onClickSelectGame(index)}
-                                        className={`min-w-fit mr-4   mb-4  mw-sm:mb-2 mw-sm:mr-2 flex items-center justify-around border border-brandDark2 ${selectedGame === index ? 'bg-arrowicon dark:bg-brandDark2   dark:border-brand': 'dark:border-[#ffffff]' }   rounded h-11`}
+                                        className={`min-w-fit mr-4   mb-4  mw-sm:mb-2 mw-sm:mr-2 flex items-center justify-around border border-brandDark2 ${
+                                          selectedGame === index
+                                            ? "bg-arrowicon dark:bg-brandDark2   dark:border-brand"
+                                            : "dark:border-[#ffffff]"
+                                        }   rounded h-11`}
                                       >
                                         <Image
                                           className="ml-3 mr-2 mw-sm:mr-1 mw-sm:ml-2"
                                           src={item.picture}
                                           alt="game icon"
                                         />
-                                        <p className={`mr-3 ${selectedGame === index ? "text-brandDark2 font-semibold dark:text-brand":"text-brandDark2 dark:text-brandLightOpacity70 font-normal"}  hover:text-brandDark2 dark:hover:text-brandLightOpacity100 hover:font-semibold  text-base mw-sm:mr-2 mw-sm:text-[14px]  montserratfont  `}>
+                                        <p
+                                          className={`mr-3 ${
+                                            selectedGame === index
+                                              ? "text-brandDark2 font-semibold dark:text-brand"
+                                              : "text-brandDark2 dark:text-brandLightOpacity70 font-normal"
+                                          }  hover:text-brandDark2 dark:hover:text-brandLightOpacity100 hover:font-semibold  text-base mw-sm:mr-2 mw-sm:text-[14px]  montserratfont  `}
+                                        >
                                           {item.name}
                                         </p>
                                       </div>
@@ -424,22 +450,40 @@ const EditProfileModal = (props: any) => {
                                   <p className="text-base  text-brandDark2 dark:text-brandLightOpacity100 montserratfont font-semibold">
                                     Platform
                                   </p>
-                                  <p className={`mb-[14px] text-brandDark2 dark:text-brandLightOpacity70 montserratfont text-xs font-normal`}>
+                                  <p
+                                    className={`mb-[14px] text-brandDark2 dark:text-brandLightOpacity70 montserratfont text-xs font-normal`}
+                                  >
                                     Select one
                                   </p>
                                   <div className="flex flex-wrap max-w-[570px]">
                                     {platformItems.map((item, index) => (
                                       <div
                                         key={index}
-                                        onClick={() => onClickSelectPlatform(index)}
-                                        className={`min-w-fit mr-4   mb-4  mw-sm:mb-2 mw-sm:mr-2 flex items-center justify-around border ${selectedPlatform === index ? 'bg-arrowicon dark:bg-brandDark2   dark:border-brand': 'dark:border-[#ffffff] ' } border-brandDark2   rounded h-11`}
+                                        onClick={() =>
+                                          onClickSelectPlatform(index)
+                                        }
+                                        className={`min-w-fit mr-4   mb-4  mw-sm:mb-2 mw-sm:mr-2 flex items-center justify-around border ${
+                                          selectedPlatform === index
+                                            ? "bg-arrowicon dark:bg-brandDark2   dark:border-brand"
+                                            : "dark:border-[#ffffff] "
+                                        } border-brandDark2   rounded h-11`}
                                       >
                                         <Image
                                           className="ml-3 mr-2 mw-sm:mr-1 mw-sm:ml-2"
-                                          src={theme === 'dark' ? item.picture : item.lightImage}
+                                          src={
+                                            theme === "dark"
+                                              ? item.picture
+                                              : item.lightImage
+                                          }
                                           alt="game icon"
                                         />
-                                        <p className={`mr-3 hover:text-brandDark2 dark:hover:text-brandLightOpacity100 hover:font-semibold ${selectedPlatform === index ? "text-brandDark2 font-semibold dark:text-brand":"text-brandDark2 dark:text-brandLightOpacity70 font-normal"} text-base mw-sm:mr-2 mw-sm:text-[14px]  montserratfont `}>
+                                        <p
+                                          className={`mr-3 hover:text-brandDark2 dark:hover:text-brandLightOpacity100 hover:font-semibold ${
+                                            selectedPlatform === index
+                                              ? "text-brandDark2 font-semibold dark:text-brand"
+                                              : "text-brandDark2 dark:text-brandLightOpacity70 font-normal"
+                                          } text-base mw-sm:mr-2 mw-sm:text-[14px]  montserratfont `}
+                                        >
                                           {item.name}
                                         </p>
                                       </div>

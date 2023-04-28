@@ -7,8 +7,6 @@ import img4 from "../../../assets/user-saved/4.png";
 import img5 from "../../../assets/user-saved/5.png";
 import img6 from "../../../assets/user-saved/6.png";
 import img7 from "../../../assets/user-saved/7.png";
-import bookmark from "../../../assets/author-profile/bookmark.png";
-
 import bookmakred from "../../../assets/user-for-you/fill-bookmark.png";
 import Image from "next/image";
 

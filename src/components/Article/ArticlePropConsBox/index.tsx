@@ -74,10 +74,10 @@ const ArticlePropConsBox = () => {
                 Ergonomic design
               </li>
               <li className="font-medium text-base leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity100 text-brandDark1 montserratfont  mw-md:text-sm ">
-                Sharp low light mode{" "}
+                Sharp low light mode
               </li>
               <li className="font-medium text-base leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity100 text-brandDark1 montserratfont  mw-md:text-sm ">
-                Android one certified{" "}
+                Android one certified
               </li>
             </ul>
           </div>
@@ -87,15 +87,15 @@ const ArticlePropConsBox = () => {
             </h5>
             <ul className="list-disc pl-10px mr-[20px]	ml-[45px] py-6	mw-md:ml-[30px] mw-md:mr-[15px]">
               <li className="font-medium text-base leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity100 text-brandDark1 montserratfont mw-md:text-sm ">
-                {" "}
-                Warm Tinge hDR photos{" "}
+                
+                Warm Tinge hDR photos
               </li>
               <li className="font-medium text-base leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity100 text-brandDark1 montserratfont  mw-md:text-sm ">
                 HDR playback not on netflix and amazon prime
               </li>
               <li className="font-medium text-base leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity100 text-brandDark1 montserratfont mw-md:text-sm ">
                 Punch hole is much bigger as compared to other phones with a
-                similar design{" "}
+                similar design
               </li>
             </ul>
           </div>

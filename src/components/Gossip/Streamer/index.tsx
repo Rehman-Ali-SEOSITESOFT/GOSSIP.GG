@@ -58,26 +58,24 @@ const Streamer = () => {
             type and scrambled it to make a type...
           </p>
           <small className="hidden   pt-[16px] mw-sm1:block">
-           <div className="flex justify-between">
-           <a
-              href="#"
-              className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
-            >
-             John B. Watson
-            </a>
-            <div >
-            <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
-              7 months ago
-            </span>
-            <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
+            <div className="flex justify-between">
+              <a
+                href="#"
+                className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
+              >
+                John B. Watson
+              </a>
+              <div>
+                <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
+                  7 months ago
+                </span>
+                <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
 
-            <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
-              5 min read
-            </span>
-        
+                <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
+                  5 min read
+                </span>
+              </div>
             </div>
-           </div>
-           
           </small>
           <div className="relative">
             <Image className="my-[24px]" src={Post1} alt="post" />
@@ -163,26 +161,24 @@ const Streamer = () => {
             type and scrambled it to make a type...
           </p>
           <small className="hidden   pt-[16px] mw-sm1:block">
-           <div className="flex justify-between">
-           <a
-              href="#"
-              className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
-            >
-             John B. Watson
-            </a>
-            <div >
-            <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
-              7 months ago
-            </span>
-            <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
+            <div className="flex justify-between">
+              <a
+                href="#"
+                className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
+              >
+                John B. Watson
+              </a>
+              <div>
+                <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
+                  7 months ago
+                </span>
+                <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
 
-            <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
-              5 min read
-            </span>
-        
+                <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
+                  5 min read
+                </span>
+              </div>
             </div>
-           </div>
-           
           </small>
           <Image className="my-[24px]" src={Post2} alt="post" />
           <div className=" flex flex-row justify-between border-t border-b dark:border-t-brandLightOpacity10 dark:border-b-brandLightOpacity10">
@@ -263,26 +259,24 @@ const Streamer = () => {
             type and scrambled it to make a type...
           </p>
           <small className="hidden   pt-[16px] mw-sm1:block">
-           <div className="flex justify-between">
-           <a
-              href="#"
-              className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
-            >
-             John B. Watson
-            </a>
-            <div >
-            <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
-              7 months ago
-            </span>
-            <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
+            <div className="flex justify-between">
+              <a
+                href="#"
+                className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
+              >
+                John B. Watson
+              </a>
+              <div>
+                <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
+                  7 months ago
+                </span>
+                <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
 
-            <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
-              5 min read
-            </span>
-        
+                <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
+                  5 min read
+                </span>
+              </div>
             </div>
-           </div>
-           
           </small>
           <Image className="my-[24px]" src={Post3} alt="post" />
           <div className=" flex flex-row justify-between border-t border-b dark:border-t-brandLightOpacity10 dark:border-b-brandLightOpacity10">
@@ -478,7 +472,7 @@ const Streamer = () => {
                   </div>
                   <p className="montserratfont text-[14px] leading-[17px] text-textcolor dark:text-brandLightOpacity70 font-medium	">
                     I can’t imagine playing the game without Floo Flames, it’s
-                    my most favorite thing ever!{" "}
+                    my most favorite thing ever!
                   </p>
                   <div className="likes_replays flex mt-[8px]">
                     <div className="flex items-center mr-[28px]">

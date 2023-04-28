@@ -14,11 +14,11 @@ import GoogleLight from "../../../assets/images/modal/google-light.png";
 import LightLogo from "../../../assets/images/modal/light-logo.png";
 
 const ForgotPasswordModal = (props: any) => {
-  const { theme} = useTheme();
+  const { theme } = useTheme();
   const cancelButtonRef = useRef(null);
   const [open, setOpen] = useState<boolean | null>(false);
   const onClickOpenModal = () => {
-    if(!open){
+    if (!open) {
       props.onClickOpenModal();
     }
     setOpen(!open);
@@ -80,31 +80,35 @@ const ForgotPasswordModal = (props: any) => {
                   <div className="flex flex-col bg-bodycolor dark:bg-brandDark2   border-2 rounded-b-lg dark:border-r-brandLightOpacity10 dark:border-l-brandLightOpacity10 dark:border-b-brandLightOpacity10  dark:border-t-brandDark2">
                     <div className=" mw-sm:pl-10 mw-sm:pr-10 pl-[140px] pr-[140px]  mb-9">
                       <div className="flex flex-col items-center ">
-                      <Image src={theme === 'dark' ? Logo : LightLogo} alt="logo" />
+                        <Image
+                          src={theme === "dark" ? Logo : LightLogo}
+                          alt="logo"
+                        />
                         <p className="text-brandDark2 dark:text-brandLightOpacity100 text-2xl montserratfont not-italic font-bold pb-6 mw-sm:text-lg ">
                           Forgot Password?
                         </p>
-                        <span className="montserratfont text-center  pb-8 text-brandDark2 dark:text-brandLightOpacity70 not-italic text-base mw-sm:text-[12px]">Please confirm your email so we can send<br/> you a link to reset your password.</span>
+                        <span className="montserratfont text-center  pb-8 text-brandDark2 dark:text-brandLightOpacity70 not-italic text-base mw-sm:text-[12px]">
+                          Please confirm your email so we can send
+                          <br /> you a link to reset your password.
+                        </span>
                         <input
                           className="border-brandLightOpacity10 montserratfont hover:border hover:border-brandDark2 dark:hover:border-[#ffffff] mb-10 dark:border-brandLightOpacity10 border border-choosebox rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
                           id="email"
                           type="text"
                           placeholder="Email"
                         />
-                       
                       </div>
 
                       <div className="flex flex-col items-center">
                         <button
-                        onClick={onClickOpenModal}
-                        className="bg-brand mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold">
+                          onClick={onClickOpenModal}
+                          className="bg-brand mw-sm:w-60  mw-sm:text-sm w-300px  hover:bg-[#ec5d5f] h-12 text-white rounded-3xl montserratfont text-lg font-bold"
+                        >
                           Send Link
                         </button>
                         <p className="pt-3 montserratfont text-brandDark2 dark:text-brandLightOpacity70 text-xs">
                           Dont&#39;t have and account?
-                          <a href="#"
-                          // onClick={() => onClickOpenModal()}
-                          className="underline  font-medium pl-1.5">
+                          <a href="#" className="underline  font-medium pl-1.5">
                             Sign Up
                           </a>
                         </p>
@@ -121,10 +125,16 @@ const ForgotPasswordModal = (props: any) => {
                     <div className="mw-sm:pl-10 mw-sm:pr-10 pl-30 pr-30 mt-8 mb-[124px]">
                       <div className="flex flex-row justify-center items-center">
                         <div className="hover:bg-borderEditProfile dark:hover:bg-[#353233] mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full mr-5 bg-iconBackground dark:bg-brandLightOpacity5 bg-brandLightOpacity5 flex justify-center items-center content-center ">
-                        <Image src={theme === 'dark' ?  Google : GoogleLight} alt="google icon" />
+                          <Image
+                            src={theme === "dark" ? Google : GoogleLight}
+                            alt="google icon"
+                          />
                         </div>
                         <div className="hover:bg-borderEditProfile dark:hover:bg-[#353233] mw-sm:h-14 mw-sm:w-14 h-16 w-16 rounded-full ml-5 bg-iconBackground dark:bg-brandLightOpacity5 bg-brandLightOpacity5 flex justify-center items-center content-center ">
-                        <Image src={theme === 'dark' ?  Discord : DiscordLight}  alt="google icon" />
+                          <Image
+                            src={theme === "dark" ? Discord : DiscordLight}
+                            alt="google icon"
+                          />
                         </div>
                       </div>
                     </div>
@@ -135,7 +145,7 @@ const ForgotPasswordModal = (props: any) => {
           </div>
         </Dialog>
       </Transition.Root>
-      <PasswordEmailModal open={open} onClickOpenModal={onClickOpenModal}/>   
+      <PasswordEmailModal open={open} onClickOpenModal={onClickOpenModal} />
     </>
   );
 };

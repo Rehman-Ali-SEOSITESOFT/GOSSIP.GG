@@ -81,7 +81,7 @@ const PasswordEmailModal = (props: any) => {
                         <span className=" text-brandDark2 dark:text-brandLightOpacity70 text-base mw-sm:text-[14px]">
                           password to
                           <span className="font-semibold text-brandDark2 dark:text-brandLightOpacity100">
-                          &nbsp;abc@xyz.com.
+                            &nbsp;abc@xyz.com.
                           </span>
                         </span>
                         <p className="montserratfont pt-3  f_it text-brandDark2 dark:text-brandLightOpacity70 text-xs mw-sm:text-[10px]">

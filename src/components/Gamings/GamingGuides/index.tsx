@@ -1,9 +1,9 @@
-"use client"
-import SectionSaprator from "@/components/SecSaprator"
-import React from "react"
-import Review from "../Reviews"
-import ViewMore from "../ViewMore/ViewMore"
-import GamingFeatures from "../GamingFeatures/GamingFeatures"
+"use client";
+import SectionSaprator from "@/components/SecSaprator";
+import React from "react";
+import Review from "../Reviews";
+import ViewMore from "../ViewMore/ViewMore";
+import GamingFeatures from "../GamingFeatures/GamingFeatures";
 
 const index = () => {
   return (
@@ -31,7 +31,7 @@ const index = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default index
+export default index;

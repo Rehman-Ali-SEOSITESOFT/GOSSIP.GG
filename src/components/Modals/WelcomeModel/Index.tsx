@@ -9,7 +9,7 @@ import userimg from "../../../assets/globals/welcome-img.png";
 import ChoiceTopicModel from "../ChoiceTopicsModel";
 const WelcomeGossip = (props: any) => {
   const cancelButtonRef = useRef(null);
-  const {theme} = useTheme();
+  const { theme } = useTheme();
   const [open, setOpen] = useState<boolean | null>(false);
   const onClickOpenModal = () => {
     if (!open) {
@@ -69,33 +69,37 @@ const WelcomeGossip = (props: any) => {
                   </div>
                   <div className="flex flex-col bg-bodycolor dark:bg-brandDark2  border-2 rounded-b-lg dark:border-r-brandLightOpacity10 dark:border-l-brandLightOpacity10 dark:border-b-brandLightOpacity10  dark:border-t-brandDark2">
                     <div className=" mw-sm:pl-10 mw-sm:pr-10 pl-40 pr-40  mb-9">
-                    <div className="welcome-icon clear-both ">
-                      <Image src={welcomeicon} alt="icon" className="m-auto" />
-                    </div>
-                    <div className="titlesection text-center clear-both">
-                      <h3 className="font-bold montserratfont text-2xl leading-7	dark:text-brandLightOpacity100 	mw-sm:text-xl	pb-6 ">
-                        Welcome to Gossip.gg, <br /> Naveen!
-                      </h3>
-                    </div>
+                      <div className="welcome-icon clear-both ">
+                        <Image
+                          src={welcomeicon}
+                          alt="icon"
+                          className="m-auto"
+                        />
+                      </div>
+                      <div className="titlesection text-center clear-both">
+                        <h3 className="font-bold montserratfont text-2xl leading-7	dark:text-brandLightOpacity100 	mw-sm:text-xl	pb-6 ">
+                          Welcome to Gossip.gg, <br /> Naveen!
+                        </h3>
+                      </div>
 
-                    <div className="text-center">
-                      <p className="dark:text-brandLightOpacity70 text-base	leading-5	montserratfont  pb-[52px]">
-                        Tell us a bit about your interests <br /> so we can
-                        personalize your <br /> experience.
-                      </p>
-                    </div>
-                    <div className={` flex flex-col  mb-[250px]	`}>
-                      <a
-                        onClick={onClickOpenModal}
-                        className="done_btn w-300px bg-brand hover:bg-[#ec5d5f] inline-block py-3	rounded-3xl	text-center m-auto text-lg	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-bold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold "
-                      >
-                        Continue
-                      </a>
+                      <div className="text-center">
+                        <p className="dark:text-brandLightOpacity70 text-base	leading-5	montserratfont  pb-[52px]">
+                          Tell us a bit about your interests <br /> so we can
+                          personalize your <br /> experience.
+                        </p>
+                      </div>
+                      <div className={` flex flex-col  mb-[250px]	`}>
+                        <a
+                          onClick={onClickOpenModal}
+                          className="done_btn w-300px bg-brand hover:bg-[#ec5d5f] inline-block py-3	rounded-3xl	text-center m-auto text-lg	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-bold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold "
+                        >
+                          Continue
+                        </a>
 
-                      <a className="dark:hover:bg-[#353233] hover:bg-arrowicon skip_btn   w-300px border  border-brandDark2 dark:border-brandLightOpacity100 inline-block py-3	rounded-3xl	text-center m-auto text-lg leading-6 text-brandDark2 dark:text-brandLightOpacity100 font-bold montserratfont	cursor-pointer  mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base  mw-sm:text-semibold ">
-                        Skip
-                      </a>
-                    </div>                     
+                        <a className="dark:hover:bg-[#353233] hover:bg-arrowicon skip_btn   w-300px border  border-brandDark2 dark:border-brandLightOpacity100 inline-block py-3	rounded-3xl	text-center m-auto text-lg leading-6 text-brandDark2 dark:text-brandLightOpacity100 font-bold montserratfont	cursor-pointer  mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base  mw-sm:text-semibold ">
+                          Skip
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </Dialog.Panel>

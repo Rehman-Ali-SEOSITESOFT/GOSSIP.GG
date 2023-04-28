@@ -1,26 +1,25 @@
-"use client"
-import AbsBannerArticle from "@/components/AbsArticleContent/AbsBannerArticle/AbsBannerArticle"
-import AbsHeadingArticle from "@/components/AbsArticleContent/AbsHeadingArticle/AbsHeadingArticle"
-import React, { useState } from "react"
-import bannerImage from "../../../assets/articlebannerimage/banner3.png"
-import three from "../../../assets/articlebannerimage/three.png"
-import Comments from "@/components/Article/Comments"
-import UserLogoSection from "@/components/Article/UserInfoSection"
-import ReadMoreLikeThis from "@/components/Article/ReadMore"
+"use client";
+import AbsBannerArticle from "@/components/AbsArticleContent/AbsBannerArticle/AbsBannerArticle";
+import AbsHeadingArticle from "@/components/AbsArticleContent/AbsHeadingArticle/AbsHeadingArticle";
+import React, { useState } from "react";
+import bannerImage from "../../../assets/articlebannerimage/banner3.png";
+import three from "../../../assets/articlebannerimage/three.png";
+import Comments from "@/components/Article/Comments";
+import UserLogoSection from "@/components/Article/UserInfoSection";
+import ReadMoreLikeThis from "@/components/Article/ReadMore";
 import TechImage1 from "../../../assets/images/article/tech1.png";
 import TechImage2 from "../../../assets/images/article/tech2.png";
 import TechImage3 from "../../../assets/images/article/tech3.png";
 import TechImage4 from "../../../assets/images/article/tech4.png";
 import TechImage4Big from "../../../assets/images/article/tech-big-1.png";
 import TechImage5 from "../../../assets/images/article/tech5.png";
-import AbsArticleBreadCrum from "@/components/AbsArticleContent/AbsArticleBreadCrum/AbsArticleBreadCrum"
-import GammingArticlePropConsBox from "@/components/Article/GammingArticlePropConsBox"
-
+import AbsArticleBreadCrum from "@/components/AbsArticleContent/AbsArticleBreadCrum/AbsArticleBreadCrum";
+import GammingArticlePropConsBox from "@/components/Article/GammingArticlePropConsBox";
 
 const Page = () => {
   interface List {
-    bannerImage: any
-    lowerImage: any
+    bannerImage: any;
+    lowerImage: any;
   }
   const [list, setList] = useState<List[]>([
     {
@@ -34,15 +33,15 @@ const Page = () => {
     TechImage3,
     TechImage4,
     TechImage5,
-   ];
+  ];
 
-   const sliderMainImages=[
+  const sliderMainImages = [
     TechImage4Big,
     TechImage4Big,
     TechImage4Big,
     TechImage4Big,
     TechImage4Big,
-   ]
+  ];
   return (
     <section>
       <div>
@@ -68,7 +67,7 @@ const Page = () => {
                 mainImages={sliderMainImages}
               />
             </div>
-          )
+          );
         })}
 
         <GammingArticlePropConsBox />
@@ -81,7 +80,7 @@ const Page = () => {
       </div>
       <ReadMoreLikeThis />
     </section>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

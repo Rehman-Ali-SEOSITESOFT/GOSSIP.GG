@@ -1,8 +1,8 @@
-import React, { Fragment, useEffect, useRef, useState } from "react"
-import { Dialog, Transition } from "@headlessui/react"
-import styles from "./choicestyle.module.css"
+import React, { Fragment, useEffect, useRef, useState } from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import styles from "./choicestyle.module.css";
 const ChoiceTopicModel = (props: any) => {
-  const cancelButtonRef = useRef(null)
+  const cancelButtonRef = useRef(null);
   interface infoList {
     id: number;
     name: string;
@@ -15,184 +15,233 @@ const ChoiceTopicModel = (props: any) => {
     {
       id: 2,
       name: "Valorant",
-    }, {
+    },
+    {
       id: 3,
       name: "OTC",
-    }, {
+    },
+    {
       id: 4,
       name: "LOL",
-    }, {
+    },
+    {
       id: 5,
       name: "Floo Flames",
-    }, {
+    },
+    {
       id: 6,
       name: "Team Fury",
-    }, {
+    },
+    {
       id: 7,
       name: "Graphic card",
-    }, {
+    },
+    {
       id: 8,
       name: "Nvidia",
-    }, {
+    },
+    {
       id: 9,
       name: "Gaming",
-    }, {
+    },
+    {
       id: 10,
       name: "Valorant",
-    }, {
+    },
+    {
       id: 11,
       name: "OTC",
-    }, {
+    },
+    {
       id: 12,
       name: "LOL",
-    }, {
+    },
+    {
       id: 13,
       name: "Floo Flames",
-    }, {
+    },
+    {
       id: 14,
       name: "Team Fury",
-    }, {
+    },
+    {
       id: 15,
       name: "Graphic card",
-    }, {
+    },
+    {
       id: 16,
       name: "Nvidia",
-    }, {
+    },
+    {
       id: 17,
       name: "Gaming",
-    }, {
+    },
+    {
       id: 18,
       name: "Valorant",
-    }, {
+    },
+    {
       id: 19,
       name: "OTC",
-    }, {
+    },
+    {
       id: 20,
       name: "LOL",
-    }, {
+    },
+    {
       id: 21,
       name: "Floo Flames",
-    }, {
+    },
+    {
       id: 22,
       name: "Team Fury",
-    }, {
+    },
+    {
       id: 23,
       name: "Graphic card",
-    }, {
+    },
+    {
       id: 24,
       name: "Nvidia",
-    }, {
+    },
+    {
       id: 25,
       name: "Gaming",
-    }, {
+    },
+    {
       id: 26,
       name: "Valorant",
-    }, {
+    },
+    {
       id: 27,
       name: "OTC",
-    }, {
+    },
+    {
       id: 28,
       name: "LOL",
-    }, {
+    },
+    {
       id: 29,
       name: "Floo Flames",
-    }, {
+    },
+    {
       id: 30,
       name: "Team Fury",
-    }, {
+    },
+    {
       id: 31,
       name: "Graphic card",
-    }, {
+    },
+    {
       id: 32,
       name: "Nvidia",
-    }, {
+    },
+    {
       id: 33,
       name: "Gaming",
-    }, {
+    },
+    {
       id: 34,
       name: "Valorant",
-    }, {
+    },
+    {
       id: 35,
       name: "OTC",
-    }, {
+    },
+    {
       id: 36,
       name: "LOL",
-    }, {
+    },
+    {
       id: 37,
       name: "Floo Flames",
-    }, {
+    },
+    {
       id: 38,
       name: "Team Fury",
-    }, {
+    },
+    {
       id: 39,
       name: "Graphic card",
-    }, {
+    },
+    {
       id: 40,
       name: "Nvidia",
-    }, {
+    },
+    {
       id: 41,
       name: "Gaming",
-    }, {
+    },
+    {
       id: 42,
       name: "Valorant",
-    }, {
+    },
+    {
       id: 43,
       name: "OTC",
-    }, {
+    },
+    {
       id: 44,
       name: "LOL",
-    }, {
+    },
+    {
       id: 45,
       name: "Floo Flames",
-    }, {
+    },
+    {
       id: 46,
       name: "Team Fury",
-    }, {
+    },
+    {
       id: 47,
       name: "Graphic card",
-    }, {
+    },
+    {
       id: 48,
       name: "Nvidia",
-    }, {
+    },
+    {
       id: 49,
       name: "Gaming",
-    }, {
+    },
+    {
       id: 50,
       name: "Valorant",
-    }, {
+    },
+    {
       id: 60,
       name: "OTC",
-    }, {
+    },
+    {
       id: 61,
       name: "LOL",
-    }, {
-      id:62,
+    },
+    {
+      id: 62,
       name: "Floo Flames",
-    }
+    },
   ];
 
-  
   const itemEmpty: infoList[] = [];
   const [listItems, setListItems] = useState(item);
   const [selectedArr, setSelectedArr] = useState(itemEmpty);
-  
-  const onClickList = (name: string, id : number) =>{
-    let copyArr : Array<infoList> = [...selectedArr];
-    let filterArr : Array<infoList> = copyArr.filter(item => item.id === id)
-    let finalArr : Array<infoList> = [];
-    if(filterArr.length > 0){
-       finalArr = copyArr.filter(item => item.id !== id);
-    } else{
-      finalArr.push(...copyArr, {id: id , name: name})
-    }  
-    setSelectedArr(finalArr);
-  }
 
+  const onClickList = (name: string, id: number) => {
+    let copyArr: Array<infoList> = [...selectedArr];
+    let filterArr: Array<infoList> = copyArr.filter((item) => item.id === id);
+    let finalArr: Array<infoList> = [];
+    if (filterArr.length > 0) {
+      finalArr = copyArr.filter((item) => item.id !== id);
+    } else {
+      finalArr.push(...copyArr, { id: id, name: name });
+    }
+    setSelectedArr(finalArr);
+  };
 
   const onClickDone = () => {
-    localStorage.setItem("isLogin", JSON.stringify(true))
-    props.onClickOpenModal()
-  }
+    localStorage.setItem("isLogin", JSON.stringify(true));
+    props.onClickOpenModal();
+  };
 
   return (
     <Transition.Root show={props.open} as={Fragment}>
@@ -254,25 +303,28 @@ const ChoiceTopicModel = (props: any) => {
                       {listItems.map((e, i) => {
                         return (
                           <div
-                            className={`box py-4  flex justify-center items-center w-[120px] h-[60px] mw-sm:w-[30%] mw-sm3:w-[45%]    text-center mr-3 mw-sm:mr-2 mw-sm:mb-2 	mb-3	montserratfont   leading-4	rounded    cursor-pointer ${selectedArr.filter((item: { id: number }) => item.id === e.id).length > 0 
+                            className={`box py-4  flex justify-center items-center w-[120px] h-[60px] mw-sm:w-[30%] mw-sm3:w-[45%]    text-center mr-3 mw-sm:mr-2 mw-sm:mb-2 	mb-3	montserratfont   leading-4	rounded    cursor-pointer ${
+                              selectedArr.filter(
+                                (item: { id: number }) => item.id === e.id
+                              ).length > 0
                                 ? "active font-semibold text-brandDark2  dark:text-brand border text-base bg-white dark:bg-brandDark2 border-brandDark2 dark:border-brand  "
                                 : " hover:bg-[#cdcccd]  hover:text-brandDark2 dark:hover:text-brandLightOpacity100    dark:hover:bg-[#494647] text-brandDark2 dark:text-brandLightOpacity70 font-medium  bg-choosebox dark:bg-brandLightOpacity10 text-sm"
-                              } `}
+                            } `}
                             key={i}
                             onClick={() => onClickList(e.name, e.id)}
-
                           >
                             {e.name}
                           </div>
-                        )
+                        );
                       })}
                     </div>
                   </div>
                   <div className={`${styles.btns} flex flex-col	`}>
                     <a
                       onClick={onClickDone}
-                      className={`done_btn w-300px bg-brand inline-block py-3 hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-lg	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-bold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold ${selectedArr.length === 0  ? "opacity-50	" : "opacity-100	"
-                        }  `}
+                      className={`done_btn w-300px bg-brand inline-block py-3 hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-lg	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-bold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold ${
+                        selectedArr.length === 0 ? "opacity-50	" : "opacity-100	"
+                      }  `}
                     >
                       Done
                     </a>
@@ -288,7 +340,7 @@ const ChoiceTopicModel = (props: any) => {
         </div>
       </Dialog>
     </Transition.Root>
-  )
-}
+  );
+};
 
-export default ChoiceTopicModel
+export default ChoiceTopicModel;

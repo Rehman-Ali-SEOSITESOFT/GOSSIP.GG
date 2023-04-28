@@ -1,19 +1,19 @@
-import SectionSaprator from "@/components/SecSaprator"
-import React, { useState } from "react"
-import style from "./latestNews.module.css"
-import Image from "next/image"
-import new1 from "../../../../assets/latest-news/news1.png"
-import new2 from "../../../../assets/latest-news/news2.png"
-import new3 from "../../../../assets/latest-news/news3.png"
-import new4 from "../../../../assets/latest-news/news4.png"
-import new5 from "../../../../assets/latest-news/news5.png"
-import new6 from "../../../../assets/latest-news/news6.png"
-import boomkark from "../../../../assets/latest-news/bookmark.png"
-import ViewMore from "@/components/Gamings/ViewMore/ViewMore"
+import SectionSaprator from "@/components/SecSaprator";
+import React, { useState } from "react";
+import style from "./latestNews.module.css";
+import Image from "next/image";
+import new1 from "../../../../assets/latest-news/news1.png";
+import new2 from "../../../../assets/latest-news/news2.png";
+import new3 from "../../../../assets/latest-news/news3.png";
+import new4 from "../../../../assets/latest-news/news4.png";
+import new5 from "../../../../assets/latest-news/news5.png";
+import new6 from "../../../../assets/latest-news/news6.png";
+import boomkark from "../../../../assets/latest-news/bookmark.png";
+import ViewMore from "@/components/Gamings/ViewMore/ViewMore";
 const LatestNews = () => {
   interface List {
-    name: string
-    picture: any
+    name: string;
+    picture: any;
   }
   const item: List[] = [
     {
@@ -40,8 +40,8 @@ const LatestNews = () => {
       name: "demo ",
       picture: new6,
     },
-  ]
-  const [items, setItems] = useState(item)
+  ];
+  const [items, setItems] = useState(item);
   return (
     <>
       <section className="esport_wrapper">
@@ -129,15 +129,14 @@ const LatestNews = () => {
                           </div>
                         </div>
                       </div>
-                    )
+                    );
                   })}
                 </div>
                 <div className="hidden mw-sm:hidden flex flex-wrap pt-5 pb-5  bg-white rounded dark:bg-brandDark1 mw-lg:flex ">
                   {items.slice(0, 4).map((elem, index) => {
                     return (
                       <div
-                        // p-5
-                        className={`w-1/3  mw-lg:w-1/2 flex ${style.responsive} border-r border-grayCard  dark:border-brandLightOpacity10
+                         className={`w-1/3  mw-lg:w-1/2 flex ${style.responsive} border-r border-grayCard  dark:border-brandLightOpacity10
                     `}
                         key={index}
                       >
@@ -192,7 +191,7 @@ const LatestNews = () => {
                           </div>
                         </div>
                       </div>
-                    )
+                    );
                   })}
                 </div>
               </div>
@@ -201,8 +200,7 @@ const LatestNews = () => {
                   {items.slice(0, 2).map((elem, index) => {
                     return (
                       <div
-                        // p-5
-                        className={`w-full rounded flex ${style.mobile_responsive} bg-white dark:bg-brandDark1 mb-5 border border-grayCard dark:border-brandLightOpacity10 p-3 `}
+                         className={`w-full rounded flex ${style.mobile_responsive} bg-white dark:bg-brandDark1 mb-5 border border-grayCard dark:border-brandLightOpacity10 p-3 `}
                         key={index}
                       >
                         <div className={`${style.news_img_wrap}  rounded-sm `}>
@@ -242,7 +240,7 @@ const LatestNews = () => {
                           </div>
                         </div>
                       </div>
-                    )
+                    );
                   })}
                 </div>
               </div>
@@ -254,7 +252,7 @@ const LatestNews = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default LatestNews
+export default LatestNews;

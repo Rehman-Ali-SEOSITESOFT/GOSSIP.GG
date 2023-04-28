@@ -1,6 +1,6 @@
-import { useState} from "react";
+import { useState } from "react";
 import Slider from "react-slick";
-import Image from 'next/image';
+import Image from "next/image";
 import Logo1 from "../../../../assets/images/profile/logo-1.png";
 import Logo2 from "../../../../assets/images/profile/logo-2.png";
 import Logo3 from "../../../../assets/images/profile/logo-3.png";
@@ -14,8 +14,8 @@ const Carousel = () => {
     picture: any;
   }
 
- const {theme} = useTheme();
-   const itemDisplayImage: DisplayIamge[] = [
+  const { theme } = useTheme();
+  const itemDisplayImage: DisplayIamge[] = [
     {
       id: 1,
       picture: Logo1,
@@ -89,7 +89,6 @@ const Carousel = () => {
           slidesToShow: 3,
           slidesToScroll: 1,
           dots: false,
-
         },
       },
       {
@@ -98,23 +97,34 @@ const Carousel = () => {
           slidesToShow: 3,
           slidesToScroll: 1,
           dots: false,
-
         },
       },
     ],
   };
   const [selecteitem, setSelectedItem] = useState<number>();
-  const onClickSelect = (i : number) =>{
-    setSelectedItem(i)
-  }
+  const onClickSelect = (i: number) => {
+    setSelectedItem(i);
+  };
 
   return (
-    <Slider className={`displayImageProfile ${theme === "dark" ? " dark-arrow" : " light-arrow"}`} {...settings}>
+    <Slider
+      className={`displayImageProfile ${
+        theme === "dark" ? " dark-arrow" : " light-arrow"
+      }`}
+      {...settings}
+    >
       {displayImageItems.map((i, index) => (
         <div key={index}>
-          <Image className={`h-[60px] w-[60px]  ${selecteitem ===  index ? ' border rounded-full border-brandDar2 dark:border-brandLightOpacity100 ' : ''}`}
-          onClick={() => onClickSelect(index)}
-          src={i.picture} alt="logo" />
+          <Image
+            className={`h-[60px] w-[60px]  ${
+              selecteitem === index
+                ? " border rounded-full border-brandDar2 dark:border-brandLightOpacity100 "
+                : ""
+            }`}
+            onClick={() => onClickSelect(index)}
+            src={i.picture}
+            alt="logo"
+          />
         </div>
       ))}
     </Slider>

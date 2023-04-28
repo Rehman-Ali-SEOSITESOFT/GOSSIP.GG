@@ -267,7 +267,6 @@ const FilterBy = (props?: any) => {
     setIsDarkTheme(theme === "dark" ? "dark" : "light");
   }, [theme]);
   
-  console.log("selectedGame====", selectedGame)
   
   return (
     <div className="filter-by-esport-event pt-11 mw-9:pt-9	 mw-md:pt-8	 ">
@@ -378,11 +377,7 @@ const FilterBy = (props?: any) => {
                           className="mw-sm:min-w-[32px] mw-sm:max-w-[32px]"
                         />
                       )}
-                      {/* <p
-                        className={`text-brandDark1 dark:bg-brandDark1  focus:outline-none  dark:hover:bg-brandDark1 bg-bodycolor focus:border-none w-[90%] dark:text-brandLightOpacity100 ml-2 montserratfont  leading-[20px] text-base font-normal   ${
-                          item.image !== "" ? "pl-[16px]" : "pl-[50px]"
-                        }`}
-                      > */}
+                   
                       <p
                         className={`text-brandDark1 focus:outline-none  focus:border-none w-[90%] dark:text-brandLightOpacity100 ml-2 montserratfont  leading-[20px] text-base font-normal   ${
                           item.image !== "" ? "pl-[16px]" : "pl-[50px]"
@@ -684,9 +679,7 @@ const FilterBy = (props?: any) => {
         <p className="montserratfont font-medium text-sm leading-[17px]	dark:text-brandLightOpacity70 pt-[8px]">
           None applied
         </p>
-        {/* <p className="underline montserratfont text-sm font-medium	leading-[17px]	dark:text-brandLightOpacity70 cursor-pointer">
-          Reset
-        </p> */}
+       
         <h1 className="montserratfont dark:text-brandLightOpacity100 font-bold	text-lg	leading-[22px] py-8 mw-md:py-5 mw-md:text-base	">
           Showing 1-20 of 24 Events
         </h1>

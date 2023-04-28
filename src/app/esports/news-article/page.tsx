@@ -20,7 +20,7 @@ const Page = () => {
       lowerImage: one,
     },
   ])
-  console.log(list)
+
   return (
     <section>
       <div>

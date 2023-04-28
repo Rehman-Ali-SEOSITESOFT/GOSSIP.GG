@@ -84,8 +84,7 @@ const LiveMatch = (props: any) => {
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // centerPadding: '40px',
-    // centerMode: true,
+
     responsive: [
       {
         breakpoint: 1144,
@@ -115,15 +114,6 @@ const LiveMatch = (props: any) => {
           arrows: false,
         },
       },
-      // {
-      //   breakpoint: 639,
-      //   settings: {
-      //     slidesToShow: 1,
-      //     slidesToScroll: 1,
-      //     arrows: false,
-      //     centerMode: true,
-      //   },
-      // },
     ],
   };
   return (

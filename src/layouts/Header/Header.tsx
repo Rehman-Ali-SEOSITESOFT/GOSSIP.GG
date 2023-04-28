@@ -90,18 +90,14 @@ const Header = () => {
     setIsDarkTheme(theme === "dark" ? "dark" : "light");
   }, [theme]);
 
-  function classNames(...classes: any) {
-    return classes.filter(Boolean).join(" ");
-  }
+
   const hanldeClose = () => {
     setSearchOpen(!searchOpen);
   };
   const hanldeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchText(e.target.value);
   };
-  const hanldeSearch = () => {
-    console.log(searchText);
-  };
+
 
   const onClickOpenModal = () => {
     setOpen(!open);
@@ -280,12 +276,6 @@ const Header = () => {
                       </span>
                     </div>
                     {isLoggedIn ? (
-                      // <Image
-                      //   src={profile}
-                      //   alt="Demo"
-                      //   onClick={() => setProfileShow(!profileShow)}
-                      //   className="mw-sm:w-[35px] mw-sm:h-[35px]"
-                      // />
                       <Menu
                         as="div"
                         className="relative inline-block text-left h-[40px] mw-sm:h-[35px] mw-sm3:h-[32px]"
@@ -322,16 +312,8 @@ const Header = () => {
                                 abc@xyz.in
                               </label>
                               <Menu.Item>
-                                {/* <Link href="/user-profile">
-                                  <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pt-2">
-                                    View Profile
-                                  </h5>
-                                </Link> */}
                                 {({ active }) => (
-                                  <Link
-                                    href="/user-profile"
-                                    // className={classNames(active)}
-                                  >
+                                  <Link href="/user-profile">
                                     <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pt-2">
                                       View Profile
                                     </h5>
@@ -355,28 +337,15 @@ const Header = () => {
                                 </span>
                               </h5>
                               <Menu.Item>
-                                {/* <Link href="/user-profile">
-                                  <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pt-2">
-                                    View Profile
-                                  </h5>
-                                </Link> */}
                                 {({ active }) => (
-                                  <Link
-                                    href="/edit-user-profile"
-                                    // className={classNames(active)}
-                                  >
+                                  <Link href="/edit-user-profile">
                                     <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 py-3 pl-2">
-                                      {" "}
                                       Edit Profile
                                     </h5>
                                   </Link>
                                 )}
                               </Menu.Item>
-                              {/* <Link href="/edit-user-profile">
-                                <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 py-3 pl-2">
-                                Edit Profile
-                                </h5>
-                              </Link> */}
+
                               <h5 className="text-base leading-5 montserratfont font-normal	dark:text-brandLightOpacity100 pl-2">
                                 Manage Preferences
                               </h5>
@@ -397,19 +366,6 @@ const Header = () => {
                         <span>Log In</span>
                       </div>
                     )}
-                    {/* <div
-                      onClick={onClickOpenModal}
-                      className={`${styles.login__btn} ${styles.icons} text-brandLightOpacity100 bg-brandLightOpacity10 hover:bg-brandLightOpacity50`}
-                    >
-                      <span> Login</span>
-                    </div> */}
-
-                    {/* <div
-                      onClick={choicTopicModel}
-                      className={`${styles.login__btn} ${styles.icons} text-brandLightOpacity100 bg-brandLightOpacity10 hover:bg-brandLightOpacity50`}
-                    >
-                      <span> Choice </span>
-                    </div> */}
 
                     <div
                       className={`${styles.theme__btn} ${styles.icons} bg-brandLightOpacity10 hover:bg-brandLightOpacity20`}

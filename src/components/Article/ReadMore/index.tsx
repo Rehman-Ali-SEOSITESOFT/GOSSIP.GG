@@ -4,14 +4,11 @@ import new1 from "../../../assets/latest-news/news1.png";
 import new2 from "../../../assets/latest-news/news2.png";
 import new3 from "../../../assets/latest-news/news3.png";
 import new4 from "../../../assets/latest-news/news4.png";
-
 import Image from "next/image";
 import boomkark from "../../../assets/latest-news/bookmark.png";
-
 import bookmar from "../../../assets/artices-images/bookmark.png";
 import comment from "../../../assets/artices-images/comment.png";
 import shared from "../../../assets/artices-images/shared.png";
-
 import trendingLight from "../../../assets/globals/trending-light.png";
 import trend from "../../../assets/artices-images/trend.png";
 const ReadMoreLikeThis = () => {
@@ -253,63 +250,7 @@ const ReadMoreLikeThis = () => {
               );
             })}
           </div>
-          {/* <div className="flex justify-between border  border-grayCard dark:border-brandLightOpacity10 rounded p-2.5 pr-[7px]">
-            <div className="imgside w-full max-w-[120px] h-[145px]">
-              <Image src={trend} alt="trend" className="w-full h-full" />
-            </div>
-            <div className="contentside flex justify-between flex-col h-[145px] pl-4 mt-[-8px]">
-              <p>
-                <Image
-                  src={trendingLight}
-                  alt="trending"
-                  className={` inline-block w-5  brightness-0 dark:brightness-100 w-[20px] h-[20px]	`}
-                />
-                <span className=" text-textColorGray dark:text-brandLightOpacity70 text-xs leading-[15px] montserratfont italic pl-4">
-                  17 votes on this article
-                </span>
-              </p>
-              <h5 className=" text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100 py-[8px]">
-                7 Days To Die Alpha 21: Release Date Speculation, Update
-                Roadmap, And Other Things
-              </h5>
-              <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs montserratfont block pb-[6px]">
-                <span>
-                  <i>3 hrs ago</i>
-                </span>
-                <span className="border-l border-l-textColorGray pl-2 ml-2 border-textColorGray dark:border-l-brandLightOpacity10">
-                  5 min read
-                </span>
-              </small>
-              <div className="border-t  border-grayCard dark:border-brandLightOpacity10 flex justify-end items-center pt-[8px] mr-[8px]">
-                <div className="icon w-[24px] h-[24px] flex items-center justify-center rounded-3xl cursor-pointer   ">
-                  <Image
-                    src={bookmar}
-                    alt=""
-                    className="dark:brightness-200 brightness-0 "
-                  />
-                </div>
-                <div className="border-x  border-grayCard dark:border-brandLightOpacity10  mx-[22px]  px-[22px] h-[20px] flex items-center ">
-                  <div className="icon w-[24px] h-[24px] flex items-center justify-center rounded-3xl cursor-pointer  relative ">
-                    <Image
-                      src={comment}
-                      alt=""
-                      className="dark:brightness-200 brightness-0 "
-                    />
-                    <span className="absolute right-[-10px] top-[-4px] bg-brand font-medium flex items-center justify-center montserratfont text-brandLightOpacity100 h-[16px] w-[16px] rounded-full text-[11px]">
-                      15
-                    </span>
-                  </div>
-                </div>
-                <div className="icon w-[24px] h-[24px] flex items-center justify-center rounded-3xl cursor-pointer   ">
-                  <Image
-                    src={shared}
-                    alt=""
-                    className="dark:brightness-200 brightness-0 "
-                  />
-                </div>
-              </div>
-            </div>
-          </div> */}
+        
         </div>
       </div>
     </div>

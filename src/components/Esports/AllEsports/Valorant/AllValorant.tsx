@@ -106,8 +106,8 @@ const AllValorant = () => {
                       <p
                         className={`${style.font_esport_event_12} text-brandDark2 dark:text-brandLightOpacity100 font-medium pt-1.5 flex items-center`}
                       >
-                        South Asia{" "}
-                        <span className="h-1 w-1 bg-brandDark2 opacity-70 dark:opacity-100  dark:bg-brandLightOpacity100 inline-block rounded-full ml-[7px] mr-[8px]"></span>{" "}
+                        South Asia
+                        <span className="h-1 w-1 bg-brandDark2 opacity-70 dark:opacity-100  dark:bg-brandLightOpacity100 inline-block rounded-full ml-[7px] mr-[8px]"></span>
                         Prizepool $4500
                       </p>
                     </div>
@@ -158,9 +158,9 @@ const AllValorant = () => {
                           </div>
                           <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs mw-sm3:text-[10px]">
                             <span className="montserratfont">
-                              {" "}
-                              <i>3 hrs ago</i>{" "}
-                            </span>{" "}
+                              
+                              <i>3 hrs ago</i>
+                            </span>
                             <span
                               className={`border-l border-l-textColorGray pl-2 ml-2 border-textColorGray   dark:border-l-brandLightOpacity70   `}
                             >
@@ -211,9 +211,9 @@ const AllValorant = () => {
                         </div>
                         <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs mw-sm3:text-[10px]">
                           <span className="montserratfont">
-                            {" "}
-                            <i>3 hrs ago</i>{" "}
-                          </span>{" "}
+                            
+                            <i>3 hrs ago</i>
+                          </span>
                           <span
                             className={`border-l border-l-textColorGray pl-2 ml-2 border-textColorGray   dark:border-l-brandLightOpacity70   `}
                           >

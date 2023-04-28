@@ -1,15 +1,15 @@
-import Image from "next/image"
-import React from "react"
-import image1 from "../../../assets/esportevents2/image1.png"
-import stroke from "../../../assets/esportevents2/stroke.png"
-import insta from "../../../assets/esportevents2/instagram.png"
-import twitters from "../../../assets/esportevents2/twitter.png"
-import mail from "../../../assets/esportevents2/mail.png"
-import linkedin from "../../../assets/esportevents2/linkedin.png"
-import bookmark from "../../../assets/esporting-events/bookmark.png"
-import forward from "../../../assets/esporting-events/forward.png"
-import upwordarrow from "../../../assets/esportevents2/upword.png"
-import downword from "../../../assets/esportevents2/downword.png"
+import Image from "next/image";
+import React from "react";
+import image1 from "../../../assets/esportevents2/image1.png";
+import stroke from "../../../assets/esportevents2/stroke.png";
+import insta from "../../../assets/esportevents2/instagram.png";
+import twitters from "../../../assets/esportevents2/twitter.png";
+import mail from "../../../assets/esportevents2/mail.png";
+import linkedin from "../../../assets/esportevents2/linkedin.png";
+import bookmark from "../../../assets/esporting-events/bookmark.png";
+import forward from "../../../assets/esporting-events/forward.png";
+import upwordarrow from "../../../assets/esportevents2/upword.png";
+import downword from "../../../assets/esportevents2/downword.png";
 
 const AbsArticleUserDetail = () => {
   return (
@@ -108,7 +108,7 @@ const AbsArticleUserDetail = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default AbsArticleUserDetail
+export default AbsArticleUserDetail;

@@ -1,11 +1,8 @@
 import Filter from "@/components/Filter/Filter";
 import React, { useEffect, useState } from "react";
-import ReviewCards from "./ReviewCards/ReviewCards";
 import bookmarkDark from "../../../assets/gaming/bookmark-dark.png";
-
 import Image from "next/image";
 import Pagination from "@/components/Pagination";
-import AsideBar from "@/components/Tech/Asidebar";
 import { useTheme } from "next-themes";
 import image1 from "../../../assets/gaming/odyssey.png";
 import image2 from "../../../assets/gaming/pubg.png";

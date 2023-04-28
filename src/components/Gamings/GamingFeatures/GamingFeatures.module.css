@@ -9,14 +9,10 @@
   height: auto;
 }
 .news_items {
-  /* padding: 20px 20px 0 20px; */
   border-right: 1px;
   border-style: solid;
 }
-/* .news_items:nth-child(1),
-.news_items:nth-child(2) {
-  border-bottom: 1px solid rgba(229, 229, 229, 0.1);
-} */
+
 .news_items:nth-child(2),
 .news_items:nth-child(4) {
   border-right: none;

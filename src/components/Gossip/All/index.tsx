@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Post1 from "../../../assets/images/gossip/post1.png";
 import Post2 from "../../../assets/images/gossip/post2.png";
 import Post3 from "../../../assets/images/gossip/post3.png";
@@ -10,19 +10,17 @@ import sharedbtn from "../../../assets/user-for-you/share.png";
 import typeComment from "../../../assets/esporting-events/typeComment.png";
 import user from "../../../assets/esporting-events/user1.png";
 import ThumbDark from "../../../assets/images/gossip/default-dark.png";
-import hoverDark from "../../../assets/images/gossip/hover-dark.png";
 import Clickedark from "../../../assets/images/gossip/click-dark.png";
 import image2 from "../../../assets/esportevents2/image2.png";
 import image3 from "../../../assets/esportevents2/image3.png";
 import image4 from "../../../assets/esportevents2/image4.png";
 import image5 from "../../../assets/esportevents2/image5.png";
 import ThumbDefault from "../../../assets/images/gossip/default.png";
-import ThumbHoverd from "../../../assets/images/gossip/hover.png";
 import ThumbClicked from "../../../assets/images/gossip/clickced.png";
 import Complete from "../../../assets/images/gossip/complete.png";
 import CompleteLight from "../../../assets/images/gossip/complete-light.png";
 import Image from "next/image";
-import { useTheme } from "next-themes"; 
+import { useTheme } from "next-themes";
 const AllSection = () => {
   const { theme } = useTheme();
   const [isDarkTheme, setIsDarkTheme] = useState<string>("");
@@ -60,26 +58,24 @@ const AllSection = () => {
             type and scrambled it to make a type...
           </p>
           <small className="hidden   pt-[16px] mw-sm1:block">
-           <div className="flex justify-between">
-           <a
-              href="#"
-              className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
-            >
-             John B. Watson
-            </a>
-            <div >
-            <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
-              7 months ago
-            </span>
-            <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
+            <div className="flex justify-between">
+              <a
+                href="#"
+                className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
+              >
+                John B. Watson
+              </a>
+              <div>
+                <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
+                  7 months ago
+                </span>
+                <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
 
-            <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
-              5 min read
-            </span>
-        
+                <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
+                  5 min read
+                </span>
+              </div>
             </div>
-           </div>
-           
           </small>
           <div className="relative">
             <Image className="my-[24px]" src={Post1} alt="post" />
@@ -165,26 +161,24 @@ const AllSection = () => {
             type and scrambled it to make a type...
           </p>
           <small className="hidden   pt-[16px] mw-sm1:block">
-           <div className="flex justify-between">
-           <a
-              href="#"
-              className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
-            >
-             John B. Watson
-            </a>
-            <div >
-            <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
-              7 months ago
-            </span>
-            <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
+            <div className="flex justify-between">
+              <a
+                href="#"
+                className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
+              >
+                John B. Watson
+              </a>
+              <div>
+                <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
+                  7 months ago
+                </span>
+                <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
 
-            <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
-              5 min read
-            </span>
-        
+                <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
+                  5 min read
+                </span>
+              </div>
             </div>
-           </div>
-           
           </small>
           <Image className="my-[24px]" src={Post2} alt="post" />
           <div className=" flex flex-row justify-between border-t border-b dark:border-t-brandLightOpacity10 dark:border-b-brandLightOpacity10">
@@ -265,26 +259,24 @@ const AllSection = () => {
             type and scrambled it to make a type...
           </p>
           <small className="hidden   pt-[16px] mw-sm1:block">
-           <div className="flex justify-between">
-           <a
-              href="#"
-              className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
-            >
-             John B. Watson
-            </a>
-            <div >
-            <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
-              7 months ago
-            </span>
-            <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
+            <div className="flex justify-between">
+              <a
+                href="#"
+                className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
+              >
+                John B. Watson
+              </a>
+              <div>
+                <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
+                  7 months ago
+                </span>
+                <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
 
-            <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
-              5 min read
-            </span>
-        
+                <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
+                  5 min read
+                </span>
+              </div>
             </div>
-           </div>
-           
           </small>
           <Image className="my-[24px]" src={Post3} alt="post" />
           <div className=" flex flex-row justify-between border-t border-b dark:border-t-brandLightOpacity10 dark:border-b-brandLightOpacity10">
@@ -361,7 +353,11 @@ const AllSection = () => {
                   </p>
                   <div className="likes_replays flex mt-[8px]">
                     <div className="flex items-center mr-[28px]">
-                      <Image src={isDarkTheme === 'dark' ? ThumbDark : ThumbDefault} alt="" className="mr-[8px]  hover:brightness-100" />
+                      <Image
+                        src={isDarkTheme === "dark" ? ThumbDark : ThumbDefault}
+                        alt=""
+                        className="mr-[8px]  hover:brightness-100"
+                      />
                       <p className="montserratfont text-[12px] leading-[15px] text-textColor dark:text-brandLightOpacity70 font-normal	">
                         34
                       </p>
@@ -392,7 +388,13 @@ const AllSection = () => {
                     </p>
                     <div className="likes_replays flex mt-[8px]">
                       <div className="flex items-center mr-[28px]">
-                        <Image src={isDarkTheme === 'dark' ? ThumbDark : ThumbDefault} alt="" className="mr-[8px]" />
+                        <Image
+                          src={
+                            isDarkTheme === "dark" ? ThumbDark : ThumbDefault
+                          }
+                          alt=""
+                          className="mr-[8px]"
+                        />
                         <p className="montserratfont text-[12px] leading-[15px] text-textcolor dark:text-brandLightOpacity70 font-normal	">
                           34
                         </p>
@@ -422,7 +424,13 @@ const AllSection = () => {
                     </p>
                     <div className="likes_replays flex mt-[8px]">
                       <div className="flex items-center mr-[28px]">
-                        <Image src={isDarkTheme === 'dark' ? Clickedark : ThumbClicked} alt="" className="mr-[8px]" />
+                        <Image
+                          src={
+                            isDarkTheme === "dark" ? Clickedark : ThumbClicked
+                          }
+                          alt=""
+                          className="mr-[8px]"
+                        />
                         <p className="montserratfont text-[12px] leading-[15px] text-textcolor dark:text-brandLightOpacity70 font-normal	">
                           34
                         </p>
@@ -452,7 +460,13 @@ const AllSection = () => {
                     </p>
                     <div className="likes_replays flex mt-[8px]">
                       <div className="flex items-center mr-[28px]">
-                        <Image src={isDarkTheme === 'dark' ? Clickedark : ThumbClicked} alt="" className="mr-[8px]" />
+                        <Image
+                          src={
+                            isDarkTheme === "dark" ? Clickedark : ThumbClicked
+                          }
+                          alt=""
+                          className="mr-[8px]"
+                        />
                         <p className="montserratfont text-[12px] leading-[15px] text-textColor dark:text-brandLightOpacity70 font-normal	">
                           34
                         </p>
@@ -484,7 +498,11 @@ const AllSection = () => {
                   </p>
                   <div className="likes_replays flex mt-[8px]">
                     <div className="flex items-center mr-[28px]">
-                      <Image src={isDarkTheme === 'dark' ? Clickedark :ThumbClicked} alt="" className="mr-[8px]" />
+                      <Image
+                        src={isDarkTheme === "dark" ? Clickedark : ThumbClicked}
+                        alt=""
+                        className="mr-[8px]"
+                      />
                       <p className="montserratfont text-[12px] leading-[15px] text-textcolor dark:text-brandLightOpacity70 font-normal	">
                         34
                       </p>
@@ -509,7 +527,10 @@ const AllSection = () => {
         </div>
       </div>
       <div className="min-w-[100%] mt-[80px] mb-[88px] justify-center items-center flex flex-col ">
-        <Image src={isDarkTheme === 'dark' ?  Complete: CompleteLight} alt="complete load" />
+        <Image
+          src={isDarkTheme === "dark" ? Complete : CompleteLight}
+          alt="complete load"
+        />
         <p className="montserratfont pt-[15px] text-brandDark1 opacity-70  dark:opacity-100 dark:text-brandLightOpacity70 text-sm">
           All caught up
         </p>

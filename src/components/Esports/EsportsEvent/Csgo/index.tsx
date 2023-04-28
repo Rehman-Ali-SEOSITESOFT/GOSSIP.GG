@@ -97,7 +97,7 @@ const CsGo = (props: any) => {
                         href="/esports/event-details"
                         className="montserratfont font-medium  text-xs leading-[15px]  capitalize  text-brandDark2 dark:text-brandLightOpacity100  "
                       >
-                        registration open{" "}
+                        registration open
                         <Image
                           src={chevronsright}
                           alt="arro"
@@ -166,7 +166,7 @@ const CsGo = (props: any) => {
                           href="/esports/event-details"
                           className="montserratfont font-medium  text-xs leading-[15px]  capitalize  text-brandDark2 dark:text-brandLightOpacity100  "
                         >
-                          registration open{" "}
+                          registration open
                           <Image
                             src={chevronsright}
                             alt="arro"
@@ -189,7 +189,7 @@ const CsGo = (props: any) => {
               hover:text-black"
             >
               <span className="view-more">
-                {" "}
+                
                 View all CS:GO events &nbsp;&nbsp;
               </span>
               <span>&gt;</span>

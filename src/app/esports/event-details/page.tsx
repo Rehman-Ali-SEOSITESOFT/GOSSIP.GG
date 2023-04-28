@@ -584,7 +584,6 @@ const Page = () => {
                       return (
                         <div className="pb-[14px]" key={idx}>
                           <ValorantListing
-                            // icon={e.icon}
                             lighticon={e.lighticon}
                             darkicon={e.darkicon}
                             detail={e.detail}

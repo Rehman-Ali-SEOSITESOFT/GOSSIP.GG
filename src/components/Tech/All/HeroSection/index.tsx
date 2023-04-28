@@ -76,13 +76,10 @@ const AllHeroSection = () => {
                       </div>
                       <div className="desc_wrapper pr-5	pl-3.5	mw-11:pr-3.5	mw-11:h-[130px] 	">
                         <h3 className="text-base font-bold  leading-5	 text-brandDark2 montserratfont dark:text-brandLightOpacity100 mw-11:text-[15px] mw-lg:text-base ">
-                          {" "}
-                          {elem.name}{" "}
+                          
+                          {elem.name}
                         </h3>
-                        {/* <p className="text-xs text-textColor robotoslub py-2.5 mx-14:py-2 mw-sm:hidden dark:text-brandLightOpacity90   overflow-hidden">
-                          It is a long established fact that a reader will be
-                          distracted by the readable content of a page when...
-                        </p> */}
+
                         <div className="tags flex pt-3.5 pb-3 montserratfont">
                           <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                             News
@@ -93,9 +90,9 @@ const AllHeroSection = () => {
                         </div>
                         <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs mw-sm3:text-[10px]">
                           <span className="montserratfont">
-                            {" "}
-                            <i>3 hrs ago</i>{" "}
-                          </span>{" "}
+                            
+                            <i>3 hrs ago</i>
+                          </span>
                           <span
                             className={`border-l border-l-textColorGray pl-2 ml-2 border-textColorGray   dark:border-l-brandLightOpacity70   `}
                           >
@@ -134,13 +131,10 @@ const AllHeroSection = () => {
                       </div>
                       <div className="desc_wrapper pr-5	pl-3.5	mw-11:pr-3.5	mw-11:h-[130px] mw-sm:h-[100px]	">
                         <h3 className="text-base font-bold  leading-5	 text-brandDark2 montserratfont dark:text-brandLightOpacity100 mw-11:text-[15px] mw-lg:text-base hero-section-tech-title mw-sm:text-sm mw-sm:leading-[17px]">
-                          {" "}
-                          {elem.name}{" "}
+                          
+                          {elem.name}
                         </h3>
-                        {/* <p className="text-xs text-textColor robotoslub py-2.5 mx-14:py-2 mw-sm:hidden dark:text-brandLightOpacity90   overflow-hidden">
-                          It is a long established fact that a reader will be
-                          distracted by the readable content of a page when...
-                        </p> */}
+
                         <div className="tags flex pt-3.5 pb-3 mw-sm:pt-2.5 mw-sm:pb-2    montserratfont">
                           <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                             News
@@ -151,9 +145,9 @@ const AllHeroSection = () => {
                         </div>
                         <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs mw-sm3:text-[10px]">
                           <span className="montserratfont">
-                            {" "}
-                            <i>3 hrs ago</i>{" "}
-                          </span>{" "}
+                            
+                            <i>3 hrs ago</i>
+                          </span>
                           <span
                             className={`border-l border-l-textColorGray pl-2 ml-2 border-textColorGray   dark:border-l-brandLightOpacity70   `}
                           >

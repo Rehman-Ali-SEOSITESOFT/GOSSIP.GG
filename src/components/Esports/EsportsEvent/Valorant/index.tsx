@@ -3,14 +3,12 @@ import img1 from "../../../../assets/esports/valorant-01.png";
 import img2 from "../../../../assets/esports/valorant-02.png";
 import img3 from "../../../../assets/esports/valorant-03.png";
 import img4 from "../../../../assets/esports/valorant-04.png";
-
 import icon1 from "../../../../assets/esports/v-mask-01.png";
 import icon2 from "../../../../assets/esports/v-mask-02.png";
 import icon3 from "../../../../assets/esports/v-mask-03.png";
 import icon4 from "../../../../assets/esports/v-mask-04.png";
 import chevronsright from "../../../../assets/esports/chevrons-right.png";
 import Image from "next/image";
-import SectionSaprator from "@/components/SecSaprator";
 import Link from "next/link";
 import Carousel from "react-multi-carousel";
 import marked from "../../../../assets/esports/markedtype-icon.png";
@@ -106,7 +104,7 @@ const Valorant = (props: any) => {
                         href="/esports/event-detail"
                         className="montserratfont font-medium  text-xs leading-[15px]  capitalize  text-brandDark2 dark:text-brandLightOpacity100  "
                       >
-                        registration open{" "}
+                        registration open
                         <Image
                           src={chevronsright}
                           alt="arro"
@@ -176,7 +174,7 @@ const Valorant = (props: any) => {
                           href="/esports/event-detail"
                           className="montserratfont font-medium  text-xs leading-[15px]  capitalize  text-brandDark2 dark:text-brandLightOpacity100  "
                         >
-                          registration open{" "}
+                          registration open
                           <Image
                             src={chevronsright}
                             alt="arro"
@@ -199,7 +197,7 @@ const Valorant = (props: any) => {
               hover:text-black"
             >
               <span className="view-more">
-                {" "}
+                
                 View all Valorant events &nbsp;&nbsp;
               </span>
               <span>&gt;</span>

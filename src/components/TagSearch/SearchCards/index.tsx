@@ -12,11 +12,8 @@ import img9 from "../../../assets/user-saved/9.png";
 import img10 from "../../../assets/user-saved/10.png";
 import img11 from "../../../assets/user-saved/11.png";
 import img12 from "../../../assets/user-saved/12.png";
-import bookmakred from "../../../assets/user-for-you/fill-bookmark.png";
 import bookmarkLight from "../../../assets/gaming/bookmark.png";
-import bookmarkDark from "../../../assets/gaming/bookmark-dark.png";
 import Image from "next/image";
-import { useTheme } from "next-themes";
 const SearchCard = () => {
   const items = [
     img1,
@@ -34,11 +31,17 @@ const SearchCard = () => {
   ];
   return (
     <section className="user-section-width">
-        <div>
-          <p className="montserratfont text-base font-semibold text-brandDark2 dark:text-brandLightOpacity100">Showing results for:</p>
-          <p className="montserratfont pt-[14px] text-2xl font-bold text-brandDark2 dark:text-brandLightOpacity100">Hogwarts Championship</p>
-          <p className="montserratfont pt-[12px] pb-[48px] text-lg font-normal text-brandDark2 dark:text-brandLightOpacity100">1-15 of 237 results</p>
-        </div>
+      <div>
+        <p className="montserratfont text-base font-semibold text-brandDark2 dark:text-brandLightOpacity100">
+          Showing results for:
+        </p>
+        <p className="montserratfont pt-[14px] text-2xl font-bold text-brandDark2 dark:text-brandLightOpacity100">
+          Hogwarts Championship
+        </p>
+        <p className="montserratfont pt-[12px] pb-[48px] text-lg font-normal text-brandDark2 dark:text-brandLightOpacity100">
+          1-15 of 237 results
+        </p>
+      </div>
       <div className="saved-component">
         <div className="items flex flex-wrap justify-between">
           {items.map((ele, index) => {
@@ -67,24 +70,18 @@ const SearchCard = () => {
                       Esports
                     </div>
                   </div>
-                  {/* <div className="icon  cursor-pointer">
-                    <Image
-                      src={bookmakred}
-                      alt="bookmarked"
-                     className="brightness-0	dark:brightness-100"
-                    />
-                  </div> */}
                   <div className="flex flex-row items-center justify-center">
-                  <span className="montserratfont pr-[12px] italic text-xs dark:text-brandLightOpacity70 text-brandDark2">1 month ago</span>
-                  <div className="bookmark text-textColorGray hover:text-textColor  dark:text-brandLightOpacity70 dark:hover:text-brandLightOpacity100 w-[12px]">
-                     
+                    <span className="montserratfont pr-[12px] italic text-xs dark:text-brandLightOpacity70 text-brandDark2">
+                      1 month ago
+                    </span>
+                    <div className="bookmark text-textColorGray hover:text-textColor  dark:text-brandLightOpacity70 dark:hover:text-brandLightOpacity100 w-[12px]">
                       <Image
                         src={bookmarkLight}
                         alt="book"
                         className=" brightness-0 opacity-80 hover:opacity-100  dark:brightness-200"
                       />
                     </div>
-                    </div>
+                  </div>
                 </div>
               </div>
             );

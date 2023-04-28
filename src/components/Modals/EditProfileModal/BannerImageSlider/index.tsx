@@ -1,5 +1,4 @@
-import { useState, useRef, useEffect } from "react";
-
+import { useState } from "react";
 import Slider from "react-slick";
 import Banner1 from "../../../../assets/images/profile/banner-1.png";
 import Banner2 from "../../../../assets/images/profile/banner-2.png";
@@ -14,9 +13,7 @@ const BannerSlider = () => {
     picture: any;
   }
 
-  
- 
-const {theme} = useTheme();
+  const { theme } = useTheme();
   const itemBannerImage: BannerIamge[] = [
     {
       id: 1,
@@ -71,25 +68,65 @@ const {theme} = useTheme();
   };
 
   const [selecteitem, setSelectedItem] = useState<string>();
-  const onClickSelect = (n: number, i : number) =>{
-    setSelectedItem( n + "" + i)
-  }
+  const onClickSelect = (n: number, i: number) => {
+    setSelectedItem(n + "" + i);
+  };
 
   return (
-    <Slider {...settings} className={`w-[100%] bannerImageProfile ${theme === "dark" ? " dark-arrow" : " light-arrow"}`}>
+    <Slider
+      {...settings}
+      className={`w-[100%] bannerImageProfile ${
+        theme === "dark" ? " dark-arrow" : " light-arrow"
+      }`}
+    >
       {ImageItems.map((item, index) => (
-        <div key={index} >
+        <div key={index}>
           <div className="grid grid-cols-2 gap-4">
-           <Image onClick={() => onClickSelect(1, index) } src={Banner4} className={`mw-sm:h-[60px] mw-sm:w-[123px] h-[94px] max-w-[224px] ${selecteitem === 1 + "" + index ? ' border border-brandDar2 dark:border-brandLightOpacity100 ' : ''}`  } alt="banner"/>
-           <Image onClick={() => onClickSelect(2, index) } src={Banner3} className={`mw-sm:h-[60px] mw-sm:w-[123px]  h-[94px] max-w-[224px] ${selecteitem === 2 + "" + index ? ' border border-brandDar2 dark:border-brandLightOpacity100 ' : ''} `} alt="banner"/>
-           <Image onClick={() => onClickSelect(3, index) } src={Banner1} className={`mw-sm:h-[60px] mw-sm:w-[123px]  h-[94px] max-w-[224px] ${selecteitem === 3 + "" + index ? ' border border-brandDar2 dark:border-brandLightOpacity100 ' : ''} `} alt="banner"/>
-           <Image onClick={() => onClickSelect(4, index) } src={Banner2} className={`mw-sm:h-[60px] mw-sm:w-[123px]  h-[94px] max-w-[224px] ${selecteitem === 4 + "" + index ? ' border border-brandDar2 dark:border-brandLightOpacity100 ' : ''} `} alt="banner"/>
+            <Image
+              onClick={() => onClickSelect(1, index)}
+              src={Banner4}
+              className={`mw-sm:h-[60px] mw-sm:w-[123px] h-[94px] max-w-[224px] ${
+                selecteitem === 1 + "" + index
+                  ? " border border-brandDar2 dark:border-brandLightOpacity100 "
+                  : ""
+              }`}
+              alt="banner"
+            />
+            <Image
+              onClick={() => onClickSelect(2, index)}
+              src={Banner3}
+              className={`mw-sm:h-[60px] mw-sm:w-[123px]  h-[94px] max-w-[224px] ${
+                selecteitem === 2 + "" + index
+                  ? " border border-brandDar2 dark:border-brandLightOpacity100 "
+                  : ""
+              } `}
+              alt="banner"
+            />
+            <Image
+              onClick={() => onClickSelect(3, index)}
+              src={Banner1}
+              className={`mw-sm:h-[60px] mw-sm:w-[123px]  h-[94px] max-w-[224px] ${
+                selecteitem === 3 + "" + index
+                  ? " border border-brandDar2 dark:border-brandLightOpacity100 "
+                  : ""
+              } `}
+              alt="banner"
+            />
+            <Image
+              onClick={() => onClickSelect(4, index)}
+              src={Banner2}
+              className={`mw-sm:h-[60px] mw-sm:w-[123px]  h-[94px] max-w-[224px] ${
+                selecteitem === 4 + "" + index
+                  ? " border border-brandDar2 dark:border-brandLightOpacity100 "
+                  : ""
+              } `}
+              alt="banner"
+            />
           </div>
         </div>
       ))}
     </Slider>
   );
 };
-
 
 export default BannerSlider;

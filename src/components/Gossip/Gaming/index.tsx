@@ -22,15 +22,15 @@ import SectionSaprator from "@/components/SecSaprator";
 const Gaming = () => {
   return (
     <section className="w-[778px]  mw-lg:px-[20px] ">
-        <div className=" mt-[48px]">
+      <div className=" mt-[48px]">
         <div className="section-saprator flex flex-row items-center pb-[24px]  overflow-hidden mw-xl:m-0	">
           <p className="text-brandDark2 font-bold font-sec-saprate-18 dark:text-secSaprator w-auto min-w-fit  mw-sm:w-full uppercase">
             Gaming
           </p>
           <div className="bg-gradient-to-r from-brandDark2 h-0.5  min-w-[86%] ml-3 dark:from-secSaprator mw-sm:hidden"></div>
         </div>
-        </div>
-        <div className=" min-w-[100%] mb-[24px] rounded bg-white dark:bg-brandDark1">
+      </div>
+      <div className=" min-w-[100%] mb-[24px] rounded bg-white dark:bg-brandDark1">
         <div className="px-[24px] py-[24px]">
           <p className="montserratfont mw-lg:text-[14px] font-bold  text-brandDark2 dark:text-brandLightOpacity100 text-[24px]">
             Bayes Esports appoints York Scheunemann as COO of their company
@@ -59,26 +59,24 @@ const Gaming = () => {
             type and scrambled it to make a type...
           </p>
           <small className="hidden   pt-[16px] mw-sm1:block">
-           <div className="flex justify-between">
-           <a
-              href="#"
-              className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
-            >
-             John B. Watson
-            </a>
-            <div >
-            <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
-              7 months ago
-            </span>
-            <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
+            <div className="flex justify-between">
+              <a
+                href="#"
+                className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
+              >
+                John B. Watson
+              </a>
+              <div>
+                <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
+                  7 months ago
+                </span>
+                <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
 
-            <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
-              5 min read
-            </span>
-        
+                <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
+                  5 min read
+                </span>
+              </div>
             </div>
-           </div>
-           
           </small>
           <div className="relative">
             <Image className="my-[24px]" src={Post1} alt="post" />
@@ -164,26 +162,24 @@ const Gaming = () => {
             type and scrambled it to make a type...
           </p>
           <small className="hidden   pt-[16px] mw-sm1:block">
-           <div className="flex justify-between">
-           <a
-              href="#"
-              className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
-            >
-             John B. Watson
-            </a>
-            <div >
-            <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
-              7 months ago
-            </span>
-            <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
+            <div className="flex justify-between">
+              <a
+                href="#"
+                className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
+              >
+                John B. Watson
+              </a>
+              <div>
+                <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
+                  7 months ago
+                </span>
+                <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
 
-            <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
-              5 min read
-            </span>
-        
+                <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
+                  5 min read
+                </span>
+              </div>
             </div>
-           </div>
-           
           </small>
           <Image className="my-[24px]" src={Post2} alt="post" />
           <div className=" flex flex-row justify-between border-t border-b dark:border-t-brandLightOpacity10 dark:border-b-brandLightOpacity10">
@@ -264,26 +260,24 @@ const Gaming = () => {
             type and scrambled it to make a type...
           </p>
           <small className="hidden   pt-[16px] mw-sm1:block">
-           <div className="flex justify-between">
-           <a
-              href="#"
-              className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
-            >
-             John B. Watson
-            </a>
-            <div >
-            <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
-              7 months ago
-            </span>
-            <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
+            <div className="flex justify-between">
+              <a
+                href="#"
+                className="underline mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	font-normal underline-offset-2 mw-9:text-[12px]	"
+              >
+                John B. Watson
+              </a>
+              <div>
+                <span className="  border-brandDark2  mw-lg:text-[12px] text-brandDark2 dark:text-brandLightOpacity100 text-sm	 montserratfont leading-4	 font-normal  mw-9:text-[12px]">
+                  7 months ago
+                </span>
+                <span className="mx-[18px] mw-lg:mx-[8px] border-l w-[1px] border-l-brandDark2   dark:border-l-brandLightOpacity100"></span>
 
-            <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
-              5 min read
-            </span>
-        
+                <span className=" border-brandDark2 mw-lg:text-[12px]   text-brandDark2 dark:text-brandLightOpacity100 text-sm  mw-9:text-[12px]	 montserratfont leading-4	font-normal">
+                  5 min read
+                </span>
+              </div>
             </div>
-           </div>
-           
           </small>
           <Image className="my-[24px]" src={Post3} alt="post" />
           <div className=" flex flex-row justify-between border-t border-b dark:border-t-brandLightOpacity10 dark:border-b-brandLightOpacity10">
@@ -479,7 +473,7 @@ const Gaming = () => {
                   </div>
                   <p className="montserratfont text-[14px] leading-[17px] text-textcolor dark:text-brandLightOpacity70 font-medium	">
                     I can’t imagine playing the game without Floo Flames, it’s
-                    my most favorite thing ever!{" "}
+                    my most favorite thing ever!
                   </p>
                   <div className="likes_replays flex mt-[8px]">
                     <div className="flex items-center mr-[28px]">

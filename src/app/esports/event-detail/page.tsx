@@ -445,11 +445,6 @@ const Page = () => {
                         </div>
                       </div>
                       <div className="second_image_comment pt-[29px]">
-                        {/* <Image
-                          src={youtubepreview}
-                          alt=""
-                          className="w-[100%]"
-                        /> */}
                         <YouTube
                           videoId="sTnm5jvjgjM"
                           opts={opts}
@@ -500,7 +495,7 @@ const Page = () => {
                       <div className="content_area pl-[16px]">
                         <div className="content_area_top">
                           <h4 className="flex items-center montserratfont text-[18px] leading-[22px] font-bold text-[#ED4E50] mw-sm:text-[14px] mw-sm:leading-[17px]">
-                            Esports Writer{" "}
+                            Esports Writer
                             <span>
                               <Image src={brandmark} alt="" />
                             </span>
@@ -526,7 +521,7 @@ const Page = () => {
                       <div className="content_area pl-[16px]">
                         <div className="content_area_top">
                           <h4 className="flex items-center montserratfont text-[18px] leading-[22px] font-bold text-[#ED4E50] mw-sm:text-[14px] mw-sm:leading-[17px]">
-                            Esports Writer{" "}
+                            Esports Writer
                             <span>
                               <Image src={brandmark} alt="" />
                             </span>

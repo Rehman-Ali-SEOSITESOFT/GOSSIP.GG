@@ -1,5 +1,5 @@
-import Link from "next/link"
-import React from "react"
+import Link from "next/link";
+import React from "react";
 
 const AbsArticleBreadCrum = (props: any) => {
   return (
@@ -17,7 +17,7 @@ const AbsArticleBreadCrum = (props: any) => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default AbsArticleBreadCrum
+export default AbsArticleBreadCrum;

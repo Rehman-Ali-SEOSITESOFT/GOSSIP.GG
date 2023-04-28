@@ -1,27 +1,26 @@
-import Image from "next/image"
-import React, { useState, useEffect } from "react"
-import image1 from "../../../../assets/select/image-react-1.png"
-import image2 from "../../../../assets/select/image-react-2.png"
-import image3 from "../../../../assets/select/image-react-3.png"
-import image4 from "../../../../assets/select/image-react-4.png"
-import image5 from "../../../../assets/gaming-guides-feature/image5.png"
-import image6 from "../../../../assets/gaming-guides-feature/image6.png"
-import image7 from "../../../../assets/gaming-guides-feature/image7.png"
-import image8 from "../../../../assets/gaming-guides-feature/image8.png"
-import image9 from "../../../../assets/gaming-guides-feature/image9.png"
-import image10 from "../../../../assets/gaming-guides-feature/image10.png"
-import image11 from "../../../../assets/gaming-guides-feature/image11.png"
-import bookmark from "../../../../assets/gaming/bookmark.png"
-import bookmarkDark from "../../../../assets/gaming/bookmark-dark.png"
-import addvertisement from "../../../../assets/esports/advertisement.png"
-
-import { useTheme } from "next-themes"
+import Image from "next/image";
+import React, { useState, useEffect } from "react";
+import image1 from "../../../../assets/select/image-react-1.png";
+import image2 from "../../../../assets/select/image-react-2.png";
+import image3 from "../../../../assets/select/image-react-3.png";
+import image4 from "../../../../assets/select/image-react-4.png";
+import image5 from "../../../../assets/gaming-guides-feature/image5.png";
+import image6 from "../../../../assets/gaming-guides-feature/image6.png";
+import image7 from "../../../../assets/gaming-guides-feature/image7.png";
+import image8 from "../../../../assets/gaming-guides-feature/image8.png";
+import image9 from "../../../../assets/gaming-guides-feature/image9.png";
+import image10 from "../../../../assets/gaming-guides-feature/image10.png";
+import image11 from "../../../../assets/gaming-guides-feature/image11.png";
+import bookmark from "../../../../assets/gaming/bookmark.png";
+import bookmarkDark from "../../../../assets/gaming/bookmark-dark.png";
+import addvertisement from "../../../../assets/esports/advertisement.png";
+import { useTheme } from "next-themes";
 const GuidesCards = () => {
-  const { theme } = useTheme()
-  const [isDarkTheme, setIsDarkTheme] = useState<string>("")
+  const { theme } = useTheme();
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
   useEffect(() => {
-    setIsDarkTheme(theme === "dark" ? "dark" : "light")
-  }, [theme])
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   const [list, setList] = useState<any[]>([
     image1,
     image2,
@@ -35,7 +34,7 @@ const GuidesCards = () => {
     image9,
     image10,
     image11,
-  ])
+  ]);
   const imagesList2 = [
     image1,
     image2,
@@ -49,7 +48,7 @@ const GuidesCards = () => {
     image9,
     image10,
     image11,
-  ]
+  ];
   return (
     <>
       <section className="guides_cards_inner_section ">
@@ -89,7 +88,7 @@ const GuidesCards = () => {
                   </div>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
 
@@ -145,14 +144,14 @@ const GuidesCards = () => {
                       </>
                     )}
                   </>
-                )
+                );
               })}
             </div>
           </div>
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default GuidesCards
+export default GuidesCards;

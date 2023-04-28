@@ -1,14 +1,14 @@
-import SectionSaprator from "@/components/SecSaprator"
-import React from "react"
-import review1 from "../../../../assets/tech/deal-1.png"
-import review2 from "../../../../assets/tech/deal-2.png"
-import review3 from "../../../../assets/tech/deal-3.png"
-import review4 from "../../../../assets/tech/deal-4.png"
-import deailamazon from "../../../../assets/tech/deal-amazon.png"
-import bookmark from "../../../../assets/tech/bookmark.png"
-import Image from "next/image"
+import SectionSaprator from "@/components/SecSaprator";
+import React from "react";
+import review1 from "../../../../assets/tech/deal-1.png";
+import review2 from "../../../../assets/tech/deal-2.png";
+import review3 from "../../../../assets/tech/deal-3.png";
+import review4 from "../../../../assets/tech/deal-4.png";
+import deailamazon from "../../../../assets/tech/deal-amazon.png";
+import bookmark from "../../../../assets/tech/bookmark.png";
+import Image from "next/image";
 const AllDeail = () => {
-  const imagesList = [review1, review2, review3, review4]
+  const imagesList = [review1, review2, review3, review4];
   return (
     <>
       <div className="global-section-width ">
@@ -20,11 +20,6 @@ const AllDeail = () => {
             {imagesList.map((elem, index) => {
               return (
                 <div
-                  // className={
-                  //   index === 3
-                  //     ? "mr-[0] "
-                  //     : "mr-[25px] " + " w-[300px] mw-lg:w-[48%] mw-sm3:w-full "
-                  // }
                   className={
                     "max-w-[300px] mx-14:max-w-[24%] w-full mw-md:max-w-[48%]   "
                   }
@@ -79,7 +74,7 @@ const AllDeail = () => {
                     </div>
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
 
@@ -98,7 +93,7 @@ const AllDeail = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default AllDeail
+export default AllDeail;

@@ -7,7 +7,6 @@ import img5 from "../../../../assets/esports/other-05.png";
 import img6 from "../../../../assets/esports/other-06.png";
 import img7 from "../../../../assets/esports/other-07.png";
 import img8 from "../../../../assets/esports/other-08.png";
-
 import icon1 from "../../../../assets/esports/v-mask-01.png";
 import icon2 from "../../../../assets/esports/b-mask-02.png";
 import icon3 from "../../../../assets/esports/v-mask-03.png";
@@ -210,7 +209,7 @@ const Others = (props: any) => {
                         href="/esports/event-details"
                         className="montserratfont font-medium  text-xs leading-[15px]  capitalize  text-brandDark2 dark:text-brandLightOpacity100  "
                       >
-                        registration open{" "}
+                        registration open
                         <Image
                           src={chevronsright}
                           alt="arro"
@@ -279,7 +278,7 @@ const Others = (props: any) => {
                           href="/esports/event-details"
                           className="montserratfont font-medium  text-xs leading-[15px]  capitalize  text-brandDark2 dark:text-brandLightOpacity100  "
                         >
-                          registration open{" "}
+                          registration open
                           <Image
                             src={chevronsright}
                             alt="arro"

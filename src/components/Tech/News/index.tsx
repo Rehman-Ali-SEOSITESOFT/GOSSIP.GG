@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import Image from "next/image";
 import downarrow from "../../../assets/user-for-you/down-arrow.png";
 import downarrowColor from "../../../assets/user-for-you/fill-down-arrow.png";
@@ -21,7 +20,6 @@ import muser3 from "../../../assets/esports/m-news-03.png";
 import muser4 from "../../../assets/esports/m-news-04.png";
 import muser5 from "../../../assets/esports/m-news-05.png";
 import muser6 from "../../../assets/esports/m-news-06.png";
-
 import AsideBar from "../Asidebar";
 import Pagination from "@/components/Pagination";
 import FilterTabs from "../Filter";

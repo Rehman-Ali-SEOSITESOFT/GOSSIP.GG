@@ -4,8 +4,8 @@ import React from "react";
 const Page = () => {
   return (
     <section className="search-page">
-    <SearchCards />
-  </section>
+      <SearchCards />
+    </section>
   );
 };
 

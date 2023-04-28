@@ -3,7 +3,6 @@ import img1 from "../../../../assets/esports/bgmi-01.png";
 import img2 from "../../../../assets/esports/bgmi-02.png";
 import img3 from "../../../../assets/esports/bgmi-03.png";
 import img4 from "../../../../assets/esports/bgmi-04.png";
-
 import icon1 from "../../../../assets/esports/b-mask-01.png";
 import icon2 from "../../../../assets/esports/b-mask-02.png";
 import icon3 from "../../../../assets/esports/b-mask-03.png";
@@ -99,7 +98,7 @@ const Bgmi = (props: any) => {
                         href="/esports/event-detail"
                         className="montserratfont font-medium  text-xs leading-[15px]  capitalize  text-brandDark2 dark:text-brandLightOpacity100  "
                       >
-                        registration open{" "}
+                        registration open
                         <Image
                           src={chevronsright}
                           alt="arro"
@@ -161,7 +160,7 @@ const Bgmi = (props: any) => {
                           href="/esports/event-detail"
                           className="montserratfont font-medium  text-xs leading-[15px]  capitalize  text-brandDark2 dark:text-brandLightOpacity100  "
                         >
-                          registration open{" "}
+                          registration open
                           <Image
                             src={chevronsright}
                             alt="arro"

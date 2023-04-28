@@ -3,7 +3,6 @@ import Image from "next/image";
 import bannerimg from "../../../assets/user-profile/banner.png";
 import whitebanner from "../../../assets/user-profile/white-banner.png";
 import profileimg from "../../../assets/user-profile/profile.png";
-import pc from "../../../assets/user-profile/airplay.png";
 import valorant from "../../../assets/profile/valorant.png";
 import console from "../../../assets/profile/console.png";
 import twitter from "../../../assets/user-profile/twitter.png";

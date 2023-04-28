@@ -1,7 +1,7 @@
-import React from "react"
-import topimg from "../../../assets/tech/news-top.png"
-import bottomimg from "../../../assets/tech/new-bottom.png"
-import Image from "next/image"
+import React from "react";
+import topimg from "../../../assets/tech/news-top.png";
+import bottomimg from "../../../assets/tech/new-bottom.png";
+import Image from "next/image";
 const EsportsRightSidebar = () => {
   return (
     <>
@@ -13,7 +13,7 @@ const EsportsRightSidebar = () => {
         </div>
       </aside>
     </>
-  )
-}
+  );
+};
 
-export default EsportsRightSidebar
+export default EsportsRightSidebar;

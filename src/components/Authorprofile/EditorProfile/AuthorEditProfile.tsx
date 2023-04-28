@@ -3,15 +3,12 @@ import Image from "next/image";
 import bannerimg from "../../../assets/user-profile/banner.png";
 import whitebanner from "../../../assets/user-profile/white-banner.png";
 import profileimg from "../../../assets/author-profile/author.png";
-import pc from "../../../assets/user-profile/airplay.png";
-import valorant from "../../../assets/user-profile/valorant.png";
 import twitter from "../../../assets/user-profile/twitter.png";
 import instagram from "../../../assets/user-profile/instagram.png";
 import linkined from "../../../assets/author-profile/linkedin.png";
 import mail from "../../../assets/author-profile/mail.png";
 import icon from "../../../assets/author-profile/esport-icon.png";
 import lighticon from "../../../assets/images/modal/light-logo.png";
-import editprofile from "../../../assets/user-profile/edit.png";
 import { useTheme } from "next-themes";
 const AuthorEditProfile = () => {
   const { theme, setTheme } = useTheme();
@@ -37,16 +34,6 @@ const AuthorEditProfile = () => {
             alt="banner "
           />
         )}
-        {/* <div className="dark:bg-brandLightOpacity10 bg-borderEditProfile dark:hover:bg-brandLightOpacity20 rounded-3xl inline-block px-4	 py-2.5 absolute top-6	right-6	 cursor-pointer	">
-          <Image
-            src={editprofile}
-            alt="edit user"
-            className="inline-block w-[20px] h-[20px] mr-2	"
-          />
-          <span className="text-base  font-semibold leading-5 text-white	dark:text-brandLightOpacity100	montserratfont">
-            Edit Profile
-          </span>
-        </div> */}
       </div>
       <div className="profile_description relative">
         <div className="profle-image ml-[50px]  mt-[-80px] h-[160px] w-[160px] mw-lg:ml-[30px] mw-lg:h-[140px] mw-lg:w-[140px]  mw-sm1:w-[100px] mw-sm1:h-[100px] ">

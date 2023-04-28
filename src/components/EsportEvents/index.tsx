@@ -99,17 +99,7 @@ const EsportEvent = (props: any) => {
           infinite: true,
           arrows: false,
         },
-      },
-      // {
-      //   breakpoint: 500,
-      //   settings: {
-      //     slidesToShow: 1,
-      //     slidesToScroll: 1,
-      //     infinite: true,
-      //     arrows: false,
-      //     centerMode: true,
-      //   },
-      // },
+      }
     ],
   };
 
@@ -162,7 +152,7 @@ const EsportEvent = (props: any) => {
                         className={`${style.font_esport_event_12}   text-brandDark2 dark:text-brandLightOpacity100 font-medium pt-1.5 flex items-center`}
                       >
                         South Asia
-                        <span className="h-1 w-1 bg-brandDark2 opacity-70 dark:opacity-100    dark:bg-brandLightOpacity100 inline-block rounded-full ml-[7px] mr-[8px]"></span>{" "}
+                        <span className="h-1 w-1 bg-brandDark2 opacity-70 dark:opacity-100    dark:bg-brandLightOpacity100 inline-block rounded-full ml-[7px] mr-[8px]"></span>
                         Prizepool $4500
                       </p>
                     </div>
@@ -231,7 +221,7 @@ const EsportEvent = (props: any) => {
                         className={`${style.font_esport_event_12}   text-brandDark2 dark:text-brandLightOpacity100 font-medium  flex items-center`}
                       >
                         South Asia
-                        <span className="h-1 w-1 bg-brandDark2 opacity-70 dark:opacity-100    dark:bg-brandLightOpacity100 inline-block rounded-full ml-[7px] mr-[8px]"></span>{" "}
+                        <span className="h-1 w-1 bg-brandDark2 opacity-70 dark:opacity-100    dark:bg-brandLightOpacity100 inline-block rounded-full ml-[7px] mr-[8px]"></span>
                         Prizepool $4500
                       </p>
                     </div>

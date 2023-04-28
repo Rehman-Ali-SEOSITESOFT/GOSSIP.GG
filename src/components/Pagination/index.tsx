@@ -1,13 +1,11 @@
 "use client";
 import React, { useState } from "react";
-
 import arrow from "../../assets/user-profile/back.png";
 import Image from "next/image";
 const Pagination = () => {
   const [page, setPage] = useState<number[]>([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
   const [selectNumber, setSelectNumber] = useState<number>(1);
   const [mobilepage, setMobilePage] = useState<number[]>([1, 2, 3, 4, 10]);
-
   const [mobileSelectNumber, setMobileSelectNumber] = useState<number>(1);
   const hanldeNumberSelect = (e: number) => {
     setSelectNumber(e);

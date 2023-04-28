@@ -53,7 +53,7 @@ const TechFeature = () => {
                       </h4>
                       <p className="font-normal	text-xs	robotoslub pt-[8px] dark:text-brandLightOpacity90 tech-feature-dec">
                         It is a long established fact that a reader will be
-                        distracted by the readable content of a page when...{" "}
+                        distracted by the readable content of a page when...
                       </p>
                       <p className="user_name montserratfont text-xs font-medium dark:text-brandLightOpacity100 pt-[8px]">
                         -John D
@@ -111,7 +111,7 @@ const TechFeature = () => {
                       </h4>
                       <p className="font-normal	text-xs	robotoslub pt-[9px] mb-[9px] dark:text-brandLightOpacity90 tech-feature-dec">
                         It is a long established fact that a reader will be
-                        distracted by the readable content of a page when...{" "}
+                        distracted by the readable content of a page when...
                       </p>
                       <div className="flex justify-between">
                         <p className="user_name montserratfont text-xs font-medium dark:text-brandLightOpacity100 pt-[8px] ">
@@ -127,16 +127,7 @@ const TechFeature = () => {
                           />
                         </div>
                       </div>
-                      {/* <div className="tags flex pt-3.5 montserratfont">
-                        <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
-                          News
-                        </div>
-                        <div className="text-textColorGray bg-grayCard px-2 py-1.5 rounded text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10    hover:text-brandDark2 dark:hover:bg-brandLightOpacity20    dark:hover:text-brandLightOpacity100    dark:text-brandLightOpacity70">
-                          Esports
-                        </div>
-                      </div> */}
                     </div>
-                    {/* <div></div> */}
                   </div>
                 );
               })}
@@ -153,7 +144,7 @@ const TechFeature = () => {
                 <span>&gt;</span>
                 <span>&gt;</span>
               </a>
-            </div>{" "}
+            </div>
           </div>
         </div>
       </div>

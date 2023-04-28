@@ -1,6 +1,4 @@
-.trending {
-  /* padding: 25px 0 35px 0; */
-}
+
 .trend_left {
   width: 12%;
 }
@@ -24,18 +22,12 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
-  /* color: rgba(34, 30, 31, 0.7); */
-  padding: 8px 12px;
+   padding: 8px 12px;
   border-radius: 16px;
   text-align: center;
   width: auto !important;
 }
 
-/* @media screen and (max-width: 1430px) {
-  .trending .slick-next {
-    right: 0;
-  }
-} */
 
 @media screen and (max-width: 1024px) {
   .trending .trend_left {
@@ -48,10 +40,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .trending {
-    /* padding: 16px 0 30px 0; */
-    /* border-bottom: 1px solid $brandLightOpacity10; */
-  }
+ 
   .trending .trend_left {
     width: 15%;
   }
@@ -65,10 +54,7 @@
 }
 
 @media screen and (max-width: 400px) {
-  .trending {
-    /* padding: 10px 0 24px 0; */
-  }
-
+  
   .trendingteass .tags {
     font-size: 12px;
     line-height: 15px;

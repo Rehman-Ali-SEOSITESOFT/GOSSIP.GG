@@ -96,17 +96,7 @@ const BgmiEvents = (props: any) => {
           infinite: true,
           arrows: false,
         },
-      },
-      // {
-      //   breakpoint: 500,
-      //   settings: {
-      //     slidesToShow: 1,
-      //     slidesToScroll: 1,
-      //     infinite: true,
-      //     arrows: false,
-      //     centerMode: true,
-      //   },
-      // },
+      }
     ],
   }
   const responsive = {
@@ -175,7 +165,7 @@ const BgmiEvents = (props: any) => {
                         className={`${style.font_esport_event_12}   text-brandDark2 dark:text-brandLightOpacity100 font-medium pt-1.5 flex items-center`}
                       >
                         South Asia
-                        <span className="h-1 w-1 bg-brandDark2 opacity-70 dark:opacity-100    dark:bg-brandLightOpacity100 inline-block rounded-full ml-[7px] mr-[8px]"></span>{" "}
+                        <span className="h-1 w-1 bg-brandDark2 opacity-70 dark:opacity-100    dark:bg-brandLightOpacity100 inline-block rounded-full ml-[7px] mr-[8px]"></span>
                         Prizepool $4500
                       </p>
                     </div>
@@ -244,7 +234,7 @@ const BgmiEvents = (props: any) => {
                         className={`${style.font_esport_event_12} montserratfont  text-brandDark2 dark:text-brandLightOpacity100 font-medium pt-1.5 flex items-center mw-sm:text-[14px] mw-sm:leading-[16px] mw-sm3:text-[10px] mw-sm3:leading-[12px]`}
                       >
                         South Asia
-                        <span className="h-1 w-1 bg-brandDark2 opacity-70 dark:opacity-100    dark:bg-brandLightOpacity100 inline-block rounded-full ml-[7px] mr-[8px]"></span>{" "}
+                        <span className="h-1 w-1 bg-brandDark2 opacity-70 dark:opacity-100    dark:bg-brandLightOpacity100 inline-block rounded-full ml-[7px] mr-[8px]"></span>
                         Prizepool $4500
                       </p>
                     </div>

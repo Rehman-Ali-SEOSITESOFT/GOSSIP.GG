@@ -1,8 +1,8 @@
-import React from "react"
-import pc from "../../../assets/lightgameFilter/pc.png"
-import mobile from "../../../assets/lightgameFilter/mobile.png"
-import console from "../../../assets/lightgameFilter/amiulator.png"
-import Image from "next/image"
+import React from "react";
+import pc from "../../../assets/lightgameFilter/pc.png";
+import mobile from "../../../assets/lightgameFilter/mobile.png";
+import console from "../../../assets/lightgameFilter/amiulator.png";
+import Image from "next/image";
 const LightModeFilter = () => {
   return (
     <>
@@ -30,7 +30,7 @@ const LightModeFilter = () => {
                 alt="mobile"
                 className="inline mw-lg:min-w-[14px] mw-lg:min-h-[10px] "
               />
-            </span>{" "}
+            </span>
             Mobile
           </button>
           <button className="flex montserratfont text-base leading-5 dark:text-brandLightOpacity70 items-center py-[10px] px-[12px] border dark:border-[#E5E5E5] border-[#221E1F] rounded mr-[24px] mw-md:mr-[11px] mw-md:text-[14px] mw-md:leading-[17px] mw-sm:p-[8px]">
@@ -40,13 +40,13 @@ const LightModeFilter = () => {
                 alt="console"
                 className="inline mw-lg:min-w-[14px] mw-lg:min-h-[10px] "
               />
-            </span>{" "}
+            </span>
             Console
           </button>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default LightModeFilter
+export default LightModeFilter;

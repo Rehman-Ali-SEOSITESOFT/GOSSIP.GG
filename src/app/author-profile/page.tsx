@@ -4,7 +4,6 @@ import AllAuthor from "@/components/Authorprofile/All";
 import AuthorEditProfile from "@/components/Authorprofile/EditorProfile/AuthorEditProfile";
 import FeaturedAuhor from "@/components/Authorprofile/Featured";
 import PopularAuthor from "@/components/Authorprofile/Popular";
-
 import React, { useState } from "react";
 
 const Page = () => {

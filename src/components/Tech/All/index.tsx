@@ -22,9 +22,9 @@ const MainTech = () => {
                   <span>&gt;</span>
                   <span>&gt;</span>
                 </a>
-              </div>{" "}
+              </div>
             </div>
-          </div>{" "}
+          </div>
         </div>
       </div>
       <AllReviews />
