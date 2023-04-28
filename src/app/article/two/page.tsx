@@ -4,7 +4,8 @@ import AbsBannerArticle from "@/components/AbsArticleContent/AbsBannerArticle/Ab
 import AbsHeadingArticle from "@/components/AbsArticleContent/AbsHeadingArticle/AbsHeadingArticle"
 import bannerImage from "../../../assets/articlebannerimage/banner2.png"
 import two from "../../../assets/articlebannerimage/two.png"
-
+import ArticlePropConsBox from "@/components/Article/ArticlePropConsBox"
+import ReadMoreLikeThis from "@/components/Article/ReadMore"
 const Page = () => {
   interface List {
     bannerImage: any
@@ -35,6 +36,8 @@ const Page = () => {
               )
             })}
           </div>
+          <ArticlePropConsBox />
+          <ReadMoreLikeThis />
         </div>
       </div>
     </section>

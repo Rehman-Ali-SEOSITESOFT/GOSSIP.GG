@@ -17,6 +17,7 @@ export default function Home() {
     let user: any = localStorage.getItem("isLogin")
     setIsLoggedIn(user)
     // router.refresh();
+    
   }, [])
   const responsive = {
     tablet: {
