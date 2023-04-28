@@ -332,13 +332,16 @@ body::-webkit-scrollbar-thumb {
   border-radius: 8px;
 }
 
+.article-trend-title,
 .foryou-user-title {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-
+.article-trend-title {
+  -webkit-line-clamp: 3;
+}
 .bannerImageProfile button.slick-prev {
   top: 35% !important;
 }
@@ -407,6 +410,8 @@ body::-webkit-scrollbar-thumb {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+  .aticle-title,
   .tech-feature-dec,
   .tech-feature-title {
     display: -webkit-box;
