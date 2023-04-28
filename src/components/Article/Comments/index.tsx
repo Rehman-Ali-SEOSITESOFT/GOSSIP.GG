@@ -32,7 +32,7 @@ const Comments = () => {
           250 Comments
         </p>
       </div>
-      <div className="w-full pt-[12px] rounded border border-brandLightOpacity100 dark:border-brandLightOpacity10 px-[34px] max-w-[968px] dark:bg-brandDark1 bg-white">
+      <div className="w-full pt-[12px] rounded border border-brandLightOpacity100 dark:border-brandLightOpacity10 mw-sm1:px-[8px] px-[34px] max-w-[968px] dark:bg-brandDark1 bg-white">
         <div className="leave_comment_section bg-white dark:bg-commentBg rounded w-[100%] py-[12px] ">
           <div className="type_comment flex">
             <Image src={typeComment} alt="image" className="mr-[16px]" />
@@ -218,8 +218,14 @@ const Comments = () => {
               </div>
             </div>
           </div>
-        </div>
+          </div>
       </div>
+      <div className="mt-[8px]">
+            <p className="montserratfont text-[12px] leading-[15px] font-normal text-brandDark1	dark:text-brandLightOpacity70 cursor-pointer">
+              View More Comments
+            </p>
+          </div>
+        
     </div>
   );
 };

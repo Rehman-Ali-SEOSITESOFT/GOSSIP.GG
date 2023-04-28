@@ -114,12 +114,15 @@ const ListBox = () => {
              <Image src={item.image} className="mw-sm1:min-w-[128px]" alt="article"/>
              <div className="ml-[26px] mw-md:ml-[10px] mw-9:ml-[15px]">
                <p className="montserratfont  font-bold  mw-sm1:text-[16px] text-[18px] dark:text-brandLightOpacity100 text-brandDark3 ">{item.title}</p>
-               <div className="flex items-center">
-                 <Image src={item.image2} alt="amazon"/>
-                 
+               <div className="flex items-center mw-sm1:flex-col mw-sm1:items-start ">
+                <div className="flex items-center">
+                 <Image src={item.image2} alt="amazon"/> 
                  <span className=" montserratfont  pl-[8px] font-medium text-base  dark:text-brandLightOpacity70 text-brandDark2">&#x20B9;{item.discount_price}</span><del className="  pl-[8px] montserratfont font-medium text-base dark:text-brandLightOpacity30 text-textColorGray">&#x20B9;{item.price}</del>
-                 <br/>
-                 <span className=" pl-[8px] montserratfont font-medium text-base dark:text-brandLightOpacity70 text-brandDark2">{item.off}</span> 
+                </div>
+                <div>
+                <span className=" pl-[8px] montserratfont font-medium text-base dark:text-brandLightOpacity70 text-brandDark2">{item.off}</span> 
+           
+                </div>
                </div>
              </div>
            </div>
