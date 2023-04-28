@@ -348,6 +348,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 1430px) {
+  .global-section-width-article,
   .user-section-width,
   .global-section-width {
     padding: 0 70px;
@@ -385,6 +386,7 @@ body::-webkit-scrollbar-thumb {
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
   }
+  .global-section-width-article,
   .user-section-width,
   .global-section-width {
     padding: 0 50px;
@@ -413,6 +415,7 @@ body::-webkit-scrollbar-thumb {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  .global-section-width-article,
   .global-section-width {
     padding: 0 40px;
   }
@@ -424,6 +427,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 @media screen and (max-width: 1024px) {
+  .global-section-width-article,
   .user-section-width,
   .global-section-width {
     padding: 0 16px;

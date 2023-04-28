@@ -1,0 +1,16 @@
+.main_tags_wrapper a {
+  padding: 8px 12px !important;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: normal;
+  color: rgba(229, 229, 229, 0.7);
+  font-family: "Montserrat";
+  border-radius: 16px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  color: black;
+}
+.main_tags_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
