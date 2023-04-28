@@ -1,0 +1,137 @@
+.dark_valo_aim,
+.valo_aim {
+  position: relative;
+}
+.valo_aim:before {
+  content: "";
+  background-image: url("../../../assets/esporting-events/blackineleft.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 160px;
+  height: 28px;
+  position: absolute;
+  left: -70px;
+  bottom: -1px;
+}
+.dark_valo_aim:before {
+  content: "";
+  background-image: url("../../../assets/esporting-events/leftline.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 160px;
+  height: 28px;
+  position: absolute;
+  left: -70px;
+  bottom: -1px;
+}
+.dark_valo_aim:after {
+  content: "";
+  background-image: url("../../../assets/esporting-events/rightline.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 160px;
+  height: 28px;
+  position: absolute;
+  right: -70px;
+  bottom: -1px;
+}
+.valo_aim:after {
+  content: "";
+  background-image: url("../../../assets//esporting-events/blackrightline.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 160px;
+  height: 28px;
+  position: absolute;
+  right: -70px;
+  bottom: -1px;
+}
+@media screen and (max-width: 900px) {
+  .valo_aim:before,
+  .dark_valo_aim:before {
+    left: 150px;
+  }
+  .valo_aim:after,
+  .dark_valo_aim:after {
+    right: 150px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .valo_aim:before,
+  .dark_valo_aim:before {
+    left: 100px;
+    width: 140px;
+  }
+  .valo_aim:after,
+  .dark_valo_aim:after {
+    right: 100px;
+    width: 140px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .valo_aim:before,
+  .dark_valo_aim:before {
+    left: 60px;
+  }
+  .valo_aim:after,
+  .dark_valo_aim:after {
+    right: 60px;
+  }
+}
+@media screen and (max-width: 585px) {
+  .valo_aim:before,
+  .dark_valo_aim:before {
+    left: 35px;
+  }
+  .valo_aim:after,
+  .dark_valo_aim:after {
+    right: 35px;
+  }
+}
+@media screen and (max-width: 535px) {
+  .valo_aim:before,
+  .dark_valo_aim:before {
+    left: 0px;
+  }
+  .valo_aim:after,
+  .dark_valo_aim:after {
+    right: 0px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .valo_aim:before,
+  .dark_valo_aim:before {
+    left: -30px;
+    width: 128px;
+  }
+  .valo_aim:after,
+  .dark_valo_aim:after {
+    right: -30px;
+    width: 128px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .valo_aim:before,
+  .dark_valo_aim:before {
+    left: -30px;
+    width: 128px;
+  }
+  .valo_aim:after,
+  .dark_valo_aim:after {
+    right: -30px;
+    width: 128px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .valo_aim:before,
+  .dark_valo_aim:before {
+    left: -32px;
+    width: 110px;
+  }
+
+  .valo_aim:after,
+  .dark_valo_aim:after {
+    right: -32px;
+    width: 110px;
+  }
+}

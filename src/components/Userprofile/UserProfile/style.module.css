@@ -1,0 +1,5 @@
+.banner_image,
+.banner_image img {
+  border-start-start-radius: 8px;
+  border-start-end-radius: 8px;
+}

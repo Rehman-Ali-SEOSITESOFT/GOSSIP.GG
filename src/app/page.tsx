@@ -1,91 +1,53 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+"use client";
+import { useEffect, useState } from "react";
+import HeroSection from "@/components/HeroSection";
+import LiveMatch from "@/components/LiveMatches";
+import EsportEvent from "@/components/EsportEvents";
+import Trending from "@/components/Trending/Index";
+import LatestNews from "@/components/LatestNews/Index";
+import ForYou from "@/components/ForYou/Index";
+import EmailVerify from "@/components/EmailVerify/Index";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const [isLoggedIn, setIsLoggedIn] = useState<Boolean>(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    let user: any = localStorage.getItem("isLogin");
+    setIsLoggedIn(user);
+   }, []);
+  const responsive = {
+    tablet: {
+      breakpoint: { max: 639, min: 360 },
+      items: 1,
+      paritialVisibilityGutter: 200,
+      arrows: false,
+    },
+    tablet2: {
+      breakpoint: { max: 510, min: 460 },
+      items: 1,
+      paritialVisibilityGutter: 150,
+      arrows: false,
+    },
+    mobile: {
+      breakpoint: { max: 460, min: 360 },
+      items: 1,
+      paritialVisibilityGutter: 60,
+      arrows: false,
+    },
+  };
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <section className="home-page">
+      <div className="pb-11  pt-6 mw-12:pb-7 mw-md:pb-[20px] mw-md:pt-[12px] ">
+        <Trending />
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      <HeroSection />
+      <EsportEvent responsive={responsive} />
+      <LatestNews />
+      {isLoggedIn && <ForYou />}
+      <LiveMatch responsive={responsive} />
+      {isLoggedIn && <EmailVerify />}
+    </section>
+  );
 }
