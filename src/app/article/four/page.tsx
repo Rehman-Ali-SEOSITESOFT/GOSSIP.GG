@@ -6,7 +6,6 @@ import bannerImage from "../../../assets/articlebannerimage/banner4.png"
 import four from "../../../assets/articlebannerimage/two.png"
 import ListBox from "@/components/Article/Listing"
 import Comments from "@/components/Article/Comments"
-import React from "react"
 import UserLogoSection from "@/components/Article/UserInfoSection"
 
 const Page = () => {
@@ -39,7 +38,9 @@ const Page = () => {
               )
             })}
           </div>
+          <div className="mt-[48px]">
           <ListBox />
+          </div>
           <div className="mt-[48px]">
             <UserLogoSection />
           </div>

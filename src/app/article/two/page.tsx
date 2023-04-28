@@ -6,6 +6,9 @@ import bannerImage from "../../../assets/articlebannerimage/banner2.png"
 import two from "../../../assets/articlebannerimage/two.png"
 import ArticlePropConsBox from "@/components/Article/ArticlePropConsBox"
 import ReadMoreLikeThis from "@/components/Article/ReadMore"
+import Comments from "@/components/Article/Comments"
+import UserLogoSection from "@/components/Article/UserInfoSection"
+
 const Page = () => {
   interface List {
     bannerImage: any
@@ -37,6 +40,12 @@ const Page = () => {
             })}
           </div>
           <ArticlePropConsBox />
+          <div className="mt-[48px]">
+            <UserLogoSection />
+          </div>
+          <div className="mt-[10px]">
+            <Comments />
+          </div>
           <ReadMoreLikeThis />
         </div>
       </div>
