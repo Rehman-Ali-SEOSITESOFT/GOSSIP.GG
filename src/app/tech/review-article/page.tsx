@@ -46,7 +46,7 @@ const Page = () => {
         />
       </div>
       <div className="heading_section">
-        <AbsHeadingArticle />
+        <AbsHeadingArticle articleHeading="Samsung QN90B QLED TV (45 inch)with amazing features" />
       </div>
       <div className="mt-[32px]">
         {list.map((e, idx) => {
