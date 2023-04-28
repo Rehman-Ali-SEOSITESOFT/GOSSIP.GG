@@ -55,10 +55,10 @@ const ArticlePropConsBox = () => {
               </p>
             </div>
           </div>
-          <div className="buy-now flex border  border-brandDark1 dark:border-brandLightOpacity100  w-[230px] h-[48px] items-center justify-center rounded-3xl mw-md:w-[200px] mw-md:h-[40px]">
+          <div className="buy-now ">
             <Link
               href="#"
-              className="	montserratfont font-bold text-lg	leading-[22px] capitalize dark:text-brandLightOpacity100 text-brandDark1 "
+              className=" flex border  border-brandDark1 dark:border-brandLightOpacity100  w-[230px] h-[48px] items-center justify-center rounded-3xl mw-md:w-[200px] mw-md:h-[40px] dark:hover:bg-[#353233] hover:bg-arrowicon	montserratfont font-bold text-lg	leading-[22px] capitalize dark:text-brandLightOpacity100 text-brandDark1 "
             >
               Buy now
             </Link>
