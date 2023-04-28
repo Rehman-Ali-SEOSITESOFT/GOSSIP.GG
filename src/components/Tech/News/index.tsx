@@ -1,34 +1,35 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 
-import Image from "next/image"
-import downarrow from "../../../assets/user-for-you/down-arrow.png"
-import downarrowColor from "../../../assets/user-for-you/fill-down-arrow.png"
-import uparrow from "../../../assets/user-for-you/up-arrow.png"
-import uparrowColor from "../../../assets/user-for-you/fill-up-arrow.png"
-import comment from "../../../assets/user-for-you/comment.png"
-import bookmark from "../../../assets/user-for-you/bookmark.png"
-import bookmarkfill from "../../../assets/user-for-you/fill-bookmark.png"
-import sharedbtn from "../../../assets/user-for-you/share.png"
-import user1 from "../../../assets/user-for-you/user-1.png"
-import user2 from "../../../assets/user-for-you/user-2.png"
-import user3 from "../../../assets/user-for-you/user-3.png"
-import user4 from "../../../assets/user-for-you/user-4.png"
-import user5 from "../../../assets/tech/hero-bg.png"
-import user6 from "../../../assets/tech/ne.png"
-import muser1 from "../../../assets/esports/m-news-01.png"
-import muser2 from "../../../assets/esports/m-news-02.png"
-import muser3 from "../../../assets/esports/m-news-03.png"
-import muser4 from "../../../assets/esports/m-news-04.png"
-import muser5 from "../../../assets/esports/m-news-05.png"
-import muser6 from "../../../assets/esports/m-news-06.png"
+import Image from "next/image";
+import downarrow from "../../../assets/user-for-you/down-arrow.png";
+import downarrowColor from "../../../assets/user-for-you/fill-down-arrow.png";
+import uparrow from "../../../assets/user-for-you/up-arrow.png";
+import uparrowColor from "../../../assets/user-for-you/fill-up-arrow.png";
+import comment from "../../../assets/user-for-you/comment.png";
+import bookmark from "../../../assets/user-for-you/bookmark.png";
+import bookmarkfill from "../../../assets/user-for-you/fill-bookmark.png";
+import sharedbtn from "../../../assets/user-for-you/share.png";
+import user1 from "../../../assets/user-for-you/user-1.png";
+import user2 from "../../../assets/user-for-you/user-2.png";
+import user3 from "../../../assets/user-for-you/user-3.png";
+import user4 from "../../../assets/user-for-you/user-4.png";
+import user5 from "../../../assets/tech/hero-bg.png";
+import user6 from "../../../assets/tech/ne.png";
+import muser1 from "../../../assets/esports/m-news-01.png";
+import muser2 from "../../../assets/esports/m-news-02.png";
+import muser3 from "../../../assets/esports/m-news-03.png";
+import muser4 from "../../../assets/esports/m-news-04.png";
+import muser5 from "../../../assets/esports/m-news-05.png";
+import muser6 from "../../../assets/esports/m-news-06.png";
 
-import AsideBar from "../Asidebar"
-import Pagination from "@/components/Pagination"
-import FilterTabs from "../Filter"
-import add from "../../../assets/esports/advertisement.png"
+import AsideBar from "../Asidebar";
+import Pagination from "@/components/Pagination";
+import FilterTabs from "../Filter";
+import add from "../../../assets/esports/advertisement.png";
+import Link from "next/link";
 const NewsTech = () => {
-  const userDetil = [user1, user2, user3, user4, user5, user6]
-  const mobileuser = [muser1, muser2, muser3, muser4, muser5, muser6]
+  const userDetil = [user1, user2, user3, user4, user5, user6];
+  const mobileuser = [muser1, muser2, muser3, muser4, muser5, muser6];
   return (
     <section className="global-section-width">
       <FilterTabs />
@@ -50,10 +51,13 @@ const NewsTech = () => {
                       />
                     </div>
                     <div className="item-iamge-description px-6  mw-lg:px-4  mw-9:px-2 flex flex-col justify-between	">
-                      <h2 className="montserratfont text-2xl	 leading-7 font-bold	 text-brandDark2 dark:text-brandLightOpacity100 news-title mw-11:text-xl	">
+                      <Link
+                        href="/tech/news-article"
+                        className="montserratfont text-2xl	 leading-7 font-bold	 text-brandDark2 dark:text-brandLightOpacity100 news-title mw-11:text-xl	"
+                      >
                         Bayes Esports appoints York Scheunemann as COO of their
                         company
-                      </h2>
+                      </Link>
                       <small className="py-4 mw-lg:py-2 mw-9:py-[5px]	">
                         <a
                           href="#"
@@ -143,7 +147,7 @@ const NewsTech = () => {
                       </div>
                     </div>
                   </div>
-                )
+                );
               })}
             </div>
           </div>
@@ -278,14 +282,14 @@ const NewsTech = () => {
                     </>
                   )}
                 </div>
-              )
+              );
             })}
           </div>
         </div>
         <Pagination />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default NewsTech
+export default NewsTech;

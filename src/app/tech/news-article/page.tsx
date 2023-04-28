@@ -2,9 +2,8 @@
 import AbsBannerArticle from "@/components/AbsArticleContent/AbsBannerArticle/AbsBannerArticle"
 import AbsHeadingArticle from "@/components/AbsArticleContent/AbsHeadingArticle/AbsHeadingArticle"
 import React, { useState } from "react"
-import bannerImage from "../../../assets/articlebannerimage/banner4.png"
-import four from "../../../assets/articlebannerimage/two.png"
-import ListBox from "@/components/Article/Listing"
+import bannerImage from "../../../assets/articlebannerimage/banner.png"
+import one from "../../../assets/articlebannerimage/one.png"
 import Comments from "@/components/Article/Comments"
 import UserLogoSection from "@/components/Article/UserInfoSection"
 import ReadMoreLikeThis from "@/components/Article/ReadMore"
@@ -18,9 +17,10 @@ const Page = () => {
   const [list, setList] = useState<List[]>([
     {
       bannerImage: bannerImage,
-      lowerImage: four,
+      lowerImage: one,
     },
   ])
+  console.log(list)
   return (
     <section>
       <div>
@@ -43,15 +43,13 @@ const Page = () => {
             </div>
           )
         })}
-      </div>
-      <div className="pt-12">
-      <ListBox />
-      </div>
-      <div className="mt-[48px]">
-        <UserLogoSection />
-      </div>
-      <div className="mt-[10px]">
-        <Comments />
+
+        <div className="mt-[48px]">
+          <UserLogoSection />
+        </div>
+        <div className="mt-[10px]">
+          <Comments />
+        </div>
       </div>
       <ReadMoreLikeThis />
     </section>

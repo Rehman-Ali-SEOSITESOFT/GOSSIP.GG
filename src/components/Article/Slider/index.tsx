@@ -35,10 +35,6 @@ const NavSlider = (props: any) => {
     // for slick carousel
     setNav1(slider1.current);
     setNav2(slider2.current);
-    console.log(nav1, "nav1");
-    console.log(nav2, "nav2");
-    console.log(slider1, "slider1");
-    console.log(slider2, "slider2");
   });
   const settingss = {
     slidesToShow: 3,
@@ -52,37 +48,35 @@ const NavSlider = (props: any) => {
     infinite: true,
   };
 
-
   return (
     <div className="global-section-width-article">
-     <div className="w-full pt-[20px] max-w-[688px] ">
+      <div className="w-full pt-[20px] max-w-[688px] ">
         <Slider className="" asNavFor={nav2} ref={slider1} {...settings}>
-          {props.mainImages.map((item :any, index:any) =>
-          <div key={index}>
-          <Image  src={item} alt="slider info" />
-        </div>
-         )}
-         
-        </Slider>
-         <div className={`pl-[40px] pr-[40px] ${isDarkTheme === 'dark'? "article-slider-dark" : "article-slider-light" } `}>
-        <Slider
-          asNavFor={nav1}
-          ref={slider2}
-          swipeToSlide={true}
-          {...settingss}
-        >
-          {props.navImages.map((item:any, index:any) =>
+          {props.mainImages.map((item: any, index: any) => (
             <div key={index}>
-            <Image src={item}  alt="slider info" />
-          </div>
-          )}
-        
-         
+              <Image src={item} alt="slider info" />
+            </div>
+          ))}
         </Slider>
+        <div className={`pl-[40px] pr-[40px] article-pages-slide `}>
+          <Slider
+            asNavFor={nav1}
+            ref={slider2}
+            swipeToSlide={true}
+            {...settingss}
+            className={`${
+              isDarkTheme === "dark" ? "dark-arrow" : "light-arrow"
+            } `}
+          >
+            {props.navImages.map((item: any, index: any) => (
+              <div key={index}>
+                <Image src={item} alt="slider info" />
+              </div>
+            ))}
+          </Slider>
+        </div>
       </div>
     </div>
-    </div>
-      
   );
 };
 
