@@ -22,33 +22,28 @@ const Page = () => {
   ]);
   return (
     <section>
-      <div className="global-section-width-article ">
-        <div className="2xl:container">
-          <div className="heading_section">
-            <AbsHeadingArticle />
-          </div>
-          <div className="mt-[32px]">
-            {list.map((e, idx) => {
-              return (
-                <div key={idx}>
-                  <AbsBannerArticle
-                    bannerImage={e.bannerImage}
-                    lowerImage={e.lowerImage}
-                  />
-                </div>
-              );
-            })}
-          </div>
-          <ArticlePropConsBox />
-          <div className="mt-[48px]">
-            <UserLogoSection />
-          </div>
-          <div className="mt-[10px]">
-            <Comments />
-          </div>
-        </div>
+      <div className="heading_section">
+        <AbsHeadingArticle />
       </div>
-      {/* <ArticlePropConsBox /> */}
+      <div className="mt-[32px]">
+        {list.map((e, idx) => {
+          return (
+            <div key={idx}>
+              <AbsBannerArticle
+                bannerImage={e.bannerImage}
+                lowerImage={e.lowerImage}
+              />
+            </div>
+          );
+        })}
+      </div>
+      <ArticlePropConsBox />
+      <div className="mt-[48px]">
+        <UserLogoSection />
+      </div>
+      <div className="mt-[10px]">
+        <Comments />
+      </div>
       <ReadMoreLikeThis />
     </section>
   );
