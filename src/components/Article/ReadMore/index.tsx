@@ -39,7 +39,7 @@ const ReadMoreLikeThis = () => {
   ];
   const [items, setItems] = useState(item);
   return (
-    <div className="w-full max-w-[1440px] pl-[100px]  pr-[54px] mx-13:pl-[70px] mx-13:pr-[50px] mw-xl:pl-[50px]  mw-xl:pr-[40px]  mw-lg:pl-[16px] mw-lg:pr-[16px]  m-auto ">
+    <div className="w-full max-w-[1440px] pl-[100px]  pr-[54px] mx-13:pl-[70px] mx-13:pr-[50px] mw-xl:pl-[50px]  mw-xl:pr-[40px]  mw-lg:pl-[16px] mw-lg:pr-[16px]  m-auto py-[88px]">
       <div className="flex justify-between w-full mw-lg:flex-col">
         <div className="max-w-[850px]  mw-lg:w-full">
           <h4 className="text-brandDark2 font-bold montserratfont text-lg dark:text-secSaprator w-auto min-w-fit  uppercase mw-sm:capitalize leading-[22px] pb-6">

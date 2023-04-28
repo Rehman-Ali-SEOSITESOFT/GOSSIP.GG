@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import styles from "./AbsBannerArticle.module.css"
 import { useTheme } from "next-themes"
+import NavSlider from "@/components/Article/Slider"
 const AbsBannerArticle = (props: any) => {
   const { theme, setTheme } = useTheme()
   const [isDarkTheme, setIsDarkTheme] = useState<string>("")

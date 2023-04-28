@@ -7,7 +7,7 @@ import Image3 from "../../../assets/images/article/slider3.png";
 import Image4 from "../../../assets/images/article/slider4.png";
 import Image4Big from "../../../assets/images/article/slider-4-big.png";
 import Image5 from "../../../assets/images/article/slider5.png";
-const AsNavFor = () => {
+const NavSlider = () => {
   const slider1 = useRef<any | null>();
   const slider2 = useRef<any | null>();
   const [nav1, setNav1] = useState<any | null>(null);
@@ -29,7 +29,7 @@ const AsNavFor = () => {
     console.log(slider2, "slider2");
   });
   const settingss = {
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
 
     centerMode: true,
@@ -43,7 +43,7 @@ const AsNavFor = () => {
 
   return (
     <div className="global-section-width-article">
-     <div className="w-full  pt-[20px] max-w-[678px]">
+     <div className="w-full pt-[20px] max-w-[688px]">
         <Slider className="" asNavFor={nav2} ref={slider1} {...settings}>
           <div>
             <Image  src={Image4Big} alt="slider info" />
@@ -61,7 +61,8 @@ const AsNavFor = () => {
             <Image src={Image4Big} alt="slider info" />
           </div>
         </Slider>
-
+        </div>
+        <div className="max-w-[581px]">
         <Slider
           asNavFor={nav1}
           ref={slider2}
@@ -89,4 +90,4 @@ const AsNavFor = () => {
   );
 };
 
-export default AsNavFor;
+export default NavSlider;

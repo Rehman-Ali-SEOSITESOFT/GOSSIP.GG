@@ -6,18 +6,19 @@ import bannerImage from "../../../assets/articlebannerimage/banner3.png"
 import three from "../../../assets/articlebannerimage/three.png"
 import Comments from "@/components/Article/Comments"
 import UserLogoSection from "@/components/Article/UserInfoSection"
+import ReadMoreLikeThis from "@/components/Article/ReadMore"
 
 const Page = () => {
   interface List {
-    bannerImage: any
-    lowerImage: any
+    bannerImage: any;
+    lowerImage: any;
   }
   const [list, setList] = useState<List[]>([
     {
       bannerImage: bannerImage,
       lowerImage: three,
     },
-  ])
+  ]);
   return (
     <section>
       <div className="heading_section">
@@ -42,8 +43,9 @@ const Page = () => {
           <Comments />
         </div>
       </div>
+      <ReadMoreLikeThis />
     </section>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

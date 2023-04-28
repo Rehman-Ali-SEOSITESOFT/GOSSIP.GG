@@ -1,10 +1,10 @@
-import Image from "next/image"
-import React from "react"
-import comment from "../../../assets/user-for-you/comment.png"
-import sharedbtn from "../../../assets/user-for-you/share.png"
-import bookmarkfill from "../../../assets/user-for-you/fill-bookmark.png"
-import uparrowColor from "../../../assets/user-for-you/fill-up-arrow.png"
-import downarrow from "../../../assets/user-for-you/down-arrow.png"
+import Image from "next/image";
+import React from "react";
+import comment from "../../../assets/user-for-you/comment.png";
+import sharedbtn from "../../../assets/user-for-you/share.png";
+import bookmarkfill from "../../../assets/user-for-you/fill-bookmark.png";
+import uparrowColor from "../../../assets/user-for-you/fill-up-arrow.png";
+import downarrow from "../../../assets/user-for-you/down-arrow.png";
 
 const AbsHeadingArticle = () => {
   return (
@@ -103,7 +103,7 @@ const AbsHeadingArticle = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default AbsHeadingArticle
+export default AbsHeadingArticle;
