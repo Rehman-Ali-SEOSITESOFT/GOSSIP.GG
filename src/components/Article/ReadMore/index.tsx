@@ -182,12 +182,12 @@ const ReadMoreLikeThis = () => {
           <h4 className="text-brandDark2 font-bold montserratfont text-lg dark:text-secSaprator w-auto min-w-fit  uppercase mw-sm:capitalize leading-[22px]  pb-6 mw-lg:pt-6 mw-sm:border-t dark:border-t-brandLightOpacity10 border-t-borderEditProfile mw-sm:pt-[16px]">
             trending
           </h4>
-          <div className="h-[340px] mw-11:h-fit flex flex-col justify-between">
+          <div className=" h-[340px] mw-11:h-fit flex flex-col justify-between">
             {[1, 2].map((element, index) => {
               return (
                 <div
                   className={`flex justify-between border  border-grayCard dark:border-brandLightOpacity10 rounded p-2.5 pr-[7px] mw-lg:w-1/2 mw-sm:w-full bg-white  dark:bg-brandDark1 ${
-                    index === 0 ? "mb-[13px]" : ""
+                    index === 0 ? "mb-[10px]" : ""
                   }`}
                   key={index}
                 >
@@ -197,7 +197,7 @@ const ReadMoreLikeThis = () => {
                   >
                     <Image src={trend} alt="trend" className="w-full h-full" />
                   </div>
-                  <div className="contentside flex justify-between flex-col h-[140px] mw-11:h-[125px] pl-4 mt-[-2px]">
+                  <div className="contentside flex justify-between flex-col  mw-11:h-[125px] pl-4 mt-[-2px]">
                     <p className="pb-[2px]">
                       <Image
                         src={trendingLight}
@@ -208,11 +208,11 @@ const ReadMoreLikeThis = () => {
                         17 votes on this article
                       </span>
                     </p>
-                    <h5 className=" text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100  article-trend-title aticle-title">
+                    <h5 className=" text-base leading-5 text-brandDark2 font-bold montserratfont dark:text-brandLightOpacity100  article-trend-title ">
                       7 Days To Die Alpha 21: Release Date Speculation, Update
                       Roadmap, And Other Things
                     </h5>
-                    <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs montserratfont block pb-[6px] pt-[8px]">
+                    <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs montserratfont block pb-[6px] pt-[6px]">
                       <span>
                         <i>3 hrs ago</i>
                       </span>
