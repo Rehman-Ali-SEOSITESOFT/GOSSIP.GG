@@ -66,7 +66,7 @@ const GammingArticlePropConsBox = () => {
               href="#"
               className=" flex border  border-brandDark1 dark:border-brandLightOpacity100  w-[230px] h-[48px] items-center justify-center rounded-3xl mw-md:w-[200px] mw-md:h-[40px] dark:hover:bg-[#353233] hover:bg-arrowicon	montserratfont font-bold text-lg	leading-[22px] capitalize dark:text-brandLightOpacity100 text-brandDark1 "
             >
-              Buy now
+              Know More
             </Link>
           </div>
         </div>
@@ -121,7 +121,7 @@ const GammingArticlePropConsBox = () => {
                 <li className="">
                   <div className="slid-title-text flex justify-between pt-[33px] pb-[8px] mw-md:pt-[20px]">
                     <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
-                      Design
+                      Gameplay/ RPG elements
                     </h4>
                     <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
                       4/5
@@ -138,7 +138,7 @@ const GammingArticlePropConsBox = () => {
                 <li className="">
                   <div className="slid-title-text flex justify-between pt-[33px] pb-[8px] mw-md:pt-[20px]">
                     <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
-                      Performance
+                      combat
                     </h4>
                     <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
                       4/5
@@ -172,7 +172,58 @@ const GammingArticlePropConsBox = () => {
                 <li className="">
                   <div className="slid-title-text flex justify-between pt-[33px] pb-[8px] mw-md:pt-[20px]">
                     <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
-                      features
+                      performance
+                    </h4>
+                    <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
+                      4/5
+                    </h4>
+                  </div>
+                  <div className="slid">
+                    <div className="w-full rounded-lg h-3 border dark:border-brandLightOpacity20 border-grayCard">
+                      <div
+                        className={`bg-brand h-[10px] rounded-lg w-[55%]`}
+                      ></div>
+                    </div>
+                  </div>
+                </li>
+                <li className="">
+                  <div className="slid-title-text flex justify-between pt-[33px] pb-[8px] mw-md:pt-[20px]">
+                    <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
+                      graphics
+                    </h4>
+                    <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
+                      4/5
+                    </h4>
+                  </div>
+                  <div className="slid">
+                    <div className="w-full rounded-lg h-3 border dark:border-brandLightOpacity20 border-grayCard">
+                      <div
+                        className={`bg-brand h-[10px] rounded-lg w-[55%]`}
+                      ></div>
+                    </div>
+                  </div>
+                </li>
+                <li className="">
+                  <div className="slid-title-text flex justify-between pt-[33px] pb-[8px] mw-md:pt-[20px]">
+                    <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
+                      sound design
+                    </h4>
+                    <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
+                      4/5
+                    </h4>
+                  </div>
+                  <div className="slid">
+                    <div className="w-full rounded-lg h-3 border dark:border-brandLightOpacity20 border-grayCard">
+                      <div
+                        className={`bg-brand h-[10px] rounded-lg w-[55%]`}
+                      ></div>
+                    </div>
+                  </div>
+                </li>
+                <li className="">
+                  <div className="slid-title-text flex justify-between pt-[33px] pb-[8px] mw-md:pt-[20px]">
+                    <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
+                      story
                     </h4>
                     <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
                       4/5
