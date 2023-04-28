@@ -1,19 +1,20 @@
-import Filter from "@/components/Filter/Filter"
-import React, { useEffect, useState } from "react"
-import ReviewCards from "./ReviewCards/ReviewCards"
-import bookmarkDark from "../../../assets/gaming/bookmark-dark.png"
+import Filter from "@/components/Filter/Filter";
+import React, { useEffect, useState } from "react";
+import ReviewCards from "./ReviewCards/ReviewCards";
+import bookmarkDark from "../../../assets/gaming/bookmark-dark.png";
 
-import Image from "next/image"
-import Pagination from "@/components/Pagination"
-import AsideBar from "@/components/Tech/Asidebar"
-import { useTheme } from "next-themes"
-import image1 from "../../../assets/gaming/odyssey.png"
-import image2 from "../../../assets/gaming/pubg.png"
-import image3 from "../../../assets/gaming/cod.png"
-import image4 from "../../../assets/gaming/odyssey.png"
-import bookmark from "../../../assets/gaming/bookmark.png"
-import addvertisement from "../../../assets/esports/advertisement.png"
-import RightSidebar from "../rightbar2/RightSidebar"
+import Image from "next/image";
+import Pagination from "@/components/Pagination";
+import AsideBar from "@/components/Tech/Asidebar";
+import { useTheme } from "next-themes";
+import image1 from "../../../assets/gaming/odyssey.png";
+import image2 from "../../../assets/gaming/pubg.png";
+import image3 from "../../../assets/gaming/cod.png";
+import image4 from "../../../assets/gaming/odyssey.png";
+import bookmark from "../../../assets/gaming/bookmark.png";
+import addvertisement from "../../../assets/esports/advertisement.png";
+import RightSidebar from "../rightbar2/RightSidebar";
+import Link from "next/link";
 const Reviews = () => {
   const imagesList = [
     image1,
@@ -30,7 +31,7 @@ const Reviews = () => {
     image3,
     image2,
     image3,
-  ]
+  ];
   const imagesList2 = [
     image1,
     image3,
@@ -46,13 +47,13 @@ const Reviews = () => {
     image3,
     image2,
     image3,
-  ]
+  ];
 
-  const { theme } = useTheme()
-  const [isDarkTheme, setIsDarkTheme] = useState<string>("")
+  const { theme } = useTheme();
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
   useEffect(() => {
-    setIsDarkTheme(theme === "dark" ? "dark" : "light")
-  }, [theme])
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   return (
     <>
       <section>
@@ -86,9 +87,12 @@ const Reviews = () => {
                           </div>
                           <div className="review_card_content pt-[12px] flex justify-between">
                             <div className="title_disp">
-                              <h4 className="montserratfont font-bold text-base dark:text-[#E5E5E5] leading-5  text-[#221e1f] mw-sm:text-[14px] mw-sm:text-semibold mw-sm:leading-[17px]">
+                              <Link
+                                href="/gaming/review-article"
+                                className="montserratfont font-bold text-base dark:text-[#E5E5E5] leading-5  text-[#221e1f] mw-sm:text-[14px] mw-sm:text-semibold mw-sm:leading-[17px]"
+                              >
                                 One Piece Odyssey
-                              </h4>
+                              </Link>
                               <p className="montserratfont text-sm font-normal  text-[#221e1f] dark:text-[#E5E5E5] leading-[17px] pt-[5px]">
                                 Panic Barn
                               </p>
@@ -108,7 +112,7 @@ const Reviews = () => {
                             </div>
                           </div>
                         </div>
-                      )
+                      );
                     })}
                   </div>
                 </div>
@@ -189,7 +193,7 @@ const Reviews = () => {
                             </>
                           )}
                         </>
-                      )
+                      );
                     })}
                   </div>
                 </div>
@@ -202,7 +206,7 @@ const Reviews = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Reviews
+export default Reviews;
