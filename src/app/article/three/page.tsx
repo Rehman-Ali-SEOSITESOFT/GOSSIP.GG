@@ -13,12 +13,13 @@ import TechImage3 from "../../../assets/images/article/tech3.png";
 import TechImage4 from "../../../assets/images/article/tech4.png";
 import TechImage4Big from "../../../assets/images/article/tech-big-1.png";
 import TechImage5 from "../../../assets/images/article/tech5.png";
-import GammingArticlePropConsBox from "@/components/Article/GammingArticlePropConsBox";
+import AbsArticleBreadCrum from "@/components/AbsArticleContent/AbsArticleBreadCrum/AbsArticleBreadCrum"
+
 
 const Page = () => {
   interface List {
-    bannerImage: any;
-    lowerImage: any;
+    bannerImage: any
+    lowerImage: any
   }
   const [list, setList] = useState<List[]>([
     {
@@ -43,6 +44,12 @@ const Page = () => {
    ]
   return (
     <section>
+      <div>
+        <AbsArticleBreadCrum
+          page1="Gaming"
+          page2=" All Floo Flame Location and how to fast travel in Hogwarts"
+        />
+      </div>
       <div className="heading_section">
         <AbsHeadingArticle />
       </div>
@@ -57,7 +64,7 @@ const Page = () => {
                 mainImages={sliderMainImages}
               />
             </div>
-          );
+          )
         })}
 
         <GammingArticlePropConsBox />
@@ -70,7 +77,7 @@ const Page = () => {
       </div>
       <ReadMoreLikeThis />
     </section>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

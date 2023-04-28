@@ -14,11 +14,12 @@ import Image3 from "../../../assets/images/article/slider3.png";
 import Image4 from "../../../assets/images/article/slider4.png";
 import Image4Big from "../../../assets/images/article/slider-4-big.png";
 import Image5 from "../../../assets/images/article/slider5.png";
+import AbsArticleBreadCrum from "@/components/AbsArticleContent/AbsArticleBreadCrum/AbsArticleBreadCrum"
 
 const Page = () => {
   interface List {
-    bannerImage: any;
-    lowerImage: any;
+    bannerImage: any
+    lowerImage: any
   }
   const [list, setList] = useState<List[]>([
     {
@@ -44,6 +45,12 @@ const Page = () => {
 
   return (
     <section>
+      <div>
+        <AbsArticleBreadCrum
+          page1="Gaming"
+          page2=" All Floo Flame Location and how to fast travel in Hogwarts"
+        />
+      </div>
       <div className="heading_section">
         <AbsHeadingArticle />
       </div>
@@ -58,7 +65,7 @@ const Page = () => {
                 mainImages={sliderMainImages}
               />
             </div>
-          );
+          )
         })}
       </div>
       <ArticlePropConsBox />
@@ -70,7 +77,7 @@ const Page = () => {
       </div>
       <ReadMoreLikeThis />
     </section>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

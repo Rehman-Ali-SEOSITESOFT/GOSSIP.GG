@@ -7,21 +7,28 @@ import one from "../../../assets/articlebannerimage/one.png"
 import Comments from "@/components/Article/Comments"
 import UserLogoSection from "@/components/Article/UserInfoSection"
 import ReadMoreLikeThis from "@/components/Article/ReadMore"
+import AbsArticleBreadCrum from "@/components/AbsArticleContent/AbsArticleBreadCrum/AbsArticleBreadCrum"
 
 const Page = () => {
   interface List {
-    bannerImage: any;
-    lowerImage: any;
+    bannerImage: any
+    lowerImage: any
   }
   const [list, setList] = useState<List[]>([
     {
       bannerImage: bannerImage,
       lowerImage: one,
     },
-  ]);
-  console.log(list);
+  ])
+  console.log(list)
   return (
     <section>
+      <div>
+        <AbsArticleBreadCrum
+          page1="Gaming"
+          page2=" All Floo Flame Location and how to fast travel in Hogwarts"
+        />
+      </div>
       <div className="heading_section">
         <AbsHeadingArticle />
       </div>
@@ -46,7 +53,7 @@ const Page = () => {
       </div>
       <ReadMoreLikeThis />
     </section>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page
