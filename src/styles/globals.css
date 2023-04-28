@@ -349,6 +349,15 @@ body::-webkit-scrollbar-thumb {
 .displayImageProfile button.slick-prev {
   top: 18% !important;
 }
+.article-slider-dark
+.slick-current img{
+ border: solid 2px #e5e5e5 !important;
+}
+
+.article-slider-light
+.slick-current img{
+ border: solid 2px #221e1f !important;
+}
 
 @media screen and (max-width: 1430px) {
   .global-section-width-article,
