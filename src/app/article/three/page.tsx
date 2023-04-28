@@ -13,6 +13,7 @@ import TechImage3 from "../../../assets/images/article/tech3.png";
 import TechImage4 from "../../../assets/images/article/tech4.png";
 import TechImage4Big from "../../../assets/images/article/tech-big-1.png";
 import TechImage5 from "../../../assets/images/article/tech5.png";
+import GammingArticlePropConsBox from "@/components/Article/GammingArticlePropConsBox";
 
 const Page = () => {
   interface List {
@@ -56,9 +57,10 @@ const Page = () => {
                 mainImages={sliderMainImages}
               />
             </div>
-          )
+          );
         })}
 
+        <GammingArticlePropConsBox />
         <div className="mt-[48px]">
           <UserLogoSection />
         </div>

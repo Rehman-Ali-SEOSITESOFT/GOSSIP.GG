@@ -2,18 +2,18 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import main from "../../../assets/artices-images/img.png";
+import main from "../../../assets/artices-images/trend.png";
 import amazon from "../../../assets/artices-images/amazon.png";
 import d_c from "../../../assets/artices-images/dark-c.png";
 import l_c from "../../../assets/artices-images/l-c.png";
 import Image from "next/image";
 
-const ArticlePropConsBox = () => {
+const GammingArticlePropConsBox = () => {
   return (
     <div className="global-section-width-article	 ">
       <div className="w-full max-w-[940px] mt-12  dark:bg-brandDark1  bg-white border  border-grayCard dark:border-brandLightOpacity10 rounded mw-sm:border-0">
-        <div className="title-s pb-[42px] pt-[30px] px-[30px]	flex items-center justify-between w-full mw-md:pt-[20px] mw-md:pl-[20px] mw-md:pr-[20px] mw-md:pb-[30px] mw-sm4:pr-[5px] mw-sm:flex-col mw-sm:items-start">
-          <div className="img-title flex items-center mw-sm:mb-[20px]">
+        <div className="title-s pb-[42px] pt-[30px] px-[30px]	flex items-center justify-between w-full mw-md:pt-[20px] mw-md:pl-[20px] mw-md:pr-[20px] mw-sm4:pr-[5px] mw-md:pb-[30px] mw-sm:flex-col mw-sm:items-start">
+          <div className="img-title flex  mw-sm:mb-[20px]">
             <div className="img w-[150px] h-[115px] mw-md:w-[120px]  mw-md:max-w-full mw-md:h-[100px]">
               <Image
                 src={main}
@@ -21,9 +21,9 @@ const ArticlePropConsBox = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="img-about pl-[26px] mw-md:pl-[10px] h-[90px] mw-md:h-full flex flex-col justify-between">
+            <div className="img-about pl-[26px] mw-md:pl-[10px]  mw-md:h-full flex flex-col justify-between">
               <h4 className="montserratfont font-bold  text-lg leading-[22px]	dark:text-brandLightOpacity100 text-brandDark1 mw-sm:text-base">
-                Samsung QN90B QLED TV (45 inch)
+                Hogwarts Legacy
               </h4>
               <div className="desc flex items-center">
                 <Image
@@ -31,13 +31,13 @@ const ArticlePropConsBox = () => {
                   alt="amazaon"
                   className="w-[18px] h-[18px]"
                 />
-                <p className="flex items-center pl-[10px]">
+                <p className="flex items-center pl-[10px] pt-[5px] pb-[5px]">
                   <Image src={l_c} alt="amazaon" className="inline-block" />
                   <span className="block montserratfont font-medium text-base leading-5 dark:text-brandLightOpacity70 pl-[5px]">
                     90000
                   </span>
                 </p>
-                <p className="flex items-center pl-[10px] mw-sm:hidden">
+                {/* <p className="flex items-center pl-[10px] mw-sm:hidden">
                   <Image src={d_c} alt="amazaon" />
                   <span className="block montserratfont font-medium text-base leading-5 dark:text-brandLightOpacity30 pl-[5px] line-through">
                     90000
@@ -45,13 +45,19 @@ const ArticlePropConsBox = () => {
                 </p>
                 <p className="block montserratfont text-medium text-base leading-5 dark:text-brandLightOpacity70 pl-[10px]">
                   (15% off)
-                </p>
+                </p> */}
               </div>
-              <p className="montserratfont font-normal text-sm leading-[17px] dark:text-white text-brandDark2  ">
+              <p className="montserratfont font-normal text-sm leading-[17px] dark:text-white text-brandDark2 pb-[5px] ">
                 Release date : 14/4/23
               </p>
-              <p className="montserratfont font-normal text-sm leading-[17px] dark:text-white text-brandDark2">
+              <p className="montserratfont font-normal text-sm leading-[17px] dark:text-white text-brandDark2  pb-[5px]">
                 Market Status : Launched
+              </p>
+              <p className="montserratfont font-normal text-sm leading-[17px] dark:text-white text-brandDark2 pb-[5px]">
+                Publisher : EA
+              </p>
+              <p className="montserratfont font-normal text-sm leading-[17px] dark:text-white text-brandDark2">
+                Developer : Infinity Ward
               </p>
             </div>
           </div>
@@ -60,7 +66,7 @@ const ArticlePropConsBox = () => {
               href="#"
               className=" flex border  border-brandDark1 dark:border-brandLightOpacity100  w-[230px] h-[48px] items-center justify-center rounded-3xl mw-md:w-[200px] mw-md:h-[40px] dark:hover:bg-[#353233] hover:bg-arrowicon	montserratfont font-bold text-lg	leading-[22px] capitalize dark:text-brandLightOpacity100 text-brandDark1 "
             >
-              Buy now
+              Know More
             </Link>
           </div>
         </div>
@@ -115,7 +121,7 @@ const ArticlePropConsBox = () => {
                 <li className="">
                   <div className="slid-title-text flex justify-between pt-[33px] pb-[8px] mw-md:pt-[20px]">
                     <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
-                      Design
+                      Gameplay/ RPG elements
                     </h4>
                     <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
                       4/5
@@ -132,7 +138,7 @@ const ArticlePropConsBox = () => {
                 <li className="">
                   <div className="slid-title-text flex justify-between pt-[33px] pb-[8px] mw-md:pt-[20px]">
                     <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
-                      Performance
+                      combat
                     </h4>
                     <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
                       4/5
@@ -166,7 +172,58 @@ const ArticlePropConsBox = () => {
                 <li className="">
                   <div className="slid-title-text flex justify-between pt-[33px] pb-[8px] mw-md:pt-[20px]">
                     <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
-                      features
+                      performance
+                    </h4>
+                    <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
+                      4/5
+                    </h4>
+                  </div>
+                  <div className="slid">
+                    <div className="w-full rounded-lg h-3 border dark:border-brandLightOpacity20 border-grayCard">
+                      <div
+                        className={`bg-brand h-[10px] rounded-lg w-[55%]`}
+                      ></div>
+                    </div>
+                  </div>
+                </li>
+                <li className="">
+                  <div className="slid-title-text flex justify-between pt-[33px] pb-[8px] mw-md:pt-[20px]">
+                    <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
+                      graphics
+                    </h4>
+                    <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
+                      4/5
+                    </h4>
+                  </div>
+                  <div className="slid">
+                    <div className="w-full rounded-lg h-3 border dark:border-brandLightOpacity20 border-grayCard">
+                      <div
+                        className={`bg-brand h-[10px] rounded-lg w-[55%]`}
+                      ></div>
+                    </div>
+                  </div>
+                </li>
+                <li className="">
+                  <div className="slid-title-text flex justify-between pt-[33px] pb-[8px] mw-md:pt-[20px]">
+                    <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
+                      sound design
+                    </h4>
+                    <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
+                      4/5
+                    </h4>
+                  </div>
+                  <div className="slid">
+                    <div className="w-full rounded-lg h-3 border dark:border-brandLightOpacity20 border-grayCard">
+                      <div
+                        className={`bg-brand h-[10px] rounded-lg w-[55%]`}
+                      ></div>
+                    </div>
+                  </div>
+                </li>
+                <li className="">
+                  <div className="slid-title-text flex justify-between pt-[33px] pb-[8px] mw-md:pt-[20px]">
+                    <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
+                      story
                     </h4>
                     <h4 className="montserratfont text-sm leading-[17px] capitalize dark:text-white font-normal">
                       4/5
@@ -189,4 +246,4 @@ const ArticlePropConsBox = () => {
   );
 };
 
-export default ArticlePropConsBox;
+export default GammingArticlePropConsBox;
