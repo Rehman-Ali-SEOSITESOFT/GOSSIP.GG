@@ -1,19 +1,19 @@
-import Image from "next/image";
-import React from "react";
-import comment from "../../../assets/user-for-you/comment.png";
-import sharedbtn from "../../../assets/user-for-you/share.png";
-import bookmarkfill from "../../../assets/user-for-you/fill-bookmark.png";
-import uparrowColor from "../../../assets/user-for-you/fill-up-arrow.png";
-import downarrow from "../../../assets/user-for-you/down-arrow.png";
+import Image from "next/image"
+import React from "react"
+import comment from "../../../assets/user-for-you/comment.png"
+import sharedbtn from "../../../assets/user-for-you/share.png"
+import bookmarkfill from "../../../assets/user-for-you/fill-bookmark.png"
+import uparrowColor from "../../../assets/user-for-you/fill-up-arrow.png"
+import downarrow from "../../../assets/user-for-you/down-arrow.png"
 
 const AbsHeadingArticle = () => {
   return (
     <>
       <section className=" global-section-width-article">
         <div className="2xl:container">
-          <div className="heading_wrapper pt-[33px] flex">
+          <div className="heading_wrapper pt-[33px] flex mw-md:pt-[23px] mw-sm4:pt-[18px]">
             <div className="w-[70%] pr-[50px] mw-9:w-[100%] mw-sm5:pr-[10px] ">
-              <h2 className="montserratfont text-[32px] leading-[39px] capitalize font-bold  dark:text-[#E5E5E5] mw-xl:text-[24px] mw-xl:leading-[32px]  mw-sm:text-[18px] mw-sm:leading-[24px]">
+              <h2 className="montserratfont text-[32px] leading-[39px] capitalize font-bold  dark:text-[#E5E5E5] mw-xl:text-[24px] mw-xl:leading-[32px]  mw-sm:text-[18px] mw-sm:leading-[22px]">
                 All Floo Flame locations and how to fast travel in the Hogwarts
                 Universe
               </h2>
@@ -103,7 +103,7 @@ const AbsHeadingArticle = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default AbsHeadingArticle;
+export default AbsHeadingArticle
