@@ -1,22 +1,23 @@
-"use client"
-import AbsBannerArticle from "@/components/AbsArticleContent/AbsBannerArticle/AbsBannerArticle"
-import AbsHeadingArticle from "@/components/AbsArticleContent/AbsHeadingArticle/AbsHeadingArticle"
-import React, { useState } from "react"
-import bannerImage from "../../../assets/articlebannerimage/banner.png"
-import one from "../../../assets/articlebannerimage/one.png"
+"use client";
+import AbsBannerArticle from "@/components/AbsArticleContent/AbsBannerArticle/AbsBannerArticle";
+import AbsHeadingArticle from "@/components/AbsArticleContent/AbsHeadingArticle/AbsHeadingArticle";
+import React, { useState } from "react";
+import bannerImage from "../../../assets/articlebannerimage/banner.png";
+import one from "../../../assets/articlebannerimage/one.png";
+import ReadMoreLikeThis from "@/components/Article/ReadMore";
 
 const Page = () => {
   interface List {
-    bannerImage: any
-    lowerImage: any
+    bannerImage: any;
+    lowerImage: any;
   }
   const [list, setList] = useState<List[]>([
     {
       bannerImage: bannerImage,
       lowerImage: one,
     },
-  ])
-  console.log(list)
+  ]);
+  console.log(list);
   return (
     <section>
       <div className="global-section-width-article ">
@@ -33,13 +34,14 @@ const Page = () => {
                     lowerImage={e.lowerImage}
                   />
                 </div>
-              )
+              );
             })}
           </div>
         </div>
       </div>
+      <ReadMoreLikeThis />
     </section>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

@@ -1,22 +1,22 @@
-"use client"
-import React, { useState } from "react"
-import AbsBannerArticle from "@/components/AbsArticleContent/AbsBannerArticle/AbsBannerArticle"
-import AbsHeadingArticle from "@/components/AbsArticleContent/AbsHeadingArticle/AbsHeadingArticle"
-import bannerImage from "../../../assets/articlebannerimage/banner2.png"
-import two from "../../../assets/articlebannerimage/two.png"
-import ArticlePropConsBox from "@/components/Article/ArticlePropConsBox"
-import ReadMoreLikeThis from "@/components/Article/ReadMore"
+"use client";
+import React, { useState } from "react";
+import AbsBannerArticle from "@/components/AbsArticleContent/AbsBannerArticle/AbsBannerArticle";
+import AbsHeadingArticle from "@/components/AbsArticleContent/AbsHeadingArticle/AbsHeadingArticle";
+import bannerImage from "../../../assets/articlebannerimage/banner2.png";
+import two from "../../../assets/articlebannerimage/two.png";
+import ArticlePropConsBox from "@/components/Article/ArticlePropConsBox";
+import ReadMoreLikeThis from "@/components/Article/ReadMore";
 const Page = () => {
   interface List {
-    bannerImage: any
-    lowerImage: any
+    bannerImage: any;
+    lowerImage: any;
   }
   const [list, setList] = useState<List[]>([
     {
       bannerImage: bannerImage,
       lowerImage: two,
     },
-  ])
+  ]);
   return (
     <section>
       <div className="global-section-width-article ">
@@ -33,15 +33,15 @@ const Page = () => {
                     lowerImage={e.lowerImage}
                   />
                 </div>
-              )
+              );
             })}
           </div>
-          <ArticlePropConsBox />
-          <ReadMoreLikeThis />
         </div>
       </div>
+      <ArticlePropConsBox />
+      <ReadMoreLikeThis />
     </section>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
