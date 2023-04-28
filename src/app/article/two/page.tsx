@@ -1,9 +1,14 @@
-import React from 'react'
+import ArticlePropConsBox from "@/components/Article/ArticlePropConsBox";
+import ReadMoreLikeThis from "@/components/Article/ReadMore";
+import React from "react";
 
 const Page = () => {
   return (
-    <div>Page two</div>
-  )
-}
+    <div>
+      <ArticlePropConsBox />
+      <ReadMoreLikeThis />
+    </div>
+  );
+};
 
-export default Page
+export default Page;
