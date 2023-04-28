@@ -10,8 +10,8 @@ import Image from "next/image";
 
 const ArticlePropConsBox = () => {
   return (
-    <div className="global-section-width-article ">
-      <div className="w-full max-w-[940px]  dark:bg-brandDark1  bg-white border  border-grayCard dark:border-brandLightOpacity10 rounded">
+    <div className="global-section-width-article	 ">
+      <div className="w-full max-w-[940px] mt-12  dark:bg-brandDark1  bg-white border  border-grayCard dark:border-brandLightOpacity10 rounded">
         <div className="title-s pb-[42px] pt-[30px] px-[30px]	flex items-center justify-between w-full mw-md:pt-[20px] mw-md:pl-[20px] mw-md:pr-[20px] mw-md:pb-[30px] mw-sm:flex-col mw-sm:items-start">
           <div className="img-title flex items-center mw-sm:mb-[20px]">
             <div className="img w-[150px] h-[115px] mw-md:w-[110px] mw-md:h-[100px]">
