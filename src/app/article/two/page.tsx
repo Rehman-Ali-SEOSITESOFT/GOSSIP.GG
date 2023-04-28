@@ -19,8 +19,7 @@ const Page = () => {
   ])
   return (
     <section>
-      <div className="global-section-width-article ">
-        <div className="2xl:container">
+   
           <div className="heading_section">
             <AbsHeadingArticle />
           </div>
@@ -38,8 +37,7 @@ const Page = () => {
           </div>
           <ArticlePropConsBox />
           <ReadMoreLikeThis />
-        </div>
-      </div>
+  
     </section>
   )
 }

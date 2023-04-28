@@ -19,24 +19,20 @@ const Page = () => {
   console.log(list)
   return (
     <section>
-      <div className="global-section-width-article ">
-        <div className="2xl:container">
-          <div className="heading_section">
-            <AbsHeadingArticle />
-          </div>
-          <div className="mt-[32px]">
-            {list.map((e, idx) => {
-              return (
-                <div key={idx}>
-                  <AbsBannerArticle
-                    bannerImage={e.bannerImage}
-                    lowerImage={e.lowerImage}
-                  />
-                </div>
-              )
-            })}
-          </div>
-        </div>
+      <div className="heading_section">
+        <AbsHeadingArticle />
+      </div>
+      <div className="mt-[32px]">
+        {list.map((e, idx) => {
+          return (
+            <div key={idx}>
+              <AbsBannerArticle
+                bannerImage={e.bannerImage}
+                lowerImage={e.lowerImage}
+              />
+            </div>
+          )
+        })}
       </div>
     </section>
   )
