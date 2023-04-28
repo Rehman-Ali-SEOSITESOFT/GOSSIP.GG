@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import styles from "./AbsBannerArticle.module.css"
 import { useTheme } from "next-themes"
+import NavSlider from "@/components/Article/Slider"
 const AbsBannerArticle = (props: any) => {
   const { theme, setTheme } = useTheme()
   const [isDarkTheme, setIsDarkTheme] = useState<string>("")
@@ -81,8 +82,8 @@ const AbsBannerArticle = (props: any) => {
               </div>
               <div className="third_section mt-[64px]">
                 <div className="w-[80%] m-auto">
-                  <Image src={props.lowerImage} alt="image " className="" />
-                  <p className="pt-[8px]">Image Credit: Hogwarts.com </p>
+                  {/* <Image src={props.lowerImage} alt="image " className="" /> */}
+                <NavSlider/>
                 </div>
               </div>
               <div className="fourth_section">
