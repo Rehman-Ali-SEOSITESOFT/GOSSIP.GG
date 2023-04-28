@@ -39,10 +39,10 @@ const ReadMoreLikeThis = () => {
   ];
   const [items, setItems] = useState(item);
   return (
-    <div className="w-full max-w-[1440px] pl-[100px]  pr-[54px] mx-13:pl-[70px] mx-13:pr-[50px] mw-xl:pl-[50px]  mw-xl:pr-[40px]  mw-lg:pl-[16px] mw-lg:pr-[16px]  m-auto py-[88px]">
+    <div className="w-full max-w-[1440px] pl-[100px]  pr-[54px] mx-13:pl-[70px] mx-13:pr-[50px] mw-xl:pl-[50px]  mw-xl:pr-[40px]  mw-lg:pl-[16px] mw-lg:pr-[16px]  m-auto py-[88px] mw-sm:py-[16px] ">
       <div className="flex justify-between w-full mw-lg:flex-col">
         <div className="max-w-[850px]  mw-lg:w-full">
-          <h4 className="text-brandDark2 font-bold montserratfont text-lg dark:text-secSaprator w-auto min-w-fit  uppercase mw-sm:capitalize leading-[22px] pb-6">
+          <h4 className="text-brandDark2 font-bold montserratfont text-lg dark:text-secSaprator w-auto min-w-fit  uppercase mw-sm:capitalize leading-[22px] pb-6 mw-sm:border-t dark:border-t-brandLightOpacity10 border-t-borderEditProfile mw-sm:mt-[16px] mw-sm:pt-[16px]">
             read more like this
           </h4>
           <div className="mw-sm:hidden flex flex-wrap pt-5 pb-5  bg-white rounded dark:bg-brandDark1 mw-lg:flex border  border-grayCard dark:border-brandLightOpacity10 ">
@@ -179,25 +179,25 @@ const ReadMoreLikeThis = () => {
           </div>
         </div>
         <div className="w-full pl-[20px]  mw-lg:w-full mw-lg:pl-0">
-          <h4 className="text-brandDark2 font-bold montserratfont text-lg dark:text-secSaprator w-auto min-w-fit  uppercase mw-sm:capitalize leading-[22px]  pb-6 mw-lg:pt-6">
+          <h4 className="text-brandDark2 font-bold montserratfont text-lg dark:text-secSaprator w-auto min-w-fit  uppercase mw-sm:capitalize leading-[22px]  pb-6 mw-lg:pt-6 mw-sm:border-t dark:border-t-brandLightOpacity10 border-t-borderEditProfile mw-sm:pt-[16px]">
             trending
           </h4>
-          <div className="h-[345px] mw-11:h-fit flex flex-col justify-between">
+          <div className="h-[340px] mw-11:h-fit flex flex-col justify-between">
             {[1, 2].map((element, index) => {
               return (
                 <div
-                  className={`flex justify-between border  border-grayCard dark:border-brandLightOpacity10 rounded p-2.5 pr-[7px] mw-lg:w-1/2 mw-sm:w-full ${
+                  className={`flex justify-between border  border-grayCard dark:border-brandLightOpacity10 rounded p-2.5 pr-[7px] mw-lg:w-1/2 mw-sm:w-full bg-white  dark:bg-brandDark1 ${
                     index === 0 ? "mb-[13px]" : ""
                   }`}
                   key={index}
                 >
                   <div
-                    className="imgside w-full  max-w-[120px]    min-w-[120px] h-[145px] 
+                    className="imgside w-full  max-w-[120px]    min-w-[120px] h-[140px] 
                   mw-11:min-h-[90px] mw-11:h-fit mw-11:min-w-[100px]"
                   >
                     <Image src={trend} alt="trend" className="w-full h-full" />
                   </div>
-                  <div className="contentside flex justify-between flex-col h-[145px] mw-11:h-[125px] pl-4 mt-[-2px]">
+                  <div className="contentside flex justify-between flex-col h-[140px] mw-11:h-[125px] pl-4 mt-[-2px]">
                     <p className="pb-[2px]">
                       <Image
                         src={trendingLight}

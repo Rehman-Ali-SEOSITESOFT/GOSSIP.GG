@@ -1,12 +1,13 @@
-"use client"
-import AbsBannerArticle from "@/components/AbsArticleContent/AbsBannerArticle/AbsBannerArticle"
-import AbsHeadingArticle from "@/components/AbsArticleContent/AbsHeadingArticle/AbsHeadingArticle"
-import React, { useState } from "react"
-import bannerImage from "../../../assets/articlebannerimage/banner3.png"
-import three from "../../../assets/articlebannerimage/three.png"
-import Comments from "@/components/Article/Comments"
-import UserLogoSection from "@/components/Article/UserInfoSection"
-import ReadMoreLikeThis from "@/components/Article/ReadMore"
+"use client";
+import AbsBannerArticle from "@/components/AbsArticleContent/AbsBannerArticle/AbsBannerArticle";
+import AbsHeadingArticle from "@/components/AbsArticleContent/AbsHeadingArticle/AbsHeadingArticle";
+import React, { useState } from "react";
+import bannerImage from "../../../assets/articlebannerimage/banner3.png";
+import three from "../../../assets/articlebannerimage/three.png";
+import Comments from "@/components/Article/Comments";
+import UserLogoSection from "@/components/Article/UserInfoSection";
+import ReadMoreLikeThis from "@/components/Article/ReadMore";
+import GammingArticlePropConsBox from "@/components/Article/GammingArticlePropConsBox";
 
 const Page = () => {
   interface List {
@@ -33,9 +34,10 @@ const Page = () => {
                 lowerImage={e.lowerImage}
               />
             </div>
-          )
+          );
         })}
 
+        <GammingArticlePropConsBox />
         <div className="mt-[48px]">
           <UserLogoSection />
         </div>
