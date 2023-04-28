@@ -6,7 +6,7 @@ import bookmarkfill from "../../../assets/user-for-you/fill-bookmark.png"
 import uparrowColor from "../../../assets/user-for-you/fill-up-arrow.png"
 import downarrow from "../../../assets/user-for-you/down-arrow.png"
 
-const AbsHeadingArticle = () => {
+const AbsHeadingArticle = (props: any) => {
   return (
     <>
       <section className=" global-section-width-article">
@@ -14,8 +14,7 @@ const AbsHeadingArticle = () => {
           <div className="heading_wrapper pt-[33px] flex mw-md:pt-[23px] mw-sm4:pt-[18px]">
             <div className="w-[70%] pr-[50px] mw-9:w-[100%] mw-sm5:pr-[10px] ">
               <h2 className="montserratfont text-[32px] leading-[39px] capitalize font-bold  dark:text-[#E5E5E5] mw-xl:text-[24px] mw-xl:leading-[32px]  mw-sm:text-[18px] mw-sm:leading-[22px]">
-                All Floo Flame locations and how to fast travel in the Hogwarts
-                Universe
+                {props.articleHeading}
               </h2>
               <div className="date_min_name mt-[21px] mw-sm:hidden">
                 <p className="montserratfont text-[14px] leading-[17px] dark:text-[#E5E5E5] font-normal mw-sm4:text-[12px] mw-sm4:leading-[14px]">

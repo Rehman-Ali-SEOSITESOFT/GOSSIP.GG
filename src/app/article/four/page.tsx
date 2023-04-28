@@ -30,7 +30,7 @@ const Page = () => {
         />
       </div>
       <div className="heading_section">
-        <AbsHeadingArticle />
+        <AbsHeadingArticle articleHeading="The best deals on Amazon’s Great Indian Summer Sale - April 2023" />
       </div>
       <div className="mt-[32px]">
         {list.map((e, idx) => {

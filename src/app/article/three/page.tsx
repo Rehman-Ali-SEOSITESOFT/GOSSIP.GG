@@ -31,7 +31,10 @@ const Page = () => {
         />
       </div>
       <div className="heading_section">
-        <AbsHeadingArticle />
+        <AbsHeadingArticle
+          articleHeading="All Floo Flame locations and how to fast travel in the Hogwarts
+                Universe"
+        />
       </div>
       <div className="mt-[32px]">
         {list.map((e, idx) => {
