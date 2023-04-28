@@ -9,20 +9,22 @@ import UserLogoSection from "@/components/Article/UserInfoSection"
 import ReadMoreLikeThis from "@/components/Article/ReadMore"
 import AbsArticleBreadCrum from "@/components/AbsArticleContent/AbsArticleBreadCrum/AbsArticleBreadCrum"
 
+import GammingArticlePropConsBox from "@/components/Article/GammingArticlePropConsBox"
+
 const Page = () => {
   interface List {
-    bannerImage: any;
-    lowerImage: any;
+    bannerImage: any
+    lowerImage: any
   }
   const [list, setList] = useState<List[]>([
     {
       bannerImage: bannerImage,
       lowerImage: three,
     },
-  ]);
+  ])
   return (
     <section>
-       <div>
+      <div>
         <AbsArticleBreadCrum
           page1="Gaming"
           page2=" All Floo Flame Location and how to fast travel in Hogwarts"
@@ -43,6 +45,7 @@ const Page = () => {
           )
         })}
 
+        <GammingArticlePropConsBox />
         <div className="mt-[48px]">
           <UserLogoSection />
         </div>
@@ -52,7 +55,7 @@ const Page = () => {
       </div>
       <ReadMoreLikeThis />
     </section>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page
