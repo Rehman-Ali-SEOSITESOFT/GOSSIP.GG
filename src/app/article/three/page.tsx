@@ -4,6 +4,8 @@ import AbsHeadingArticle from "@/components/AbsArticleContent/AbsHeadingArticle/
 import React, { useState } from "react"
 import bannerImage from "../../../assets/articlebannerimage/banner3.png"
 import three from "../../../assets/articlebannerimage/three.png"
+import Comments from "@/components/Article/Comments"
+import UserLogoSection from "@/components/Article/UserInfoSection"
 
 const Page = () => {
   interface List {
@@ -32,6 +34,13 @@ const Page = () => {
             </div>
           )
         })}
+
+        <div className="mt-[48px]">
+          <UserLogoSection />
+        </div>
+        <div className="mt-[10px]">
+          <Comments />
+        </div>
       </div>
     </section>
   )
