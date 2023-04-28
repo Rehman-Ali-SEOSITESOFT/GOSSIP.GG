@@ -83,9 +83,11 @@ const AbsBannerArticle = (props: any) => {
                 </div>
                 <div className="third_section mt-[64px]  mw-sm4:mt-[28px] ">
                   <div className="w-[80%] m-auto mw-sm1:w-[100%]">
-                    {/* <Image src={props.lowerImage} alt="image " className="" /> */}
+                 { props.navImages !== null && props.navImages !== undefined ?
                      <NavSlider navImages={props.navImages} mainImages={props.mainImages}/>
-                  
+                  :
+                    <Image src={props.lowerImage} alt="image " className="" /> 
+                 }
                   </div>
                 </div>
                 <div className="fourth_section">
