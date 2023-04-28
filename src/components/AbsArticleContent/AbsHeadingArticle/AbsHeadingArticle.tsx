@@ -9,9 +9,9 @@ import downarrow from "../../../assets/user-for-you/down-arrow.png"
 const AbsHeadingArticle = () => {
   return (
     <>
-      <section className="pt-[33px] global-section-width-article">
+      <section className=" global-section-width-article">
         <div className="2xl:container">
-          <div className="heading_wrapper flex">
+          <div className="heading_wrapper pt-[33px] flex">
             <div className="w-[70%] pr-[50px] mw-9:w-[100%] mw-sm5:pr-[10px] ">
               <h2 className="montserratfont text-[32px] leading-[39px] capitalize font-bold  dark:text-[#E5E5E5] mw-xl:text-[24px] mw-xl:leading-[32px]  mw-sm:text-[18px] mw-sm:leading-[24px]">
                 All Floo Flame locations and how to fast travel in the Hogwarts
