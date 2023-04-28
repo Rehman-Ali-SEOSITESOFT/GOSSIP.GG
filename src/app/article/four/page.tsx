@@ -44,7 +44,9 @@ const Page = () => {
           )
         })}
       </div>
+      <div className="pt-12">
       <ListBox />
+      </div>
       <div className="mt-[48px]">
         <UserLogoSection />
       </div>

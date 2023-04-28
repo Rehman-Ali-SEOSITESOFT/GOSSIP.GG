@@ -7,9 +7,15 @@ import three from "../../../assets/articlebannerimage/three.png"
 import Comments from "@/components/Article/Comments"
 import UserLogoSection from "@/components/Article/UserInfoSection"
 import ReadMoreLikeThis from "@/components/Article/ReadMore"
+import TechImage1 from "../../../assets/images/article/tech1.png";
+import TechImage2 from "../../../assets/images/article/tech2.png";
+import TechImage3 from "../../../assets/images/article/tech3.png";
+import TechImage4 from "../../../assets/images/article/tech4.png";
+import TechImage4Big from "../../../assets/images/article/tech-big-1.png";
+import TechImage5 from "../../../assets/images/article/tech5.png";
 import AbsArticleBreadCrum from "@/components/AbsArticleContent/AbsArticleBreadCrum/AbsArticleBreadCrum"
-
 import GammingArticlePropConsBox from "@/components/Article/GammingArticlePropConsBox"
+
 
 const Page = () => {
   interface List {
@@ -21,7 +27,22 @@ const Page = () => {
       bannerImage: bannerImage,
       lowerImage: three,
     },
-  ])
+  ]);
+  const sliderNavImages = [
+    TechImage1,
+    TechImage2,
+    TechImage3,
+    TechImage4,
+    TechImage5,
+   ];
+
+   const sliderMainImages=[
+    TechImage4Big,
+    TechImage4Big,
+    TechImage4Big,
+    TechImage4Big,
+    TechImage4Big,
+   ]
   return (
     <section>
       <div>
@@ -43,6 +64,8 @@ const Page = () => {
               <AbsBannerArticle
                 bannerImage={e.bannerImage}
                 lowerImage={e.lowerImage}
+                navImages={sliderNavImages}
+                mainImages={sliderMainImages}
               />
             </div>
           )

@@ -152,6 +152,11 @@ body::-webkit-scrollbar-thumb {
   z-index: 1;
 }
 
+.article-pages-slide .dark-arrow.slick-slider button.slick-prev,
+.article-pages-slide .light-arrow.slick-slider button.slick-prev {
+  top: 27%;
+}
+
 .live-matches .dark-arrow.slick-slider button.slick-prev,
 .live-matches .light-arrow.slick-slider button.slick-prev {
   top: 38%;
@@ -295,6 +300,8 @@ body::-webkit-scrollbar-thumb {
 .trendingteass .slick-prev {
   top: 14px;
 }
+.article-pages-slide {
+}
 .slick-prev {
   left: -60px !important;
 }
@@ -348,6 +355,13 @@ body::-webkit-scrollbar-thumb {
 
 .displayImageProfile button.slick-prev {
   top: 18% !important;
+}
+.article-slider-dark .slick-current img {
+  border: solid 2px #e5e5e5 !important;
+}
+
+.article-slider-light .slick-current img {
+  border: solid 2px #221e1f !important;
 }
 
 @media screen and (max-width: 1430px) {

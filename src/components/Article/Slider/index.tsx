@@ -7,11 +7,23 @@ import Image3 from "../../../assets/images/article/slider3.png";
 import Image4 from "../../../assets/images/article/slider4.png";
 import Image4Big from "../../../assets/images/article/slider-4-big.png";
 import Image5 from "../../../assets/images/article/slider5.png";
-const NavSlider = () => {
+import TechImage1 from "../../../assets/images/article/tech1.png";
+import TechImage2 from "../../../assets/images/article/tech2.png";
+import TechImage3 from "../../../assets/images/article/tech3.png";
+import TechImage4 from "../../../assets/images/article/tech4.png";
+import TechImage4Big from "../../../assets/images/article/tech-big-1.png";
+import TechImage5 from "../../../assets/images/article/tech5.png";
+import { useTheme } from "next-themes";
+const NavSlider = (props: any) => {
   const slider1 = useRef<any | null>();
   const slider2 = useRef<any | null>();
   const [nav1, setNav1] = useState<any | null>(null);
   const [nav2, setNav2] = useState<any | null>(null);
+  const { theme, setTheme } = useTheme();
+  const [isDarkTheme, setIsDarkTheme] = useState<any>("");
+  useEffect(() => {
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   const settings = {
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -23,10 +35,6 @@ const NavSlider = () => {
     // for slick carousel
     setNav1(slider1.current);
     setNav2(slider2.current);
-    console.log(nav1, "nav1");
-    console.log(nav2, "nav2");
-    console.log(slider1, "slider1");
-    console.log(slider2, "slider2");
   });
   const settingss = {
     slidesToShow: 3,
@@ -40,51 +48,33 @@ const NavSlider = () => {
     infinite: true,
   };
 
-
   return (
     <div className="global-section-width-article">
-     <div className="w-full pt-[20px] max-w-[688px]">
+      <div className="w-full pt-[20px] max-w-[688px] ">
         <Slider className="" asNavFor={nav2} ref={slider1} {...settings}>
-          <div>
-            <Image  src={Image4Big} alt="slider info" />
-          </div>
-          <div>
-            <Image  src={Image4Big} alt="slider info" />
-          </div>
-          <div>
-            <Image  src={Image4Big} alt="slider info" />
-          </div>
-          <div>
-            <Image  src={Image4Big} alt="slider info" />
-          </div>
-          <div>
-            <Image src={Image4Big} alt="slider info" />
-          </div>
+          {props.mainImages.map((item: any, index: any) => (
+            <div key={index}>
+              <Image src={item} alt="slider info" />
+            </div>
+          ))}
         </Slider>
+        <div className={`pl-[40px] pr-[40px] article-pages-slide `}>
+          <Slider
+            asNavFor={nav1}
+            ref={slider2}
+            swipeToSlide={true}
+            {...settingss}
+            className={`${
+              isDarkTheme === "dark" ? "dark-arrow" : "light-arrow"
+            } `}
+          >
+            {props.navImages.map((item: any, index: any) => (
+              <div key={index}>
+                <Image src={item} alt="slider info" />
+              </div>
+            ))}
+          </Slider>
         </div>
-        <div className="max-w-[581px]">
-        <Slider
-          asNavFor={nav1}
-          ref={slider2}
-          swipeToSlide={true}
-          {...settingss}
-        >
-          <div>
-            <Image src={Image1} alt="slider info" />
-          </div>
-          <div>
-            <Image src={Image2} alt="slider info" />
-          </div>
-          <div>
-            <Image src={Image3} alt="slider info" />
-          </div>
-          <div>
-            <Image src={Image4} alt="slider info" />
-          </div>
-          <div>
-            <Image src={Image5} alt="slider info" />
-          </div>
-        </Slider>
       </div>
     </div>
   );
