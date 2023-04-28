@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import styles from "./AbsBannerArticle.module.css"
 import { useTheme } from "next-themes"
+import NavSlider from "@/components/Article/Slider"
 const AbsBannerArticle = (props: any) => {
   const { theme, setTheme } = useTheme()
   const [isDarkTheme, setIsDarkTheme] = useState<string>("")
@@ -118,27 +119,31 @@ const AbsBannerArticle = (props: any) => {
 
             {/* right side starts here */}
 
-            <div className="ml-[32px] mw-lg:ml-[0px] mw-lg:mt-[20px] mw-lg:pb-[33px]">
-              <h4 className="text-[18px] leading-[22px] font-bold text-[#ED4E50] montserratfont uppercase pb-[16px]">
-                LATEST
-              </h4>
-              <p className="montserratfont text-[16px] leading-[20px] font-bold dark:text-[#E5E5E5] pb-[20px] mw-12:text-[14px] mw-12:leading-[18px] mw-12:pb-[16px]">
-                MR Luna has announced he is stepping down as CEO{" "}
-              </p>
-              <p className="montserratfont text-[16px] leading-[20px] font-bold dark:text-[#E5E5E5] pb-[20px] mw-12:text-[14px] mw-12:leading-[18px] mw-12:pb-[16px]">
-                Legends of Runnetera 2023 Roadmap{" "}
-              </p>
-              <p className="montserratfont text-[16px] leading-[20px] font-bold dark:text-[#E5E5E5] pb-[20px] mw-12:text-[14px] mw-12:leading-[18px] mw-12:pb-[16px]">
-                What will Arcane Season 2 be about?
-              </p>
-              <p className="montserratfont text-[16px] leading-[20px] font-bold dark:text-[#E5E5E5] pb-[20px] mw-12:text-[14px] mw-12:leading-[18px] mw-12:pb-[16px]">
-                ARK Eggcellent Adventure Event 2023 - Possible Start Date
-              </p>
+            <div className="ml-[32px] mw-lg:ml-[0px] mw-lg:mt-[20px] mw-lg:pb-[33px] ">
+              <div className="mw-sm1:border-t-2 dark:mw-sm1:border-brandLightOpacity10 mw-sm1:border-b-2 mw-sm1:pt-[16px]">
+                <h4 className="text-[18px] leading-[22px] font-bold text-[#ED4E50] montserratfont uppercase pb-[16px] ">
+                  LATEST
+                </h4>
+                <p className="montserratfont text-[16px] leading-[20px] font-bold dark:text-[#E5E5E5] pb-[20px] mw-12:text-[14px] mw-12:leading-[18px] mw-12:pb-[16px]">
+                  MR Luna has announced he is stepping down as CEO{" "}
+                </p>
+                <p className="montserratfont text-[16px] leading-[20px] font-bold dark:text-[#E5E5E5] pb-[20px] mw-12:text-[14px] mw-12:leading-[18px] mw-12:pb-[16px]">
+                  Legends of Runnetera 2023 Roadmap{" "}
+                </p>
+                <p className="montserratfont text-[16px] leading-[20px] font-bold dark:text-[#E5E5E5] pb-[20px] mw-12:text-[14px] mw-12:leading-[18px] mw-12:pb-[16px]">
+                  What will Arcane Season 2 be about?
+                </p>
+                <p className="montserratfont text-[16px] leading-[20px] font-bold dark:text-[#E5E5E5] pb-[20px] mw-12:text-[14px] mw-12:leading-[18px] mw-12:pb-[16px]">
+                  ARK Eggcellent Adventure Event 2023 - Possible Start Date
+                </p>
+              </div>
               <div className="related_topics">
-                <h4 className="text-[18px] pt-[36px] mw-xl:pt-[0px] leading-[22px] font-bold text-[#ED4E50] montserratfont uppercase pb-[16px] mw-lg:pt-[20px]">
+                <h4 className="text-[18px] pt-[36px] mw-xl:pt-[0px] leading-[22px] font-bold text-[#ED4E50] montserratfont uppercase pb-[16px] mw-lg:pt-[20px] ">
                   Related Topics
                 </h4>
-                <div className={`${styles.main_tags_wrapper}`}>
+                <div
+                  className={`${styles.main_tags_wrapper}  mw-sm1:border-b-2  dark:mw-sm1:border-brandLightOpacity10 mw-sm1:pb-[12px]`}
+                >
                   <Link
                     href=""
                     className={`${styles.tagss} bg-grayCard 
