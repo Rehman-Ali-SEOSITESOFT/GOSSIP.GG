@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import "./overwrite.css";
+@import "./quiz.css";
 
 /* // BRAND LIGHT COLOR'S */
 :root {
@@ -115,18 +116,22 @@ body::-webkit-scrollbar-thumb {
 
 .trending .dark-arrow.slick-slider button.slick-next,
 .trending .dark-arrow.slick-slider button.slick-prev {
-  background: linear-gradient(270deg,
-      var(--brandDark2) 15.85%,
-      var(--brandDark2) 56.62%,
-      rgba(34, 30, 31, 0) 83.6%);
+  background: linear-gradient(
+    270deg,
+    var(--brandDark2) 15.85%,
+    var(--brandDark2) 56.62%,
+    rgba(34, 30, 31, 0) 83.6%
+  );
 }
 
 .trending .light-arrow.slick-slider button.slick-next,
 .trending .light-arrow.slick-slider button.slick-prev {
-  background: linear-gradient(270deg,
-      var(--bodycolor) 15.85%,
-      var(--bodycolor) 56.62%,
-      rgba(34, 30, 31, 0) 83.6%);
+  background: linear-gradient(
+    270deg,
+    var(--bodycolor) 15.85%,
+    var(--bodycolor) 56.62%,
+    rgba(34, 30, 31, 0) 83.6%
+  );
 }
 
 .dark-arrow.slick-slider .slick-next:before,
@@ -200,7 +205,6 @@ body::-webkit-scrollbar-thumb {
 .light-arrow.slick-slider .slick-prev::after {
   content: "";
   background-image: url("../assets/trending-arrows/dark-arrow.png");
-
 }
 
 /* ARROW'S STYLE CLOSE */
@@ -306,7 +310,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 1430px) {
-
   .global-section-width-article,
   .user-section-width,
   .global-section-width {
@@ -401,7 +404,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 1024px) {
-
   .global-section-width-article,
   .user-section-width,
   .global-section-width {
@@ -433,7 +435,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 639px) {
-
   .deail-tab-com-title,
   .review-title {
     display: -webkit-box;

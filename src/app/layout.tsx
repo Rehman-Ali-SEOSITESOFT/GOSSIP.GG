@@ -12,6 +12,7 @@ import { Providers } from "./providers";
 import "../styles/background.css";
 import { useTheme } from "next-themes";
 import "react-multi-carousel/lib/styles.css";
+import QuizRatio from "@/components/quizRatio";
 
 export default function RootLayout({
   children,
@@ -32,6 +33,7 @@ export default function RootLayout({
           <main className="gossip bg-bodycolor dark:bg-brandDark2">
             <Header />
             <div className="content">{children}</div>
+            <QuizRatio />
             <Footer />
           </main>
         </Providers>
