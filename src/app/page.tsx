@@ -16,7 +16,7 @@ export default function Home() {
   useEffect(() => {
     let user: any = localStorage.getItem("isLogin");
     setIsLoggedIn(user);
-   }, []);
+  }, []);
   const responsive = {
     tablet: {
       breakpoint: { max: 639, min: 360 },

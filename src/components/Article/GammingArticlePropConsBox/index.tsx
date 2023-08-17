@@ -37,7 +37,6 @@ const GammingArticlePropConsBox = () => {
                     90000
                   </span>
                 </p>
-              
               </div>
               <p className="montserratfont font-normal text-sm leading-[17px] dark:text-white text-brandDark2 pb-[5px] ">
                 Release date : 14/4/23
@@ -85,7 +84,6 @@ const GammingArticlePropConsBox = () => {
             </h5>
             <ul className="list-disc pl-10px mr-[20px]	ml-[45px] py-6	mw-md:ml-[30px] mw-md:mr-[15px]">
               <li className="font-medium text-base leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity100 text-brandDark1 montserratfont mw-md:text-sm ">
-                
                 Warm Tinge hDR photos
               </li>
               <li className="font-medium text-base leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity100 text-brandDark1 montserratfont  mw-md:text-sm ">

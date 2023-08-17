@@ -15,6 +15,7 @@ module.exports = {
   theme: {
     typography: (theme) => ({}),
     extend: {
+    
       colors: {
         // BRAND LIGHT COLOR'S
         brandLightOpacity100: "#e5e5e5",
