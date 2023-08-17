@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import "./overwrite.css";
+@import "./quiz.css";
 
 /* // BRAND LIGHT COLOR'S */
 :root {

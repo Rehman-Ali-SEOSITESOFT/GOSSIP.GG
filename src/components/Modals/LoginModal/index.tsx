@@ -29,7 +29,7 @@ const LoginModal = (props: any) => {
       props.onClickOpenModal();
     }
     setOpen(!open);
-  };
+  }; 
 
   const onClickOpenForgotPasswordModal = () => {
     if (!openForgotPasswordModal) {
