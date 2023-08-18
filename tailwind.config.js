@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
+  plugins: [require("tw-elements/dist/plugin.cjs")],
   // mode: "jit",
   purge: {
     enabled: true,
@@ -15,7 +16,6 @@ module.exports = {
   theme: {
     typography: (theme) => ({}),
     extend: {
-    
       colors: {
         // BRAND LIGHT COLOR'S
         brandLightOpacity100: "#e5e5e5",
@@ -106,7 +106,8 @@ module.exports = {
       // },
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("tailwind-scrollbar"), require("daisyui")],
+  plugins: [require("@tailwindcss/typography"), require("tailwind-scrollbar")],
+
   variants: {
     scrollbar: ["rounded"],
   },

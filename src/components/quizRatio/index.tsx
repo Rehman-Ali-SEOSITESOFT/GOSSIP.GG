@@ -8,6 +8,7 @@ import Image from "next/image";
 import IntroScreen from "../quizScreen/introScreen";
 import QuestionScreen from "../quizScreen/QuestionScreen";
 
+
 const QuizRatio = () => {
   const [openIntro, setOpenIntro] = useState<Boolean>(false);
   const hanldeClosedQuiz = () => {

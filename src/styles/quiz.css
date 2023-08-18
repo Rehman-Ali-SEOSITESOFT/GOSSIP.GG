@@ -29,12 +29,12 @@
 }
 
 .logoed {
-  animation-duration: 1s;
+  animation-duration: 0.1s;
   animation-delay: 1s;
   animation-name: logoHide;
   transform-origin: 0;
-  translate: 3d;
-
+  /* translate: 3d; */
+  animation-fill-mode: backwards;
   opacity: 1;
 }
 @keyframes logoAnimated {
