@@ -106,7 +106,7 @@ module.exports = {
       // },
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("tailwind-scrollbar")],
+  plugins: [require("@tailwindcss/typography"), require("tailwind-scrollbar"), require("daisyui")],
   variants: {
     scrollbar: ["rounded"],
   },

@@ -6,6 +6,7 @@ import doublearrow from "../../assets/quiz-model/duble-arrow.png";
 import close from "../../assets/quiz-model/close.png";
 import Image from "next/image";
 import IntroScreen from "../quizScreen/introScreen";
+import QuestionScreen from "../quizScreen/QuestionScreen";
 
 const QuizRatio = () => {
   const [openIntro, setOpenIntro] = useState<Boolean>(false);
@@ -63,7 +64,8 @@ const QuizRatio = () => {
           </div>
         </div>
       </div>
-      <IntroScreen open={openIntro} close={hanldeOpenedQuiz} />
+      {/* <IntroScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
+      <QuestionScreen open={openIntro} close={hanldeOpenedQuiz} />
     </>
   );
 };
