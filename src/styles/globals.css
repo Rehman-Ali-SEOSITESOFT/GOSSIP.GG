@@ -375,7 +375,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and ( -width: 1100px) {
   .about-user-description {
     display: -webkit-box;
     -webkit-line-clamp: 3;

@@ -7,6 +7,7 @@ import image3 from "../../assets/rewards/three.png";
 import Image from "next/image";
 import HeroSection from "@/components/Rewards/HeroSection/HeroSection";
 import PreviousGiveAways from "@/components/Rewards/PreviousGiveAways";
+import QuizHistory from "@/components/Rewards/QuizHistory";
 
 const page = () => {
   return (
@@ -50,6 +51,7 @@ const page = () => {
         </div>
         <HeroSection />
         <PreviousGiveAways />
+        <QuizHistory />
       </section>
     </>
   );
