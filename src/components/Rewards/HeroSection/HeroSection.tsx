@@ -11,15 +11,18 @@ import trophy from "../../../assets/rewards/trohy.png";
 import tick from "../../../assets/rewards/mark.png";
 import gossipWinner from "../../../assets/rewards/rightGroup.png";
 import blur from "../../../assets/rewards/blue.png";
+import advertisment from "../../../assets/rewards/advertisement.png";
+import tabHero from "../../../assets/rewards/tabHero.png";
+import laptop from "../../../assets/rewards/laptoop.png";
 const HeroSection = () => {
   return (
     <>
       <section>
         <div className="global-section-width ">
           <div className="2xl:container">
-            <div className="flex mw-lg:flex-col mt-[51px]">
-              <div className="w-5/12 mw-xl:w-1/2 block mw-lg:hidden mw-lg:w-full">
-                <div className="right-side pl-8 mx-14:pl-6 mw-lg:pl-0 mw-lg:py-5 mw-lg:h-auto flex flex-col justify-between">
+            <div className="flex mw-lg:flex-col mt-[51px] mw-md:mt-[20px]">
+              <div className="w-5/12 mw-xl:w-2/5 block  mw-lg:w-full">
+                <div className="right-side pl-8 mx-14:pl-6 mw-lg:pl-0 mw-lg:py-5 mw-lg:h-auto flex flex-col justify-between mw-sm:py-[0px]">
                   <div className="left_top mb-[16px]">
                     <div className="relative border-[1px] border-[#000]">
                       <Image
@@ -48,7 +51,7 @@ const HeroSection = () => {
                         </div>
                       </div>
                       <div className="absolute bottom-[17px]  flex">
-                        <div className="ml-[16px] border-r-[1px] border-borderColor pr-[12px]">
+                        <div className="ml-[16px] border-r-[1px] border-borderColor pr-[12px] mw-12:ml-[8px]">
                           <div className="flex items-center">
                             <Image src={remote} alt="" className="" />
                             <h4 className="montserratfont font-semibold text-[32px] uppercase text-[#E5E5E5] ml-[6px]">
@@ -59,7 +62,7 @@ const HeroSection = () => {
                             Quizzes Played
                           </p>
                         </div>
-                        <div className="ml-[16px] border-r-[1px] border-borderColor pr-[12px]">
+                        <div className="ml-[16px] border-r-[1px] border-borderColor pr-[12px] mw-12:ml-[8px]">
                           <div className="flex items-center">
                             <Image src={target} alt="" className="" />
                             <h4 className="montserratfont font-semibold text-[32px] uppercase text-[#E5E5E5] ml-[6px]">
@@ -83,7 +86,7 @@ const HeroSection = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="bg-[#141313] rounded-b-lg  pl-[18px] pb-[13px] flex items-center">
+                    <div className="bg-[#141313] rounded-b-lg  pl-[18px] pb-[13px] flex items-center pr-[18px]">
                       <div className="">
                         <div className="flex items-center">
                           <Image
@@ -91,7 +94,7 @@ const HeroSection = () => {
                             alt=""
                             className="w-[38px] h-[44px]"
                           />
-                          <h4 className="montserratfont text-[#ED4E50] text-[46.08px] font-semibold uppercase leading-normal	pl-[6px]">
+                          <h4 className="montserratfont text-[#ED4E50] text-[46.08px] font-semibold uppercase leading-normal	pl-[6px] mw-12:text-[40px]">
                             02
                           </h4>
                         </div>
@@ -102,42 +105,42 @@ const HeroSection = () => {
                           Last played yesterday
                         </p>
                       </div>
-                      <div className="ml-[60px]">
+                      <div className="ml-[60px] mw-12:ml-[40px]">
                         <div className="flex items-center">
-                          <div className="h-[34px]">
-                            <p className="mr-[22px] interfonts text-[22px] font-bold capitalize text-[#ED4E50] leading-normal">
+                          <div className="h-[34px] ">
+                            <p className="mr-[22px] interfonts text-[22px] font-bold capitalize text-[#ED4E50] leading-normal mw-12:mr-[12px] mw-12:text-[18px]">
                               M
                             </p>
                             <Image src={tick} alt="" />
                           </div>
                           <div className="h-[34px]">
-                            <p className="mr-[22px] text-[22px] font-bold capitalize text-[#ED4E50] leading-normal">
+                            <p className="mr-[22px] text-[22px] font-bold capitalize text-[#ED4E50] leading-normal mw-12:mr-[12px] mw-12:text-[18px]">
                               T
                             </p>
                             <Image src={tick} alt="" />
                           </div>
                           <div className="h-[34px]">
-                            <p className="mr-[22px] text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal">
+                            <p className="mr-[22px] text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[12px] mw-12:text-[18px]">
                               W
                             </p>
                           </div>
                           <div className="h-[34px]">
-                            <p className="mr-[22px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal">
+                            <p className="mr-[22px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[12px] mw-12:text-[18px]">
                               Th
                             </p>
                           </div>
                           <div className="h-[34px]">
-                            <p className="mr-[22px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal">
+                            <p className="mr-[22px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[12px] mw-12:text-[18px]">
                               F
                             </p>
                           </div>
                           <div className="h-[34px]">
-                            <p className="mr-[22px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal">
+                            <p className="mr-[22px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[12px] mw-12:text-[18px]">
                               Sa
                             </p>
                           </div>
                           <div className="h-[34px]">
-                            <p className="mr-[22px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal">
+                            <p className="mr-[22px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[12px] mw-12:text-[18px]">
                               Su
                             </p>
                           </div>
@@ -145,52 +148,65 @@ const HeroSection = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="">
-                    <Image src={heroimage2} alt="" className="w-full h-full" />
+                  <div className=" mw-lg:text-center">
+                    <p className="hidden mw-lg:block montserratfont text-[12px] leading-normal font-medium	text-brandLightOpacity70 mt-[48px]">
+                      Advertisement
+                    </p>
+                    <Image
+                      src={heroimage2}
+                      alt=""
+                      className="w-full h-full mw-lg:hidden"
+                    />
+                    <Image
+                      src={advertisment}
+                      alt=""
+                      className=" mw-lg:m-auto mw-lg:block hidden "
+                    />
                   </div>
                 </div>
               </div>
-              <div className="w-7/12 mw-xl:w-1/2 mw-lg:w-full relative">
+              <div className="w-7/12  mw-xl:w-3/5 mw-lg:w-full relative mw-lg:mt-[48px]">
                 <Image
                   src={gossipWinner}
                   alt=""
-                  className="float-right	h-full"
+                  className="float-right	h-full mx-14:pl-[20px] mw-xl:pl-[25px]  mw-lg:hidden"
                 />
-                <div className="absolute bottom-[24px] right-[24px]">
+                <Image
+                  src={laptop}
+                  alt=""
+                  className="w-full h-full mw-lg:block hidden mw-sm:hidden"
+                />
+                <Image
+                  src={tabHero}
+                  alt=""
+                  className="w-full h-full mw-sm:block hidden"
+                />
+                <div className="absolute bottom-[24px] right-[24px] mw-sm4:right-[17px] mw-sm4:bottom-[8px]">
                   <div className="relative">
-                    <Image src={blur} alt="" className="w-[376px] h-[300px]" />
-                    <div className="absolute top-[21px] left-[16px]">
-                      <h6 className="montserratfont font-medium	tracking-[9.8px] text-[14px] text-[#fff] leading-normal">
+                    <Image
+                      src={blur}
+                      alt=""
+                      className="w-[376px] h-[300px] mw-12:h-[280px] mw-md:w-[300px] mw-md:h-[250px] mw-sm:h-[220px] mw-sm4:w-[230px] mw-sm4:h-[180px]"
+                    />
+                    <div className="absolute top-[21px] left-[16px] ">
+                      <h6 className="montserratfont font-medium	tracking-[9.8px] text-[14px] text-[#fff] leading-normal ">
                         QUIZ
                       </h6>
-                      <p className="montserratfont text-[32px] font-semibold leading-normal text-[#E5E5E5] pt-[22px] pb-[22px]">
+                      <p className="montserratfont text-[32px] font-semibold leading-normal text-[#E5E5E5] pt-[22px] pb-[22px] mw-12:text-[28px] mw-md:text-[22px] mw-sm:text-[20px] mw-sm:pt-[6px] mw-sm:pb-[6px] mw-sm4:text-[14px]">
                         Play today to win <br /> exciting prizes like <br />
                         these.
                       </p>
-                      <button className="montserratfont text-[18px] font-semibold leading-normal text-[#fff] bg-[#ED4E50] rounded-[10px] pt-[10px] pb-[10px] pl-[29px] pr-[29px]">
+                      <button className="montserratfont text-[18px] font-semibold leading-normal text-[#fff] bg-[#ED4E50] rounded-[10px] pt-[10px] pb-[10px] pl-[29px] pr-[29px] mw-sm4:text-[9.75px]">
                         Play Now
                       </button>
                     </div>
                   </div>
                 </div>
-
-                {/* <div className="relative right-[15px] bottom-[24px]  w-[52%]  rounded">
-                  <div className="pt-[21px] pl-[16px] pr-[18px] absolute">
-                    <h6 className="montserratfont font-medium	tracking-[9.8px] text-[14px] text-[#fff] leading-normal">
-                      QUIZ
-                    </h6>
-                    <p className="montserratfont text-[32px] font-semibold leading-normal text-[#E5E5E5] pt-[22px] pb-[22px]">
-                      Play today to win <br /> exciting prizes like <br />
-                      these.
-                    </p>
-                    <button>Play Now</button>
-                  </div>
-                </div> */}
               </div>
 
-              <div className="w-5/12 mw-xl:w-1/2 hidden mw-lg:block mw-lg:w-full">
+              {/* <div className="w-5/12 mw-xl:w-1/2 hidden mw-lg:block mw-lg:w-full">
                 <div className="right-side pl-8 mx-14:pl-6 mw-lg:pl-0 mw-lg:py-5 h-[450px] mx-14-h[420px]  mw-lg:h-auto flex flex-col justify-between mw-lg:flex-row mw-sm:flex-col"></div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
