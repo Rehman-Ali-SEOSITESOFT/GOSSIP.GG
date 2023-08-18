@@ -15,7 +15,6 @@ const QuizRatio = () => {
   const hanldeOpenedQuiz = () => {
     setOpenIntro(!openIntro);
   };
-
   return (
     <>
       <div className="quiz-ration fixed right-[15px] bottom-[100px] w-full max-w-[130px] ">
