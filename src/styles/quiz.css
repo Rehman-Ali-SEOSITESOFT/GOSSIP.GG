@@ -17,3 +17,47 @@
 .into-screen-btn {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
 }
+.fade_Out_Up_Big {
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-name: logoAnimated;
+  animation-direction: alternate;
+  transform: rotate(80deg);
+  opacity: 0;
+  /* transform: translate3d(15px, -270px, 0); */
+  /* width: 140px; */
+}
+
+.logoed {
+  animation-duration: 0.1s;
+  animation-delay: 1s;
+  animation-name: logoHide;
+  transform-origin: 0;
+  /* translate: 3d; */
+  animation-fill-mode: backwards;
+  opacity: 1;
+}
+@keyframes logoAnimated {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0px, 0);
+  }
+
+  100% {
+    width: 140px;
+    opacity: 1;
+    transform: translate3d(15px, -270px, 0);
+  }
+}
+@keyframes logoHide {
+  0% {
+    opacity: 0 !important;
+    transform-origin: 0%;
+
+    transform: translate3d(-1000px, 0px, 0);
+  }
+  100% {
+    transform-origin: 0%;
+    opacity: 1;
+  }
+}

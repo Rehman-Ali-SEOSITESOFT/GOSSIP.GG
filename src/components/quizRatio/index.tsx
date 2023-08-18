@@ -5,7 +5,7 @@ import greencircle from "../../assets/quiz-model/green-icon.svg";
 import doublearrow from "../../assets/quiz-model/duble-arrow.png";
 import close from "../../assets/quiz-model/close.png";
 import Image from "next/image";
-import IntroScreen from "../quizScreen/introScreen";
+import IntroScreen from "../QuizScreen/IntroScreen";
 
 const QuizRatio = () => {
   const [openIntro, setOpenIntro] = useState<Boolean>(false);
@@ -15,7 +15,6 @@ const QuizRatio = () => {
   const hanldeOpenedQuiz = () => {
     setOpenIntro(!openIntro);
   };
-
   return (
     <>
       <div className="quiz-ration fixed right-[15px] bottom-[100px] w-full max-w-[130px] ">
