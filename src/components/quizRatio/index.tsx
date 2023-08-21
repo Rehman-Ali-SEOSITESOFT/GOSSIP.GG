@@ -7,6 +7,9 @@ import close from "../../assets/quiz-model/close.png";
 import Image from "next/image";
 import IntroScreen from "../QuizScreen/IntroScreen";
 import QuestionScreen from "../QuizScreen/QuestionScreen";
+import AnswerSubmitScreen from "../QuizScreen/AnswerSubmittedScreen";
+import TermsAndCondition from "../QuizScreen/TermsAndConditonScreen";
+import WinnerScreenTwo from "../QuizScreen/WinnerScreenTwo";
 
 const QuizRatio = () => {
   const [openIntro, setOpenIntro] = useState<Boolean>(false);
@@ -31,6 +34,7 @@ const QuizRatio = () => {
     // document.querySelector(".fade-out--hidden")?.classList.add("block");
     // }, 1500);
   };
+
   return (
     <>
       <div className="quiz-ration fixed right-[15px] bottom-[100px] w-full max-w-[130px] ">
@@ -82,9 +86,12 @@ const QuizRatio = () => {
       <IntroScreen
         open={openIntro}
         close={hanldeOpenedQuiz}
-        animatedState={animatedState}
+        // animatedState={animatedState}
       />
       {/* <QuestionScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
+      {/* <AnswerSubmitScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
+      {/* <TermsAndCondition open={openIntro} close={hanldeOpenedQuiz} /> */}
+      <WinnerScreenTwo open={openIntro} close={hanldeOpenedQuiz} />
     </>
   );
 };
