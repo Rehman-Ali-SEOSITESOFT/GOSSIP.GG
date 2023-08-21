@@ -1,11 +1,64 @@
 import SectionSaprator from "@/components/SecSaprator";
 import React, { useState } from "react";
+import classNames from "classnames";
+import Slider from "react-slick";
+import style from "./QuizHistory.module.css";
+import Accordiannn from "../Accordian/Accordian";
+import Pagination from "@/components/Pagination";
 
 const QuizHistory = () => {
+  interface EventList {
+    event_title: string;
+    date: string;
+    country: string;
+    prize: string;
+  }
+  interface Sliders {
+    date: string;
+    heading: string;
+    winnername: string;
+  }
+  const [list, setList] = useState<Sliders[]>([
+    {
+      date: "27 july",
+      heading: " What is the largest ever prize pool for a gaming tournament?",
+      winnername: " @winner_nemel",
+    },
+    {
+      date: "27 july",
+      heading: " What is the largest ever prize pool for a gaming tournament?",
+      winnername: " @winner_nemel",
+    },
+    {
+      date: "27 july",
+      heading: " What is the largest ever prize pool for a gaming tournament?",
+      winnername: " @winner_nemel",
+    },
+    {
+      date: "27 july",
+      heading: " What is the largest ever prize pool for a gaming tournament?",
+      winnername: " @winner_nemel",
+    },
+    {
+      date: "27 july",
+      heading: " What is the largest ever prize pool for a gaming tournament?",
+      winnername: " @winner_nemel",
+    },
+  ]);
   const [openTab, setOpenTab] = useState<number | null>(1);
   const [open, setOpen] = useState<boolean | null>(false);
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
+
   const onClickOpenModal = () => {
     setOpen(!open);
+  };
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
   };
   return (
     <>
@@ -56,39 +109,39 @@ const QuizHistory = () => {
                   </a>
                 </li>
               </ul>
-              <div className="mb-6">
-                <div className="tab-content tab-space w-full pt-12 h-full min-h-[800px] mw-md:min-h-[600px]	">
+              <div className="mb-6 ">
+                <div className="tab-content tab-space w-full  h-full  	">
                   <div
-                    className={openTab === 1 ? "block" : "hidden"}
+                    className={
+                      openTab === 1 ? "  rounded-lg	 overflow-hidden	" : "hidden"
+                    }
                     id="link1"
                   >
-                    <div className="for-you-section text-center">
-                      <p className="montserratfont font-normal text-base leading-5 dark:text-brandLightOpacity100 text-brandDark2">
-                        You have not yet played any quizzes!
-                      </p>
-                      <h5 className="text-brandDark2 dark:text-brandLightOpacity100 font-semibold test-base leading-5  montserratfont py-12 pb-28">
-                        Play today's quiz
-                        <a href="#" className="underline underline-offset-4	">
-                          &nbsp;here.
-                        </a>
-                      </h5>
+                    <div className="for-you-section  pt-[51px]  ">
+                      {list.map((e, idx) => (
+                        <div key={idx} className="mb-[13px]">
+                          <Accordiannn
+                            date={e.date}
+                            heading={e.heading}
+                            winnername={e.winnername}
+                          />
+                        </div>
+                      ))}
+
+                      <div className={style.main_pagination_gap}>
+                        <Pagination />
+                      </div>
                     </div>
                   </div>
-                  <div
-                    className={openTab === 2 ? "block" : "hidden"}
-                    id="link2"
-                  >
-                    <div className="for-you-section text-center">
-                      <p className="montserratfont font-normal text-base leading-5 dark:text-brandLightOpacity100 text-brandDark2">
-                        You have not yet played any quizzes!
-                      </p>
-                      <h5 className="text-brandDark2 dark:text-brandLightOpacity100 font-semibold test-base leading-5  montserratfont py-12 pb-28">
-                        Play today's quiz
-                        <a href="#" className="underline underline-offset-4	">
-                          &nbsp;here for all players.
-                        </a>
-                      </h5>
-                    </div>
+                </div>
+                <div className={openTab === 2 ? "block" : "hidden"} id="link2">
+                  <div className="for-saved-section text-center ">
+                    <h5 className="text-brandDark2 dark:text-brandLightOpacity100 font-semibold test-base leading-5  montserratfont pt-12	pb-7 ">
+                      <a href="#" className="underline underline-offset-4 ">
+                        Continue reading&nbsp;
+                      </a>
+                      to save articles you like.
+                    </h5>
                   </div>
                 </div>
               </div>
