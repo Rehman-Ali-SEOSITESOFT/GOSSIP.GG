@@ -2,15 +2,16 @@
 
 import { Dialog, Transition } from "@headlessui/react";
 
-import React, { Fragment, useRef } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import logo from "../../../assets/quiz-model/title-logo.png";
-import bottomlogo from "../../../assets/quiz-model/into-bottom-logo.png";
+import bottomlogo from "../../../assets/quiz-model/into-bottom-logo-1.png";
 import background from "../../../assets/quiz-model/backgorund-img.png";
 import doublearrow from "../../../assets/quiz-model/duble-arrow.png";
 import Image from "next/image";
 
 const IntroScreen = (props: any) => {
   const cancelButtonRef = useRef(null);
+
   return (
     <Transition.Root show={props.open} as={Fragment}>
       <Dialog
@@ -41,9 +42,9 @@ const IntroScreen = (props: any) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="fixed inset-[70px] w-[375px] left-auto mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
+            <Dialog.Panel className="fixed inset-[70px] w-[375px] left-auto mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-x-hidden scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
               {/* top   */}
-              <div className="flex flex-col justify-between h-full">
+              <div className="flex flex-col justify-between h-full overflow-hidden">
                 <div className="flex justify-center items-center  pt-[60px]">
                   <div className="ml-[-40px]  logoed">
                     <Image src={logo} alt="lgo" />
@@ -62,24 +63,30 @@ const IntroScreen = (props: any) => {
                     Answer one question and this could be yours!
                   </p>
                 </div>
-                <div className="relative  h-full">
-                  {/* <div className="absolute left-0 right-0 bottom-[130px]">
-                    <button className="bg-brand  max-w-[177px] w-full h-[42px] flex items-center justify-between rounded-3xl m-auto pl-[27px] pr-[15px]	into-screen-btn">
-                      <span className="inline-block montserratfont text-[#fff]  text-base font-semibold">
-                        {" "}
-                        Play Now{" "}
-                      </span>
-                      <span className="inline-block">
-                        <Image src={doublearrow} alt="lgo" />
-                      </span>
-                    </button>
+
+                <div className="relative   h-[450px] ">
+                  <span className="block  h-full">
+                    <div className="absolute left-0 right-0 bottom-[130px] z-10">
+                      <button className="bg-brand  max-w-[177px] w-full h-[42px] flex items-center justify-between rounded-3xl m-auto pl-[27px] pr-[15px]	into-screen-btn">
+                        <span className="inline-block montserratfont text-[#fff]  text-base font-semibold">
+                          {" "}
+                          Play Now{" "}
+                        </span>
+                        <span className="inline-block">
+                          <Image src={doublearrow} alt="lgo" />
+                        </span>
+                      </button>
+                    </div>
+                    <Image
+                      src={background}
+                      alt="lgo"
+                      className="h-full  rotad-left"
+                    />
+                  </span>
+
+                  <div className="absolute bottom-0 fade_Out_Up_Big ">
+                    <Image src={bottomlogo} alt="lgo" />
                   </div>
-                  <Image src={background} alt="lgo" /> */}
-                  <Image
-                    src={bottomlogo}
-                    alt="lgo"
-                    className="fade_Out_Up_Big"
-                  />
                 </div>
               </div>
             </Dialog.Panel>

@@ -6,15 +6,30 @@ import doublearrow from "../../assets/quiz-model/duble-arrow.png";
 import close from "../../assets/quiz-model/close.png";
 import Image from "next/image";
 import IntroScreen from "../QuizScreen/IntroScreen";
-import QuestionScreen from "../QuizScreen/QuestionScreen/";
+import QuestionScreen from "../QuizScreen/QuestionScreen";
 
 const QuizRatio = () => {
   const [openIntro, setOpenIntro] = useState<Boolean>(false);
+  // const [animatedState, setAnimatedState] = useState<Boolean>(true);
+
   const hanldeClosedQuiz = () => {
     console.log("closed");
   };
   const hanldeOpenedQuiz = () => {
     setOpenIntro(!openIntro);
+    // setTimeout(() => {
+    //   setAnimatedState(!animatedState);
+    // if (animatedState) {
+    //   document.querySelector(".fade_Out_Up_Big")?.classList.add("block");
+    //   document.querySelector(".fade-out--hidden")?.classList.add("hinden");
+    // } else {
+    //   document.querySelector(".fade_Out_Up_Big")?.classList.remove("block");
+    //   document.querySelector(".fade-out--hidden")?.classList.remove("hidden");
+    // }
+    // console.log("loaded");
+    // document.querySelector(".fade_Out_Up_Big")?.classList.add("hidden");
+    // document.querySelector(".fade-out--hidden")?.classList.add("block");
+    // }, 1500);
   };
   return (
     <>
@@ -64,7 +79,11 @@ const QuizRatio = () => {
           </div>
         </div>
       </div>
-      <IntroScreen open={openIntro} close={hanldeOpenedQuiz} />
+      <IntroScreen
+        open={openIntro}
+        close={hanldeOpenedQuiz}
+        animatedState={animatedState}
+      />
       {/* <QuestionScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
     </>
   );
