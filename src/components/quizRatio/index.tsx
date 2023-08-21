@@ -91,7 +91,7 @@ const QuizRatio = () => {
       {/* <QuestionScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <AnswerSubmitScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <TermsAndCondition open={openIntro} close={hanldeOpenedQuiz} /> */}
-      <WinnerScreenTwo open={openIntro} close={hanldeOpenedQuiz} />
+      {/* <WinnerScreenTwo open={openIntro} close={hanldeOpenedQuiz} /> */}
     </>
   );
 };
