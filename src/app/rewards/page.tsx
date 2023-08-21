@@ -8,6 +8,7 @@ import Image from "next/image";
 import HeroSection from "@/components/Rewards/HeroSection/HeroSection";
 import PreviousGiveAways from "@/components/Rewards/PreviousGiveAways";
 import QuizHistory from "@/components/Rewards/QuizHistory";
+import Faqs from "@/components/Rewards/Faqs/Faqs";
 
 const page = () => {
   return (
@@ -52,6 +53,7 @@ const page = () => {
         <HeroSection />
         <PreviousGiveAways />
         <QuizHistory />
+        <Faqs />
       </section>
     </>
   );

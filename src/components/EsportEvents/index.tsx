@@ -99,7 +99,7 @@ const EsportEvent = (props: any) => {
           infinite: true,
           arrows: false,
         },
-      }
+      },
     ],
   };
 

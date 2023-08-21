@@ -17,7 +17,7 @@ const Pagination = () => {
   return (
     <>
       <div className="2xl:container ">
-        <div className="flex w-full py-[88px] mw-md:py-[70px] mw-sm:py-[50px]">
+        <div className="flex w-full py-[88px] mw-md:py-[70px] mw-sm:py-[50px] pagi">
           <div className="w-[450px] m-auto">
             <div className="pagination flex justify-between items-center">
               <div className="back-arrow inline-block bg-grayCard dark:bg-brandDark1 dark:hover:bg-brandLightOpacity10 w-[32px] h-[32px] leading-[32px] flex justify-center items-center rounded-2xl cursor-pointer hover:bg-borderEditProfile">
