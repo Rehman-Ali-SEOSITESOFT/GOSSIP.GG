@@ -39,6 +39,8 @@ module.exports = {
         errorIndicator: "#d91618",
         // custom color
         white: "#ffffff",
+        switch: "#292828",
+        swtichTip:"#4f4e4e",
         iconBackground: "#ededed",
         bodycolor: "#f8f8f8",
         grayCard: "rgba(34, 30, 31, 0.1)",

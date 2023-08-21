@@ -6,10 +6,9 @@ import React, { Fragment, useRef, useState } from "react";
 import Banner from "../../../assets/quiz-model/banner.png";
 import Product from "../../../assets/quiz-model/product.png";
 import Close from "../../../assets/images/modal/close.png";
-import image1 from "../../../assets/rewards/one.png";
-import image2 from "../../../assets/rewards/two.png";
-import image3 from "../../../assets/rewards/three.png";
 import Image from "next/image";
+import CountdownSection from "../CountdownSec";
+import InviteFriendSection from "../InviteFriendsSec";
 
 const QuestionScreen = (props: any) => {
   const cancelButtonRef = useRef(null);
@@ -75,36 +74,9 @@ const QuestionScreen = (props: any) => {
                     <Image src={Close} alt="Close" />
                   </div>
                 </div>
-                <div className="flex flex-row justify-between items-center content-center  ">
-                  <div className="flex items-center ml-[38px] mt-[12px] ">
-                    <div className="flex items-center relative">
-                      <Image
-                        src={image1}
-                        alt=""
-                        className="w-[24px] h-[24px] absolute left-[-28px] z-[1]"
-                      />
-                      <Image
-                        src={image2}
-                        alt=""
-                        className="w-[24px] h-[24px] absolute left-[-12px]"
-                      />
-                      <Image
-                        src={image3}
-                        alt=""
-                        className="w-[24px] h-[24px] "
-                      />
-                    </div>
-                    <div className="ml-[5px]">
-                      <p className="montserratfont text-[12px] font-normal text-[#E5E5E5]">
-                        and 54 others are playing
-                      </p>
-                    </div>
-                  </div>
-                  <p className=" mr-[16px] mt-[16px] text-brandLightOpacity70 border-b-[1px] border-b-brandLightOpacity70 leading-none min-w-min montserratfont text-[12px] font-medium">
-                    Invite Friends
-                  </p>
-                </div>
-                <div className="mx-[16px] my-[10px]">
+               <InviteFriendSection/>
+                <CountdownSection/>
+                <div className="mx-[16px] my-[13px]">
                   <Image src={Product} alt="Product" />
                 </div>
                 <div className="border-l-2 border-l-brand ml-[20px]">
@@ -117,9 +89,9 @@ const QuestionScreen = (props: any) => {
                     {questionList.map((item, index) => (
                       <div
                         key={index}
-                        onClick={() => onClickSelectOption(index)}
+                        onClick={() => onClickSelectOption(index + 1)}
                         className={`min-w-fit mx-5   mb-3  mw-sm:mb-2 mw-sm:mx-5 flex flex-row items-center justify-center  border hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] ${
-                          index == optionNumber
+                          index + 1 == optionNumber
                             ? "bg-arrowicon dark:bg-[#141313]   dark:border-brand"
                             : "dark:border-brandLightOpacity10 dark:bg-brandLightOpacity5"
                         } border-brandDark2   rounded h-11`}
@@ -132,7 +104,7 @@ const QuestionScreen = (props: any) => {
                         </p>
                         <p
                           className={`pr-[40px] mx-auto hover:text-brandDark2 dark:hover:text-brandLightOpacity100 items-start  ${
-                            index == optionNumber
+                            index + 1 == optionNumber
                               ? "text-brandDark2 font-bold dark:text-brandLightOpacity100"
                               : "text-brandDark2 dark:text-brandLightOpacity100 font-light"
                           } text-base  text-[14px]  montserratfont `}
