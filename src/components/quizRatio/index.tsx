@@ -5,12 +5,11 @@ import greencircle from "../../assets/quiz-model/green-icon.svg";
 import doublearrow from "../../assets/quiz-model/duble-arrow.png";
 import close from "../../assets/quiz-model/close.png";
 import Image from "next/image";
-import IntroScreen from "../QuizScreen/IntroScreen";
+import IntroScreen from "../quizScreen/IntroScreen";
 import QuestionScreen from "../QuizScreen/QuestionScreen";
 import AnswerSubmitScreen from "../QuizScreen/AnswerSubmittedScreen";
 import TermsAndCondition from "../QuizScreen/TermsAndConditonScreen";
 import WinnerScreenTwo from "../QuizScreen/WinnerScreenTwo";
-
 
 const QuizRatio = () => {
   const [openIntro, setOpenIntro] = useState<Boolean>(false);
