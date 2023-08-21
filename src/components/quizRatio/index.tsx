@@ -5,9 +5,8 @@ import greencircle from "../../assets/quiz-model/green-icon.svg";
 import doublearrow from "../../assets/quiz-model/duble-arrow.png";
 import close from "../../assets/quiz-model/close.png";
 import Image from "next/image";
-import IntroScreen from "../quizScreen/introScreen";
-import QuestionScreen from "../quizScreen/QuestionScreen";
-
+import IntroScreen from "../QuizScreen/IntroScreen";
+import QuestionScreen from "../QuizScreen/QuestionScreen/";
 
 const QuizRatio = () => {
   const [openIntro, setOpenIntro] = useState<Boolean>(false);
