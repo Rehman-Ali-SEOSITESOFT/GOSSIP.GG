@@ -10,6 +10,8 @@ import QuestionScreen from "../QuizScreen/QuestionScreen";
 import AnswerSubmitScreen from "../QuizScreen/AnswerSubmittedScreen";
 import TermsAndCondition from "../QuizScreen/TermsAndConditonScreen";
 import WinnerScreenTwo from "../QuizScreen/WinnerScreenTwo";
+import QuizStartTiemScreen from "../QuizScreen/QuizStartTimeScreen";
+import AnsweredIncorrectly from "../QuizScreen/AnsweredIncorrectly";
 
 
 const QuizRatio = () => {
@@ -72,8 +74,10 @@ const QuizRatio = () => {
       {/* <IntroScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <QuestionScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <AnswerSubmitScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
-      <TermsAndCondition open={openIntro} close={hanldeOpenedQuiz} />
+      {/* <TermsAndCondition open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <WinnerScreenTwo open={openIntro} close={hanldeOpenedQuiz} /> */}
+      {/* <QuizStartTiemScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
+      <AnsweredIncorrectly open={openIntro} close={hanldeOpenedQuiz} />
     </>
   );
 };
