@@ -86,9 +86,7 @@ const WinnerScreenTwo = (props: any) => {
                       @Naveen
                     </p>
                     </div>
-                    
                   </div>
-
                   <div className="px-4 mb-[50px]">
                     <div className="flex flex-row items-center justify-center mb-[4px] ">
                       <div className="bg-gradient-to-l mw-sm:min-w-[25%] min-w-[35%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
