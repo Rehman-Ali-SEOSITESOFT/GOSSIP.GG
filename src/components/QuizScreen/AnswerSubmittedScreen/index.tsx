@@ -77,12 +77,13 @@ const AnswerSubmitScreen = (props: any) => {
                         onChange={setEnabled}
                         className={`${
                           enabled ? "bg-[#ed4e50]" : "bg-[#292828]"
-                        } relative inline-flex h-6 w-11 items-center rounded-full outline-none`}
+                        } relative inline-flex  h-[24px] w-[56px] items-center rounded-full outline-none`}
                       >
-                       
                         <span
                           className={`${
-                            enabled ? "translate-x-6  bg-brandLightOpacity100" : "translate-x-1 bg-swtichTip"
+                            enabled
+                              ? "translate-x-9  bg-brandLightOpacity100"
+                              : "translate-x-1 bg-swtichTip"
                           } inline-block h-4 w-4 transform rounded-full
                            transition`}
                         />

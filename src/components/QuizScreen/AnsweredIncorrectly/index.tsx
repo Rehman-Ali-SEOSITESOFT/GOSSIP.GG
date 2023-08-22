@@ -5,11 +5,15 @@ import Banner from "../../../assets/quiz-model/banner.png";
 import Close from "../../../assets/images/modal/close.png";
 import Image from "next/image";
 import InviteFriendSection from "../InviteFriendsSec";
-import Prize from "../../../assets/quiz-model/prize.png";
-import WinLogo from "../../../assets/quiz-model/win-logo.png";
+import Sad from "../../../assets/quiz-model/sad.png";
+import Win1 from "../../../assets/quiz-model/win1.png";
+import Win2 from "../../../assets/quiz-model/win2.png";
+import Win3 from "../../../assets/quiz-model/win3.png";
+import Win4 from "../../../assets/quiz-model/win4.png";
+import Win5 from "../../../assets/quiz-model/win5.png";
 import { Switch } from "@headlessui/react";
-
-
+import { Disclosure } from "@headlessui/react";
+import { ChevronUpIcon } from "@heroicons/react/20/solid";
 const AnsweredIncorrectly = (props: any) => {
   const cancelButtonRef = useRef(null);
   const [enabled, setEnabled] = useState<boolean | any>(false);
@@ -61,22 +65,97 @@ const AnsweredIncorrectly = (props: any) => {
                   </div>
                 </div>
                 <InviteFriendSection />
+                <div className="ml-4 mt-2">
+                  <p className="text-[12px] italic montserratfont dark:text-brandLightOpacity70 text-left">
+                    Correct Answer:
+                    <span className="dark:text-brand">
+                      &nbsp;Option B&nbsp;
+                    </span>
+                    2 Million
+                  </p>
+                </div>
+                <div className="flex flex-col items-center mt-[24px]">
+                  <Image src={Sad} alt="Sad Emoji" />
+                  <p className="montserratfont dark:text-brand font-semibold text-[16px]">
+                    Uh-Oh!
+                  </p>
+                  <p className="montserratfont text-[14px] dark:to-brandLightOpacity100">
+                    Looks like you answered this quiz incorrectly.
+                  </p>
+                  <div className="">
+                    <div className="oultine-none mt-[2px] ">
+                      <Disclosure>
+                        {({ open }) => (
+                          <>
+                            <Disclosure.Button className="flex flex-row item-center  focus:outline-none ">
+                              <span className="text-[12px] montserratfont font-light dark:text-[#818181]">
+                                Here’s how you can get better
+                              </span>
+                              <ChevronUpIcon
+                                className={`${
+                                  open ? "rotate-180 transform" : ""
+                                } h-5 w-5 dark:text-[#818181]`}
+                              />
+                            </Disclosure.Button>
+                            <Disclosure.Panel className="pt-[4px]">
+                              <p className="italic text-left text-[12px] montserratfont font-light dark:text-brandLightOpacity70">
+                                <span>&#x2022;&nbsp; </span>Read more articles
+                              </p>
+                              <p className="text-left italic text-[12px] montserratfont font-light dark:text-brandLightOpacity70">
+                                <span>&#x2022;&nbsp; </span>Pay attention to
+                                details
+                              </p>
+                            </Disclosure.Panel>
+                          </>
+                        )}
+                      </Disclosure>
+                    </div>
+                  </div>
+                </div>
 
                 <div className="flex flex-col  mt-[14px]">
-                  <div className="mb-[12px] flex flex-col items-center justify-center">
-                    
-               
-                  </div>
+                  <div className="mb-[12px] flex flex-col items-center justify-center"></div>
 
-                  <div className="px-4 mb-[50px]">
-                    <div className="flex flex-row items-center justify-center mb-[4px] ">
-                      <div className="bg-gradient-to-l mw-sm:min-w-[25%] min-w-[25%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
-                      <p className="montserratfont mw-sm:text-sm text-[14px] font-medium dark:text-brand">
+                  <div className=" ">
+                    <div className="px-[1px] flex flex-row items-center justify-center mb-[4px] ">
+                      <div className="bg-gradient-to-l  min-w-[22%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
+                      <p className="px-[6px] montserratfont text-[14px] font-medium dark:text-brand">
                         TODAY&#39;S LUCKY WINNERS
                       </p>
-                      <div className="bg-gradient-to-r mw-sm:min-w-[25%] min-w-[25%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
+                      <div className="bg-gradient-to-r  min-w-[22%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
                     </div>
-                    <Image src={Prize} alt="Prixe" />
+                    <div className="flex flex-wrap mx-[25px] item-center justify-center mb-[40px]">
+                      <div className="w-[33.33%] flex flex-col items-center">
+                        <Image src={Win1} alt="Winner logo" />
+                        <p className="text-[12px] dark:text-brandLightOpacity100 font-medium montserratfont">
+                          @Naveen
+                        </p>
+                      </div>
+                      <div className="w-[33.33%] flex flex-col items-center">
+                        <Image src={Win2} alt="Winner logo" />
+                        <p className="text-[12px] dark:text-brandLightOpacity100 font-medium montserratfont">
+                          @Naveen
+                        </p>
+                      </div>
+                      <div className="w-[33.33%] flex flex-col items-center">
+                        <Image src={Win3} alt="Winner logo" />
+                        <p className="text-[12px] dark:text-brandLightOpacity100 font-medium montserratfont">
+                          @Naveen
+                        </p>
+                      </div>
+                      <div className="w-[33.33%] flex flex-col items-center">
+                        <Image src={Win4} alt="Winner logo" />
+                        <p className="text-[12px] dark:text-brandLightOpacity100 font-medium montserratfont">
+                          @Naveen
+                        </p>
+                      </div>
+                      <div className="w-[33.33%] flex flex-col items-center">
+                        <Image src={Win5} alt="Winner logo" />
+                        <p className="text-[12px] dark:text-brandLightOpacity100 font-medium montserratfont">
+                          @Naveen
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
                   <div className="px-[22px]">
@@ -92,12 +171,12 @@ const AnsweredIncorrectly = (props: any) => {
                         onChange={setEnabled}
                         className={`${
                           enabled ? "bg-[#ed4e50]" : "bg-[#292828]"
-                        } relative inline-flex h-6 w-11 items-center rounded-full outline-none`}
+                        } relative inline-flex  h-[24px] w-[56px] items-center rounded-full outline-none`}
                       >
                         <span
                           className={`${
                             enabled
-                              ? "translate-x-6  bg-brandLightOpacity100"
+                              ? "translate-x-9  bg-brandLightOpacity100"
                               : "translate-x-1 bg-swtichTip"
                           } inline-block h-4 w-4 transform rounded-full
                            transition`}
@@ -107,7 +186,7 @@ const AnsweredIncorrectly = (props: any) => {
                   </div>
                 </div>
                 <div>
-                  <p className="text-[12px] dark:text-brandLightOpacity70 montserratfont mt-[40px]">
+                  <p className="text-[12px] dark:text-brandLightOpacity70 montserratfont mt-[40px] pb-[4px]">
                     Terms and conditions
                   </p>
                   <a
