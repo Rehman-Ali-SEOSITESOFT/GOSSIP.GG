@@ -116,6 +116,26 @@
   transition: 1s;
   right: 0;
 }
+
+/*  ADD SCREEN */
+.add-screen {
+  background-image: url("../assets/quiz-model/add-screen.png");
+}
+
+.text-shadow {
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.text-shadow:focus-visible {
+  outline: none;
+}
+
+.add-screen-bg-filter {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 15.65%,
+    rgba(0, 0, 0, 0.69) 100%
+  );
+}
 /*  ANIMATION */
 @keyframes rotad-left {
   0% {

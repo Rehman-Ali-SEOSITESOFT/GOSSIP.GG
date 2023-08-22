@@ -146,13 +146,14 @@ const Header = () => {
     >
       <div className={`${styles.header_width} `}>
         <div
-          className={`2xl:container header_container ${styles.header_container} ${bgClassChange}   mw-lg:dark:bg-brandDark3 mw-lg:bg-brandDark2 px-[65px] h-[90px]  mx-14:h-full mx-14:px-[60px] mx-14:py-[20px]  mw-lg:px-[16px] mw-sm3:px-[15px] mw-sm3:py-[15px]`}
+          // className={`2xl:container header_container ${styles.header_container} ${bgClassChange}   mw-lg:dark:bg-brandDark3 mw-lg:bg-brandDark2 px-[65px] h-[90px]  mx-14:h-full mx-14:px-[60px] mx-14:py-[20px]  mw-lg:px-[16px] mw-sm3:px-[15px] mw-sm3:py-[15px]`}
+          className={` 2xl:container header_container   mw-lg:dark:bg-brandDark3 mw-lg:bg-brandDark2 px-[65px] h-[90px]  mx-14:h-full mx-14:px-[60px] mx-14:py-[20px]  mw-lg:px-[16px] mw-sm3:px-[15px] mw-sm3:py-[15px] ${styles.header_container} ${bgClassChange} `}
         >
           <div className="flex  h-full flex-wrap items-center justify-between">
             <div className={`xl:w-1/4 lg:w-1/5  w-3/6  ${styles.header__left}`}>
-              <a href="/" className={styles.logo}>
+              <Link href="/" className={styles.logo}>
                 <Image src={logo} alt="Gossip GG" />
-              </a>
+              </Link>
             </div>
             {searchOpen ? (
               <div className={`${styles.header__center} xl:w-3/6 lg:w-1/1  `}>
