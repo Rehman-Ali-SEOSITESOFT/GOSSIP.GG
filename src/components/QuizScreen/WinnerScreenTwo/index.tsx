@@ -61,7 +61,6 @@ const WinnerScreenTwo = (props: any) => {
                   </div>
                 </div>
                 <InviteFriendSection />
-
                 <div className="flex flex-col  mt-[14px]">
                   <div className="mb-[12px] flex flex-col items-center justify-center">
                     
@@ -97,7 +96,6 @@ const WinnerScreenTwo = (props: any) => {
                     </div>
                     <Image src={Prize} alt="Prixe" />
                   </div>
-
                   <div className="px-[22px]">
                     <p className="text-left text-brandLightOpacity100 montserratfont text-[16px] font-medium ">
                       Play again tomorrow?
