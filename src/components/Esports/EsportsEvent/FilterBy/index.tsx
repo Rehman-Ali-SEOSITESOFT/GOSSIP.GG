@@ -175,7 +175,7 @@ const FilterBy = (props?: any) => {
   const onChangeRegionCheckbox = (e: any) => {
     let copyArr = [...selectedRegion];
     let filterArr = copyArr.filter((item) => item === e.target.value);
-    let finalArr = [];
+    let finalArr: string[] = [];
     if (filterArr.length > 0) {
       finalArr = copyArr.filter((item) => item !== e.target.value);
     } else {
