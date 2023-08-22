@@ -8,7 +8,7 @@ import InviteFriendSection from "../InviteFriendsSec";
 import Prize from "../../../assets/quiz-model/prize.png";
 import WinLogo from "../../../assets/quiz-model/win-logo.png";
 import { Switch } from "@headlessui/react";
-import ReactCurvedText from "react-curved-text";
+// import ReactCurvedText from "react-curved-text";
 
 
 
@@ -65,7 +65,7 @@ const WinnerScreenTwo = (props: any) => {
                 <InviteFriendSection />
                 <div className="flex flex-col  mt-[14px]">
                   <div className="mb-[12px] flex flex-col items-center justify-center">
-                    <ReactCurvedText
+                    {/* <ReactCurvedText
                       width={372}
                       height={80}
                       cx={185}
@@ -78,7 +78,7 @@ const WinnerScreenTwo = (props: any) => {
                       textProps={{ style: { fontSize: 22, fontFamily: 'Montserrat, sans-serif', letterSpacing: 4, fontWeight: 600  } }}
                       textPathProps={{"fill": "#ed4e50"}}
                       tspanProps={{"dy": "0"}}
-                    />
+                    /> */}
                     {/* <p className="text-[22px] montserratfont dark:text-brand font-semibold">Congratulations!</p> */}
                     <div className="mt-[-40px] z-[2]">
                     <Image src={WinLogo} alt="winner logo" />
