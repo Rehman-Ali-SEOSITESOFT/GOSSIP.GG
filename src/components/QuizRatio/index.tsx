@@ -10,21 +10,34 @@ import QuestionScreen from "../QuizScreen/QuestionScreen";
 import AnswerSubmitScreen from "../QuizScreen/AnswerSubmittedScreen";
 import TermsAndCondition from "../QuizScreen/TermsAndConditonScreen";
 import WinnerScreenTwo from "../QuizScreen/WinnerScreenTwo";
-
+import AddScreen from "../QuizScreen/AdScreen";
 
 const QuizRatio = () => {
-  const [openIntro, setOpenIntro] = useState<Boolean>(false);
+  const [openIntro, setOpenIntro] = useState<Boolean>(true);
+  const [closeQuizBox, setCloseQuizBox] = useState<Boolean>(true);
+
   const hanldeClosedQuiz = () => {
     console.log("closed");
+    setCloseQuizBox(!closeQuizBox);
   };
   const hanldeOpenedQuiz = () => {
     setOpenIntro(!openIntro);
+  };
+  const openedQuizBox = () => {
+    console.log("working");
+    setCloseQuizBox(!closeQuizBox);
   };
 
   return (
     <>
       <div className="quiz-ration fixed right-[15px] bottom-[100px] w-full max-w-[130px] ">
-        <div className="relative ">
+        {/*   QUIZED BOX */}
+
+        <div
+          className={`relative  ${
+            closeQuizBox ? "quiz-box-opened" : "quiz-box-closed"
+          }`}
+        >
           <div
             className="closed absolute right-0 top-[-10px]  bg-brandLightOpacity100  dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 cursor-pointer	  z-10	 rounded-3xl	"
             onClick={hanldeClosedQuiz}
@@ -46,8 +59,6 @@ const QuizRatio = () => {
                 <Image src={logo} alt="" className=" w-[89px] h-[89px]" />
               </span>
 
-              {/* </div>
-          <div className="logo bg-brand w-[89px] h-[89px]   drop-box-shadow flex items-center	justify-center  rounded-full"> */}
               <span className="quiz-title flex items-center justify-center h-full">
                 <h4 className="logo text-white text-center text-base leading-normal	 font-semibold	montserratfont capitalize ">
                   quiz{" "}
@@ -68,11 +79,27 @@ const QuizRatio = () => {
             </h4>
           </div>
         </div>
+
+        {/*   QUIZED BUTTON */}
+        <div className={`relative cursor-pointer `}>
+          <div
+            onClick={openedQuizBox}
+            className={`timer quiz-timer  flex flex-col items-center justify-center bg-brand rounded-full w-[130px] h-[43px] ${
+              closeQuizBox ? "quiz-btn-closed" : "quiz-btn-opened"
+            }`}
+          >
+            <span className="text-white montserratfont text-base font-bold leading-normal">
+              Quiz
+            </span>
+          </div>
+        </div>
       </div>
-      {/* <IntroScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
+
+      <IntroScreen open={openIntro} close={hanldeOpenedQuiz} />
+      {/* <AddScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <QuestionScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <AnswerSubmitScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
-      <TermsAndCondition open={openIntro} close={hanldeOpenedQuiz} />
+      {/* <TermsAndCondition open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <WinnerScreenTwo open={openIntro} close={hanldeOpenedQuiz} /> */}
     </>
   );

@@ -13,6 +13,7 @@ import "../styles/background.css";
 import { useTheme } from "next-themes";
 import "react-multi-carousel/lib/styles.css";
 import QuizRatio from "@/components/QuizRatio";
+
 import "animate.css";
 import "tw-elements/dist/css/tw-elements.min.css";
 export default function RootLayout({
