@@ -11,6 +11,7 @@ import AnswerSubmitScreen from "../QuizScreen/AnswerSubmittedScreen";
 import TermsAndCondition from "../QuizScreen/TermsAndConditonScreen";
 import WinnerScreenTwo from "../QuizScreen/WinnerScreenTwo";
 import AddScreen from "../QuizScreen/AdScreen";
+import QuizStartTiemScreen from "../QuizScreen/QuizStartTimeScreen";
 
 const QuizRatio = () => {
   const [openIntro, setOpenIntro] = useState<Boolean>(true);
