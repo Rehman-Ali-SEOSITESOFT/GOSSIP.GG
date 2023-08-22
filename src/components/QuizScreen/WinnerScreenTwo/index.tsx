@@ -63,7 +63,6 @@ const WinnerScreenTwo = (props: any) => {
                 <InviteFriendSection />
                 <div className="flex flex-col  mt-[14px]">
                   <div className="mb-[12px] flex flex-col items-center justify-center">
-                    
                     <ReactCurvedText
                       width={372}
                       height={80}
