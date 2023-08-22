@@ -44,7 +44,7 @@ const AnsweredIncorrectly = (props: any) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="fixed inset-[70px] w-[375px] left-auto mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
+            <Dialog.Panel className="fixed inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin    scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
               {/* top   */}
               <div className="flex flex-col  h-full">
                 <div className="relative ">
@@ -72,7 +72,7 @@ const AnsweredIncorrectly = (props: any) => {
                     <div className="flex flex-row items-center justify-center mb-[4px] ">
                       <div className="bg-gradient-to-l mw-sm:min-w-[25%] min-w-[25%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
                       <p className="montserratfont mw-sm:text-sm text-[14px] font-medium dark:text-brand">
-                        TODAY'S LUCKY WINNERS
+                        TODAY&#39;S LUCKY WINNERS
                       </p>
                       <div className="bg-gradient-to-r mw-sm:min-w-[25%] min-w-[25%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
                     </div>

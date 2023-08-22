@@ -22,7 +22,7 @@ const NavSlider = (props: any) => {
     // for slick carousel
     setNav1(slider1.current);
     setNav2(slider2.current);
-  });
+  },[]);
   const settingss = {
     slidesToShow: 3,
     slidesToScroll: 1,

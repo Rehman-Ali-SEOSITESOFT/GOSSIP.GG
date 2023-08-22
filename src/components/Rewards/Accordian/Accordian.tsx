@@ -114,8 +114,8 @@ const Accordiannn = (props: any) => {
                       <p className="montserratfont font-normal f_it leading-[24px] text-[14px] text-[#E5E5E5] pt-[7px] pr-[60px]">
                         Saudi Arabian esports tournament organiser Gamers8 has
                         announced a prize pool of $45million for its 2023 event,
-                        dubbed 'The Land of Heroes'. The figure makes the prize
-                        pool the largest in history, beating Dota 2's 2021
+                        dubbed &#39;The Land of Heroes&#39;. The figure makes the prize
+                        pool the largest in history, beating Dota 2&#39;s 2021
                         International figure of $40 million.
                       </p>
                     </div>

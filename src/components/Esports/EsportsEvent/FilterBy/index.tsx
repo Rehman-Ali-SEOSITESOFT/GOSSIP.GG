@@ -175,7 +175,7 @@ const FilterBy = (props?: any) => {
   const onChangeRegionCheckbox = (e: any) => {
     let copyArr = [...selectedRegion];
     let filterArr = copyArr.filter((item) => item === e.target.value);
-    let finalArr = [];
+    let finalArr: string[] = [];
     if (filterArr.length > 0) {
       finalArr = copyArr.filter((item) => item !== e.target.value);
     } else {
@@ -191,7 +191,7 @@ const FilterBy = (props?: any) => {
   const onChangeStatusCheckbox = (e: any) => {
     let copyArr = [...selectedStatus];
     let filterArr = copyArr.filter((item) => item === e.target.value);
-    let finalArr = [];
+    let finalArr : string[] = [];
     if (filterArr.length > 0) {
       finalArr = copyArr.filter((item) => item !== e.target.value);
     } else {
@@ -207,7 +207,7 @@ const FilterBy = (props?: any) => {
   const onChangeGameCheckbox = (e: any) => {
     let copyArr = [...selectedGame];
     let filterArr = copyArr.filter((item) => item === e.target.value);
-    let finalArr = [];
+    let finalArr : string[] = [];
     if (filterArr.length > 0) {
       finalArr = copyArr.filter((item) => item !== e.target.value);
     } else {
@@ -223,7 +223,7 @@ const FilterBy = (props?: any) => {
   const onChangeOrganizerCheckbox = (e: any) => {
     let copyArr = [...selectedOrganizer];
     let filterArr = copyArr.filter((item) => item === e.target.value);
-    let finalArr = [];
+    let finalArr : string[] = [];
     if (filterArr.length > 0) {
       finalArr = copyArr.filter((item) => item !== e.target.value);
     } else {

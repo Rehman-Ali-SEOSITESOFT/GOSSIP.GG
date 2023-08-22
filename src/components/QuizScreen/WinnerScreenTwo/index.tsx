@@ -10,6 +10,8 @@ import WinLogo from "../../../assets/quiz-model/win-logo.png";
 import { Switch } from "@headlessui/react";
 import ReactCurvedText from "react-curved-text";
 
+
+
 const WinnerScreenTwo = (props: any) => {
   const cancelButtonRef = useRef(null);
   const [enabled, setEnabled] = useState<boolean | any>(false);
@@ -44,7 +46,7 @@ const WinnerScreenTwo = (props: any) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="fixed inset-[70px] w-[375px] left-auto mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
+            <Dialog.Panel className="fixed inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
               {/* top   */}
               <div className="flex flex-col  h-full">
                 <div className="relative ">
@@ -61,10 +63,8 @@ const WinnerScreenTwo = (props: any) => {
                   </div>
                 </div>
                 <InviteFriendSection />
-
                 <div className="flex flex-col  mt-[14px]">
                   <div className="mb-[12px] flex flex-col items-center justify-center">
-                    
                     <ReactCurvedText
                       width={372}
                       height={80}
@@ -86,9 +86,7 @@ const WinnerScreenTwo = (props: any) => {
                       @Naveen
                     </p>
                     </div>
-                    
                   </div>
-
                   <div className="px-4 mb-[50px]">
                     <div className="flex flex-row items-center justify-center mb-[4px] ">
                       <div className="bg-gradient-to-l mw-sm:min-w-[25%] min-w-[35%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
@@ -99,7 +97,6 @@ const WinnerScreenTwo = (props: any) => {
                     </div>
                     <Image src={Prize} alt="Prixe" />
                   </div>
-
                   <div className="px-[22px]">
                     <p className="text-left text-brandLightOpacity100 montserratfont text-[16px] font-medium ">
                       Play again tomorrow?
