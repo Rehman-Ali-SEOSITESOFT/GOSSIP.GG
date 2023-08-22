@@ -13,7 +13,7 @@ import WinnerScreenTwo from "../QuizScreen/WinnerScreenTwo";
 import AddScreen from "../QuizScreen/AdScreen";
 
 const QuizRatio = () => {
-  const [openIntro, setOpenIntro] = useState<Boolean>(true);
+  const [openIntro, setOpenIntro] = useState<Boolean>(false);
   const [closeQuizBox, setCloseQuizBox] = useState<Boolean>(true);
 
   const hanldeClosedQuiz = () => {
