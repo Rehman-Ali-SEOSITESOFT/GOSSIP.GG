@@ -10,6 +10,8 @@ import WinLogo from "../../../assets/quiz-model/win-logo.png";
 import { Switch } from "@headlessui/react";
 import ReactCurvedText from "react-curved-text";
 
+
+
 const WinnerScreenTwo = (props: any) => {
   const cancelButtonRef = useRef(null);
   const [enabled, setEnabled] = useState<boolean | any>(false);
