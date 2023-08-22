@@ -72,7 +72,7 @@ const AnsweredIncorrectly = (props: any) => {
                     <div className="flex flex-row items-center justify-center mb-[4px] ">
                       <div className="bg-gradient-to-l mw-sm:min-w-[25%] min-w-[25%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
                       <p className="montserratfont mw-sm:text-sm text-[14px] font-medium dark:text-brand">
-                        TODAY'S LUCKY WINNERS
+                        TODAY&#39;S LUCKY WINNERS
                       </p>
                       <div className="bg-gradient-to-r mw-sm:min-w-[25%] min-w-[25%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
                     </div>
