@@ -17,7 +17,7 @@ import AnsweredCorrectly from "../QuizScreen/AnsweredCorrectly";
 import PriceOfTheDay from "../QuizScreen/PriceOfTheDay";
 
 const QuizRatio = () => {
-  const [openIntro, setOpenIntro] = useState<Boolean>(false);
+  const [openIntro, setOpenIntro] = useState<Boolean>(true);
   const [closeQuizBox, setCloseQuizBox] = useState<Boolean>(true);
 
   const hanldeClosedQuiz = () => {
