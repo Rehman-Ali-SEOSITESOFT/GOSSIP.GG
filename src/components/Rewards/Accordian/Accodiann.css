@@ -25,3 +25,32 @@
 .second_slider .slick-dots li.slick-active button:before {
   color: white !important;
 }
+@media screen and (max-width: 1024px) {
+  .mainwrapper_accordoian .dark-arrow.slick-slider button.slick-prev,
+  .mainwrapper_accordoian .light-arrow.slick-slider button.slick-prev {
+    left: -12% !important;
+  }
+  .mainwrapper_accordoian .slick-next {
+    right: -15% !important;
+  }
+  .second_slider .dark-arrow.slick-slider button.slick-prev,
+  .second_slider .light-arrow.slick-slider button.slick-prev {
+    left: 0px !important;
+  }
+  .second_slider .slick-next {
+    right: 0px !important;
+  }
+  .date____ {
+    display: flex !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .second_slider .slick-next {
+    right: -30px !important;
+    top: 46% !important;
+  }
+  .second_slider .dark-arrow.slick-slider button.slick-prev,
+  .second_slider .light-arrow.slick-slider button.slick-prev {
+    left: -30px !important;
+  }
+}
