@@ -8,41 +8,40 @@ import closebtn from "../../../assets/quiz-model/close-add.png";
 
 const AddScreen = (props: any) => {
   const cancelButtonRef = useRef(null);
-  const [addDisabled, setAddDisabled] = useState<Boolean>(false);
 
-  const [timer, setTimer] = useState<Number>(3);
+  const [seconds, setSeconds] = useState<number>(3);
+  const [addDisabled, setAddDisabled] = useState<boolean>(false);
+
+  const timerFunction = () => {
+    const interval = setInterval(() => {
+      setSeconds((seconds) => seconds - 1);
+    }, 1000);
+    setTimeout(() => {
+      clearInterval(interval);
+      setAddDisabled(true);
+      setSeconds(0);
+    }, 3000);
+  };
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setSeconds((seconds) => seconds - 1);
+  //   }, 1000);
+  //   setTimeout(() => {
+  //     clearInterval(interval);
+  //     setAddDisabled(true);
+  //     setSeconds(0);
+  //   }, 3000);
+  //   return;
+  // }, []);
 
   const hanldeClosedAddScreen = () => {
     console.log("closing testing......");
-    // setAddDisabled(!addDisabled);
   };
-
-  // const timerfuntion = () => {
-  //   setInterval(() => {
-  //     setTimer(timer - 1);
-  //   }, 1000);
-  // };
-  // useEffect(() => {
-  //   if (timer === 1) {
-  //     clearInterval(timerfuntion());
-  //     setAddDisabled(true);
-  //   } else if (timer > 1) {
-  //     timerfuntion();
-  //   }
-  // }, []);
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     console.log("working");
-  //     setTimer(timer - 1);
-  //   }, 1000); // Decrement every second
-
-  //   if (timer === 0) {
-  //     setAddDisabled(true);
-  //   }
-  //   return () => {
-  //     clearInterval(interval); // Clean up the interval when the component unmounts
-  //   };
-  // }, []);
+  useEffect(() => {
+    if (props.open) {
+      timerFunction();
+    }
+  }, []);
 
   return (
     <Transition.Root show={props.open} as={Fragment}>
@@ -50,7 +49,10 @@ const AddScreen = (props: any) => {
         as="div"
         className="relative z-10"
         initialFocus={cancelButtonRef}
-        onClose={() => props.close()}
+        onClose={() => {
+          // timerFunction();
+          props.close();
+        }}
       >
         <Transition.Child
           as={Fragment}
@@ -82,9 +84,11 @@ const AddScreen = (props: any) => {
                 >
                   <div className="flex justify-between items-center">
                     <div className="w-[28px] h-[28px] bg-[rgba(20,19,19,0.10)] rounded-3xl leading-[28px]">
-                      <span className="text-lg leading-normal font-semibold montserratfont text-brandLightOpacity100">
-                        0
-                      </span>
+                      {addDisabled ? null : (
+                        <span className="text-lg leading-normal font-semibold montserratfont text-brandLightOpacity100">
+                          {seconds}
+                        </span>
+                      )}
                     </div>
                     <div
                       className="cursor-pointer"
@@ -123,7 +127,7 @@ const AddScreen = (props: any) => {
                   </div>
                 </div>
                 {addDisabled ? (
-                  <div className="backdrop-[2px] absolute inset-0 h-full add-screen-bg-filter"></div>
+                  <div className="backdrop-[2px] absolute inset-0 h-full add-screen-bg-filter backdrop-blur-[2px]"></div>
                 ) : null}
               </div>
             </Dialog.Panel>

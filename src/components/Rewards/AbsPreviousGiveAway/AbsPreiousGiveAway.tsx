@@ -12,10 +12,10 @@ const AbsPreiousGiveAway = (props: any) => {
           alt=""
           className="w-full h-full transition-transform transform scale-100 group-hover:scale-110 "
         />
-        <span className="absolute montserratfont text-[21px] leading-normal font-bold text-[#E5E5E5] px-[16px] py-[9px] bg-[#ED4E50] bottom-[18px] ">
+        <span className="absolute montserratfont text-[21px] leading-[25.6px] font-bold text-[#E5E5E5] px-[16px] py-[9px] bg-[#ED4E50] bottom-[18px] mw-lg:text-[18px]  rounded-r-lg mw-md:top-[8px] mw-md:bottom-auto mw-sm:text-[14px]">
           {props.qty}
         </span>
-        <div className={`${style.overlaydiv}  `}>
+        <div className={`${style.overlaydiv}`}>
           <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity px-[22px] py-[15px] text-center">
             <h5 className="text-[#fff] text-[24px] leading-normal font-bold montserratfont">
               {props.title}

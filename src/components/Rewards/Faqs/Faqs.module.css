@@ -1,0 +1,12 @@
+.scrooling ::-webkit-scrollbar-track {
+  background: #363233;
+  border-radius: 8px;
+}
+.scrooling::-webkit-scrollbar-thumb {
+  border: 1px solid hsla(0, 0%, 90%, 0.2);
+  border-radius: 8px;
+}
+.scrooling::-webkit-scrollbar {
+  width: 8px;
+  height: 0px;
+}

@@ -10,6 +10,26 @@
 .main_pagination_gap .pagi {
   padding-top: 36px !important;
 }
+.selectBOOX select {
+  -webkit-appearance: none;
+  background-image: url("../../../assets/rewards/downangle.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 95%;
+}
+
+.selectBOOX select:focus {
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+.selectBOOX select option {
+  margin-top: 4px !important;
+  padding: 24px;
+}
+.selectBOOX select option {
+  background-color: red;
+  padding: 24px 20px !important;
+}
 
 @media screen and (max-width: 690px) {
   .live-matches .slick-initialized .slick-slide {

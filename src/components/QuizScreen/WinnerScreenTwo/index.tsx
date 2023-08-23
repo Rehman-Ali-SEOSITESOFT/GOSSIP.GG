@@ -9,8 +9,9 @@ import Prize from "../../../assets/quiz-model/prize.png";
 import WinLogo from "../../../assets/quiz-model/win-logo.png";
 import { Switch } from "@headlessui/react";
 import ReactCurvedText from "react-curved-text";
-
-
+import logo from "../../../assets/quiz-model/title-logo.png";
+import cong from "../../../assets/quiz-model/cong1.gif";
+import crown from "../../../assets/quiz-model/con-crown.png";
 
 const WinnerScreenTwo = (props: any) => {
   const cancelButtonRef = useRef(null);
@@ -46,9 +47,9 @@ const WinnerScreenTwo = (props: any) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="fixed inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
+            <Dialog.Panel className="fixed inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-x-hidden scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
               {/* top   */}
-              <div className="flex flex-col  h-full">
+              {/* <div className="flex flex-col  h-full animatedd-layer">
                 <div className="relative ">
                   <Image
                     src={Banner}
@@ -75,16 +76,23 @@ const WinnerScreenTwo = (props: any) => {
                       startOffset={35}
                       reversed={true}
                       text="CONGRATULATIONS!"
-                      textProps={{ style: { fontSize: 22, fontFamily: 'Montserrat, sans-serif', letterSpacing: 4, fontWeight: 600  } }}
-                      textPathProps={{"fill": "#ed4e50"}}
-                      tspanProps={{"dy": "0"}}
+                      textProps={{
+                        style: {
+                          fontSize: 22,
+                          fontFamily: "Montserrat, sans-serif",
+                          letterSpacing: 4,
+                          fontWeight: 600,
+                        },
+                      }}
+                      textPathProps={{ fill: "#ed4e50" }}
+                      tspanProps={{ dy: "0" }}
                     />
-                    {/* <p className="text-[22px] montserratfont dark:text-brand font-semibold">Congratulations!</p> */}
+
                     <div className="mt-[-40px] z-[2]">
-                    <Image src={WinLogo} alt="winner logo" />
-                    <p className="text-[12px] dark:text-brandLightOpacity100 font-semibold montserratfont">
-                      @Naveen
-                    </p>
+                      <Image src={WinLogo} alt="winner logo" />
+                      <p className="text-[12px] dark:text-brandLightOpacity100 font-semibold montserratfont">
+                        @Naveen
+                      </p>
                     </div>
                   </div>
                   <div className="px-4 mb-[50px]">
@@ -133,6 +141,63 @@ const WinnerScreenTwo = (props: any) => {
                   >
                     Go to Home Page
                   </a>
+                </div>
+              </div> */}
+              <div className="absolute inset-0">
+                <div className="congrulation-bg h-full flex flex-col justify-between">
+                  <div className="co-box">
+                    <div className="flex justify-center items-center  pt-[60px]">
+                      <div className="ml-[-40px]  ">
+                        <Image src={logo} alt="lgo" />
+                      </div>
+                      <div className="ml-[-15px] ">
+                        <h4 className="text-brand capitalize font-bold text-[50px] leading-[45px] montserratfont">
+                          gossip
+                        </h4>
+                        <p className="montserratfont text-brand text-xs	tracking-[3.6px] pl-2.5 text-left	 font-bold uppercase">
+                          daily Quiz
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="congrulation relative">
+                    <div className="absolute top-[-30px] z-10 congrulation-curved">
+                      <ReactCurvedText
+                        width={372}
+                        height={80}
+                        cx={185}
+                        cy={113}
+                        rx={140}
+                        ry={90}
+                        startOffset={35}
+                        reversed={true}
+                        text="CONGRATULATIONS!"
+                        textProps={{
+                          style: {
+                            fontSize: 22,
+                            fontFamily: "Montserrat, sans-serif",
+                            letterSpacing: 4,
+                            fontWeight: 600,
+                            textShadow: "0 0 12px #f1ad2a",
+                          },
+                        }}
+                        textPathProps={{ fill: "#FFFFFF" }}
+                        tspanProps={{ dy: "0" }}
+                      />
+                    </div>
+
+                    <Image
+                      src={cong}
+                      alt="lgo"
+                      className="w-[375px] h-[520px] object-cover	animted-congrul-bg"
+                    />
+                    <div className="w-[120px] h-[170px] imge-text-value absolute top-[30px] right-0 left-0 m-auto">
+                      <Image src={crown} alt="lgo" className="h-full" />
+                      <span className="montserratfont text-lg leading-[22px] text-center text-brandLightOpacity1">
+                        @Naveen
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </Dialog.Panel>
