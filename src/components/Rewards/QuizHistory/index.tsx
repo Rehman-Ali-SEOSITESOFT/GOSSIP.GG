@@ -163,9 +163,12 @@ const QuizHistory = () => {
                     value="1"
                     className="montserratfont text-[16px] font-medium capitalize leading-normal color-brandLightOpacity70 py-[12px]"
                   >
-                    One
+                    Today
                   </option>
-                  <option value="2">Two</option>
+                  <option value="2">Yesterday</option>
+                  <option value="3">Last Week</option>
+                  <option value="4">Last 10 Days</option>
+                  <option value="custom">Custom</option>
                 </select>
               </div>
             </div>
