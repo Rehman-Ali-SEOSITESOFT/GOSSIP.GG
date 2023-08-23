@@ -22,6 +22,14 @@
   box-shadow: none !important;
   outline: 0 !important;
 }
+.selectBOOX select option {
+  margin-top: 4px !important;
+  padding: 24px;
+}
+.selectBOOX select option {
+  background-color: red;
+  padding: 24px 20px !important;
+}
 
 @media screen and (max-width: 690px) {
   .live-matches .slick-initialized .slick-slide {

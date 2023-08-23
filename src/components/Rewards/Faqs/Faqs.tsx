@@ -21,6 +21,15 @@ const Faqs = () => {
     {
       heading: "Customer Support",
     },
+    {
+      heading: "Terms and conditons",
+    },
+    {
+      heading: "Disclaimer",
+    },
+    {
+      heading: "Customer Support",
+    },
   ]);
   return (
     <>
