@@ -5,15 +5,12 @@ import Banner from "../../../assets/quiz-model/banner.png";
 import Close from "../../../assets/images/modal/close.png";
 import Image from "next/image";
 import InviteFriendSection from "../InviteFriendsSec";
-import HardLuck from "../../../assets/quiz-model/hard-luck.png";
-import Win1 from "../../../assets/quiz-model/win1.png";
-import Win2 from "../../../assets/quiz-model/win2.png";
-import Win3 from "../../../assets/quiz-model/win3.png";
-import Win4 from "../../../assets/quiz-model/win4.png";
-import Win5 from "../../../assets/quiz-model/win5.png";
-import { Switch } from "@headlessui/react";
+import Timer from "../../../assets/quiz-model/timer.png";
 
-const AnsweredCorrectly = (props: any) => {
+import { Switch } from "@headlessui/react";
+import CountdownSection from "../CountdownSec";
+
+const QuizEnded = (props: any) => {
   const cancelButtonRef = useRef(null);
   const [enabled, setEnabled] = useState<boolean | any>(false);
   console.log("enabled", enabled);
@@ -64,70 +61,25 @@ const AnsweredCorrectly = (props: any) => {
                   </div>
                 </div>
                 <InviteFriendSection />
-                <div className="ml-4 mt-2">
-                  <p className="text-[12px] italic montserratfont dark:text-brandLightOpacity70 text-left">
-                    Correct Answer:
-                    <span className="dark:text-brand">
-                      &nbsp;Option B&nbsp;
-                    </span>
-                    2 Million
+                <CountdownSection/>
+                <div className="flex flex-col items-center mt-[90px]">
+                <p className="montserratfont dark:text-brand font-semibold text-[16px]">
+                  Uh-oh!
                   </p>
-                </div>
-                <div className="flex flex-col items-center mt-[24px]">
-                  <Image src={HardLuck} alt="Upset Emoji" />
-                  <p className="montserratfont dark:text-brand font-semibold text-[16px]">
-                  Hard Luck!
+                  <div className="h-[64px] w-[64px]  mt-[20px] dark:bg-brand rounded-full flex justify-center items-center">
+                  <Image src={Timer} alt="Timer" />
+                  </div>
+                  
+                  <p className="montserratfont text-[18px] font-semibold dark:text-brandLightOpacity100 pt-[22px]">
+                  The quiz has ended for today!
                   </p>
-                  <p className="montserratfont text-[14px] dark:to-brandLightOpacity100">
-                  You got it right! Unfortunately you did not<br/> win today’s prize.
-                  </p>
+                  <p className="montserratfont text-[14px] font-medium dark:text-brandLightOpacity70 pt-[4px]">Daily quiz timing: 5 p.m. - 8 p.m.</p>
                
                 </div>
 
-                <div className="flex flex-col  mt-[14px]">
-                  <div className="mb-[12px] flex flex-col items-center justify-center"></div>
-
-                  <div className=" ">
-                    <div className="px-[1px] flex flex-row items-center justify-center mb-[4px] ">
-                      <div className="bg-gradient-to-l  min-w-[22%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
-                      <p className="px-[6px] montserratfont text-[14px] font-medium dark:text-brand">
-                        TODAY&#39;S LUCKY WINNERS
-                      </p>
-                      <div className="bg-gradient-to-r  min-w-[22%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
-                    </div>
-                    <div className="flex flex-wrap mx-[25px] item-center justify-center mb-[40px]">
-                      <div className="w-[33.33%] flex flex-col items-center">
-                        <Image src={Win1} alt="Winner logo" />
-                        <p className="text-[12px] dark:text-brandLightOpacity100 font-medium montserratfont">
-                          @Naveen
-                        </p>
-                      </div>
-                      <div className="w-[33.33%] flex flex-col items-center">
-                        <Image src={Win2} alt="Winner logo" />
-                        <p className="text-[12px] dark:text-brandLightOpacity100 font-medium montserratfont">
-                          @Naveen
-                        </p>
-                      </div>
-                      <div className="w-[33.33%] flex flex-col items-center">
-                        <Image src={Win3} alt="Winner logo" />
-                        <p className="text-[12px] dark:text-brandLightOpacity100 font-medium montserratfont">
-                          @Naveen
-                        </p>
-                      </div>
-                      <div className="w-[33.33%] flex flex-col items-center">
-                        <Image src={Win4} alt="Winner logo" />
-                        <p className="text-[12px] dark:text-brandLightOpacity100 font-medium montserratfont">
-                          @Naveen
-                        </p>
-                      </div>
-                      <div className="w-[33.33%] flex flex-col items-center">
-                        <Image src={Win5} alt="Winner logo" />
-                        <p className="text-[12px] dark:text-brandLightOpacity100 font-medium montserratfont">
-                          @Naveen
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                <div className="flex flex-col  mt-[100px]">
+                  
+                
 
                   <div className="px-[22px]">
                     <p className="text-left text-brandLightOpacity100 montserratfont text-[16px] font-medium ">
@@ -156,14 +108,11 @@ const AnsweredCorrectly = (props: any) => {
                     </div>
                   </div>
                 </div>
-                <div>
-                  <p className="text-[12px] dark:text-brandLightOpacity70 montserratfont mt-[40px] pb-[4px]">
-                    Terms and conditions
-                  </p>
+                <div className="mt-[76px]">
                   <a
                     className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold`}
                   >
-                    Go to Home Page
+                    Today&#39;s Lucky Winners
                   </a>
                 </div>
               </div>
@@ -175,4 +124,4 @@ const AnsweredCorrectly = (props: any) => {
   );
 };
 
-export default AnsweredCorrectly;
+export default QuizEnded;

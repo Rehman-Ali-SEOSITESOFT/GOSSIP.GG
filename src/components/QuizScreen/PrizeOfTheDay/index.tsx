@@ -13,7 +13,7 @@ import Win4 from "../../../assets/quiz-model/win4.png";
 import Win5 from "../../../assets/quiz-model/win5.png";
 import { Switch } from "@headlessui/react";
 
-const PriceOfTheDay = (props: any) => {
+const PrizeOfTheDay = (props: any) => {
   const cancelButtonRef = useRef(null);
   const [enabled, setEnabled] = useState<boolean | any>(false);
   console.log("enabled", enabled);
@@ -97,31 +97,31 @@ const PriceOfTheDay = (props: any) => {
                     <div className="flex flex-wrap mx-[25px] item-center justify-center mb-[40px]">
                       <div className="w-[33.33%] flex flex-col items-center">
                         <Image src={Win1} alt="Winner logo" />
-                        <p className="text-[12px] dark:text-brandLightOpacity100 font-medium montserratfont">
+                        <p className="text-[12px] mt-[-7px] dark:text-brandLightOpacity100 font-medium montserratfont">
                           @Naveen
                         </p>
                       </div>
                       <div className="w-[33.33%] flex flex-col items-center">
                         <Image src={Win2} alt="Winner logo" />
-                        <p className="text-[12px] dark:text-brandLightOpacity100 font-medium montserratfont">
+                        <p className="text-[12px] mt-[-7px] dark:text-brandLightOpacity100 font-medium montserratfont">
                           @Naveen
                         </p>
                       </div>
                       <div className="w-[33.33%] flex flex-col items-center">
                         <Image src={Win3} alt="Winner logo" />
-                        <p className="text-[12px] dark:text-brandLightOpacity100 font-medium montserratfont">
+                        <p className="text-[12px] mt-[-7px] dark:text-brandLightOpacity100 font-medium montserratfont">
                           @Naveen
                         </p>
                       </div>
                       <div className="w-[33.33%] flex flex-col items-center">
                         <Image src={Win4} alt="Winner logo" />
-                        <p className="text-[12px] dark:text-brandLightOpacity100 font-medium montserratfont">
+                        <p className="text-[12px] mt-[-7px] dark:text-brandLightOpacity100 font-medium montserratfont">
                           @Naveen
                         </p>
                       </div>
                       <div className="w-[33.33%] flex flex-col items-center">
                         <Image src={Win5} alt="Winner logo" />
-                        <p className="text-[12px] dark:text-brandLightOpacity100 font-medium montserratfont">
+                        <p className="text-[12px] mt-[-7px] dark:text-brandLightOpacity100 font-medium montserratfont">
                           @Naveen
                         </p>
                       </div>
@@ -173,4 +173,4 @@ const PriceOfTheDay = (props: any) => {
   );
 };
 
-export default PriceOfTheDay;
+export default PrizeOfTheDay;

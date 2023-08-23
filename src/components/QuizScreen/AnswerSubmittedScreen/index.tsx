@@ -3,6 +3,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import React, { Fragment, useRef, useState } from "react";
 import Banner from "../../../assets/quiz-model/banner.png";
 import Close from "../../../assets/images/modal/close.png";
+import Animation from "../../../assets/quiz-model/SUCCESS.svg";
 import Image from "next/image";
 import InviteFriendSection from "../InviteFriendsSec";
 import CountdownSection from "../CountdownSec";
@@ -41,7 +42,7 @@ const AnswerSubmitScreen = (props: any) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="fixed inset-[70px] w-[375px] left-auto mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
+            <Dialog.Panel className="fixed inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
               {/* top   */}
               <div className="flex flex-col  h-full">
                 <div className="relative ">
@@ -64,6 +65,7 @@ const AnswerSubmitScreen = (props: any) => {
                     Well done, @Naveen! <br /> You have successfully submitted
                     your answer.
                   </p>
+                  <Image src={Animation} alt="success aniamtion"/>
                   <div className="px-[22px] mt-[248px]">
                     <p className="text-left text-brandLightOpacity100 montserratfont text-[16px] font-medium ">
                       

@@ -14,7 +14,11 @@ import AddScreen from "../QuizScreen/AdScreen";
 import QuizStartTiemScreen from "../QuizScreen/QuizStartTimeScreen";
 import AnsweredIncorrectly from "../QuizScreen/AnsweredIncorrectly";
 import AnsweredCorrectly from "../QuizScreen/AnsweredCorrectly";
-import PriceOfTheDay from "../QuizScreen/PriceOfTheDay";
+import PrizeOfTheDay from "../QuizScreen/PrizeOfTheDay";
+import QuizEnded from "../QuizScreen/QuizEnded";
+import OrderConfirm from "../QuizScreen/OrderConfirm";
+import OrderSummary from "../QuizScreen/OrderSummary";
+import PersonalInformation from "../QuizScreen/PersonalInformation";
 
 const QuizRatio = () => {
   const [openIntro, setOpenIntro] = useState<Boolean>(false);
@@ -99,7 +103,7 @@ const QuizRatio = () => {
         </div>
       </div>
 
-      <IntroScreen open={openIntro} close={hanldeOpenedQuiz} />
+      {/* <IntroScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <AddScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <QuestionScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <AnswerSubmitScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
@@ -108,7 +112,13 @@ const QuizRatio = () => {
       {/* <QuizStartTiemScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <AnsweredIncorrectly open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <AnsweredCorrectly open={openIntro} close={hanldeOpenedQuiz} /> */}
-      <PriceOfTheDay open={openIntro} close={hanldeOpenedQuiz} />
+      {/* <QuizEnded open={openIntro} close={hanldeOpenedQuiz} /> */}
+      {/* <PrizeOfTheDay open={openIntro} close={hanldeOpenedQuiz} /> */}
+      {/* <OrderConfirm open={openIntro} close={hanldeOpenedQuiz} /> */}
+      {/* <OrderSummary open={openIntro} close={hanldeOpenedQuiz} /> */}
+      <PersonalInformation open={openIntro} close={hanldeOpenedQuiz} />
+
+   
     </>
   );
 };
