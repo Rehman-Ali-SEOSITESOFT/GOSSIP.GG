@@ -12,6 +12,9 @@ import TermsAndCondition from "../QuizScreen/TermsAndConditonScreen";
 import WinnerScreenTwo from "../QuizScreen/WinnerScreenTwo";
 import AddScreen from "../QuizScreen/AdScreen";
 import QuizStartTiemScreen from "../QuizScreen/QuizStartTimeScreen";
+import AnsweredIncorrectly from "../QuizScreen/AnsweredIncorrectly";
+import AnsweredCorrectly from "../QuizScreen/AnsweredCorrectly";
+import PriceOfTheDay from "../QuizScreen/PriceOfTheDay";
 
 const QuizRatio = () => {
   const [openIntro, setOpenIntro] = useState<Boolean>(false);
@@ -104,6 +107,8 @@ const QuizRatio = () => {
       {/* <WinnerScreenTwo open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <QuizStartTiemScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <AnsweredIncorrectly open={openIntro} close={hanldeOpenedQuiz} /> */}
+      {/* <AnsweredCorrectly open={openIntro} close={hanldeOpenedQuiz} /> */}
+      <PriceOfTheDay open={openIntro} close={hanldeOpenedQuiz} />
     </>
   );
 };
