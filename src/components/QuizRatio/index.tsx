@@ -21,7 +21,7 @@ import OrderSummary from "../QuizScreen/OrderSummary";
 import PersonalInformation from "../QuizScreen/PersonalInformation";
 
 const QuizRatio = () => {
-  const [openIntro, setOpenIntro] = useState<Boolean>(true);
+  const [openIntro, setOpenIntro] = useState<Boolean>(false);
   const [closeQuizBox, setCloseQuizBox] = useState<Boolean>(true);
 
   const hanldeClosedQuiz = () => {
@@ -109,7 +109,9 @@ const QuizRatio = () => {
       {/* <QuestionScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <AnswerSubmitScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <TermsAndCondition open={openIntro} close={hanldeOpenedQuiz} /> */}
-      <WinnerScreenTwo open={openIntro} close={hanldeOpenedQuiz} />
+      {openIntro && (
+        <WinnerScreenTwo open={openIntro} close={hanldeOpenedQuiz} />
+      )}
       {/* <QuizStartTiemScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <AnsweredIncorrectly open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <AnsweredCorrectly open={openIntro} close={hanldeOpenedQuiz} /> */}
@@ -118,8 +120,6 @@ const QuizRatio = () => {
       {/* <OrderConfirm open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <OrderSummary open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <PersonalInformation open={openIntro} close={hanldeOpenedQuiz} /> */}
-
-   
     </>
   );
 };

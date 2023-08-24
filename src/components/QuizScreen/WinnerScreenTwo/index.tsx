@@ -1,6 +1,6 @@
 "use client";
 import { Dialog, Transition } from "@headlessui/react";
-import React, { Fragment, useRef, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import Banner from "../../../assets/quiz-model/banner.png";
 import Close from "../../../assets/images/modal/close.png";
 import Image from "next/image";
@@ -16,7 +16,13 @@ import crown from "../../../assets/quiz-model/con-crown.png";
 const WinnerScreenTwo = (props: any) => {
   const cancelButtonRef = useRef(null);
   const [enabled, setEnabled] = useState<boolean | any>(false);
-  console.log("enabled", enabled);
+  const [animtedHide, setAnimatedHided] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAnimatedHided(true);
+    }, 3000);
+  }, []);
   return (
     <Transition.Root show={props.open} as={Fragment}>
       <Dialog
@@ -49,7 +55,11 @@ const WinnerScreenTwo = (props: any) => {
           >
             <Dialog.Panel className="fixed inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-x-hidden scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
               {/* top   */}
-              {/* <div className="flex flex-col  h-full animatedd-layer">
+              <div
+                className={`flex flex-col  h-full animatedd-layer dark:bg-brandDark3  ${
+                  animtedHide ? "content-hide" : "content-show"
+                }`}
+              >
                 <div className="relative ">
                   <Image
                     src={Banner}
@@ -142,10 +152,14 @@ const WinnerScreenTwo = (props: any) => {
                     Go to Home Page
                   </a>
                 </div>
-              </div> */}
-              <div className="absolute inset-0">
+              </div>
+              <div
+                className={`absolute inset-0 main-box ${
+                  animtedHide ? "bg-animtedd-true" : "bg-animtedd-flase"
+                }`}
+              >
                 <div className="congrulation-bg h-full flex flex-col justify-between">
-                  <div className="co-box">
+                  <div className="co-box min-h-[270px]">
                     <div className="flex justify-center items-center  pt-[60px]">
                       <div className="ml-[-40px]  ">
                         <Image src={logo} alt="lgo" />
