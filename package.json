@@ -16,7 +16,6 @@
     "@types/node": "18.15.3",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
-    "add": "^2.0.6",
     "animate.css": "^4.1.1",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
@@ -30,7 +29,6 @@
     "react-youtube": "^10.1.0",
     "sass": "^1.59.3",
     "slick-carousel": "^1.8.1",
-    "tw-elements": "^1.0.0-beta3",
     "typescript": "5.0.2",
     "yarn": "^1.22.19"
   },

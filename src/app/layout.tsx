@@ -13,9 +13,7 @@ import "../styles/background.css";
 import { useTheme } from "next-themes";
 import "react-multi-carousel/lib/styles.css";
 import QuizRatio from "@/components/QuizRatio";
-
 import "animate.css";
-import "tw-elements/dist/css/tw-elements.min.css";
 export default function RootLayout({
   children,
 }: {
@@ -32,15 +30,8 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         ></link>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"
-        />
-        <script src="https://cdn.tailwindcss.com/3.3.0" async />
-        {/* <script
-          type="text/javascript"
-          src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"
-        ></script> */}
+      
+      
       </head>
 
       <body className="scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2">
@@ -52,7 +43,6 @@ export default function RootLayout({
             <Footer />
           </main>
         </Providers>
-        <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js" async />
       </body>
     </html>
   );
