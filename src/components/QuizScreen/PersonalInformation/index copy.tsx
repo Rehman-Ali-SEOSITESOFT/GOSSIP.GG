@@ -3,7 +3,6 @@ import { Dialog, Transition } from "@headlessui/react";
 import React, { Fragment, useRef, useState, useEffect } from "react";
 import Close from "../../../assets/images/modal/close.png";
 import Info from "../../../assets/quiz-model/info.png";
-import Upload from "../../../assets/quiz-model/upload.png";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 const PersonalInformation = (props: any) => {
@@ -14,71 +13,6 @@ const PersonalInformation = (props: any) => {
   useEffect(() => {
     setIsDarkTheme(theme === "dark" ? "dark" : "light");
   }, [theme]);
-
-  const [dragActive, setDragActive] = useState<boolean>(false);
-  const inputRef = useRef<any>(null);
-  const [files, setFiles] = useState<any>([]);
-
-  function handleChange(e: any) {
-    e.preventDefault();
-    console.log("File has been added");
-    if (e.target.files && e.target.files[0]) {
-      console.log(e.target.files);
-      for (let i = 0; i < e.target.files["length"]; i++) {
-        setFiles((prevState: any) => [...prevState, e.target.files[i]]);
-      }
-    }
-  }
-
-  function handleSubmitFile(e: any) {
-    if (files.length === 0) {
-      // no file has been submitted
-    } else {
-      // write submit logic here
-    }
-  }
-
-  function handleDrop(e: any) {
-    e.preventDefault();
-    e.stopPropagation();
-    setDragActive(false);
-    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-      for (let i = 0; i < e.dataTransfer.files["length"]; i++) {
-        setFiles((prevState: any) => [...prevState, e.dataTransfer.files[i]]);
-      }
-    }
-  }
-
-  function handleDragLeave(e: any) {
-    e.preventDefault();
-    e.stopPropagation();
-    setDragActive(false);
-  }
-
-  function handleDragOver(e: any) {
-    e.preventDefault();
-    e.stopPropagation();
-    setDragActive(true);
-  }
-
-  function handleDragEnter(e: any) {
-    e.preventDefault();
-    e.stopPropagation();
-    setDragActive(true);
-  }
-
-  function removeFile(fileName: any, idx: any) {
-    const newArr = [...files];
-    newArr.splice(idx, 1);
-    setFiles([]);
-    setFiles(newArr);
-  }
-
-  function openFileExplorer() {
-    inputRef.current.value = "";
-    inputRef.current.click();
-  }
-
   return (
     <Transition.Root show={props.open} as={Fragment}>
       <Dialog
@@ -149,81 +83,17 @@ const PersonalInformation = (props: any) => {
                   <p className="pt-[32px]  montserratfont font-semibold text-[16px] dark:text-brandLightOpacity100 text-left">
                     PAN Card Image
                   </p>
-                  {/* <div className="mt-[16px] border-dashed border-brandLightOpacity10  montserratfont hover:border hover:border-brandDark2 dark:hover:border-[#ffffff]  dark:border-brandLightOpacity30 border border-choosebox  rounded w-full h-[100px] py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"></div> */}
-
-                  <div className="mt-[16px] border-dashed border-brandLightOpacity10  montserratfont hover:border hover:border-brandDark2 dark:hover:border-[#ffffff]  dark:border-brandLightOpacity30 border border-choosebox  rounded w-full h-[100px] py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]">
-                    <form
-                      // className={`${
-                      //   dragActive ? "bg-blue-400" : "bg-blue-100"
-                      // }  p-4 w-1/3 rounded-lg  text-center flex flex-col items-center justify-center`}
-                      onDragEnter={handleDragEnter}
-                      onSubmit={(e) => e.preventDefault()}
-                      onDrop={handleDrop}
-                      onDragLeave={handleDragLeave}
-                      onDragOver={handleDragOver}
-                    >
-                      {/* this input element allows us to select files for upload. We make it hidden so we can activate it when the user clicks select files */}
-                      <input
-                        placeholder="fileInput"
-                        className="hidden"
-                        ref={inputRef}
-                        type="file"
-                        multiple={true}
-                        onChange={handleChange}
-                        accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
-                      />
-
-                      {files.length < 1 ? (
-                        <div className="flex flex-row items-start ">
-                          <Image
-                            className="pt-[7px]"
-                            src={Upload}
-                            alt="upload"
-                          />
-                          <p className="pl-[14px] pt-[4px] montserratfont font-medium text-[16px] dark:text-brandLightOpacity70 flex flex-col  ">
-                            Drop file here
-                            <span className="text-[12px] dark:text-brandLightOpacity100 font-normal">
-                              or
-                            </span>
-                            <span
-                              className="pt-[6px] text-[16px] dark:text-brandLightOpacity100 cursor-pointer border-b-[1px] border-b-brandLightOpacity70 leading-[15px] w-fit"
-                              onClick={openFileExplorer}
-                            >
-                              Browse files
-                            </span>
-                          </p>
-                        </div>
-                      ) : (
-                        <div className="flex  items-center justify-center content-center">
-                          {files.map((file: any, idx: any) => (
-                            <div key={idx} className="flex flex-row space-x-5">
-                              <span>{file.name}</span>
-                              <span
-                                className="text-red-500 cursor-pointer"
-                                onClick={() => removeFile(file.name, idx)}
-                              >
-                                remove
-                              </span>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                      {/* <button
-          className="bg-black rounded-lg p-2 mt-3 w-auto"
-          onClick={handleSubmitFile}
-        >
-          <span className="p-2 text-white">Submit</span>
-        </button> */}
-                    </form>
-                  </div>
+                  <div className="mt-[16px] border-dashed border-brandLightOpacity10  montserratfont hover:border hover:border-brandDark2 dark:hover:border-[#ffffff]  dark:border-brandLightOpacity30 border border-choosebox  rounded w-full h-[100px] py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"></div>
+                 
                   <div className="flex flex-row items-start mt-[14px]">
-                    <a
-                      className={`done_btn h-[32px] flex items-center justify-center content-center  w-[67px] dark:bg-brandLightOpacity10    rounded-3xl	text-center text-[12px]	leading-6	 text-brandLightOpacity100 dark:text-brandLightOpacity100	font-medium montserratfont cursor-pointer mw-sm:w-[67px]   mw-sm3:w-[67px] mw-sm:text-[12px] mw-sm:text-medium`}
-                    >
-                      Verify
-                    </a>
+                  <a
+                    className={`done_btn h-[32px] flex items-center justify-center content-center  w-[67px] dark:bg-brandLightOpacity10    rounded-3xl	text-center text-[12px]	leading-6	 text-brandLightOpacity100 dark:text-brandLightOpacity100	font-medium montserratfont cursor-pointer mw-sm:w-[67px]   mw-sm3:w-[67px] mw-sm:text-[12px] mw-sm:text-medium`}
+                  >
+                    Verify
+                  </a>
                   </div>
-
+                  
+                
                   <p className="pt-[32px]  montserratfont font-semibold text-[16px] dark:text-brandLightOpacity100 text-left">
                     Delivery Address
                   </p>
@@ -244,7 +114,9 @@ const PersonalInformation = (props: any) => {
                     id="address"
                     rows={4}
                     placeholder="Address (House No.,Building, Area)*"
-                  ></textarea>
+                  >
+
+                    </textarea>
                   <input
                     className="mt-[16px] border-brandLightOpacity10  montserratfont hover:border hover:border-brandDark2 dark:hover:border-[#ffffff]  dark:border-brandLightOpacity10 border border-choosebox  rounded w-full h-12 py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"
                     id="code"
