@@ -291,8 +291,8 @@
   }
 
   .header__right .login__btn {
-    min-width: 72px;
-    font-size: 16px;
+    min-width: 65px;
+    font-size: 14px;
   }
   .fixed__bottom__header ul li a {
     font-size: 10px;
