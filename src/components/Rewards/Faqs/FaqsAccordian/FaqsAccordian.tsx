@@ -20,8 +20,8 @@ const FaqsAccordian = (props: any) => {
                   ></i>
                 </Disclosure.Button>
                 <Disclosure.Panel className="text-sm text-[#fff] pb-[15px]">
-                  If you're unhappy with your purchase for any reason, email us
-                  within 90 days and we'll refund you in full, no questions
+                  If you&#39;re unhappy with your purchase for any reason, email us
+                  within 90 days and we&#39;ll refund you in full, no questions
                   asked.
                 </Disclosure.Panel>
               </>

@@ -6,16 +6,13 @@ import Footer from "@/layouts/Footer/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Providers } from "./providers";
-
 // import "bootstrap/dist/css/bootstrap.min.css";
 // JUST BG GRADIENT COLOR'S
 import "../styles/background.css";
 import { useTheme } from "next-themes";
 import "react-multi-carousel/lib/styles.css";
 import QuizRatio from "@/components/QuizRatio";
-
 import "animate.css";
-
 export default function RootLayout({
   children,
 }: {
@@ -32,8 +29,6 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         ></link>
-
-        <script src="https://cdn.tailwindcss.com/3.3.0" async />
       </head>
 
       <body className="scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2">

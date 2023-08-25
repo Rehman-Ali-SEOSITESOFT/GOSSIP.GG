@@ -155,7 +155,7 @@ const QuizHistory = () => {
                   <li className="">
                     <a
                       className={
-                        "text-base   mw-sm1:text-sm   montserratfont  leading-5   capitalize  pb-[8px]  " +
+                        "text-[16px]   montserratfont  leading-normal   capitalize  pb-[8px] text-brandLightOpacity70  mw-md:text-[14x]" +
                         (openTab === 1
                           ? " dark:text-brand border-b-2 border-brandDark2   dark:border-b-brand font-bold	"
                           : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-normal  ")
@@ -245,15 +245,15 @@ const QuizHistory = () => {
                     <div className="flex flex-col">
                       <DateRange
                         editableDateInputs={true}
-                        onChange={(item) => setState([item.selection])}
+                        onChange={(item) => setState([item.selection])} 
                         moveRangeOnFirstSelection={false}
                         ranges={state}
                       />
                       <button
                         onClick={_handleClose}
-                        className="border-[1px] border-brandLightOpacity50 montserratfont text-[16px] bg-[#2E2A2B] mt-[4px] rounded py-[8px]"
+                        className="border-[1px] border-brandLightOpacity50 montserratfont text-[16px] bg-[#FFFFFF]   py-[8px] text-[#000] text-semibold"
                       >
-                        Ok
+                        Cancel
                       </button>
                     </div>
                   </>
@@ -266,7 +266,7 @@ const QuizHistory = () => {
                       onClick={() => onClickOpen()}
                       className=" px-4 bg-[#E2E2E2] flex flex-row justify-between items-center h-[60px] mw-sm1:h-[45px]   rounded-lg w-[302px] mx-13:w-[270px] mw-12:w-[300px] border border-brandDark2 dark:border-brandLightOpacity50 mw-sm1:rounded dark:bg-[#2E2A2B]"
                     >
-                      <p className="montserratfont font-semibold text-brandDark1 dark:text-brandLightOpacity100 mw-sm:text-xs mw-sm:leading-normal	">
+                      <p className="montserratfont font-semibold text-brandDark1 dark:text-brandLightOpacity100 mw-sm:text-xs mw-sm:leading-normal">
                         {selectedValue}
                       </p>
                       <div className="flex items-center">
@@ -299,7 +299,7 @@ const QuizHistory = () => {
                            }`}
                             onClick={() => onSelectValue(item)}
                           >
-                            <p className="montserratfont text-brandDark2 dark:text-brandLightOpacity100 text-base  pl-[8px] ">
+                            <p className="montserratfont leading-normal dark:text-brandLightOpacity100 text-[16px] font-medium text-brandLightOpacity70 pl-[8px] mw-md:text-[14px]">
                               {item}
                             </p>
                           </div>
@@ -307,22 +307,6 @@ const QuizHistory = () => {
                       </div>
                     )}
                   </div>
-                  // <select
-                  //   className="relative w-[300px] py-[20px] bg-[#2E2A2B] border-[1px] border-brandLightOpacity50 rounded-lg px-[18px]  montserratfont text-[16px] font-medium capitalize leading-normal text-brandLightOpacity70 mw-lg:text-[14px] mw-lg:py-[18px] mw-lg:pl-[14px]"
-                  //   onChange={_handleSelectEvent}
-                  //   name="fordate"
-                  // >
-                  //   <option
-                  //     value="1"
-                  //     className="montserratfont text-[16px] font-medium capitalize leading-normal color-brandLightOpacity70 py-[12px]"
-                  //   >
-                  //     Today
-                  //   </option>
-                  //   <option value="2">Yesterday</option>
-                  //   <option value="3">Last Week</option>
-                  //   <option value="4">Last 10 Days</option>
-                  //   <option value="custom">Custom</option>
-                  // </select>
                 )}
               </div>
             </div>

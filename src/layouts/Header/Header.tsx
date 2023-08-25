@@ -5,6 +5,8 @@ import Image from "next/image";
 import { Fragment } from "react";
 import logo from "../../assets/images/header/main-logo.png";
 import search from "../../assets/images/header/search.png";
+import noti from "../../assets/images/header/notif.png";
+
 import moon from "../../assets/images/header/moon.png";
 import sun from "../../assets/images/header/sun.png";
 import close from "../../assets/images/header/close-search.png";
@@ -277,6 +279,18 @@ const Header = () => {
                     >
                       <span>
                         <Image src={search} alt="search " />
+                      </span>
+                    </div>
+                    <div
+                      className={` p-[10px] w-[40px] h-[40px] cursor-pointer rounded-3xl		 bg-brandLightOpacity10 hover:bg-brandLightOpacity20 ml-4 relative`}
+                      // onClick={hanldeClose}
+                    >
+                      {/* ${styles.search__btn} ${styles.icons} */}
+                      <span>
+                        <Image src={noti} alt="search " />
+                      </span>
+                      <span className="absolute right-[-5px] top-[-2px] bg-brand font-medium flex items-center justify-center montserratfont text-brandLightOpacity100 h-[16px] w-[16px] rounded-full text-[11px]">
+                        3
                       </span>
                     </div>
                     {isLoggedIn ? (

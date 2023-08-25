@@ -79,7 +79,7 @@ const AnsweredIncorrectly = (props: any) => {
                   <p className="montserratfont dark:text-brand font-semibold text-[16px]">
                     Uh-Oh!
                   </p>
-                  <p className="montserratfont text-[14px] dark:to-brandLightOpacity100">
+                  <p className="montserratfont text-[14px] dark:text-brandLightOpacity100">
                     Looks like you answered this quiz incorrectly.
                   </p>
                   <div className="">
@@ -127,31 +127,31 @@ const AnsweredIncorrectly = (props: any) => {
                     <div className="flex flex-wrap mx-[25px] item-center justify-center mb-[40px]">
                       <div className="w-[33.33%] flex flex-col items-center">
                         <Image src={Win1} alt="Winner logo" />
-                        <p className="text-[12px] dark:text-brandLightOpacity100 font-medium montserratfont">
+                        <p className="text-[12px] mt-[-7px] dark:text-brandLightOpacity100 font-medium montserratfont">
                           @Naveen
                         </p>
                       </div>
                       <div className="w-[33.33%] flex flex-col items-center">
                         <Image src={Win2} alt="Winner logo" />
-                        <p className="text-[12px] dark:text-brandLightOpacity100 font-medium montserratfont">
+                        <p className="text-[12px] mt-[-7px] dark:text-brandLightOpacity100 font-medium montserratfont">
                           @Naveen
                         </p>
                       </div>
                       <div className="w-[33.33%] flex flex-col items-center">
                         <Image src={Win3} alt="Winner logo" />
-                        <p className="text-[12px] dark:text-brandLightOpacity100 font-medium montserratfont">
+                        <p className="text-[12px] mt-[-7px] dark:text-brandLightOpacity100 font-medium montserratfont">
                           @Naveen
                         </p>
                       </div>
                       <div className="w-[33.33%] flex flex-col items-center">
                         <Image src={Win4} alt="Winner logo" />
-                        <p className="text-[12px] dark:text-brandLightOpacity100 font-medium montserratfont">
+                        <p className="text-[12px] mt-[-7px] dark:text-brandLightOpacity100 font-medium montserratfont">
                           @Naveen
                         </p>
                       </div>
                       <div className="w-[33.33%] flex flex-col items-center">
                         <Image src={Win5} alt="Winner logo" />
-                        <p className="text-[12px] dark:text-brandLightOpacity100 font-medium montserratfont">
+                        <p className="text-[12px] mt-[-7px] dark:text-brandLightOpacity100 font-medium montserratfont">
                           @Naveen
                         </p>
                       </div>
