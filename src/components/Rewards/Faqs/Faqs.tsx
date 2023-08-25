@@ -33,17 +33,17 @@ const Faqs = () => {
   ]);
   return (
     <>
-      <section className="mb-[88px]">
+      <section className="mb-[88px] mw-md:mb-[40px]">
         <div className="global-section-width ">
           <div className="2xl:container">
-            <div className="mb-[10px]">
+            <div className="mb-[16px]">
               <h4 className="montserratfont text-[24px] leading-normal font-bold text-[#ED4E50]">
                 FAQs
               </h4>
             </div>
-            <div className="pr-[5px] bg-[#2E2A2B] pt-[4px] pb-[4px]">
+            <div className="pr-[5px] bg-[#2E2A2B] pt-[4px] pb-[4px] rounded-[8px]">
               <div
-                className={`faqs_accordians bg-[#2E2A2B] rounded-[8px] pt-[22px] px-[24px] h-[280px] mw-lg:h-[220px] overflow-x-scroll ${style.scrooling} mr-[8px] `}
+                className={`faqs_accordians bg-[#2E2A2B]  pt-[22px] px-[24px] h-[280px] mw-lg:h-[220px] overflow-x-scroll ${style.scrooling} mr-[8px]`}
               >
                 {list.map((e, idx) => (
                   <div

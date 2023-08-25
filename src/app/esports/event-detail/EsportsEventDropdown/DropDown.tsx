@@ -1,9 +1,9 @@
-import React, { Fragment } from "react"
-import { Menu, Transition } from "@headlessui/react"
-import style from "./Dropdown.module.css"
+import React, { Fragment } from "react";
+import { Menu, Transition } from "@headlessui/react";
+import style from "./Dropdown.module.css";
 const DropDown = () => {
   function classNames(...classes: any) {
-    return classes.filter(Boolean).join(" ")
+    return classes.filter(Boolean).join(" ");
   }
   return (
     <>
@@ -99,7 +99,7 @@ const DropDown = () => {
         </Menu>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default DropDown
+export default DropDown;

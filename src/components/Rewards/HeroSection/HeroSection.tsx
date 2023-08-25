@@ -20,7 +20,7 @@ const HeroSection = () => {
       <section>
         <div className="global-section-width ">
           <div className="2xl:container">
-            <div className="flex mw-lg:flex-col mt-[51px] mw-md:mt-[20px]">
+            <div className="flex mw-lg:flex-col mt-[43px] mw-md:mt-[20px]">
               <div className="w-5/12 mw-xl:w-2/5 block  mw-lg:w-full">
                 <div className="right-side pl-8 mx-14:pl-6 mw-lg:pl-0 mw-lg:py-5 mw-lg:h-auto flex flex-col justify-between mw-sm:py-[0px]">
                   <div className="left_top mb-[16px]">
@@ -101,7 +101,7 @@ const HeroSection = () => {
                         <h5 className="interfonts text-[14.4px] capitalize font-medium	leading-normal text-[#E5E5E5] ">
                           Day Streak
                         </h5>
-                        <p className="montserratfont text-[10px] leading-normal font-normal text-brandLightOpacity70">
+                        <p className="montserratfont text-[10px] leading-normal font-normal text-brandLightOpacity70 mt-[4px]">
                           Last played yesterday
                         </p>
                       </div>
@@ -149,7 +149,7 @@ const HeroSection = () => {
                     </div>
                   </div>
                   <div className=" mw-lg:text-center">
-                    <p className="hidden mw-lg:block montserratfont text-[12px] leading-normal font-medium	text-brandLightOpacity70 mt-[48px]">
+                    <p className="hidden mw-lg:block montserratfont text-[12px] leading-normal font-medium	text-brandLightOpacity70 mt-[48px] mw-md:mt-[31px]">
                       Advertisement
                     </p>
                     <Image

@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
-  plugins: [require("tw-elements/dist/plugin.cjs")],
+
   // mode: "jit",
   purge: {
     enabled: true,
