@@ -37,6 +37,7 @@ export default function Home() {
       arrows: false,
     },
   };
+
   return (
     <section className="home-page">
       <div className="pb-11  pt-6 mw-12:pb-7 mw-md:pb-[20px] mw-md:pt-[12px] ">

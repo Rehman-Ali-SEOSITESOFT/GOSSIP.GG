@@ -82,6 +82,7 @@ const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState<Boolean>(false);
   const [open, setOpen] = useState(false);
   const [profileShow, setProfileShow] = useState<Boolean>(true);
+
   const [bgClassChange, setBgClassChange] = useState<any>(
     theme === "dark" ? "header_light_img" : "header_dark_img"
   );
@@ -142,23 +143,64 @@ const Header = () => {
     }
   };
 
+  const hanldeClearAllNotification = () => {
+    console.log("working");
+  };
+
+  const [notifictionList, setNotificationList] = useState([
+    {
+      title: "Quiz Results 19 July",
+      disc: "Three Lucky Winners snagged Asus Gaming Keyboard and Mouse Combo Three Lucky Winners snagged Asus Gaming Keyboard and Mouse Combo",
+      time: "1 min ago",
+      quiz: false,
+      read: false,
+    },
+    {
+      title: "Reminder",
+      disc: "Quiz begins in 10 mins! Today’s Lucky Winners take home Bose Gaming Headphones!",
+      time: "3 hrs ago",
+      quiz: true,
+
+      read: false,
+    },
+    {
+      title: "Quiz Results 18 July",
+      disc: "Five Lucky Winners took home Sades Snowwolf Gaming Headphones",
+      time: "yesterday",
+      quiz: false,
+
+      read: true,
+    },
+    // {
+    //   title: "Quiz Results 18 July",
+    //   disc: "Five Lucky Winners took home Sades Snowwolf Gaming Headphones",
+    //   time: "yesterday",
+    //   quiz: false,
+
+    //   read: true,
+    // },
+  ]);
+
   return (
     <header
       className={`${styles.main_header} relative z-[10] mw-lg:sticky top-0`}
     >
-      <div className={`${styles.header_width} `}>
+      <div className={`${styles.header_width} relative `}>
         <div
-          // className={`2xl:container header_container ${styles.header_container} ${bgClassChange}   mw-lg:dark:bg-brandDark3 mw-lg:bg-brandDark2 px-[65px] h-[90px]  mx-14:h-full mx-14:px-[60px] mx-14:py-[20px]  mw-lg:px-[16px] mw-sm3:px-[15px] mw-sm3:py-[15px]`}
-          className={` 2xl:container header_container   mw-lg:dark:bg-brandDark3 mw-lg:bg-brandDark2 px-[65px] h-[90px]  mx-14:h-full mx-14:px-[60px] mx-14:py-[20px]  mw-lg:px-[16px] mw-sm3:px-[15px] mw-sm3:py-[15px] ${styles.header_container} ${bgClassChange} `}
+          className={` 2xl:container header_container   mw-lg:dark:bg-brandDark3 mw-lg:bg-brandDark2 px-[65px] h-[90px]  mx-14:h-full mx-14:px-[60px] mx-14:py-[20px] mw-11:px-[35px]  mw-lg:px-[16px] mw-sm3:px-[15px] mw-sm3:py-[15px] ${styles.header_container} ${bgClassChange} `}
         >
           <div className="flex  h-full flex-wrap items-center justify-between">
-            <div className={`xl:w-1/4 lg:w-1/5  w-3/6  ${styles.header__left}`}>
+            <div
+              className={`xl:w-1/4 lg:w-1/5  w-3/6  ${styles.header__left} mw-12:w-[20%] mw-sm5:w-[35%]`}
+            >
               <Link href="/" className={styles.logo}>
                 <Image src={logo} alt="Gossip GG" />
               </Link>
             </div>
             {searchOpen ? (
-              <div className={`${styles.header__center} xl:w-3/6 lg:w-1/1  `}>
+              <div
+                className={`${styles.header__center} xl:w-3/6 lg:w-1/1 mw-12:w-[50%]  `}
+              >
                 <div className="header-navigation">
                   {/* <ul className="flex flex-wrap  justify-center"> */}
                   <ul className="flex   justify-center">
@@ -267,7 +309,9 @@ const Header = () => {
               </>
             )}
 
-            <div className={`xl:w-1/4 lg:w-1/5	w-3/6 ${styles.header__right}`}>
+            <div
+              className={`xl:w-1/4 lg:w-1/5	w-3/6 ${styles.header__right} relative mw-12:w-[30%]  mw-sm5:w-[65%]`}
+            >
               <div
                 className={`${styles.header__right} flex justify-end items-center`}
               >
@@ -281,28 +325,118 @@ const Header = () => {
                         <Image src={search} alt="search " />
                       </span>
                     </div>
-                    <div
-                      className={` p-[10px] w-[40px] h-[40px] cursor-pointer rounded-3xl		 bg-brandLightOpacity10 hover:bg-brandLightOpacity20 ml-4 relative`}
-                      // onClick={hanldeClose}
+                    {/* <div
+                      className={` `}
                     >
-                      {/* ${styles.search__btn} ${styles.icons} */}
                       <span>
                         <Image src={noti} alt="search " />
                       </span>
                       <span className="absolute right-[-5px] top-[-2px] bg-brand font-medium flex items-center justify-center montserratfont text-brandLightOpacity100 h-[16px] w-[16px] rounded-full text-[11px]">
                         3
                       </span>
-                    </div>
+                    </div> */}
+                    <Menu as="div">
+                      <Menu.Button className="relative p-[10px] w-[40px] h-[40px] cursor-pointer rounded-3xl		 bg-brandLightOpacity10 hover:bg-brandLightOpacity20 ml-4 mw-sm5:w-[32px] mw-sm5:h-[32px] ">
+                        <span>
+                          <Image src={noti} alt="search " />
+                        </span>
+                        <span className="absolute right-[-5px] top-[-2px] bg-brand font-medium flex items-center justify-center montserratfont text-brandLightOpacity100 h-[16px] w-[16px] rounded-full text-[11px]">
+                          3
+                        </span>
+
+                        <Transition
+                          as={Fragment}
+                          enter="transition ease-out duration-100"
+                          enterFrom="transform opacity-0 scale-95"
+                          enterTo="transform opacity-100 scale-100"
+                          leave="transition ease-in duration-75"
+                          leaveFrom="transform opacity-100 scale-100"
+                          leaveTo="transform opacity-0 scale-95"
+                        >
+                          <div
+                            className={`bg-transparent	w-[0] h-[0] absolute z-[111] border-l-[10px] border-r-[10px] border-l-transparent border-r-transparent top-auto bottom-[-15px] left-auto right-auto	  border-b-[10px] border-b-white	 dark:border-y-brandDark1`}
+                          ></div>
+                        </Transition>
+                      </Menu.Button>
+                      <Transition
+                        as={Fragment}
+                        enter="transition ease-out duration-100"
+                        enterFrom="transform opacity-0 scale-95"
+                        enterTo="transform opacity-100 scale-100"
+                        leave="transition ease-in duration-75"
+                        leaveFrom="transform opacity-100 scale-100"
+                        leaveTo="transform opacity-0 scale-95"
+                      >
+                        <Menu.Items className="absolute pt-3 pl-4 pb-3 pr-1	 bg-white  z-10  dark:bg-brandDark1 right-[-50px] top-[55px]  left-auto   rounded-lg notifiction-shadow mw-xl:right-[0]">
+                          <div className=" w-[375px] max-h-[350px] overflow-x-hidden scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-[transparent] box-scroll pr-1 notifiction-shadow mw-sm5:w-[300px]">
+                            <div className="flex justify-between items-end	 ">
+                              <h3 className="text-brand text-lg	leading-[22px] font-bold">
+                                Notifications
+                              </h3>
+                              <h3
+                                className="montserratfont font-normal	 text-xs	 leading-[15px] text-brandLightOpacity70 cursor-pointer"
+                                onClick={hanldeClearAllNotification}
+                              >
+                                Clear all
+                              </h3>
+                            </div>
+                            <div className="list-on-notif">
+                              {notifictionList.map((e, i) => {
+                                return (
+                                  <div
+                                    key={i}
+                                    className="notification-box flex item-start justify-between border-t-[1px] border-brandLightOpacity10 py-[12px]  first:my-[0] first:border-t-0  "
+                                  >
+                                    <div>
+                                      <h4
+                                        className={`notifi-title montserratfont text-sm	 mb-2   ${
+                                          e.read
+                                            ? "text-brandLightOpacity70 font-normal"
+                                            : "text-brandLightOpacity1 font-semibold	"
+                                        }`}
+                                      >
+                                        <span className="text-brand">
+                                          {e.title} : &nbsp;
+                                        </span>
+                                        {e.disc}
+                                      </h4>
+                                      <p
+                                        className={`text-[10px] leading-[13px] montserratfont ${
+                                          e.read
+                                            ? "font-normal text-brandLightOpacity70"
+                                            : "font-semibold text-brandLightOpacity1"
+                                        }`}
+                                      >
+                                        {e.time}
+                                      </p>
+                                    </div>
+                                    <div className="min-w-[100px] text-end ">
+                                      <Link
+                                        href="#"
+                                        className={`text-brandLightOpacity70 montserratfont text-sm leading-[15px] font-medium	underline`}
+                                      >
+                                        {e.quiz ? "Play Quiz" : "View Results"}
+                                      </Link>
+                                    </div>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        </Menu.Items>
+                      </Transition>
+                    </Menu>
+                    {/*  NOTIFICTION POPUP  */}
                     {isLoggedIn ? (
                       <Menu
                         as="div"
-                        className="relative inline-block text-left h-[40px] mw-sm:h-[35px] mw-sm3:h-[32px]"
+                        className="relative inline-block text-left"
                       >
-                        <Menu.Button className="px-4 ">
+                        <Menu.Button className="px-4 mw-sm3:mt-[5px]">
                           <Image
                             src={profile}
                             alt="Demo"
-                            className="mw-sm:w-[35px] mw-sm:h-[35px]"
+                            className="min-w-[40px] min-h-[40px] mw-sm:w-[35px] mw-sm:h-[35px] mw-sm5:w-[32px] mw-sm5:h-[32px] mw-sm5:min-h-[35px] "
                           />
                         </Menu.Button>
 
