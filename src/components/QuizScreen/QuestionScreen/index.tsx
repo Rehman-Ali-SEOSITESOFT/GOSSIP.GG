@@ -9,6 +9,7 @@ import Close from "../../../assets/images/modal/close.png";
 import Image from "next/image";
 import CountdownSection from "../CountdownSec";
 import InviteFriendSection from "../InviteFriendsSec";
+import AnswerSubmitScreen from "../AnswerSubmittedScreen";
 
 const QuestionScreen = (props: any) => {
   const cancelButtonRef = useRef(null);
@@ -17,10 +18,7 @@ const QuestionScreen = (props: any) => {
   const questionList = ["$18.93 million​", "$24.54 million​", "$9.3 million​", "$40.01 million​"];
   const questionOption = ["A", "B", "C", "D"];
 
-  const onClickOption = (e: any) => {
-    e.preventDefault();
-    // setOptionSelect(true);
-  };
+
 
   const onClickSelectOption = (val: number) => {
     setOptionNumber(val);
@@ -28,8 +26,17 @@ const QuestionScreen = (props: any) => {
 
   };
 
+  const [openQ, setOpenQ] = useState<Boolean>(false);
+
+  const onClickSubmit = (e: any) => {
+    props.close();
+    setOpenQ(!openQ);
+    
+  };
+
   return (
-    <Transition.Root show={props.open} as={Fragment}>
+    <>
+     <Transition.Root show={props.open} as={Fragment}>
       <Dialog
         as="div"
         className="relative z-10"
@@ -119,7 +126,7 @@ const QuestionScreen = (props: any) => {
                     ))}
                   </div>
                   <a
-                    onClick={(e) => onClickOption(e)}
+                    onClick={(e) => onClickSubmit(e)}
                     className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[20px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold ${
                       optionSelect === false ? "opacity-50	" : "opacity-100	"
                     }  `}
@@ -133,6 +140,9 @@ const QuestionScreen = (props: any) => {
         </div>
       </Dialog>
     </Transition.Root>
+    <AnswerSubmitScreen open={openQ} close={() => setOpenQ(!openQ)}/>
+    </>
+   
   );
 };
 

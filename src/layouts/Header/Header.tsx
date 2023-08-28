@@ -600,7 +600,7 @@ const Header = () => {
       {openIntroModal && (
         <IntroScreen
           open={openIntroModal}
-          onClickOpenModal={onClickOpenIntroModal}
+          close={onClickOpenIntroModal}
         />
       )}
       {openPrizeOfDay && (

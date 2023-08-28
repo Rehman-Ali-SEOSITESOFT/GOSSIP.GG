@@ -65,8 +65,8 @@ const AnswerSubmitScreen = (props: any) => {
                     Well done, @Naveen! <br /> You have successfully submitted
                     your answer.
                   </p>
-                  <Image src={Animation} alt="success aniamtion"/>
-                  <div className="px-[22px] mt-[248px]">
+                  <Image className="mt-[42px]" src={Animation} alt="success aniamtion"/>
+                  <div className="px-[22px] mt-[52px]">
                     <p className="text-left text-brandLightOpacity100 montserratfont text-[16px] font-medium ">
                       
                       Results will be announced at
@@ -96,6 +96,7 @@ const AnswerSubmitScreen = (props: any) => {
                 <div>
                   <p className="text-[12px] dark:text-brandLightOpacity70 montserratfont mt-[50px]">Terms and conditions</p>
                   <a
+                    onClick={() => props.close()}
                     className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold`}
                   >
                     Go to Home Page

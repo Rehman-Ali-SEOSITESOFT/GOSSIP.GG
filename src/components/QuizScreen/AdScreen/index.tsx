@@ -39,18 +39,20 @@ const AddScreen = (props: any) => {
     console.log("closing testing......");
   };
   useEffect(() => {
-    if (props.open) {
-      timerFunction();
+    setSeconds(3);
+    setAddDisabled(false);
+    if(props.open === true){
+      timerFunction();  
     }
-  }, []);
+
+  }, [props.open === true]);
 
   const [openQ, setOpenQ] = useState<Boolean>(false);
 
   const onClickStart = (e: any) => {
-   
-    // props.close();
+    props.close();
     setOpenQ(!openQ);
-    console.log("workign=");
+    
   };
 
   return (
@@ -94,13 +96,19 @@ const AddScreen = (props: any) => {
                     className={`top-side flex flex-col justify-between h-full p-5 z-10`}
                   >
                     <div className="flex justify-between items-center">
+                    {addDisabled ? 
+                     <div className="w-[28px] h-[28px]  rounded-3xl leading-[28px]">
+                     <span className="text-lg leading-normal font-semibold montserratfont">
+                     </span>
+                 </div>
+                    
+                    : (
                       <div className="w-[28px] h-[28px] bg-[rgba(20,19,19,0.10)] rounded-3xl leading-[28px]">
-                        {addDisabled ? null : (
                           <span className="text-lg leading-normal font-semibold montserratfont text-brandLightOpacity100">
                             {seconds}
                           </span>
-                        )}
                       </div>
+                       )}
                       <div
                         className="cursor-pointer"
                         onClick={() => props.close()}
@@ -110,7 +118,7 @@ const AddScreen = (props: any) => {
                     </div>
                     <div className="bottom-side">
                       <button
-                        className="bg-brand/[0.5]  max-w-[177px] w-full h-[42px] flex items-center justify-between rounded-3xl m-auto pl-[27px] pr-[15px]	 hover:bg-[#ec5d5f] cursor-pointer disabled:hover:bg-brand/[0.5] disabled:hover:cursor-default	"
+                        className="bg-brand/[0.5] outline-none  max-w-[177px] w-full h-[42px] flex items-center justify-between rounded-3xl m-auto pl-[27px] pr-[15px]	 hover:bg-[#ec5d5f] cursor-pointer disabled:hover:bg-brand/[0.5] disabled:hover:cursor-default	"
                         disabled={addDisabled ? false : true}
                         onClick={(e) => onClickStart(e)}
                       >
@@ -146,10 +154,8 @@ const AddScreen = (props: any) => {
           </div>
         </Dialog>
       </Transition.Root>
-      {openQ && 
-           <QuestionScreen open={openQ} close={() => setOpenQ(!openQ)} />
- 
-      }
+
+      <QuestionScreen open={openQ} close={() => setOpenQ(!openQ)} />
     </>
   );
 };
