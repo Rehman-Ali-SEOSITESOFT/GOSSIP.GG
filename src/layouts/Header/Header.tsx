@@ -24,6 +24,9 @@ import { Menu, Transition } from "@headlessui/react";
 import Cross from "../../assets/images/general/x.png";
 import Clock from "../../assets/images/general/clock.png";
 import barndlogo from "../../assets/images/header/brand-responsive.png";
+import IntroScreen from "@/components/QuizScreen/IntroScreen";
+import PrizeOfTheDay from "@/components/QuizScreen/PrizeOfTheDay";
+
 const Header = () => {
   interface MenuList {
     name: string;
@@ -143,10 +146,6 @@ const Header = () => {
     }
   };
 
-  const hanldeClearAllNotification = () => {
-    console.log("working");
-  };
-
   const [notifictionList, setNotificationList] = useState([
     {
       title: "Quiz Results 19 July",
@@ -160,7 +159,6 @@ const Header = () => {
       disc: "Quiz begins in 10 mins! Today’s Lucky Winners take home Bose Gaming Headphones!",
       time: "3 hrs ago",
       quiz: true,
-
       read: false,
     },
     {
@@ -168,19 +166,33 @@ const Header = () => {
       disc: "Five Lucky Winners took home Sades Snowwolf Gaming Headphones",
       time: "yesterday",
       quiz: false,
-
       read: true,
     },
-    // {
-    //   title: "Quiz Results 18 July",
-    //   disc: "Five Lucky Winners took home Sades Snowwolf Gaming Headphones",
-    //   time: "yesterday",
-    //   quiz: false,
-
-    //   read: true,
-    // },
+    {
+      title: "Quiz Results 18 July",
+      disc: "Five Lucky Winners took home Sades Snowwolf Gaming Headphones",
+      time: "yesterday",
+      quiz: false,
+      read: true,
+    },
   ]);
 
+  const onClickClearAllNotification = (e) => {
+    e.preventDefault();
+    setNotificationList([]);
+  };
+
+  //////// for Open Modal///////////////////
+  const [openIntroModal, setOpenIntroModal] = useState<boolean | null>(false);
+  const [openPrizeOfDay, setOpenPrizeOfDay] = useState<boolean | null>(false);
+
+  const onClickOpenIntroModal = (e) => {
+    setOpenIntroModal(!openIntroModal);
+  };
+
+  const onClickOpenPrizeOfDayModal = (e) => {
+    setOpenPrizeOfDay(!openPrizeOfDay);
+  };
   return (
     <header
       className={`${styles.main_header} relative z-[10] mw-lg:sticky top-0`}
@@ -375,52 +387,65 @@ const Header = () => {
                               </h3>
                               <h3
                                 className="montserratfont font-normal	 text-xs	 leading-[15px] text-brandLightOpacity70 cursor-pointer"
-                                onClick={hanldeClearAllNotification}
+                                onClick={(e) => onClickClearAllNotification(e)}
                               >
-                                Clear all
+                                {notifictionList.length > 0 ? "Clear all" : ""}
                               </h3>
                             </div>
                             <div className="list-on-notif">
-                              {notifictionList.map((e, i) => {
-                                return (
-                                  <div
-                                    key={i}
-                                    className="notification-box flex item-start justify-between border-t-[1px] border-brandLightOpacity10 py-[12px]  first:my-[0] first:border-t-0  "
-                                  >
-                                    <div>
-                                      <h4
-                                        className={`notifi-title montserratfont text-sm	 mb-2   ${
-                                          e.read
-                                            ? "text-brandLightOpacity70 font-normal"
-                                            : "text-brandLightOpacity1 font-semibold	"
-                                        }`}
-                                      >
-                                        <span className="text-brand">
-                                          {e.title} : &nbsp;
-                                        </span>
-                                        {e.disc}
-                                      </h4>
-                                      <p
-                                        className={`text-[10px] leading-[13px] montserratfont ${
-                                          e.read
-                                            ? "font-normal text-brandLightOpacity70"
-                                            : "font-semibold text-brandLightOpacity1"
-                                        }`}
-                                      >
-                                        {e.time}
-                                      </p>
+                              {notifictionList.length > 0 ? (
+                                notifictionList.map((e, i) => {
+                                  return (
+                                    <div
+                                      key={i}
+                                      className="notification-box flex item-start justify-between border-t-[1px] border-brandLightOpacity10 py-[12px]  first:my-[0] first:border-t-0  "
+                                    >
+                                      <div>
+                                        <h4
+                                          className={`notifi-title montserratfont text-sm	 mb-2   ${
+                                            e.read
+                                              ? "text-brandLightOpacity70 font-normal"
+                                              : "text-brandLightOpacity1 font-semibold	"
+                                          }`}
+                                        >
+                                          <span className="text-brand">
+                                            {e.title} : &nbsp;
+                                          </span>
+                                          {e.disc}
+                                        </h4>
+                                        <p
+                                          className={`text-[10px] leading-[13px] montserratfont ${
+                                            e.read
+                                              ? "font-normal text-brandLightOpacity70"
+                                              : "font-semibold text-brandLightOpacity1"
+                                          }`}
+                                        >
+                                          {e.time}
+                                        </p>
+                                      </div>
+                                      <div className="min-w-[115px] text-end pr-[10px]">
+                                        <button
+                                          onClick={
+                                            e.quiz
+                                              ? (e) => onClickOpenIntroModal(e)
+                                              : (e) =>
+                                                  onClickOpenPrizeOfDayModal(e)
+                                          }
+                                          className={`text-brandLightOpacity70 montserratfont text-sm leading-[15px] font-medium	underline`}
+                                        >
+                                          {e.quiz
+                                            ? "Play Quiz"
+                                            : "View Results"}
+                                        </button>
+                                      </div>
                                     </div>
-                                    <div className="min-w-[100px] text-end ">
-                                      <Link
-                                        href="#"
-                                        className={`text-brandLightOpacity70 montserratfont text-sm leading-[15px] font-medium	underline`}
-                                      >
-                                        {e.quiz ? "Play Quiz" : "View Results"}
-                                      </Link>
-                                    </div>
-                                  </div>
-                                );
-                              })}
+                                  );
+                                })
+                              ) : (
+                                <p className="pt-[8px] montserratfont dark:text-brandLightOpacity70 text-[12px] ">
+                                  No notifications
+                                </p>
+                              )}
                             </div>
                           </div>
                         </Menu.Items>
@@ -572,6 +597,18 @@ const Header = () => {
         </div>
       </div>
       <LoginModal open={open} onClickOpenModal={onClickOpenModal} />
+      {openIntroModal && (
+        <IntroScreen
+          open={openIntroModal}
+          onClickOpenModal={onClickOpenIntroModal}
+        />
+      )}
+      {openPrizeOfDay && (
+        <PrizeOfTheDay
+          open={openPrizeOfDay}
+          close={onClickOpenPrizeOfDayModal}
+        />
+      )}
     </header>
   );
 };

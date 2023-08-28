@@ -15,8 +15,8 @@ import { Switch } from "@headlessui/react";
 
 const PrizeOfTheDay = (props: any) => {
   const cancelButtonRef = useRef(null);
-  const [enabled, setEnabled] = useState<boolean | any>(false);
-  console.log("enabled", enabled);
+  const [enabled, setEnabled] = useState<boolean>(false);
+  console.log("price of the day", enabled);
   return (
     <Transition.Root show={props.open} as={Fragment}>
       <Dialog
@@ -87,49 +87,49 @@ const PrizeOfTheDay = (props: any) => {
                 </div>
 
                 <div className="flex flex-col">
-                    <div className="px-[1px] flex flex-row items-center justify-center mb-[4px] ">
-                      <div className="bg-gradient-to-l  min-w-[22%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
-                      <p className="px-[6px] montserratfont text-[14px] font-medium dark:text-brand">
-                        TODAY&#39;S LUCKY WINNERS
+                  <div className="px-[1px] flex flex-row items-center justify-center mb-[4px] ">
+                    <div className="bg-gradient-to-l  min-w-[22%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
+                    <p className="px-[6px] montserratfont text-[14px] font-medium dark:text-brand">
+                      TODAY&#39;S LUCKY WINNERS
+                    </p>
+                    <div className="bg-gradient-to-r  min-w-[22%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
+                  </div>
+                  <div className="flex flex-wrap mx-[25px] item-center justify-center mb-[40px]">
+                    <div className="w-[33.33%] flex flex-col items-center">
+                      <Image src={Win1} alt="Winner logo" />
+                      <p className="text-[12px] mt-[-7px] dark:text-brandLightOpacity100 font-medium montserratfont">
+                        @Naveen
                       </p>
-                      <div className="bg-gradient-to-r  min-w-[22%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
                     </div>
-                    <div className="flex flex-wrap mx-[25px] item-center justify-center mb-[40px]">
-                      <div className="w-[33.33%] flex flex-col items-center">
-                        <Image src={Win1} alt="Winner logo" />
-                        <p className="text-[12px] mt-[-7px] dark:text-brandLightOpacity100 font-medium montserratfont">
-                          @Naveen
-                        </p>
-                      </div>
-                      <div className="w-[33.33%] flex flex-col items-center">
-                        <Image src={Win2} alt="Winner logo" />
-                        <p className="text-[12px] mt-[-7px] dark:text-brandLightOpacity100 font-medium montserratfont">
-                          @Naveen
-                        </p>
-                      </div>
-                      <div className="w-[33.33%] flex flex-col items-center">
-                        <Image src={Win3} alt="Winner logo" />
-                        <p className="text-[12px] mt-[-7px] dark:text-brandLightOpacity100 font-medium montserratfont">
-                          @Naveen
-                        </p>
-                      </div>
-                      <div className="w-[33.33%] flex flex-col items-center">
-                        <Image src={Win4} alt="Winner logo" />
-                        <p className="text-[12px] mt-[-7px] dark:text-brandLightOpacity100 font-medium montserratfont">
-                          @Naveen
-                        </p>
-                      </div>
-                      <div className="w-[33.33%] flex flex-col items-center">
-                        <Image src={Win5} alt="Winner logo" />
-                        <p className="text-[12px] mt-[-7px] dark:text-brandLightOpacity100 font-medium montserratfont">
-                          @Naveen
-                        </p>
-                      </div>
+                    <div className="w-[33.33%] flex flex-col items-center">
+                      <Image src={Win2} alt="Winner logo" />
+                      <p className="text-[12px] mt-[-7px] dark:text-brandLightOpacity100 font-medium montserratfont">
+                        @Naveen
+                      </p>
+                    </div>
+                    <div className="w-[33.33%] flex flex-col items-center">
+                      <Image src={Win3} alt="Winner logo" />
+                      <p className="text-[12px] mt-[-7px] dark:text-brandLightOpacity100 font-medium montserratfont">
+                        @Naveen
+                      </p>
+                    </div>
+                    <div className="w-[33.33%] flex flex-col items-center">
+                      <Image src={Win4} alt="Winner logo" />
+                      <p className="text-[12px] mt-[-7px] dark:text-brandLightOpacity100 font-medium montserratfont">
+                        @Naveen
+                      </p>
+                    </div>
+                    <div className="w-[33.33%] flex flex-col items-center">
+                      <Image src={Win5} alt="Winner logo" />
+                      <p className="text-[12px] mt-[-7px] dark:text-brandLightOpacity100 font-medium montserratfont">
+                        @Naveen
+                      </p>
+                    </div>
                   </div>
 
                   <div className="px-[22px]">
                     <p className="text-left text-brandLightOpacity100 montserratfont text-[16px] font-medium ">
-                    This could be you! Play tomorrow?
+                      This could be you! Play tomorrow?
                     </p>
                     <div className="mt-[10px] flex flex-row justify-between items-center">
                       <p className="text-[14px] montserratfont font-medium dark:text-brandLightOpacity70">

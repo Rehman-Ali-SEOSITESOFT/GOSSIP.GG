@@ -16,7 +16,7 @@ const Faqs = () => {
       heading: "Terms and conditons",
     },
     {
-      heading: "Disclaimer",
+      heading: "Disclaimer", 
     },
     {
       heading: "Customer Support",

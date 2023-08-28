@@ -14,7 +14,12 @@ const QuestionScreen = (props: any) => {
   const cancelButtonRef = useRef(null);
   const [optionSelect, setOptionSelect] = useState<boolean>(false);
   const [optionNumber, setOptionNumber] = useState<number>(0);
-  const questionList = ["$18.93 million​", "$24.54 million​", "$9.3 million​", "$40.01 million​"];
+  const questionList = [
+    "$18.93 million​",
+    "$24.54 million​",
+    "$9.3 million​",
+    "$40.01 million​",
+  ];
   const questionOption = ["A", "B", "C", "D"];
 
   const onClickOption = (e: any) => {
@@ -25,8 +30,9 @@ const QuestionScreen = (props: any) => {
   const onClickSelectOption = (val: number) => {
     setOptionNumber(val);
     setOptionSelect(true);
-
   };
+
+  console.log("question screeen");
 
   return (
     <Transition.Root show={props.open} as={Fragment}>
@@ -74,8 +80,8 @@ const QuestionScreen = (props: any) => {
                     <Image src={Close} alt="Close" />
                   </div>
                 </div>
-               <InviteFriendSection/>
-                <CountdownSection/>
+                <InviteFriendSection />
+                <CountdownSection />
                 <div className="mx-[16px] my-[13px]">
                   <Image src={Product} alt="Product" />
                 </div>
@@ -100,7 +106,7 @@ const QuestionScreen = (props: any) => {
                           className="pr-[0%] pl-[16px] font-bold dark:text-brandLightOpacity100
                             text-brandDark2 text-base mw-sm:text-[14px]  montserratfont"
                         >
-                              {questionOption[index]}
+                          {questionOption[index]}
                         </p>
                         <p
                           className={`pr-[40px] mx-auto hover:text-brandDark2 dark:hover:text-brandLightOpacity100 items-start  ${
@@ -109,12 +115,8 @@ const QuestionScreen = (props: any) => {
                               : "text-brandDark2 dark:text-brandLightOpacity100 font-light"
                           } text-base  text-[14px]  montserratfont `}
                         >
-                              {item}
+                          {item}
                         </p>
-                       
-
-       
-
                       </div>
                     ))}
                   </div>
