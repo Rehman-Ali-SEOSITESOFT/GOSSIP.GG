@@ -111,8 +111,12 @@ const IntroScreen = (props: any) => {
           </div>
         </Dialog>
       </Transition.Root>
+<<<<<<< HEAD
 
       <AddScreen open={open} close={() => setOpen(!open)} />
+=======
+      {open && <AddScreen open={open} close={() => setOpen(!open)} />}
+>>>>>>> c41d36aa29f71e353f44ab8f7ff040dac27a9ac4
     </>
   );
 };

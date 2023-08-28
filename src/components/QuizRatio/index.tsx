@@ -19,11 +19,20 @@ import QuizEnded from "../QuizScreen/QuizEnded";
 import OrderConfirm from "../QuizScreen/OrderConfirm";
 import OrderSummary from "../QuizScreen/OrderSummary";
 import PersonalInformation from "../QuizScreen/PersonalInformation";
+import QuizRatioTimer from "../QuizRatioTimer/QuizRatioTimer";
+import Countdown from "react-countdown";
 
 const QuizRatio = () => {
+  const Completionist = () => (
+    <span className="montserratfont text-[14px] font-semibold leading-[17.07px] ">
+      Quiz Result <i className="fa-solid fa-angle-right"></i>
+      <i className="fa-solid fa-angle-right"></i>
+    </span>
+  );
   const [openIntro, setOpenIntro] = useState<Boolean>(false);
   const [closeQuizBox, setCloseQuizBox] = useState<Boolean>(true);
-
+  const [hello, setHello] = useState<String>("Quiz Result");
+  const [completed, setCompleted] = useState<Boolean>(false);
   const hanldeClosedQuiz = () => {
     console.log("closed");
     setCloseQuizBox(!closeQuizBox);
@@ -35,6 +44,32 @@ const QuizRatio = () => {
     console.log("working");
     setCloseQuizBox(!closeQuizBox);
   };
+  const renderer = ({ hours, minutes, seconds, completed }) => {
+    if (completed) {
+      // Render a completed state
+
+      return (
+        <>
+          <Completionist />
+        </>
+      );
+    } else {
+      // Render a countdown
+      return (
+        <div className="timer quiz-timer  flex flex-col items-center justify-center bg-brand rounded-full w-[130px] h-[43px]">
+          <p
+            className={` m-0 leading-3	text-[10px] montserratfont capitalize  font-medium text-white`}
+          >
+            Quiz ends in
+          </p>
+          <span>
+            {hours}:{minutes}:{seconds}
+          </span>
+        </div>
+      );
+    }
+  };
+  console.log(renderer, "parent ");
 
   return (
     <>
@@ -79,11 +114,14 @@ const QuizRatio = () => {
             </div>
           </div>
           <div className="timer quiz-timer  flex flex-col items-center justify-center bg-brand rounded-full w-[130px] h-[43px]">
-            <p className="m-0 leading-3	text-[10px] montserratfont capitalize  font-medium text-white">
+            {/* <p
+              className={` m-0 leading-3	text-[10px] montserratfont capitalize  font-medium text-white`}
+            >
               Quiz ends in
-            </p>
+            </p> */}
+
             <h4 className="text-base text-white montserratfont capitalize font-bold">
-              00 : 57 : 00
+              <Countdown date={Date.now() + 50000} renderer={renderer} />
             </h4>
           </div>
         </div>
