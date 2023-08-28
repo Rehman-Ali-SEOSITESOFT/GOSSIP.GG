@@ -13,19 +13,14 @@ import AddScreen from "../AdScreen";
 const IntroScreen = (props: any) => {
   const cancelButtonRef = useRef(null);
 
- 
   const [open, setOpen] = useState<boolean>(false);
 
   const onClickPlay = () => {
     // setOpen(!open);
     props.close();
-    setOpen(!open)
-    console.log("weojdklfajsdklfjasklfdj")
-
+    setOpen(!open);
+    console.log("weojdklfajsdklfjasklfdj");
   };
-
-
-
 
   return (
     <>
@@ -116,12 +111,7 @@ const IntroScreen = (props: any) => {
           </div>
         </Dialog>
       </Transition.Root>
-     {open &&
-     
-     <AddScreen open={open} close={() => setOpen(!open)} />
-     }
-       
-    
+      {open && <AddScreen open={open} close={() => setOpen(!open)} />}
     </>
   );
 };
