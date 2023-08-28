@@ -12,6 +12,7 @@ import ReactCurvedText from "react-curved-text";
 import logo from "../../../assets/quiz-model/title-logo.png";
 import cong from "../../../assets/quiz-model/cong1.gif";
 import crown from "../../../assets/quiz-model/con-crown.png";
+import OrderSummary from "../OrderSummary";
 
 const WinnerScreenTwo = (props: any) => {
   const cancelButtonRef = useRef(null);
@@ -19,12 +20,24 @@ const WinnerScreenTwo = (props: any) => {
   const [animtedHide, setAnimatedHided] = useState(false);
 
   useEffect(() => {
+    setAnimatedHided(false)
     setTimeout(() => {
       setAnimatedHided(true);
     }, 3000);
-  }, []);
+  }, [props.open === true]);
+
+  const [openQ, setOpenQ] = useState<Boolean>(false);
+
+  const onClickClaim = (e: any) => {
+    props.close();
+    setOpenQ(!openQ);
+    
+  };
+
+
   return (
-    <Transition.Root show={props.open} as={Fragment}>
+    <>
+      <Transition.Root show={props.open} as={Fragment}>
       <Dialog
         as="div"
         className="relative z-10"
@@ -147,9 +160,10 @@ const WinnerScreenTwo = (props: any) => {
                     Terms and conditions
                   </p>
                   <a
+                  onClick={(e) => onClickClaim(e)}
                     className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold`}
                   >
-                    Go to Home Page
+                    Claim Now
                   </a>
                 </div>
               </div>
@@ -219,6 +233,11 @@ const WinnerScreenTwo = (props: any) => {
         </div>
       </Dialog>
     </Transition.Root>
+    <OrderSummary
+     open={openQ} close={() => setOpenQ(!openQ)}
+    />
+  
+    </>
   );
 };
 

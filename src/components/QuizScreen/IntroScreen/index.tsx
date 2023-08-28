@@ -14,12 +14,9 @@ const IntroScreen = (props: any) => {
   const cancelButtonRef = useRef(null);
 
   const [open, setOpen] = useState<Boolean>(false);
-
   const onClickPlay = () => {
-    // setOpen(!open);
     props.close();
     setOpen(!open);
-    console.log("weojdklfajsdklfjasklfdj");
   };
 
   return (
@@ -111,12 +108,8 @@ const IntroScreen = (props: any) => {
           </div>
         </Dialog>
       </Transition.Root>
-<<<<<<< HEAD
 
-      <AddScreen open={open} close={() => setOpen(!open)} />
-=======
-      {open && <AddScreen open={open} close={() => setOpen(!open)} />}
->>>>>>> c41d36aa29f71e353f44ab8f7ff040dac27a9ac4
+      <AddScreen open={open} close={() => setOpen(!open)} isSeeResult={false} />
     </>
   );
 };

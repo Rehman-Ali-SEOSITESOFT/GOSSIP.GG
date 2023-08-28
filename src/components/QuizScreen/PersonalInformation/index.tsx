@@ -4,8 +4,11 @@ import React, { Fragment, useRef, useState, useEffect } from "react";
 import Close from "../../../assets/images/modal/close.png";
 import Info from "../../../assets/quiz-model/info.png";
 import Upload from "../../../assets/quiz-model/upload.png";
+import Loader from "../../../assets/quiz-model/loader.png";
+import Tick from "../../../assets/quiz-model/tick.png";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+
 const PersonalInformation = (props: any) => {
   const cancelButtonRef = useRef(null);
   const { theme } = useTheme();
@@ -78,6 +81,16 @@ const PersonalInformation = (props: any) => {
     inputRef.current.value = "";
     inputRef.current.click();
   }
+
+  const [loader, setLoader] = useState<Boolean>(false);
+  const [isVerfied, seIsVerified] = useState<Boolean>(false);
+  const onClickVerify = (e: any) => {
+    setLoader(true);
+    setTimeout(() => {
+      setLoader(false);
+      seIsVerified(true);
+    }, 2000);
+  };
 
   return (
     <Transition.Root show={props.open} as={Fragment}>
@@ -217,11 +230,25 @@ const PersonalInformation = (props: any) => {
                     </form>
                   </div>
                   <div className="flex flex-row items-start mt-[14px]">
-                    <a
-                      className={`done_btn h-[32px] flex items-center justify-center content-center  w-[67px] dark:bg-brandLightOpacity10    rounded-3xl	text-center text-[12px]	leading-6	 text-brandLightOpacity100 dark:text-brandLightOpacity100	font-medium montserratfont cursor-pointer mw-sm:w-[67px]   mw-sm3:w-[67px] mw-sm:text-[12px] mw-sm:text-medium`}
+                    <div
+                      onClick={(e) => onClickVerify(e)}
+                      className={`done_btn h-[32px] flex items-center justify-center content-center ${isVerfied ? 'w-[100px] border border-brandLightOpacity100': 'w-[67px]' }  dark:bg-brandLightOpacity10    rounded-3xl	text-center 	leading-6	 cursor-pointer mw-sm:w-[67px]   mw-sm3:w-[67px] mw-sm:text-[12px] mw-sm:text-medium`}
                     >
-                      Verify
-                    </a>
+                      {loader ? (
+                        <Image src={Loader} alt="loader" />
+                      ) : isVerfied ? (
+                        <div className="flex flex-row  w-[100%] items-center justify-around">
+                          <Image className="ml-[8px]" src={Tick} alt="tick" />
+                          <p className="pr-[12px] text-[12px] text-brandLightOpacity100 dark:text-brandLightOpacity100	font-medium montserratfont ">
+                            Verified
+                          </p>
+                        </div>
+                      ) : (
+                        <p className="text-[12px] text-brandLightOpacity100 dark:text-brandLightOpacity100	font-medium montserratfont ">
+                          Verify
+                        </p>
+                      )}
+                    </div>
                   </div>
 
                   <p className="pt-[32px]  montserratfont font-semibold text-[16px] dark:text-brandLightOpacity100 text-left">

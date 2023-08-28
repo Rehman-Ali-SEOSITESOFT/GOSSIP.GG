@@ -8,11 +8,20 @@ import Image from "next/image";
 import InviteFriendSection from "../InviteFriendsSec";
 import CountdownSection from "../CountdownSec";
 import { Switch } from "@headlessui/react";
+import TermsAndCondition from "../TermsAndConditonScreen";
 const AnswerSubmitScreen = (props: any) => {
   const cancelButtonRef = useRef(null);
   const [enabled, setEnabled] = useState<boolean|any>(false);
-  console.log("enabled", enabled)
+ 
+  const [openW, setOpenW] = useState<Boolean>(false);
+
+  const onClickTermAndConditionScreen = (e: any) => {
+    props.close();
+    setOpenW(!openW);
+    
+  };
   return (
+    <>
     <Transition.Root show={props.open} as={Fragment}>
       <Dialog
         as="div"
@@ -94,7 +103,7 @@ const AnswerSubmitScreen = (props: any) => {
                   </div>
                 </div>
                 <div>
-                  <p className="text-[12px] dark:text-brandLightOpacity70 montserratfont mt-[50px]">Terms and conditions</p>
+                  <p onClick={(e) => onClickTermAndConditionScreen(e)} className="cursor-pointer text-[12px] dark:text-brandLightOpacity70 montserratfont mt-[50px]">Terms and conditions</p>
                   <a
                     onClick={() => props.close()}
                     className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold`}
@@ -108,6 +117,9 @@ const AnswerSubmitScreen = (props: any) => {
         </div>
       </Dialog>
     </Transition.Root>
+    <TermsAndCondition open={openW} close={() => setOpenW(!openW)}  /> 
+    </>
+    
   );
 };
 

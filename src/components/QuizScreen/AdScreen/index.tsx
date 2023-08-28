@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import closebtn from "../../../assets/quiz-model/close-add.png";
 import QuestionScreen from "../QuestionScreen";
+import WinnerScreenTwo from "../WinnerScreenTwo";
 
 const AddScreen = (props: any) => {
   const cancelButtonRef = useRef(null);
@@ -54,6 +55,17 @@ const AddScreen = (props: any) => {
     setOpenQ(!openQ);
     
   };
+
+  const [openW, setOpenW] = useState<Boolean>(false);
+
+  const onClickViewWinnerScreen = (e: any) => {
+    props.close();
+    setOpenW(!openW);
+    
+  };
+
+
+  console.log("props====", props)
 
   return (
     <>
@@ -120,10 +132,10 @@ const AddScreen = (props: any) => {
                       <button
                         className="bg-brand/[0.5] outline-none  max-w-[177px] w-full h-[42px] flex items-center justify-between rounded-3xl m-auto pl-[27px] pr-[15px]	 hover:bg-[#ec5d5f] cursor-pointer disabled:hover:bg-brand/[0.5] disabled:hover:cursor-default	"
                         disabled={addDisabled ? false : true}
-                        onClick={(e) => onClickStart(e)}
+                        onClick={props.isSeeResult ? (e) => onClickViewWinnerScreen(e) :  (e) => onClickStart(e)}
                       >
                         <span className="inline-block montserratfont text-[#fff]  text-base font-semibold">
-                          Start Quiz
+                          {props.isSeeResult ?  "View Result" : "Start Quiz"} 
                         </span>
                         <span className="inline-block  ">
                           <Image
@@ -156,6 +168,7 @@ const AddScreen = (props: any) => {
       </Transition.Root>
 
       <QuestionScreen open={openQ} close={() => setOpenQ(!openQ)} />
+      <WinnerScreenTwo open={openW} close={() => setOpenW(!openW)} />
     </>
   );
 };

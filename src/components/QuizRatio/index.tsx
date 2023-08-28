@@ -23,12 +23,18 @@ import QuizRatioTimer from "../QuizRatioTimer/QuizRatioTimer";
 import Countdown from "react-countdown";
 
 const QuizRatio = () => {
+  const [open, setOpen] = useState<Boolean>(false);
+  const onClickPlay = () => {
+    setOpen(!open);
+  };
+
   const Completionist = () => (
-    <span className="montserratfont text-[14px] font-semibold leading-[17.07px] ">
+    <span onClick={()  => onClickPlay()} className="cursor-pointer montserratfont text-[14px] font-semibold leading-[17.07px] ">
       Quiz Result <i className="fa-solid fa-angle-right"></i>
       <i className="fa-solid fa-angle-right"></i>
     </span>
   );
+  
   const [openIntro, setOpenIntro] = useState<Boolean>(false);
   const [closeQuizBox, setCloseQuizBox] = useState<Boolean>(true);
   const [hello, setHello] = useState<String>("Quiz Result");
@@ -44,6 +50,7 @@ const QuizRatio = () => {
     console.log("working");
     setCloseQuizBox(!closeQuizBox);
   };
+ 
   const renderer = ({ hours, minutes, seconds, completed }) => {
     if (completed) {
       // Render a completed state
@@ -69,7 +76,6 @@ const QuizRatio = () => {
       );
     }
   };
-  console.log(renderer, "parent ");
 
   return (
     <>
@@ -104,9 +110,8 @@ const QuizRatio = () => {
 
               <span className="quiz-title flex items-center justify-center h-full">
                 <h4 className="logo text-white text-center text-base leading-normal	 font-semibold	montserratfont capitalize ">
-                  quiz{" "}
+                  quiz
                   <span>
-                    {" "}
                     <Image src={doublearrow} className="inline-block" alt="" />
                   </span>
                 </h4>
@@ -121,7 +126,7 @@ const QuizRatio = () => {
             </p> */}
 
             <h4 className="text-base text-white montserratfont capitalize font-bold">
-              <Countdown date={Date.now() + 50000} renderer={renderer} />
+              {open ? <Completionist/> :  <Countdown date={Date.now() + 10000} renderer={renderer} /> } 
             </h4>
           </div>
         </div>
@@ -143,7 +148,7 @@ const QuizRatio = () => {
       <IntroScreen open={openIntro} close={hanldeOpenedQuiz} />
     
       {/* <WinnerScreenTwo open={openIntro} close={hanldeOpenedQuiz} /> */}
-      {/* <AddScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
+      <AddScreen open={open} close={onClickPlay} isSeeResult={true} />
       {/* {openIntro && <AddScreen open={openIntro} close={hanldeOpenedQuiz} />} */}
       {/* <QuestionScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <AnswerSubmitScreen open={openIntro} close={hanldeOpenedQuiz} /> */}

@@ -4,12 +4,32 @@ import React, { Fragment, useRef, useState } from "react";
 import Close from "../../../assets/images/modal/close.png";
 import Product from "../../../assets/quiz-model/product.png";
 import Image from "next/image";
+import OrderConfirm from "../OrderConfirm";
+import PersonalInformation from "../PersonalInformation";
 
 const OrderSummary = (props: any) => {
   const cancelButtonRef = useRef(null);
+  
+  const [openQ, setOpenQ] = useState<Boolean>(false);
+
+  const onClickOrderConfirmScreen = (e: any) => {
+    props.close();
+    setOpenQ(!openQ);
+    
+  };
+
+  const [openW, setOpenW] = useState<Boolean>(false);
+
+  const onClickPersonalInfo = (e: any) => {
+    props.close();
+    setOpenW(!openW);
+    
+  };
+
 
   return (
-    <Transition.Root show={props.open} as={Fragment}>
+    <>
+      <Transition.Root show={props.open} as={Fragment}>
       <Dialog
         as="div"
         className="relative z-10"
@@ -51,7 +71,7 @@ const OrderSummary = (props: any) => {
                   </div>
                 </div>
                 <div className="mx-[16px] mt-[4px] ">
-                <p className="border-b-[1px] w-fit cursor-pointer leading-none border-b-brandLightOpacity70  montserratfont text-[14px] dark:text-brandLightOpacity70 font-normal">&lt;&lt;&nbsp;Go to personal information</p>
+                <p onClick={(e) => onClickPersonalInfo(e)} className="border-b-[1px] w-fit cursor-pointer leading-none border-b-brandLightOpacity70  montserratfont text-[14px] dark:text-brandLightOpacity70 font-normal">&lt;&lt;&nbsp;Go to personal information</p>
                 </div>
                 <div className="mx-[16px] mt-[24px]">
                   <p className="montserratfont leading-[23px] text-left font-semibold dark:text-brandLightOpacity100 text-[16px]">
@@ -76,6 +96,7 @@ const OrderSummary = (props: any) => {
                </div>
                 <div className="mt-[25px]">
                 <a
+                    onClick={(e) => onClickOrderConfirmScreen(e) }
                     className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold`}
                   >
                     Confirm
@@ -87,6 +108,9 @@ const OrderSummary = (props: any) => {
         </div>
       </Dialog>
     </Transition.Root>
+    <OrderConfirm open={openQ} close={() => setOpenQ(!openQ)} />
+    <PersonalInformation open={openW} close={() => setOpenW(!openW)}/>
+    </>
   );
 };
 
