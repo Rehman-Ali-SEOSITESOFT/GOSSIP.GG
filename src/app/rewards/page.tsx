@@ -10,13 +10,14 @@ import PreviousGiveAways from "@/components/Rewards/PreviousGiveAways";
 import QuizHistory from "@/components/Rewards/QuizHistory";
 import Faqs from "@/components/Rewards/Faqs/Faqs";
 import style from "./Rewards.module.css";
+import CountDownTimer from "@/components/Rewards/CountDownTimer/CountDownTimer";
 const page = () => {
   return (
     <>
       <section className="rewards_page_mian_wrapper">
-        <div className="global-section-width p-0 mw-lg:bg-bodycolor mw-lg:dark:bg-brandDark2 mw-lg:z-[8]	overflow-x-auto">
+        <div className="global-section-width p-0 mw-lg:bg-bodycolor mw-lg:dark:bg-brandDark2 mw-lg:z-[8]">
           <div className="2xl-container">
-            <div className={`${style.quiz_timing_wrapper} max-w-[100%]`}>
+            <div className={`${style.quiz_timing_wrapper} max-w-[100%] `}>
               <div
                 className={`${style.scrolling_} bg-brandLightOpacity10 rounded-[20px] pb-[9px] pt-[9px] pl-[22px] pr-[22px]  mt-[7px] mb-[10px] flex w-[1280px] justify-start flex-nowrap justify-between items-center `}
               >
@@ -25,7 +26,8 @@ const page = () => {
                     Daily Quiz{" "}
                     <span className="text-[14px] font-semibold mw-sm4:text-[12px]">
                       {" "}
-                      In 2:45:30 <i className="fa-solid fa-angle-right"></i>
+                      In <CountDownTimer />{" "}
+                      <i className="fa-solid fa-angle-right"></i>
                       <i className="fa-solid fa-angle-right"></i>
                     </span>
                   </p>
