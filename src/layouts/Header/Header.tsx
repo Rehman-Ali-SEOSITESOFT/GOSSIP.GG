@@ -182,7 +182,6 @@ const Header = () => {
     setNotificationList([]);
   };
 
-
   //////// for Open Modal///////////////////
   const [openIntroModal, setOpenIntroModal] = useState<boolean | null>(false);
   const [openPrizeOfDay, setOpenPrizeOfDay] = useState<boolean | null>(false);
@@ -425,15 +424,21 @@ const Header = () => {
                                         </p>
                                       </div>
                                       <div className="min-w-[115px] text-end pr-[10px]">
-                                      <Link
-                                        href="#"
-                                        className={`text-brandLightOpacity70 montserratfont text-sm leading-[15px] font-medium	underline`}
-                                      >
-                                        {e.quiz ? "Play Quiz" : "View Results"}
-                                      </Link>
+                                        <button
+                                          onClick={
+                                            e.quiz
+                                              ? (e) => onClickOpenIntroModal(e)
+                                              : (e) =>
+                                                  onClickOpenPrizeOfDayModal(e)
+                                          }
+                                          className={`text-brandLightOpacity70 montserratfont text-sm leading-[15px] font-medium	underline`}
+                                        >
+                                          {e.quiz
+                                            ? "Play Quiz"
+                                            : "View Results"}
+                                        </button>
+                                      </div>
                                     </div>
-                                  </div>
-                                   
                                   );
                                 })
                               ) : (
@@ -592,14 +597,18 @@ const Header = () => {
         </div>
       </div>
       <LoginModal open={open} onClickOpenModal={onClickOpenModal} />
-      <IntroScreen
-        open={openIntroModal}
-        onClickOpenModal={onClickOpenIntroModal}
-      />
-      <PrizeOfTheDay
-         open={openPrizeOfDay}
-         close={onClickOpenPrizeOfDayModal}
-      />
+      {openIntroModal && (
+        <IntroScreen
+          open={openIntroModal}
+          onClickOpenModal={onClickOpenIntroModal}
+        />
+      )}
+      {openPrizeOfDay && (
+        <PrizeOfTheDay
+          open={openPrizeOfDay}
+          close={onClickOpenPrizeOfDayModal}
+        />
+      )}
     </header>
   );
 };

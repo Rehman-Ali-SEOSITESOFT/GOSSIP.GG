@@ -13,7 +13,8 @@ import AddScreen from "../AdScreen";
 const IntroScreen = (props: any) => {
   const cancelButtonRef = useRef(null);
 
-  const [open, setOpen] = useState<boolean>(false);
+ 
+  const [open, setOpen] = useState<Boolean>(false);
 
   const onClickPlay = () => {
     // setOpen(!open);

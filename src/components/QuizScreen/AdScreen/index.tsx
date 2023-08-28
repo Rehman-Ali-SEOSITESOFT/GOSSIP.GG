@@ -39,12 +39,11 @@ const AddScreen = (props: any) => {
   //   console.log("workign=");
   // };
 
-  const hanldeOpendQuestion = () => {
-    props.close();
-    setOpenQuestion(!openQuestion);
-  };
-  const hanldeCLosed = () => {
-    setOpenQuestion(!openQuestion);
+  const onClickStart = (e: any) => {
+   
+    // props.close();
+    setOpenQ(!openQ);
+    console.log("workign=");
   };
 
   return (
@@ -106,7 +105,11 @@ const AddScreen = (props: any) => {
                       <button
                         className="bg-brand/[0.5]  max-w-[177px] w-full h-[42px] flex items-center justify-between rounded-3xl m-auto pl-[27px] pr-[15px]	 hover:bg-[#ec5d5f] cursor-pointer disabled:hover:bg-brand/[0.5] disabled:hover:cursor-default	"
                         disabled={addDisabled ? false : true}
+<<<<<<< HEAD
                         onClick={hanldeOpendQuestion}
+=======
+                        onClick={(e) => onClickStart(e)}
+>>>>>>> 6eedae01a595f07517690b19cc4be6a0693c6594
                       >
                         <span className="inline-block montserratfont text-[#fff]  text-base font-semibold">
                           Start Quiz
@@ -140,8 +143,15 @@ const AddScreen = (props: any) => {
           </div>
         </Dialog>
       </Transition.Root>
+<<<<<<< HEAD
 
       <QuestionScreen open={openQuestion} close={hanldeCLosed} />
+=======
+      {openQ && 
+           <QuestionScreen open={openQ} close={() => setOpenQ(!openQ)} />
+ 
+      }
+>>>>>>> 6eedae01a595f07517690b19cc4be6a0693c6594
     </>
   );
 };
