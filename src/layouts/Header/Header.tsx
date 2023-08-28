@@ -159,7 +159,6 @@ const Header = () => {
       disc: "Quiz begins in 10 mins! Today’s Lucky Winners take home Bose Gaming Headphones!",
       time: "3 hrs ago",
       quiz: true,
-
       read: false,
     },
     {
@@ -167,7 +166,6 @@ const Header = () => {
       disc: "Five Lucky Winners took home Sades Snowwolf Gaming Headphones",
       time: "yesterday",
       quiz: false,
-
       read: true,
     },
     {
@@ -175,7 +173,6 @@ const Header = () => {
       disc: "Five Lucky Winners took home Sades Snowwolf Gaming Headphones",
       time: "yesterday",
       quiz: false,
-
       read: true,
     },
   ]);
@@ -427,17 +424,16 @@ const Header = () => {
                                           {e.time}
                                         </p>
                                       </div>
-                                      <div className="min-w-[100px] text-end ">
-                                        <button
-                                          className={`text-brandLightOpacity70 montserratfont text-sm leading-[15px] font-medium	underline`}
-                                          onClick={ e.quiz ? (e) => onClickOpenIntroModal(e) : (e) => onClickOpenPrizeOfDayModal(e) }
-                                        >
-                                          {e.quiz
-                                            ? "Play Quiz"
-                                            : "View Results"}
-                                        </button>
-                                      </div>
+                                      <div className="min-w-[115px] text-end pr-[10px]">
+                                      <Link
+                                        href="#"
+                                        className={`text-brandLightOpacity70 montserratfont text-sm leading-[15px] font-medium	underline`}
+                                      >
+                                        {e.quiz ? "Play Quiz" : "View Results"}
+                                      </Link>
                                     </div>
+                                  </div>
+                                   
                                   );
                                 })
                               ) : (
