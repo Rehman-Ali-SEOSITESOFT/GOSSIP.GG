@@ -68,7 +68,7 @@ const PreviousGiveAways = () => {
                 );
               })}
             </div>
-            <div className="mt-[16px] mb-[52px]">
+            <div className="mt-[16px] mb-[52px] mw-md:mb-[40px] mw-sm4:mb-[0px]">
               <ViewMore />
             </div>
           </div>

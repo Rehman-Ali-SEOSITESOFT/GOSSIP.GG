@@ -149,7 +149,7 @@ const Accordiannn = (props: any) => {
                         <div className="hello mw-md:mt-[40px]">
                           <div className="second flex justify-center mw-lg:flex-col">
                             <div className="first_ mw-lg:px-[80px] mw-sm4:px-[30px]">
-                              <h4 className="montserratfont font-medium leading-normal text-[16px] text-[#ED4250] pb-[13px] mw-md:text-center">
+                              <h4 className="montserratfont text-center font-medium leading-normal text-[16px] text-[#ED4250] pb-[13px] mw-md:text-center">
                                 Lucky Winners
                               </h4>
                               <div className="flex items-center bg-brandLightOpacity50 rounded px-[16px] py-[2px] mb-[6px]">

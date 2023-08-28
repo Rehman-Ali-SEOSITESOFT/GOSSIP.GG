@@ -1,0 +1,18 @@
+.quiz_timing_wrapper .scrolling_::-webkit-scrollbar-track {
+  background: #363233 !important;
+  border-radius: 8px !important;
+}
+.quiz_timing_wrapper .scrolling_::-webkit-scrollbar-thumb {
+  border: 1px solid hsla(0, 0%, 90%, 0.2) !important;
+  border-radius: 8px !important;
+}
+.quiz_timing_wrapper .scrolling_::-webkit-scrollbar-corner {
+  width: 8px !important;
+  height: 8px !important;
+}
+.scrolling_::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+.scrolling_ {
+  scroll-direction: horizontal;
+}

@@ -110,9 +110,9 @@ const QuizRatio = () => {
       {/* <AnswerSubmitScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <TermsAndCondition open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <WinnerScreenTwo open={openIntro} close={hanldeOpenedQuiz} /> */}
-      {/* {openIntro && (
+      {openIntro && (
         <WinnerScreenTwo open={openIntro} close={hanldeOpenedQuiz} />
-      )} */}
+      )}
       {/* <QuizStartTiemScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <AnsweredIncorrectly open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <AnsweredCorrectly open={openIntro} close={hanldeOpenedQuiz} /> */}
@@ -120,9 +120,8 @@ const QuizRatio = () => {
       {/* <PrizeOfTheDay open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <OrderConfirm open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <OrderSummary open={openIntro} close={hanldeOpenedQuiz} /> */}
-      <PersonalInformation open={openIntro} close={hanldeOpenedQuiz} />
+      {/* <PersonalInformation open={openIntro} close={hanldeOpenedQuiz} /> */}
 
-   
       {/* <PersonalInformation open={openIntro} close={hanldeOpenedQuiz} /> */}
     </>
   );

@@ -201,6 +201,9 @@
   /* opacity: 0; */
 }
 
+.bg-animtedd-true {
+  opacity: 0;
+}
 .content-hide {
   /* z-index: 1; */
   opacity: 1;

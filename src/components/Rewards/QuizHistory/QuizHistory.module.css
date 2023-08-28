@@ -2,6 +2,47 @@
   font-family: "Montserrat";
   font-size: 16px;
 }
+.buttonDrop {
+  width: 300px !important;
+  border: 1px solid rgba(229, 229, 229, 0.5);
+  border-radius: 8px;
+  background-color: transparent !important;
+  color: #e5e5e5 !important;
+  font-weight: 500;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  text-transform: capitalize;
+}
+.buttonDrop::after {
+  content: "";
+  background-image: url("../../../assets/esporting-events/downangle.png") !important;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 15px;
+  height: 15px;
+  transform: rotate(180deg) !important;
+}
+.maindropdownWrapper .menuitemwrapper {
+  background: #2e2a2b !important;
+  border: 2px solid rgba(229, 229, 229, 0.1) !important;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7) !important;
+  border-radius: 8px;
+  width: 300px !important;
+}
+.maindropdownWrapper a:hover {
+  background-color: #403d3e;
+}
+@media screen and (max-width: 600px) {
+  .buttonDrop {
+    width: 250px !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .buttonDrop {
+    width: 200px !important;
+  }
+}
 
 .font_esport_event_12 {
   font-family: "Montserrat";
@@ -28,9 +69,11 @@
 }
 .selectBOOX select option {
   background-color: red;
-  padding: 24px 20px !important;
+  margin: 24px 20px !important;
 }
-
+.rdrDefinedRangesWrapper {
+  display: none !important;
+}
 @media screen and (max-width: 690px) {
   .live-matches .slick-initialized .slick-slide {
     padding: 20px;

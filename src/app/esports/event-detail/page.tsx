@@ -1,56 +1,56 @@
-"use client"
-import Image from "next/image"
-import eyeIcon from "../../../assets/esporting-events/eye.png"
-import banner from "../../../assets/esporting-events/banner_.webp"
-import tabImage from "../../../assets/esportevents2/tabVersionImage.png"
-import style from "./EsportsEvents.module.css"
-import msg from "../../../assets/esporting-events/message.png"
-import bookmark from "../../../assets/esporting-events/bookmark.png"
-import forward from "../../../assets/esporting-events/forward.png"
-import typeComment from "../../../assets/esporting-events/typeComment.png"
-import SectionSaprator from "@/components/SecSaprator"
-import user from "../../../assets/esporting-events/user1.png"
-import likes from "../../../assets/esporting-events/likes.png"
-import DropDown from "./EsportsEventDropdown/DropDown"
-import commentLogo from "../../../assets/esporting-events/commentLogo.png"
-import twitter from "../../../assets/esporting-events/twitter.png"
-import vrbox from "../../../assets/esporting-events/vrbox.png"
-import heart from "../../../assets/esporting-events/heart.png"
-import retweet from "../../../assets/esporting-events/retweet.png"
-import youtube from "../../../assets/esporting-events/youtube.png"
-import youtubepreview from "../../../assets/esporting-events/videopreview.png"
-import pinkman from "../../../assets/esporting-events/pinkman.png"
-import brandmark from "../../../assets/esporting-events/smallbrand.png"
-import cod from "../../../assets/esporting-events/cod2.png"
-import allup from "../../../assets/esporting-events/allup.png"
-import aiming from "../../../assets/esporting-events/aiming.png"
-import users from "../../../assets/esporting-events/userss.png"
-import cube from "../../../assets/esporting-events/cube.png"
-import trophy from "../../../assets/esporting-events/trophy.png"
-import earth from "../../../assets/esporting-events/earth.png"
-import profile from "../../../assets/esporting-events/profile.png"
-import torurnament from "../../../assets/esporting-events/tournament.png"
-import ValorantListing from "./ValorantListing/ValorantListing"
-import darkuserss from "../../../assets/esporting-events/darkusers.png"
-import darkcube from "../../../assets/esporting-events/darkcube.png"
-import darktrophy from "../../../assets/esporting-events/darktrophy.png"
-import darkearth from "../../../assets/esporting-events/darkearth.png"
-import darkprofile from "../../../assets/esporting-events/darkProfile.png"
-import darkclock from "../../../assets/esporting-events/darkclock.png"
-import React, { useState, useRef, useEffect } from "react"
-import { useTheme } from "next-themes"
-import YouTube from "react-youtube"
-import downarrow from "../../../assets/esports/down-arrow.png"
-import LightArrow from "../../../assets/images/filters/lightdown.png"
+"use client";
+import Image from "next/image";
+import eyeIcon from "../../../assets/esporting-events/eye.png";
+import banner from "../../../assets/esporting-events/banner_.webp";
+import tabImage from "../../../assets/esportevents2/tabVersionImage.png";
+import style from "./EsportsEvents.module.css";
+import msg from "../../../assets/esporting-events/message.png";
+import bookmark from "../../../assets/esporting-events/bookmark.png";
+import forward from "../../../assets/esporting-events/forward.png";
+import typeComment from "../../../assets/esporting-events/typeComment.png";
+import SectionSaprator from "@/components/SecSaprator";
+import user from "../../../assets/esporting-events/user1.png";
+import likes from "../../../assets/esporting-events/likes.png";
+import DropDown from "./EsportsEventDropdown/DropDown";
+import commentLogo from "../../../assets/esporting-events/commentLogo.png";
+import twitter from "../../../assets/esporting-events/twitter.png";
+import vrbox from "../../../assets/esporting-events/vrbox.png";
+import heart from "../../../assets/esporting-events/heart.png";
+import retweet from "../../../assets/esporting-events/retweet.png";
+import youtube from "../../../assets/esporting-events/youtube.png";
+import youtubepreview from "../../../assets/esporting-events/videopreview.png";
+import pinkman from "../../../assets/esporting-events/pinkman.png";
+import brandmark from "../../../assets/esporting-events/smallbrand.png";
+import cod from "../../../assets/esporting-events/cod2.png";
+import allup from "../../../assets/esporting-events/allup.png";
+import aiming from "../../../assets/esporting-events/aiming.png";
+import users from "../../../assets/esporting-events/userss.png";
+import cube from "../../../assets/esporting-events/cube.png";
+import trophy from "../../../assets/esporting-events/trophy.png";
+import earth from "../../../assets/esporting-events/earth.png";
+import profile from "../../../assets/esporting-events/profile.png";
+import torurnament from "../../../assets/esporting-events/tournament.png";
+import ValorantListing from "./ValorantListing/ValorantListing";
+import darkuserss from "../../../assets/esporting-events/darkusers.png";
+import darkcube from "../../../assets/esporting-events/darkcube.png";
+import darktrophy from "../../../assets/esporting-events/darktrophy.png";
+import darkearth from "../../../assets/esporting-events/darkearth.png";
+import darkprofile from "../../../assets/esporting-events/darkProfile.png";
+import darkclock from "../../../assets/esporting-events/darkclock.png";
+import React, { useState, useRef, useEffect } from "react";
+import { useTheme } from "next-themes";
+import YouTube from "react-youtube";
+import downarrow from "../../../assets/esports/down-arrow.png";
+import LightArrow from "../../../assets/images/filters/lightdown.png";
 
 const Page = () => {
-  const { theme } = useTheme()
+  const { theme } = useTheme();
 
   interface List {
-    title: string
-    lighticon: any
-    darkicon: any
-    detail: string
+    title: string;
+    lighticon: any;
+    darkicon: any;
+    detail: string;
   }
 
   const [list, setList] = useState<List[]>([
@@ -84,52 +84,52 @@ const Page = () => {
       title: "Sponsors",
       detail: "Intel.DHL",
     },
-  ])
+  ]);
   const opts = {
     width: "100%",
     height: "390",
     playerVars: {
       autoplay: 1,
     },
-  }
+  };
 
   const _onReady = (event: any) => {
-    event.target.pauseVideo()
-  }
+    event.target.pauseVideo();
+  };
   //////////////////////////
-  const dropDownRef = useRef<any | null>(null)
-  const [opendropDown, setOpenDropdown] = useState<Boolean>(false)
-  const [selectedValue, setSelectedValue] = useState<string>()
+  const dropDownRef = useRef<any | null>(null);
+  const [opendropDown, setOpenDropdown] = useState<Boolean>(false);
+  const [selectedValue, setSelectedValue] = useState<string>();
   const [dropDownList, setDropDownList] = useState<string[]>([
     "Today",
     "Yesterday",
     "Last Week",
     "Last 10 Days",
-  ])
+  ]);
   useEffect(() => {
-    document.addEventListener("click", handleClickOutside, true)
-  }, [])
+    document.addEventListener("click", handleClickOutside, true);
+  }, []);
   // /// for close dropdown on outside click
   const handleClickOutside = (e: any) => {
     if (dropDownRef.current !== null) {
       if (!dropDownRef.current.contains(e.target)) {
-        setOpenDropdown(false)
+        setOpenDropdown(false);
       }
     }
-  }
+  };
 
   const onClickOpen = () => {
-    setOpenDropdown(!opendropDown)
-  }
+    setOpenDropdown(!opendropDown);
+  };
 
   const onSelectValue = (e: any) => {
-    setSelectedValue(e)
-  }
+    setSelectedValue(e);
+  };
 
-  const [isDarkTheme, setIsDarkTheme] = useState<string>("")
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
   useEffect(() => {
-    setIsDarkTheme(theme === "dark" ? "dark" : "light")
-  }, [theme])
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
 
   return (
     <>
@@ -590,7 +590,7 @@ const Page = () => {
                             title={e.title}
                           />
                         </div>
-                      )
+                      );
                     })}
                     <div className="flex pl-[9px]   pb-[34px] pt-[16px]">
                       <div className="w-[40px] h-[40px] dark:bg-brandLightOpacity10 rounded-full flex items-center justify-center bg-[#E9E8E9] dark:bg-brandLightOpacity10">
@@ -622,7 +622,7 @@ const Page = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
