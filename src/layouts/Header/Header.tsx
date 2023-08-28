@@ -160,7 +160,6 @@ const Header = () => {
       disc: "Quiz begins in 10 mins! Today’s Lucky Winners take home Bose Gaming Headphones!",
       time: "3 hrs ago",
       quiz: true,
-
       read: false,
     },
     {
@@ -168,17 +167,15 @@ const Header = () => {
       disc: "Five Lucky Winners took home Sades Snowwolf Gaming Headphones",
       time: "yesterday",
       quiz: false,
-
       read: true,
     },
-    // {
-    //   title: "Quiz Results 18 July",
-    //   disc: "Five Lucky Winners took home Sades Snowwolf Gaming Headphones",
-    //   time: "yesterday",
-    //   quiz: false,
-
-    //   read: true,
-    // },
+    {
+      title: "Quiz Results 18 July",
+      disc: "Five Lucky Winners took home Sades Snowwolf Gaming Headphones",
+      time: "yesterday",
+      quiz: false,
+      read: true,
+    },
   ]);
 
   return (
@@ -410,7 +407,7 @@ const Header = () => {
                                         {e.time}
                                       </p>
                                     </div>
-                                    <div className="min-w-[100px] text-end ">
+                                    <div className="min-w-[115px] text-end pr-[10px]">
                                       <Link
                                         href="#"
                                         className={`text-brandLightOpacity70 montserratfont text-sm leading-[15px] font-medium	underline`}
