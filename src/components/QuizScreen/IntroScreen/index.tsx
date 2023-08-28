@@ -13,9 +13,19 @@ import AddScreen from "../AdScreen";
 const IntroScreen = (props: any) => {
   const cancelButtonRef = useRef(null);
 
-  const hanldeAddScreen = () => {
-    console.log("working");
+ 
+  const [open, setOpen] = useState<boolean>(false);
+
+  const onClickPlay = () => {
+    // setOpen(!open);
+    props.close();
+    setOpen(!open)
+    console.log("weojdklfajsdklfjasklfdj")
+
   };
+
+
+
 
   return (
     <>
@@ -75,7 +85,7 @@ const IntroScreen = (props: any) => {
                       <div className="absolute left-0 right-0 bottom-[130px] z-10">
                         <div
                           className="bg-brand  max-w-[177px] w-full h-[42px] flex items-center justify-between rounded-3xl m-auto pl-[27px] pr-[15px]	into-screen-btn hover:bg-[#ec5d5f] cursor-pointer"
-                          onClick={hanldeAddScreen}
+                          onClick={() => onClickPlay()}
                         >
                           <span className="inline-block montserratfont text-[#fff]  text-base font-semibold">
                             Play Now
@@ -106,6 +116,12 @@ const IntroScreen = (props: any) => {
           </div>
         </Dialog>
       </Transition.Root>
+     {open &&
+     
+     <AddScreen open={open} close={() => setOpen(!open)} />
+     }
+       
+    
     </>
   );
 };
