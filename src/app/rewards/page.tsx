@@ -23,9 +23,8 @@ const page = () => {
               >
                 <div>
                   <p className="text-brand text-sm font-bold tracking-[1.4px] uppercase montserratfont mw-sm4:text-[12px]">
-                    Daily Quiz{" "}
+                    Daily Quiz
                     <span className="text-[14px] font-semibold mw-sm4:text-[12px]">
-                      {" "}
                       In <CountDownTimer />{" "}
                       <i className="fa-solid fa-angle-right"></i>
                       <i className="fa-solid fa-angle-right"></i>
@@ -58,7 +57,7 @@ const page = () => {
                       />
                     </div>
                     <div className="ml-[5px]">
-                      <p className="montserratfont text-[12px] font-normal text-[#E5E5E5]">
+                      <p className="montserratfont text-[12px] font-normal text-brandDark2 dark:text-[#E5E5E5]">
                         and 54 others are playing
                       </p>
                     </div>
