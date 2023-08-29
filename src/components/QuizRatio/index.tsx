@@ -29,12 +29,15 @@ const QuizRatio = () => {
   };
 
   const Completionist = () => (
-    <span onClick={()  => onClickPlay()} className="cursor-pointer montserratfont text-[14px] font-semibold leading-[17.07px] ">
+    <span
+      onClick={() => onClickPlay()}
+      className="cursor-pointer montserratfont text-[14px] font-semibold leading-[17.07px] "
+    >
       Quiz Result <i className="fa-solid fa-angle-right"></i>
       <i className="fa-solid fa-angle-right"></i>
     </span>
   );
-  
+
   const [openIntro, setOpenIntro] = useState<Boolean>(false);
   const [closeQuizBox, setCloseQuizBox] = useState<Boolean>(true);
   const [hello, setHello] = useState<String>("Quiz Result");
@@ -50,7 +53,7 @@ const QuizRatio = () => {
     console.log("working");
     setCloseQuizBox(!closeQuizBox);
   };
- 
+
   const renderer = ({ hours, minutes, seconds, completed }) => {
     if (completed) {
       // Render a completed state
@@ -126,7 +129,11 @@ const QuizRatio = () => {
             </p> */}
 
             <h4 className="text-base text-white montserratfont capitalize font-bold">
-              {open ? <Completionist/> :  <Countdown date={Date.now() + 10000} renderer={renderer} /> } 
+              {open ? (
+                <Completionist />
+              ) : (
+                <Countdown date={Date.now() + 50000} renderer={renderer} />
+              )}
             </h4>
           </div>
         </div>
@@ -146,7 +153,7 @@ const QuizRatio = () => {
         </div>
       </div>
       <IntroScreen open={openIntro} close={hanldeOpenedQuiz} />
-    
+
       {/* <WinnerScreenTwo open={openIntro} close={hanldeOpenedQuiz} /> */}
       <AddScreen open={open} close={onClickPlay} isSeeResult={true} />
       {/* {openIntro && <AddScreen open={openIntro} close={hanldeOpenedQuiz} />} */}
@@ -154,7 +161,7 @@ const QuizRatio = () => {
       {/* <AnswerSubmitScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <TermsAndCondition open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <WinnerScreenTwo open={openIntro} close={hanldeOpenedQuiz} /> */}
-       
+
       {/* <QuizStartTiemScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <AnsweredIncorrectly open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <AnsweredCorrectly open={openIntro} close={hanldeOpenedQuiz} /> */}

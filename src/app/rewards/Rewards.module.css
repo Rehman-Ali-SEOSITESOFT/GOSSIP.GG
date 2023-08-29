@@ -1,5 +1,5 @@
 .quiz_timing_wrapper::-webkit-scrollbar-track {
-  background: #363233 !important;
+  background: #221e1f !important;
   border-radius: 8px !important;
 }
 .quiz_timing_wrapper::-webkit-scrollbar-thumb {
@@ -8,8 +8,8 @@
 }
 .quiz_timing_wrapper::-webkit-scrollbar {
   width: 8px !important;
-  height: 0px !important;
+  height: 8px !important;
 }
 .quiz_timing_wrapper {
-  overflow-x: scroll;
+  overflow-x: scroll !important;
 }

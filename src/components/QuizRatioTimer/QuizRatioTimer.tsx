@@ -29,7 +29,7 @@ const QuizRatioTimer = () => {
   //   console.log(comple, "child");
   return (
     <>
-      <Countdown date={Date.now() + 5000} renderer={renderer} />
+      <Countdown date={Date.now() + 500000} renderer={renderer} />
     </>
   );
 };
