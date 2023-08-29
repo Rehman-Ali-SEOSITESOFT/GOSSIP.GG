@@ -66,7 +66,7 @@ const QuizStartTiemScreen = (props: any) => {
                 <div className="flex flex-col  mt-[14px] ">
                   <div className="mb-[20px]">
                    <p className="text-[18px] montserratfont font-semibold dark:text-brandLightOpacity100">Hey there! </p>
-                   <p className="text-[18px] montserratfont font-medium dark:text-brandLightOpacity70">The quiz starts at <span className="dark:text-brand">&nbsp;5 P.M.&nbsp;</span>everyday. </p>    
+                   <p className="text-[18px] montserratfont font-medium dark:text-brandLightOpacity70">The quiz starts at <span className="text-brand">&nbsp;5 P.M.&nbsp;</span>everyday. </p>    
                    
                   </div>
 
@@ -93,7 +93,7 @@ const QuizStartTiemScreen = (props: any) => {
                         checked={enabled}
                         onChange={setEnabled}
                         className={`${
-                          enabled ? "bg-[#ed4e50]" : "bg-brandLightOpacity100 dark:bg-[#292828]"
+                          enabled ? "bg-brandDark2 dark:bg-[#ed4e50]" : "bg-brandLightOpacity100 dark:bg-[#292828]"
                         } relative inline-flex  h-[24px] w-[56px] items-center rounded-full outline-none`}
                       >
                         <span
@@ -109,7 +109,7 @@ const QuizStartTiemScreen = (props: any) => {
                   </div>
                 </div>
                 <div className="flex flex-col items-center ">
-                  <p className="leading-none w-fit border-b-[1px] border-b-brandLightOpacity70 text-[12px] dark:text-brandLightOpacity70 montserratfont mt-[40px] mb-[6px]">
+                  <p className="cursor-pointer leading-none w-fit border-b-[1px] border-b-brandLightOpacity70 text-[12px] dark:text-brandLightOpacity70 montserratfont mt-[40px] mb-[6px]">
                     How to play
                   </p>
                   <a

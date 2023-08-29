@@ -67,7 +67,7 @@ const AnsweredCorrectly = (props: any) => {
                 <div className="ml-4 mt-2">
                   <p className="text-[12px] italic montserratfont dark:text-brandLightOpacity70 text-left">
                     Correct Answer:
-                    <span className="dark:text-brand">
+                    <span className="text-brand">
                       &nbsp;Option B&nbsp;
                     </span>
                     2 Million
@@ -141,7 +141,7 @@ const AnsweredCorrectly = (props: any) => {
                         checked={enabled}
                         onChange={setEnabled}
                         className={`${
-                          enabled ? "bg-[#ed4e50]" : "bg-brandLightOpacity100 dark:bg-[#292828]"
+                          enabled ? "bg-brandDark2 dark:bg-[#ed4e50]" : "bg-brandLightOpacity100 dark:bg-[#292828]"
                         } relative inline-flex  h-[24px] w-[56px] items-center rounded-full outline-none`}
                       >
                         <span
@@ -157,7 +157,7 @@ const AnsweredCorrectly = (props: any) => {
                   </div>
                 </div>
                 <div>
-                  <p className="text-[12px] dark:text-brandLightOpacity70 montserratfont mt-[40px] pb-[4px]">
+                  <p className="cursor-pointer text-[12px] dark:text-brandLightOpacity70 montserratfont mt-[40px] pb-[4px]">
                     Terms and conditions
                   </p>
                   <a

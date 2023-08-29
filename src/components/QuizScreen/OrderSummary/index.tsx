@@ -65,9 +65,9 @@ const OrderSummary = (props: any) => {
                   <p className="pt-[16px] pl-[16px] text-[24px] font-bold dark:text-brandLightOpacity100 montserratfont text-left">Order Summary</p>
                   <div
                     onClick={() => props.close()}
-                    className="bg-brandLightOpacity10 hover:bg-brandLightOpacity100  h-[40px] w-[40px] rounded-full absolute top-3 right-3 flex justify-center items-center content-center"
+                    className="dark:bg-brandLightOpacity10 hover:bg-brandLightOpacity50 bg-brandLightOpacity30 hover:dark:bg-brandLightOpacity20  h-[40px] w-[40px] rounded-full absolute top-3 right-3 flex justify-center items-center content-center"
                   >
-                    <Image src={Close} alt="Close" />
+                    <Image src={Close} className="brightness-0 dark:brightness-100" alt="Close" />
                   </div>
                 </div>
                 <div className="mx-[16px] mt-[4px] ">
@@ -92,7 +92,7 @@ const OrderSummary = (props: any) => {
                     <p className="montserratfont pt-[8px] dark:text-brandLightOpacity100 text-[14px] font-light">Mobile - <span className="font-semibold">123456788</span></p>
                     <p className="montserratfont cursor-pointer pt-[8px] dark:text-brandLightOpacity70 text-[12px] border-b-[1px] w-fit leading-none border-b-brandLightOpacity70">Change Address</p>
                   </div>
-                  <p className="pl-[8px] pt-[8px] italic text-left montserratfont text-[14px] dark:text-brandLightOpacity70">Estimated delivery by <span className="dark:text-brandLightOpacity100">24 July</span></p>
+                  <p className="pl-[8px] pt-[8px] italic text-left montserratfont text-[14px] dark:text-brandLightOpacity70">Estimated delivery by <span className="text-brandDark3 font-medium dark:text-brandLightOpacity100">24 July</span></p>
                </div>
                 <div className="mt-[25px]">
                 <a

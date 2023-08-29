@@ -45,9 +45,9 @@ const OrderConfirm = (props: any) => {
                 <div className="relative ">
                   <div
                     onClick={() => props.close()}
-                    className="bg-brandLightOpacity10 hover:bg-brandLightOpacity100  h-[40px] w-[40px] rounded-full absolute top-3 right-3 flex justify-center items-center content-center"
+                    className="dark:bg-brandLightOpacity10 hover:bg-brandLightOpacity50 bg-brandLightOpacity30 hover:dark:bg-brandLightOpacity20  h-[40px] w-[40px] rounded-full absolute top-3 right-3 flex justify-center items-center content-center"
                   >
-                    <Image src={Close} alt="Close" />
+                    <Image src={Close} className="brightness-0 dark:brightness-100" alt="Close" />
                   </div>
                 </div>
                 <div className="flex flex-col items-center justify-center mt-[172px] px-[40px]">
