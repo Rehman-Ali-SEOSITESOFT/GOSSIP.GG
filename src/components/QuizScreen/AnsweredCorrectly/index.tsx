@@ -47,7 +47,7 @@ const AnsweredCorrectly = (props: any) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="fixed bg-bodycolor inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin    scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
+            <Dialog.Panel className="fixed bg-bodycolor inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin    scrollbar-track-[transparent]  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-[transparent] m-auto mw-sm:h-full  mw-sm:max-h-full">
               {/* top   */}
               <div className="flex flex-col  h-full">
                 <div className="relative ">
@@ -67,21 +67,19 @@ const AnsweredCorrectly = (props: any) => {
                 <div className="ml-4 mt-2">
                   <p className="text-[12px] italic montserratfont dark:text-brandLightOpacity70 text-left">
                     Correct Answer:
-                    <span className="text-brand">
-                      &nbsp;Option B&nbsp;
-                    </span>
-                    2 Million
+                    <span className="text-brand">&nbsp;Option B&nbsp;</span>2
+                    Million
                   </p>
                 </div>
                 <div className="flex flex-col items-center mt-[24px]">
                   <Image src={HardLuck} alt="Upset Emoji" />
                   <p className="montserratfont dark:text-brand font-semibold text-[16px]">
-                  Hard Luck!
+                    Hard Luck!
                   </p>
                   <p className="montserratfont text-[14px] dark:text-brandLightOpacity100">
-                  You got it right! Unfortunately you did not<br/> win today’s prize.
+                    You got it right! Unfortunately you did not
+                    <br /> win today’s prize.
                   </p>
-               
                 </div>
 
                 <div className="flex flex-col  mt-[14px]">
@@ -141,7 +139,9 @@ const AnsweredCorrectly = (props: any) => {
                         checked={enabled}
                         onChange={setEnabled}
                         className={`${
-                          enabled ? "bg-brandDark2 dark:bg-[#ed4e50]" : "bg-brandLightOpacity100 dark:bg-[#292828]"
+                          enabled
+                            ? "bg-brandDark2 dark:bg-[#ed4e50]"
+                            : "bg-brandLightOpacity100 dark:bg-[#292828]"
                         } relative inline-flex  h-[24px] w-[56px] items-center rounded-full outline-none`}
                       >
                         <span

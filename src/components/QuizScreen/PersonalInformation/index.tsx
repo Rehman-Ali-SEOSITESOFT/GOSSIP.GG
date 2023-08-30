@@ -122,7 +122,7 @@ const PersonalInformation = (props: any) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="fixed bg-bodycolor  inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-[#221e1f] left-auto  overflow-y-auto scrollbar-thin   scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
+            <Dialog.Panel className="fixed bg-bodycolor  inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-[#221e1f] left-auto  overflow-y-auto scrollbar-thin   scrollbar-track-[transparent]  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-[transparent] m-auto mw-sm:h-full  mw-sm:max-h-full">
               {/* top   */}
               <div className="flex flex-col  h-full">
                 <div className="relative ">
@@ -133,11 +133,19 @@ const PersonalInformation = (props: any) => {
                     onClick={() => props.close()}
                     className="dark:bg-brandLightOpacity10 hover:bg-brandLightOpacity50 bg-brandLightOpacity30 hover:dark:bg-brandLightOpacity20  h-[40px] w-[40px] rounded-full absolute top-3 right-3 flex justify-center items-center content-center"
                   >
-                    <Image className="brightness-0 dark:brightness-100" src={Close} alt="Close" />
+                    <Image
+                      className="brightness-0 dark:brightness-100"
+                      src={Close}
+                      alt="Close"
+                    />
                   </div>
                 </div>
                 <div className="mx-[16px] mt-[4px] flex flex-row items-start ">
-                  <Image className="mt-[2px] brightness-0 dark:brightness-100" src={Info} alt="Info" />
+                  <Image
+                    className="mt-[2px] brightness-0 dark:brightness-100"
+                    src={Info}
+                    alt="Info"
+                  />
                   <p className="pl-[6px] text-left montserratfont text-[12px] dark:text-brandLightOpacity70">
                     We will fetch your personal details from <br /> the
                     government database
@@ -232,13 +240,25 @@ const PersonalInformation = (props: any) => {
                   <div className="flex flex-row items-start mt-[14px]">
                     <div
                       onClick={(e) => onClickVerify(e)}
-                      className={`done_btn bg-brandLightOpacity100 h-[32px] flex items-center justify-center content-center ${isVerfied ? 'w-[100px] border dark:border-brandLightOpacity100 border-brandDark2': 'w-[67px]' }  dark:bg-brandLightOpacity10    rounded-3xl	text-center 	leading-6	 cursor-pointer mw-sm:w-[67px]   mw-sm3:w-[67px] mw-sm:text-[12px] mw-sm:text-medium`}
+                      className={`done_btn bg-brandLightOpacity100 h-[32px] flex items-center justify-center content-center ${
+                        isVerfied
+                          ? "w-[100px] border dark:border-brandLightOpacity100 border-brandDark2"
+                          : "w-[67px]"
+                      }  dark:bg-brandLightOpacity10    rounded-3xl	text-center 	leading-6	 cursor-pointer mw-sm:w-[67px]   mw-sm3:w-[67px] mw-sm:text-[12px] mw-sm:text-medium`}
                     >
                       {loader ? (
-                        <Image src={Loader} className="brightness-0 dark:brightness-100" alt="loader" />
+                        <Image
+                          src={Loader}
+                          className="brightness-0 dark:brightness-100"
+                          alt="loader"
+                        />
                       ) : isVerfied ? (
                         <div className="flex flex-row  w-[100%] items-center justify-around">
-                          <Image className="ml-[8px] brightness-0 dark:brightness-100" src={Tick} alt="tick" />
+                          <Image
+                            className="ml-[8px] brightness-0 dark:brightness-100"
+                            src={Tick}
+                            alt="tick"
+                          />
                           <p className="pr-[12px] text-[12px] text-brandDark2 dark:text-brandLightOpacity100 	font-medium montserratfont ">
                             Verified
                           </p>

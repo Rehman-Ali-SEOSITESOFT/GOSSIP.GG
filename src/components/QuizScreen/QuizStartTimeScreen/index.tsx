@@ -9,7 +9,6 @@ import Prize from "../../../assets/quiz-model/prize.png";
 import { Switch } from "@headlessui/react";
 import CountdownSection from "../CountdownSec";
 
-
 const QuizStartTiemScreen = (props: any) => {
   const cancelButtonRef = useRef(null);
   const [enabled, setEnabled] = useState<boolean | any>(false);
@@ -44,7 +43,7 @@ const QuizStartTiemScreen = (props: any) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="fixed bg-bodycolor inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin    scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
+            <Dialog.Panel className="fixed bg-bodycolor inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin    scrollbar-track-[transparent]  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-[transparent] m-auto mw-sm:h-full  mw-sm:max-h-full ">
               {/* top   */}
               <div className="flex flex-col  h-full">
                 <div className="relative ">
@@ -61,13 +60,18 @@ const QuizStartTiemScreen = (props: any) => {
                   </div>
                 </div>
                 <InviteFriendSection />
-                <CountdownSection/>
+                <CountdownSection />
 
                 <div className="flex flex-col  mt-[14px] ">
                   <div className="mb-[20px]">
-                   <p className="text-[18px] montserratfont font-semibold dark:text-brandLightOpacity100">Hey there! </p>
-                   <p className="text-[18px] montserratfont font-medium dark:text-brandLightOpacity70">The quiz starts at <span className="text-brand">&nbsp;5 P.M.&nbsp;</span>everyday. </p>    
-                   
+                    <p className="text-[18px] montserratfont font-semibold dark:text-brandLightOpacity100">
+                      Hey there!{" "}
+                    </p>
+                    <p className="text-[18px] montserratfont font-medium dark:text-brandLightOpacity70">
+                      The quiz starts at{" "}
+                      <span className="text-brand">&nbsp;5 P.M.&nbsp;</span>
+                      everyday.{" "}
+                    </p>
                   </div>
 
                   <div className="px-4 mb-[50px]">
@@ -78,12 +82,16 @@ const QuizStartTiemScreen = (props: any) => {
                       </p>
                       <div className="bg-gradient-to-r mw-sm:min-w-[25%] min-w-[29%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
                     </div>
-                    <Image src={Prize} alt="Prixe" />
+                    <Image
+                      src={Prize}
+                      alt="Prixe"
+                      className="w-full max-h-[215px] object-cover"
+                    />
                   </div>
 
                   <div className="px-[22px]">
                     <p className="text-left text-brandDark2 dark:text-brandLightOpacity100 montserratfont text-[16px] font-medium ">
-                    Would you like to set a reminder for the upcoming quiz?
+                      Would you like to set a reminder for the upcoming quiz?
                     </p>
                     <div className="mt-[10px] flex flex-row justify-between items-center">
                       <p className="text-[14px] montserratfont font-medium dark:text-brandLightOpacity70">
@@ -93,7 +101,9 @@ const QuizStartTiemScreen = (props: any) => {
                         checked={enabled}
                         onChange={setEnabled}
                         className={`${
-                          enabled ? "bg-brandDark2 dark:bg-[#ed4e50]" : "bg-brandLightOpacity100 dark:bg-[#292828]"
+                          enabled
+                            ? "bg-brandDark2 dark:bg-[#ed4e50]"
+                            : "bg-brandLightOpacity100 dark:bg-[#292828]"
                         } relative inline-flex  h-[24px] w-[56px] items-center rounded-full outline-none`}
                       >
                         <span
