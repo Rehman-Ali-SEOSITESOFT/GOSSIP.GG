@@ -26,7 +26,7 @@ const InviteFriendSection = () => {
           </p>
         </div>
       </div>
-      <p className=" mr-[16px] mt-[16px] text-brandDark1 dark:text-brandLightOpacity70 border-b-[1px] border-b-brandDark1 dark:border-b-brandLightOpacity70 leading-none min-w-min montserratfont text-[12px] font-medium">
+      <p className="cursor-pointer  mr-[16px] mt-[16px] text-brandDark1 dark:text-brandLightOpacity70 border-b-[1px] border-b-brandDark1 dark:border-b-brandLightOpacity70 leading-none min-w-min montserratfont text-[12px] font-medium">
         Invite Friends
       </p>
     </div>

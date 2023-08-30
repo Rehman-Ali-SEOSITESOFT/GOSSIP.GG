@@ -47,7 +47,7 @@ const PrizeOfTheDay = (props: any) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="fixed bg-bodycolor inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin    scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
+            <Dialog.Panel className="fixed bg-bodycolor inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin    scrollbar-track-[transparent]  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-[transparent] m-auto mw-sm:h-full  mw-sm:max-h-full">
               {/* top   */}
               <div className="flex flex-col  h-full">
                 <div className="relative ">
@@ -67,10 +67,8 @@ const PrizeOfTheDay = (props: any) => {
                 <div className="ml-4 mt-2">
                   <p className="text-[12px] italic montserratfont dark:text-brandLightOpacity70 text-left">
                     Correct Answer:
-                    <span className="dark:text-brand">
-                      &nbsp;Option B&nbsp;
-                    </span>
-                    2 Million
+                    <span className="text-brand">&nbsp;Option B&nbsp;</span>2
+                    Million
                   </p>
                 </div>
                 <div className="mt-[24px]">
@@ -139,7 +137,9 @@ const PrizeOfTheDay = (props: any) => {
                         checked={enabled}
                         onChange={setEnabled}
                         className={`${
-                          enabled ? "bg-[#ed4e50]" : "bg-brandLightOpacity100 dark:bg-[#292828]"
+                          enabled
+                            ? "bg-brandDark2 dark:bg-[#ed4e50]"
+                            : "bg-brandLightOpacity100 dark:bg-[#292828]"
                         } relative inline-flex  h-[24px] w-[56px] items-center rounded-full outline-none`}
                       >
                         <span
@@ -155,11 +155,11 @@ const PrizeOfTheDay = (props: any) => {
                   </div>
                 </div>
                 <div>
-                  <p className="text-[12px] dark:text-brandLightOpacity70 montserratfont mt-[16px] pb-[4px]">
+                  <p className="cursor-pointer text-[12px] dark:text-brandLightOpacity70 montserratfont mt-[16px] pb-[4px]">
                     Terms and conditions
                   </p>
                   <a
-                    className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold`}
+                    className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[230px]  mw-sm3:text-[14px]  mw-sm3:w-[55%] mw-sm:text-base mw-sm:text-semibold`}
                   >
                     Go to Home Page
                   </a>

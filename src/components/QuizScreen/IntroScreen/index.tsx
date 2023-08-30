@@ -1,7 +1,6 @@
 "use client";
 
 import { Dialog, Transition } from "@headlessui/react";
-
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import logo from "../../../assets/quiz-model/title-logo.png";
 import bottomlogo from "../../../assets/quiz-model/into-bottom-logo-1.png";
@@ -50,7 +49,7 @@ const IntroScreen = (props: any) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="fixed inset-[70px] w-[375px] left-auto mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full bg-bodycolor dark:bg-brandDark3 left-auto  overflow-x-hidden  scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2  ">
+              <Dialog.Panel className="fixed inset-[70px] w-[375px] left-auto mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full  m-auto   mw-sm:max-h-full  bg-bodycolor dark:bg-brandDark3 left-auto  overflow-x-hidden   scrollbar-thin  scrollbar-thumb-choosebox   scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-[transparent] scrollbar-track-[transparent]   ">
                 {/* top   */}
                 <div className="flex flex-col justify-between h-full ">
                   <div className="flex justify-center items-center  pt-[60px]">
@@ -94,7 +93,7 @@ const IntroScreen = (props: any) => {
                       <Image
                         src={background}
                         alt="lgo"
-                        className="h-full  rotad-left "
+                        className="h-full  rotad-left w-full"
                       />
                     </span>
 

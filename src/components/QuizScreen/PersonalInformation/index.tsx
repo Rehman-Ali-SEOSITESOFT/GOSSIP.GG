@@ -33,14 +33,6 @@ const PersonalInformation = (props: any) => {
     }
   }
 
-  function handleSubmitFile(e: any) {
-    if (files.length === 0) {
-      // no file has been submitted
-    } else {
-      // write submit logic here
-    }
-  }
-
   function handleDrop(e: any) {
     e.preventDefault();
     e.stopPropagation();
@@ -122,7 +114,7 @@ const PersonalInformation = (props: any) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="fixed bg-bodycolor  inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-[#221e1f] left-auto  overflow-y-auto scrollbar-thin   scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
+            <Dialog.Panel className="fixed bg-bodycolor  inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-[#221e1f] left-auto  overflow-y-auto scrollbar-thin   scrollbar-track-[transparent]  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-[transparent] m-auto mw-sm:h-full  mw-sm:max-h-full">
               {/* top   */}
               <div className="flex flex-col  h-full">
                 <div className="relative ">
@@ -131,13 +123,21 @@ const PersonalInformation = (props: any) => {
                   </p>
                   <div
                     onClick={() => props.close()}
-                    className="bg-brandLightOpacity10 hover:bg-brandLightOpacity100  h-[40px] w-[40px] rounded-full absolute top-3 right-3 flex justify-center items-center content-center"
+                    className="dark:bg-brandLightOpacity10 hover:bg-brandLightOpacity50 bg-brandLightOpacity30 hover:dark:bg-brandLightOpacity20  h-[40px] w-[40px] rounded-full absolute top-3 right-3 flex justify-center items-center content-center"
                   >
-                    <Image src={Close} alt="Close" />
+                    <Image
+                      className="brightness-0 dark:brightness-100"
+                      src={Close}
+                      alt="Close"
+                    />
                   </div>
                 </div>
                 <div className="mx-[16px] mt-[4px] flex flex-row items-start ">
-                  <Image className="mt-[2px] brightness-0 dark:brightness-100" src={Info} alt="Info" />
+                  <Image
+                    className="mt-[2px] brightness-0 dark:brightness-100"
+                    src={Info}
+                    alt="Info"
+                  />
                   <p className="pl-[6px] text-left montserratfont text-[12px] dark:text-brandLightOpacity70">
                     We will fetch your personal details from <br /> the
                     government database
@@ -162,13 +162,9 @@ const PersonalInformation = (props: any) => {
                   <p className="pt-[32px]  montserratfont font-semibold text-[16px] dark:text-brandLightOpacity100 text-left">
                     PAN Card Image
                   </p>
-                  {/* <div className="mt-[16px] border-dashed border-brandLightOpacity10  montserratfont hover:border hover:border-brandDark2 dark:hover:border-[#ffffff]  dark:border-brandLightOpacity30 border border-choosebox  rounded w-full h-[100px] py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]"></div> */}
 
                   <div className="mt-[16px] border-dashed border-brandLightOpacity10  montserratfont hover:border hover:border-brandDark2 dark:hover:border-[#ffffff]  dark:border-brandLightOpacity30 border border-choosebox  rounded w-full h-[100px] py-2 px-6 bg-white dark:bg-brandDark3 focus:outline-none focus:shadow-outline focus:border-brandDark2 dark:focus:border-[#ffffff]">
                     <form
-                      // className={`${
-                      //   dragActive ? "bg-blue-400" : "bg-blue-100"
-                      // }  p-4 w-1/3 rounded-lg  text-center flex flex-col items-center justify-center`}
                       onDragEnter={handleDragEnter}
                       onSubmit={(e) => e.preventDefault()}
                       onDrop={handleDrop}
@@ -221,24 +217,30 @@ const PersonalInformation = (props: any) => {
                           ))}
                         </div>
                       )}
-                      {/* <button
-          className="bg-black rounded-lg p-2 mt-3 w-auto"
-          onClick={handleSubmitFile}
-        >
-          <span className="p-2 text-white">Submit</span>
-        </button> */}
                     </form>
                   </div>
                   <div className="flex flex-row items-start mt-[14px]">
                     <div
                       onClick={(e) => onClickVerify(e)}
-                      className={`done_btn bg-brandLightOpacity100 h-[32px] flex items-center justify-center content-center ${isVerfied ? 'w-[100px] border dark:border-brandLightOpacity100 border-brandDark2': 'w-[67px]' }  dark:bg-brandLightOpacity10    rounded-3xl	text-center 	leading-6	 cursor-pointer mw-sm:w-[67px]   mw-sm3:w-[67px] mw-sm:text-[12px] mw-sm:text-medium`}
+                      className={`done_btn bg-brandLightOpacity100 h-[32px] flex items-center justify-center content-center ${
+                        isVerfied
+                          ? "w-[100px] border dark:border-brandLightOpacity100 border-brandDark2"
+                          : "w-[67px]"
+                      }  dark:bg-brandLightOpacity10    rounded-3xl	text-center 	leading-6	 cursor-pointer mw-sm:w-[67px]   mw-sm3:w-[67px] mw-sm:text-[12px] mw-sm:text-medium`}
                     >
                       {loader ? (
-                        <Image src={Loader} className="brightness-0 dark:brightness-100" alt="loader" />
+                        <Image
+                          src={Loader}
+                          className="brightness-0 dark:brightness-100"
+                          alt="loader"
+                        />
                       ) : isVerfied ? (
                         <div className="flex flex-row  w-[100%] items-center justify-around">
-                          <Image className="ml-[8px] brightness-0 dark:brightness-100" src={Tick} alt="tick" />
+                          <Image
+                            className="ml-[8px] brightness-0 dark:brightness-100"
+                            src={Tick}
+                            alt="tick"
+                          />
                           <p className="pr-[12px] text-[12px] text-brandDark2 dark:text-brandLightOpacity100 	font-medium montserratfont ">
                             Verified
                           </p>
@@ -305,7 +307,7 @@ const PersonalInformation = (props: any) => {
                 </div>
                 <div className="mt-[56px]">
                   <a
-                    className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold`}
+                    className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[230px]  mw-sm3:text-[14px]  mw-sm3:w-[55%] mw-sm:text-base mw-sm:text-semibold`}
                   >
                     Proceed
                   </a>

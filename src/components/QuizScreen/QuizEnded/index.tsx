@@ -6,14 +6,12 @@ import Close from "../../../assets/images/modal/close.png";
 import Image from "next/image";
 import InviteFriendSection from "../InviteFriendsSec";
 import Timer from "../../../assets/quiz-model/timer.png";
-
 import { Switch } from "@headlessui/react";
-import CountdownSection from "../CountdownSec";
+import CountDown from "../CountDownSection";
 
 const QuizEnded = (props: any) => {
   const cancelButtonRef = useRef(null);
   const [enabled, setEnabled] = useState<boolean | any>(false);
-  console.log("enabled", enabled);
   return (
     <Transition.Root show={props.open} as={Fragment}>
       <Dialog
@@ -44,7 +42,7 @@ const QuizEnded = (props: any) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="fixed bg-bodycolor inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin    scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
+            <Dialog.Panel className="fixed bg-bodycolor inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin    scrollbar-track-[transparent]  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-[transparent] m-auto mw-sm:h-full  mw-sm:max-h-full ">
               {/* top   */}
               <div className="flex flex-col  h-full">
                 <div className="relative ">
@@ -61,26 +59,26 @@ const QuizEnded = (props: any) => {
                   </div>
                 </div>
                 <InviteFriendSection />
-                <CountdownSection/>
+                <div className="my-[12px]">
+                  <CountDown title={"Time Left"} />
+                </div>
                 <div className="flex flex-col items-center mt-[90px]">
-                <p className="montserratfont dark:text-brand font-semibold text-[16px]">
-                  Uh-oh!
+                  <p className="montserratfont dark:text-brand font-semibold text-[16px]">
+                    Uh-oh!
                   </p>
                   <div className="h-[64px] w-[64px]  mt-[20px] bg-brandDark2 dark:bg-brand rounded-full flex justify-center items-center">
-                  <Image src={Timer}  alt="Timer" />
+                    <Image src={Timer} alt="Timer" />
                   </div>
-                  
+
                   <p className="montserratfont text-[18px] font-semibold dark:text-brandLightOpacity100 pt-[22px]">
-                  The quiz has ended for today!
+                    The quiz has ended for today!
                   </p>
-                  <p className="montserratfont text-[14px] font-medium dark:text-brandLightOpacity70 pt-[4px]">Daily quiz timing: 5 p.m. - 8 p.m.</p>
-               
+                  <p className="montserratfont text-[14px] font-medium dark:text-brandLightOpacity70 pt-[4px]">
+                    Daily quiz timing: 5 p.m. - 8 p.m.
+                  </p>
                 </div>
 
                 <div className="flex flex-col  mt-[100px]">
-                  
-                
-
                   <div className="px-[22px]">
                     <p className="text-left text-brandDark2 dark:text-brandLightOpacity100 montserratfont text-[16px] font-medium ">
                       Play again tomorrow?
@@ -93,7 +91,9 @@ const QuizEnded = (props: any) => {
                         checked={enabled}
                         onChange={setEnabled}
                         className={`${
-                          enabled ? "bg-[#ed4e50]" : "bg-brandLightOpacity100 dark:bg-[#292828]"
+                          enabled
+                            ? " bg-brandDark2 dark:bg-[#ed4e50]"
+                            : "bg-brandLightOpacity100 dark:bg-[#292828]"
                         } relative inline-flex  h-[24px] w-[56px] items-center rounded-full outline-none`}
                       >
                         <span
@@ -110,7 +110,7 @@ const QuizEnded = (props: any) => {
                 </div>
                 <div className="mt-[76px]">
                   <a
-                    className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold`}
+                    className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[230px]  mw-sm3:text-[14px]  mw-sm3:w-[55%] mw-sm:text-base mw-sm:text-semibold`}
                   >
                     Today&#39;s Lucky Winners
                   </a>

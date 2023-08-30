@@ -8,7 +8,6 @@ import LatestNews from "@/components/LatestNews/Index";
 import ForYou from "@/components/ForYou/Index";
 import EmailVerify from "@/components/EmailVerify/Index";
 import { useRouter } from "next/navigation";
-import CountdownSection from "@/components/QuizScreen/CountDownSection";
 
 export default function Home() {
   const [isLoggedIn, setIsLoggedIn] = useState<Boolean>(false);
@@ -43,7 +42,6 @@ export default function Home() {
     <>
       <section className="home-page">
         <div className="pb-11  pt-6 mw-12:pb-7 mw-md:pb-[20px] mw-md:pt-[12px] ">
-          {/* <CountdownSection /> */}
           <Trending />
         </div>
         <HeroSection />

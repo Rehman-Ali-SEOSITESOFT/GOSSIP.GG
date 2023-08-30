@@ -19,7 +19,6 @@ import QuizEnded from "../QuizScreen/QuizEnded";
 import OrderConfirm from "../QuizScreen/OrderConfirm";
 import OrderSummary from "../QuizScreen/OrderSummary";
 import PersonalInformation from "../QuizScreen/PersonalInformation";
-import QuizRatioTimer from "../QuizRatioTimer/QuizRatioTimer";
 import Countdown from "react-countdown";
 
 const QuizRatio = () => {
@@ -82,7 +81,7 @@ const QuizRatio = () => {
 
   return (
     <>
-      <div className="quiz-ration fixed right-[15px] bottom-[100px] w-full max-w-[130px] ">
+      <div className="quiz-ration fixed right-[15px] bottom-[100px] z-50	 w-full max-w-[130px] ">
         {/*   QUIZED BOX */}
 
         <div
@@ -136,7 +135,7 @@ const QuizRatio = () => {
               {open ? (
                 <Completionist />
               ) : (
-                <Countdown date={Date.now() + 50000} renderer={renderer} />
+                <Countdown date={Date.now() + 10000} renderer={renderer} />
               )}
             </h4>
           </div>
