@@ -60,10 +60,10 @@ const CountDown = () => {
           </h3> */}
           <h3 className="countdown text-lg font-medium montserratfont leading-[22px] text-brand ">
             {/* <span className="inline-block" style={{ "--value": days }} /> */}
-            <span className="inline-block" style={{ "--value": hour }} />
-            <span className="inline-block" style={{ "--value": mintues }}>
-              {/* &nbsp;:&nbsp;{mintues.toString().padStart(2, "0")}&nbsp;:&nbsp; */}
-            </span>
+            <span className="inline-block pr-[2px]" style={{ "--value": hour }} />
+            :
+            <span className="inline-block" style={{ "--value": mintues }} />
+            :
             <span
               className="bottom-second inline-block"
               style={{ "--value": second }}
