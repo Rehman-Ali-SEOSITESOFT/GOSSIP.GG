@@ -206,6 +206,10 @@
     width: 450px;
     max-width: 100%;
   }
+  .header__right .login__btn {
+    font-size: 14px;
+    margin: 0 10px;
+  }
 }
 @media screen and (max-width: 600px) {
   .main_header {
@@ -291,7 +295,7 @@
   }
 
   .header__right .login__btn {
-    min-width: 65px;
+    min-width: 70px;
     font-size: 14px;
   }
   .fixed__bottom__header ul li a {

@@ -55,7 +55,7 @@ const OrderSummary = (props: any) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="fixed bg-bodycolor inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin   scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
+              <Dialog.Panel className="fixed bg-bodycolor inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin   scrollbar-track-[transparent]  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-[transparent] m-auto mw-sm:h-full  mw-sm:max-h-full">
                 {/* top   */}
                 <div className="flex flex-col  h-full">
                   <div className="relative ">
@@ -86,7 +86,11 @@ const OrderSummary = (props: any) => {
                       Congratulations! Confirm your details and make this yours!
                     </p>
                     <div className="mt-[16px]">
-                      <Image src={Product} alt="Product" />
+                      <Image
+                        src={Product}
+                        alt="Product"
+                        className="w-full max-h-[210px] object-cover"
+                      />
                     </div>
                     <p className="pt-[14px] montserratfont text-left font-medium text-[14px] dark:text-brandLightOpacity100">
                       Samsung QN90B QLED TV (45 inch)&nbsp;<span>-</span>&nbsp;1
@@ -95,7 +99,7 @@ const OrderSummary = (props: any) => {
                     <p className="montserratfont text-[14px] dark:text-brandLightOpacity70 text-left ">
                       Snow white color, leather belt
                     </p>
-                    <div className="text-left p-[12px] w-[343px] h-[227px] bg-brandLightOpacity50 dark:bg-brandLightOpacity5 border-[1px] border-brandLightOpacity100 dark:border-brandLightOpacity10 rounded mt-[20px]">
+                    <div className="text-left p-[12px] w-full max-w-[343px] h-[227px] bg-brandLightOpacity50 dark:bg-brandLightOpacity5 border-[1px] border-brandLightOpacity100 dark:border-brandLightOpacity10 rounded mt-[20px]">
                       <p className="montserratfont font-semibold dark:text-brandLightOpacity100 text-[16px]">
                         Delivery Address
                       </p>

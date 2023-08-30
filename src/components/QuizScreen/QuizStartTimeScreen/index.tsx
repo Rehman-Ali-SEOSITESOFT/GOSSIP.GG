@@ -43,7 +43,7 @@ const QuizStartTiemScreen = (props: any) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="fixed bg-bodycolor inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin    scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
+            <Dialog.Panel className="fixed bg-bodycolor inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin    scrollbar-track-[transparent]  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-[transparent] m-auto mw-sm:h-full  mw-sm:max-h-full ">
               {/* top   */}
               <div className="flex flex-col  h-full">
                 <div className="relative ">
@@ -84,7 +84,11 @@ const QuizStartTiemScreen = (props: any) => {
                       </p>
                       <div className="bg-gradient-to-r mw-sm:min-w-[25%] min-w-[29%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
                     </div>
-                    <Image src={Prize} alt="Prixe" />
+                    <Image
+                      src={Prize}
+                      alt="Prixe"
+                      className="w-full max-h-[215px] object-cover"
+                    />
                   </div>
 
                   <div className="px-[22px]">

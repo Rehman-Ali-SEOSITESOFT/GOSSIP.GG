@@ -65,7 +65,7 @@ const QuestionScreen = (props: any) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="fixed inset-[70px] w-[375px] left-auto bg-bodycolor mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
+              <Dialog.Panel className="fixed inset-[70px] w-[375px] left-auto bg-bodycolor mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-[transparent]  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-[transparent] m-auto mw-sm:h-full  mw-sm:max-h-full ">
                 {/* top   */}
                 <div className="flex flex-col  h-full">
                   <div className="relative ">
@@ -87,7 +87,11 @@ const QuestionScreen = (props: any) => {
                   </div>
 
                   <div className="mx-[16px] my-[13px]">
-                    <Image src={Product} alt="Product" />
+                    <Image
+                      src={Product}
+                      alt="Product"
+                      className="w-full max-h-[210px] object-cover"
+                    />
                   </div>
                   <div className="border-l-2 border-l-brand ml-[20px]">
                     <p className="pl-[10px] montserratfont text-[16px] font-semibold text-brandDark1 dark:text-brandLightOpacity100 text-left">

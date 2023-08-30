@@ -10,7 +10,7 @@ import WinLogo from "../../../assets/quiz-model/win-logo.png";
 import { Switch } from "@headlessui/react";
 import ReactCurvedText from "react-curved-text";
 import logo from "../../../assets/quiz-model/title-logo.png";
-import cong from "../../../assets/quiz-model/cong1.gif";
+import cong from "../../../assets/quiz-model/new-congrualtion.gif";
 import crown from "../../../assets/quiz-model/con-crown.png";
 import OrderSummary from "../OrderSummary";
 
@@ -64,7 +64,7 @@ const WinnerScreenTwo = (props: any) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="fixed inset-[70px] w-[375px] bg-bodycolor  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-x-hidden scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 box-scroll">
+              <Dialog.Panel className="fixed inset-[70px] w-[375px] bg-bodycolor  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-x-hidden scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-[transparent]  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-transparent box-scroll m-auto mw-sm:h-full  mw-sm:max-h-full m-auto">
                 {/* top   */}
                 <div
                   className={`flex flex-col  h-full animatedd-layer dark:bg-brandDark3  ${
@@ -124,7 +124,7 @@ const WinnerScreenTwo = (props: any) => {
                         </p>
                         <div className="bg-gradient-to-r mw-sm:min-w-[25%] min-w-[35%] from-brandDark2 h-0.5    dark:from-secSaprator "></div>
                       </div>
-                      <Image src={Prize} alt="Prixe" />
+                      <Image src={Prize} alt="Prixe" className="w-full" />
                     </div>
                     <div className="px-[22px]">
                       <p className="text-left text-brandDark2 dark:text-brandLightOpacity100 montserratfont text-[16px] font-medium ">
@@ -189,7 +189,7 @@ const WinnerScreenTwo = (props: any) => {
                       </div>
                     </div>
                     <div className="congrulation relative">
-                      <div className="absolute top-[-30px] z-10 congrulation-curved">
+                      <div className="absolute top-[-30px] left-0 right-0 z-10 congrulation-curved">
                         <ReactCurvedText
                           width={372}
                           height={80}
@@ -217,10 +217,14 @@ const WinnerScreenTwo = (props: any) => {
                       <Image
                         src={cong}
                         alt="lgo"
-                        className="w-[375px] h-[520px] object-cover	animted-congrul-bg"
+                        className="min-w-[375px] w-full h-[520px] object-cover	animted-congrul-bg"
                       />
                       <div className="w-[120px] h-[170px] imge-text-value absolute top-[30px] right-0 left-0 m-auto">
-                        <Image src={crown} alt="lgo" className="h-full" />
+                        <Image
+                          src={crown}
+                          alt="lgo"
+                          className="h-full w-full"
+                        />
                         <span className="montserratfont text-lg leading-[22px] text-center text-brandLightOpacity1">
                           @Naveen
                         </span>

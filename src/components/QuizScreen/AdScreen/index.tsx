@@ -45,6 +45,8 @@ const AddScreen = (props: any) => {
     setOpenW(!openW);
   };
 
+ 
+
   return (
     <>
       <Transition.Root show={props.open} as={Fragment}>
@@ -78,9 +80,9 @@ const AddScreen = (props: any) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="fixed inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-x-hidden scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
+              <Dialog.Panel className="fixed inset-[70px] w-[375px] left-auto mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-x-hidden scrollbar-thin  scrollbar-thumb-choosebox   scrollbar-thumb-darkScollorBarColor   dark:scrollbar-track-[transparent] scrollbar-track-[transparent]  m-auto mw-sm:h-full  mw-sm:max-h-full ">
                 {/* top   */}
-                <div className="relative flex  flex-col justify-between h-full add-screen bg-cover	bg-[100%] ">
+                <div className="relative flex  flex-col justify-between h-full add-screen bg-cover	bg-[100%] min-h-[812px] ">
                   <div
                     className={`top-side flex flex-col justify-between h-full p-5 z-10`}
                   >
