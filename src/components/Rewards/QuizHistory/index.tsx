@@ -237,7 +237,7 @@ const QuizHistory = () => {
               <div
                 className={`absolute top-[-22px] right-[0px] mw-lg:left-[0px] mw-lg:top-[50px]  ${style.selectBOOX}`}
               >
-                <h4 className="mw-lg:block text-[14px] montserratfont font-normal leading-normal text-[#E5E5E5] mb-[4px]">
+                <h4 className="mw-lg:block text-[14px] montserratfont font-normal leading-normal text-brandDark2 dark:text-[#E5E5E5] mb-[4px]">
                   Timeframe
                 </h4>
                 {selectedValue === "Custom" ? (
@@ -264,7 +264,7 @@ const QuizHistory = () => {
                   >
                     <div
                       onClick={() => onClickOpen()}
-                      className=" px-4 bg-[#E2E2E2] flex flex-row justify-between items-center h-[60px] mw-sm1:h-[45px]   rounded-lg w-[302px] mx-13:w-[270px] mw-12:w-[300px] border border-brandDark2 dark:border-brandLightOpacity50 mw-sm1:rounded dark:bg-[#2E2A2B]"
+                      className=" px-4 bg-bodycolor flex flex-row justify-between items-center h-[60px] mw-sm1:h-[45px]   rounded-lg w-[302px] mx-13:w-[270px] mw-12:w-[300px] border border-brandDark2 dark:border-brandLightOpacity50 mw-sm1:rounded dark:bg-[#2E2A2B]"
                     >
                       <p className="montserratfont font-semibold text-brandDark1 dark:text-brandLightOpacity100 mw-sm:text-xs mw-sm:leading-normal">
                         {selectedValue}
@@ -291,7 +291,7 @@ const QuizHistory = () => {
                         {dropDownList.map((item, index) => (
                           <div
                             key={index}
-                            className={`h-[44px] hover:bg-brandLightOpacity10  flex flex-row justify-between items-center pl-[16px] pr-[20px] 
+                            className={`h-[44px] hover:dark:bg-brandLightOpacity10 hover:bg-brandLightOpacity100  flex flex-row justify-between items-center pl-[16px] pr-[20px] 
                            ${
                              isDarkTheme === "dark"
                                ? "darkchecked "
@@ -299,7 +299,7 @@ const QuizHistory = () => {
                            }`}
                             onClick={() => onSelectValue(item)}
                           >
-                            <p className="montserratfont leading-normal dark:text-brandLightOpacity100 text-[16px] font-medium text-brandLightOpacity70 pl-[8px] mw-md:text-[14px]">
+                            <p className="montserratfont leading-normal dark:text-brandLightOpacity100 text-[16px] font-medium text-brandDark2 pl-[8px] mw-md:text-[14px]">
                               {item}
                             </p>
                           </div>

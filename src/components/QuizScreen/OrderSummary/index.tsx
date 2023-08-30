@@ -58,20 +58,20 @@ const OrderSummary = (props: any) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="fixed inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin   scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
+            <Dialog.Panel className="fixed bg-bodycolor inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin   scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
               {/* top   */}
               <div className="flex flex-col  h-full">
                 <div className="relative ">
                   <p className="pt-[16px] pl-[16px] text-[24px] font-bold dark:text-brandLightOpacity100 montserratfont text-left">Order Summary</p>
                   <div
                     onClick={() => props.close()}
-                    className="bg-brandLightOpacity10 hover:bg-brandLightOpacity100  h-[40px] w-[40px] rounded-full absolute top-3 right-3 flex justify-center items-center content-center"
+                    className="dark:bg-brandLightOpacity10 hover:bg-brandLightOpacity50 bg-brandLightOpacity30 hover:dark:bg-brandLightOpacity20  h-[40px] w-[40px] rounded-full absolute top-3 right-3 flex justify-center items-center content-center"
                   >
-                    <Image src={Close} alt="Close" />
+                    <Image src={Close} className="brightness-0 dark:brightness-100" alt="Close" />
                   </div>
                 </div>
                 <div className="mx-[16px] mt-[4px] ">
-                <p onClick={(e) => onClickPersonalInfo(e)} className="border-b-[1px] w-fit cursor-pointer leading-none border-b-brandLightOpacity70  montserratfont text-[14px] dark:text-brandLightOpacity70 font-normal">&lt;&lt;&nbsp;Go to personal information</p>
+                <p onClick={(e) => onClickPersonalInfo(e)} className="border-b-[1px] w-fit cursor-pointer leading-none border-b-brandDark2 dark:border-b-brandLightOpacity70  montserratfont text-[14px] text-brandDark2 dark:text-brandLightOpacity70 font-normal">&lt;&lt;&nbsp;Go to personal information</p>
                 </div>
                 <div className="mx-[16px] mt-[24px]">
                   <p className="montserratfont leading-[23px] text-left font-semibold dark:text-brandLightOpacity100 text-[16px]">
@@ -82,7 +82,7 @@ const OrderSummary = (props: any) => {
                   </div>
                   <p className="pt-[14px] montserratfont text-left font-medium text-[14px] dark:text-brandLightOpacity100">Samsung QN90B QLED TV (45 inch)&nbsp;<span>-</span>&nbsp;1 unit</p>
                   <p className="montserratfont text-[14px] dark:text-brandLightOpacity70 text-left ">Snow white color, leather belt</p>
-                  <div className="text-left p-[12px] w-[343px] h-[227px] dark:bg-brandLightOpacity5 border-[1px] border-brandLightOpacity10 rounded mt-[20px]">
+                  <div className="text-left p-[12px] w-[343px] h-[227px] bg-brandLightOpacity50 dark:bg-brandLightOpacity5 border-[1px] border-brandLightOpacity100 dark:border-brandLightOpacity10 rounded mt-[20px]">
                     <p className="montserratfont font-semibold dark:text-brandLightOpacity100 text-[16px]">Delivery Address</p>
                     <p className="montserratfont pt-[10px]  dark:text-brandLightOpacity100 text-[14px] font-light">Naveen G</p>
                     <p className="montserratfont dark:text-brandLightOpacity100 text-[14px] font-light">ABC Building Second floor 2B </p>
@@ -92,7 +92,7 @@ const OrderSummary = (props: any) => {
                     <p className="montserratfont pt-[8px] dark:text-brandLightOpacity100 text-[14px] font-light">Mobile - <span className="font-semibold">123456788</span></p>
                     <p className="montserratfont cursor-pointer pt-[8px] dark:text-brandLightOpacity70 text-[12px] border-b-[1px] w-fit leading-none border-b-brandLightOpacity70">Change Address</p>
                   </div>
-                  <p className="pl-[8px] pt-[8px] italic text-left montserratfont text-[14px] dark:text-brandLightOpacity70">Estimated delivery by <span className="dark:text-brandLightOpacity100">24 July</span></p>
+                  <p className="pl-[8px] pt-[8px] italic text-left montserratfont text-[14px] dark:text-brandLightOpacity70">Estimated delivery by <span className="text-brandDark3 font-medium dark:text-brandLightOpacity100">24 July</span></p>
                </div>
                 <div className="mt-[25px]">
                 <a

@@ -69,7 +69,7 @@ const QuestionScreen = (props: any) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="fixed inset-[70px] w-[375px] left-auto mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
+            <Dialog.Panel className="fixed inset-[70px] w-[375px] left-auto bg-bodycolor mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
               {/* top   */}
               <div className="flex flex-col  h-full">
                 <div className="relative ">
@@ -80,7 +80,7 @@ const QuestionScreen = (props: any) => {
                   />
                   <div
                     onClick={() => props.close()}
-                    className="bg-brandLightOpacity10 hover:bg-brandLightOpacity100  h-[40px] w-[40px] rounded-full absolute top-2 right-2 flex justify-center items-center content-center"
+                    className="bg-brandLightOpacity10 hover:bg-brandLightOpacity20  h-[40px] w-[40px] rounded-full absolute top-2 right-2 flex justify-center items-center content-center"
                   >
                     <Image src={Close} alt="Close" />
                   </div>
@@ -91,7 +91,7 @@ const QuestionScreen = (props: any) => {
                   <Image src={Product} alt="Product" />
                 </div>
                 <div className="border-l-2 border-l-brand ml-[20px]">
-                  <p className="pl-[10px] montserratfont text-[16px] font-semibold text-brandLightOpacity100 text-left">
+                  <p className="pl-[10px] montserratfont text-[16px] font-semibold text-brandDark1 dark:text-brandLightOpacity100 text-left">
                     What is the largest ever prize pool for a gaming tournament?
                   </p>
                 </div>
@@ -101,11 +101,11 @@ const QuestionScreen = (props: any) => {
                       <div
                         key={index}
                         onClick={() => onClickSelectOption(index + 1)}
-                        className={`min-w-fit mx-5   mb-3  mw-sm:mb-2 mw-sm:mx-5 flex flex-row items-center justify-center  border hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] ${
+                        className={`min-w-fit mx-5   mb-3  mw-sm:mb-2 mw-sm:mx-5 flex flex-row items-center justify-center  border  hover:border-brandDark2 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] ${
                           index + 1 == optionNumber
-                            ? "bg-arrowicon dark:bg-[#141313]   dark:border-brand"
-                            : "dark:border-brandLightOpacity10 dark:bg-brandLightOpacity5"
-                        } border-brandDark2   rounded h-11`}
+                            ? "bg-arrowicon dark:bg-[#141313] border-brandDark2  dark:border-brand"
+                            : "dark:border-brandLightOpacity10 border-brandLightOpacity100  dark:bg-brandLightOpacity5"
+                        }   rounded h-11`}
                       >
                         <p
                           className="pr-[0%] pl-[16px] font-bold dark:text-brandLightOpacity100
@@ -117,7 +117,7 @@ const QuestionScreen = (props: any) => {
                           className={`pr-[40px] mx-auto hover:text-brandDark2 dark:hover:text-brandLightOpacity100 items-start  ${
                             index + 1 == optionNumber
                               ? "text-brandDark2 font-bold dark:text-brandLightOpacity100"
-                              : "text-brandDark2 dark:text-brandLightOpacity100 font-light"
+                              : "text-brandDark2  dark:text-brandLightOpacity100 dark:font-light font-medium"
                           } text-base  text-[14px]  montserratfont `}
                         >
                           {item}

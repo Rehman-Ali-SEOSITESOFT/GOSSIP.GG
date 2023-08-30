@@ -17,28 +17,28 @@ const PreviousGiveAways = () => {
     {
       iamges: give1,
       qty: "500 units",
-      title: "title",
+      title: "Title",
       overPara:
         "audi Arabian esports tournament organiser Gamers8 has announced a prize pool of $45million for its 2023 event",
     },
     {
       iamges: give2,
       qty: "380 units",
-      title: "title",
+      title: "Title",
       overPara:
         "audi Arabian esports tournament organiser Gamers8 has announced a prize pool of $45million for its 2023 event",
     },
     {
       iamges: give3,
       qty: "220 units",
-      title: "title",
+      title: "Title",
       overPara:
         "audi Arabian esports tournament organiser Gamers8 has announced a prize pool of $45million for its 2023 event",
     },
     {
       iamges: give4,
       qty: "150 units",
-      title: "title",
+      title: "Title",
       overPara:
         "audi Arabian esports tournament organiser Gamers8 has announced a prize pool of $45million for its 2023 event",
     },

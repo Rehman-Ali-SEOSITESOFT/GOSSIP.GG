@@ -51,7 +51,7 @@ const AnswerSubmitScreen = (props: any) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="fixed inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
+            <Dialog.Panel className="fixed inset-[70px] w-[375px] bg-bodycolor  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
               {/* top   */}
               <div className="flex flex-col  h-full">
                 <div className="relative ">
@@ -62,7 +62,7 @@ const AnswerSubmitScreen = (props: any) => {
                   />
                   <div
                     onClick={() => props.close()}
-                    className="bg-brandLightOpacity10 hover:bg-brandLightOpacity100  h-[40px] w-[40px] rounded-full absolute top-2 right-2 flex justify-center items-center content-center"
+                    className="bg-brandLightOpacity10 hover:bg-brandLightOpacity20  h-[40px] w-[40px] rounded-full absolute top-2 right-2 flex justify-center items-center content-center"
                   >
                     <Image src={Close} alt="Close" />
                   </div>
@@ -70,13 +70,13 @@ const AnswerSubmitScreen = (props: any) => {
                 <InviteFriendSection />
                 <CountdownSection />
                 <div className="flex flex-col items-center justify-center content-center">
-                  <p className=" w-[286px] text-[16px] mt-[32px] montserratfont font-semibold text-brandLightOpacity100 ">
+                  <p className=" w-[286px] text-[16px] mt-[32px] montserratfont font-semibold text-brandDark2 dark:text-brandLightOpacity100 ">
                     Well done, @Naveen! <br /> You have successfully submitted
                     your answer.
                   </p>
                   <Image className="mt-[42px]" src={Animation} alt="success aniamtion"/>
                   <div className="px-[22px] mt-[52px]">
-                    <p className="text-left text-brandLightOpacity100 montserratfont text-[16px] font-medium ">
+                    <p className="text-left text-brandDark2 dark:text-brandLightOpacity100 montserratfont text-[16px] font-medium ">
                       
                       Results will be announced at
                       <span className=" text-brand "> &nbsp;8:00 P.M.</span> tonight.
@@ -87,7 +87,7 @@ const AnswerSubmitScreen = (props: any) => {
                         checked={enabled}
                         onChange={setEnabled}
                         className={`${
-                          enabled ? "bg-[#ed4e50]" : "bg-[#292828]"
+                          enabled ? "bg-brandDark2 dark:bg-[#ed4e50]" : "bg-brandLightOpacity100 dark:bg-[#292828]"
                         } relative inline-flex  h-[24px] w-[56px] items-center rounded-full outline-none`}
                       >
                         <span

@@ -21,12 +21,12 @@ const InviteFriendSection = () => {
           <Image src={image3} alt="" className="w-[24px] h-[24px] " />
         </div>
         <div className="ml-[5px]">
-          <p className="montserratfont text-[12px] font-normal text-[#E5E5E5]">
+          <p className="montserratfont text-[12px] font-normal text-brandDark1 dark:text-[#E5E5E5]">
             and 54 others are playing
           </p>
         </div>
       </div>
-      <p className=" mr-[16px] mt-[16px] text-brandLightOpacity70 border-b-[1px] border-b-brandLightOpacity70 leading-none min-w-min montserratfont text-[12px] font-medium">
+      <p className="cursor-pointer  mr-[16px] mt-[16px] text-brandDark1 dark:text-brandLightOpacity70 border-b-[1px] border-b-brandDark1 dark:border-b-brandLightOpacity70 leading-none min-w-min montserratfont text-[12px] font-medium">
         Invite Friends
       </p>
     </div>

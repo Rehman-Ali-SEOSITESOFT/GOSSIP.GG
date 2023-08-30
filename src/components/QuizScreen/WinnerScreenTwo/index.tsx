@@ -66,7 +66,7 @@ const WinnerScreenTwo = (props: any) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="fixed inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-x-hidden scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 box-scroll">
+            <Dialog.Panel className="fixed inset-[70px] w-[375px] bg-bodycolor  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-x-hidden scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 box-scroll">
               {/* top   */}
               <div
                 className={`flex flex-col  h-full animatedd-layer dark:bg-brandDark3  ${
@@ -81,7 +81,7 @@ const WinnerScreenTwo = (props: any) => {
                   />
                   <div
                     onClick={() => props.close()}
-                    className="bg-brandLightOpacity10 hover:bg-brandLightOpacity100  h-[40px] w-[40px] rounded-full absolute top-2 right-2 flex justify-center items-center content-center"
+                    className="bg-brandLightOpacity10 hover:bg-brandLightOpacity20  h-[40px] w-[40px] rounded-full absolute top-2 right-2 flex justify-center items-center content-center"
                   >
                     <Image src={Close} alt="Close" />
                   </div>
@@ -129,7 +129,7 @@ const WinnerScreenTwo = (props: any) => {
                     <Image src={Prize} alt="Prixe" />
                   </div>
                   <div className="px-[22px]">
-                    <p className="text-left text-brandLightOpacity100 montserratfont text-[16px] font-medium ">
+                    <p className="text-left text-brandDark2 dark:text-brandLightOpacity100 montserratfont text-[16px] font-medium ">
                       Play again tomorrow?
                     </p>
                     <div className="mt-[10px] flex flex-row justify-between items-center">
@@ -140,7 +140,7 @@ const WinnerScreenTwo = (props: any) => {
                         checked={enabled}
                         onChange={setEnabled}
                         className={`${
-                          enabled ? "bg-[#ed4e50]" : "bg-[#292828]"
+                          enabled ? "bg-brandDark2 dark:bg-[#ed4e50]" : " bg-brandLightOpacity100 dark:bg-[#292828]"
                         } relative inline-flex  h-[24px] w-[56px] items-center rounded-full outline-none`}
                       >
                         <span
@@ -156,7 +156,7 @@ const WinnerScreenTwo = (props: any) => {
                   </div>
                 </div>
                 <div>
-                  <p className="text-[12px] dark:text-brandLightOpacity70 montserratfont mt-[40px]">
+                  <p className="cursor-pointer text-[12px] dark:text-brandLightOpacity70 montserratfont mt-[40px]">
                     Terms and conditions
                   </p>
                   <a

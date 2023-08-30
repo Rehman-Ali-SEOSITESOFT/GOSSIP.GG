@@ -44,7 +44,7 @@ const QuizStartTiemScreen = (props: any) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="fixed inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin    scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
+            <Dialog.Panel className="fixed bg-bodycolor inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin    scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
               {/* top   */}
               <div className="flex flex-col  h-full">
                 <div className="relative ">
@@ -55,7 +55,7 @@ const QuizStartTiemScreen = (props: any) => {
                   />
                   <div
                     onClick={() => props.close()}
-                    className="bg-brandLightOpacity10 hover:bg-brandLightOpacity100  h-[40px] w-[40px] rounded-full absolute top-2 right-2 flex justify-center items-center content-center"
+                    className="bg-brandLightOpacity10 hover:bg-brandLightOpacity20  h-[40px] w-[40px] rounded-full absolute top-2 right-2 flex justify-center items-center content-center"
                   >
                     <Image src={Close} alt="Close" />
                   </div>
@@ -66,7 +66,7 @@ const QuizStartTiemScreen = (props: any) => {
                 <div className="flex flex-col  mt-[14px] ">
                   <div className="mb-[20px]">
                    <p className="text-[18px] montserratfont font-semibold dark:text-brandLightOpacity100">Hey there! </p>
-                   <p className="text-[18px] montserratfont font-medium dark:text-brandLightOpacity70">The quiz starts at <span className="dark:text-brand">&nbsp;5 P.M.&nbsp;</span>everyday. </p>    
+                   <p className="text-[18px] montserratfont font-medium dark:text-brandLightOpacity70">The quiz starts at <span className="text-brand">&nbsp;5 P.M.&nbsp;</span>everyday. </p>    
                    
                   </div>
 
@@ -82,7 +82,7 @@ const QuizStartTiemScreen = (props: any) => {
                   </div>
 
                   <div className="px-[22px]">
-                    <p className="text-left text-brandLightOpacity100 montserratfont text-[16px] font-medium ">
+                    <p className="text-left text-brandDark2 dark:text-brandLightOpacity100 montserratfont text-[16px] font-medium ">
                     Would you like to set a reminder for the upcoming quiz?
                     </p>
                     <div className="mt-[10px] flex flex-row justify-between items-center">
@@ -93,7 +93,7 @@ const QuizStartTiemScreen = (props: any) => {
                         checked={enabled}
                         onChange={setEnabled}
                         className={`${
-                          enabled ? "bg-[#ed4e50]" : "bg-[#292828]"
+                          enabled ? "bg-brandDark2 dark:bg-[#ed4e50]" : "bg-brandLightOpacity100 dark:bg-[#292828]"
                         } relative inline-flex  h-[24px] w-[56px] items-center rounded-full outline-none`}
                       >
                         <span
@@ -109,7 +109,7 @@ const QuizStartTiemScreen = (props: any) => {
                   </div>
                 </div>
                 <div className="flex flex-col items-center ">
-                  <p className="leading-none w-fit border-b-[1px] border-b-brandLightOpacity70 text-[12px] dark:text-brandLightOpacity70 montserratfont mt-[40px] mb-[6px]">
+                  <p className="cursor-pointer leading-none w-fit border-b-[1px] border-b-brandLightOpacity70 text-[12px] dark:text-brandLightOpacity70 montserratfont mt-[40px] mb-[6px]">
                     How to play
                   </p>
                   <a

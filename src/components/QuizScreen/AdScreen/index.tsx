@@ -11,7 +11,7 @@ import WinnerScreenTwo from "../WinnerScreenTwo";
 const AddScreen = (props: any) => {
   const cancelButtonRef = useRef(null);
 
-  const [seconds, setSeconds] = useState<number>(3);
+  const [seconds, setSeconds] = useState<number>(5);
   const [addDisabled, setAddDisabled] = useState<boolean>(false);
 
   const timerFunction = () => {
@@ -22,7 +22,7 @@ const AddScreen = (props: any) => {
       clearInterval(interval);
       setAddDisabled(true);
       setSeconds(0);
-    }, 3000);
+    }, 5000);
   };
   // useEffect(() => {
   //   const interval = setInterval(() => {
@@ -40,7 +40,7 @@ const AddScreen = (props: any) => {
     console.log("closing testing......");
   };
   useEffect(() => {
-    setSeconds(3);
+    setSeconds(5);
     setAddDisabled(false);
     if(props.open === true){
       timerFunction();  
