@@ -10,7 +10,7 @@ import WinLogo from "../../../assets/quiz-model/win-logo.png";
 import { Switch } from "@headlessui/react";
 import ReactCurvedText from "react-curved-text";
 import logo from "../../../assets/quiz-model/title-logo.png";
-import cong from "../../../assets/quiz-model/cong1.gif";
+import cong from "../../../assets/quiz-model/new-congrualtion.gif";
 import crown from "../../../assets/quiz-model/con-crown.png";
 import OrderSummary from "../OrderSummary";
 

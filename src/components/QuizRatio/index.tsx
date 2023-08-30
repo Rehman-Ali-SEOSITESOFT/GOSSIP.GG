@@ -37,7 +37,7 @@ const QuizRatio = () => {
     </span>
   );
 
-  const [openIntro, setOpenIntro] = useState<Boolean>(false);
+  const [openIntro, setOpenIntro] = useState<Boolean>(true);
   const [closeQuizBox, setCloseQuizBox] = useState<Boolean>(true);
   const [hello, setHello] = useState<String>("Quiz Result");
   const [completed, setCompleted] = useState<Boolean>(false);
