@@ -99,7 +99,7 @@ const OrderSummary = (props: any) => {
                     <p className="montserratfont text-[14px] dark:text-brandLightOpacity70 text-left ">
                       Snow white color, leather belt
                     </p>
-                    <div className="text-left p-[12px] w-[343px] h-[227px] bg-brandLightOpacity50 dark:bg-brandLightOpacity5 border-[1px] border-brandLightOpacity100 dark:border-brandLightOpacity10 rounded mt-[20px]">
+                    <div className="text-left p-[12px] w-full max-w-[343px] h-[227px] bg-brandLightOpacity50 dark:bg-brandLightOpacity5 border-[1px] border-brandLightOpacity100 dark:border-brandLightOpacity10 rounded mt-[20px]">
                       <p className="montserratfont font-semibold dark:text-brandLightOpacity100 text-[16px]">
                         Delivery Address
                       </p>
