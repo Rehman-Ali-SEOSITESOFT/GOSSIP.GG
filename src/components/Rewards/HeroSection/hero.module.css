@@ -6,3 +6,10 @@
     ),
     linear-gradient(360deg, #000 0%, rgba(0, 0, 0, 0) 100%) !important;
 }
+.buttinn br {
+  display: none;
+}
+.blurry {
+  backdrop-filter: blur(14px);
+  border-radius: 4px;
+}

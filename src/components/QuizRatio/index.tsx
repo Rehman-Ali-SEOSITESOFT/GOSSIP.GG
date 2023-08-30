@@ -95,7 +95,11 @@ const QuizRatio = () => {
             onClick={hanldeClosedQuiz}
           >
             <span className="block p-1">
-              <Image src={close} alt="" className="w-4 h-4	" />
+              <Image
+                src={close}
+                className="brightness-0 dark:brightness-100 w-4 h-4"
+                alt=""
+              />
             </span>
           </div>
           <div className="logo-close  pl-2.5 pb-2.5	 relative">
@@ -156,7 +160,7 @@ const QuizRatio = () => {
 
       {/* <WinnerScreenTwo open={openIntro} close={hanldeOpenedQuiz} /> */}
       <AddScreen open={open} close={onClickPlay} isSeeResult={true} />
-      {/* {openIntro && <AddScreen open={openIntro} close={hanldeOpenedQuiz} />} */}
+      {/* <AddScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <QuestionScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <AnswerSubmitScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <TermsAndCondition open={openIntro} close={hanldeOpenedQuiz} /> */}
@@ -169,8 +173,6 @@ const QuizRatio = () => {
       {/* <PrizeOfTheDay open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <OrderConfirm open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <OrderSummary open={openIntro} close={hanldeOpenedQuiz} /> */}
-      {/* <PersonalInformation open={openIntro} close={hanldeOpenedQuiz} /> */}
-
       {/* <PersonalInformation open={openIntro} close={hanldeOpenedQuiz} /> */}
     </>
   );

@@ -58,7 +58,7 @@ const OrderSummary = (props: any) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="fixed inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin   scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
+            <Dialog.Panel className="fixed bg-bodycolor inset-[70px] w-[375px]  mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto max-h-[812px] mw-sm:w-full dark:bg-brandDark3 left-auto  overflow-y-auto scrollbar-thin   scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2 ">
               {/* top   */}
               <div className="flex flex-col  h-full">
                 <div className="relative ">
@@ -71,7 +71,7 @@ const OrderSummary = (props: any) => {
                   </div>
                 </div>
                 <div className="mx-[16px] mt-[4px] ">
-                <p onClick={(e) => onClickPersonalInfo(e)} className="border-b-[1px] w-fit cursor-pointer leading-none border-b-brandLightOpacity70  montserratfont text-[14px] dark:text-brandLightOpacity70 font-normal">&lt;&lt;&nbsp;Go to personal information</p>
+                <p onClick={(e) => onClickPersonalInfo(e)} className="border-b-[1px] w-fit cursor-pointer leading-none border-b-brandDark2 dark:border-b-brandLightOpacity70  montserratfont text-[14px] text-brandDark2 dark:text-brandLightOpacity70 font-normal">&lt;&lt;&nbsp;Go to personal information</p>
                 </div>
                 <div className="mx-[16px] mt-[24px]">
                   <p className="montserratfont leading-[23px] text-left font-semibold dark:text-brandLightOpacity100 text-[16px]">
@@ -82,7 +82,7 @@ const OrderSummary = (props: any) => {
                   </div>
                   <p className="pt-[14px] montserratfont text-left font-medium text-[14px] dark:text-brandLightOpacity100">Samsung QN90B QLED TV (45 inch)&nbsp;<span>-</span>&nbsp;1 unit</p>
                   <p className="montserratfont text-[14px] dark:text-brandLightOpacity70 text-left ">Snow white color, leather belt</p>
-                  <div className="text-left p-[12px] w-[343px] h-[227px] dark:bg-brandLightOpacity5 border-[1px] border-brandLightOpacity10 rounded mt-[20px]">
+                  <div className="text-left p-[12px] w-[343px] h-[227px] bg-brandLightOpacity50 dark:bg-brandLightOpacity5 border-[1px] border-brandLightOpacity100 dark:border-brandLightOpacity10 rounded mt-[20px]">
                     <p className="montserratfont font-semibold dark:text-brandLightOpacity100 text-[16px]">Delivery Address</p>
                     <p className="montserratfont pt-[10px]  dark:text-brandLightOpacity100 text-[14px] font-light">Naveen G</p>
                     <p className="montserratfont dark:text-brandLightOpacity100 text-[14px] font-light">ABC Building Second floor 2B </p>

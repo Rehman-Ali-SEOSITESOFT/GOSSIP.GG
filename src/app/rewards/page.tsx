@@ -17,15 +17,16 @@ const page = () => {
       <section className="rewards_page_mian_wrapper">
         <div className="global-section-width p-0 mw-lg:bg-bodycolor mw-lg:dark:bg-brandDark2 mw-lg:z-[8]">
           <div className="2xl-container">
-            <div className={`${style.quiz_timing_wrapper} max-w-[100%] `}>
+            <div
+              className={`${style.quiz_timing_wrapper} max-w-[100%] overflow-x-auto `}
+            >
               <div
-                className={`${style.scrolling_} bg-brandLightOpacity10 rounded-[20px] pb-[9px] pt-[9px] pl-[22px] pr-[22px]  mt-[7px] mb-[10px] flex w-[1280px] justify-start flex-nowrap justify-between items-center `}
+                className={`${style.scrolling_} bg-brandLightOpacity10 rounded-[20px] pb-[9px] pt-[9px] pl-[22px] pr-[22px]  mt-[7px] mb-[10px] flex w-[1280px] justify-start flex-nowrap justify-between items-center mw-md:mt-[10px] border border-brandLightOpacity50 dark:border-none`}
               >
                 <div>
                   <p className="text-brand text-sm font-bold tracking-[1.4px] uppercase montserratfont mw-sm4:text-[12px]">
                     Daily Quiz{" "}
-                    <span className="text-[14px] font-semibold mw-sm4:text-[12px]">
-                      {" "}
+                    <span className="text-[14px] font-semibold mw-sm4:text-[12px] capitalize">
                       In <CountDownTimer />{" "}
                       <i className="fa-solid fa-angle-right"></i>
                       <i className="fa-solid fa-angle-right"></i>
@@ -58,7 +59,7 @@ const page = () => {
                       />
                     </div>
                     <div className="ml-[5px]">
-                      <p className="montserratfont text-[12px] font-normal text-[#E5E5E5]">
+                      <p className="montserratfont text-[12px] font-normal text-brandDark2 dark:text-[#E5E5E5]">
                         and 54 others are playing
                       </p>
                     </div>
@@ -68,7 +69,7 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="py-4 mt-[8px]">
+        <div className="py-4 mt-[6px] mw-md:pt-[10px] mw-md:mt-[0px] mw-md:pb-[0px]">
           <Trending />
         </div>
         <HeroSection />
