@@ -1,13 +1,11 @@
 "use client";
 
 import { Dialog, Transition } from "@headlessui/react";
-
 import React, { Fragment, useRef, useState } from "react";
 import Banner from "../../../assets/quiz-model/banner.png";
 import Product from "../../../assets/quiz-model/product.png";
 import Close from "../../../assets/images/modal/close.png";
 import Image from "next/image";
-import CountdownSection from "../CountdownSec";
 import InviteFriendSection from "../InviteFriendsSec";
 import AnswerSubmitScreen from "../AnswerSubmittedScreen";
 import CountDown from "../CountDownSection";
@@ -84,8 +82,9 @@ const QuestionScreen = (props: any) => {
                     </div>
                   </div>
                   <InviteFriendSection />
-                  {/* <CountdownSection /> */}
-                  <CountDown />
+                  <div className="my-[12px]">
+                    <CountDown title={"Time Left"} />
+                  </div>
 
                   <div className="mx-[16px] my-[13px]">
                     <Image src={Product} alt="Product" />
@@ -128,7 +127,7 @@ const QuestionScreen = (props: any) => {
                     </div>
                     <a
                       onClick={(e) => onClickSubmit(e)}
-                      className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[20px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold ${
+                      className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[20px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[230px]  mw-sm3:text-[14px]  mw-sm3:w-[55%] mw-sm:text-base mw-sm:text-semibold ${
                         optionSelect === false ? "opacity-50	" : "opacity-100	"
                       }  `}
                     >

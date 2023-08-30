@@ -67,21 +67,19 @@ const AnsweredCorrectly = (props: any) => {
                 <div className="ml-4 mt-2">
                   <p className="text-[12px] italic montserratfont dark:text-brandLightOpacity70 text-left">
                     Correct Answer:
-                    <span className="text-brand">
-                      &nbsp;Option B&nbsp;
-                    </span>
-                    2 Million
+                    <span className="text-brand">&nbsp;Option B&nbsp;</span>2
+                    Million
                   </p>
                 </div>
                 <div className="flex flex-col items-center mt-[24px]">
                   <Image src={HardLuck} alt="Upset Emoji" />
                   <p className="montserratfont dark:text-brand font-semibold text-[16px]">
-                  Hard Luck!
+                    Hard Luck!
                   </p>
                   <p className="montserratfont text-[14px] dark:text-brandLightOpacity100">
-                  You got it right! Unfortunately you did not<br/> win today’s prize.
+                    You got it right! Unfortunately you did not
+                    <br /> win today’s prize.
                   </p>
-               
                 </div>
 
                 <div className="flex flex-col  mt-[14px]">
@@ -141,7 +139,9 @@ const AnsweredCorrectly = (props: any) => {
                         checked={enabled}
                         onChange={setEnabled}
                         className={`${
-                          enabled ? "bg-brandDark2 dark:bg-[#ed4e50]" : "bg-brandLightOpacity100 dark:bg-[#292828]"
+                          enabled
+                            ? "bg-brandDark2 dark:bg-[#ed4e50]"
+                            : "bg-brandLightOpacity100 dark:bg-[#292828]"
                         } relative inline-flex  h-[24px] w-[56px] items-center rounded-full outline-none`}
                       >
                         <span
@@ -161,7 +161,7 @@ const AnsweredCorrectly = (props: any) => {
                     Terms and conditions
                   </p>
                   <a
-                    className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold`}
+                    className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[230px]  mw-sm3:text-[14px]  mw-sm3:w-[55%] mw-sm:text-base mw-sm:text-semibold`}
                   >
                     Go to Home Page
                   </a>
