@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./countdown.style.css";
 // import "./anim.css";
-const CountDownSection = () => {
-  const [second, setSecond] = useState<number>(59);
-  const [mintues, setMintues] = useState<number>(2);
-  const [hour, setHour] = useState<number>(2);
-  const [days, setDays] = useState<number>(2);
-  var countDownDate = new Date("Aug 31, 2023 14:58:15").getTime();
+const CountDown = () => {
+  const [second, setSecond] = useState(59);
+  const [mintues, setMintues] = useState(2);
+  const [hour, setHour] = useState(2);
+  const [days, setDays] = useState(2);
+  let countDownDate = new Date("Aug 31, 2023 14:58:15").getTime();
 
   setTimeout(() => {
     // setSecond(second - 1);
@@ -15,8 +15,8 @@ const CountDownSection = () => {
     //   setSecond(59);
     // }
 
-    var now = new Date().getTime();
-    var distance = countDownDate - now;
+    let now = new Date().getTime();
+    let distance = countDownDate - now;
     setDays(Math.floor(distance / (1000 * 60 * 60 * 24)));
 
     setHour(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
@@ -82,4 +82,4 @@ const CountDownSection = () => {
   );
 };
 
-export default CountDownSection;
+export default CountDown;
