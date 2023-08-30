@@ -68,8 +68,14 @@ const PreviousGiveAways = () => {
                 );
               })}
             </div>
-            <div className="mt-[16px] mb-[52px] mw-md:mb-[40px] mw-sm4:mb-[0px]">
-              <ViewMore />
+            <div className="mt-[16px] mb-[28px] mw-md:mb-[28px] mw-sm4:mb-[0px] text-start mw-md:text-center">
+              <p className="montserratfont text-[16px] text-medium capitalize underline text-brandLightOpacity70 leading-normal">
+                See More{" "}
+                <span className="ml-[9px]">
+                  <i className="fa-solid fa-angle-down"></i>
+                </span>{" "}
+              </p>
+              {/* <ViewMore /> */}
             </div>
           </div>
         </div>

@@ -14,6 +14,7 @@ import blur from "../../../assets/rewards/blue.png";
 import advertisment from "../../../assets/rewards/advertisement.png";
 import tabHero from "../../../assets/rewards/tabHero.png";
 import laptop from "../../../assets/rewards/laptoop.png";
+import fire2 from "../../../assets/rewards/Fire_perspective.png";
 const HeroSection = () => {
   return (
     <>
@@ -23,8 +24,8 @@ const HeroSection = () => {
             <div className="flex mw-lg:flex-col mt-[43px] mw-md:mt-[20px]">
               <div className="w-5/12 mw-xl:w-2/5 block  mw-lg:w-full">
                 <div className="right-side pl-8 mx-14:pl-6 mw-lg:pl-0 mw-lg:py-5 mw-lg:h-auto flex flex-col justify-between mw-sm:py-[0px]">
-                  <div className="left_top mb-[16px]">
-                    <div className="relative border-[1px] border-[#000]">
+                  <div className="left_top mb-[16px] mw-lg:mb-[0px]">
+                    <div className="relative rounded-t-[4px] overflow-hidden	">
                       <Image
                         src={heroimage1}
                         alt=""
@@ -33,7 +34,7 @@ const HeroSection = () => {
                       <div
                         className={`${style.overlayy} overlay  absolute inset-0 `}
                       ></div>
-                      <div className="absolute top-[23px] left-[13px] flex">
+                      <div className="absolute top-[23px] left-[13px] flex mw-md:top-[16px]">
                         <div className="w-[50px] h-[50px] bg-[#141313] rounded-[50px] border border-[#ED4E50] flex items-center justify-center">
                           <Image
                             src={rocket}
@@ -41,7 +42,7 @@ const HeroSection = () => {
                             className="w-[35px] h-[33px]"
                           />
                         </div>
-                        <div className="ml-[10px]">
+                        <div className="ml-[3px] flex flex-col justify-between">
                           <h4 className="montserratfont text-[20px] font-semibold	text-[#E5E5E5]">
                             @Naveen
                           </h4>
@@ -51,7 +52,7 @@ const HeroSection = () => {
                         </div>
                       </div>
                       <div className="absolute bottom-[17px]  flex">
-                        <div className="ml-[16px] border-r-[1px] border-borderColor pr-[12px] mw-12:ml-[8px]">
+                        <div className="ml-[16px] border-r-[1px] border-borderColor pr-[16px] mw-12:ml-[8px] mw-sm4:pr-[12px]">
                           <div className="flex items-center">
                             <Image src={remote} alt="" className="" />
                             <h4 className="montserratfont font-semibold text-[32px] uppercase text-[#E5E5E5] ml-[6px]">
@@ -62,10 +63,10 @@ const HeroSection = () => {
                             Quizzes Played
                           </p>
                         </div>
-                        <div className="ml-[16px] border-r-[1px] border-borderColor pr-[12px] mw-12:ml-[8px]">
-                          <div className="flex items-center">
+                        <div className="ml-[11px] border-r-[1px] border-borderColor pr-[16px] mw-12:ml-[8px] mw-sm4:pr-[12px]">
+                          <div className="flex items-center justify-center">
                             <Image src={target} alt="" className="" />
-                            <h4 className="montserratfont font-semibold text-[32px] uppercase text-[#E5E5E5] ml-[6px]">
+                            <h4 className="montserratfont font-semibold text-[32px] uppercase text-[#E5E5E5] ml-[6px] ">
                               12
                             </h4>
                           </div>
@@ -73,28 +74,28 @@ const HeroSection = () => {
                             Answered Correctly
                           </p>
                         </div>
-                        <div className="ml-[16px] ">
+                        <div className="ml-[11px] ">
                           <div className="flex items-center">
                             <Image src={trophy} alt="" className="" />
                             <h4 className="montserratfont font-semibold text-[32px] uppercase text-[#E5E5E5] ml-[6px]">
                               02
                             </h4>
                           </div>
-                          <p className="interfonts text-[10px] font-normal	text-[#E5E5E5] uppercase	">
+                          <p className="interfonts text-[10px] font-normal	text-[#E5E5E5] uppercase	text-center">
                             Prize Won
                           </p>
                         </div>
                       </div>
                     </div>
-                    <div className="bg-[#141313] rounded-b-lg  pl-[18px] pb-[13px] flex items-center pr-[18px]">
+                    <div className="bg-[#141313] rounded-b-[4px]  pl-[24px] pb-[13px] flex  pr-[18px] mw-sm4:pl-[20px] mw-sm3:pl-[16px]">
                       <div className="">
                         <div className="flex items-center">
                           <Image
-                            src={fire}
+                            src={fire2}
                             alt=""
-                            className="w-[38px] h-[44px]"
+                            className="w-[33px] h-[40px] ml-[-10px]"
                           />
-                          <h4 className="montserratfont text-[#ED4E50] text-[46.08px] font-semibold uppercase leading-normal	pl-[6px] mw-12:text-[40px]">
+                          <h4 className="montserratfont text-[#ED4E50] text-[40px] font-semibold uppercase leading-normal	pl-[6px] mw-12:text-[36px] mw-sm4:text-[32px]">
                             02
                           </h4>
                         </div>
@@ -105,42 +106,50 @@ const HeroSection = () => {
                           Last played yesterday
                         </p>
                       </div>
-                      <div className="ml-[60px] mw-12:ml-[40px]">
+                      <div className="pl-[60px] mx-14:pl-[32px] mx-13:pl-[24px] mw-sm4:pl-[8px] pt-[25px]">
                         <div className="flex items-center">
                           <div className="h-[34px] ">
-                            <p className="mr-[22px] interfonts text-[22px] font-bold capitalize text-[#ED4E50] leading-normal mw-12:mr-[12px] mw-12:text-[18px]">
+                            <p className="mr-[22px] interfonts text-[22px] font-bold capitalize text-[#ED4E50] leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
                               M
                             </p>
-                            <Image src={tick} alt="" />
+                            <Image
+                              src={tick}
+                              alt=""
+                              className="mw-sm4:w-[16px] mw-sm4:h-[16px]"
+                            />
                           </div>
                           <div className="h-[34px]">
-                            <p className="mr-[22px] text-[22px] font-bold capitalize text-[#ED4E50] leading-normal mw-12:mr-[12px] mw-12:text-[18px]">
+                            <p className="mr-[12px] text-[22px] font-bold capitalize text-[#ED4E50] leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
                               T
                             </p>
-                            <Image src={tick} alt="" />
+                            <Image
+                              src={tick}
+                              alt=""
+                              className="mw-sm4:w-[16px] mw-sm4:h-[16px]"
+                            />
                           </div>
                           <div className="h-[34px]">
-                            <p className="mr-[22px] text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[12px] mw-12:text-[18px]">
+                            <p className="mr-[12px] h-[40px] w-[40px] bg-brandLightOpacity10 rounded-[50%] flex items-center justify-center text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
                               W
                             </p>
                           </div>
                           <div className="h-[34px]">
-                            <p className="mr-[22px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[12px] mw-12:text-[18px]">
+                            <p className="mr-[20px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
                               Th
                             </p>
                           </div>
                           <div className="h-[34px]">
-                            <p className="mr-[22px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[12px] mw-12:text-[18px]">
+                            <p className="mr-[20px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
                               F
                             </p>
                           </div>
                           <div className="h-[34px]">
-                            <p className="mr-[22px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[12px] mw-12:text-[18px]">
+                            <p className="mr-[20px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
                               Sa
                             </p>
                           </div>
                           <div className="h-[34px]">
-                            <p className="mr-[22px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[12px] mw-12:text-[18px]">
+                            <p className="mr-[20px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
                               Su
                             </p>
                           </div>
@@ -148,8 +157,8 @@ const HeroSection = () => {
                       </div>
                     </div>
                   </div>
-                  <div className=" mw-lg:text-center">
-                    <p className="hidden mw-lg:block montserratfont text-[12px] leading-normal font-medium	text-brandLightOpacity70 mt-[48px] mw-md:mt-[31px]">
+                  <div className="w-full mw-lg:text-center m-auto">
+                    <p className="hidden w-[400px] ml-auto mr-auto  mw-lg:block montserratfont text-[12px] leading-normal font-medium	text-brandLightOpacity70 mt-[48px] mw-md:mt-[31px] text-start pl-[55px] mw-sm5:pl-[55px]">
                       Advertisement
                     </p>
                     <Image
@@ -165,7 +174,7 @@ const HeroSection = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-7/12  mw-xl:w-3/5 mw-lg:w-full relative mw-lg:mt-[48px]">
+              <div className="w-7/12  mw-xl:w-3/5 mw-lg:w-full relative mw-lg:mt-[48px] mw-md:mt-[31px]">
                 <Image
                   src={gossipWinner}
                   alt=""
@@ -181,32 +190,29 @@ const HeroSection = () => {
                   alt=""
                   className="w-full h-full mw-sm:block hidden"
                 />
-                <div className="absolute bottom-[24px] right-[24px] mw-sm4:right-[17px] mw-sm4:bottom-[8px]">
-                  <div className="relative">
-                    <Image
+                <div className="absolute bottom-[24px] w-[54%] right-[24px] mw-sm4:right-[17px] mw-sm4:bottom-[8px] mw-sm4:w-[60%]">
+                  {/* <Image
                       src={blur}
                       alt=""
-                      className="w-[376px] h-[300px] mw-12:h-[280px] mw-md:w-[300px] mw-md:h-[250px] mw-sm:h-[220px] mw-sm4:w-[230px] mw-sm4:h-[180px]"
-                    />
-                    <div className="absolute top-[21px] left-[16px] ">
-                      <h6 className="montserratfont font-medium	tracking-[9.8px] text-[14px] text-[#fff] leading-normal ">
-                        QUIZ
-                      </h6>
-                      <p className="montserratfont text-[32px] font-semibold leading-normal text-[#E5E5E5] pt-[22px] pb-[22px] mw-12:text-[28px] mw-md:text-[22px] mw-sm:text-[20px] mw-sm:pt-[6px] mw-sm:pb-[6px] mw-sm4:text-[14px]">
-                        Play today to win <br /> exciting prizes like <br />
-                        these.
-                      </p>
-                      <button className="montserratfont text-[18px] font-semibold leading-normal text-[#fff] bg-[#ED4E50] rounded-[10px] pt-[10px] pb-[10px] pl-[29px] pr-[29px] mw-sm4:text-[9.75px]">
-                        Play Now
-                      </button>
-                    </div>
+                      className="w-[376px] h-[300px] mw-12:h-[280px] mw-md:w-[300px] mw-md:h-[250px] mw-sm:h-[220px] mw-sm4:h-[180px] mw-sm5:h-[155px]"
+                    /> */}
+                  <div
+                    className={`${style.blurry} pt-[21px] pl-[16px] pb-[31px] mw-sm4:pt-[6px] mw-sm4:pl-[8px]  mw-sm4:pb-[12px]`}
+                  >
+                    <h6 className="montserratfont font-medium	tracking-[9.8px] text-[14px] text-[#fff] leading-normal ">
+                      QUIZ
+                    </h6>
+                    <p
+                      className={`${style.buttinn} montserratfont text-[32px] font-semibold leading-normal text-[#E5E5E5] pt-[22px] pb-[17px] mw-12:text-[28px] mw-md:text-[22px]  mw-sm:text-[20px] mw-sm:pt-[8px] mw-sm:pb-[6px] mw-sm4:text-[12px] mw-sm:pr-[70px]`}
+                    >
+                      Play today to win exciting prizes like these.
+                    </p>
+                    <button className="montserratfont text-[18px] font-semibold leading-normal text-[#fff] bg-[#ED4E50] rounded-[24px] pt-[13px] pb-[13px] pl-[29px] pr-[29px] mw-sm4:text-[9.75px] w-[200px] mw-sm:w-[120px] mw-sm:text-[12px] mw-sm4:pt-[4px] mw-sm4:pb-[4px]">
+                      Play Now
+                    </button>
                   </div>
                 </div>
               </div>
-
-              {/* <div className="w-5/12 mw-xl:w-1/2 hidden mw-lg:block mw-lg:w-full">
-                <div className="right-side pl-8 mx-14:pl-6 mw-lg:pl-0 mw-lg:py-5 h-[450px] mx-14-h[420px]  mw-lg:h-auto flex flex-col justify-between mw-lg:flex-row mw-sm:flex-col"></div>
-              </div> */}
             </div>
           </div>
         </div>

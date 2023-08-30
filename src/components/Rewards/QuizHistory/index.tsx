@@ -146,16 +146,16 @@ const QuizHistory = () => {
       <section className="quiz_history_wrapper">
         <div className="global-section-width">
           <div className="2xl:container">
-            <div className="mt-[52px] mw-sm4:mt-[28px]">
+            <div className="mt-[52px] mw-md:mt-[28px]">
               <SectionSaprator title="Quiz history" />
             </div>
             <div className="quiz_history_tabs relative">
-              <div className="tabss  mt-[32px]">
+              <div className="tabss  mt-[32px] mw-md:mt-[0px]">
                 <ul className="flex full listTabUser before:content-[''] before:w-full before:max-w-[1390px] before:left-0 before:right-0 before:top-[31px] before:absolute before:m-auto before:h-[1px] dark:before:bg-brandLightOpacity10 before:bg-grayCard">
                   <li className="">
                     <a
                       className={
-                        "text-[16px]   montserratfont  leading-normal   capitalize  pb-[8px] text-brandLightOpacity70  mw-md:text-[14x]" +
+                        "text-base   mw-sm1:text-sm   montserratfont  leading-5   capitalize  pb-[8px] " +
                         (openTab === 1
                           ? " dark:text-brand border-b-2 border-brandDark2   dark:border-b-brand font-bold	"
                           : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-normal  ")
@@ -201,7 +201,7 @@ const QuizHistory = () => {
                       }
                       id="link1"
                     >
-                      <div className="for-you-section  pt-[51px]  ">
+                      <div className="for-you-section  pt-[51px]  mw-md:pt-[32px]">
                         {list.map((e, idx) => (
                           <div key={idx} className="mb-[16px]">
                             <Accordiannn
@@ -235,9 +235,9 @@ const QuizHistory = () => {
               </div>
 
               <div
-                className={`absolute top-[-22px] right-[0px] mw-lg:left-[0px] mw-lg:top-[50px]  ${style.selectBOOX}`}
+                className={`absolute top-[-22px] right-[0px] mw-lg:left-[0px] mw-lg:top-[50px] z-[4] ${style.selectBOOX}`}
               >
-                <h4 className="mw-lg:block text-[14px] montserratfont font-normal leading-normal text-brandDark2 dark:text-[#E5E5E5] mb-[4px]">
+                <h4 className="mw-lg:block text-[14px] montserratfont font-normal leading-normal text-brandDark2 dark:text-[#E5E5E5] mb-[4px] mw-md:text-[10px]">
                   Timeframe
                 </h4>
                 {selectedValue === "Custom" ? (
@@ -245,7 +245,7 @@ const QuizHistory = () => {
                     <div className="flex flex-col">
                       <DateRange
                         editableDateInputs={true}
-                        onChange={(item) => setState([item.selection])} 
+                        onChange={(item) => setState([item.selection])}
                         moveRangeOnFirstSelection={false}
                         ranges={state}
                       />
@@ -260,11 +260,11 @@ const QuizHistory = () => {
                 ) : (
                   <div
                     ref={dropDownRef}
-                    className=" relative mw-12:w-[40%]  mw-9:w-[48%]"
+                    className=" relative mw-12:w-[40%]  mw-9:w-[48%] z-[4]"
                   >
                     <div
                       onClick={() => onClickOpen()}
-                      className=" px-4 bg-bodycolor flex flex-row justify-between items-center h-[60px] mw-sm1:h-[45px]   rounded-lg w-[302px] mx-13:w-[270px] mw-12:w-[300px] border border-brandDark2 dark:border-brandLightOpacity50 mw-sm1:rounded dark:bg-[#2E2A2B]"
+                      className=" px-4 bg-bodycolor flex flex-row justify-between items-center h-[60px] mw-sm1:h-[45px]   rounded-lg w-[302px] mx-13:w-[270px] mw-12:w-[300px] border border-brandDark2 dark:border-brandLightOpacity50 mw-sm1:rounded dark:bg-[#221E1F] mw-sm4:w-[160px]"
                     >
                       <p className="montserratfont font-semibold text-brandDark1 dark:text-brandLightOpacity100 mw-sm:text-xs mw-sm:leading-normal">
                         {selectedValue}

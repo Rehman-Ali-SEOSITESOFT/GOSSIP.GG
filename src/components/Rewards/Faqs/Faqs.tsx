@@ -16,15 +16,6 @@ const Faqs = () => {
       heading: "Terms and conditons",
     },
     {
-      heading: "Disclaimer", 
-    },
-    {
-      heading: "Customer Support",
-    },
-    {
-      heading: "Terms and conditons",
-    },
-    {
       heading: "Disclaimer",
     },
     {
@@ -37,18 +28,18 @@ const Faqs = () => {
         <div className="global-section-width ">
           <div className="2xl:container">
             <div className="mb-[16px]">
-              <h4 className="montserratfont text-[24px] leading-normal font-bold text-[#ED4E50]">
+              <h4 className="montserratfont text-[24px] leading-normal font-bold dark:text-[#ED4E50] mw-md:text-[20px] mw-sm4:text-[16px]">
                 FAQs
               </h4>
             </div>
-            <div className="pr-[5px] bg-[#2E2A2B] pt-[4px] pb-[4px] rounded-[8px]">
+            <div className="bg-[#fff] pr-[5px] dark:bg-[#2E2A2B] pt-[4px] pb-[4px] rounded-[8px] border-grayCard border  ">
               <div
-                className={`faqs_accordians bg-[#2E2A2B]  pt-[22px] px-[24px] h-[280px] mw-lg:h-[220px] overflow-x-scroll ${style.scrooling} mr-[8px]`}
+                className={`faqs_accordians bg-[#fff]  dark:bg-[#2E2A2B] pt-[22px] px-[24px] overflow-x-scroll ${style.scrooling} mr-[8px] `}
               >
                 {list.map((e, idx) => (
                   <div
                     key={idx}
-                    className="border-b-[1px] border-brandLightOpacity10"
+                    className="border-b-[1px] text-brandDark2 dark:border-brandLightOpacity10"
                   >
                     <FaqsAccordian heading={e.heading} />
                   </div>

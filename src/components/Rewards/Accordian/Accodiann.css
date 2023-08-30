@@ -25,6 +25,12 @@
 .second_slider .slick-dots li.slick-active button:before {
   color: white !important;
 }
+.mainwrapper_accordoian .slick-next {
+  right: -40px !important;
+}
+.mainwrapper_accordoian .slick-prev {
+  left: -50px;
+}
 @media screen and (max-width: 1024px) {
   .mainwrapper_accordoian .dark-arrow.slick-slider button.slick-prev,
   .mainwrapper_accordoian .light-arrow.slick-slider button.slick-prev {
@@ -39,6 +45,7 @@
   }
   .second_slider .slick-next {
     right: 0px !important;
+    top: 45% !important;
   }
   .date____ {
     display: flex !important;
@@ -46,11 +53,11 @@
 }
 @media screen and (max-width: 500px) {
   .second_slider .slick-next {
-    right: -30px !important;
+    right: -12px !important;
     top: 46% !important;
   }
   .second_slider .dark-arrow.slick-slider button.slick-prev,
   .second_slider .light-arrow.slick-slider button.slick-prev {
-    left: -30px !important;
+    left: -12px !important;
   }
 }
