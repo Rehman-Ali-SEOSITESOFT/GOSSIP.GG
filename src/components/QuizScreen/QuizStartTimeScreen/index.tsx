@@ -7,7 +7,7 @@ import Image from "next/image";
 import InviteFriendSection from "../InviteFriendsSec";
 import Prize from "../../../assets/quiz-model/prize.png";
 import { Switch } from "@headlessui/react";
-import CountdownSection from "../CountdownSec";
+import CountDown from "../CountDownSection";
 
 const QuizStartTiemScreen = (props: any) => {
   const cancelButtonRef = useRef(null);
@@ -60,7 +60,9 @@ const QuizStartTiemScreen = (props: any) => {
                   </div>
                 </div>
                 <InviteFriendSection />
-                <CountdownSection />
+                <div className="my-[12px]">
+                  <CountDown title={"Starts In"} />
+                </div>
 
                 <div className="flex flex-col  mt-[14px] ">
                   <div className="mb-[20px]">

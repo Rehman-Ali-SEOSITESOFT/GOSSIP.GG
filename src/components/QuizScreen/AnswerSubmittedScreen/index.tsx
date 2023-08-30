@@ -6,9 +6,9 @@ import Close from "../../../assets/images/modal/close.png";
 import Animation from "../../../assets/quiz-model/SUCCESS.svg";
 import Image from "next/image";
 import InviteFriendSection from "../InviteFriendsSec";
-import CountdownSection from "../CountdownSec";
 import { Switch } from "@headlessui/react";
 import TermsAndCondition from "../TermsAndConditonScreen";
+import CountDown from "../CountDownSection";
 const AnswerSubmitScreen = (props: any) => {
   const cancelButtonRef = useRef(null);
   const [enabled, setEnabled] = useState<boolean | any>(false);
@@ -67,7 +67,10 @@ const AnswerSubmitScreen = (props: any) => {
                     </div>
                   </div>
                   <InviteFriendSection />
-                  <CountdownSection />
+                  <div className="my-[12px]">
+                    <CountDown title={"Results In"} />
+                  </div>
+
                   <div className="flex flex-col items-center justify-center content-center">
                     <p className=" w-[286px] text-[16px] mt-[32px] montserratfont font-semibold text-brandDark2 dark:text-brandLightOpacity100 ">
                       Well done, @Naveen! <br /> You have successfully submitted
@@ -81,10 +84,7 @@ const AnswerSubmitScreen = (props: any) => {
                     <div className="px-[22px] mt-[52px]">
                       <p className="text-left text-brandDark2 dark:text-brandLightOpacity100 montserratfont text-[16px] font-medium ">
                         Results will be announced at
-                        <span className=" text-brand ">
-                          {" "}
-                          &nbsp;8:00 P.M.
-                        </span>{" "}
+                        <span className=" text-brand ">&nbsp;8:00 P.M.</span>
                         tonight.
                       </p>
                       <div className="mt-[13px] flex flex-row justify-between items-center">
@@ -121,7 +121,7 @@ const AnswerSubmitScreen = (props: any) => {
                     </p>
                     <a
                       onClick={() => props.close()}
-                      className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold`}
+                      className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	mb-6 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[230px]  mw-sm3:text-[14px]  mw-sm3:w-[55%] mw-sm:text-base mw-sm:text-semibold`}
                     >
                       Go to Home Page
                     </a>

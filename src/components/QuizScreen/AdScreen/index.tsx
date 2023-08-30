@@ -1,9 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
-
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import doublearrow from "../../../assets/quiz-model/duble-arrow.png";
 import Image from "next/image";
-import Link from "next/link";
 import closebtn from "../../../assets/quiz-model/close-add.png";
 import QuestionScreen from "../QuestionScreen";
 import WinnerScreenTwo from "../WinnerScreenTwo";
@@ -24,21 +22,7 @@ const AddScreen = (props: any) => {
       setSeconds(0);
     }, 5000);
   };
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setSeconds((seconds) => seconds - 1);
-  //   }, 1000);
-  //   setTimeout(() => {
-  //     clearInterval(interval);
-  //     setAddDisabled(true);
-  //     setSeconds(0);
-  //   }, 3000);
-  //   return;
-  // }, []);
 
-  const hanldeClosedAddScreen = () => {
-    console.log("closing testing......");
-  };
   useEffect(() => {
     setSeconds(5);
     setAddDisabled(false);
@@ -61,7 +45,7 @@ const AddScreen = (props: any) => {
     setOpenW(!openW);
   };
 
-  console.log("props====", props);
+ 
 
   return (
     <>
@@ -71,7 +55,6 @@ const AddScreen = (props: any) => {
           className="relative z-10"
           initialFocus={cancelButtonRef}
           onClose={() => {
-            // timerFunction();
             props.close();
           }}
         >
@@ -146,7 +129,6 @@ const AddScreen = (props: any) => {
                       <div className="pr-[30px] pb-[17px] pt-[80px] text-end">
                         <button
                           disabled={addDisabled ? false : true}
-                          // href="#"
                           onClick={() => console.log("visiting now.....")}
                           className=" montserratfont text-base font-medium	leading-normal underline underline-offset-2	text-shadow text-brandLightOpacity90 hover:text-[#fff] disabled:hover:text-brandLightOpacity90 disabled:hover:cursor-default"
                         >

@@ -1,7 +1,6 @@
 "use client";
 
 import { Dialog, Transition } from "@headlessui/react";
-
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import logo from "../../../assets/quiz-model/title-logo.png";
 import bottomlogo from "../../../assets/quiz-model/into-bottom-logo-1.png";

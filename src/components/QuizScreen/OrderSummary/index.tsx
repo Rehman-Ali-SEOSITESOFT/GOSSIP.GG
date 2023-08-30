@@ -107,7 +107,7 @@ const OrderSummary = (props: any) => {
                         Naveen G
                       </p>
                       <p className="montserratfont dark:text-brandLightOpacity100 text-[14px] font-light">
-                        ABC Building Second floor 2B{" "}
+                        ABC Building Second floor 2B
                       </p>
                       <p className="montserratfont dark:text-brandLightOpacity100 text-[14px] font-light">
                         Abc road near abc bank
@@ -116,18 +116,17 @@ const OrderSummary = (props: any) => {
                         Indiranagar
                       </p>
                       <p className="montserratfont dark:text-brandLightOpacity100 text-[14px] font-light">
-                        Bengaluru, Karnatka 560037{" "}
+                        Bengaluru, Karnatka 560037
                       </p>
                       <p className="montserratfont pt-[8px] dark:text-brandLightOpacity100 text-[14px] font-light">
-                        Mobile -{" "}
-                        <span className="font-semibold">123456788</span>
+                        Mobile -<span className="font-semibold">123456788</span>
                       </p>
                       <p className="montserratfont cursor-pointer pt-[8px] dark:text-brandLightOpacity70 text-[12px] border-b-[1px] w-fit leading-none border-b-brandLightOpacity70">
                         Change Address
                       </p>
                     </div>
                     <p className="pl-[8px] pt-[8px] italic text-left montserratfont text-[14px] dark:text-brandLightOpacity70">
-                      Estimated delivery by{" "}
+                      Estimated delivery by
                       <span className="text-brandDark3 font-medium dark:text-brandLightOpacity100">
                         24 July
                       </span>
@@ -136,7 +135,7 @@ const OrderSummary = (props: any) => {
                   <div className="mt-[25px]">
                     <a
                       onClick={(e) => onClickOrderConfirmScreen(e)}
-                      className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[250px]   mw-sm3:w-[100%] mw-sm:text-base mw-sm:text-semibold`}
+                      className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[230px]  mw-sm3:text-[14px]  mw-sm3:w-[55%] mw-sm:text-base mw-sm:text-semibold`}
                     >
                       Confirm
                     </a>

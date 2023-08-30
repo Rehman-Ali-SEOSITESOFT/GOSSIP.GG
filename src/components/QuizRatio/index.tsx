@@ -19,7 +19,6 @@ import QuizEnded from "../QuizScreen/QuizEnded";
 import OrderConfirm from "../QuizScreen/OrderConfirm";
 import OrderSummary from "../QuizScreen/OrderSummary";
 import PersonalInformation from "../QuizScreen/PersonalInformation";
-import QuizRatioTimer from "../QuizRatioTimer/QuizRatioTimer";
 import Countdown from "react-countdown";
 
 const QuizRatio = () => {
