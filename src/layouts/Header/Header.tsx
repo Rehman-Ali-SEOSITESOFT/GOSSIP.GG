@@ -380,13 +380,13 @@ const Header = () => {
                         leaveTo="transform opacity-0 scale-95"
                       >
                         <Menu.Items className="absolute pt-3 pl-4 pb-3 pr-1	 bg-white  z-10  dark:bg-brandDark1 right-[-50px] top-[55px]  left-auto   rounded-lg notifiction-shadow mw-xl:right-[0]">
-                          <div className=" w-[375px] max-h-[350px] overflow-x-hidden scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-[transparent] box-scroll pr-1 notifiction-shadow mw-sm5:w-[300px]">
+                          <div className=" w-[375px] max-h-[350px] overflow-x-hidden scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-[transparent] box-scroll pr-1  mw-sm5:w-[300px]">
                             <div className="flex justify-between items-end	 ">
-                              <h3 className="text-brand text-lg	leading-[22px] font-bold">
+                              <h3 className="text-brandDark2 dark:text-brand text-lg	leading-[22px] font-bold">
                                 Notifications
                               </h3>
                               <h3
-                                className="montserratfont font-normal	 text-xs	 leading-[15px] text-brandLightOpacity70 cursor-pointer"
+                                className="montserratfont font-normal	 text-xs	 leading-[15px] text-brandDark2 dark:text-brandLightOpacity70 cursor-pointer"
                                 onClick={(e) => onClickClearAllNotification(e)}
                               >
                                 {notifictionList.length > 0 ? "Clear all" : ""}
@@ -398,17 +398,17 @@ const Header = () => {
                                   return (
                                     <div
                                       key={i}
-                                      className="notification-box flex item-start justify-between border-t-[1px] border-brandLightOpacity10 py-[12px]  first:my-[0] first:border-t-0  "
+                                      className="notification-box flex item-start justify-between border-t-[1px] dark:border-brandLightOpacity10 py-[12px]  first:my-[0] first:border-t-0  "
                                     >
                                       <div>
                                         <h4
                                           className={`notifi-title montserratfont text-sm	 mb-2   ${
                                             e.read
-                                              ? "text-brandLightOpacity70 font-normal"
-                                              : "text-brandLightOpacity1 font-semibold	"
+                                              ? "text-brandDark1  dark:text-brandLightOpacity70 font-normal"
+                                              : "text-brandDark3 dark:text-brandLightOpacity1  font-semibold	"
                                           }`}
                                         >
-                                          <span className="text-brand">
+                                          <span className="text-brandDark2 dark:text-brand font-extrabold">
                                             {e.title} : &nbsp;
                                           </span>
                                           {e.disc}
@@ -416,8 +416,8 @@ const Header = () => {
                                         <p
                                           className={`text-[10px] leading-[13px] montserratfont ${
                                             e.read
-                                              ? "font-normal text-brandLightOpacity70"
-                                              : "font-semibold text-brandLightOpacity1"
+                                              ? "text-brandDark1 font-normal dark:text-brandLightOpacity70"
+                                              : "text-brandDark1 font-semibold dark:text-brandLightOpacity1"
                                           }`}
                                         >
                                           {e.time}
@@ -431,7 +431,7 @@ const Header = () => {
                                               : (e) =>
                                                   onClickOpenPrizeOfDayModal(e)
                                           }
-                                          className={`text-brandLightOpacity70 montserratfont text-sm leading-[15px] font-medium	underline`}
+                                          className={`text-brandDark2 dark:text-brandLightOpacity70 montserratfont text-sm leading-[15px] font-medium	underline`}
                                         >
                                           {e.quiz
                                             ? "Play Quiz"
@@ -442,7 +442,7 @@ const Header = () => {
                                   );
                                 })
                               ) : (
-                                <p className="pt-[8px] montserratfont dark:text-brandLightOpacity70 text-[12px] ">
+                                <p className="pt-[8px] montserratfont text-brandDark2 dark:text-brandLightOpacity70 text-[12px] ">
                                   No notifications
                                 </p>
                               )}
