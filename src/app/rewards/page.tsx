@@ -1,6 +1,6 @@
 "use client";
 import Trending from "@/components/Trending/Index";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import image1 from "../../assets/rewards/one.png";
 import image2 from "../../assets/rewards/two.png";
 import image3 from "../../assets/rewards/three.png";
@@ -11,14 +11,25 @@ import QuizHistory from "@/components/Rewards/QuizHistory";
 import Faqs from "@/components/Rewards/Faqs/Faqs";
 import style from "./Rewards.module.css";
 import CountDownTimer from "@/components/Rewards/CountDownTimer/CountDownTimer";
-const page = () => {
+import { useTheme } from "next-themes";
+const Rewards = () => {
+  const { theme } = useTheme();
+
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
+  useEffect(() => {
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   return (
     <>
       <section className="rewards_page_mian_wrapper">
         <div className="global-section-width p-0 mw-lg:bg-bodycolor mw-lg:dark:bg-brandDark2 mw-lg:z-[8]">
           <div className="2xl-container">
             <div
-              className={`${style.quiz_timing_wrapper} max-w-[100%] overflow-x-auto `}
+              className={`${
+                isDarkTheme === "dark"
+                  ? style.quiz_timing_wrapper
+                  : style.light_quiz_timing_wrapper
+              } max-w-[100%] overflow-x-auto `}
             >
               <div
                 className={`${style.scrolling_} bg-brandLightOpacity10 rounded-[20px] pb-[9px] pt-[9px] pl-[22px] pr-[22px]  mt-[7px] mb-[10px] flex w-[1280px] justify-start flex-nowrap justify-between items-center mw-md:mt-[10px] border border-brandLightOpacity50 dark:border-none`}
@@ -34,7 +45,7 @@ const page = () => {
                   </p>
                 </div>
                 <div className="ml-[15px]">
-                  <p className="text-[12px] font-semibold	text-whitecolor montserratfont mw-sm4:text-[12px]">
+                  <p className="text-[12px] font-semibold	dark:text-[#fff] montserratfont mw-sm4:text-[12px]">
                     Play everyday between 5 p.m. and 8 p.m. and stand a chance
                     to win the latest Samsung phone and other exciting prizes!
                   </p>
@@ -81,4 +92,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Rewards;

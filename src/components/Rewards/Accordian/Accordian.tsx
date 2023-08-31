@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Disclosure } from "@headlessui/react";
 import Slider from "react-slick";
 import "./Accodiann.css";
@@ -9,7 +9,9 @@ import three from "../../../assets/rewards/three.png";
 import luckywinner from "../../../assets/rewards/winner_list.png";
 import prizeWinner from "../../../assets/rewards/winItem.png";
 import Pagination from "@/components/Pagination";
+import { useTheme } from "next-themes";
 const Accordiannn = (props: any) => {
+  const { theme, setTheme } = useTheme();
   interface YourComponentProps {
     data: Array<any>; // Replace with the actual data type
   }
@@ -37,12 +39,14 @@ const Accordiannn = (props: any) => {
       setOpenIndexes([...openIndexes, item]);
     }
   };
-
+  useEffect(() => {
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   return (
     <>
       <div className={`w-full  mainwrapper_accordoian`}>
         <div className="mx-auto w-full px-[17px] rounded-[8px] border dark:border-brandLightOpacity50   pt-[22px]    dark:bg-[#221E1F] mw-lg:px-[0px] mw-lg:pt-[15px]">
-          <Disclosure>
+          <Disclosure as="div">
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex w-full px-[58px] justify-between items-center rounded-lg text-left text-sm font-medium text-purple-900  pb-[23px] mw-lg:pb-[15px] mw-lg:flex-col">
@@ -135,8 +139,8 @@ const Accordiannn = (props: any) => {
                         {...tools}
                         className={`${
                           isDarkTheme === "dark"
-                            ? " light-arrow"
-                            : " dark-arrow"
+                            ? " dark-arrow"
+                            : " light-arrow"
                         }`}
                       >
                         <div className="hello mw-md:mt-[40px] mw-sm:mt-[16px]">
