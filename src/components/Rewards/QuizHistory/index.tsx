@@ -24,7 +24,7 @@ const QuizHistory = () => {
     "Last 10 Days",
     "Custom",
   ]);
-  const [selectedValue, setSelectedValue] = useState<string>();
+  const [selectedValue, setSelectedValue] = useState<string>("Please select");
   const [opendropDown, setOpenDropdown] = useState<Boolean>(false);
   interface EventList {
     event_title: string;
@@ -104,12 +104,13 @@ const QuizHistory = () => {
   const [state, setState] = useState([
     {
       startDate: new Date(),
-      endDate: null,
+      endDate: new Date(),
       key: "selection",
     },
   ]);
   const _handleClose = () => {
     setSelectedValue("");
+    setOpenDateModal(false)
   };
   function handleChange(value: any) {
     setValue(value);
@@ -135,19 +136,26 @@ const QuizHistory = () => {
     setOpenDropdown(!opendropDown);
 
     setSelectedValue(e);
+    if(e === "Custom"){
+      setOpenDateModal(true)
+    }
 
     console.log("value", e);
   };
+  
+  const [openDateModal, setOpenDateModal] = useState<Boolean>(false);
+
   const _handleSave = () => {
-    setOpenDropdown(false);
     setState(state);
-    console.log(state, "date");
-    setSelectedValue("Custom");
+    setSelectedValue(state[0].startDate.getDate() + " " + state[0].endDate.getDate());
+    setOpenDateModal(false);
   };
+  
   useEffect(() => {
     setIsDarkTheme(theme === "dark" ? "dark" : "light");
   }, [theme]);
-  console.log(selectedValue, "selected value");
+  
+
   return (
     <>
       <section className="quiz_history_wrapper">
@@ -247,7 +255,7 @@ const QuizHistory = () => {
                 <h4 className="mw-lg:block text-[14px] montserratfont font-normal leading-normal text-brandDark2 dark:text-[#E5E5E5] mb-[4px] mw-md:text-[10px]">
                   Timeframe
                 </h4>
-                {selectedValue === "Custom" ? (
+                {openDateModal  ? (
                   <>
                     <div className="flex flex-col">
                       <DateRange
