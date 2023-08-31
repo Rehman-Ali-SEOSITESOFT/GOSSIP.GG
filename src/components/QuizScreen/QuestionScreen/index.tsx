@@ -82,7 +82,7 @@ const QuestionScreen = (props: any) => {
                     </div>
                   </div>
                   <InviteFriendSection />
-                  <div className="my-[12px]">
+                  <div className="my-[12px] relative z-[-1]">
                     <CountDown title={"Time Left"} />
                   </div>
 
