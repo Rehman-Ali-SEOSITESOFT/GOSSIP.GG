@@ -20,6 +20,7 @@ import OrderConfirm from "../QuizScreen/OrderConfirm";
 import OrderSummary from "../QuizScreen/OrderSummary";
 import PersonalInformation from "../QuizScreen/PersonalInformation";
 import Countdown from "react-countdown";
+import NewIntroScreen from "../QuizScreen/NewIntroScreen";
 
 const QuizRatio = () => {
   const [open, setOpen] = useState<Boolean>(false);
@@ -81,7 +82,7 @@ const QuizRatio = () => {
 
   return (
     <>
-      <div className="quiz-ration fixed right-[15px] bottom-[100px] z-50	 w-full max-w-[130px] ">
+      <div className="quiz-ration fixed right-[15px] bottom-[100px]	 w-full max-w-[130px] ">
         {/*   QUIZED BOX */}
 
         <div
@@ -156,6 +157,7 @@ const QuizRatio = () => {
         </div>
       </div>
       <IntroScreen open={openIntro} close={hanldeOpenedQuiz} />
+      {/* <NewIntroScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
 
       {/* <WinnerScreenTwo open={openIntro} close={hanldeOpenedQuiz} /> */}
       <AddScreen open={open} close={onClickPlay} isSeeResult={true} />
