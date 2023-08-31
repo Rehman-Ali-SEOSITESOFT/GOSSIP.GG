@@ -17,10 +17,10 @@ const AbsPreiousGiveAway = (props: any) => {
         </span>
         <div className={`${style.overlaydiv} mw-md:hidden`}>
           <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity px-[22px] py-[15px] text-center">
-            <h5 className="text-[#fff] text-[24px] leading-normal font-bold montserratfont">
+            <h5 className="text-[#E5E5E5] text-[18px] leading-normal font-bold montserratfont">
               {props.title}
             </h5>
-            <p className=" text-[#E5E5E5] montserratfont font-semibold leading-[22px] text-[14px] ">
+            <p className=" text-[#E5E5E5] montserratfont font-medium leading-[22px] text-[14px] mt-[14px]">
               {props.overPara}
             </p>
           </div>

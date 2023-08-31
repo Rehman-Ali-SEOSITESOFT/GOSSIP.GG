@@ -10,32 +10,7 @@
   width: 8px !important;
   height: 8px !important;
 }
-/* .quiz_timing_wrapper {
-  overflow-x: scroll !important;
-} */
-/* .quiz_timing_wrapper {
-  scrollbar-gutter: auto;
-} */
-/* .quiz_timing_wrapper::-webkit-scrollbar-button {
-  height: 80px;
-} */
-/* .quiz_timing_wrapper::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-.quiz_timing_wrapper::-webkit-scrollbar-track {
-  background: #363233;
-  border-radius: 8px;
-}
-.quiz_timing_wrapper::-webkit-scrollbar-thumb {
-  border: 1px solid rgba(229, 229, 229, 0.2);
-  border-radius: 8px;
-} */
 
-/*  */
-/* .light_quiz_timing_wrapper {
-  overflow-y: scroll;
-} */
 .light_quiz_timing_wrapper::-webkit-scrollbar-button {
   height: 10px !important;
 }
