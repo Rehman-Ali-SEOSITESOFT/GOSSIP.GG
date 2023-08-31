@@ -191,11 +191,6 @@ const HeroSection = () => {
                   className="w-full h-full mw-sm:block hidden"
                 />
                 <div className="absolute bottom-[24px] w-[54%] right-[24px] mw-sm4:right-[17px] mw-sm4:bottom-[8px] mw-sm4:w-[60%]">
-                  {/* <Image
-                      src={blur}
-                      alt=""
-                      className="w-[376px] h-[300px] mw-12:h-[280px] mw-md:w-[300px] mw-md:h-[250px] mw-sm:h-[220px] mw-sm4:h-[180px] mw-sm5:h-[155px]"
-                    /> */}
                   <div
                     className={`${style.blurry} pt-[21px] pl-[16px] pb-[31px] mw-sm4:pt-[6px] mw-sm4:pl-[8px]  mw-sm4:pb-[12px]`}
                   >
