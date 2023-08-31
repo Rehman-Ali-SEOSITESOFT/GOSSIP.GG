@@ -79,13 +79,13 @@ const WinnerScreenTwo = (props: any) => {
                     />
                     <div
                       onClick={() => props.close()}
-                      className="bg-brandLightOpacity10 hover:bg-brandLightOpacity20  h-[40px] w-[40px] rounded-full absolute top-2 right-2 flex justify-center items-center content-center"
+                      className="bg-brandLightOpacity10 cursor-pointer hover:bg-brandLightOpacity20  h-[40px] w-[40px] rounded-full absolute top-2 right-2 flex justify-center items-center content-center"
                     >
                       <Image src={Close} alt="Close" />
                     </div>
                   </div>
-                  <InviteFriendSection />
-                  <div className="flex flex-col  mt-[14px]">
+                  <InviteFriendSection title={"Share Result"} />
+                  <div className="flex flex-col  mt-[14px] z-[-1]">
                     <div className="mb-[12px] flex flex-col items-center justify-center">
                       <ReactCurvedText
                         width={372}
@@ -156,7 +156,7 @@ const WinnerScreenTwo = (props: any) => {
                     </div>
                   </div>
                   <div>
-                    <p className="cursor-pointer text-[12px] dark:text-brandLightOpacity70 montserratfont mt-[40px]">
+                    <p className="cursor-pointer text-[12px] dark:text-brandLightOpacity70 montserratfont mt-[40px] font-normal">
                       Terms and conditions
                     </p>
                     <a

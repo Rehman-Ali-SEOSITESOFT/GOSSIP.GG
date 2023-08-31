@@ -61,13 +61,13 @@ const AnswerSubmitScreen = (props: any) => {
                     />
                     <div
                       onClick={() => props.close()}
-                      className="bg-brandLightOpacity10 hover:bg-brandLightOpacity20  h-[40px] w-[40px] rounded-full absolute top-2 right-2 flex justify-center items-center content-center"
+                      className="bg-brandLightOpacity10 cursor-pointer hover:bg-brandLightOpacity20  h-[40px] w-[40px] rounded-full absolute top-2 right-2 flex justify-center items-center content-center"
                     >
                       <Image src={Close} alt="Close" />
                     </div>
                   </div>
-                  <InviteFriendSection />
-                  <div className="my-[12px]">
+                  <InviteFriendSection title={"Invite Friends"} />
+                  <div className="mt-[40px] mb-[24px] z-[-1]">
                     <CountDown title={"Results In"} />
                   </div>
 
@@ -81,10 +81,10 @@ const AnswerSubmitScreen = (props: any) => {
                       src={Animation}
                       alt="success aniamtion"
                     />
-                    <div className="px-[22px] mt-[52px]">
+                    <div className="px-[16px] mt-[52px]">
                       <p className="text-left text-brandDark2 dark:text-brandLightOpacity100 montserratfont text-[16px] font-medium ">
                         Results will be announced at
-                        <span className=" text-brand ">&nbsp;8:00 P.M.</span>
+                        <span className="w-[100%] text-brand ">&nbsp;8:00 P.M.</span><br/>
                         tonight.
                       </p>
                       <div className="mt-[13px] flex flex-row justify-between items-center">

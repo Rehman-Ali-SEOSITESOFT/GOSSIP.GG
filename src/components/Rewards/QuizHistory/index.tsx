@@ -15,7 +15,7 @@ import Image from "next/image";
 // import { Menu, Transition } from "@headlessui/react";
 import { useTheme } from "next-themes";
 const QuizHistory = () => {
-  const { theme } = useTheme();
+  const { theme } = useTheme();0
   const dropDownRef = useRef<any | null>(null);
   const [dropDownList, setDropDownList] = useState<string[]>([
     "Today",
@@ -139,8 +139,6 @@ const QuizHistory = () => {
     if(e === "Custom"){
       setOpenDateModal(true)
     }
-
-    console.log("value", e);
   };
   
   const [openDateModal, setOpenDateModal] = useState<Boolean>(false);

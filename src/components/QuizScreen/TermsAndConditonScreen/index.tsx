@@ -102,7 +102,7 @@ const TermsAndCondition = (props: any) => {
                   </p>
                   <div
                     onClick={() => props.close()}
-                    className="dark:bg-brandLightOpacity10 hover:bg-brandLightOpacity50 bg-brandLightOpacity30 hover:dark:bg-brandLightOpacity20  h-[40px] w-[40px] rounded-full absolute top-3 right-3 flex justify-center items-center content-center"
+                    className="dark:bg-brandLightOpacity10 cursor-pointer hover:bg-brandLightOpacity50 bg-brandLightOpacity30 hover:dark:bg-brandLightOpacity20  h-[40px] w-[40px] rounded-full absolute top-3 right-3 flex justify-center items-center content-center"
                   >
                     <Image
                       className="brightness-0 dark:brightness-100"

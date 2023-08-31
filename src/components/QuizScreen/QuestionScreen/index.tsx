@@ -76,12 +76,12 @@ const QuestionScreen = (props: any) => {
                     />
                     <div
                       onClick={() => props.close()}
-                      className="bg-brandLightOpacity10 hover:bg-brandLightOpacity20  h-[40px] w-[40px] rounded-full absolute top-2 right-2 flex justify-center items-center content-center"
+                      className="bg-brandLightOpacity10 cursor-pointer hover:bg-brandLightOpacity20  h-[40px] w-[40px] rounded-full absolute top-2 right-2 flex justify-center items-center content-center"
                     >
                       <Image src={Close} alt="Close" />
                     </div>
                   </div>
-                  <InviteFriendSection />
+                  <InviteFriendSection title={"Invite Friends"}/>
                   <div className="my-[12px] relative z-[-1]">
                     <CountDown title={"Time Left"} />
                   </div>
@@ -105,11 +105,11 @@ const QuestionScreen = (props: any) => {
                         <div
                           key={index}
                           onClick={() => onClickSelectOption(index + 1)}
-                          className={`min-w-fit mx-5   mb-3  mw-sm:mb-2 mw-sm:mx-5 flex flex-row items-center justify-center  border  hover:border-brandDark2 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] ${
+                          className={`min-w-fit mx-[20px]   mb-3  mw-sm:mb-2 mw-sm:mx-[20px] flex flex-row items-center justify-center  border  hover:border-brandDark2 hover:dark:border-brand hover:dark:shadow-[0_0_8px_0_#ed4e50] ${
                             index + 1 == optionNumber
                               ? "bg-arrowicon dark:bg-[#141313] border-brandDark2  dark:border-brand"
                               : "dark:border-brandLightOpacity10 border-brandLightOpacity100  dark:bg-brandLightOpacity5"
-                          }   rounded h-11`}
+                          }   rounded h-[41px]`}
                         >
                           <p
                             className="pr-[0%] pl-[16px] font-bold dark:text-brandLightOpacity100

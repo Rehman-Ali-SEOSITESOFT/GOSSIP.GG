@@ -13,7 +13,7 @@ import Line from "../../../assets/images/general/Line.png";
 import DarkLine from "../../../assets/images/general/dark-line.png";
 import { useTheme } from "next-themes";
 
-const InviteFriendSection = () => {
+const InviteFriendSection = (props) => {
   const { theme } = useTheme();
   const [isDarkTheme, setIsDarkTheme] = useState<string>("");
   useEffect(() => {
@@ -66,7 +66,7 @@ const InviteFriendSection = () => {
       <Menu as="div">
         <Menu.Button className="cursor-pointer">
           <span className=" mr-[16px] mt-[16px]  text-brandDark1 dark:text-brandLightOpacity70 border-b-[1px] border-b-brandDark1 dark:border-b-brandLightOpacity70 leading-none min-w-min montserratfont text-[12px] font-medium focus:outline-[0]">
-            Invite Friends
+            {props.title}
           </span>
 
           <Transition
