@@ -12,7 +12,7 @@ import Faqs from "@/components/Rewards/Faqs/Faqs";
 import style from "./Rewards.module.css";
 import CountDownTimer from "@/components/Rewards/CountDownTimer/CountDownTimer";
 import { useTheme } from "next-themes";
-const page = () => {
+const Rewards = () => {
   const { theme } = useTheme();
 
   const [isDarkTheme, setIsDarkTheme] = useState<string>("");
@@ -92,4 +92,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Rewards;
