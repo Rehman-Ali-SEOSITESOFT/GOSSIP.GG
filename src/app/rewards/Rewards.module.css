@@ -1,5 +1,5 @@
 .quiz_timing_wrapper::-webkit-scrollbar-track {
-  background: #363233;
+  /* background: #363233; */
   border-radius: 8px;
 }
 .quiz_timing_wrapper::-webkit-scrollbar-thumb {
