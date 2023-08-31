@@ -45,7 +45,7 @@ const Rewards = () => {
                   </p>
                 </div>
                 <div className="ml-[15px]">
-                  <p className="text-[12px] font-semibold	dark:text-[#fff] montserratfont mw-sm4:text-[12px]">
+                  <p className="text-[12px] font-semibold	dark:text-[#E5E5E5] montserratfont mw-sm4:text-[12px]">
                     Play everyday between 5 p.m. and 8 p.m. and stand a chance
                     to win the latest Samsung phone and other exciting prizes!
                   </p>

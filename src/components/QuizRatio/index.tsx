@@ -135,7 +135,7 @@ const QuizRatio = () => {
               {open ? (
                 <Completionist />
               ) : (
-                <Countdown date={Date.now() + 10000} renderer={renderer} />
+                <Countdown date={Date.now() + 40000000} renderer={renderer} />
               )}
             </h4>
           </div>
