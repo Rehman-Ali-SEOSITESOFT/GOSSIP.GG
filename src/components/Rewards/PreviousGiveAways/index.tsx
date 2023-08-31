@@ -5,7 +5,6 @@ import give2 from "../../../assets/rewards/give2.png";
 import give3 from "../../../assets/rewards/give3.png";
 import give4 from "../../../assets/rewards/give4.png";
 import AbsPreiousGiveAway from "../AbsPreviousGiveAway/AbsPreiousGiveAway";
-import ViewMore from "@/components/Gamings/ViewMore/ViewMore";
 const PreviousGiveAways = () => {
   interface List {
     iamges: any;
@@ -75,7 +74,6 @@ const PreviousGiveAways = () => {
                   <i className="fa-solid fa-angle-down"></i>
                 </span>{" "}
               </p>
-              {/* <ViewMore /> */}
             </div>
           </div>
         </div>

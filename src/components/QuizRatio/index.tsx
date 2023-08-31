@@ -20,6 +20,7 @@ import OrderConfirm from "../QuizScreen/OrderConfirm";
 import OrderSummary from "../QuizScreen/OrderSummary";
 import PersonalInformation from "../QuizScreen/PersonalInformation";
 import Countdown from "react-countdown";
+import NewIntroScreen from "../QuizScreen/NewIntroScreen";
 
 const QuizRatio = () => {
   const [open, setOpen] = useState<Boolean>(false);
@@ -81,7 +82,7 @@ const QuizRatio = () => {
 
   return (
     <>
-      <div className="quiz-ration fixed right-[15px] bottom-[100px] z-50	 w-full max-w-[130px] ">
+      <div className="quiz-ration fixed right-[15px] bottom-[100px]	 w-full max-w-[130px] ">
         {/*   QUIZED BOX */}
 
         <div
@@ -135,7 +136,7 @@ const QuizRatio = () => {
               {open ? (
                 <Completionist />
               ) : (
-                <Countdown date={Date.now() + 10000} renderer={renderer} />
+                <Countdown date={Date.now() + 40000000} renderer={renderer} />
               )}
             </h4>
           </div>
@@ -155,10 +156,11 @@ const QuizRatio = () => {
           </div>
         </div>
       </div>
-      {/* <IntroScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
+      <IntroScreen open={openIntro} close={hanldeOpenedQuiz} />
+      {/* <NewIntroScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
 
       {/* <WinnerScreenTwo open={openIntro} close={hanldeOpenedQuiz} /> */}
-      {/* <AddScreen open={open} close={onClickPlay} isSeeResult={true} /> */}
+      <AddScreen open={open} close={onClickPlay} isSeeResult={true} />
       {/* <AddScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <QuestionScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <AnswerSubmitScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
@@ -171,7 +173,7 @@ const QuizRatio = () => {
       {/* <QuizEnded open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <PrizeOfTheDay open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <OrderConfirm open={openIntro} close={hanldeOpenedQuiz} /> */}
-      <OrderSummary open={openIntro} close={hanldeOpenedQuiz} />
+      {/* <OrderSummary open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <PersonalInformation open={openIntro} close={hanldeOpenedQuiz} /> */}
     </>
   );
