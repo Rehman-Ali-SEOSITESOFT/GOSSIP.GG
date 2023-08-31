@@ -1,6 +1,6 @@
 "use client";
 import Trending from "@/components/Trending/Index";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import image1 from "../../assets/rewards/one.png";
 import image2 from "../../assets/rewards/two.png";
 import image3 from "../../assets/rewards/three.png";
@@ -14,6 +14,11 @@ import CountDownTimer from "@/components/Rewards/CountDownTimer/CountDownTimer";
 import { useTheme } from "next-themes";
 const page = () => {
   const { theme } = useTheme();
+
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
+  useEffect(() => {
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   return (
     <>
       <section className="rewards_page_mian_wrapper">
@@ -21,7 +26,7 @@ const page = () => {
           <div className="2xl-container">
             <div
               className={`${
-                theme === "dark"
+                isDarkTheme === "dark"
                   ? style.quiz_timing_wrapper
                   : style.light_quiz_timing_wrapper
               } max-w-[100%] overflow-x-auto `}
