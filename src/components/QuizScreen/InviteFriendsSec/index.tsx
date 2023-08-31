@@ -108,7 +108,7 @@ const InviteFriendSection = () => {
                   </div>
                   <div className="mt-[8px] mb-[10px] flex flex-row items-center justify-around ">
                     <div className="flex flex-col items-center ">
-                      <div className="flex items-center justify-center h-[29px] w-[29px] rounded-full dark:bg-brandLightOpacity10">
+                      <div className="flex items-center justify-center h-[29px] w-[29px] rounded-full bg-brandDark1 dark:bg-brandLightOpacity10">
                         <Image src={Twitter} alt="twitter" />
                       </div>
                       <p className="text-brandDark2 dark:text-brandLightOpacity70 montserratfont  text-[11px] font-medium">
@@ -116,7 +116,7 @@ const InviteFriendSection = () => {
                       </p>
                     </div>
                     <div className="flex flex-col items-center ">
-                      <div className="flex items-center justify-center h-[29px] w-[29px] rounded-full dark:bg-brandLightOpacity10">
+                      <div className="flex items-center justify-center h-[29px] w-[29px] rounded-full bg-brandDark1 dark:bg-brandLightOpacity10">
                         <Image src={Whatsapp} alt="whatsapp" />
                       </div>
                       <p className="text-brandDark2 dark:text-brandLightOpacity70 montserratfont  text-[11px] font-medium">
@@ -124,7 +124,7 @@ const InviteFriendSection = () => {
                       </p>
                     </div>
                     <div className="flex flex-col items-center ">
-                      <div className="flex items-center justify-center h-[29px] w-[29px] rounded-full dark:bg-brandLightOpacity10">
+                      <div className="flex items-center justify-center h-[29px] w-[29px] rounded-full bg-brandDark1 dark:bg-brandLightOpacity10">
                         <Image src={Email} alt="email" />
                       </div>
                       <p className="text-brandDark2 dark:text-brandLightOpacity70 montserratfont  text-[11px] font-medium">
@@ -132,7 +132,7 @@ const InviteFriendSection = () => {
                       </p>
                     </div>
                     <div className="flex flex-col items-center ">
-                      <div className="flex items-center justify-center h-[29px] w-[29px] rounded-full dark:bg-brandLightOpacity10">
+                      <div className="flex items-center justify-center h-[29px] w-[29px] rounded-full bg-brandDark1 dark:bg-brandLightOpacity10">
                         <Image src={Discord} alt="twitter" />
                       </div>
                       <p className="text-brandDark2 dark:text-brandLightOpacity70 montserratfont  text-[11px] font-medium">
