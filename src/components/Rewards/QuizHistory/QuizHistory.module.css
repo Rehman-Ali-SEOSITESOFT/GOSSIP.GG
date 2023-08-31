@@ -63,14 +63,7 @@
   box-shadow: none !important;
   outline: 0 !important;
 }
-.selectBOOX select option {
-  margin-top: 4px !important;
-  padding: 24px;
-}
-.selectBOOX select option {
-  background-color: red;
-  margin: 24px 20px !important;
-}
+
 .rdrDefinedRangesWrapper {
   display: none !important;
 }

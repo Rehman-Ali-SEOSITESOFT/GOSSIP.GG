@@ -12,7 +12,7 @@ import "react-date-range/dist/theme/default.css";
 import downarrow from "../../../assets/esports/down-arrow.png";
 import LightArrow from "../../../assets/images/filters/lightdown.png";
 import Image from "next/image";
-// import { Menu, Transition } from "@headlessui/react";
+
 import { useTheme } from "next-themes";
 const QuizHistory = () => {
   const { theme } = useTheme();
@@ -24,25 +24,15 @@ const QuizHistory = () => {
     "Last 10 Days",
     "Custom",
   ]);
-  const [selectedValue, setSelectedValue] = useState<string>();
+  const [selectedValue, setSelectedValue] = useState<string>("Please select");
   const [opendropDown, setOpenDropdown] = useState<Boolean>(false);
-  interface EventList {
-    event_title: string;
-    date: string;
-    country: string;
-    prize: string;
-  }
+
   interface Sliders {
     date: string;
     heading: string;
     winnername: string;
   }
-  interface DateItems {
-    date: boolean;
-  }
-  const [selectBox, setSelectBox] = useState({
-    fordate: "",
-  });
+
   const [list, setList] = useState<Sliders[]>([
     {
       date: "27 july",
@@ -74,80 +64,56 @@ const QuizHistory = () => {
   const [open, setOpen] = useState<boolean | null>(false);
   const [isDarkTheme, setIsDarkTheme] = useState<string>("");
   const [value, setValue] = useState(new Date());
-  const [dateRange, setDateRange] = useState({
-    startDate: new Date(),
-    endDate: new Date(),
-    key: "selection",
-  });
 
-  const handleSelect = (ranges: any) => {
-    setDateRange(ranges.selection);
-  };
-  const onClickOpenModal = () => {
-    setOpen(!open);
-  };
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-  const _handleSelectEvent = (item: any) => {
-    console.log(item.target.value);
-    setSelectBox({
-      ...selectBox,
-      [item.target.name]: item.target.value,
-    });
-  };
   const [state, setState] = useState([
     {
       startDate: new Date(),
-      endDate: null,
+      endDate: new Date(),
       key: "selection",
     },
   ]);
   const _handleClose = () => {
     setSelectedValue("");
+    setOpenDateModal(false);
   };
-  function handleChange(value: any) {
-    setValue(value);
-  }
 
-  const _handleCustom = () => {
-    setSelectBox({
-      fordate: "custom",
-    });
-  };
-  const handleClickOutside = (e: any) => {
-    if (dropDownRef.current !== null) {
-      if (!dropDownRef.current.contains(e.target)) {
-        setOpenDropdown(false);
-      }
-    }
-  };
   const onClickOpen = () => {
     setOpenDropdown(!opendropDown);
   };
 
   const onSelectValue = (e: any) => {
     setOpenDropdown(!opendropDown);
-
     setSelectedValue(e);
+    if (e === "Custom") {
+      setOpenDateModal(true);
+    }
+  };
 
-    console.log("value", e);
-  };
+  const [openDateModal, setOpenDateModal] = useState<Boolean>(false);
+
   const _handleSave = () => {
-    setOpenDropdown(false);
     setState(state);
-    console.log(state, "date");
-    setSelectedValue("Custom");
+    setSelectedValue(
+      state[0].startDate.getDate() +
+        "-" +
+        state[0].startDate.getMonth() +
+        "-" +
+        state[0].startDate.getFullYear() +
+        " To " +
+        state[0].endDate.getDate() +
+        "-" +
+        state[0].endDate.getMonth() +
+        "-" +
+        state[0].endDate.getFullYear()
+    );
+    setOpenDateModal(false);
+    console.log(state);
   };
+
   useEffect(() => {
     setIsDarkTheme(theme === "dark" ? "dark" : "light");
   }, [theme]);
-  console.log(selectedValue, "selected value");
+
   return (
     <>
       <section className="quiz_history_wrapper">
@@ -247,7 +213,7 @@ const QuizHistory = () => {
                 <h4 className="mw-lg:block text-[14px] montserratfont font-normal leading-normal text-brandDark2 dark:text-[#E5E5E5] mb-[4px] mw-md:text-[10px]">
                   Timeframe
                 </h4>
-                {selectedValue === "Custom" ? (
+                {openDateModal ? (
                   <>
                     <div className="flex flex-col">
                       <DateRange
