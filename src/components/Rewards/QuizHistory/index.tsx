@@ -138,9 +138,16 @@ const QuizHistory = () => {
 
     console.log("value", e);
   };
+  const _handleSave = () => {
+    setOpenDropdown(false);
+    setState(state);
+    console.log(state, "date");
+    setSelectedValue("Custom");
+  };
   useEffect(() => {
     setIsDarkTheme(theme === "dark" ? "dark" : "light");
   }, [theme]);
+  console.log(selectedValue, "selected value");
   return (
     <>
       <section className="quiz_history_wrapper">
@@ -249,12 +256,20 @@ const QuizHistory = () => {
                         moveRangeOnFirstSelection={false}
                         ranges={state}
                       />
-                      <button
-                        onClick={_handleClose}
-                        className="border-[1px] border-brandLightOpacity50 montserratfont text-[16px] bg-[#FFFFFF]   py-[8px] text-[#000] text-semibold"
-                      >
-                        Cancel
-                      </button>
+                      <div className="flex">
+                        <button
+                          onClick={_handleSave}
+                          className="border-[1px] border-brandLightOpacity50 montserratfont text-[16px] bg-[#FFFFFF]   py-[8px] text-[#000] text-semibold w-[50%]"
+                        >
+                          Ok
+                        </button>
+                        <button
+                          onClick={_handleClose}
+                          className="border-[1px] border-brandLightOpacity50 montserratfont text-[16px] bg-[#FFFFFF]   py-[8px] text-[#000] text-semibold w-[50%]"
+                        >
+                          Cancel
+                        </button>
+                      </div>
                     </div>
                   </>
                 ) : (
