@@ -208,7 +208,7 @@ const QuizHistory = () => {
               </div>
 
               <div
-                className={`absolute top-[-22px] right-[0px] mw-lg:left-[0px] mw-lg:top-[50px] z-[4] ${style.selectBOOX}`}
+                className={`absolute top-[-22px] right-[0px] mw-lg:left-[0px] mw-lg:top-[50px] mw-md:z-[4] ${style.selectBOOX}`}
               >
                 <h4 className="mw-lg:block text-[14px] montserratfont font-normal leading-normal text-brandDark2 dark:text-[#E5E5E5] mb-[4px] mw-md:text-[10px]">
                   Timeframe
@@ -241,7 +241,7 @@ const QuizHistory = () => {
                 ) : (
                   <div
                     ref={dropDownRef}
-                    className=" relative mw-12:w-[40%]  mw-9:w-[48%] z-[4]"
+                    className=" relative mw-12:w-[40%]  mw-9:w-[48%] mw-md:z-[4]"
                   >
                     <div
                       onClick={() => onClickOpen()}
