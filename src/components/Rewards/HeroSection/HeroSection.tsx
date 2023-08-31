@@ -87,7 +87,7 @@ const HeroSection = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="bg-[#141313] rounded-b-[4px]  pl-[24px] pb-[13px] flex  pr-[18px] mw-sm4:pl-[20px] mw-sm3:pl-[16px]">
+                    <div className="bg-[#141313] rounded-b-[4px]  pl-[24px] pb-[13px] flex  pr-[18px] mw-sm4:pl-[20px] mw-sm3:pl-[16px] mw-sm3:pr-[0px]">
                       <div className="">
                         <div className="flex items-center">
                           <Image
@@ -129,7 +129,7 @@ const HeroSection = () => {
                             />
                           </div>
                           <div className="h-[34px]">
-                            <p className="mr-[12px] h-[40px] w-[40px] bg-brandLightOpacity10 rounded-[50%] flex items-center justify-center text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
+                            <p className="mr-[12px] h-[40px] w-[40px] bg-brandLightOpacity10 rounded-[50%] flex items-center justify-center text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px] mw-md:w-[30px] mw-md:h-[30px]">
                               W
                             </p>
                           </div>
@@ -144,7 +144,7 @@ const HeroSection = () => {
                             </p>
                           </div>
                           <div className="h-[34px]">
-                            <p className="mr-[20px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
+                            <p className="mr-[20px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
                               Sa
                             </p>
                           </div>
@@ -158,7 +158,7 @@ const HeroSection = () => {
                     </div>
                   </div>
                   <div className="w-full mw-lg:text-center m-auto">
-                    <p className="hidden w-[400px] ml-auto mr-auto  mw-lg:block montserratfont text-[12px] leading-normal font-medium	text-brandLightOpacity70 mt-[48px] mw-md:mt-[31px] text-start pl-[55px] mw-sm5:pl-[55px]">
+                    <p className="hidden w-[400px] ml-auto mr-auto  mw-lg:block montserratfont text-[12px] leading-normal font-medium	dark:text-brandLightOpacity70 mt-[48px] mw-md:mt-[31px] text-start pl-[55px] mw-sm5:pl-[45px] mw-sm3:pl-[32px]">
                       Advertisement
                     </p>
                     <Image
