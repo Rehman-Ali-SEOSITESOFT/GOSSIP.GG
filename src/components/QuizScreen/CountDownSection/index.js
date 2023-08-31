@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./countdown.style.css";
 const CountDown = (props) => {
   const [second, setSecond] = useState(59);
   const [mintues, setMintues] = useState(2);
@@ -26,7 +25,6 @@ const CountDown = (props) => {
 
         <div className="flex flex-col items-center">
           <h3 className="countdown text-lg font-medium montserratfont leading-[22px] text-brandDark2 dark:text-brand ">
-            {/* <span className="inline-block" style={{ "--value": days }} /> */}
             <span
               className="inline-block pr-[2px]"
               style={{ "--value": hour }}
