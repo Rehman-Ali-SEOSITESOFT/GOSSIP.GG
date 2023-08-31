@@ -87,7 +87,7 @@ const HeroSection = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="bg-[#141313] rounded-b-[4px]  pl-[24px] pb-[13px] flex  pr-[18px] mw-sm4:pl-[20px] mw-sm3:pl-[16px] mw-sm3:pr-[0px]">
+                    <div className="bg-[#141313] rounded-b-[4px]  pl-[24px] pb-[13px] flex  pr-[18px] mw-sm4:pl-[20px] mw-sm3:pl-[16px] mw-sm4:pr-[0px]">
                       <div className="">
                         <div className="flex items-center">
                           <Image
