@@ -191,7 +191,8 @@ const WinnerScreenTwo = (props: any) => {
                     <div className="congrulation relative">
                       <div className="absolute top-[-30px] left-0 right-0  z-10 congrulation-curved">
                         <ReactCurvedText
-                          width={372}
+                          width={"100%"}
+                          maxWidth={372}
                           height={80}
                           cx={185}
                           cy={113}
