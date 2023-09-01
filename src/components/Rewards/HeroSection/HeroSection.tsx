@@ -59,7 +59,7 @@ const HeroSection = () => {
                               24
                             </h4>
                           </div>
-                          <p className="interfonts text-[10px] font-normal	text-[#E5E5E5] uppercase	">
+                          <p className="montserratfont text-[10px] font-normal	text-[#E5E5E5] uppercase	">
                             Quizzes Played
                           </p>
                         </div>
@@ -70,7 +70,7 @@ const HeroSection = () => {
                               12
                             </h4>
                           </div>
-                          <p className="interfonts text-[10px] font-normal	text-[#E5E5E5] uppercase	">
+                          <p className="montserratfont text-[10px] font-normal	text-[#E5E5E5] uppercase	">
                             Answered Correctly
                           </p>
                         </div>
@@ -81,7 +81,7 @@ const HeroSection = () => {
                               02
                             </h4>
                           </div>
-                          <p className="interfonts text-[10px] font-normal	text-[#E5E5E5] uppercase	text-center">
+                          <p className="montserratfont text-[10px] font-normal	text-[#E5E5E5] uppercase	text-center">
                             Prize Won
                           </p>
                         </div>
