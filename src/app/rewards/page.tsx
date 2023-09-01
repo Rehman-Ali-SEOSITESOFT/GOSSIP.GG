@@ -32,7 +32,7 @@ const Rewards = () => {
               } max-w-[100%] overflow-x-auto `}
             >
               <div
-                className={`${style.scrolling_} bg-brandLightOpacity10 rounded-[20px] pb-[9px] pt-[9px] pl-[22px] pr-[22px]  mt-[7px] mb-[10px] flex w-[1280px] justify-start flex-nowrap justify-between items-center mw-md:mt-[10px] border border-brandLightOpacity50 dark:border-none`}
+                className={`${style.scrolling_} bg-grayCard rounded-[20px] pb-[9px] pt-[9px] pl-[22px] pr-[22px]  mt-[7px] mb-[10px] flex w-[1280px] justify-start flex-nowrap justify-between items-center mw-md:mt-[10px] border border-brandLightOpacity50 dark:border-none`}
               >
                 <div>
                   <p className="text-brand text-sm font-bold tracking-[1.4px] uppercase montserratfont mw-sm4:text-[12px]">

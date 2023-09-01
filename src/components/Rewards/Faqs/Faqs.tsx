@@ -28,7 +28,7 @@ const Faqs = () => {
         <div className="global-section-width ">
           <div className="2xl:container">
             <div className="mb-[16px]">
-              <h4 className="montserratfont text-[24px] leading-normal font-bold dark:text-[#ED4E50] mw-md:text-[20px] mw-sm4:text-[16px]">
+              <h4 className="montserratfont text-[18px] leading-normal font-bold dark:text-[#ED4E50] mw-md:text-[20px] mw-sm4:text-[16px]">
                 FAQs
               </h4>
             </div>
