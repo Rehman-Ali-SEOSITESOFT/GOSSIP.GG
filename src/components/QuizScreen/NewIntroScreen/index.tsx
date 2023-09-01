@@ -10,6 +10,10 @@ import AddScreen from "../AdScreen";
 const NewIntroScreen = (props) => {
   const cancelButtonRef = useRef(null);
 
+  const [addTitleClass, setAddTitleClass] = useState(false);
+  setTimeout(() => {
+    setAddTitleClass(true);
+  }, 0);
   return (
     <>
       <Transition.Root show={props.open} as={Fragment}>
@@ -17,7 +21,7 @@ const NewIntroScreen = (props) => {
           as="div"
           className="relative z-10"
           initialFocus={cancelButtonRef}
-          onClose={() => console.log("working")}
+          onClose={() => props.close()}
         >
           <Transition.Child
             as={Fragment}
@@ -41,8 +45,8 @@ const NewIntroScreen = (props) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="fixed inset-[70px] w-[375px] left-auto mw-lg:inset-[30px] mw-sm:inset-0  mw-lg:left-auto  max-h-[812px] mw-sm:w-full  m-auto   mw-sm:max-h-full  bg-bodycolor dark:bg-brandDark3 left-auto  overflow-x-hidden   scrollbar-thin  scrollbar-thumb-choosebox   scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-[transparent] scrollbar-track-[transparent]   ">
-                <div className="min-h-[812px] w-[375px]">
+              <Dialog.Panel className="fixed inset-[70px] w-[375px] left-auto mw-lg:inset-[30px] mw-lg:left-auto mw-sm5:inset-[10px]  mw-sm3:w-[340px]  max-h-[812px]  m-auto   mw-sm:max-h-full  bg-bodycolor dark:bg-brandDark3 left-auto  overflow-x-hidden   scrollbar-thin  scrollbar-thumb-choosebox   scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-[transparent] scrollbar-track-[transparent]   ">
+                <div className="min-h-[812px] w-[375px] mw-sm3:w-[340px]">
                   {/* top   */}
                   {/* <div className="flex flex-col justify-between h-full ">
                   <div className="flex justify-center items-center  pt-[60px]">
@@ -92,15 +96,22 @@ const NewIntroScreen = (props) => {
                     </div>
                   </div>
                 </div> */}
-                  <div className="flex justify-center items-center  pt-[100px]">
-                    <div className="ml-[-40px]  logoed">
+                  <div className="flex justify-center items-center w-[243px] m-auto pt-[100px]">
+                    <div className="logoed ml-[-20px]">
                       <Image
                         src={logo}
                         alt="lgo"
-                        className="w-[106px] h-[106px]"
+                        className={`min-w-[106px] h-[106px] ${
+                          addTitleClass ? "logohide-show" : "logohide"
+                        }`}
                       />
                     </div>
-                    <div className="ml-[-15px] animate__animated animate__bounceInRight">
+                    {/* <div className="ml-[-15px] animate__animated animate__bounceInRight"> */}
+                    <div
+                      className={`ml-[-15px]  tile-animtion ${
+                        addTitleClass ? "add new-animtion" : ""
+                      }`}
+                    >
                       <h4 className="text-brand capitalize font-bold text-[50px] leading-[45px] montserratfont">
                         gossip
                       </h4>
@@ -109,16 +120,20 @@ const NewIntroScreen = (props) => {
                       </p>
                     </div>
                   </div>
-                  <div className="pt-[59px] pb-[70px] pl-[81px] pr-[85px]  text-rotated-left">
+                  <div className="pt-[59px] pb-[50px] pl-[81px] pr-[85px]  text-rotated-left">
                     <p className="dark:text-brandLightOpacity100 text-center montserratfont text-base leading-[24px] font-medium  ">
                       Answer one question and this could be yours!
                     </p>
                   </div>
-                  <div className="relative   h-[448px] ">
-                    {/* <span className="block  h-full">
+                  <div
+                    className={`relative   h-[448px] ${
+                      addTitleClass ? "" : "img-bottom"
+                    }`}
+                  >
+                    <span className="block absolute inset-0  h-full">
                       <div className="absolute left-0 right-0 bottom-[130px] z-10">
-                        <div className="bg-brand  max-w-[177px] w-full h-[42px] flex items-center justify-between rounded-3xl m-auto pl-[27px] pr-[15px]	into-screen-btn hover:bg-[#ec5d5f] cursor-pointer">
-                          <span className="inline-block montserratfont text-[#fff]  text-base font-semibold">
+                        <div className="bg-brand  max-w-[177px] w-full h-[42px] flex items-center justify-between rounded-3xl m-auto pl-[27px] pr-[15px]	into-screen-btn hover:bg-[#ec5d5f] cursor-pointer button-animtion">
+                          <span className="inline-block montserratfont text-[#fff]  text-base font-semibold ">
                             Play Now
                           </span>
                           <span className="inline-block  ">
@@ -133,10 +148,14 @@ const NewIntroScreen = (props) => {
                       <Image
                         src={background}
                         alt="lgo"
-                        className="h-full  rotad-left w-full"
+                        className="h-full  rotad-left w-full object-cover"
                       />
-                    </span> */}
-                    <div className="">
+                    </span>
+                    <div
+                      className={`image-bottom-to-top ${
+                        addTitleClass ? "stoped-image" : ""
+                      }`}
+                    >
                       <Image src={bottomlogo} alt="lgo" />
                     </div>
                   </div>

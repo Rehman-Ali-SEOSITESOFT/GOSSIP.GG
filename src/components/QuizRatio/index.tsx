@@ -156,8 +156,8 @@ const QuizRatio = () => {
           </div>
         </div>
       </div>
-      <IntroScreen open={openIntro} close={hanldeOpenedQuiz} />
-      {/* <NewIntroScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
+      {/* <IntroScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
+      <NewIntroScreen open={openIntro} close={hanldeOpenedQuiz} />
 
       {/* <WinnerScreenTwo open={openIntro} close={hanldeOpenedQuiz} /> */}
       <AddScreen open={open} close={onClickPlay} isSeeResult={true} />
