@@ -7,13 +7,19 @@ import doublearrow from "../../../assets/quiz-model/duble-arrow.png";
 import Image from "next/image";
 import AddScreen from "../AdScreen";
 
-const NewIntroScreen = (props) => {
+const NewIntroScreen = (props: any) => {
   const cancelButtonRef = useRef(null);
 
   const [addTitleClass, setAddTitleClass] = useState(false);
+  const [open, setOpen] = useState<Boolean>(false);
+
   setTimeout(() => {
     setAddTitleClass(true);
   }, 0);
+  const onClickPlay = () => {
+    props.close();
+    setOpen(!open);
+  };
   return (
     <>
       <Transition.Root show={props.open} as={Fragment}>
@@ -132,7 +138,10 @@ const NewIntroScreen = (props) => {
                   >
                     <span className="block absolute inset-0  h-full">
                       <div className="absolute left-0 right-0 bottom-[130px] z-10">
-                        <div className="bg-brand  max-w-[177px] w-full h-[42px] flex items-center justify-between rounded-3xl m-auto pl-[27px] pr-[15px]	into-screen-btn hover:bg-[#ec5d5f] cursor-pointer button-animtion">
+                        <div
+                          className="bg-brand  max-w-[177px] w-full h-[42px] flex items-center justify-between rounded-3xl m-auto pl-[27px] pr-[15px]	into-screen-btn hover:bg-[#ec5d5f] cursor-pointer button-animtion"
+                          onClick={() => onClickPlay()}
+                        >
                           <span className="inline-block montserratfont text-[#fff]  text-base font-semibold ">
                             Play Now
                           </span>
@@ -165,6 +174,7 @@ const NewIntroScreen = (props) => {
           </div>
         </Dialog>
       </Transition.Root>
+      <AddScreen open={open} close={() => setOpen(!open)} isSeeResult={false} />
     </>
   );
 };

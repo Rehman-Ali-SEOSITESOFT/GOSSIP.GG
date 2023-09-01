@@ -172,7 +172,7 @@ const WinnerScreenTwo = (props: any) => {
                     animtedHide ? "bg-animtedd-true" : "bg-animtedd-flase"
                   }`}
                 >
-                  <div className="congrulation-bg h-full flex flex-col justify-between">
+                  <div className="congrulation-bg h-full flex flex-col justify-between mw-sm:items-center">
                     <div className="co-box min-h-[270px]">
                       <div className="flex justify-center items-center  pt-[60px]">
                         <div className="ml-[-40px]  ">
@@ -189,7 +189,7 @@ const WinnerScreenTwo = (props: any) => {
                       </div>
                     </div>
                     <div className="congrulation relative">
-                      <div className="absolute top-[-30px] left-0 right-0 z-10 congrulation-curved">
+                      <div className="absolute top-[-30px] left-0 right-0  z-10 congrulation-curved">
                         <ReactCurvedText
                           width={372}
                           height={80}
@@ -207,6 +207,7 @@ const WinnerScreenTwo = (props: any) => {
                               letterSpacing: 4,
                               fontWeight: 600,
                               textShadow: "0 0 12px #f1ad2a",
+                              margin: "auto",
                             },
                           }}
                           textPathProps={{ fill: "#FFFFFF" }}
