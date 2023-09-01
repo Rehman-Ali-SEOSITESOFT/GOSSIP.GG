@@ -87,74 +87,82 @@ const HeroSection = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="bg-[#141313] rounded-b-[4px]  pl-[24px] pb-[13px] flex  pr-[18px] mw-sm4:pl-[20px] mw-sm3:pl-[16px] mw-sm4:pr-[0px]">
-                      <div className="">
-                        <div className="flex items-center">
-                          <Image
-                            src={fire2}
-                            alt=""
-                            className="w-[33px] h-[40px] ml-[-10px]"
-                          />
-                          <h4 className="montserratfont text-[#ED4E50] text-[40px] font-semibold uppercase leading-normal	pl-[6px] mw-12:text-[36px] mw-sm4:text-[32px]">
-                            02
-                          </h4>
-                        </div>
-                        <h5 className="interfonts text-[14.4px] capitalize font-medium	leading-normal text-[#E5E5E5] ">
-                          Day Streak
-                        </h5>
-                        <p className="montserratfont text-[10px] leading-normal font-normal text-brandLightOpacity70 mt-[4px]">
-                          Last played yesterday
-                        </p>
-                      </div>
-                      <div className="pl-[60px] mx-14:pl-[32px] mx-13:pl-[24px] mw-sm4:pl-[8px] pt-[25px]">
-                        <div className="flex items-center">
-                          <div className="h-[34px] ">
-                            <p className="mr-[22px] interfonts text-[22px] font-bold capitalize text-[#ED4E50] leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
-                              M
-                            </p>
+                    <div className="bg-[#141313] rounded-b-[4px] pl-[24px] pb-[13px] pr-[18px] mw-sm4:pl-[20px] mw-sm3:pl-[16px] mw-sm4:pr-[0px]">
+                      <div className="flex    ">
+                        <div className="">
+                          <div className="flex items-center">
                             <Image
-                              src={tick}
+                              src={fire2}
                               alt=""
-                              className="mw-sm4:w-[16px] mw-sm4:h-[16px]"
+                              className="w-[33px] h-[40px] ml-[-10px]"
                             />
+                            <h4 className="montserratfont text-[#ED4E50] text-[40px] font-semibold uppercase leading-normal	pl-[6px] mw-12:text-[36px] mw-sm4:text-[32px]">
+                              02
+                            </h4>
                           </div>
-                          <div className="h-[34px]">
-                            <p className="mr-[12px] text-[22px] font-bold capitalize text-[#ED4E50] leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
-                              T
-                            </p>
-                            <Image
-                              src={tick}
-                              alt=""
-                              className="mw-sm4:w-[16px] mw-sm4:h-[16px]"
-                            />
-                          </div>
-                          <div className="h-[34px]">
-                            <p className="mr-[12px] h-[40px] w-[40px] bg-brandLightOpacity10 rounded-[50%] flex items-center justify-center text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px] mw-md:w-[30px] mw-md:h-[30px]">
-                              W
-                            </p>
-                          </div>
-                          <div className="h-[34px]">
-                            <p className="mr-[20px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
-                              Th
-                            </p>
-                          </div>
-                          <div className="h-[34px]">
-                            <p className="mr-[20px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
-                              F
-                            </p>
-                          </div>
-                          <div className="h-[34px]">
-                            <p className="mr-[20px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
-                              Sa
-                            </p>
-                          </div>
-                          <div className="h-[34px]">
-                            <p className="mr-[20px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
-                              Su
-                            </p>
+                          <h5 className="montserratfont text-[14.4px] capitalize font-medium	leading-normal text-[#E5E5E5] mw-sm5:text-[12px]">
+                            Day Streak
+                          </h5>
+                          <p className="montserratfont text-[10px] leading-normal font-normal text-brandLightOpacity70 mt-[4px] mw-sm5:hidden">
+                            Last played yesterday
+                          </p>
+                        </div>
+                        <div
+                          className="pl-[60px] mx-14:pl-[32px] mx-13:pl-[24px] mw-sm4:pl-[40px]
+                         mw-sm3:pl-[20px] pt-[25px]"
+                        >
+                          <div className="flex items-center">
+                            <div className="h-[34px] ">
+                              <p className="mr-[22px] montserratfont text-[22px] font-bold capitalize text-[#ED4E50] leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
+                                M
+                              </p>
+                              <Image
+                                src={tick}
+                                alt=""
+                                className="mw-sm4:w-[16px] mw-sm4:h-[16px]"
+                              />
+                            </div>
+                            <div className="h-[34px]">
+                              <p className="mr-[12px] montserratfont text-[22px] font-bold capitalize text-[#ED4E50] leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
+                                T
+                              </p>
+                              <Image
+                                src={tick}
+                                alt=""
+                                className="mw-sm4:w-[16px] mw-sm4:h-[16px]"
+                              />
+                            </div>
+                            <div className="h-[34px]">
+                              <p className="montserratfont mr-[12px] h-[40px] w-[40px] bg-brandLightOpacity10 rounded-[50%] flex items-center justify-center text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px] mw-md:w-[30px] mw-md:h-[30px]">
+                                W
+                              </p>
+                            </div>
+                            <div className="h-[34px]">
+                              <p className="montserratfont mr-[20px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
+                                Th
+                              </p>
+                            </div>
+                            <div className="h-[34px]">
+                              <p className="montserratfont mr-[20px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
+                                F
+                              </p>
+                            </div>
+                            <div className="h-[34px]">
+                              <p className="montserratfont mr-[20px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
+                                Sa
+                              </p>
+                            </div>
+                            <div className="h-[34px]">
+                              <p className="montserratfont mr-[20px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
+                                Su
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </div>
+                      <p className="montserratfont text-[10px] leading-normal font-normal text-brandLightOpacity70 mt-[4px] hidden mw-sm5:block">
+                        Last played yesterday
+                      </p>
                     </div>
                   </div>
                   <div className="w-full mw-lg:text-center m-auto">
