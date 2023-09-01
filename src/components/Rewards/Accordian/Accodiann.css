@@ -27,7 +27,23 @@
   right: -30px !important;
 }
 .mainwrapper_accordoian .slick-prev {
-  left: -30px;
+  left: -30px !important;
+}
+@media screen and (max-width: 1360px) {
+  .mainwrapper_accordoian .slick-next {
+    right: -40px !important;
+  }
+  .mainwrapper_accordoian .slick-prev {
+    left: -40px !important;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .mainwrapper_accordoian .slick-next {
+    right: -50px !important;
+  }
+  .mainwrapper_accordoian .slick-prev {
+    left: -50px !important;
+  }
 }
 @media screen and (max-width: 1024px) {
   .mainwrapper_accordoian .dark-arrow.slick-slider button.slick-prev,
