@@ -55,7 +55,7 @@ const Accordiannn = (props: any) => {
                       <p className="montserratfont text-brandDark2 dark:text-[#ED4250] text-[20px] mw-lg:text-[16px] mw-md:text-[14px] font-bold leading-normal">
                         {props.date}
                       </p>
-                      <div className="ml-[80px] mw-lg:ml-[0px] mw-lg:mt-[15px] mw-lg:hidden">
+                      <div className="ml-[26px] mw-lg:ml-[0px] mw-lg:mt-[15px] mw-lg:hidden">
                         <h4 className="montserratfont text-brandDark2 text-[16px] font-medium leading-[24px] dark:text-[#E5E5E5] mw-md:text-[14px]">
                           {props.heading}
                         </h4>
@@ -80,7 +80,7 @@ const Accordiannn = (props: any) => {
                     </h4>
                   </div>
                 </Disclosure.Button>
-                <Disclosure.Panel className="px-[30px] pt-4 pb-[51px] border-t-[1px] dark:border-brandLightOpacity10 flex  mw-lg:flex-col mw-md:px-[16px]">
+                <Disclosure.Panel className="px-[30px] pt-[18px] pb-[51px] border-t-[1px] dark:border-brandLightOpacity10 flex  mw-lg:flex-col mw-md:px-[16px]">
                   <div className=" w-6/12 mw-lg:w-full">
                     <div className="flex items-center">
                       <div className="flex relative">
@@ -96,7 +96,7 @@ const Accordiannn = (props: any) => {
                           className="absolute right-[-18px]"
                         />
                       </div>
-                      <p className="montserratfont text-[12px] font-normal leading-normal text-brandDark2 dark:text-brandLightOpacity90 ml-[30px]">
+                      <p className="montserratfont text-[12px] font-normal leading-normal text-brandDark2 dark:text-[#E5E5E5] ml-[30px]">
                         <span className="montserratfont text-[12px] font-semibold text-brandDark2  dark:text-[#ED4E50]">
                           133
                         </span>{" "}
@@ -135,6 +135,18 @@ const Accordiannn = (props: any) => {
                   </div>
                   <div className="w-6/12 mw-lg:w-full">
                     <div className="second_slider">
+                      <div>
+                        <div className="w-[50%]">
+                          <h4 className="montserratfont text-center font-medium leading-normal text-[16px] dark:text-[#ED4250] pb-[13px] mw-md:text-center">
+                            Lucky Winners
+                          </h4>
+                        </div>
+                        <div className="w-[50%]">
+                          <h4 className="montserratfont font-medium leading-normal text-[16px] dark:text-[#ED4250] pb-[13px] text-center">
+                            Pirze Won
+                          </h4>
+                        </div>
+                      </div>
                       <Slider
                         {...tools}
                         className={`${
@@ -146,10 +158,7 @@ const Accordiannn = (props: any) => {
                         <div className="hello mw-md:mt-[40px] mw-sm:mt-[16px]">
                           <div className="second flex justify-center mw-lg:flex-col">
                             <div className="first_ mw-lg:px-[80px] mw-sm4:px-[45px]">
-                              <h4 className="montserratfont text-center font-medium leading-normal text-[16px] dark:text-[#ED4250] pb-[13px] mw-md:text-center">
-                                Lucky Winners
-                              </h4>
-                              <div className="flex items-center bg-brandLightOpacity50 rounded px-[16px] py-[2px] mb-[6px]">
+                              <div className="flex items-center bg-brandLightOpacity50 rounded pl-[16px] py-[2px] mb-[6px] pr-[51px]">
                                 <Image src={luckywinner} alt="" />
                                 <p className="montserratfont text-[14px] leading-normal font-normal dark:text-[#E5E5E5] pl-[8px]">
                                   {props.winnername}
@@ -182,14 +191,13 @@ const Accordiannn = (props: any) => {
                             </div>
                             <div className="xyz ml-[20px] mw-lg:ml-[0px] ">
                               <div className="mw-md:mt-[20px]">
-                                <h4 className="montserratfont font-medium leading-normal text-[16px] dark:text-[#ED4250] pb-[13px] text-center">
-                                  Pirze Won
-                                </h4>
-                                <Image
-                                  src={prizeWinner}
-                                  alt=""
-                                  className="mw-lg:m-auto"
-                                />
+                                <div>
+                                  <Image
+                                    src={prizeWinner}
+                                    alt=""
+                                    className="mw-lg:m-auto"
+                                  />
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -200,7 +208,7 @@ const Accordiannn = (props: any) => {
                               <h4 className="montserratfont text-center font-medium leading-normal text-[16px] dark:text-[#ED4250] pb-[13px]">
                                 Lucky Winners
                               </h4>
-                              <div className="flex items-center bg-brandLightOpacity50 rounded px-[16px] py-[2px] mb-[6px]">
+                              <div className="flex items-center bg-brandLightOpacity50 rounded pl-[16px] py-[2px] mb-[6px] pr-[51px]">
                                 <Image src={luckywinner} alt="" />
                                 <p className="montserratfont text-[14px] leading-normal font-normal dark:text-[#E5E5E5] pl-[8px]">
                                   {props.winnername}

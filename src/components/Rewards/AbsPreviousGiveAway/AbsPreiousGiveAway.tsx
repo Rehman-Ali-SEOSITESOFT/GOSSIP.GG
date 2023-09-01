@@ -16,7 +16,7 @@ const AbsPreiousGiveAway = (props: any) => {
           {props.qty}
         </span>
         <div className={`${style.overlaydiv} mw-md:hidden`}>
-          <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity px-[22px] py-[15px] text-center">
+          <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-[0.5] transition-opacity px-[22px] py-[15px] text-center">
             <h5 className="text-[#E5E5E5] text-[18px] leading-normal font-bold montserratfont">
               {props.title}
             </h5>

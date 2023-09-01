@@ -24,10 +24,10 @@
   color: white !important;
 }
 .mainwrapper_accordoian .slick-next {
-  right: -40px !important;
+  right: -30px !important;
 }
 .mainwrapper_accordoian .slick-prev {
-  left: -50px;
+  left: -30px;
 }
 @media screen and (max-width: 1024px) {
   .mainwrapper_accordoian .dark-arrow.slick-slider button.slick-prev,
