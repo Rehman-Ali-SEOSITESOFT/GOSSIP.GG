@@ -161,31 +161,31 @@ const Accordiannn = (props: any) => {
                               <h4 className="montserratfont text-center font-medium leading-normal text-[16px] dark:text-[#ED4250] pb-[13px] mw-md:text-center hidden mw-lg:block ">
                                 Lucky Winners
                               </h4>
-                              <div className="flex items-center bg-[#2C2829] rounded pl-[16px] py-[2px] mb-[6px] pr-[51px]">
+                              <div className="flex items-center bg-grayCard dark:bg-[#2C2829] rounded pl-[16px] py-[2px] mb-[6px] pr-[51px]">
                                 <Image src={luckywinner} alt="" />
                                 <p className="montserratfont text-[14px] leading-normal font-normal dark:text-[#E5E5E5] pl-[8px] ">
                                   {props.winnername}
                                 </p>
                               </div>
-                              <div className="flex items-center bg-[#2C2829] rounded px-[16px] py-[2px] mb-[6px]">
+                              <div className="flex items-center bg-grayCard dark:bg-[#2C2829] rounded px-[16px] py-[2px] mb-[6px]">
                                 <Image src={luckywinner} alt="" />
                                 <p className="montserratfont text-[14px] leading-normal font-normal dark:text-[#E5E5E5] pl-[8px]">
                                   {props.winnername}
                                 </p>
                               </div>
-                              <div className="flex items-center bg-[#2C2829] rounded px-[16px] py-[2px] mb-[6px]">
+                              <div className="flex items-center bg-grayCard dark:bg-[#2C2829] rounded px-[16px] py-[2px] mb-[6px]">
                                 <Image src={luckywinner} alt="" />
                                 <p className="montserratfont text-[14px] leading-normal font-normal dark:text-[#E5E5E5] pl-[8px]">
                                   {props.winnername}
                                 </p>
                               </div>
-                              <div className="flex items-center bg-[#2C2829] rounded px-[16px] py-[2px] mb-[6px]">
+                              <div className="flex items-center bg-grayCard dark:bg-[#2C2829] rounded px-[16px] py-[2px] mb-[6px]">
                                 <Image src={luckywinner} alt="" />
                                 <p className="montserratfont text-[14px] leading-normal font-normal dark:text-[#E5E5E5] pl-[8px]">
                                   {props.winnername}
                                 </p>
                               </div>
-                              <div className="flex items-center bg-[#2C2829] rounded px-[16px] py-[2px] mb-[6px]">
+                              <div className="flex items-center bg-grayCard dark:bg-[#2C2829] rounded px-[16px] py-[2px] mb-[6px]">
                                 <Image src={luckywinner} alt="" />
                                 <p className="montserratfont text-[14px] leading-normal font-normal dark:text-[#E5E5E5] pl-[8px]">
                                   {props.winnername}
@@ -217,31 +217,31 @@ const Accordiannn = (props: any) => {
                               <h4 className="montserratfont text-center font-medium leading-normal text-[16px] dark:text-[#ED4250] pb-[13px] mw-md:text-center hidden mw-lg:block ">
                                 Lucky Winners
                               </h4>
-                              <div className="flex items-center bg-[#2C2829] rounded pl-[16px] py-[2px] mb-[6px] pr-[51px]">
+                              <div className="flex items-center bg-grayCard dark:bg-[#2C2829] rounded pl-[16px] py-[2px] mb-[6px] pr-[51px]">
                                 <Image src={luckywinner} alt="" />
                                 <p className="montserratfont text-[14px] leading-normal font-normal dark:text-[#E5E5E5] pl-[8px] ">
                                   {props.winnername}
                                 </p>
                               </div>
-                              <div className="flex items-center bg-[#2C2829] rounded px-[16px] py-[2px] mb-[6px]">
+                              <div className="flex items-center bg-grayCard dark:bg-[#2C2829] rounded px-[16px] py-[2px] mb-[6px]">
                                 <Image src={luckywinner} alt="" />
                                 <p className="montserratfont text-[14px] leading-normal font-normal dark:text-[#E5E5E5] pl-[8px]">
                                   {props.winnername}
                                 </p>
                               </div>
-                              <div className="flex items-center bg-[#2C2829] rounded px-[16px] py-[2px] mb-[6px]">
+                              <div className="flex items-center bg-grayCard dark:bg-[#2C2829] rounded px-[16px] py-[2px] mb-[6px]">
                                 <Image src={luckywinner} alt="" />
                                 <p className="montserratfont text-[14px] leading-normal font-normal dark:text-[#E5E5E5] pl-[8px]">
                                   {props.winnername}
                                 </p>
                               </div>
-                              <div className="flex items-center bg-[#2C2829] rounded px-[16px] py-[2px] mb-[6px]">
+                              <div className="flex items-center bg-grayCard dark:bg-[#2C2829] rounded px-[16px] py-[2px] mb-[6px]">
                                 <Image src={luckywinner} alt="" />
                                 <p className="montserratfont text-[14px] leading-normal font-normal dark:text-[#E5E5E5] pl-[8px]">
                                   {props.winnername}
                                 </p>
                               </div>
-                              <div className="flex items-center bg-[#2C2829] rounded px-[16px] py-[2px] mb-[6px]">
+                              <div className="flex items-center bg-grayCard dark:bg-[#2C2829] rounded px-[16px] py-[2px] mb-[6px]">
                                 <Image src={luckywinner} alt="" />
                                 <p className="montserratfont text-[14px] leading-normal font-normal dark:text-[#E5E5E5] pl-[8px]">
                                   {props.winnername}

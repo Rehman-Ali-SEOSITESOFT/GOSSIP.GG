@@ -16,7 +16,8 @@ import arrow from "../../../assets/user-profile/back.png";
 
 import { useTheme } from "next-themes";
 const QuizHistory = () => {
-  const { theme } = useTheme();0
+  const { theme } = useTheme();
+  0;
   const dropDownRef = useRef<any | null>(null);
   const [page, setPage] = useState<number[]>([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
@@ -199,7 +200,7 @@ const QuizHistory = () => {
 
                         <div className={style.main_pagination_gap}>
                           <div className="2xl:container ">
-                            <div className="flex w-full pt-[16px] pb-[64px] mw-md:py-[70px] mw-sm:py-[50px] pagi">
+                            <div className="flex w-full pt-[16px] pb-[64px] mw-md:pt-[32px] mw-md:pb-[48px]  pagi">
                               <div className="w-[450px] m-auto">
                                 <div className="pagination flex justify-between items-center">
                                   <div className="back-arrow inline-block bg-grayCard dark:bg-brandDark1 dark:hover:bg-brandLightOpacity10 w-[32px] h-[32px] leading-[32px] flex justify-center items-center rounded-2xl cursor-pointer hover:bg-borderEditProfile">

@@ -77,7 +77,7 @@ const HeroSection = () => {
                         <div className="ml-[11px] ">
                           <div className="flex items-center">
                             <Image src={trophy} alt="" className="" />
-                            <h4 className="montserratfont font-semibold text-[32px] uppercase text-[#E5E5E5] ml-[6px]">
+                            <h4 className="montserratfont font-semibold text-[32px] uppercase text-[#E5E5E5] ml-[6px] mw-sm3:ml-[1px]">
                               02
                             </h4>
                           </div>
@@ -103,12 +103,12 @@ const HeroSection = () => {
                           <h5 className="montserratfont text-[14.4px] capitalize font-medium	leading-normal text-[#E5E5E5] mw-sm5:text-[12px]">
                             Day Streak
                           </h5>
-                          <p className="montserratfont text-[10px] leading-normal font-normal text-brandLightOpacity70 mt-[4px] mw-sm5:hidden">
+                          {/* <p className="montserratfont text-[10px] leading-normal font-normal text-brandLightOpacity70 mt-[4px] hidden">
                             Last played yesterday
-                          </p>
+                          </p> */}
                         </div>
                         <div
-                          className="pl-[60px] mx-14:pl-[32px] mx-13:pl-[24px] mw-sm4:pl-[40px]
+                          className="pl-[60px] mx-14:pl-[24px] mx-13:pl-[24px] mw-sm4:pl-[40px]
                          mw-sm3:pl-[20px] pt-[25px]"
                         >
                           <div className="flex items-center">
@@ -153,20 +153,20 @@ const HeroSection = () => {
                               </p>
                             </div>
                             <div className="h-[34px]">
-                              <p className="montserratfont mr-[20px]  text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
+                              <p className="montserratfont text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px]">
                                 Su
                               </p>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <p className="montserratfont text-[10px] leading-normal font-normal text-brandLightOpacity70 mt-[4px] hidden mw-sm5:block">
+                      <p className="montserratfont text-[10px] leading-normal font-normal text-brandLightOpacity70 mt-[4px]  block">
                         Last played yesterday
                       </p>
                     </div>
                   </div>
                   <div className="w-full mw-lg:text-center m-auto">
-                    <p className="hidden w-[400px] ml-auto mr-auto  mw-lg:block montserratfont text-[12px] leading-normal font-medium	dark:text-brandLightOpacity70 mt-[48px] mw-md:mt-[31px] text-start pl-[55px] mw-sm5:pl-[45px] mw-sm3:pl-[32px]">
+                    <p className="hidden max-w-[400px] ml-auto mr-auto  mw-lg:block montserratfont text-[12px] leading-normal font-medium	dark:text-brandLightOpacity70 mt-[48px] mw-md:mt-[31px] text-start pl-[55px] mw-sm5:pl-[5px]  mw-sm5:w-[300px]">
                       Advertisement
                     </p>
                     <Image
