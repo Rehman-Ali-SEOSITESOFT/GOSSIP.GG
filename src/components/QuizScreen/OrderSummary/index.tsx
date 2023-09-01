@@ -119,7 +119,8 @@ const OrderSummary = (props: any) => {
                         Bengaluru, Karnatka 560037
                       </p>
                       <p className="montserratfont pt-[8px] dark:text-brandLightOpacity100 text-[14px] font-light">
-                        Mobile&nbsp;-&nbsp;<span className="font-semibold">123456788</span>
+                        Mobile&nbsp;-&nbsp;
+                        <span className="font-semibold">123456788</span>
                       </p>
                       <p className="montserratfont cursor-pointer pt-[8px] dark:text-brandLightOpacity70 text-[12px] border-b-[1px] w-fit leading-none border-b-brandLightOpacity70">
                         Change Address
@@ -128,14 +129,14 @@ const OrderSummary = (props: any) => {
                     <p className="pl-[8px] pt-[8px] italic text-left montserratfont text-[14px] dark:text-brandLightOpacity70">
                       Estimated delivery by
                       <span className="text-brandDark3 font-medium dark:text-brandLightOpacity100">
-                      &nbsp;24 July
+                        &nbsp;24 July
                       </span>
                     </p>
                   </div>
                   <div className="mt-[25px]">
                     <a
                       onClick={(e) => onClickOrderConfirmScreen(e)}
-                      className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[230px]  mw-sm3:text-[14px]  mw-sm3:w-[55%] mw-sm:text-base mw-sm:text-semibold`}
+                      className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[230px]  mw-sm3:text-[14px]  mw-sm3:w-[55%] mw-sm:text-base mw-sm:text-semibold mw-sm5:mb-[25px]`}
                     >
                       Confirm
                     </a>
