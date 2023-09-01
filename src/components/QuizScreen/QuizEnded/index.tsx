@@ -53,13 +53,13 @@ const QuizEnded = (props: any) => {
                   />
                   <div
                     onClick={() => props.close()}
-                    className="bg-brandLightOpacity10 hover:bg-brandLightOpacity20  h-[40px] w-[40px] rounded-full absolute top-2 right-2 flex justify-center items-center content-center"
+                    className="bg-brandLightOpacity10 cursor-pointer hover:bg-brandLightOpacity20  h-[40px] w-[40px] rounded-full absolute top-2 right-2 flex justify-center items-center content-center"
                   >
                     <Image src={Close} alt="Close" />
                   </div>
                 </div>
-                <InviteFriendSection />
-                <div className="my-[12px]">
+                <InviteFriendSection title={"Invite Friends"}/>
+                <div className="my-[12px] z-[-1]">
                   <CountDown title={"Time Left"} />
                 </div>
                 <div className="flex flex-col items-center mt-[90px]">

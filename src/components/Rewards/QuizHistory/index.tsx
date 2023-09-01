@@ -16,7 +16,7 @@ import arrow from "../../../assets/user-profile/back.png";
 
 import { useTheme } from "next-themes";
 const QuizHistory = () => {
-  const { theme } = useTheme();
+  const { theme } = useTheme();0
   const dropDownRef = useRef<any | null>(null);
   const [page, setPage] = useState<number[]>([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
