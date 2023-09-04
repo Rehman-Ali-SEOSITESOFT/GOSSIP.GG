@@ -12,6 +12,7 @@ import Faqs from "@/components/Rewards/Faqs/Faqs";
 import style from "./Rewards.module.css";
 import CountDownTimer from "@/components/Rewards/CountDownTimer/CountDownTimer";
 import { useTheme } from "next-themes";
+import Marquee from "react-fast-marquee";
 const Rewards = () => {
   const { theme } = useTheme();
 
@@ -31,11 +32,65 @@ const Rewards = () => {
                   : style.light_quiz_timing_wrapper
               } max-w-[100%] overflow-x-auto `}
             >
+              {/* marquee slider starts*/}
+              <div className="hidden mw-lg:block">
+                <Marquee>
+                  <div
+                    className={` bg-grayCard dark:bg-brandLightOpacity10  pb-[9px] pt-[9px] pl-[22px] pr-[22px]  mt-[7px] mb-[10px] flex w-[1280px] justify-start flex-nowrap justify-between items-center mw-md:mt-[10px] border border-brandLightOpacity50 dark:border-none `}
+                  >
+                    <div>
+                      <p className="text-brand text-sm font-bold tracking-[1.4px] uppercase montserratfont mw-sm4:text-[12px] w-[240px]">
+                        Daily Quiz{" "}
+                        <span className="text-[14px] font-semibold mw-sm4:text-[12px] capitalize">
+                          In <CountDownTimer />{" "}
+                          <i className="fa-solid fa-angle-right"></i>
+                          <i className="fa-solid fa-angle-right"></i>
+                        </span>
+                      </p>
+                    </div>
+                    <div className="ml-[15px]">
+                      <p className="text-[12px] font-semibold	dark:text-[#E5E5E5] montserratfont mw-sm4:text-[12px]">
+                        Play everyday between 5 p.m. and 8 p.m. and stand a
+                        chance to win the latest Samsung phone and other
+                        exciting prizes!
+                      </p>
+                    </div>
+                    <div className="ml-[50px]">
+                      <div className="flex items-center">
+                        <div className="flex items-center relative">
+                          <Image
+                            src={image1}
+                            alt=""
+                            className="w-[24px] h-[24px] absolute left-[-28px] z-[1]"
+                          />
+                          <Image
+                            src={image2}
+                            alt=""
+                            className="w-[24px] h-[24px] absolute left-[-12px]"
+                          />
+                          <Image
+                            src={image3}
+                            alt=""
+                            className="w-[24px] h-[24px] "
+                          />
+                        </div>
+                        <div className="ml-[5px]">
+                          <p className="montserratfont text-[12px] font-normal text-brandDark2 dark:text-[#E5E5E5]">
+                            and 54 others are playing
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Marquee>
+              </div>
+              {/* marquee slider ends */}
+
               <div
-                className={`${style.scrolling_} bg-grayCard dark:bg-brandLightOpacity10 rounded-[20px] pb-[9px] pt-[9px] pl-[22px] pr-[22px]  mt-[7px] mb-[10px] flex w-[1280px] justify-start flex-nowrap justify-between items-center mw-md:mt-[10px] border border-brandLightOpacity50 dark:border-none`}
+                className={`${style.scrolling_} bg-grayCard dark:bg-brandLightOpacity10 rounded-[20px] pb-[9px] pt-[9px] pl-[22px] pr-[22px]  mt-[7px] mb-[10px] flex w-[1280px] justify-start flex-nowrap justify-between items-center mw-md:mt-[10px] border border-brandLightOpacity50 dark:border-none  mw-lg:hidden`}
               >
                 <div>
-                  <p className="text-brand text-sm font-bold tracking-[1.4px] uppercase montserratfont mw-sm4:text-[12px]">
+                  <p className="text-brand text-sm font-bold tracking-[1.4px] uppercase montserratfont mw-sm4:text-[12px] w-[240px]">
                     Daily Quiz{" "}
                     <span className="text-[14px] font-semibold mw-sm4:text-[12px] capitalize">
                       In <CountDownTimer />{" "}
