@@ -188,11 +188,14 @@ const QuizHistory = () => {
                       id="link1"
                     >
                       <div className="for-saved-section text-center ">
-                        <h5 className="text-brandDark2 dark:text-brandLightOpacity100 font-semibold test-base leading-5  montserratfont pt-12	pb-7 ">
+                        <p className="montserratfont text-[16px] font-normal leading-normal text-[#E5E5E5] pt-[145px]">
+                          Your have not yet played any quizzes!
+                        </p>
+                        <h5 className="text-brandDark2 dark:text-brandLightOpacity100 font-semibold test-base leading-5  montserratfont pt-[32px]	pb-7 ">
+                          Play today's quiz &nbsp;
                           <a href="#" className="underline underline-offset-4 ">
-                            Continue reading&nbsp;
+                            here&nbsp;
                           </a>
-                          to save articles you like.
                         </h5>
 
                         {/* accordian section is here but hide */}
