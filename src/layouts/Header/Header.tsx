@@ -382,7 +382,7 @@ const Header = () => {
                         <Menu.Items className="absolute pt-3 pl-4 pb-3 pr-1	 bg-white  z-10  dark:bg-brandDark1 right-[-50px] top-[55px]  left-auto   rounded-lg notifiction-shadow mw-xl:right-[0]">
                           <div className=" w-[375px] max-h-[350px] overflow-x-hidden scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-[transparent] box-scroll pr-1  mw-sm5:w-[300px]">
                             <div className="flex justify-between items-end	 ">
-                              <h3 className="text-brandDark2 dark:text-brand text-lg	leading-[22px] font-bold">
+                              <h3 className="text-brandDark2 dark:text-brand text-lg	leading-[22px] font-bold montserratfont">
                                 Notifications
                               </h3>
                               <h3
@@ -408,7 +408,13 @@ const Header = () => {
                                               : "text-brandDark3 dark:text-brandLightOpacity1  font-semibold	"
                                           }`}
                                         >
-                                          <span className="text-brandDark2 dark:text-brand font-extrabold">
+                                          <span
+                                            className={`text-brandDark2 dark:text-brand ${
+                                              e.read
+                                                ? "font-normal"
+                                                : "font-extrabold"
+                                            }`}
+                                          >
                                             {e.title} : &nbsp;
                                           </span>
                                           {e.disc}
@@ -598,10 +604,7 @@ const Header = () => {
       </div>
       <LoginModal open={open} onClickOpenModal={onClickOpenModal} />
       {openIntroModal && (
-        <IntroScreen
-          open={openIntroModal}
-          close={onClickOpenIntroModal}
-        />
+        <IntroScreen open={openIntroModal} close={onClickOpenIntroModal} />
       )}
       {openPrizeOfDay && (
         <PrizeOfTheDay
