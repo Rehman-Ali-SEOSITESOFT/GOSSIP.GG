@@ -59,7 +59,11 @@ const Accordiannn = (props: any) => {
                         {props.date}
                       </p>
                       <div className="ml-[26px] mw-lg:ml-[0px] mw-lg:mt-[15px] mw-lg:hidden">
-                        <h4 className="montserratfont text-brandDark2 text-[16px] font-medium leading-normal dark:text-[#E5E5E5] mw-md:text-[14px]">
+                        <h4
+                          className={`${
+                            open ? "font-bold" : "font-medium"
+                          } montserratfont text-brandDark2 text-[16px] leading-normal dark:text-[#E5E5E5] mw-md:text-[14px] `}
+                        >
                           {props.heading}
                         </h4>
                       </div>
@@ -73,7 +77,11 @@ const Accordiannn = (props: any) => {
                   </div>
 
                   <div className="ml-[80px] mw-lg:ml-[0px] mw-lg:mt-[16px] hidden mw-lg:block">
-                    <h4 className="montserratfont text-[16px] font-bold leading-normal text-brandDark2 dark:text-[#E5E5E5] mw-md:text-[14px] mw-sm:text-center">
+                    <h4
+                      className={`${
+                        open ? "font-bold" : "font-medium"
+                      }  montserratfont text-[16px]   leading-normal text-brandDark2 dark:text-[#E5E5E5] mw-md:text-[14px] mw-sm:text-center`}
+                    >
                       {props.heading}
                     </h4>
                   </div>

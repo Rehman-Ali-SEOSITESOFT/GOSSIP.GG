@@ -210,7 +210,7 @@ const HeroSection = () => {
                     >
                       Play today to win exciting prizes like these.
                     </p>
-                    <button className="montserratfont text-[18px] font-semibold leading-normal text-[#fff] bg-[#ED4E50] rounded-[24px] pt-[13px] pb-[13px] pl-[29px] pr-[29px] mw-sm4:text-[12px] w-[200px] mw-sm:w-[120px] mw-sm:text-[12px] mw-sm:font-bold mw-sm4:pt-[4px] mw-sm4:pb-[4px]">
+                    <button className="montserratfont text-[18px] font-semibold leading-normal text-[#fff] bg-[#ED4E50] rounded-[24px] pt-[13px] pb-[13px] pl-[29px] pr-[29px] mw-sm4:text-[12px] w-[200px] mw-sm:w-[120px] mw-sm:text-[12px] mw-sm:font-bold mw-sm4:pt-[4px] mw-sm4:pb-[4px] mw-sm5:w-[80px] mw-sm5:px-[10px]">
                       Play Now
                     </button>
                   </div>
