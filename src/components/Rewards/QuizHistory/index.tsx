@@ -42,27 +42,27 @@ const QuizHistory = () => {
 
   const [list, setList] = useState<Sliders[]>([
     {
-      date: "27 july",
+      date: "27 July",
       heading: " What is the largest ever prize pool for a gaming tournament?",
       winnername: " @winner_nemel",
     },
     {
-      date: "26 july",
+      date: "26 July",
       heading: " What is the largest ever prize pool for a gaming tournament?",
       winnername: " @winner_nemel",
     },
     {
-      date: "25 july",
+      date: "25 July",
       heading: " What is the largest ever prize pool for a gaming tournament?",
       winnername: " @winner_nemel",
     },
     {
-      date: "24 july",
+      date: "24 July",
       heading: " What is the largest ever prize pool for a gaming tournament?",
       winnername: " @winner_nemel",
     },
     {
-      date: "23 july",
+      date: "23 July",
       heading: " What is the largest ever prize pool for a gaming tournament?",
       winnername: " @winner_nemel",
     },
