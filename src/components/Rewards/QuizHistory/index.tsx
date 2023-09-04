@@ -427,7 +427,7 @@ const QuizHistory = () => {
                       onClick={() => onClickOpen()}
                       className=" px-4 bg-bodycolor flex flex-row justify-between items-center h-[60px] mw-sm1:h-[45px]   rounded-lg w-[302px] mx-13:w-[270px] mw-12:w-[300px] border border-brandDark2 dark:border-brandLightOpacity50 mw-sm1:rounded dark:bg-[#221E1F] mw-sm4:w-[160px] mw-sm4:px-[14px]"
                     >
-                      <p className="montserratfont capitalize font-semibold text-brandDark1 dark:text-brandLightOpacity70 mw-sm:text-xs mw-sm:leading-normal mw-sm3:text-[14px] font-medium mw-sm3:leading-normal">
+                      <p className="montserratfont capitalize font-semibold text-brandDark1 dark:text-brandLightOpacity70 mw-sm:text-xs mw-sm:leading-normal mw-sm3:text-[14px] mw-sm3:font-medium mw-sm3:leading-normal ">
                         {selectedValue}
                       </p>
                       <div className="flex items-center">
