@@ -146,7 +146,7 @@ const Accordiannn = (props: any) => {
                         </div>
                         <div className="w-[50%]">
                           <h4 className="montserratfont font-medium leading-normal text-[16px] dark:text-[#ED4250] pb-[13px] text-center">
-                            Pirze Won
+                            Prizes Won
                           </h4>
                         </div>
                       </div>
@@ -201,7 +201,7 @@ const Accordiannn = (props: any) => {
                                   className="montserratfont font-medium leading-normal text-[16px] dark:text-[#ED4250] pb-[13px] text-center hidden mw-lg:block mw-lg:pt-[16px]
                                  mw-md:pt-[0px] mw-sm4:text-[14px] font-semibold leading-normal mw-sm4:pb-[8px]"
                                 >
-                                  Pirze Won
+                                  Prizes Won
                                 </h4>
                                 <div>
                                   <Image
@@ -257,7 +257,7 @@ const Accordiannn = (props: any) => {
                                   className="montserratfont font-medium leading-normal text-[16px] dark:text-[#ED4250] pb-[13px] text-center hidden mw-lg:block mw-lg:pt-[16px]
                                  mw-md:pt-[0px] mw-sm4:text-[14px] font-semibold leading-normal mw-sm4:pb-[8px]"
                                 >
-                                  Pirze Won
+                                  Prizes Won
                                 </h4>
                                 <div>
                                   <Image
