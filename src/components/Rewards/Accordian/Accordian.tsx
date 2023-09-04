@@ -8,7 +8,6 @@ import two from "../../../assets/rewards/two.png";
 import three from "../../../assets/rewards/three.png";
 import luckywinner from "../../../assets/rewards/winner_list.png";
 import prizeWinner from "../../../assets/rewards/winItem.png";
-import Pagination from "@/components/Pagination";
 import { useTheme } from "next-themes";
 const Accordiannn = (props: any) => {
   const { theme, setTheme } = useTheme();
@@ -52,7 +51,11 @@ const Accordiannn = (props: any) => {
                 <Disclosure.Button className="flex w-full px-[58px] justify-between items-center rounded-lg text-left text-sm font-medium text-purple-900  pb-[23px] mw-lg:pb-[16px] mw-lg:flex-col">
                   <div className="flex justify-between w-[100%] items-center mw-lg:justify-center">
                     <div className="first_section text-center flex items-center ">
-                      <p className="montserratfont text-brandDark2 dark:text-[#ED4250] text-[20px] mw-lg:text-[16px] mw-md:text-[14px] font-semibold leading-normal">
+                      <p
+                        className={`montserratfont text-brandDark2 dark:text-[#ED4250] text-[20px] mw-lg:text-[16px] mw-md:text-[14px]  leading-normal ${
+                          open ? "font-bold " : "font-semibold"
+                        }`}
+                      >
                         {props.date}
                       </p>
                       <div className="ml-[26px] mw-lg:ml-[0px] mw-lg:mt-[15px] mw-lg:hidden">
@@ -68,11 +71,6 @@ const Accordiannn = (props: any) => {
                       }`}
                     ></i>
                   </div>
-                  {/* <i
-                    className={`fa-solid fa-angle-up text-[#ED4E50] text-[16px] ${
-                      open ? "rotate-180 transform " : null
-                    }`}
-                  ></i> */}
 
                   <div className="ml-[80px] mw-lg:ml-[0px] mw-lg:mt-[16px] hidden mw-lg:block">
                     <h4 className="montserratfont text-[16px] font-bold leading-normal text-brandDark2 dark:text-[#E5E5E5] mw-md:text-[14px] mw-sm:text-center">

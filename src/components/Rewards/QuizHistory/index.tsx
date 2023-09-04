@@ -48,6 +48,7 @@ const QuizHistory = () => {
     },
     {
       date: "26 july",
+
       heading: " What is the largest ever prize pool for a gaming tournament?",
       winnername: " @winner_nemel",
     },
@@ -64,7 +65,7 @@ const QuizHistory = () => {
     {
       date: "23 july",
       heading: " What is the largest ever prize pool for a gaming tournament?",
-      winnername: " @winner_nemel",
+      winnername: "@winner_nemel",
     },
   ]);
   const [openTab, setOpenTab] = useState<number | null>(1);
@@ -141,7 +142,7 @@ const QuizHistory = () => {
                   <li className="">
                     <a
                       className={
-                        "text-base   mw-sm1:text-sm   montserratfont  leading-5   capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
+                        "text-base   mw-sm1:text-sm   montserratfont  leading-5   capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize mw-sm5:fontbold" +
                         (openTab === 1
                           ? " dark:text-brand border-b-2 border-brandDark2   dark:border-b-brand font-bold	"
                           : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-normal  ")
