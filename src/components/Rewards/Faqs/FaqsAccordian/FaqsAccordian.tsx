@@ -8,8 +8,8 @@ const FaqsAccordian = (props: any) => {
           <Disclosure>
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex w-full justify-between rounded-lg pt-[17px] pb-[17px] text-left items-center">
-                  <p className="montserratfont text-brandDark2 text-[18px] font-medium leading-normal dark:text-[#E5E5E5] mw-lg:text-[16px] mw-md:text-[14px]">
+                <Disclosure.Button className="flex w-full justify-between rounded-lg pt-[17px] pb-[17px] text-left items-center mw-sm5:pt-[8px] mw-sm5:pb-[16px]">
+                  <p className="montserratfont text-brandDark2 text-[18px] font-medium leading-normal dark:text-[#E5E5E5] mw-lg:text-[16px] mw-md:text-[14px] ">
                     {props.heading}
                   </p>
                   <i

@@ -34,7 +34,7 @@ const Faqs = () => {
             </div>
             <div className="bg-[#fff] pr-[5px] dark:bg-[#2E2A2B]   rounded-[8px] border-grayCard border  ">
               <div
-                className={`faqs_accordians bg-[#fff]  dark:bg-[#2E2A2B] pt-[13px] px-[24px] overflow-x-scroll ${style.scrooling} mr-[8px] `}
+                className={`faqs_accordians bg-[#fff]  dark:bg-[#2E2A2B] pt-[13px] px-[24px] overflow-x-scroll ${style.scrooling} mr-[8px]  mw-sm5:pt-[8px]`}
               >
                 {list.map((e, idx) => (
                   <div
