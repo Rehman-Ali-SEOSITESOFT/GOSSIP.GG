@@ -193,7 +193,7 @@ const QuizHistory = () => {
                           Your have not yet played any quizzes!
                         </p>
                         <h5 className="text-brandDark2 dark:text-brandLightOpacity100 font-semibold test-base leading-5  montserratfont pt-[32px]	pb-7 ">
-                          Play today's quiz &nbsp;
+                          Play today&#39;s quiz &nbsp;
                           <a href="#" className="underline underline-offset-4 ">
                             here&nbsp;
                           </a>
