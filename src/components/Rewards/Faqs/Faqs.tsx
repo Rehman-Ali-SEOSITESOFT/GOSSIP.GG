@@ -28,13 +28,13 @@ const Faqs = () => {
         <div className="global-section-width ">
           <div className="2xl:container">
             <div className="mb-[16px]">
-              <h4 className="montserratfont text-[18px] leading-normal font-bold dark:text-[#ED4E50] mw-md:text-[20px] mw-sm4:text-[16px]">
+              <h4 className="montserratfont text-[18px] leading-normal font-bold dark:text-[#ED4E50] mw-md:text-[20px] mw-sm4:text-[16px] ">
                 FAQs
               </h4>
             </div>
-            <div className="bg-[#fff] pr-[5px] dark:bg-[#2E2A2B] pt-[4px] pb-[4px] rounded-[8px] border-grayCard border  ">
+            <div className="bg-[#fff] pr-[5px] dark:bg-[#2E2A2B]   rounded-[8px] border-grayCard border  ">
               <div
-                className={`faqs_accordians bg-[#fff]  dark:bg-[#2E2A2B] pt-[22px] px-[24px] overflow-x-scroll ${style.scrooling} mr-[8px] `}
+                className={`faqs_accordians bg-[#fff]  dark:bg-[#2E2A2B] pt-[13px] px-[24px] overflow-x-scroll ${style.scrooling} mr-[8px] `}
               >
                 {list.map((e, idx) => (
                   <div

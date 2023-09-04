@@ -129,9 +129,9 @@ const QuizHistory = () => {
 
   return (
     <>
-      <section className="quiz_history_wrapper">
-        <div className="global-section-width">
-          <div className="2xl:container">
+      <section className="quiz_history_wrapper ">
+        <div className="global-section-width ">
+          <div className="2xl:container ">
             <div className="mt-[52px] mw-md:mt-[28px]">
               <SectionSaprator title="Quiz history" />
             </div>
@@ -141,7 +141,7 @@ const QuizHistory = () => {
                   <li className="">
                     <a
                       className={
-                        "text-base   mw-sm1:text-sm   montserratfont  leading-5   capitalize  pb-[8px] " +
+                        "text-base   mw-sm1:text-sm   montserratfont  leading-5   capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
                         (openTab === 1
                           ? " dark:text-brand border-b-2 border-brandDark2   dark:border-b-brand font-bold	"
                           : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-normal  ")
@@ -160,7 +160,7 @@ const QuizHistory = () => {
                   <li className="pl-[72px]  mw-md:pl-[30px] ">
                     <a
                       className={
-                        "text-base   mw-sm1:text-sm   montserratfont  leading-5   capitalize  pb-[8px]  " +
+                        "text-base   mw-sm1:text-sm   montserratfont  leading-5   capitalize  pb-[8px]  mw-sm4:text-[12px] mw-sm4:leading-normal capitaliz" +
                         (openTab === 2
                           ? " dark:text-brand border-b-2 border-brandDark2   dark:border-b-brand font-bold	"
                           : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-normal  ")
@@ -199,7 +199,7 @@ const QuizHistory = () => {
                         ))}
 
                         <div className={style.main_pagination_gap}>
-                          <div className="2xl:container ">
+                          <div className="2xl:container mw-sm:border-b dark:border-b-brandLightOpacity10 border-b-borderEditProfile">
                             <div className="flex w-full pt-[16px] pb-[64px] mw-md:pt-[32px] mw-md:pb-[48px]  pagi">
                               <div className="w-[450px] m-auto">
                                 <div className="pagination flex justify-between items-center">
@@ -293,7 +293,7 @@ const QuizHistory = () => {
               </div>
 
               <div
-                className={`absolute top-[-22px] right-[0px] mw-lg:left-[0px] mw-lg:top-[50px] mw-md:z-[4] ${style.selectBOOX}`}
+                className={`absolute top-[-22px] right-[0px] mw-lg:left-[0px] mw-lg:top-[50px] mw-lg:z-[4] ${style.selectBOOX}`}
               >
                 <h4 className="mw-lg:block text-[14px] montserratfont font-normal leading-normal text-brandDark2 dark:text-[#E5E5E5] mb-[4px] mw-md:text-[10px]">
                   Timeframe
@@ -330,9 +330,9 @@ const QuizHistory = () => {
                   >
                     <div
                       onClick={() => onClickOpen()}
-                      className=" px-4 bg-bodycolor flex flex-row justify-between items-center h-[60px] mw-sm1:h-[45px]   rounded-lg w-[302px] mx-13:w-[270px] mw-12:w-[300px] border border-brandDark2 dark:border-brandLightOpacity50 mw-sm1:rounded dark:bg-[#221E1F] mw-sm4:w-[160px]"
+                      className=" px-4 bg-bodycolor flex flex-row justify-between items-center h-[60px] mw-sm1:h-[45px]   rounded-lg w-[302px] mx-13:w-[270px] mw-12:w-[300px] border border-brandDark2 dark:border-brandLightOpacity50 mw-sm1:rounded dark:bg-[#221E1F] mw-sm4:w-[160px] mw-sm4:px-[14px]"
                     >
-                      <p className="montserratfont font-semibold text-brandDark1 dark:text-brandLightOpacity100 mw-sm:text-xs mw-sm:leading-normal">
+                      <p className="montserratfont capitalize font-semibold text-brandDark1 dark:text-brandLightOpacity70 mw-sm:text-xs mw-sm:leading-normal mw-sm3:text-[14px] font-medium mw-sm3:leading-normal">
                         {selectedValue}
                       </p>
                       <div className="flex items-center">
@@ -365,7 +365,7 @@ const QuizHistory = () => {
                            }`}
                             onClick={() => onSelectValue(item)}
                           >
-                            <p className="montserratfont leading-normal dark:text-brandLightOpacity100 text-[16px] font-medium text-brandDark2 pl-[8px] mw-md:text-[14px]">
+                            <p className="montserratfont leading-normal dark:text-brandLightOpacity100 text-[16px] font-medium text-brandDark2 pl-[8px] mw-md:text-[14px] ">
                               {item}
                             </p>
                           </div>

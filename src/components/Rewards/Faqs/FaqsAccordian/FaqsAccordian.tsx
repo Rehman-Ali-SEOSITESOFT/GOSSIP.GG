@@ -8,7 +8,7 @@ const FaqsAccordian = (props: any) => {
           <Disclosure>
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex w-full justify-between rounded-lg pt-[8px] pb-[16px] text-left items-center">
+                <Disclosure.Button className="flex w-full justify-between rounded-lg pt-[17px] pb-[17px] text-left items-center">
                   <p className="montserratfont text-brandDark2 text-[18px] font-medium leading-normal dark:text-[#E5E5E5] mw-lg:text-[16px] mw-md:text-[14px]">
                     {props.heading}
                   </p>

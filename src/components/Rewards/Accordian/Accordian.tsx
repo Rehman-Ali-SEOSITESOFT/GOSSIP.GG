@@ -45,18 +45,18 @@ const Accordiannn = (props: any) => {
   return (
     <>
       <div className={`w-full  mainwrapper_accordoian`}>
-        <div className="mx-auto w-full px-[17px] rounded-[8px] border dark:border-brandLightOpacity50   pt-[22px]    dark:bg-[#221E1F] mw-lg:px-[0px] mw-lg:pt-[15px]">
+        <div className="mx-auto w-full px-[17px] rounded-[8px] border dark:border-brandLightOpacity50   pt-[22px]    dark:bg-[#221E1F] mw-lg:px-[0px] mw-lg:pt-[16px]">
           <Disclosure as="div">
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex w-full px-[58px] justify-between items-center rounded-lg text-left text-sm font-medium text-purple-900  pb-[23px] mw-lg:pb-[15px] mw-lg:flex-col">
+                <Disclosure.Button className="flex w-full px-[58px] justify-between items-center rounded-lg text-left text-sm font-medium text-purple-900  pb-[23px] mw-lg:pb-[16px] mw-lg:flex-col">
                   <div className="flex justify-between w-[100%] items-center mw-lg:justify-center">
                     <div className="first_section text-center flex items-center ">
                       <p className="montserratfont text-brandDark2 dark:text-[#ED4250] text-[20px] mw-lg:text-[16px] mw-md:text-[14px] font-bold leading-normal">
                         {props.date}
                       </p>
                       <div className="ml-[26px] mw-lg:ml-[0px] mw-lg:mt-[15px] mw-lg:hidden">
-                        <h4 className="montserratfont text-brandDark2 text-[16px] font-medium leading-[24px] dark:text-[#E5E5E5] mw-md:text-[14px]">
+                        <h4 className="montserratfont text-brandDark2 text-[16px] font-medium leading-normal dark:text-[#E5E5E5] mw-md:text-[14px]">
                           {props.heading}
                         </h4>
                       </div>
@@ -74,8 +74,8 @@ const Accordiannn = (props: any) => {
                     }`}
                   ></i> */}
 
-                  <div className="ml-[80px] mw-lg:ml-[0px] mw-lg:mt-[15px] hidden mw-lg:block">
-                    <h4 className="montserratfont text-[16px] font-medium leading-[24px] text-brandDark2 dark:text-[#E5E5E5] mw-md:text-[14px] mw-sm:text-center">
+                  <div className="ml-[80px] mw-lg:ml-[0px] mw-lg:mt-[16px] hidden mw-lg:block">
+                    <h4 className="montserratfont text-[16px] font-bold leading-normal text-brandDark2 dark:text-[#E5E5E5] mw-md:text-[14px] mw-sm:text-center">
                       {props.heading}
                     </h4>
                   </div>
@@ -96,7 +96,7 @@ const Accordiannn = (props: any) => {
                           className="absolute right-[-18px]"
                         />
                       </div>
-                      <p className="montserratfont text-[12px] font-normal leading-normal text-brandDark2 dark:text-[#E5E5E5] ml-[30px]">
+                      <p className="montserratfont text-[12px] font-normal leading-normal text-brandDark2 dark:text-[#E5E5E5] ml-[30px] mw-sm3:text-[10px] mw-sm3:font-normal ">
                         <span className="montserratfont text-[12px] font-semibold text-brandDark2  dark:text-[#ED4E50]">
                           133
                         </span>{" "}
@@ -104,15 +104,15 @@ const Accordiannn = (props: any) => {
                         correctly.
                       </p>
                     </div>
-                    <div className="accodiran_content_second flex mt-[18px] mw-md:flex-col mw-md:mt-[15px]">
-                      <h5 className="montserratfont text-[14px] font-medium	leading-normal text-brandDark2 dark:text-brandLightOpacity70 border-r-[1px] border-brandLightOpacity10 pr-[16px] mw-md:border-none">
+                    <div className="accodiran_content_second flex mt-[18px] mw-md:flex-col mw-md:mt-[16px]">
+                      <h5 className="montserratfont text-[14px] font-medium	leading-normal text-brandDark2 dark:text-brandLightOpacity70 border-r-[1px] border-brandLightOpacity10 pr-[16px] mw-md:border-none mw-sm3:text-[12px] ">
                         Correct Answer:
                         <span className="montserratfont text-[14px] font-medium	leading-normal text-[#ED4E50]">
                           Option B
                         </span>{" "}
                         2 Million
                       </h5>
-                      <h5 className="montserratfont text-[14px] font-medium	leading-normal text-brandDark2 dark:text-brandLightOpacity70 pl-[16px] mw-md:pl-[0px]">
+                      <h5 className="montserratfont text-[14px] font-medium	leading-normal text-brandDark2 dark:text-brandLightOpacity70 pl-[16px] mw-md:pl-[0px] mw-sm3:text-[12px] ">
                         Your Answer:
                         <span className="montserratfont text-[14px] font-medium	leading-normal text-[#ED4E50]">
                           Option B
@@ -120,8 +120,11 @@ const Accordiannn = (props: any) => {
                         2 Million
                       </h5>
                     </div>
-                    <div className="accoridan_content_thrird mt-[33px] mw-md:mt-[15px]">
-                      <h4 className="montserratfont text-[16px] font-medium leadimg-normal  dark:text-[#ED4250]">
+                    <div className="accoridan_content_thrird mt-[33px] mw-md:mt-[15px] mw-sm3:mt[16px]">
+                      <h4
+                        className="montserratfont text-[16px] font-medium leadimg-normal 
+                       dark:text-[#ED4250] mw-sm3:text-[14px] font-semibold   "
+                      >
                         Did you know?
                       </h4>
                       <p className="montserratfont font-normal f_it leading-[24px] text-[14px] dark:text-[#E5E5E5] pt-[7px] pr-[60px] mw-lg:pr-[0px] mw-sm4:text-[12px] text-brandDark2 mw-md:leading-[16px]">
@@ -158,7 +161,7 @@ const Accordiannn = (props: any) => {
                         <div className="hello mw-md:mt-[40px] mw-sm:mt-[16px]">
                           <div className="second flex justify-center mw-lg:flex-col items-center">
                             <div className="first_ mw-lg:px-[80px] mw-sm4:px-[45px]">
-                              <h4 className="montserratfont text-center font-medium leading-normal text-[16px] dark:text-[#ED4250] pb-[13px] mw-md:text-center hidden mw-lg:block ">
+                              <h4 className="montserratfont text-center font-medium leading-normal text-[16px] dark:text-[#ED4250] pb-[13px] mw-sm4:pb-[8px] mw-md:text-center hidden mw-lg:block mw-sm4:text-[14px] font-semibold leading-normal">
                                 Lucky Winners
                               </h4>
                               <div className="flex items-center bg-grayCard dark:bg-[#2C2829] rounded pl-[16px] py-[2px] mb-[6px] pr-[51px]">
@@ -196,7 +199,7 @@ const Accordiannn = (props: any) => {
                               <div className="mw-md:mt-[16px]">
                                 <h4
                                   className="montserratfont font-medium leading-normal text-[16px] dark:text-[#ED4250] pb-[13px] text-center hidden mw-lg:block mw-lg:pt-[16px]
-                                 mw-md:pt-[0px]"
+                                 mw-md:pt-[0px] mw-sm4:text-[14px] font-semibold leading-normal mw-sm4:pb-[8px]"
                                 >
                                   Pirze Won
                                 </h4>
@@ -214,7 +217,7 @@ const Accordiannn = (props: any) => {
                         <div className="hello mw-md:mt-[40px] mw-sm:mt-[16px]">
                           <div className="second flex justify-center mw-lg:flex-col items-center">
                             <div className="first_ mw-lg:px-[80px] mw-sm4:px-[45px]">
-                              <h4 className="montserratfont text-center font-medium leading-normal text-[16px] dark:text-[#ED4250] pb-[13px] mw-md:text-center hidden mw-lg:block ">
+                              <h4 className="montserratfont text-center font-medium leading-normal text-[16px] dark:text-[#ED4250] pb-[13px] mw-sm4:pb-[8px] mw-md:text-center hidden mw-lg:block mw-sm4:text-[14px] font-semibold leading-normal">
                                 Lucky Winners
                               </h4>
                               <div className="flex items-center bg-grayCard dark:bg-[#2C2829] rounded pl-[16px] py-[2px] mb-[6px] pr-[51px]">
@@ -252,7 +255,7 @@ const Accordiannn = (props: any) => {
                               <div className="mw-md:mt-[16px] mw-lg:ml-[0px] ">
                                 <h4
                                   className="montserratfont font-medium leading-normal text-[16px] dark:text-[#ED4250] pb-[13px] text-center hidden mw-lg:block mw-lg:pt-[16px]
-                                 mw-md:pt-[0px]"
+                                 mw-md:pt-[0px] mw-sm4:text-[14px] font-semibold leading-normal mw-sm4:pb-[8px]"
                                 >
                                   Pirze Won
                                 </h4>

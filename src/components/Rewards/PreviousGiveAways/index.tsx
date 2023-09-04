@@ -67,8 +67,8 @@ const PreviousGiveAways = () => {
                 );
               })}
             </div>
-            <div className="mt-[16px] mb-[28px] mw-md:mb-[28px] mw-sm4:mb-[0px] text-start mw-md:text-center">
-              <p className="montserratfont text-[16px] text-medium capitalize underline text-brandLightOpacity70 leading-normal">
+            <div className="mt-[16px] mb-[28px] mw-md:mb-[28px] mw-sm4:mb-[0px] text-start mw-md:text-center mw-sm4:mt-[10px]">
+              <p className="montserratfont text-[16px] text-medium capitalize underline text-brandLightOpacity70 leading-normal ">
                 See More{" "}
                 <span className="ml-[9px]">
                   <i className="fa-solid fa-angle-down"></i>

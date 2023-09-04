@@ -52,7 +52,7 @@ const HeroSection = () => {
                         </div>
                       </div>
                       <div className="absolute bottom-[17px]  flex">
-                        <div className="ml-[16px] border-r-[1px] border-borderColor pr-[16px] mw-12:ml-[8px] mw-sm4:pr-[12px]">
+                        <div className="ml-[16px] border-r-[1px] border-borderColor pr-[16px] mw-12:ml-[8px] mw-sm4:pr-[10px]">
                           <div className="flex items-center">
                             <Image src={remote} alt="" className="" />
                             <h4 className="montserratfont font-semibold text-[32px] uppercase text-[#E5E5E5] ml-[6px]">
@@ -63,7 +63,7 @@ const HeroSection = () => {
                             Quizzes Played
                           </p>
                         </div>
-                        <div className="ml-[11px] border-r-[1px] border-borderColor pr-[16px] mw-12:ml-[8px] mw-sm4:pr-[12px]">
+                        <div className="ml-[11px] border-r-[1px] border-borderColor pr-[16px] mw-12:ml-[8px] mw-sm4:pr-[10px]">
                           <div className="flex items-center justify-center">
                             <Image src={target} alt="" className="" />
                             <h4 className="montserratfont font-semibold text-[32px] uppercase text-[#E5E5E5] ml-[6px] ">
@@ -78,7 +78,7 @@ const HeroSection = () => {
                           <div className="flex items-center">
                             <Image src={trophy} alt="" className="" />
                             <h4 className="montserratfont font-semibold text-[32px] uppercase text-[#E5E5E5] ml-[6px] mw-sm3:ml-[1px]">
-                              02
+                              02 
                             </h4>
                           </div>
                           <p className="montserratfont text-[10px] font-normal	text-[#E5E5E5] uppercase	text-center">
@@ -109,7 +109,7 @@ const HeroSection = () => {
                         </div>
                         <div
                           className="pl-[60px] mx-14:pl-[24px] mx-13:pl-[24px] mw-sm4:pl-[40px]
-                         mw-sm3:pl-[20px] pt-[25px]"
+                         mw-sm3:pl-[15px] pt-[25px] "
                         >
                           <div className="flex items-center">
                             <div className="h-[34px] ">
@@ -202,7 +202,7 @@ const HeroSection = () => {
                   <div
                     className={`${style.blurry} pt-[21px] pl-[16px] pb-[31px] mw-sm4:pt-[6px] mw-sm4:pl-[8px]  mw-sm4:pb-[12px]`}
                   >
-                    <h6 className="montserratfont font-medium	tracking-[9.8px] text-[14px] text-[#fff] leading-normal ">
+                    <h6 className="montserratfont font-medium	tracking-[9.8px] text-[14px] text-[#fff] leading-normal mw-sm5:text-[10px] mw-sm5:font-normal mw-sm5:tracking-[3px]">
                       QUIZ
                     </h6>
                     <p
@@ -210,7 +210,7 @@ const HeroSection = () => {
                     >
                       Play today to win exciting prizes like these.
                     </p>
-                    <button className="montserratfont text-[18px] font-semibold leading-normal text-[#fff] bg-[#ED4E50] rounded-[24px] pt-[13px] pb-[13px] pl-[29px] pr-[29px] mw-sm4:text-[9.75px] w-[200px] mw-sm:w-[120px] mw-sm:text-[12px] mw-sm4:pt-[4px] mw-sm4:pb-[4px]">
+                    <button className="montserratfont text-[18px] font-semibold leading-normal text-[#fff] bg-[#ED4E50] rounded-[24px] pt-[13px] pb-[13px] pl-[29px] pr-[29px] mw-sm4:text-[12px] w-[200px] mw-sm:w-[120px] mw-sm:text-[12px] mw-sm:font-bold mw-sm4:pt-[4px] mw-sm4:pb-[4px]">
                       Play Now
                     </button>
                   </div>
