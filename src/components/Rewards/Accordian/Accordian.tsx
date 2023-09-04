@@ -106,14 +106,14 @@ const Accordiannn = (props: any) => {
                     </div>
                     <div className="accodiran_content_second flex mt-[18px] mw-md:flex-col mw-md:mt-[16px]">
                       <h5 className="montserratfont text-[14px] font-medium	leading-normal text-brandDark2 dark:text-brandLightOpacity70 border-r-[1px] border-brandLightOpacity10 pr-[16px] mw-md:border-none mw-sm3:text-[12px] ">
-                        Correct Answer:
+                        Correct Answer:{" "}
                         <span className="montserratfont text-[14px] font-medium	leading-normal text-[#ED4E50]">
                           Option B
                         </span>{" "}
                         2 Million
                       </h5>
                       <h5 className="montserratfont text-[14px] font-medium	leading-normal text-brandDark2 dark:text-brandLightOpacity70 pl-[16px] mw-md:pl-[0px] mw-sm3:text-[12px] ">
-                        Your Answer:
+                        Your Answer:{" "}
                         <span className="montserratfont text-[14px] font-medium	leading-normal text-[#ED4E50]">
                           Option B
                         </span>{" "}
@@ -146,7 +146,7 @@ const Accordiannn = (props: any) => {
                         </div>
                         <div className="w-[50%]">
                           <h4 className="montserratfont font-medium leading-normal text-[16px] dark:text-[#ED4250] pb-[13px] text-center">
-                            Pirze Won
+                            Prizes Won
                           </h4>
                         </div>
                       </div>
@@ -201,7 +201,7 @@ const Accordiannn = (props: any) => {
                                   className="montserratfont font-medium leading-normal text-[16px] dark:text-[#ED4250] pb-[13px] text-center hidden mw-lg:block mw-lg:pt-[16px]
                                  mw-md:pt-[0px] mw-sm4:text-[14px] font-semibold leading-normal mw-sm4:pb-[8px]"
                                 >
-                                  Pirze Won
+                                  Prizes Won
                                 </h4>
                                 <div>
                                   <Image
@@ -257,7 +257,7 @@ const Accordiannn = (props: any) => {
                                   className="montserratfont font-medium leading-normal text-[16px] dark:text-[#ED4250] pb-[13px] text-center hidden mw-lg:block mw-lg:pt-[16px]
                                  mw-md:pt-[0px] mw-sm4:text-[14px] font-semibold leading-normal mw-sm4:pb-[8px]"
                                 >
-                                  Pirze Won
+                                  Prizes Won
                                 </h4>
                                 <div>
                                   <Image
