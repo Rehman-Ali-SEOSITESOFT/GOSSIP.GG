@@ -133,10 +133,10 @@ const OrderSummary = (props: any) => {
                       </span>
                     </p>
                   </div>
-                  <div className="mt-[25px]">
+                  <div className="mt-[25px] ">
                     <a
                       onClick={(e) => onClickOrderConfirmScreen(e)}
-                      className={`done_btn h-[42px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[230px]  mw-sm3:text-[14px]  mw-sm3:w-[55%] mw-sm:text-base mw-sm:text-semibold mw-sm5:mb-[25px]`}
+                      className={`done_btn h-[42px] mb-[25px] flex  items-center  justify-center content-center mt-[8px] w-[230px] bg-brand   hover:bg-[#ec5d5f] rounded-3xl	text-center m-auto text-[16px]	leading-6	 text-white dark:text-brandLightOpacity100	font-semibold montserratfont cursor-pointer mw-sm:w-[230px]  mw-sm3:text-[14px]  mw-sm3:w-[55%] mw-sm:text-base mw-sm:text-semibold `}
                     >
                       Confirm
                     </a>
