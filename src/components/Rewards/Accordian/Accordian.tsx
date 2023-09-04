@@ -52,7 +52,7 @@ const Accordiannn = (props: any) => {
                 <Disclosure.Button className="flex w-full px-[58px] justify-between items-center rounded-lg text-left text-sm font-medium text-purple-900  pb-[23px] mw-lg:pb-[16px] mw-lg:flex-col">
                   <div className="flex justify-between w-[100%] items-center mw-lg:justify-center">
                     <div className="first_section text-center flex items-center ">
-                      <p className="montserratfont text-brandDark2 dark:text-[#ED4250] text-[20px] mw-lg:text-[16px] mw-md:text-[14px] font-bold leading-normal">
+                      <p className="montserratfont text-brandDark2 dark:text-[#ED4250] text-[20px] mw-lg:text-[16px] mw-md:text-[14px] font-semibold leading-normal">
                         {props.date}
                       </p>
                       <div className="ml-[26px] mw-lg:ml-[0px] mw-lg:mt-[15px] mw-lg:hidden">
