@@ -78,7 +78,7 @@ const HeroSection = () => {
                           <div className="flex items-center">
                             <Image src={trophy} alt="" className="" />
                             <h4 className="montserratfont font-semibold text-[32px] uppercase text-[#E5E5E5] ml-[6px] mw-sm3:ml-[1px]">
-                              02 
+                              02
                             </h4>
                           </div>
                           <p className="montserratfont text-[10px] font-normal	text-[#E5E5E5] uppercase	text-center">
@@ -132,7 +132,7 @@ const HeroSection = () => {
                                 className="mw-sm4:w-[16px] mw-sm4:h-[16px]"
                               />
                             </div>
-                            <div className="h-[34px]">
+                            <div className="h-[34px] mw-lg:h-[43px] mw-md:h-[34px]">
                               <p className="montserratfont mr-[12px] h-[40px] w-[40px] bg-brandLightOpacity10 rounded-[50%] flex items-center justify-center text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px] mw-md:w-[30px] mw-md:h-[30px]">
                                 W
                               </p>
