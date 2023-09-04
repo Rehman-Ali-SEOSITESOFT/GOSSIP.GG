@@ -102,10 +102,10 @@
 @media screen and (max-width: 400px) {
   .second_slider .dark-arrow.slick-slider button.slick-prev,
   .second_slider .light-arrow.slick-slider button.slick-prev {
-    left: -5px !important;
+    left: -15px !important;
   }
   .second_slider .slick-next {
-    right: -5px !important;
+    right: -15px !important;
   }
 }
 /* @media screen and (max-width: 500px) {
