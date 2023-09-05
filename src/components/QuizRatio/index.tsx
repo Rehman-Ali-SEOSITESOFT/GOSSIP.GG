@@ -102,7 +102,7 @@ const QuizRatio = () => {
               />
             </span>
           </div>
-          <div className="logo-close  pl-2.5 pb-2.5	 relative">
+          <div className="logo-close  pl-[20px] pb-2.5	 relative">
             <div
               className="logo-quiz-brand bg-brand w-[89px] h-[89px] drop-box-shadow rounded-full cursor-pointer	"
               onClick={hanldeOpenedQuiz}
