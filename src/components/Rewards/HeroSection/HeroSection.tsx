@@ -52,7 +52,7 @@ const HeroSection = () => {
                         </div>
                       </div>
                       <div className="absolute bottom-[17px]  flex">
-                        <div className="ml-[16px] border-r-[1px] border-borderColor pr-[16px] mw-12:ml-[8px] mw-sm4:pr-[10px]">
+                        <div className="ml-[16px] border-r-[2px] border-brandLightOpacity10 pr-[16px] mw-12:ml-[8px] mw-sm4:pr-[10px]">
                           <div className="flex items-center">
                             <Image src={remote} alt="" className="" />
                             <h4 className="montserratfont font-semibold text-[32px] uppercase text-[#E5E5E5] ml-[6px]">
@@ -63,7 +63,7 @@ const HeroSection = () => {
                             Quizzes Played
                           </p>
                         </div>
-                        <div className="ml-[11px] border-r-[1px] border-borderColor pr-[16px] mw-12:ml-[8px] mw-sm4:pr-[10px]">
+                        <div className="ml-[11px] border-r-[1px] border-brandLightOpacity10 pr-[16px] mw-12:ml-[8px] mw-sm4:pr-[10px]">
                           <div className="flex items-center justify-center">
                             <Image src={target} alt="" className="" />
                             <h4 className="montserratfont font-semibold text-[32px] uppercase text-[#E5E5E5] ml-[6px] ">
@@ -132,8 +132,8 @@ const HeroSection = () => {
                                 className="mw-sm4:w-[16px] mw-sm4:h-[16px]"
                               />
                             </div>
-                            <div className="h-[34px] mw-lg:h-[43px] mw-md:h-[34px]">
-                              <p className="montserratfont mr-[12px] h-[40px] w-[40px] bg-brandLightOpacity10 rounded-[50%] flex items-center justify-center text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px] mw-md:w-[30px] mw-md:h-[30px]">
+                            <div className="h-[34px] mw-lg:h-[43px] mw-md:h-[36px]">
+                              <p className="montserratfont mr-[12px] h-[40px] w-[40px] bg-brandLightOpacity10 rounded-[50%] flex items-center justify-center text-[22px] font-normal capitalize text-brandLightOpacity70 leading-normal mw-12:mr-[16px] mw-12:text-[18px] mw-xl:text-[18px] mw-sm4:text-[16px] mw-md:w-[30px] mw-md:h-[30px] mw-md:pr-[1px]">
                                 W
                               </p>
                             </div>
