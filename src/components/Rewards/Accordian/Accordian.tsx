@@ -316,7 +316,7 @@ const Accordiannn = (props: any) => {
         </div>
       </div> */}
       <div className="w-full  mainwrapper_accordoian mb-[16px]">
-        <div className="mx-auto w-full px-[17px] rounded-[8px] border dark:border-brandLightOpacity50   pt-[21px]    dark:bg-[#221E1F] mw-lg:px-[0px] mw-lg:pt-[16px] ">
+        <div className="mx-auto w-full px-[17px] rounded-[8px] border dark:border-brandLightOpacity50   pt-[18px]    dark:bg-[#221E1F] mw-lg:px-[0px] mw-lg:pt-[16px] ">
           <Accordion open={open === 1} className="">
             <AccordionHeader
               onClick={() => handleOpen(1)}
@@ -555,7 +555,7 @@ const Accordiannn = (props: any) => {
         </div>
       </div>
       <div className="w-full  mainwrapper_accordoian mb-[16px]">
-        <div className="mx-auto w-full px-[17px] rounded-[8px] border dark:border-brandLightOpacity50   pt-[22px]    dark:bg-[#221E1F] mw-lg:px-[0px] mw-lg:pt-[16px]">
+        <div className="mx-auto w-full px-[17px] rounded-[8px] border dark:border-brandLightOpacity50   pt-[18px]    dark:bg-[#221E1F] mw-lg:px-[0px] mw-lg:pt-[16px]">
           <Accordion open={open === 2} className="">
             <AccordionHeader
               onClick={() => handleOpen(2)}
@@ -794,7 +794,7 @@ const Accordiannn = (props: any) => {
         </div>
       </div>
       <div className="w-full  mainwrapper_accordoian mb-[16px]">
-        <div className="mx-auto w-full px-[17px] rounded-[8px] border dark:border-brandLightOpacity50   pt-[22px]    dark:bg-[#221E1F] mw-lg:px-[0px] mw-lg:pt-[16px]">
+        <div className="mx-auto w-full px-[17px] rounded-[8px] border dark:border-brandLightOpacity50   pt-[18px]    dark:bg-[#221E1F] mw-lg:px-[0px] mw-lg:pt-[16px]">
           <Accordion open={open === 3} className="">
             <AccordionHeader
               onClick={() => handleOpen(3)}
@@ -1033,7 +1033,7 @@ const Accordiannn = (props: any) => {
         </div>
       </div>
       <div className="w-full  mainwrapper_accordoian mb-[16px]">
-        <div className="mx-auto w-full px-[17px] rounded-[8px] border dark:border-brandLightOpacity50   pt-[22px]    dark:bg-[#221E1F] mw-lg:px-[0px] mw-lg:pt-[16px]">
+        <div className="mx-auto w-full px-[17px] rounded-[8px] border dark:border-brandLightOpacity50   pt-[18px]    dark:bg-[#221E1F] mw-lg:px-[0px] mw-lg:pt-[16px]">
           <Accordion open={open === 4} className="">
             <AccordionHeader
               onClick={() => handleOpen(4)}
@@ -1272,7 +1272,7 @@ const Accordiannn = (props: any) => {
         </div>
       </div>
       <div className="w-full  mainwrapper_accordoian mb-[16px]">
-        <div className="mx-auto w-full px-[17px] rounded-[8px] border dark:border-brandLightOpacity50   pt-[22px]    dark:bg-[#221E1F] mw-lg:px-[0px] mw-lg:pt-[16px]">
+        <div className="mx-auto w-full px-[17px] rounded-[8px] border dark:border-brandLightOpacity50   pt-[18px]  dark:bg-[#221E1F] mw-lg:px-[0px] mw-lg:pt-[16px]">
           <Accordion open={open === 5} className="">
             <AccordionHeader
               onClick={() => handleOpen(5)}

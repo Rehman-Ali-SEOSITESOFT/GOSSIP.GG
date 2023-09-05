@@ -202,11 +202,11 @@ const HeroSection = () => {
                   <div
                     className={`${style.blurry} pt-[21px] pl-[16px] pb-[31px] mw-sm4:pt-[6px] mw-sm4:pl-[8px]  mw-sm4:pb-[12px]`}
                   >
-                    <h6 className="montserratfont font-medium	tracking-[9.8px] text-[14px] text-[#fff] leading-normal mw-sm5:text-[10px] mw-sm5:font-normal mw-sm5:tracking-[3px]">
+                    <h6 className="montserratfont font-medium	tracking-[9.8px] text-[14px] text-[#fff] leading-normal mw-sm5:text-[10px] mw-sm5:font-normal mw-sm5:tracking-[3px] mw-sm3:font-medium">
                       QUIZ
                     </h6>
                     <p
-                      className={`${style.buttinn} montserratfont text-[32px] font-semibold leading-normal text-[#E5E5E5] pt-[22px] pb-[17px] mw-12:text-[28px] mw-md:text-[22px]  mw-sm:text-[20px] mw-sm:pt-[8px] mw-sm:pb-[6px] mw-sm4:text-[12px] mw-sm:pr-[70px]`}
+                      className={`${style.buttinn} montserratfont text-[32px] font-semibold leading-normal text-[#E5E5E5] pt-[22px] pb-[17px] mw-lg:pr-[70px] mw-9:pr-[15px] mw-12:text-[28px] mw-md:text-[22px]  mw-sm:text-[16px] mw-sm:pt-[8px] mw-sm:pb-[6px] mw-sm4:text-[12px] mw-sm:pr-[32px] mw-sm4:text-[14px] mw-sm4:pr-[50px] mw-sm5:pr-[25px] mw-sm3:text-[12px]`}
                     >
                       Play today to win exciting prizes like these.
                     </p>
