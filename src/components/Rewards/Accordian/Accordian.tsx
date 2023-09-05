@@ -42,7 +42,6 @@ const Accordiannn = (props: any) => {
     setIsDarkTheme(theme === "dark" ? "dark" : "light");
   }, [theme]);
 
-
   return (
     <>
       {/* <div className={`w-full  mainwrapper_accordoian`}>

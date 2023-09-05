@@ -206,7 +206,7 @@ const HeroSection = () => {
                       QUIZ
                     </h6>
                     <p
-                      className={`${style.buttinn} montserratfont text-[32px] font-semibold leading-normal text-[#E5E5E5] pt-[22px] pb-[17px] mw-lg:pr-[70px] mw-9:pr-[15px] mw-12:text-[28px] mw-md:text-[22px]  mw-sm:text-[16px] mw-sm:pt-[8px] mw-sm:pb-[6px] mw-sm4:text-[12px] mw-sm:pr-[32px] mw-sm4:text-[14px] mw-sm4:pr-[50px] mw-sm5:pr-[25px] mw-sm3:text-[12px]`}
+                      className={`${style.buttinn} montserratfont text-[32px] font-semibold leading-normal text-[#E5E5E5] pt-[22px] pb-[17px] mw-lg:pr-[70px] mw-9:pr-[15px] mw-12:text-[28px] mw-md:text-[22px]  mw-sm:text-[16px] mw-sm:pt-[8px] mw-sm:pb-[6px] mw-sm4:text-[12px] mw-sm:pr-[32px] mw-sm4:text-[14px] mw-sm4:pr-[50px] mw-sm5:pr-[25px] mw-sm3:text-[12px] mw-sm3:pb-[10px]`}
                     >
                       Play today to win exciting prizes like these.
                     </p>

@@ -37,12 +37,12 @@
 .mainwrapper_accordoian .slick-prev {
   left: -30px !important;
 }
-@media screen and (max-width: 1360px) {
+@media screen and (max-width: 1370px) {
   .mainwrapper_accordoian .slick-next {
-    right: -36px !important;
+    right: -35px !important;
   }
   .mainwrapper_accordoian .slick-prev {
-    left: -36px !important;
+    left: -35px !important;
   }
 }
 @media screen and (max-width: 1330px) {
