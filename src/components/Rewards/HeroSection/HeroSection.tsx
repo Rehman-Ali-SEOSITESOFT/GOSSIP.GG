@@ -63,7 +63,7 @@ const HeroSection = () => {
                             Quizzes Played
                           </p>
                         </div>
-                        <div className="ml-[11px] border-r-[1px] border-brandLightOpacity10 pr-[16px] mw-12:ml-[8px] mw-sm4:pr-[10px]">
+                        <div className="ml-[11px] border-r-[2px] border-brandLightOpacity10 pr-[16px] mw-12:ml-[8px] mw-sm4:pr-[10px]">
                           <div className="flex items-center justify-center">
                             <Image src={target} alt="" className="" />
                             <h4 className="montserratfont font-semibold text-[32px] uppercase text-[#E5E5E5] ml-[6px] ">
