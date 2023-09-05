@@ -194,7 +194,7 @@ const QuizHistory = () => {
                         selectedValue == "Today" ? (
                           <>
                             {" "}
-                            <p className="montserratfont text-[16px] font-normal leading-normal text-[#E5E5E5] pt-[94px]">
+                            <p className="montserratfont text-[16px] font-normal leading-normal dark:text-[#E5E5E5] pt-[94px]">
                               Your have not yet played any quizzes!
                             </p>
                             <h5 className="text-brandDark2 dark:text-brandLightOpacity100 font-semibold test-base leading-5  montserratfont pt-[32px]	pb-[95px] ">
@@ -226,7 +226,7 @@ const QuizHistory = () => {
                     <div className="for-you-section  pt-[51px]  mw-md:pt-[32px]">
                       {/* <Accordiannn /> */}
 
-                      <div className="]">
+                      <div className="">
                         <Accordiannn />
                       </div>
 

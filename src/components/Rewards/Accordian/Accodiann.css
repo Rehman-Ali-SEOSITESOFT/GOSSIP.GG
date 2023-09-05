@@ -55,10 +55,10 @@
 }
 @media screen and (max-width: 1280px) {
   .mainwrapper_accordoian .slick-next {
-    right: -50px !important;
+    right: -55px !important;
   }
   .mainwrapper_accordoian .slick-prev {
-    left: -50px !important;
+    left: -55px !important;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -89,6 +89,9 @@
   }
   .date____ {
     display: flex !important;
+  }
+  .mainwrapper_accordoian .slick-dots {
+    bottom: -37px !important;
   }
 }
 @media screen and (max-width: 768px) {
