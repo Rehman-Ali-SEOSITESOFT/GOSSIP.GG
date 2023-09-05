@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import { Disclosure } from "@headlessui/react";
 import Slider from "react-slick";
 import "./Accodiann.css";
@@ -30,26 +30,46 @@ const Accordiannn = (props: any) => {
     slidesToScroll: 1,
   };
   const [isDarkTheme, setIsDarkTheme] = useState<string>("");
-  const [openIndexes, setOpenIndexes] = useState<number[]>([0]); // Open the first disclosure by default
 
-  const toggleDisclosure = (item: number) => {
-    if (openIndexes.includes(item)) {
-      setOpenIndexes(openIndexes.filter((i) => i !== item));
-    } else {
-      setOpenIndexes([...openIndexes, item]);
-    }
-  };
   useEffect(() => {
     setIsDarkTheme(theme === "dark" ? "dark" : "light");
   }, [theme]);
+
+
   return (
     <>
       <div className={`w-full  mainwrapper_accordoian`}>
         <div className="mx-auto w-full px-[17px] rounded-[8px] border dark:border-brandLightOpacity50   pt-[22px]    dark:bg-[#221E1F] mw-lg:px-[0px] mw-lg:pt-[16px]">
-          <Disclosure as="div">
-            {({ open }) => (
+          <Disclosure
+            key={props.index}
+            as="div"
+            // open={(props.activeDisclosurePanel === null && props.index === 0) ? true : false}
+            // defaultOpen={props.activeDisclosurePanel === null && props.index === 0 ? true : false }
+            // defaultOpen={ (props.index === 0) ? true :  false }
+            defaultOpen={( props.index === 0) ? true : false} 
+         >
+            { (panel) => {
+              const { open, close } = panel;
+               return(
+                
               <>
-                <Disclosure.Button className="flex w-full px-[58px] justify-between items-center rounded-lg text-left text-sm font-medium text-purple-900  pb-[23px] mw-lg:pb-[16px] mw-lg:flex-col">
+                <Disclosure.Button
+                  onClick={ () => {                        
+                    if(props.activeDisclosurePanel === null && props.index === 0){
+                      close();
+                    }
+                     
+                    if (!open) {
+                      // On the first click, the panel is opened but the "open" prop's value is still false. Therefore the falsey verification
+                      // This will make so the panel close itself when we click it while open 
+                      close(); 
+                    }
+
+                    // Now we call the function to close the other opened panels (if any)
+                    props.toggle({ ...panel, key: props.index });
+                  }}
+                  className="flex w-full px-[58px] justify-between items-center rounded-lg text-left text-sm font-medium text-purple-900  pb-[23px] mw-lg:pb-[16px] mw-lg:flex-col"
+                >
                   <div className="flex justify-between w-[100%] items-center mw-lg:justify-center">
                     <div className="first_section text-center flex items-center ">
                       <p className="montserratfont text-brandDark2 dark:text-[#ED4250] text-[20px] mw-lg:text-[16px] mw-md:text-[14px] font-semibold leading-normal">
@@ -61,7 +81,7 @@ const Accordiannn = (props: any) => {
                         </h4>
                       </div>
                     </div>
-
+                     
                     <i
                       className={`fa-solid fa-angle-down text-brandDark2 dark:text-[#ED4E50] text-[16px] mw-lg:ml-[8px] ${
                         open ? "rotate-180 transform " : null
@@ -77,6 +97,7 @@ const Accordiannn = (props: any) => {
                   <div className="ml-[80px] mw-lg:ml-[0px] mw-lg:mt-[16px] hidden mw-lg:block">
                     <h4 className="montserratfont text-[16px] font-bold leading-normal text-brandDark2 dark:text-[#E5E5E5] mw-md:text-[14px] mw-sm:text-center">
                       {props.heading}
+                      
                     </h4>
                   </div>
                 </Disclosure.Button>
@@ -275,7 +296,8 @@ const Accordiannn = (props: any) => {
                   </div>
                 </Disclosure.Panel>
               </>
-            )}
+              )
+            }}
           </Disclosure>
         </div>
       </div>

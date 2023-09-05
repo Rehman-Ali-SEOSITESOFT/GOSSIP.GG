@@ -35,6 +35,7 @@ const QuizHistory = () => {
   const [opendropDown, setOpenDropdown] = useState<Boolean>(false);
 
   interface Sliders {
+    id: any;
     date: string;
     heading: string;
     winnername: string;
@@ -42,26 +43,31 @@ const QuizHistory = () => {
 
   const [list, setList] = useState<Sliders[]>([
     {
+      id: 1,
       date: "27 July",
       heading: " What is the largest ever prize pool for a gaming tournament?",
       winnername: " @winner_nemel",
     },
     {
+      id: 2,
       date: "26 July",
       heading: " What is the largest ever prize pool for a gaming tournament?",
       winnername: " @winner_nemel",
     },
     {
+      id: 3,
       date: "25 July",
       heading: " What is the largest ever prize pool for a gaming tournament?",
       winnername: " @winner_nemel",
     },
     {
+      id: 4,
       date: "24 July",
       heading: " What is the largest ever prize pool for a gaming tournament?",
       winnername: " @winner_nemel",
     },
     {
+      id: 5,
       date: "23 July",
       heading: " What is the largest ever prize pool for a gaming tournament?",
       winnername: " @winner_nemel",
@@ -126,6 +132,25 @@ const QuizHistory = () => {
   useEffect(() => {
     setIsDarkTheme(theme === "dark" ? "dark" : "light");
   }, [theme]);
+
+
+
+  //////////////////////
+  const [activeDisclosurePanel, setActiveDisclosurePanel] = useState<any>(null);
+
+  function togglePanels(newPanel) {
+
+    if (activeDisclosurePanel) {
+      if (activeDisclosurePanel.key !== newPanel.key && activeDisclosurePanel.open) {
+        activeDisclosurePanel.close();
+      }
+    }
+
+    setActiveDisclosurePanel({
+      ...newPanel, 
+      open: !newPanel.open
+    });
+  }
 
   return (
     <>
@@ -296,9 +321,13 @@ const QuizHistory = () => {
                       {list.map((e, idx) => (
                         <div key={idx} className="mb-[16px]">
                           <Accordiannn
-                            date={e.date}
+                           item={e}
+                           date={e.date}
                             heading={e.heading}
                             winnername={e.winnername}
+                            index={idx}
+                            toggle ={togglePanels}
+                            activeDisclosurePanel={activeDisclosurePanel}
                           />
                         </div>
                       ))}
