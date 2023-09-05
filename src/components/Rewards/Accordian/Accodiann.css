@@ -39,10 +39,18 @@
 }
 @media screen and (max-width: 1360px) {
   .mainwrapper_accordoian .slick-next {
-    right: -40px !important;
+    right: -36px !important;
   }
   .mainwrapper_accordoian .slick-prev {
-    left: -40px !important;
+    left: -36px !important;
+  }
+}
+@media screen and (max-width: 1330px) {
+  .mainwrapper_accordoian .slick-next {
+    right: -55px !important;
+  }
+  .mainwrapper_accordoian .slick-prev {
+    left: -55px !important;
   }
 }
 @media screen and (max-width: 1280px) {
