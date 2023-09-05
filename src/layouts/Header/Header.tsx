@@ -437,7 +437,7 @@ const Header = () => {
                                               : (e) =>
                                                   onClickOpenPrizeOfDayModal(e)
                                           }
-                                          className={`text-brandDark2 dark:text-brandLightOpacity70 montserratfont text-sm leading-[15px] font-medium	underline`}
+                                          className={`text-brandDark2 dark:text-brandLightOpacity70 montserratfont text-xs leading-[15px] font-medium	underline`}
                                         >
                                           {e.quiz
                                             ? "Play Quiz"

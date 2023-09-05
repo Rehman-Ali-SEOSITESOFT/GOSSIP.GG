@@ -52,21 +52,21 @@ const QuizHistory = () => {
       heading: " What is the largest ever prize pool for a gaming tournament?",
       winnername: " @winner_nemel",
     },
-    {
-      date: "25 july",
-      heading: " What is the largest ever prize pool for a gaming tournament?",
-      winnername: " @winner_nemel",
-    },
-    {
-      date: "24 july",
-      heading: " What is the largest ever prize pool for a gaming tournament?",
-      winnername: " @winner_nemel",
-    },
-    {
-      date: "23 july",
-      heading: " What is the largest ever prize pool for a gaming tournament?",
-      winnername: "@winner_nemel",
-    },
+    // {
+    //   date: "25 july",
+    //   heading: " What is the largest ever prize pool for a gaming tournament?",
+    //   winnername: " @winner_nemel",
+    // },
+    // {
+    //   date: "24 july",
+    //   heading: " What is the largest ever prize pool for a gaming tournament?",
+    //   winnername: " @winner_nemel",
+    // },
+    // {
+    //   date: "23 july",
+    //   heading: " What is the largest ever prize pool for a gaming tournament?",
+    //   winnername: "@winner_nemel",
+    // },
   ]);
   const [openTab, setOpenTab] = useState<number | null>(1);
   const [open, setOpen] = useState<boolean | null>(false);
@@ -127,6 +127,7 @@ const QuizHistory = () => {
   useEffect(() => {
     setIsDarkTheme(theme === "dark" ? "dark" : "light");
   }, [theme]);
+  console.log(selectedValue, "selected value");
 
   return (
     <>
@@ -178,7 +179,7 @@ const QuizHistory = () => {
                     </a>
                   </li>
                 </ul>
-                <div className="mb-6 mw-lg:mt-[91px]">
+                <div className="mb-6 mw-lg:mt-[91px] ">
                   <div className="tab-content tab-space w-full  h-full  	">
                     <div
                       className={
@@ -188,105 +189,31 @@ const QuizHistory = () => {
                       }
                       id="link1"
                     >
-                      <div className="for-saved-section text-center ">
-                        <p className="montserratfont text-[16px] font-normal leading-normal text-[#E5E5E5] pt-[145px]">
-                          Your have not yet played any quizzes!
-                        </p>
-                        <h5 className="text-brandDark2 dark:text-brandLightOpacity100 font-semibold test-base leading-5  montserratfont pt-[32px]	pb-7 ">
-                          Play today&#39;s quiz &nbsp;
-                          <a href="#" className="underline underline-offset-4 ">
-                            here&nbsp;
-                          </a>
-                        </h5>
+                      <div className="for-saved-section text-center pt-[51px]">
+                        {selectedValue == "Please select" ||
+                        selectedValue == "Today" ? (
+                          <>
+                            {" "}
+                            <p className="montserratfont text-[16px] font-normal leading-normal text-[#E5E5E5] pt-[94px]">
+                              Your have not yet played any quizzes!
+                            </p>
+                            <h5 className="text-brandDark2 dark:text-brandLightOpacity100 font-semibold test-base leading-5  montserratfont pt-[32px]	pb-[95px] ">
+                              Play today&#39;s quiz &nbsp;
+                              <a
+                                href="#"
+                                className="underline underline-offset-4 "
+                              >
+                                here&nbsp;
+                              </a>
+                            </h5>
+                          </>
+                        ) : (
+                          <div className="text-start">
+                            <Accordiannn />
+                          </div>
+                        )}
 
                         {/* accordian section is here but hide */}
-                        {/* <div className="for-you-section  pt-[51px]  mw-md:pt-[32px]">
-                      {list.map((e, idx) => (
-                        <div key={idx} className="mb-[16px]">
-                          <Accordiannn
-                            date={e.date}
-                            heading={e.heading}
-                            winnername={e.winnername}
-                          />
-                        </div>
-                      ))}
-
-                      <div className={style.main_pagination_gap}>
-                        <div className="2xl:container mw-sm:border-b dark:border-b-brandLightOpacity10 border-b-borderEditProfile">
-                          <div className="flex w-full pt-[16px] pb-[64px] mw-md:pt-[32px] mw-md:pb-[48px]  pagi">
-                            <div className="w-[450px] m-auto">
-                              <div className="pagination flex justify-between items-center">
-                                <div className="back-arrow inline-block bg-grayCard dark:bg-brandDark1 dark:hover:bg-brandLightOpacity10 w-[32px] h-[32px] leading-[32px] flex justify-center items-center rounded-2xl cursor-pointer hover:bg-borderEditProfile">
-                                  <Image
-                                    src={arrow}
-                                    alt="back-arrow"
-                                    className="	 brightness-0	dark:brightness-100	w-[8px]"
-                                  />
-                                </div>
-                                <div className="mw-sm1:hidden count-number flex items-center justify-between w-[calc(100%_-_100px)]	">
-                                  {page.map((element, index) => {
-                                    return index === 5 ? (
-                                      <span
-                                        key={index}
-                                        className="inline-block w-[25px] h-[25px]  montserratfont font-normal text-base rounded-2xl	 leading-5 text-brandDark2	dark:text-brandLightOpacity100  text-center leading-[30px] 	"
-                                      >
-                                        ...
-                                      </span>
-                                    ) : (
-                                      <span
-                                        key={index}
-                                        className={`inline-block w-[32px] h-[32px]  montserratfont font-normal text-base rounded-2xl	leading-5 text-brandDark2	dark:text-brandLightOpacity100  text-center leading-[30px] cursor-pointer	  border ${
-                                          selectNumber === index
-                                            ? " dark:bg-brandLightOpacity10 bg-white  border-brandDark2 dark:border-brandLightOpacity100 "
-                                            : "bg-none border-none"
-                                        }`}
-                                        onClick={() =>
-                                          hanldeNumberSelect(index)
-                                        }
-                                      >
-                                        {element}
-                                      </span>
-                                    );
-                                  })}
-                                </div>
-                                <div className="hidden mw-sm1:flex count-number  items-center justify-between w-[calc(100%_-_100px)]	">
-                                  {mobilepage.map((element, index) => {
-                                    return index === 3 ? (
-                                      <span
-                                        key={index}
-                                        className={`inline-block w-[25px] h-[25px]  montserratfont font-normal text-base rounded-2xl	 leading-5 text-brandDark2	dark:text-brandLightOpacity100  text-center leading-[30px]`}
-                                      >
-                                        ...
-                                      </span>
-                                    ) : (
-                                      <span
-                                        key={index}
-                                        className={`inline-block w-[30px] h-[30px]  montserratfont font-normal text-base rounded-2xl leading-[30px] text-brandDark2 border	dark:text-brandLightOpacity100  text-center cursor-pointer ${
-                                          mobileSelectNumber === index
-                                            ? " dark:bg-brandLightOpacity10  border-brandDark2 dark:border-brandLightOpacity100 "
-                                            : "bg-none border-none"
-                                        }`}
-                                        onClick={() => mobile(index)}
-                                      >
-                                        {element}
-                                      </span>
-                                    );
-                                  })}
-                                </div>
-                                <div className="next-arrow inline-block bg-grayCard hover:bg-borderEditProfile  dark:bg-brandDark1 dark:hover:bg-brandLightOpacity10 w-[31px] h-[32px] leading-[32px] flex justify-center items-center  rounded-2xl rotate-180	cursor-pointer pr-[2px]">
-                                  <Image
-                                    src={arrow}
-                                    alt="back-arrow"
-                                    className="brightness-0	dark:brightness-100	w-[8px] "
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                       
-                      </div>
-                    </div> */}
 
                         {/* accordian section ends here */}
                       </div>
@@ -297,15 +224,11 @@ const QuizHistory = () => {
                     id="link2"
                   >
                     <div className="for-you-section  pt-[51px]  mw-md:pt-[32px]">
-                      {list.map((e, idx) => (
-                        <div key={idx} className="mb-[16px]">
-                          <Accordiannn
-                            date={e.date}
-                            heading={e.heading}
-                            winnername={e.winnername}
-                          />
-                        </div>
-                      ))}
+                      {/* <Accordiannn /> */}
+
+                      <div className="]">
+                        <Accordiannn />
+                      </div>
 
                       <div className={style.main_pagination_gap}>
                         <div className="2xl:container mw-sm:border-b dark:border-b-brandLightOpacity10 border-b-borderEditProfile">
