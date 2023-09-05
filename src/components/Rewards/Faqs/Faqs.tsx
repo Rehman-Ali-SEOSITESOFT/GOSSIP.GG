@@ -22,6 +22,25 @@ const Faqs = () => {
       heading: "Customer Support",
     },
   ]);
+
+  const [activeDisclosurePanel, setActiveDisclosurePanel] = useState<any>(null);
+
+  function togglePanels(newPanel) {
+    if (activeDisclosurePanel) {
+      if (
+        activeDisclosurePanel.key !== newPanel.key &&
+        activeDisclosurePanel.open
+      ) {
+        activeDisclosurePanel.close();
+      }
+    }
+
+    setActiveDisclosurePanel({
+      ...newPanel,
+      open: !newPanel.open,
+    });
+  }
+
   return (
     <>
       <section className="mb-[88px] mw-md:mb-[40px]">
@@ -41,7 +60,11 @@ const Faqs = () => {
                     key={idx}
                     className="border-b-[1px] text-brandDark2 dark:border-brandLightOpacity10"
                   >
-                    <FaqsAccordian heading={e.heading} />
+                    <FaqsAccordian
+                      toggle={togglePanels}
+                      index={idx}
+                      heading={e.heading}
+                    />
                   </div>
                 ))}
               </div>

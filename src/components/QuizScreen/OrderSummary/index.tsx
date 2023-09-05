@@ -122,7 +122,7 @@ const OrderSummary = (props: any) => {
                         Mobile&nbsp;-&nbsp;
                         <span className="font-semibold">123456788</span>
                       </p>
-                      <p className="montserratfont cursor-pointer pt-[8px] dark:text-brandLightOpacity70 text-[12px] border-b-[1px] w-fit leading-none border-b-brandLightOpacity70">
+                      <p className="montserratfont cursor-pointer pt-[18px] dark:text-brandLightOpacity70 text-[12px] border-b-[1px] w-fit leading-none border-b-brandLightOpacity70">
                         Change Address
                       </p>
                     </div>
