@@ -15,7 +15,7 @@ const AnswerSubmitScreen = (props: any) => {
   const [openW, setOpenW] = useState<Boolean>(false);
 
   const onClickTermAndConditionScreen = (e: any) => {
-    props.close();
+    // props.close();
     setOpenW(!openW);
   };
   return (

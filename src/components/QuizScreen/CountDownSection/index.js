@@ -30,7 +30,7 @@ const CountDown = (props) => {
               style={{ "--value": hour }}
             />
             :
-            <span className="inline-block  " style={{ "--value": mintues }} />
+            <span className="inline-block" style={{ "--value": mintues }} />
             :
             <span
               className="bottom-second inline-block ml-[2px]"
