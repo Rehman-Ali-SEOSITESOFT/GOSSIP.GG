@@ -2,6 +2,7 @@
   font-family: "Montserrat";
   font-size: 16px;
 }
+
 .buttonDrop {
   width: 300px !important;
   border: 1px solid rgba(229, 229, 229, 0.5);
@@ -13,6 +14,7 @@
   line-height: 20px !important;
   text-transform: capitalize;
 }
+
 .buttonDrop::after {
   content: "";
   background-image: url("../../../assets/esporting-events/downangle.png") !important;
@@ -23,6 +25,7 @@
   height: 15px;
   transform: rotate(180deg) !important;
 }
+
 .maindropdownWrapper .menuitemwrapper {
   background: #2e2a2b !important;
   border: 2px solid rgba(229, 229, 229, 0.1) !important;
@@ -30,14 +33,17 @@
   border-radius: 8px;
   width: 300px !important;
 }
+
 .maindropdownWrapper a:hover {
   background-color: #403d3e;
 }
+
 @media screen and (max-width: 600px) {
   .buttonDrop {
     width: 250px !important;
   }
 }
+
 @media screen and (max-width: 400px) {
   .buttonDrop {
     width: 200px !important;
@@ -48,9 +54,11 @@
   font-family: "Montserrat";
   font-size: 12px;
 }
+
 .main_pagination_gap .pagi {
   padding-top: 36px !important;
 }
+
 .selectBOOX select {
   -webkit-appearance: none;
   background-image: url("../../../assets/rewards/downangle.png");
@@ -67,18 +75,22 @@
 .rdrDefinedRangesWrapper {
   display: none !important;
 }
+
 @media screen and (max-width: 690px) {
   .live-matches .slick-initialized .slick-slide {
     padding: 20px;
   }
+
   .image_wrapper__event img {
     width: auto;
     height: 40px;
   }
+
   .font_esport_event_12 {
     font-size: 10px;
   }
 }
+
 @media screen and (max-width: 600px) {
   .image_wrapper__event img {
     width: 30px;

@@ -72,21 +72,6 @@ const QuizHistory = () => {
       heading: " What is the largest ever prize pool for a gaming tournament?",
       winnername: " @winner_nemel",
     }
-    // {
-    //   date: "25 july",
-    //   heading: " What is the largest ever prize pool for a gaming tournament?",
-    //   winnername: " @winner_nemel",
-    // },
-    // {
-    //   date: "24 july",
-    //   heading: " What is the largest ever prize pool for a gaming tournament?",
-    //   winnername: " @winner_nemel",
-    // },
-    // {
-    //   date: "23 july",
-    //   heading: " What is the largest ever prize pool for a gaming tournament?",
-    //   winnername: "@winner_nemel",
-    // },
   ]);
   const [openTab, setOpenTab] = useState<number | null>(1);
   const [open, setOpen] = useState<boolean | null>(false);
@@ -151,22 +136,7 @@ const QuizHistory = () => {
 
 
 
-  //////////////////////
-  const [activeDisclosurePanel, setActiveDisclosurePanel] = useState<any>(null);
 
-  function togglePanels(newPanel) {
-
-    if (activeDisclosurePanel) {
-      if (activeDisclosurePanel.key !== newPanel.key && activeDisclosurePanel.open) {
-        activeDisclosurePanel.close();
-      }
-    }
-
-    setActiveDisclosurePanel({
-      ...newPanel, 
-      open: !newPanel.open
-    });
-  }
 
   return (
     <>

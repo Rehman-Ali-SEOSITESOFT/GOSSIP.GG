@@ -16,7 +16,7 @@ import { Switch } from "@headlessui/react";
 const AnsweredCorrectly = (props: any) => {
   const cancelButtonRef = useRef(null);
   const [enabled, setEnabled] = useState<boolean | any>(false);
-  console.log("enabled", enabled);
+
   return (
     <Transition.Root show={props.open} as={Fragment}>
       <Dialog
@@ -63,7 +63,7 @@ const AnsweredCorrectly = (props: any) => {
                     <Image src={Close} alt="Close" />
                   </div>
                 </div>
-                <InviteFriendSection title={"Invite Friends"}/>
+                <InviteFriendSection title={"Invite Friends"} />
                 <div className="ml-4 mt-2">
                   <p className="text-[12px] italic montserratfont dark:text-brandLightOpacity70 text-left">
                     Correct Answer:

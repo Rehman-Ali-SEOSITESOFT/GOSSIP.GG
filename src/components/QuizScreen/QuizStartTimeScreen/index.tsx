@@ -59,7 +59,7 @@ const QuizStartTiemScreen = (props: any) => {
                     <Image src={Close} alt="Close" />
                   </div>
                 </div>
-                <InviteFriendSection title={"Invite Friends"}/>
+                <InviteFriendSection title={"Invite Friends"} />
                 <div className="my-[12px] z-[-1]">
                   <CountDown title={"Starts In"} />
                 </div>
