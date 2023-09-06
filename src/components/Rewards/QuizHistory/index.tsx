@@ -13,7 +13,7 @@ import downarrow from "../../../assets/esports/down-arrow.png";
 import LightArrow from "../../../assets/images/filters/lightdown.png";
 import Image from "next/image";
 import arrow from "../../../assets/user-profile/back.png";
-
+import "./QuizHhistory.css";
 import { useTheme } from "next-themes";
 const QuizHistory = () => {
   const { theme } = useTheme();
@@ -71,7 +71,7 @@ const QuizHistory = () => {
       date: "23 July",
       heading: " What is the largest ever prize pool for a gaming tournament?",
       winnername: " @winner_nemel",
-    }
+    },
     // {
     //   date: "25 july",
     //   heading: " What is the largest ever prize pool for a gaming tournament?",
@@ -149,22 +149,22 @@ const QuizHistory = () => {
   }, [theme]);
   console.log(selectedValue, "selected value");
 
-
-
   //////////////////////
   const [activeDisclosurePanel, setActiveDisclosurePanel] = useState<any>(null);
 
   function togglePanels(newPanel) {
-
     if (activeDisclosurePanel) {
-      if (activeDisclosurePanel.key !== newPanel.key && activeDisclosurePanel.open) {
+      if (
+        activeDisclosurePanel.key !== newPanel.key &&
+        activeDisclosurePanel.open
+      ) {
         activeDisclosurePanel.close();
       }
     }
 
     setActiveDisclosurePanel({
-      ...newPanel, 
-      open: !newPanel.open
+      ...newPanel,
+      open: !newPanel.open,
     });
   }
 
@@ -357,7 +357,11 @@ const QuizHistory = () => {
                 </h4>
                 {openDateModal ? (
                   <>
-                    <div className="flex flex-col">
+                    <div
+                      className={`${
+                        isDarkTheme === "dark" ? "dark_date" : "light_date"
+                      } flex flex-col`}
+                    >
                       <DateRange
                         editableDateInputs={true}
                         onChange={(item) => setState([item.selection])}
@@ -367,13 +371,13 @@ const QuizHistory = () => {
                       <div className="flex">
                         <button
                           onClick={_handleSave}
-                          className="border-[1px] border-brandLightOpacity50 montserratfont text-[16px] bg-[#FFFFFF]   py-[8px] text-[#000] text-semibold w-[50%]"
+                          className="border-[1px] border-brandLightOpacity10 montserratfont text-[16px] bg-[#FFFFFF]   py-[8px] dark:text-[#fff] text-semibold w-[50%] dark:bg-brandDark3"
                         >
                           Ok
                         </button>
                         <button
                           onClick={_handleClose}
-                          className="border-[1px] border-brandLightOpacity50 montserratfont text-[16px] bg-[#FFFFFF]   py-[8px] text-[#000] text-semibold w-[50%]"
+                          className="border-[1px] border-brandLightOpacity10 montserratfont text-[16px] bg-[#FFFFFF]   py-[8px] dark:text-[#fff] text-semibold w-[50%] dark:bg-brandDark3"
                         >
                           Cancel
                         </button>

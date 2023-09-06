@@ -1,0 +1,40 @@
+.dark_date .rdrCalendarWrapper.rdrDateRangeWrapper {
+  background-color: #2e2a2b !important;
+}
+.dark_date .rdrEndEdge,
+.dark_date .rdrInRange,
+.dark_date .rdrSelected,
+.dark_date .rdrStartEdge {
+  background: #ed4e50 !important;
+}
+.dark_date .rdrDayNumber span {
+  color: white !important;
+}
+
+.dark_date .rdrDayToday .rdrDayNumber span:after {
+  background: #ed4e50 !important;
+}
+
+.dark_date .rdrDateDisplayWrapper {
+  background: #141313 !important;
+}
+
+.dark_date .rdrDateDisplayItem input {
+  background-color: #2e2a2b !important;
+}
+.dark_date .rdrDateDisplayItem {
+  /* border: 0.5px solid rgba(229, 229, 229, 0.1) !important; */
+  border: none !important;
+}
+
+.dark_date .rdrMonthPicker select,
+.dark_date .rdrYearPicker select {
+  color: white !important;
+}
+.dark_date .rdrMonthPicker select option,
+.dark_date .rdrYearPicker select option {
+  background-color: #2e2a2b !important;
+}
+.dark_date .rdrDayHovered .rdrDayEndPreview {
+  border: 1px solid #ed4e50 !important;
+}
