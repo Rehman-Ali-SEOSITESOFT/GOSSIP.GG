@@ -35,6 +35,24 @@
 .dark_date .rdrYearPicker select option {
   background-color: #2e2a2b !important;
 }
-.dark_date .rdrDayHovered .rdrDayEndPreview {
-  border: 1px solid #ed4e50 !important;
+/* .dark_date .rdrDayHovered span{
+  border:  1px solid #ed4e50 !important;
+
+} */
+
+/* .dark_date .rdrDayEndPreview {
+  border-top: 1px solid #ed4e50 !important;
+  border-bottom: 1px solid #ed4e50 !important;
+  border-right: 1px solid #ed4e50 !important;
+
 }
+
+
+
+.dark_date  .rdrDayInPreview  {
+  border-top: 1px solid #ed4e50 !important;
+  border-bottom: 1px solid #ed4e50 !important;
+} */
+
+
+
