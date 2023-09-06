@@ -45,8 +45,6 @@ const AddScreen = (props: any) => {
     setOpenW(!openW);
   };
 
- 
-
   return (
     <>
       <Transition.Root show={props.open} as={Fragment}>
@@ -107,7 +105,9 @@ const AddScreen = (props: any) => {
                     </div>
                     <div className="bottom-side">
                       <button
-                        className={`${addDisabled ? "bg-brand" : "bg-brand/[0.5]" } outline-none  max-w-[177px] w-full h-[42px] flex items-center justify-between rounded-3xl m-auto pl-[27px] pr-[15px]	 hover:bg-[#ec5d5f] cursor-pointer disabled:hover:bg-brand/[0.5] disabled:hover:cursor-default`}
+                        className={`${
+                          addDisabled ? "bg-brand" : "bg-brand/[0.5]"
+                        } outline-none  max-w-[177px] w-full h-[42px] flex items-center justify-between rounded-3xl m-auto pl-[27px] pr-[15px]	 hover:bg-[#ec5d5f] cursor-pointer disabled:hover:bg-brand/[0.5] disabled:hover:cursor-default`}
                         disabled={addDisabled ? false : true}
                         onClick={
                           props.isSeeResult
@@ -146,7 +146,6 @@ const AddScreen = (props: any) => {
           </div>
         </Dialog>
       </Transition.Root>
-
       <QuestionScreen open={openQ} close={() => setOpenQ(!openQ)} />
       <WinnerScreenTwo open={openW} close={() => setOpenW(!openW)} />
     </>

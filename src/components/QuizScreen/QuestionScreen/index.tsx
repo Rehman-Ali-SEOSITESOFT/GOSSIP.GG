@@ -30,8 +30,10 @@ const QuestionScreen = (props: any) => {
   const [openQ, setOpenQ] = useState<Boolean>(false);
 
   const onClickSubmit = (e: any) => {
-    props.close();
-    setOpenQ(!openQ);
+    if(optionSelect){
+      props.close();
+      setOpenQ(!openQ);  
+    }
   };
 
   return (

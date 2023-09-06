@@ -12,11 +12,10 @@ import CountDown from "../CountDownSection";
 const AnswerSubmitScreen = (props: any) => {
   const cancelButtonRef = useRef(null);
   const [enabled, setEnabled] = useState<boolean | any>(false);
-
   const [openW, setOpenW] = useState<Boolean>(false);
 
   const onClickTermAndConditionScreen = (e: any) => {
-    props.close();
+    // props.close();
     setOpenW(!openW);
   };
   return (
@@ -84,7 +83,10 @@ const AnswerSubmitScreen = (props: any) => {
                     <div className="px-[16px] mt-[52px]">
                       <p className="text-left text-brandDark2 dark:text-brandLightOpacity100 montserratfont text-[16px] font-medium ">
                         Results will be announced at
-                        <span className="w-[100%] text-brand ">&nbsp;8:00 P.M.</span><br/>
+                        <span className="w-[100%] text-brand ">
+                          &nbsp;8:00 P.M.
+                        </span>
+                        <br />
                         tonight.
                       </p>
                       <div className="mt-[13px] flex flex-row justify-between items-center">

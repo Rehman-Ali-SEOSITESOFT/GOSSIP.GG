@@ -40,13 +40,12 @@ const Rewards = () => {
                   >
                     <div>
                       <p className="text-brand text-sm font-bold tracking-[1.4px] uppercase montserratfont mw-sm4:text-[12px] w-[240px]">
-                        Daily Quiz{" "}
+                        Daily Quiz
                         <span className="text-[14px] font-semibold mw-sm4:text-[12px] capitalize">
-                          In{" "}
+                          In
                           <span className=" inline-block	 w-[70px]">
-                            {" "}
-                            <CountDownTimer />{" "}
-                          </span>{" "}
+                            <CountDownTimer />
+                          </span>
                           <i className="fa-solid fa-angle-right"></i>
                           <i className="fa-solid fa-angle-right"></i>
                         </span>
@@ -95,13 +94,12 @@ const Rewards = () => {
               >
                 <div>
                   <p className="text-brand text-sm font-bold tracking-[1.4px] uppercase montserratfont mw-sm4:text-[12px] w-[240px]">
-                    Daily Quiz{" "}
+                    Daily Quiz
                     <span className="text-[14px] font-semibold mw-sm4:text-[12px] capitalize  ">
-                      In{" "}
+                      In
                       <span className="inline-block	 w-[70px]">
-                        {" "}
                         <CountDownTimer />
-                      </span>{" "}
+                      </span>
                       <i className="fa-solid fa-angle-right"></i>
                       <i className="fa-solid fa-angle-right"></i>
                     </span>

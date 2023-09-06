@@ -1,11 +1,7 @@
 .abspreviousgiven_wrapper:hover span {
   display: none;
 }
-/* .abspreviousgiven_wrapper:hover .overlaydiv {
-  display: block;
-  position: absolute;
-  top: 0px;
-} */
+
 .overlay {
   background: linear-gradient(
       0deg,

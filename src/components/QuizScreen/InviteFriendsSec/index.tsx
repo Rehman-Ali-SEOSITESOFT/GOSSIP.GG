@@ -59,9 +59,6 @@ const InviteFriendSection = (props) => {
           </p>
         </div>
       </div>
-      {/* <p className="cursor-pointer  mr-[16px] mt-[16px] text-brandDark1 dark:text-brandLightOpacity70 border-b-[1px] border-b-brandDark1 dark:border-b-brandLightOpacity70 leading-none min-w-min montserratfont text-[12px] font-medium">
-        Invite Friends
-      </p> */}
 
       <Menu as="div">
         <Menu.Button className="cursor-pointer">

@@ -158,7 +158,6 @@ const QuizRatio = () => {
       </div>
       {/* <IntroScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       <NewIntroScreen open={openIntro} close={hanldeOpenedQuiz} />
-
       {/* <WinnerScreenTwo open={openIntro} close={hanldeOpenedQuiz} /> */}
       <AddScreen open={open} close={onClickPlay} isSeeResult={true} />
       {/* <AddScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
@@ -166,7 +165,6 @@ const QuizRatio = () => {
       {/* <AnswerSubmitScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <TermsAndCondition open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <WinnerScreenTwo open={openIntro} close={hanldeOpenedQuiz} /> */}
-
       {/* <QuizStartTiemScreen open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <AnsweredIncorrectly open={openIntro} close={hanldeOpenedQuiz} /> */}
       {/* <AnsweredCorrectly open={openIntro} close={hanldeOpenedQuiz} /> */}

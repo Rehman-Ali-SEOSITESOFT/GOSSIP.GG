@@ -8,67 +8,60 @@
   /* animation-iteration-count: infinite; */
   animation-fill-mode: forwards;
   opacity: 0;
-  /* position: absolute;
-  bottom: -24px;
-  left: 10%;
-  right: 0;
-  margin: auto; */
-  /* transform: rotate(82deg); */
+
 }
+
 .image-bottom-to-top.stoped-image {
-  /* transform: translate(55%, 145px) rotate(27deg); */
-  /* transform: translate(55px, -248px) rotate(23deg); */
+
   transform: translate(54px, -248px) rotate(25deg);
   opacity: 0;
   width: 0;
   transition: 0.4s ease-in-out;
-  /* opacity: 0; */
 
-  /* animation-name: stoped-image; */
-  /* animation-delay: 0.7s; */
 }
+
 .img-bottom {
   overflow: hidden;
 }
+
 .tile-animtion {
-  /* margin-right: -285px; */
+
   animation-name: tile-animtion;
   animation-duration: 2s;
   transform: translate(170px, 0px);
 }
+
 .tile-animtion.add {
-  /* animation-duration: 1.7s; */
+
 
   transform: translate(0px, 0px);
-  /* transition: 05s; */
-  /* animation-duration: 5s; */
-  /* transform: translate(-130px, 0px); */
+
 }
 
 .logohide-show {
   transition: 2s;
   opacity: 1;
 }
+
 .logohide {
   opacity: 0;
   transition: 2s;
 }
 
-/* .add {
-  animation-name: add;
-  animation-duration: 1s;
-  animation-delay: 1s;
-} */
+
 
 .button-animtion {
   animation-name: button-animtion;
   animation-duration: 1s;
 }
+
 @keyframes button-animtion {
+
   0%,
   95% {
     opacity: 0;
   }
+
   100% {
     transition: 0.5s ease-in-out;
     opacity: 1;
@@ -78,50 +71,44 @@
 /*  done */
 @keyframes tile-animtion {
   0% {
-    /* margin-right: -285px; */
+
     transform: translate(170px, 0px);
   }
+
   50% {
     transform: translate(-130px, 0px);
   }
+
   100% {
-    /* margin-right: 65px; */
+
     transform: translate(0px, 0px);
-    /* transform: translate(-130px, 0px); */
+
   }
 }
 
 @keyframes image-bottom-to-top {
   0% {
     transform: translate(70%, 356px) rotate(80deg);
-    /* transform: translate(30%, 356px) rotate(80deg); */
+
     width: 180px;
     opacity: 1;
   }
+
   45% {
     transform: translate(85%, 145px) rotate(45deg);
     width: 140px;
     opacity: 1;
   }
+
   95% {
     transform: translate(55px, -248px) rotate(23deg);
     opacity: 1;
     width: 65px;
   }
-  100% {
-    /* width: 0;
-    opacity: 0;
-    visibility: hidden; */
-  }
+
+  100% {}
 }
 
-/* @keyframes stoped-image {
-  0% {
-    transform: translate(55%, 145px) rotate(27deg);
-  }
-  100% {
-  }
-} */
 
 @media screen and (max-width: 400px) {
   @keyframes image-bottom-to-top {
@@ -129,16 +116,19 @@
       transform: translate(70%, 356px) rotate(80deg);
       opacity: 1;
     }
+
     45% {
       transform: translate(85%, 145px) rotate(45deg);
       width: 140px;
       opacity: 1;
     }
+
     95% {
       transform: translate(40px, -270px) rotate(23deg);
       opacity: 1;
       width: 65px;
     }
+
     100% {
       width: 0;
       opacity: 0;
