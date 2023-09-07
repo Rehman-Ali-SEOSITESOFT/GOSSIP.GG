@@ -71,7 +71,7 @@ const QuizHistory = () => {
       date: "23 July",
       heading: " What is the largest ever prize pool for a gaming tournament?",
       winnername: " @winner_nemel",
-    }
+    },
   ]);
   const [openTab, setOpenTab] = useState<number | null>(1);
   const [open, setOpen] = useState<boolean | null>(false);
@@ -133,10 +133,6 @@ const QuizHistory = () => {
     setIsDarkTheme(theme === "dark" ? "dark" : "light");
   }, [theme]);
   console.log(selectedValue, "selected value");
-
-
-
-
 
   return (
     <>
