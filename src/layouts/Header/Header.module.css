@@ -94,6 +94,9 @@
   right: 20px;
   z-index: 0;
 }
+.iconss {
+  display: none !important;
+}
 @media screen and (max-width: 1430px) {
   .main_header {
     padding: 0 20px 10px 20px;
@@ -148,6 +151,9 @@
   }
 }
 @media screen and (max-width: 1024px) {
+  .iconss {
+    display: block !important;
+  }
   .main_header {
     padding: 0 0 10px 0;
   }

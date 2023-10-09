@@ -11,7 +11,7 @@ import Comments from "@/components/Article/Comments";
 import ReadMoreLikeThis from "@/components/Article/ReadMore";
 import DealsArticleMain from "@/components/DealsArticle";
 import style from "./dealsArticle.module.css";
-const page = () => {
+const DealsArticle = () => {
   interface List {
     bannerImage: any;
     lowerImage: any;
@@ -61,4 +61,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default DealsArticle;

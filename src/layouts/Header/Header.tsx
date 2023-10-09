@@ -582,7 +582,7 @@ const Header = () => {
                         </span>
                       </div>
                       <div
-                        className={`${styles.icons}  ${styles.iconss} hidden mw-lg:pl-[16px] mw-lg:block flex items-center`}
+                        className={` ${styles.icons}  ${styles.iconss}  mw-lg:pl-[16px]  flex items-center`}
                       >
                         <span>
                           <Image

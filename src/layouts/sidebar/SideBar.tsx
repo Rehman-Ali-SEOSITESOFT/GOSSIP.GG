@@ -11,6 +11,7 @@ import image2 from "../../assets/rewards/two.png";
 import image3 from "../../assets/rewards/three.png";
 import TrendingTags from "@/components/NewEsports/LatestTrendingHero/TrendingTags";
 import CountDownTimer from "@/components/Rewards/CountDownTimer/CountDownTimer";
+import SidebarFooter from "../SidebarFooter/SidebarFooter";
 const SideBar = ({ isOpen, onClose }) => {
   interface SidebarProps {
     isOpen: boolean;
@@ -95,6 +96,9 @@ const SideBar = ({ isOpen, onClose }) => {
                 <i className="fa-solid fa-angle-right"></i>
                 <i className="fa-solid fa-angle-right"></i>
               </p>
+              <div className="mt-[40px]">
+                <SidebarFooter />
+              </div>
             </div>
           </div>
         </div>

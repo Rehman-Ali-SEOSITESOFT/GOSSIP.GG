@@ -36,8 +36,8 @@ const GamingHeroSection = () => {
         <div className={`${style.overlayy} overlay  absolute inset-0 `}></div>
         <div className="absolute bottom-[9px] left-[12px]">
           <h4 className="montserratfont text-[20px] font-bold leading-normal text-[#E5E5E5] pr-[18px]">
-            Ubisoft's Tom Clancy's The Division 3 Announced: Ubisoft Massive
-            Leading Development
+            Ubisoft&#39;s Tom Clancy&#39;s The Division 3 Announced: Ubisoft
+            Massive Leading Development
           </h4>
         </div>
       </div>
