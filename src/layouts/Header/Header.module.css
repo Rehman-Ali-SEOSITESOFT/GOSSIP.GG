@@ -152,7 +152,7 @@
 }
 @media screen and (max-width: 1024px) {
   .iconss {
-    display: block !important;
+    display: flex !important;
   }
   .main_header {
     padding: 0 0 10px 0;

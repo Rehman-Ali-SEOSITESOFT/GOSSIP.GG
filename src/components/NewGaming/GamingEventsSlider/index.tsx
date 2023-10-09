@@ -177,9 +177,9 @@ const GamingSlider = () => {
                        e.heading === "Ongoing"
                          ? "bg-[#008D52] text-[#E5E5E5]"
                          : e.heading === "Past"
-                         ? "bg-[#000] text-[#E5E5E5]"
+                         ? "bg-[#221E1F] text-[#E5E5E5]"
                          : e.id == 3
-                         ? "text-[#000] bg-[#e5e5e5]"
+                         ? "text-[#221E1F] bg-[#e5e5e5]"
                          : ""
                      }   
                      `}
@@ -195,7 +195,7 @@ const GamingSlider = () => {
                        e.heading === "Ongoing"
                          ? " text-[#008D52]"
                          : e.heading === "Past"
-                         ? "text-[#000]"
+                         ? "text-[#221E1F]"
                          : e.id == 3
                          ? "text-[#E5E5E5] "
                          : ""
@@ -206,19 +206,19 @@ const GamingSlider = () => {
                     </p>
                   </div>
                   <div
-                    className={`${styles.right_content} py-[12px] pr-[12px] pl-[8px] mw-lg:ml-[0px] mw-lg:py-[6px]`}
+                    className={`${styles.right_content} py-[12px] pr-[12px] pl-[8px] mw-lg:ml-[0px] mw-lg:py-[6px] mw-lg:text-[12px]`}
                   >
-                    <h4 className="montserratfont text-[12px] font-semibold leading-normal text-[#E5E5E5] ">
+                    <h4 className="montserratfont text-[14px] font-semibold leading-normal text-[#E5E5E5] mw-lg:text-[12px]">
                       {e.title}
                     </h4>
                     <div className="flex items-center mt-[6px] mw-lg:hidden">
                       <Image src={icon} alt="" className="mw-lg:hidden" />
-                      <p className="montserratfont text-[14px]  font-normal text-[#E5E5E5] ml-[12px]">
+                      <p className="montserratfont text-[14px]  font-normal text-brandLightOpacity70 ml-[12px]">
                         {e.date}
                       </p>
                     </div>
                     <div className="hidden mw-lg:block mw-lg:mt-[8px]">
-                      <p className="montserratfont text-[10px]  font-normal text-[#E5E5E5] ">
+                      <p className="montserratfont text-[10px]  font-normal text-brandLightOpacity70 ">
                         {e.date}
                       </p>
                     </div>
