@@ -1,9 +1,9 @@
-import GuideGaming from "@/components/Gamings/GuidesGaming/GuideGaming"
-import HeroSection from "../../../components/Game/All/HeroSection/HeroSection"
-import LatestNews from "@/components/LatestNews/Index"
-import SectionSaprator from "@/components/SecSaprator"
-import GamingGuides from "../../../components/Gamings/GamingGuides/index"
-import React from "react"
+import GuideGaming from "@/components/Gamings/GuidesGaming/GuideGaming";
+import HeroSection from "../../../components/Game/All/HeroSection/HeroSection";
+import LatestNews from "@/components/LatestNews/Index";
+import SectionSaprator from "@/components/SecSaprator";
+import GamingGuides from "../../../components/Gamings/GamingGuides/index";
+import React from "react";
 
 const index = () => {
   return (
@@ -32,7 +32,7 @@ const index = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default index
+export default index;

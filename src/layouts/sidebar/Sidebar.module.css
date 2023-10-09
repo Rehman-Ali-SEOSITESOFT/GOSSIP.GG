@@ -1,0 +1,21 @@
+.sidebarOpen {
+  width: 100%;
+  /* height: 100vh; */
+  background-color: #221e1f;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  z-index: 1111;
+  top: 0;
+  bottom: 0;
+}
+.sidebarOpen {
+  transform: translateX(0);
+}
+.trendPad {
+  margin-top: 24px;
+  padding: 20px 0px;
+}
+.menu_items{
+    
+}

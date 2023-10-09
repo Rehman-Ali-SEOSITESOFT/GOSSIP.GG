@@ -13,6 +13,7 @@ import { useTheme } from "next-themes";
 import "react-multi-carousel/lib/styles.css";
 import QuizRatio from "@/components/QuizRatio";
 import "animate.css";
+import SideBar from "@/layouts/sidebar/SideBar";
 export default function RootLayout({
   children,
 }: {
@@ -36,7 +37,8 @@ export default function RootLayout({
           <main className="gossip bg-bodycolor dark:bg-brandDark2">
             <Header />
             <div className="content">{children}</div>
-            <QuizRatio />  
+            
+            <QuizRatio />
             <Footer />
           </main>
         </Providers>

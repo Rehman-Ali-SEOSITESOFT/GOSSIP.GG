@@ -1,7 +1,9 @@
 .overlayy {
-  background: linear-gradient(0deg,
+  background: linear-gradient(
+      0deg,
       rgba(0, 0, 0, 0.2) 0%,
-      rgba(0, 0, 0, 0.2) 100%),
+      rgba(0, 0, 0, 0.2) 100%
+    ),
     linear-gradient(360deg, #000 0%, rgba(0, 0, 0, 0) 100%) !important;
 }
 

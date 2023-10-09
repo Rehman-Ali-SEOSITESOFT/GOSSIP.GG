@@ -1,0 +1,10 @@
+.overlayy {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.72) 8.73%,
+    rgba(0, 0, 0, 0) 62.42%,
+    rgba(0, 0, 0, 0.4) 108.83%,
+    rgba(0, 0, 0, 0.32) 108.84%
+  );
+  border-radius: 4px;
+}

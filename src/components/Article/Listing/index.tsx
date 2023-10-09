@@ -97,11 +97,11 @@ const ListBox = () => {
 
   return (
     <div className="global-section-width-article ">
-      <div className="w-full mw-sm1:pt-[10px] pt-[20px] rounded border border-brandLightOpacity100 dark:border-brandLightOpacity10 mw-sm1:px-[10px] px-[37px] max-w-[968px] dark:bg-brandDark1 bg-white">
+      <div className="w-full mw-sm1:pt-[3px] pt-[3px] rounded border border-brandLightOpacity100 dark:border-brandLightOpacity10 mw-sm1:px-[10px] px-[37px] max-w-[968px] dark:bg-brandDark1 bg-white">
         {list.map((item, index) => (
           <div
             key={index}
-            className={`flex mw-sm1:flex-col  flex-row py-[24px] justify-between items-center ${
+            className={`flex mw-sm1:flex-col  flex-row pt-[30px] pb-[20px] justify-between items-center  ${
               list.length - 1 !== index
                 ? "border-b border-b-brandLightOpacity100 dark:border-b-brandLightOpacity10"
                 : ""
