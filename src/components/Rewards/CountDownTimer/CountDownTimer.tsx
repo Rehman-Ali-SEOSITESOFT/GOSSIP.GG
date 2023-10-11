@@ -18,7 +18,7 @@ const CountDownTimer = () => {
 
   return (
     <>
-      <Countdown date={Date.now() + 5000000000} renderer={renderer} />
+      <Countdown date={Date.now() + 5000000} renderer={renderer} />
     </>
   );
 };

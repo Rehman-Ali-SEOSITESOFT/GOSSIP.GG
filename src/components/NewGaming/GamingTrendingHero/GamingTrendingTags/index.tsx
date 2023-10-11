@@ -77,7 +77,7 @@ const GamingTrendingTags = () => {
         <div className="gossip_content pt-[8px]">
           <p className="text-[12px] font-semibold montserratfont text-[#ED4E50] leading-normal">
             In{" "}
-            <span className=" inline-block	 w-[60px]">
+            <span className=" inline-block	 w-[50px]">
               <CountDownTimer />
             </span>
             <i className="fa-solid fa-angle-right"></i>

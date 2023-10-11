@@ -9,6 +9,9 @@ import resp1 from "../../assets/newsports/resp1.png";
 import resp2 from "../../assets/newsports/resp2.png";
 import resp3 from "../../assets/newsports/resp3.png";
 import RespSection from "@/components/NewEsports/RespNewSection";
+import LiveMatchSlider from "@/components/NewEsports/LiveMatchTab/LiveMatchSlider";
+import InnerTabsLiveMatches from "@/components/NewEsports/LiveMatchTab/LiveMatchInnerTabs";
+import LiveTabReleventTabs from "@/components/NewEsports/LiveMatchTab/LiveMatchRelevantTabs";
 const Esports = () => {
   interface RESPDATA {
     herobg: any;
@@ -120,46 +123,12 @@ const Esports = () => {
                     className={openTab === 2 ? "block" : "hidden"}
                     id="link2"
                   >
-                    <div className="for-you-section  pt-[51px]  mw-md:pt-[32px]">
-                      <div className=""></div>
-
-                      <div className={style.main_pagination_gap}>
-                        <div className="2xl:container mw-sm:border-b dark:border-b-brandLightOpacity10 border-b-borderEditProfile">
-                          <div className="flex w-full pt-[16px] pb-[64px] mw-md:pt-[32px] mw-md:pb-[48px]  pagi">
-                            <div className="w-[450px] m-auto">
-                              <div className="pagination flex justify-between items-center">
-                                <div className="back-arrow inline-block bg-grayCard dark:bg-brandDark1 dark:hover:bg-brandLightOpacity10 w-[32px] h-[32px] leading-[32px] flex justify-center items-center rounded-2xl cursor-pointer hover:bg-borderEditProfile"></div>
-                                <div className="mw-sm1:hidden count-number flex items-center justify-between w-[calc(100%_-_100px)]	"></div>
-                                <div className="hidden mw-sm1:flex count-number  items-center justify-between w-[calc(100%_-_100px)]	">
-                                  {mobilepage.map((element, index) => {
-                                    return index === 3 ? (
-                                      <span
-                                        key={index}
-                                        className={`inline-block w-[25px] h-[25px]  montserratfont font-normal text-base rounded-2xl	 leading-5 text-brandDark2	dark:text-brandLightOpacity100  text-center leading-[30px]`}
-                                      >
-                                        ...
-                                      </span>
-                                    ) : (
-                                      <span
-                                        key={index}
-                                        className={`inline-block w-[30px] h-[30px]  montserratfont font-normal text-base rounded-2xl leading-[30px] text-brandDark2 border	dark:text-brandLightOpacity100  text-center cursor-pointer ${
-                                          mobileSelectNumber === index
-                                            ? " dark:bg-brandLightOpacity10  border-brandDark2 dark:border-brandLightOpacity100 "
-                                            : "bg-none border-none"
-                                        }`}
-                                        onClick={() => mobile(index)}
-                                      >
-                                        {element}
-                                      </span>
-                                    );
-                                  })}
-                                </div>
-                                <div className="next-arrow inline-block bg-grayCard hover:bg-borderEditProfile  dark:bg-brandDark1 dark:hover:bg-brandLightOpacity10 w-[31px] h-[32px] leading-[32px] flex justify-center items-center  rounded-2xl rotate-180	cursor-pointer pr-[2px]"></div>
-                              </div>
-                            </div>
-                          </div>
+                    <div className="for-you-section   mw-md:pt-[32px]">
+                      <div className="">
+                        <LiveMatchSlider />
+                        <div>
+                          <InnerTabsLiveMatches />
                         </div>
-                        {/* <Pagination /> */}
                       </div>
                     </div>
                   </div>

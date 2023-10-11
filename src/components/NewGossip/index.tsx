@@ -19,7 +19,7 @@ const GossiPost = () => {
   interface TABDATA {
     tabImage: any;
     paragraph: String;
-    button2: String; 
+    button2: String;
     button1: String;
   }
   const [tabData, setTabData] = useState<TABDATA[]>([

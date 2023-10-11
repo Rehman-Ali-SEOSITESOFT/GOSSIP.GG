@@ -23,7 +23,7 @@ const RelevantTabsSection = (props: any) => {
             <span className="text-[12px] montserratfont italic font-normal text-brandLightOpacity90 ">
               3 hrs ago
             </span>
-            <span className="montserratfont border-l border-l-textColorGray pl-2 ml-2 border-textColorGray   dark:border-l-brandLightOpacity70 text-[12px] text-brandLightOpacity70 font-normal h-[18px]">
+            <span className="montserratfont border-l border-l-textColorGray pl-2 ml-2 border-textColorGray   dark:border-l-brandLightOpacity70 text-[12px] text-brandLightOpacity90 font-normal h-[18px]">
               5 min read
             </span>
           </div>

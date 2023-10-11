@@ -153,7 +153,7 @@ const GamingSlider = () => {
   return (
     <>
       <section
-        className={`${styles.trending} trending new_esports_slider pt-[21px] pb-[26px] border-b-[1px] border-brandLightOpacity10 mw-lg:pt-[16px] mw-md:pb-[40px] mw-md:border-b-[0px]`}
+        className={`${styles.trending} trending new_esports_slider pt-[22px] pb-[26px] border-b-[1px] border-brandLightOpacity10 mw-lg:pt-[16px] mw-md:pb-[40px] mw-md:border-b-[0px]`}
       >
         <div className="2xl:container">
           <Slider
@@ -167,7 +167,7 @@ const GamingSlider = () => {
             {sliderData.map((e, index) => {
               return (
                 <div
-                  className={`content_wrapper  border border-brandLightOpacity10 bg-[#2E2A2B] rounded-[4px] ${styles.mainSliderWrap} mw-lg:flex-col`}
+                  className={`content_wrapper  border border-brandLightOpacity10 bg-[#2E2A2B] rounded-[4px] ${styles.mainSliderWrap} mw-lg:flex-col mw-sm5:w-[180px]`}
                   key={index}
                 >
                   <div className={`${styles.pararotate} mw-lg:hidden`}>
@@ -208,12 +208,12 @@ const GamingSlider = () => {
                   <div
                     className={`${styles.right_content} py-[12px] pr-[12px] pl-[8px] mw-lg:ml-[0px] mw-lg:py-[6px] mw-lg:text-[12px]`}
                   >
-                    <h4 className="montserratfont text-[14px] font-semibold leading-normal text-[#E5E5E5] mw-lg:text-[12px]">
+                    <h4 className="montserratfont text-[14px] font-semibold leading-normal text-[#E5E5E5] mw-lg:text-[12px] headingg">
                       {e.title}
                     </h4>
                     <div className="flex items-center mt-[6px] mw-lg:hidden">
                       <Image src={icon} alt="" className="mw-lg:hidden" />
-                      <p className="montserratfont text-[14px]  font-normal text-brandLightOpacity70 ml-[12px]">
+                      <p className="montserratfont text-[14px]  font-normal text-brandLightOpacity70 ml-[8px]">
                         {e.date}
                       </p>
                     </div>

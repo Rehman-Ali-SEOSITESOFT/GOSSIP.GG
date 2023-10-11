@@ -1,15 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import Link from "next/link";
-import Slider from "react-slick";
-import styles from "./EsportsSlider.module.css";
-import SliderContent from "../SliderContent";
-import icon from "../../../assets/newsports/icons.png";
+import icon from "../../../../assets/newsports/icons.png";
 import Image from "next/image";
-import "./EsporrtsSlider.css";
-
-const EsportsSlider = () => {
+import Slider from "react-slick";
+import styles from "./LiveMatchSlider.module.css";
+import teamtag from "../../../../assets/newsports/teamtag.png";
+const LiveMatchSlider = () => {
   var settings = {
     dots: false,
     infinite: false,
@@ -50,43 +47,50 @@ const EsportsSlider = () => {
     heading: string;
     title: string;
     date: string;
+    sexondteam: String;
   }
   const [sliderData, setSliderData] = useState<Sliders[]>([
     {
       id: 1,
       title: "Acer India Predator League 2024: Valorant",
-      heading: "Ongoing",
+      heading: "Live",
       date: "Dec 01, 2022 - Jan 18, 2023",
+      sexondteam: "Reckoning Esports",
     },
     {
       id: 2,
       title: "Intel Gamer Days X MSI LAN Fest",
       heading: "Past",
       date: "Dec 01, 2022 - Jan 18, 2023",
+      sexondteam: "SuperStarr Gamerz",
     },
     {
       id: 3,
       title: "Acer India Predator League 2024: Valorant",
       heading: "In 2 days",
       date: "Dec 01, 2022 - Jan 18, 2023",
+      sexondteam: "Reckoning Esports",
     },
     {
       id: 4,
       title: "Intel Gamer Days X MSI LAN Fest",
       heading: "Past",
       date: "Dec 01, 2022 - Jan 18, 2023",
+      sexondteam: "SuperStarr Gamerz",
     },
     {
       id: 5,
       title: "Acer India Predator League 2024: Valorant",
-      heading: "Ongoing",
+      heading: "Live",
       date: "Dec 01, 2022 - Jan 18, 2023",
+      sexondteam: "Reckoning Esports",
     },
     {
       id: 6,
       title: "Acer India Predator League 2024: Valorant",
-      heading: "Ongoing",
+      heading: "Live",
       date: "Dec 01, 2022 - Jan 18, 2023",
+      sexondteam: "SuperStarr Gamerz",
     },
   ]);
   const [tags, setTags] = useState([
@@ -156,7 +160,7 @@ const EsportsSlider = () => {
   return (
     <>
       <section
-        className={`${styles.trending} trending new_esports_slider pt-[22px] pb-[26px] border-b-[1px] border-brandLightOpacity10 mw-md:pt-[16px] mw-md:pb-[40px] mw-md:border-b-[0px] `}
+        className={`${styles.trending} trending new_esports_slider pt-[24px] pb-[24px] border-b-[1px] border-brandLightOpacity10 mw-md:pt-[16px] mw-md:pb-[40px] mw-md:border-b-[0px] `}
       >
         <div className="2xl:container">
           <Slider
@@ -177,8 +181,8 @@ const EsportsSlider = () => {
                     <p
                       className={`montserratfont text-[10px] font-semibold   
                      ${
-                       e.heading === "Ongoing"
-                         ? "bg-[#008D52] text-[#E5E5E5]"
+                       e.heading === "Live"
+                         ? "bg-[#D91618] text-[#E5E5E5]"
                          : e.heading === "Past"
                          ? "bg-[#221E1F] text-[#E5E5E5]"
                          : e.id == 3
@@ -195,8 +199,8 @@ const EsportsSlider = () => {
                     <p
                       className={`montserratfont text-[10px] font-semibold   
                      ${
-                       e.heading === "Ongoing"
-                         ? " text-[#008D52]"
+                       e.heading === "Live"
+                         ? "text-[#D91618]"
                          : e.heading === "Past"
                          ? "text-[#221E1F]"
                          : e.id == 3
@@ -209,21 +213,30 @@ const EsportsSlider = () => {
                     </p>
                   </div>
                   <div
-                    className={`${styles.right_content} py-[12px] pr-[12px] pl-[8px] mw-lg:ml-[0px] mw-lg:py-[6px]`}
+                    className={`${styles.right_content} py-[8px] pr-[12px] pl-[8px] mw-lg:ml-[0px] mw-lg:py-[6px]`}
                   >
-                    <h4 className="montserratfont text-[14px]  mw-lg:text-[12px] font-semibold leading-normal text-[#E5E5E5] ">
-                      {e.title}
-                    </h4>
-                    <div className="flex items-center mt-[6px] mw-lg:hidden">
+                    <div className="flex items-center">
                       <Image src={icon} alt="" className="mw-lg:hidden" />
-                      <p className="montserratfont text-[14px]  font-normal text-brandLightOpacity70 ml-[12px]">
-                        {e.date}
-                      </p>
+                      <h4 className="montserratfont text-[12px]  mw-lg:text-[12px] font-normal leading-normal text-[#E5E5E5] pl-[9px]">
+                        {e.title}
+                      </h4>
                     </div>
-                    <div className="hidden mw-lg:block mw-lg:mt-[8px]">
-                      <p className="montserratfont text-[10px]  font-normal text-brandLightOpacity70 ">
-                        {e.date}
-                      </p>
+                    <div className="flex items-center mt-[6px] ">
+                      <div className="flex items-center">
+                        <Image src={teamtag} alt="" />
+                        <h4 className="montserratfont text-[14px] font-semibold text-[#E5E5E5] leading-normal pl-[8px]">
+                          Team Liquid
+                        </h4>
+                      </div>
+                      <h4 className="montserratfont text-[12px] font-medium leading-normal text-brandLightOpacity70 px-[8px]">
+                        VS
+                      </h4>
+                      <div className="flex items-center">
+                        <Image src={teamtag} alt="" />
+                        <h4 className="montserratfont text-[14px] font-semibold text-[#E5E5E5] leading-normal pl-[8px]">
+                          {e.sexondteam}
+                        </h4>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -236,4 +249,4 @@ const EsportsSlider = () => {
   );
 };
 
-export default EsportsSlider;
+export default LiveMatchSlider;

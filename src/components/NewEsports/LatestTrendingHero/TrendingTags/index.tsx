@@ -152,10 +152,10 @@ const TrendingTags = () => {
             <Link href="#">Privacy Policy</Link>{" "}
           </li>
           <li className="montserratfont text-[12px] text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
-            <Link href="#">Term of User</Link>{" "}
+            <Link href="#">Terms of Use</Link>{" "}
           </li>
           <li className="montserratfont text-[12px] text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
-            <Link href="#">Editoiral Policy</Link>{" "}
+            <Link href="#">Editorial Policy</Link>{" "}
           </li>
           <li className="montserratfont text-[12px] text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
             <Link href="#">About Us</Link>{" "}

@@ -56,7 +56,7 @@ const Gaming = () => {
                   <li className="">
                     <a
                       className={
-                        "text-base   mw-sm1:text-sm   montserratfont  leading-5   capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize mw-sm5:fontbold" +
+                        "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5   capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize mw-sm5:fontbold" +
                         (openTab === 1
                           ? " dark:text-brand border-b-2 border-brandDark2   dark:border-b-brand font-bold	"
                           : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-normal  ")
@@ -72,10 +72,10 @@ const Gaming = () => {
                       ESPORTS EVENTS
                     </a>
                   </li>
-                  <li className="pl-[72px]  mw-md:pl-[30px] ">
+                  <li className="pl-[56px]  mw-md:pl-[30px] ">
                     <a
                       className={
-                        "text-base   mw-sm1:text-sm   montserratfont  leading-5   capitalize  pb-[8px]  mw-sm4:text-[12px] mw-sm4:leading-normal capitaliz" +
+                        "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5   capitalize  pb-[8px]  mw-sm4:text-[12px] mw-sm4:leading-normal capitaliz" +
                         (openTab === 2
                           ? " dark:text-brand border-b-2 border-brandDark2   dark:border-b-brand font-bold	"
                           : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-normal  ")
@@ -116,7 +116,7 @@ const Gaming = () => {
                       <GamingRelevantTabSection />
                       {/* <GamingTrendingTags/> */}
                       {/* <LatestTrendingHero />
-                      <ReleventTabs />  */}
+                    <ReleventTabs />  */}
                     </div>
                   </div>
                   <div
