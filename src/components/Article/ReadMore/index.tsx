@@ -79,7 +79,7 @@ const ReadMoreLikeThis = () => {
                       Bayes Esports appoints York Scheunemann as COO of reputed
                       gaming...
                     </h4>
-                    <div className="tags flex pt-3.5 pb-3 montserratfont">
+                    <div className="tags flex pt-3.5 pb-3 montserratfont pl-0">
                       <div
                         className="montserratfont text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100 
                         hover:text-brandDark2
@@ -100,7 +100,7 @@ const ReadMoreLikeThis = () => {
                       <span>
                         <i>3 hrs ago</i>
                       </span>
-                      <span className="border-l border-l-textColorGray pl-2 ml-2 border-textColorGray dark:border-l-brandLightOpacity10">
+                      <span className="border-l border-l-brandLightOpacity10 pl-2 ml-2 border-textColorGray dark:border-l-brandLightOpacity70">
                         5 min read
                       </span>
                     </small>
@@ -250,7 +250,6 @@ const ReadMoreLikeThis = () => {
               );
             })}
           </div>
-        
         </div>
       </div>
     </div>

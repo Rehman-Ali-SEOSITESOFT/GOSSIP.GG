@@ -34,7 +34,7 @@ const DealsArticle = () => {
         <div className={style.heading_section}>
           <AbsHeadingArticle articleHeading="The best deals on Amazon’s Great Indian Summer Sale - April 2023" />
         </div>
-        <div className="mt-[32px]">
+        <div className="mt-[32px] mw-lg:mt-[26px]">
           {list.map((e, idx) => {
             return (
               <div key={idx}>
@@ -49,13 +49,15 @@ const DealsArticle = () => {
         <div className="pt-12">
           <ListBox />
         </div>
-        <div className="mt-[48px]">
+        <div className="mt-[48px] mw-md:mt-[28px] ">
           <UserLogoSection />
         </div>
-        <div className="mt-[10px]">
+        <div className="mt-[10px] ">
           <Comments />
         </div>
-        <ReadMoreLikeThis />
+        <div className="mw-lg:hidden">
+          <ReadMoreLikeThis />
+        </div>
       </section>
     </>
   );

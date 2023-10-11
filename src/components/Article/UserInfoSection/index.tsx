@@ -21,15 +21,15 @@ const UserLogoSection = () => {
   return (
     <div className="global-section-width-article ">
       <div className="w-full   border-t border-t-brandLightOpacity100 dark:border-t-brandLightOpacity10 border-b border-b-brandLightOpacity100 dark:border-b-brandLightOpacity10  max-w-[968px]">
-        <div className="flex flex-row mw-lg:flex-col mw-lg:mt-[20px]  items-center justify-between pt-[40px] pb-[40px]">
+        <div className="flex flex-row mw-lg:flex-col   items-center justify-between pt-[40px] pb-[40px] mw-lg:mt-[0px] mw-md:pt-[20px] mw-md:pb-[16px]">
           <div className=" flex items-center">
             <Image src={UserLogo} alt="User Logo" />
             <div className="ml-[12px]">
-              <p className="montserratfont dark:text-brandLightOpacity100 text-brandDark2 text-[18px] font-bold ">
+              <p className="montserratfont dark:text-brandLightOpacity100 text-brandDark2 text-[18px] font-bold   mw-md:text-[16px]">
                 John William
               </p>
               <div className="flex flex-row">
-                <p className="montserratfont  text-brand text-[18px] font-bold ">
+                <p className="montserratfont  text-brand text-[18px] font-bold mw-md:text-[16px]">
                   Esports Writer
                 </p>
                 <Image
@@ -61,8 +61,8 @@ const UserLogoSection = () => {
               </div>
             </div>
           </div>
-          <div className="hidden mw-sm1:block border-t-[2px] dark:border-brand border-brandDark2 w-full max-w-[96px] mt-[28px] mb-[10px]"></div>
-          <div className="mw-lg:mt-[20px] border-l-3 dark:border-l-brand border-l-brandDark2 mw-sm1:border-0">
+          <div className="hidden mw-lg:block border-t-[2px] dark:border-brand border-brandDark2 w-full max-w-[96px] mt-[28px] mb-[10px]"></div>
+          <div className="mw-lg:mt-[20px] border-l-[2px] dark:border-l-brand border-l-brandDark2 mw-sm1:border-0 mw-lg:border-l-0 ">
             <p className=" max-w-[638px]  mw-sm1:text-[14px] pl-[16px] text-left montserratfont text-base dark:text-brandLightOpacity100 text-brandDark2 mw-sm1:pl-0 mw-sm1:text-sm mw-sm1:leading-[27px]">
               John is a professional Dota 2 player and a winner of multiple
               championships. He has been a freelance Esports journalist since
@@ -75,7 +75,7 @@ const UserLogoSection = () => {
       </div>
       <div className=" flex flex-row  mt-[26px]  max-w-[968px] mw-lg:justify-between mw-sm1:mt-[16px]">
         <div className="shared-icons flex items-center mw-sm1:order-1">
-          <div className="icon bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer mx-[28px] mw-lg:mx-[15px]  hover:bg-borderEditProfile">
+          <div className="icon bg-grayCard dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 w-[32px] h-[32px] flex items-center justify-center rounded-3xl cursor-pointer mr-[28px] mw-lg:mx-[15px]  hover:bg-borderEditProfile">
             <Image
               src={bookmark}
               alt="up-arrow"

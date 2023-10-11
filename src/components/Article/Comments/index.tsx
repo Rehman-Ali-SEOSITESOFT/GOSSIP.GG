@@ -50,7 +50,7 @@ const Comments = () => {
                   <h6 className=" montserratfont leading-[15px] text-[12px] font-semibold text-textColor dark:text-[#E5E5E5]">
                     GameForLife
                   </h6>
-                  <p className="montserratfont text-[12px] leading-[15px] font-normal text-brandLightOpacity70	ml-[4px]">
+                  <p className="montserratfont text-[12px] leading-[15px] font-normal text-brandLightOpacity70	ml-[4px] mw-md:hidden">
                     5 mins ago
                   </p>
                 </div>
@@ -85,7 +85,7 @@ const Comments = () => {
                     <h6 className=" montserratfont leading-[15px] text-[12px] font-semibold text-textcolor dark:text-[#E5E5E5]">
                       HogwartzzGrl
                     </h6>
-                    <p className="montserratfont text-[12px] leading-[15px] font-normal text-textcolor dark:text-brandLightOpacity70	ml-[4px]">
+                    <p className="montserratfont text-[12px] leading-[15px] font-normal text-textcolor dark:text-brandLightOpacity70	ml-[4px] mw-md:hidden">
                       yesterday
                     </p>
                   </div>
@@ -119,7 +119,7 @@ const Comments = () => {
                     <h6 className=" montserratfont leading-[15px] text-[12px] font-semibold text-textcolor dark:text-[#E5E5E5]">
                       HogwartzzGrl
                     </h6>
-                    <p className="montserratfont text-[12px] leading-[15px] font-normal text-textcolor dark:text-brandLightOpacity70	ml-[4px]">
+                    <p className="montserratfont text-[12px] leading-[15px] font-normal text-textcolor dark:text-brandLightOpacity70	ml-[4px] mw-md:hidden">
                       yesterday
                     </p>
                   </div>
@@ -153,7 +153,7 @@ const Comments = () => {
                     <h6 className=" montserratfont leading-[15px] text-[12px] font-semibold text-textcolor dark:text-[#E5E5E5]">
                       HogwartzzGrl
                     </h6>
-                    <p className="montserratfont text-[12px] leading-[15px] font-normal text-textcolor dark:text-brandLightOpacity70	ml-[4px]">
+                    <p className="montserratfont text-[12px] leading-[15px] font-normal text-textcolor dark:text-brandLightOpacity70	ml-[4px] mw-md:hidden">
                       yesterday
                     </p>
                   </div>
@@ -188,7 +188,7 @@ const Comments = () => {
                   <h6 className=" montserratfont leading-[15px] text-[12px] font-semibold text-textcolor dark:text-[#E5E5E5]">
                     GameForLife
                   </h6>
-                  <p className="montserratfont text-[12px] leading-[15px] font-normal text-textcolor dark:text-brandLightOpacity70	ml-[4px]">
+                  <p className="montserratfont text-[12px] leading-[15px] font-normal text-textcolor dark:text-brandLightOpacity70	ml-[4px] mw-md:hidden">
                     5 mins ago
                   </p>
                 </div>
@@ -217,14 +217,13 @@ const Comments = () => {
               </div>
             </div>
           </div>
-          </div>
+        </div>
       </div>
       <div className="mt-[8px]">
-            <p className="montserratfont text-[12px] leading-[15px] font-normal text-brandDark1	dark:text-brandLightOpacity70 cursor-pointer">
-              View More Comments
-            </p>
-          </div>
-        
+        <p className="montserratfont text-[12px] leading-[15px] font-normal text-brandDark1	dark:text-brandLightOpacity70 cursor-pointer mw-lg:mb-[24px]">
+          View More Comments
+        </p>
+      </div>
     </div>
   );
 };

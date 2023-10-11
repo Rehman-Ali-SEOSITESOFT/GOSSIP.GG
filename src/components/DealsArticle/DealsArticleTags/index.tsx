@@ -243,4 +243,3 @@ const DealsArticleTags = () => {
 };
 
 export default DealsArticleTags;
- 

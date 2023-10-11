@@ -12,7 +12,7 @@ const AbsHeadingArticle = (props: any) => {
       <section className=" global-section-width-article">
         <div className="2xl:container">
           <div className="heading_wrapper pt-[33px] flex mw-md:pt-[23px] mw-sm4:pt-[18px]">
-            <div className="w-[70%] pr-[50px] mw-9:w-[100%] mw-sm5:pr-[10px] ">
+            <div className="w-[65%] pr-[50px] mw-9:w-[100%] mw-sm5:pr-[10px] ">
               <h2 className="montserratfont text-[32px] leading-[39px] capitalize font-bold  dark:text-[#E5E5E5] mw-xl:text-[24px] mw-xl:leading-[32px]  mw-sm:text-[18px] mw-sm:leading-[22px]">
                 {props.articleHeading}
               </h2>

@@ -20,7 +20,7 @@ const DealsArticleMain = (props: any) => {
                     className=""
                   />
                   <p className="montserratfont text-[14px] leading-[17px] font-medium dark:text-brandLightOpacity70 pt-[8px]">
-                    Image credit: Hogwarts.com
+                    Image credit: Amazon.com
                   </p>
                 </div>
                 <div className="pr-[25px] mw-md:pr-[0px]  ">
@@ -84,12 +84,21 @@ const DealsArticleMain = (props: any) => {
                         mainImages={props.mainImages}
                       />
                     ) : (
-                      <Image src={props.lowerImage} alt="image " className="" />
+                      <>
+                        <Image
+                          src={props.lowerImage}
+                          alt="image "
+                          className=""
+                        />
+                        <h4 className="montserratfont text-[14px] font-medium dark:text-brandLightOpacity70 pt-[8px]">
+                          Image credit:Hogwrts.com
+                        </h4>
+                      </>
                     )}
                   </div>
                 </div>
                 <div className="fourth_section">
-                  <h2 className="pt-[40px] pb-[24px] montserratfont text-[24px] leading-[30px] tracking-[0.05em] capitalize dark:text-[#E5E5E5] font-bold mw-md:pb-[20px] mw-md:pt-[20px] mw-md:text-[20px] mw-md:leading-[26px] mw-sm4:text-[14px] mw-sm4:leading-[30px] mw-sm4:pb-[8px]">
+                  <h2 className="pt-[31px] pb-[24px] montserratfont text-[24px] leading-[30px] tracking-[0.05em] capitalize dark:text-[#E5E5E5] font-bold mw-md:pb-[20px] mw-md:pt-[20px] mw-md:text-[20px] mw-md:leading-[26px] mw-sm4:text-[14px] mw-sm4:leading-[30px] mw-sm4:pb-[8px]">
                     Floo flames - a new feature
                   </h2>
                   <p className="pb-[24px] robotoslub text-[16px] leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90 font-normal mw-md:text-[14px] mw-md:leading-[24px] mw-sm4:leading-[17px] mw-sm4:pb-[12px]">

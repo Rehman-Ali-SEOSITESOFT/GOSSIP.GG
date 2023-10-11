@@ -121,7 +121,7 @@ const GamingTrendingTags = () => {
         </div>
       </div>
       <div className="tag_last_section pt-[44px]">
-        <p className="text-[12px] montserratfont font-normal text-brandLightOpacity90 leading-[16px]">
+        <p className="text-[12px] montserratfont font-normal dark:text-brandLightOpacity90 leading-[16px]">
           Gossip.GG brings you the latest scoop from Gaming, Esports, Tech, and
           a whole lot more. From breaking the latest industry news to in-depth
           reviews and features, Gossip.GG has you covered.
@@ -145,25 +145,25 @@ const GamingTrendingTags = () => {
       </div>
       <div className=" mt-[12px]">
         <ul className="flex list-none flex-wrap	">
-          <li className="montserratfont text-[12px] text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
             <Link href="#">Disclaimer</Link>{" "}
           </li>
-          <li className="montserratfont text-[12px] text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
             <Link href="#">Privacy Policy</Link>{" "}
           </li>
-          <li className="montserratfont text-[12px] text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
             <Link href="#">Term of User</Link>{" "}
           </li>
-          <li className="montserratfont text-[12px] text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
             <Link href="#">Editoiral Policy</Link>{" "}
           </li>
-          <li className="montserratfont text-[12px] text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
             <Link href="#">About Us</Link>{" "}
           </li>
-          <li className="montserratfont text-[12px] text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
             <Link href="#">Contact</Link>{" "}
           </li>
-          <li className="montserratfont text-[12px] text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
             <Link href="#">Careers</Link>{" "}
           </li>
         </ul>
