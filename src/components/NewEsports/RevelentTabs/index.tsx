@@ -125,7 +125,7 @@ const ReleventTabs = () => {
                   className={
                     "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize " +
                     (openTab === 1
-                      ? " dark:text-[#E5E5E5] text-[#E5E5E5]   font-semibold	"
+                      ? " dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
                       : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light	")
                   }
                   onClick={(e) => {
@@ -144,7 +144,7 @@ const ReleventTabs = () => {
                   className={
                     "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
                     (openTab === 2
-                      ? " dark:text-[#E5E5E5] text-[#E5E5E5]   font-semibold	"
+                      ? " dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
                       : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light ")
                   }
                   onClick={(e) => {
@@ -163,7 +163,7 @@ const ReleventTabs = () => {
                   className={
                     "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
                     (openTab === 3
-                      ? " dark:text-[#E5E5E5] text-[#E5E5E5]   font-semibold	"
+                      ? " dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
                       : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light ")
                   }
                   onClick={(e) => {
@@ -182,7 +182,7 @@ const ReleventTabs = () => {
                   className={
                     "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
                     (openTab === 4
-                      ? "dark:text-[#E5E5E5] text-[#E5E5E5]   font-semibold	"
+                      ? "dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
                       : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light  ")
                   }
                   onClick={(e) => {

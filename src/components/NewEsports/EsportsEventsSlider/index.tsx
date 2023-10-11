@@ -170,7 +170,7 @@ const EsportsSlider = () => {
             {sliderData.map((e, index) => {
               return (
                 <div
-                  className={`content_wrapper  border border-brandLightOpacity10 bg-[#2E2A2B] rounded-[4px] ${styles.mainSliderWrap} mw-lg:flex-col`}
+                  className={`content_wrapper  border dark:border-brandLightOpacity10 dark:bg-[#2E2A2B] rounded-[4px] ${styles.mainSliderWrap} mw-lg:flex-col`}
                   key={index}
                 >
                   <div className={`${styles.pararotate} mw-lg:hidden`}>
@@ -211,17 +211,17 @@ const EsportsSlider = () => {
                   <div
                     className={`${styles.right_content} py-[12px] pr-[12px] pl-[8px] mw-lg:ml-[0px] mw-lg:py-[6px]`}
                   >
-                    <h4 className="montserratfont text-[14px]  mw-lg:text-[12px] font-semibold leading-normal text-[#E5E5E5] ">
+                    <h4 className="montserratfont text-[14px]  mw-lg:text-[12px] font-semibold leading-normal dark:text-[#E5E5E5] ">
                       {e.title}
                     </h4>
                     <div className="flex items-center mt-[6px] mw-lg:hidden">
                       <Image src={icon} alt="" className="mw-lg:hidden" />
-                      <p className="montserratfont text-[14px]  font-normal text-brandLightOpacity70 ml-[12px]">
+                      <p className="montserratfont text-[14px]  font-normal dark:text-brandLightOpacity70 ml-[12px]">
                         {e.date}
                       </p>
                     </div>
                     <div className="hidden mw-lg:block mw-lg:mt-[8px]">
-                      <p className="montserratfont text-[10px]  font-normal text-brandLightOpacity70 ">
+                      <p className="montserratfont text-[10px]  font-normal dark:text-brandLightOpacity70 ">
                         {e.date}
                       </p>
                     </div>

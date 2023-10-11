@@ -72,7 +72,7 @@ const TrendingTags = () => {
           );
         })}
       </div>
-      <div className="daily_quizz_wrapper rounded bg-[#2E2A2B] border border-brandLightOpacity10 pt-[17px] px-[12px] ">
+      <div className="daily_quizz_wrapper rounded dark:bg-[#2E2A2B] border dark:border-brandLightOpacity10 pt-[17px] px-[12px] ">
         <Image src={logo} alt="" />
         <div className="gossip_content pt-[8px]">
           <p className="text-[12px] font-semibold montserratfont text-[#ED4E50] leading-normal">
@@ -109,19 +109,19 @@ const TrendingTags = () => {
               </div>
             </div>
             <div className="mt-[12px]">
-              <p className="montserratfont text-[14px] font-medium leading-normal text-[#E5E5E5]">
+              <p className="montserratfont text-[14px] font-medium leading-normal dark:text-[#E5E5E5]">
                 Play everyday between 5 p.m. and 8 p.m. and stand a chance to
                 win the latest Samsung phone and other exciting prizes!
               </p>
             </div>
-            <button className="montserratfont text-[18px] font-bold text-center text-[#fff] py-[13px] px-[28px]  bg-[#ED4E50] rounded-[24px] w-[100%] mt-[18px] mb-[4px]">
+            <button className="montserratfont text-[18px] font-bold text-center dark:text-[#fff] py-[13px] px-[28px] bg-brandLightOpacity70  dark:bg-[#ED4E50] rounded-[24px] w-[100%] mt-[18px] mb-[4px]">
               Play Now
             </button>
           </div>
         </div>
       </div>
       <div className="tag_last_section pt-[44px]">
-        <p className="text-[12px] montserratfont font-normal text-brandLightOpacity90 leading-[16px]">
+        <p className="text-[12px] montserratfont font-normal dark:text-brandLightOpacity90 leading-[16px]">
           Gossip.GG brings you the latest scoop from Gaming, Esports, Tech, and
           a whole lot more. From breaking the latest industry news to in-depth
           reviews and features, Gossip.GG has you covered.
@@ -145,29 +145,29 @@ const TrendingTags = () => {
       </div>
       <div className=" mt-[12px]">
         <ul className="flex list-none flex-wrap	">
-          <li className="montserratfont text-[12px] text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
             <Link href="#">Disclaimer</Link>{" "}
           </li>
-          <li className="montserratfont text-[12px] text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
             <Link href="#">Privacy Policy</Link>{" "}
           </li>
-          <li className="montserratfont text-[12px] text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
             <Link href="#">Terms of Use</Link>{" "}
           </li>
-          <li className="montserratfont text-[12px] text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
             <Link href="#">Editorial Policy</Link>{" "}
           </li>
-          <li className="montserratfont text-[12px] text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
             <Link href="#">About Us</Link>{" "}
           </li>
-          <li className="montserratfont text-[12px] text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
             <Link href="#">Contact</Link>{" "}
           </li>
-          <li className="montserratfont text-[12px] text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
             <Link href="#">Careers</Link>{" "}
           </li>
         </ul>
-        <p className="montserratfont text-[12px] font-normal text-brandLightOpacity70 mt-[8px]">
+        <p className="montserratfont text-[12px] font-normal dark:text-brandLightOpacity70 mt-[8px]">
           (c) 2023 Gossip.gg - All Rights Reserved
         </p>
       </div>

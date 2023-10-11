@@ -72,10 +72,10 @@ const GamingTrendingTags = () => {
           );
         })}
       </div>
-      <div className="daily_quizz_wrapper rounded bg-[#2E2A2B] border border-brandLightOpacity10 pt-[17px] px-[12px] ">
+      <div className="daily_quizz_wrapper rounded dark:bg-[#2E2A2B] border dark:border-brandLightOpacity10 pt-[17px] px-[12px] ">
         <Image src={logo} alt="" />
         <div className="gossip_content pt-[8px]">
-          <p className="text-[12px] font-semibold montserratfont text-[#ED4E50] leading-normal">
+          <p className="text-[12px] font-semibold montserratfont dark:text-[#ED4E50] leading-normal">
             In{" "}
             <span className=" inline-block	 w-[50px]">
               <CountDownTimer />
@@ -109,12 +109,12 @@ const GamingTrendingTags = () => {
               </div>
             </div>
             <div className="mt-[12px]">
-              <p className="montserratfont text-[14px] font-medium leading-normal text-[#E5E5E5]">
+              <p className="montserratfont text-[14px] font-medium leading-normal dark:text-[#E5E5E5]">
                 Play everyday between 5 p.m. and 8 p.m. and stand a chance to
                 win the latest Samsung phone and other exciting prizes!
               </p>
             </div>
-            <button className="montserratfont text-[18px] font-bold text-center text-[#fff] py-[13px] px-[28px]  bg-[#ED4E50] rounded-[24px] w-[100%] mt-[18px] mb-[4px]">
+            <button className="montserratfont text-[18px] font-bold text-center dark:text-[#fff] py-[13px] px-[28px] bg-brandLightOpacity70 dark:bg-[#ED4E50]  rounded-[24px] w-[100%] mt-[18px] mb-[4px]">
               Play Now
             </button>
           </div>
@@ -127,14 +127,14 @@ const GamingTrendingTags = () => {
           reviews and features, Gossip.GG has you covered.
         </p>
         <div className="flex mt-[12px]">
-          <div className="h-[24px] hover:bg-brandLightOpacity20   cursor-pointer w-[24px]  rounded-3xl bg-brandDark1 flex justify-center  items-center">
+          <div className="h-[24px] hover:bg-brandLightOpacity20   cursor-pointer w-[24px]  rounded-3xl dark:bg-brandDark1 bg-brandLightOpacity70 flex justify-center  items-center">
             <Image
               src={instagram}
               alt="instagram"
               className="w-[14px] h-[14px]"
             />
           </div>
-          <div className="h-[24px] hover:bg-brandLightOpacity20   cursor-pointer w-[24px] ml-[24px] rounded-3xl bg-brandDark1 flex justify-center  items-center">
+          <div className="h-[24px] hover:bg-brandLightOpacity20   cursor-pointer w-[24px] ml-[24px] rounded-3xl dark:bg-brandDark1 bg-brandLightOpacity70 flex justify-center  items-center">
             <Image
               src={twitter}
               alt="instagram"
