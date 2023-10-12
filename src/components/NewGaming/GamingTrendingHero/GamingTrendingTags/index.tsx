@@ -13,6 +13,7 @@ const GamingTrendingTags = () => {
   interface TagsList {
     name: string;
     link: string;
+    s;
   }
   const [tags, setTags] = useState<TagsList[]>([
     {
@@ -77,7 +78,7 @@ const GamingTrendingTags = () => {
         <div className="gossip_content pt-[8px]">
           <p className="text-[12px] font-semibold montserratfont dark:text-[#ED4E50] leading-normal">
             In{" "}
-            <span className=" inline-block	 w-[50px]">
+            <span className=" inline-block	 w-[45px]">
               <CountDownTimer />
             </span>
             <i className="fa-solid fa-angle-right"></i>
@@ -152,7 +153,7 @@ const GamingTrendingTags = () => {
             <Link href="#">Privacy Policy</Link>{" "}
           </li>
           <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
-            <Link href="#">Term of Use</Link>{" "}
+            <Link href="#">Terms of Use</Link>{" "}
           </li>
           <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
             <Link href="#">Editorial Policy</Link>{" "}

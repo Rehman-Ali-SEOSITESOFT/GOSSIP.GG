@@ -128,7 +128,7 @@ const LiveMatchMatchess = () => {
             ESPORTS eVENTs
           </h4>
           {/* web version starts */}
-          <div className=" border dark:border-brandLightOpacity10 rounded-[4px]   mw-lg:hidden">
+          <div className=" border dark:border-brandLightOpacity10 rounded-[4px] overflow-y-hidden  mw-lg:hidden">
             <div
               className={`${styles.main_wrapper} ${styles.scrolling_bar} overflow-y-auto h-[565px] `}
             >
@@ -341,413 +341,415 @@ const LiveMatchMatchess = () => {
           <h4 className="montserratfont text-[18px] font-bold uppercase text-[#ED4E50] pb-[9px]">
             live matches
           </h4>
-          <div
-            className={`${styles.main_wrapper}  border dark:border-brandLightOpacity10 rounded-[4px]  h-[565px]  overflow-y-scroll`}
-          >
-            {/* first row starts here */}
+          <div>
             <div
-              className={` content_wrapper  bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col `}
+              className={`${styles.main_wrapper} ${styles.scrolling_bar}  border dark:border-brandLightOpacity10 rounded-[4px]  h-[565px]  overflow-y-scroll`}
             >
-              <div className={`${styles.pararotate_} mw-lg:hidden`}>
-                <p
-                  className={`montserratfont text-[10px] font-semibold bg-[#D91618] text-[#e5e5e5]`}
-                >
-                  Live
-                </p>
-              </div>
+              {/* first row starts here */}
+              <div
+                className={` content_wrapper  bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col `}
+              >
+                <div className={`${styles.pararotate_} mw-lg:hidden`}>
+                  <p
+                    className={`montserratfont text-[10px] font-semibold bg-[#D91618] text-[#e5e5e5]`}
+                  >
+                    Live
+                  </p>
+                </div>
 
-              <div className="hidden mw-lg:block mw-lg:flex mw-lg:justify-between	mw-lg:pt-[5px] mw-lg:pl-[8px] mw-lg:pr-[8px] mw-lg:border-b-[1px] mw-lg:border-brandLightOpacity10 mw-lg:pb-[4px]">
-                <Image src={icon} alt="" />
-                <p
-                  className={`montserratfont text-[10px] font-semibold   
+                <div className="hidden mw-lg:block mw-lg:flex mw-lg:justify-between	mw-lg:pt-[5px] mw-lg:pl-[8px] mw-lg:pr-[8px] mw-lg:border-b-[1px] mw-lg:border-brandLightOpacity10 mw-lg:pb-[4px]">
+                  <Image src={icon} alt="" />
+                  <p
+                    className={`montserratfont text-[10px] font-semibold   
                     
                      `}
+                  >
+                    Live
+                  </p>
+                </div>
+
+                <div
+                  className={`${styles.right_content_} w-[100%]  pl-[8px]  mw-lg:ml-[0px] mw-lg:py-[6px]  `}
                 >
-                  Live
-                </p>
+                  <div className="absolute left-[26px] top-[23px]">
+                    <Image src={posicon} alt="" />
+                  </div>
+                  <div className="w-[100%]">
+                    <div className="text-center pt-[8px] pb-[10px]">
+                      <p className="montserratfont text-[14px] leading-normal font-medium dark:text-brandLightOpacity70">
+                        Intel Gamer Days X ROG LAN Fest
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center bg-brandLightOpacity10">
+                      <div className="flex justify-center items-center">
+                        <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
+                          Reckoning Esports
+                        </p>
+                        <Image src={whiteinf} alt="" />
+                      </div>
+                      <div className="mx-[12px]">
+                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
+                          VS
+                        </h4>
+                      </div>
+                      <div className="flex justify-center items-center">
+                        <Image src={blackinf} alt="" className="mr-[12px]" />
+                        <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px] ">
+                          Orangutan Esports
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              {/* first row ends here */}
+
+              {/* second row starts hrer */}
 
               <div
-                className={`${styles.right_content_} w-[100%]  pl-[8px]  mw-lg:ml-[0px] mw-lg:py-[6px]  `}
+                className={`content_wrapper bg-brandLightOpacity70  dark:bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col mt-[22px]`}
               >
-                <div className="absolute left-[26px] top-[23px]">
-                  <Image src={posicon} alt="" />
+                <div className={`${styles.pararotate_} mw-lg:hidden`}>
+                  <p
+                    className={`montserratfont text-[10px] font-semibold dark:text-[#221E1F] dark:bg-[#e5e5e5]`}
+                  >
+                    In 3 Days
+                  </p>
                 </div>
-                <div className="w-[100%]">
-                  <div className="text-center pt-[8px] pb-[10px]">
-                    <p className="montserratfont text-[14px] leading-normal font-medium dark:text-brandLightOpacity70">
-                      Intel Gamer Days X ROG LAN Fest
-                    </p>
-                  </div>
-                  <div className="flex items-center justify-center bg-brandLightOpacity10">
-                    <div className="flex justify-center items-center">
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
-                        Reckoning Esports
-                      </p>
-                      <Image src={whiteinf} alt="" />
-                    </div>
-                    <div className="mx-[12px]">
-                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
-                        VS
-                      </h4>
-                    </div>
-                    <div className="flex justify-center items-center">
-                      <Image src={blackinf} alt="" className="mr-[12px]" />
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px] ">
-                        Orangutan Esports
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* first row ends here */}
 
-            {/* second row starts hrer */}
-
-            <div
-              className={`content_wrapper bg-brandLightOpacity70  dark:bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col mt-[22px]`}
-            >
-              <div className={`${styles.pararotate_} mw-lg:hidden`}>
-                <p
-                  className={`montserratfont text-[10px] font-semibold dark:text-[#221E1F] dark:bg-[#e5e5e5]`}
-                >
-                  In 3 Days
-                </p>
-              </div>
-
-              <div className="hidden mw-lg:block mw-lg:flex mw-lg:justify-between	mw-lg:pt-[5px] mw-lg:pl-[8px] mw-lg:pr-[8px] mw-lg:border-b-[1px] mw-lg:border-brandLightOpacity10 mw-lg:pb-[4px]">
-                <Image src={icon} alt="" />
-                <p
-                  className={`montserratfont text-[10px] font-semibold   
+                <div className="hidden mw-lg:block mw-lg:flex mw-lg:justify-between	mw-lg:pt-[5px] mw-lg:pl-[8px] mw-lg:pr-[8px] mw-lg:border-b-[1px] mw-lg:border-brandLightOpacity10 mw-lg:pb-[4px]">
+                  <Image src={icon} alt="" />
+                  <p
+                    className={`montserratfont text-[10px] font-semibold   
                     
                      `}
+                  >
+                    Live
+                  </p>
+                </div>
+
+                <div
+                  className={`${styles.right_content_} w-[100%]  pl-[8px]  mw-lg:ml-[0px] mw-lg:py-[6px]  `}
                 >
-                  Live
-                </p>
+                  <div className="absolute left-[26px] top-[23px]">
+                    <Image src={posicon} alt="" />
+                  </div>
+                  <div className="w-[100%]">
+                    <div className="text-center pt-[8px] pb-[10px]">
+                      <p className="montserratfont text-[14px] leading-normal font-medium dark:text-brandLightOpacity70">
+                        Intel Gamer Days X ROG LAN Fest
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center bg-brandLightOpacity10">
+                      <div className="flex justify-center items-center">
+                        <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
+                          Reckoning Esports
+                        </p>
+                        <Image src={whiteinf} alt="" />
+                      </div>
+                      <div className="mx-[12px]">
+                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
+                          VS
+                        </h4>
+                      </div>
+                      <div className="flex justify-center items-center">
+                        <Image src={blackinf} alt="" className="mr-[12px]" />
+                        <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px]">
+                          Orangutan Esports
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              {/* second row ends here */}
+              {/* third one starts hrer */}
 
               <div
-                className={`${styles.right_content_} w-[100%]  pl-[8px]  mw-lg:ml-[0px] mw-lg:py-[6px]  `}
+                className={`content_wrapper  bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col mt-[22px]`}
               >
-                <div className="absolute left-[26px] top-[23px]">
-                  <Image src={posicon} alt="" />
+                <div className={`${styles.pararotate_} mw-lg:hidden`}>
+                  <p
+                    className={`montserratfont text-[10px] font-semibold bg-[#221E1F] text-[#e5e5e5]`}
+                  >
+                    Past
+                  </p>
                 </div>
-                <div className="w-[100%]">
-                  <div className="text-center pt-[8px] pb-[10px]">
-                    <p className="montserratfont text-[14px] leading-normal font-medium dark:text-brandLightOpacity70">
-                      Intel Gamer Days X ROG LAN Fest
-                    </p>
-                  </div>
-                  <div className="flex items-center justify-center bg-brandLightOpacity10">
-                    <div className="flex justify-center items-center">
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
-                        Reckoning Esports
-                      </p>
-                      <Image src={whiteinf} alt="" />
-                    </div>
-                    <div className="mx-[12px]">
-                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
-                        VS
-                      </h4>
-                    </div>
-                    <div className="flex justify-center items-center">
-                      <Image src={blackinf} alt="" className="mr-[12px]" />
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px]">
-                        Orangutan Esports
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* second row ends here */}
-            {/* third one starts hrer */}
 
-            <div
-              className={`content_wrapper  bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col mt-[22px]`}
-            >
-              <div className={`${styles.pararotate_} mw-lg:hidden`}>
-                <p
-                  className={`montserratfont text-[10px] font-semibold bg-[#221E1F] text-[#e5e5e5]`}
-                >
-                  Past
-                </p>
-              </div>
-
-              <div className="hidden mw-lg:block mw-lg:flex mw-lg:justify-between	mw-lg:pt-[5px] mw-lg:pl-[8px] mw-lg:pr-[8px] mw-lg:border-b-[1px] mw-lg:border-brandLightOpacity10 mw-lg:pb-[4px]">
-                <Image src={icon} alt="" />
-                <p
-                  className={`montserratfont text-[10px] font-semibold   
+                <div className="hidden mw-lg:block mw-lg:flex mw-lg:justify-between	mw-lg:pt-[5px] mw-lg:pl-[8px] mw-lg:pr-[8px] mw-lg:border-b-[1px] mw-lg:border-brandLightOpacity10 mw-lg:pb-[4px]">
+                  <Image src={icon} alt="" />
+                  <p
+                    className={`montserratfont text-[10px] font-semibold   
                     
                      `}
+                  >
+                    Live
+                  </p>
+                </div>
+
+                <div
+                  className={`${styles.right_content_} w-[100%]  pl-[8px]  mw-lg:ml-[0px] mw-lg:py-[6px]  `}
                 >
-                  Live
-                </p>
+                  <div className="absolute left-[26px] top-[23px]">
+                    <Image src={posicon} alt="" />
+                  </div>
+                  <div className="w-[100%]">
+                    <div className="text-center pt-[8px] pb-[10px]">
+                      <p className="montserratfont text-[14px] leading-normal font-medium dark:text-brandLightOpacity70">
+                        Intel Gamer Days X ROG LAN Fest
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center bg-brandLightOpacity10">
+                      <div className="flex justify-center items-center">
+                        <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
+                          Reckoning Esports
+                        </p>
+                        <Image src={whiteinf} alt="" />
+                      </div>
+                      <div className="mx-[12px]">
+                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
+                          VS
+                        </h4>
+                      </div>
+                      <div className="flex justify-center items-center">
+                        <Image src={blackinf} alt="" className="mr-[12px]" />
+                        <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px]">
+                          Orangutan Esports
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
+              {/* third one starts hrer */}
+              {/* fifth starts here */}
               <div
-                className={`${styles.right_content_} w-[100%]  pl-[8px]  mw-lg:ml-[0px] mw-lg:py-[6px]  `}
+                className={`content_wrapper  dark:bg-[#2E2A2B] bg-brandLightOpacity70  ${styles.mainSliderWrap} mw-lg:flex-col mt-[20px]`}
               >
-                <div className="absolute left-[26px] top-[23px]">
-                  <Image src={posicon} alt="" />
+                <div className={`${styles.pararotate_} mw-lg:hidden`}>
+                  <p
+                    className={`montserratfont text-[10px] font-semibold bg-[#D91618] text-[#e5e5e5]`}
+                  >
+                    Live
+                  </p>
                 </div>
-                <div className="w-[100%]">
-                  <div className="text-center pt-[8px] pb-[10px]">
-                    <p className="montserratfont text-[14px] leading-normal font-medium dark:text-brandLightOpacity70">
-                      Intel Gamer Days X ROG LAN Fest
-                    </p>
-                  </div>
-                  <div className="flex items-center justify-center bg-brandLightOpacity10">
-                    <div className="flex justify-center items-center">
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
-                        Reckoning Esports
-                      </p>
-                      <Image src={whiteinf} alt="" />
-                    </div>
-                    <div className="mx-[12px]">
-                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
-                        VS
-                      </h4>
-                    </div>
-                    <div className="flex justify-center items-center">
-                      <Image src={blackinf} alt="" className="mr-[12px]" />
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px]">
-                        Orangutan Esports
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            {/* third one starts hrer */}
-            {/* fifth starts here */}
-            <div
-              className={`content_wrapper  dark:bg-[#2E2A2B] bg-brandLightOpacity70  ${styles.mainSliderWrap} mw-lg:flex-col mt-[20px]`}
-            >
-              <div className={`${styles.pararotate_} mw-lg:hidden`}>
-                <p
-                  className={`montserratfont text-[10px] font-semibold bg-[#D91618] text-[#e5e5e5]`}
-                >
-                  Live
-                </p>
-              </div>
-
-              <div className="hidden mw-lg:block mw-lg:flex mw-lg:justify-between	mw-lg:pt-[5px] mw-lg:pl-[8px] mw-lg:pr-[8px] mw-lg:border-b-[1px] mw-lg:border-brandLightOpacity10 mw-lg:pb-[4px]">
-                <Image src={icon} alt="" />
-                <p
-                  className={`montserratfont text-[10px] font-semibold   
+                <div className="hidden mw-lg:block mw-lg:flex mw-lg:justify-between	mw-lg:pt-[5px] mw-lg:pl-[8px] mw-lg:pr-[8px] mw-lg:border-b-[1px] mw-lg:border-brandLightOpacity10 mw-lg:pb-[4px]">
+                  <Image src={icon} alt="" />
+                  <p
+                    className={`montserratfont text-[10px] font-semibold   
                     
                      `}
+                  >
+                    Live
+                  </p>
+                </div>
+
+                <div
+                  className={`${styles.right_content_} w-[100%]  pl-[8px]  mw-lg:ml-[0px] mw-lg:py-[6px]  `}
                 >
-                  Live
-                </p>
+                  <div className="absolute left-[26px] top-[23px]">
+                    <Image src={posicon} alt="" />
+                  </div>
+                  <div className="w-[100%]">
+                    <div className="text-center pt-[8px] pb-[10px]">
+                      <p className="montserratfont text-[14px] leading-normal font-medium dark:text-brandLightOpacity70">
+                        Intel Gamer Days X ROG LAN Fest
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center bg-brandLightOpacity10">
+                      <div className="flex justify-center items-center">
+                        <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
+                          Reckoning Esports
+                        </p>
+                        <Image src={whiteinf} alt="" />
+                      </div>
+                      <div className="mx-[12px]">
+                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
+                          VS
+                        </h4>
+                      </div>
+                      <div className="flex justify-center items-center">
+                        <Image src={blackinf} alt="" className="mr-[12px]" />
+                        <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px]">
+                          Orangutan Esports
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
+              {/* fifth ends here */}
+              {/* sixth starts here */}
               <div
-                className={`${styles.right_content_} w-[100%]  pl-[8px]  mw-lg:ml-[0px] mw-lg:py-[6px]  `}
+                className={`content_wrapper bg-brandLightOpacity70  dark:bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col mt-[22px]`}
               >
-                <div className="absolute left-[26px] top-[23px]">
-                  <Image src={posicon} alt="" />
+                <div className={`${styles.pararotate_} mw-lg:hidden`}>
+                  <p
+                    className={`montserratfont text-[10px] font-semibold dark:text-[#221E1F] bg-[#e5e5e5]`}
+                  >
+                    In 3 Days
+                  </p>
                 </div>
-                <div className="w-[100%]">
-                  <div className="text-center pt-[8px] pb-[10px]">
-                    <p className="montserratfont text-[14px] leading-normal font-medium dark:text-brandLightOpacity70">
-                      Intel Gamer Days X ROG LAN Fest
-                    </p>
-                  </div>
-                  <div className="flex items-center justify-center bg-brandLightOpacity10">
-                    <div className="flex justify-center items-center">
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
-                        Reckoning Esports
-                      </p>
-                      <Image src={whiteinf} alt="" />
-                    </div>
-                    <div className="mx-[12px]">
-                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
-                        VS
-                      </h4>
-                    </div>
-                    <div className="flex justify-center items-center">
-                      <Image src={blackinf} alt="" className="mr-[12px]" />
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px]">
-                        Orangutan Esports
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            {/* fifth ends here */}
-            {/* sixth starts here */}
-            <div
-              className={`content_wrapper bg-brandLightOpacity70  dark:bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col mt-[22px]`}
-            >
-              <div className={`${styles.pararotate_} mw-lg:hidden`}>
-                <p
-                  className={`montserratfont text-[10px] font-semibold dark:text-[#221E1F] bg-[#e5e5e5]`}
-                >
-                  In 3 Days
-                </p>
-              </div>
-
-              <div className="hidden mw-lg:block mw-lg:flex mw-lg:justify-between	mw-lg:pt-[5px] mw-lg:pl-[8px] mw-lg:pr-[8px] mw-lg:border-b-[1px] mw-lg:border-brandLightOpacity10 mw-lg:pb-[4px]">
-                <Image src={icon} alt="" />
-                <p
-                  className={`montserratfont text-[10px] font-semibold   
+                <div className="hidden mw-lg:block mw-lg:flex mw-lg:justify-between	mw-lg:pt-[5px] mw-lg:pl-[8px] mw-lg:pr-[8px] mw-lg:border-b-[1px] mw-lg:border-brandLightOpacity10 mw-lg:pb-[4px]">
+                  <Image src={icon} alt="" />
+                  <p
+                    className={`montserratfont text-[10px] font-semibold   
                     
                      `}
-                >
-                  Live
-                </p>
-              </div>
+                  >
+                    Live
+                  </p>
+                </div>
 
+                <div
+                  className={`${styles.right_content_} w-[100%]  pl-[8px]  mw-lg:ml-[0px] mw-lg:py-[6px]  `}
+                >
+                  <div className="absolute left-[26px] top-[23px]">
+                    <Image src={posicon} alt="" />
+                  </div>
+                  <div className="w-[100%]">
+                    <div className="text-center pt-[8px] pb-[10px]">
+                      <p className="montserratfont text-[14px] leading-normal font-medium dark:text-brandLightOpacity70">
+                        Intel Gamer Days X ROG LAN Fest
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center bg-brandLightOpacity10">
+                      <div className="flex justify-center items-center">
+                        <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
+                          Reckoning Esports
+                        </p>
+                        <Image src={whiteinf} alt="" />
+                      </div>
+                      <div className="mx-[12px]">
+                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
+                          VS
+                        </h4>
+                      </div>
+                      <div className="flex justify-center items-center">
+                        <Image src={blackinf} alt="" className="mr-[12px]" />
+                        <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px]">
+                          Orangutan Esports
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* sixth ends here */}
+              {/* seventh starts here */}
               <div
-                className={`${styles.right_content_} w-[100%]  pl-[8px]  mw-lg:ml-[0px] mw-lg:py-[6px]  `}
+                className={`content_wrapper  dark:bg-[#2E2A2B] bg-brandLightOpacity70  ${styles.mainSliderWrap} mw-lg:flex-col mt-[22px]`}
               >
-                <div className="absolute left-[26px] top-[23px]">
-                  <Image src={posicon} alt="" />
+                <div className={`${styles.pararotate_} mw-lg:hidden`}>
+                  <p
+                    className={`montserratfont text-[10px] font-semibold bg-[#221E1F] text-[#e5e5e5]`}
+                  >
+                    Past
+                  </p>
                 </div>
-                <div className="w-[100%]">
-                  <div className="text-center pt-[8px] pb-[10px]">
-                    <p className="montserratfont text-[14px] leading-normal font-medium dark:text-brandLightOpacity70">
-                      Intel Gamer Days X ROG LAN Fest
-                    </p>
-                  </div>
-                  <div className="flex items-center justify-center bg-brandLightOpacity10">
-                    <div className="flex justify-center items-center">
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
-                        Reckoning Esports
-                      </p>
-                      <Image src={whiteinf} alt="" />
-                    </div>
-                    <div className="mx-[12px]">
-                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
-                        VS
-                      </h4>
-                    </div>
-                    <div className="flex justify-center items-center">
-                      <Image src={blackinf} alt="" className="mr-[12px]" />
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px]">
-                        Orangutan Esports
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* sixth ends here */}
-            {/* seventh starts here */}
-            <div
-              className={`content_wrapper  dark:bg-[#2E2A2B] bg-brandLightOpacity70  ${styles.mainSliderWrap} mw-lg:flex-col mt-[22px]`}
-            >
-              <div className={`${styles.pararotate_} mw-lg:hidden`}>
-                <p
-                  className={`montserratfont text-[10px] font-semibold bg-[#221E1F] text-[#e5e5e5]`}
-                >
-                  Past
-                </p>
-              </div>
 
-              <div className="hidden mw-lg:block mw-lg:flex mw-lg:justify-between	mw-lg:pt-[5px] mw-lg:pl-[8px] mw-lg:pr-[8px] mw-lg:border-b-[1px] mw-lg:border-brandLightOpacity10 mw-lg:pb-[4px]">
-                <Image src={icon} alt="" />
-                <p
-                  className={`montserratfont text-[10px] font-semibold   
+                <div className="hidden mw-lg:block mw-lg:flex mw-lg:justify-between	mw-lg:pt-[5px] mw-lg:pl-[8px] mw-lg:pr-[8px] mw-lg:border-b-[1px] mw-lg:border-brandLightOpacity10 mw-lg:pb-[4px]">
+                  <Image src={icon} alt="" />
+                  <p
+                    className={`montserratfont text-[10px] font-semibold   
                     
                      `}
-                >
-                  Live
-                </p>
-              </div>
+                  >
+                    Live
+                  </p>
+                </div>
 
+                <div
+                  className={`${styles.right_content_} w-[100%]  pl-[8px]  mw-lg:ml-[0px] mw-lg:py-[6px]  `}
+                >
+                  <div className="absolute left-[26px] top-[23px]">
+                    <Image src={posicon} alt="" />
+                  </div>
+                  <div className="w-[100%]">
+                    <div className="text-center pt-[8px] pb-[10px]">
+                      <p className="montserratfont text-[14px] leading-normal font-medium dark:text-brandLightOpacity70">
+                        Intel Gamer Days X ROG LAN Fest
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center bg-brandLightOpacity10">
+                      <div className="flex justify-center items-center">
+                        <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
+                          Reckoning Esports
+                        </p>
+                        <Image src={whiteinf} alt="" />
+                      </div>
+                      <div className="mx-[12px]">
+                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
+                          VS
+                        </h4>
+                      </div>
+                      <div className="flex justify-center items-center">
+                        <Image src={blackinf} alt="" className="mr-[12px]" />
+                        <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px]">
+                          Orangutan Esports
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* seventh ends  here */}
               <div
-                className={`${styles.right_content_} w-[100%]  pl-[8px]  mw-lg:ml-[0px] mw-lg:py-[6px]  `}
+                className={`content_wrapper  bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col mt-[22px]`}
               >
-                <div className="absolute left-[26px] top-[23px]">
-                  <Image src={posicon} alt="" />
+                <div className={`${styles.pararotate_} mw-lg:hidden`}>
+                  <p
+                    className={`montserratfont text-[10px] font-semibold bg-[#221E1F] text-[#e5e5e5]`}
+                  >
+                    Past
+                  </p>
                 </div>
-                <div className="w-[100%]">
-                  <div className="text-center pt-[8px] pb-[10px]">
-                    <p className="montserratfont text-[14px] leading-normal font-medium dark:text-brandLightOpacity70">
-                      Intel Gamer Days X ROG LAN Fest
-                    </p>
-                  </div>
-                  <div className="flex items-center justify-center bg-brandLightOpacity10">
-                    <div className="flex justify-center items-center">
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
-                        Reckoning Esports
-                      </p>
-                      <Image src={whiteinf} alt="" />
-                    </div>
-                    <div className="mx-[12px]">
-                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
-                        VS
-                      </h4>
-                    </div>
-                    <div className="flex justify-center items-center">
-                      <Image src={blackinf} alt="" className="mr-[12px]" />
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px]">
-                        Orangutan Esports
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* seventh ends  here */}
-            <div
-              className={`content_wrapper  bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col mt-[22px]`}
-            >
-              <div className={`${styles.pararotate_} mw-lg:hidden`}>
-                <p
-                  className={`montserratfont text-[10px] font-semibold bg-[#221E1F] text-[#e5e5e5]`}
-                >
-                  Past
-                </p>
-              </div>
 
-              <div className="hidden mw-lg:block mw-lg:flex mw-lg:justify-between	mw-lg:pt-[5px] mw-lg:pl-[8px] mw-lg:pr-[8px] mw-lg:border-b-[1px] mw-lg:border-brandLightOpacity10 mw-lg:pb-[4px]">
-                <Image src={icon} alt="" />
-                <p
-                  className={`montserratfont text-[10px] font-semibold   
+                <div className="hidden mw-lg:block mw-lg:flex mw-lg:justify-between	mw-lg:pt-[5px] mw-lg:pl-[8px] mw-lg:pr-[8px] mw-lg:border-b-[1px] mw-lg:border-brandLightOpacity10 mw-lg:pb-[4px]">
+                  <Image src={icon} alt="" />
+                  <p
+                    className={`montserratfont text-[10px] font-semibold   
                     
                      `}
-                >
-                  Live
-                </p>
-              </div>
-
-              <div
-                className={`${styles.right_content_} w-[100%]  pl-[8px]  mw-lg:ml-[0px] mw-lg:py-[6px]  `}
-              >
-                <div className="absolute left-[26px] top-[23px]">
-                  <Image src={posicon} alt="" />
+                  >
+                    Live
+                  </p>
                 </div>
-                <div className="w-[100%]">
-                  <div className="text-center pt-[8px] pb-[10px]">
-                    <p className="montserratfont text-[14px] leading-normal font-medium dark:text-brandLightOpacity70">
-                      Intel Gamer Days X ROG LAN Fest
-                    </p>
+
+                <div
+                  className={`${styles.right_content_} w-[100%]  pl-[8px]  mw-lg:ml-[0px] mw-lg:py-[6px]  `}
+                >
+                  <div className="absolute left-[26px] top-[23px]">
+                    <Image src={posicon} alt="" />
                   </div>
-                  <div className="flex items-center justify-center bg-brandLightOpacity10">
-                    <div className="flex justify-center items-center">
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
-                        Reckoning Esports
+                  <div className="w-[100%]">
+                    <div className="text-center pt-[8px] pb-[10px]">
+                      <p className="montserratfont text-[14px] leading-normal font-medium dark:text-brandLightOpacity70">
+                        Intel Gamer Days X ROG LAN Fest
                       </p>
-                      <Image src={whiteinf} alt="" />
                     </div>
-                    <div className="mx-[12px]">
-                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
-                        VS
-                      </h4>
-                    </div>
-                    <div className="flex justify-center items-center">
-                      <Image src={blackinf} alt="" className="mr-[12px]" />
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px]">
-                        Orangutan Esports
-                      </p>
+                    <div className="flex items-center justify-center bg-brandLightOpacity10">
+                      <div className="flex justify-center items-center">
+                        <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
+                          Reckoning Esports
+                        </p>
+                        <Image src={whiteinf} alt="" />
+                      </div>
+                      <div className="mx-[12px]">
+                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
+                          VS
+                        </h4>
+                      </div>
+                      <div className="flex justify-center items-center">
+                        <Image src={blackinf} alt="" className="mr-[12px]" />
+                        <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px]">
+                          Orangutan Esports
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
