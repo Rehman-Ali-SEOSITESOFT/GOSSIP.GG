@@ -16,6 +16,8 @@ import bullet from "../../../../assets/livematches/bullet.png";
 import whiteinf from "../../../../assets/livematches/infwhite.png";
 import blackinf from "../../../../assets/livematches/blackinf.png";
 import posicon from "../../../../assets/livematches/posicon.png";
+import ViewMore from "@/components/Gamings/ViewMore/ViewMore";
+import mobinf from "../../../../assets/newsports/mobing.png";
 const LiveMatchMatchess = () => {
   var settings = {
     dots: false,
@@ -63,7 +65,7 @@ const LiveMatchMatchess = () => {
   const [sliderData, setSliderData] = useState<Sliders[]>([
     {
       id: 1,
-      title: "Acer India Predator League 2024: Valorant",
+      title: "Intel Gamer Days X MSI LAN Fest",
       heading: "Ongoing",
       date: "Dec 01, 2022 - Jan 18, 2023",
       sexondteam: "Reckoning Esports",
@@ -119,19 +121,117 @@ const LiveMatchMatchess = () => {
   }, [theme]);
   return (
     <>
-      <section className="mt-[33px] flex">
+      <section className="mt-[33px] flex mw-lg:flex-col">
         {/* left section starts here */}
-        <div className="w-[45%] ">
+        <div className="w-[45%] mw-lg:w-[100%]">
           <h4 className="montserratfont text-[18px] font-bold uppercase text-[#ED4E50] pb-[9px]">
             ESPORTS eVENTs
           </h4>
-          <div
-            className={`${styles.main_wrapper}  border border-brandLightOpacity10 rounded-[4px]  h-[565px]  overflow-y-scroll`}
-          >
+          {/* web version starts */}
+          <div className=" border dark:border-brandLightOpacity10 rounded-[4px]   mw-lg:hidden">
+            <div
+              className={`${styles.main_wrapper} ${styles.scrolling_bar} overflow-y-auto h-[565px] `}
+            >
+              {sliderData.map((e, index) => {
+                return (
+                  <div
+                    className={`${
+                      isDarkTheme === "dark"
+                        ? `${styles.mainSliderWrap} `
+                        : `${styles.lightVarient}`
+                    } content_wrapper items-center dark:bg-[#2E2A2B]  mw-lg:flex-col py-[6px]`}
+                    key={index}
+                  >
+                    <div className={`${styles.pararotate} mw-lg:hidden`}>
+                      <p
+                        className={`montserratfont text-[10px] font-semibold   
+                     ${
+                       e.heading === "Ongoing"
+                         ? "bg-[#008D52] text-[#E5E5E5]"
+                         : e.heading === "Past"
+                         ? "bg-[#221E1F] text-[#E5E5E5]"
+                         : e.id == 3
+                         ? "text-[#221E1F] bg-[#e5e5e5]"
+                         : ""
+                     }   
+                     `}
+                      >
+                        {e.heading}
+                      </p>
+                    </div>
+
+                    <div className="hidden mw-lg:block mw-lg:flex mw-lg:justify-between	mw-lg:pt-[5px] mw-lg:pl-[8px] mw-lg:pr-[8px] mw-lg:border-b-[1px] mw-lg:border-brandLightOpacity10 mw-lg:pb-[4px]">
+                      <Image src={icon} alt="" />
+                      <p
+                        className={`montserratfont text-[10px] font-semibold   
+                     ${
+                       e.heading === "Live"
+                         ? "text-[#D91618]"
+                         : e.heading === "Past"
+                         ? "text-[#221E1F]"
+                         : e.id == 3
+                         ? "text-[#E5E5E5] "
+                         : ""
+                     }   
+                     `}
+                      >
+                        {e.heading}
+                      </p>
+                    </div>
+                    <div className="w-[157px] h-[88px] ml-[17px] ml-[8px]">
+                      <Image
+                        src={e.sideImage}
+                        alt=""
+                        className="w-[100%] h-auto"
+                      />
+                    </div>
+                    <div
+                      className={`${styles.right_content}  pr-[12px] pl-[8px]  mw-lg:ml-[0px] mw-lg:py-[6px]  `}
+                    >
+                      <div className="flex items-center">
+                        <Image src={icon} alt="" className="mw-lg:hidden" />
+                        <h4 className="montserratfont text-[16px]  mw-lg:text-[12px] font-semibold         leading-normal dark:text-[#E5E5E5] pl-[8px] mx-13:text-[14px]">
+                          {e.title}
+                        </h4>
+                      </div>
+                      <div className="flex items-center mt-[6px] ">
+                        <div>
+                          <Image src={iconss} alt="" />
+                        </div>
+                        <div className="pl-[8px] pt-[4px]">
+                          <p className="montserratfont text-[12px] font-normal leading-normal dark:text-[#E5E5E5]">
+                            Dec 01, 2022 - Jan 18, 2023
+                          </p>
+                          <div className="flex items-center">
+                            <p className="montserratfont text-[12px] leading-normal font-normal dark:text-[#E5E5E5]">
+                              South Asia
+                            </p>
+
+                            <Image src={bullet} alt="" className="mx-[8px]" />
+                            <p className="montserratfont text-[12px] leading-normal font-normal dark:text-[#E5E5E5]">
+                              Prizepool $4500
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          {/* web version ends */}
+
+          {/* mobile versions starts */}
+          <div className="hidden mw-lg:block rounded-[2px] border dark:border-brandLightOpacity10  mw-lg:border-[0px]">
             {sliderData.map((e, index) => {
               return (
                 <div
-                  className={`content_wrapper  bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col py-[6px]`}
+                  className={`${
+                    isDarkTheme === "dark"
+                      ? `${styles.mainSliderWrap} `
+                      : `${styles.lightVarient}`
+                  } content_wrapper w-[100%]    mw-lg:flex-col py-[6px] rounded-[2px] border dark:mw-lg:border-brandLightOpacity10 dark:mw-lg:bg-brandLightOpacity10 mw-lg:mb-[8px]`}
                   key={index}
                 >
                   <div className={`${styles.pararotate} mw-lg:hidden`}>
@@ -152,10 +252,13 @@ const LiveMatchMatchess = () => {
                     </p>
                   </div>
 
-                  <div className="hidden mw-lg:block mw-lg:flex mw-lg:justify-between	mw-lg:pt-[5px] mw-lg:pl-[8px] mw-lg:pr-[8px] mw-lg:border-b-[1px] mw-lg:border-brandLightOpacity10 mw-lg:pb-[4px]">
+                  <div className="hidden mw-lg:block mw-lg:flex mw-lg:justify-start	mw-lg:pt-[5px] mw-lg:pl-[8px] mw-lg:pr-[8px] mw-lg:border-b-[0px] mw-lg:border-brandLightOpacity10 mw-lg:pb-[4px] items-center">
                     <Image src={icon} alt="" />
+                    <p className="text-[12px] montserratfont font-semibold leading-normal dark:text-[#E5E5E5] pl-[8px]">
+                      {e.title}
+                    </p>
                     <p
-                      className={`montserratfont text-[10px] font-semibold   
+                      className={`montserratfont text-[10px] font-semibold  mw-lg:hidden  
                      ${
                        e.heading === "Live"
                          ? "text-[#D91618]"
@@ -170,39 +273,53 @@ const LiveMatchMatchess = () => {
                       {e.heading}
                     </p>
                   </div>
-                  <div className="w-[157px] h-[88px] ml-[17px] ml-[8px]">
-                    <Image
-                      src={e.sideImage}
-                      alt=""
-                      className="w-[100%] h-auto"
-                    />
-                  </div>
-                  <div
-                    className={`${styles.right_content}  pr-[12px] pl-[8px]  mw-lg:ml-[0px] mw-lg:py-[6px]  `}
-                  >
-                    <div className="flex items-center">
-                      <Image src={icon} alt="" className="mw-lg:hidden" />
-                      <h4 className="montserratfont text-[16px]  mw-lg:text-[12px] font-semibold         leading-normal text-[#E5E5E5] pl-[8px]">
-                        {e.title}
-                      </h4>
+                  <div className="mw-lg:flex mw-lg:pt-[2px]">
+                    <div className="w-[157px] h-[88px] ml-[17px] ml-[8px]">
+                      <Image
+                        src={e.sideImage}
+                        alt=""
+                        className="w-[100%] h-auto"
+                      />
                     </div>
-                    <div className="flex items-center mt-[6px] ">
-                      <div>
-                        <Image src={iconss} alt="" />
+                    <div
+                      className={`${styles.right_content}   pr-[0px] pl-[8px]  mw-lg:ml-[0px] mw-lg:pb-[0px]  `}
+                    >
+                      <div className="flex items-center">
+                        <Image src={icon} alt="" className="mw-lg:hidden" />
+                        <h4 className="montserratfont text-[16px]  mw-lg:text-[12px] font-semibold         leading-normal dark:text-[#E5E5E5] pl-[8px] mx-13:text-[14px] mw-lg:hidden">
+                          {e.title}
+                        </h4>
                       </div>
-                      <div className="pl-[8px] pt-[4px]">
-                        <p className="montserratfont text-[12px] font-normal leading-normal text-[#E5E5E5]">
-                          Dec 01, 2022 - Jan 18, 2023
-                        </p>
-                        <div className="flex items-center">
-                          <p className="montserratfont text-[12px] leading-normal font-normal text-[#E5E5E5]">
-                            South Asia
+                      <div className="flex items-center mw-lg:flex-col mw-lg:items-start mt-[6px] ">
+                        <div className="flex">
+                          <Image src={iconss} alt="" />
+                          <div className="pl-[9px]">
+                            <p className="hidden montserratfont text-[12px] leading-normal font-normal dark:text-[#E5E5E5] mw-lg:block">
+                              South Asia <br /> $4500
+                            </p>
+                          </div>
+                        </div>
+                        <div className="pl-[0px] pt-[4px] ">
+                          <p className="montserratfont text-[12px] font-normal leading-normal dark:text-[#E5E5E5] mw-sm3:text-[11px]">
+                            Dec 01, 2022 - Jan 18, 2023
                           </p>
+                          <p className="hidden mw-lg:block pt-[8px] text-[12px] robotoslub font-normal tracking-[0.6px] italic dark:text-[#e5e5e5]">
+                            {e.heading}
+                          </p>
+                          <div className="flex items-center">
+                            <p className="montserratfont text-[12px] leading-normal font-normal dark:text-[#E5E5E5] mw-lg:hidden">
+                              South Asia
+                            </p>
 
-                          <Image src={bullet} alt="" className="mx-[8px]" />
-                          <p className="montserratfont text-[12px] leading-normal font-normal text-[#E5E5E5]">
-                            Prizepool $4500
-                          </p>
+                            <Image
+                              src={bullet}
+                              alt=""
+                              className="mx-[8px] mw-lg:hidden"
+                            />
+                            <p className="montserratfont text-[12px] leading-normal font-normal dark:text-[#E5E5E5] mw-lg:hidden">
+                              Prizepool $4500
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -210,22 +327,26 @@ const LiveMatchMatchess = () => {
                 </div>
               );
             })}
+            <div className="mb-[40px] mt-[8px]">
+              <ViewMore />
+            </div>
           </div>
+          {/* mobile versions ends */}
         </div>
         {/* left section ends here here */}
 
         {/* right section starts here */}
 
-        <div className="w-[52%] ml-[25px] relative">
+        <div className="w-[52%] mw-lg:w-[100%] ml-[25px] mw-lg:ml-[0px] relative mw-lg:hidden">
           <h4 className="montserratfont text-[18px] font-bold uppercase text-[#ED4E50] pb-[9px]">
             live matches
           </h4>
           <div
-            className={`${styles.main_wrapper}  border border-brandLightOpacity10 rounded-[4px]  h-[565px]  overflow-y-scroll`}
+            className={`${styles.main_wrapper}  border dark:border-brandLightOpacity10 rounded-[4px]  h-[565px]  overflow-y-scroll`}
           >
             {/* first row starts here */}
             <div
-              className={`content_wrapper  bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col `}
+              className={` content_wrapper  bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col `}
             >
               <div className={`${styles.pararotate_} mw-lg:hidden`}>
                 <p
@@ -260,19 +381,19 @@ const LiveMatchMatchess = () => {
                   </div>
                   <div className="flex items-center justify-center bg-brandLightOpacity10">
                     <div className="flex justify-center items-center">
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px]">
+                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
                         Reckoning Esports
                       </p>
                       <Image src={whiteinf} alt="" />
                     </div>
                     <div className="mx-[12px]">
-                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 bg-[#514E4F] p-[9px]">
+                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
                         VS
                       </h4>
                     </div>
                     <div className="flex justify-center items-center">
                       <Image src={blackinf} alt="" className="mr-[12px]" />
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] ">
+                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px] ">
                         Orangutan Esports
                       </p>
                     </div>
@@ -285,11 +406,11 @@ const LiveMatchMatchess = () => {
             {/* second row starts hrer */}
 
             <div
-              className={`content_wrapper  bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col mt-[22px]`}
+              className={`content_wrapper bg-brandLightOpacity70  dark:bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col mt-[22px]`}
             >
               <div className={`${styles.pararotate_} mw-lg:hidden`}>
                 <p
-                  className={`montserratfont text-[10px] font-semibold dark:text-[#221E1F] bg-[#e5e5e5]`}
+                  className={`montserratfont text-[10px] font-semibold dark:text-[#221E1F] dark:bg-[#e5e5e5]`}
                 >
                   In 3 Days
                 </p>
@@ -320,19 +441,19 @@ const LiveMatchMatchess = () => {
                   </div>
                   <div className="flex items-center justify-center bg-brandLightOpacity10">
                     <div className="flex justify-center items-center">
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px]">
+                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
                         Reckoning Esports
                       </p>
                       <Image src={whiteinf} alt="" />
                     </div>
                     <div className="mx-[12px]">
-                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 bg-[#514E4F] p-[9px]">
+                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
                         VS
                       </h4>
                     </div>
                     <div className="flex justify-center items-center">
                       <Image src={blackinf} alt="" className="mr-[12px]" />
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] ">
+                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px]">
                         Orangutan Esports
                       </p>
                     </div>
@@ -348,7 +469,7 @@ const LiveMatchMatchess = () => {
             >
               <div className={`${styles.pararotate_} mw-lg:hidden`}>
                 <p
-                  className={`montserratfont text-[10px] font-semibold bg-[#221E1F] dark:text-[#e5e5e5]`}
+                  className={`montserratfont text-[10px] font-semibold bg-[#221E1F] text-[#e5e5e5]`}
                 >
                   Past
                 </p>
@@ -379,19 +500,19 @@ const LiveMatchMatchess = () => {
                   </div>
                   <div className="flex items-center justify-center bg-brandLightOpacity10">
                     <div className="flex justify-center items-center">
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px]">
+                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
                         Reckoning Esports
                       </p>
                       <Image src={whiteinf} alt="" />
                     </div>
                     <div className="mx-[12px]">
-                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 bg-[#514E4F] p-[9px]">
+                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
                         VS
                       </h4>
                     </div>
                     <div className="flex justify-center items-center">
                       <Image src={blackinf} alt="" className="mr-[12px]" />
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] ">
+                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px]">
                         Orangutan Esports
                       </p>
                     </div>
@@ -403,7 +524,7 @@ const LiveMatchMatchess = () => {
             {/* third one starts hrer */}
             {/* fifth starts here */}
             <div
-              className={`content_wrapper  bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col mt-[20px]`}
+              className={`content_wrapper  dark:bg-[#2E2A2B] bg-brandLightOpacity70  ${styles.mainSliderWrap} mw-lg:flex-col mt-[20px]`}
             >
               <div className={`${styles.pararotate_} mw-lg:hidden`}>
                 <p
@@ -438,19 +559,19 @@ const LiveMatchMatchess = () => {
                   </div>
                   <div className="flex items-center justify-center bg-brandLightOpacity10">
                     <div className="flex justify-center items-center">
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px]">
+                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
                         Reckoning Esports
                       </p>
                       <Image src={whiteinf} alt="" />
                     </div>
                     <div className="mx-[12px]">
-                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 bg-[#514E4F] p-[9px]">
+                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
                         VS
                       </h4>
                     </div>
                     <div className="flex justify-center items-center">
                       <Image src={blackinf} alt="" className="mr-[12px]" />
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] ">
+                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px]">
                         Orangutan Esports
                       </p>
                     </div>
@@ -462,7 +583,7 @@ const LiveMatchMatchess = () => {
             {/* fifth ends here */}
             {/* sixth starts here */}
             <div
-              className={`content_wrapper  bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col mt-[22px]`}
+              className={`content_wrapper bg-brandLightOpacity70  dark:bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col mt-[22px]`}
             >
               <div className={`${styles.pararotate_} mw-lg:hidden`}>
                 <p
@@ -497,19 +618,19 @@ const LiveMatchMatchess = () => {
                   </div>
                   <div className="flex items-center justify-center bg-brandLightOpacity10">
                     <div className="flex justify-center items-center">
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px]">
+                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
                         Reckoning Esports
                       </p>
                       <Image src={whiteinf} alt="" />
                     </div>
                     <div className="mx-[12px]">
-                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 bg-[#514E4F] p-[9px]">
+                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
                         VS
                       </h4>
                     </div>
                     <div className="flex justify-center items-center">
                       <Image src={blackinf} alt="" className="mr-[12px]" />
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] ">
+                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px]">
                         Orangutan Esports
                       </p>
                     </div>
@@ -520,11 +641,11 @@ const LiveMatchMatchess = () => {
             {/* sixth ends here */}
             {/* seventh starts here */}
             <div
-              className={`content_wrapper  bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col mt-[22px]`}
+              className={`content_wrapper  dark:bg-[#2E2A2B] bg-brandLightOpacity70  ${styles.mainSliderWrap} mw-lg:flex-col mt-[22px]`}
             >
               <div className={`${styles.pararotate_} mw-lg:hidden`}>
                 <p
-                  className={`montserratfont text-[10px] font-semibold bg-[#221E1F] dark:text-[#e5e5e5]`}
+                  className={`montserratfont text-[10px] font-semibold bg-[#221E1F] text-[#e5e5e5]`}
                 >
                   Past
                 </p>
@@ -555,19 +676,19 @@ const LiveMatchMatchess = () => {
                   </div>
                   <div className="flex items-center justify-center bg-brandLightOpacity10">
                     <div className="flex justify-center items-center">
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px]">
+                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
                         Reckoning Esports
                       </p>
                       <Image src={whiteinf} alt="" />
                     </div>
                     <div className="mx-[12px]">
-                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 bg-[#514E4F] p-[9px]">
+                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
                         VS
                       </h4>
                     </div>
                     <div className="flex justify-center items-center">
                       <Image src={blackinf} alt="" className="mr-[12px]" />
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] ">
+                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px]">
                         Orangutan Esports
                       </p>
                     </div>
@@ -581,7 +702,7 @@ const LiveMatchMatchess = () => {
             >
               <div className={`${styles.pararotate_} mw-lg:hidden`}>
                 <p
-                  className={`montserratfont text-[10px] font-semibold bg-[#221E1F] dark:text-[#e5e5e5]`}
+                  className={`montserratfont text-[10px] font-semibold bg-[#221E1F] text-[#e5e5e5]`}
                 >
                   Past
                 </p>
@@ -612,22 +733,309 @@ const LiveMatchMatchess = () => {
                   </div>
                   <div className="flex items-center justify-center bg-brandLightOpacity10">
                     <div className="flex justify-center items-center">
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px]">
+                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mr-[12px] mw-xl:text-[12px]">
                         Reckoning Esports
                       </p>
                       <Image src={whiteinf} alt="" />
                     </div>
                     <div className="mx-[12px]">
-                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 bg-[#514E4F] p-[9px]">
+                      <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
                         VS
                       </h4>
                     </div>
                     <div className="flex justify-center items-center">
                       <Image src={blackinf} alt="" className="mr-[12px]" />
-                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] ">
+                      <p className="text-[16px] font-medium leading-normal dark:text-[#e5e5e5] mw-xl:text-[12px]">
                         Orangutan Esports
                       </p>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="hidden mw-lg:block">
+          <h4 className="montserratfont text-[16px] font-bold uppercase text-[#ED4E50] pb-[9px]">
+            live matches
+          </h4>
+          <div
+            className={`${styles.main_wrapper}  border dark:border-brandLightOpacity10 rounded-[4px]  `}
+          >
+            <div
+              className={`${
+                isDarkTheme === "dark"
+                  ? `${styles.mainSliderWrap} `
+                  : `${styles.lightVarient}`
+              } content_wrapper items-start dark:bg-[#2E2A2B]  mw-lg:flex-col `}
+            >
+              <div className={`${styles.pararotate__} `}>
+                <p
+                  className={`montserratfont text-[10px] font-semibold bg-[#D91618] text-[#E5E5E5]`}
+                >
+                  LIVE
+                </p>
+              </div>
+
+              <div className="pt-[8px] w-[100%]">
+                <div className="flex pl-[25px]  pb-[8px]">
+                  <Image src={icon} alt="icon" />
+                  <p className="montserratfont text-[10px] font-medium leading-normal dark:text-brandLightOpacity70 ml-[8px] ">
+                    Intel Gamer Days X ROG LAN Fest
+                  </p>
+                </div>
+                <div className="bg-brandLightOpacity10 pt-[8px] pl-[25px]">
+                  <div className="flex items-center">
+                    <Image src={mobinf} alt="" />
+                    <p className="text-[12px] montserratfont font-medium leading-normal dark:text-[#e5e5e5] pl-[8px]">
+                      Reckoning Esports
+                    </p>
+                  </div>
+                  <div className="my-[2px] ">
+                    <p className="montserratfont text-[8px] font-normal dark:text-brandLightOpacity70 pl-[25px]">
+                      VS
+                    </p>
+                  </div>
+                  <div className="flex items-center pb-[7px]">
+                    <Image src={mobinf} alt="" />
+                    <p className="text-[12px] montserratfont font-medium leading-normal dark:text-[#e5e5e5] pl-[8px]">
+                      Reckoning Esports
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className={`${styles.main_wrapper}  border dark:border-brandLightOpacity10 rounded-[4px]  mt-[6px]`}
+          >
+            <div
+              className={`${
+                isDarkTheme === "dark"
+                  ? `${styles.mainSliderWrap} `
+                  : `${styles.lightVarient}`
+              } content_wrapper items-start dark:bg-[#2E2A2B]  mw-lg:flex-col `}
+            >
+              <div className={`${styles.pararotate__} `}>
+                <p
+                  className={`montserratfont text-[10px] font-semibold text-[#221E1F] bg-[#E5E5E5]`}
+                >
+                  In 2 days
+                </p>
+              </div>
+
+              <div className="pt-[8px] w-[100%]">
+                <div className="flex pl-[25px]  pb-[8px]">
+                  <Image src={icon} alt="icon" />
+                  <p className="montserratfont text-[10px] font-medium leading-normal dark:text-brandLightOpacity70 ml-[8px] ">
+                    Intel Gamer Days X ROG LAN Fest
+                  </p>
+                </div>
+                <div className="bg-brandLightOpacity10 pt-[8px] pl-[25px]">
+                  <div className="flex items-center">
+                    <Image src={mobinf} alt="" />
+                    <p className="text-[12px] montserratfont font-medium leading-normal dark:text-[#e5e5e5] pl-[8px]">
+                      Reckoning Esports
+                    </p>
+                  </div>
+                  <div className="my-[2px] ">
+                    <p className="montserratfont text-[8px] font-normal dark:text-brandLightOpacity70 pl-[25px]">
+                      VS
+                    </p>
+                  </div>
+                  <div className="flex items-center pb-[7px]">
+                    <Image src={mobinf} alt="" />
+                    <p className="text-[12px] montserratfont font-medium leading-normal dark:text-[#e5e5e5] pl-[8px]">
+                      Reckoning Esports
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className={`${styles.main_wrapper}  border dark:border-brandLightOpacity10 rounded-[4px]  mt-[6px]`}
+          >
+            <div
+              className={`${
+                isDarkTheme === "dark"
+                  ? `${styles.mainSliderWrap} `
+                  : `${styles.lightVarient}`
+              } content_wrapper items-start dark:bg-[#2E2A2B]  mw-lg:flex-col `}
+            >
+              <div className={`${styles.pararotate__} `}>
+                <p
+                  className={`montserratfont text-[10px] font-semibold bg-[#D91618] text-[#E5E5E5]`}
+                >
+                  LIVE
+                </p>
+              </div>
+
+              <div className="pt-[8px] w-[100%]">
+                <div className="flex pl-[25px]  pb-[8px]">
+                  <Image src={icon} alt="icon" />
+                  <p className="montserratfont text-[10px] font-medium leading-normal dark:text-brandLightOpacity70 ml-[8px] ">
+                    Intel Gamer Days X ROG LAN Fest
+                  </p>
+                </div>
+                <div className="bg-brandLightOpacity10 pt-[8px] pl-[25px]">
+                  <div className="flex items-center">
+                    <Image src={mobinf} alt="" />
+                    <p className="text-[12px] montserratfont font-medium leading-normal dark:text-[#e5e5e5] pl-[8px]">
+                      Reckoning Esports
+                    </p>
+                  </div>
+                  <div className="my-[2px] ">
+                    <p className="montserratfont text-[8px] font-normal dark:text-brandLightOpacity70 pl-[25px]">
+                      VS
+                    </p>
+                  </div>
+                  <div className="flex items-center pb-[7px]">
+                    <Image src={mobinf} alt="" />
+                    <p className="text-[12px] montserratfont font-medium leading-normal dark:text-[#e5e5e5] pl-[8px]">
+                      Reckoning Esports
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className={`${styles.main_wrapper}  border dark:border-brandLightOpacity10 rounded-[4px]  mt-[6px]`}
+          >
+            <div
+              className={`${
+                isDarkTheme === "dark"
+                  ? `${styles.mainSliderWrap} `
+                  : `${styles.lightVarient}`
+              } content_wrapper items-start dark:bg-[#2E2A2B]  mw-lg:flex-col `}
+            >
+              <div className={`${styles.pararotate__} `}>
+                <p
+                  className={`montserratfont text-[10px] font-semibold bg-[#221E1F] text-[#E5E5E5]`}
+                >
+                  Past
+                </p>
+              </div>
+
+              <div className="pt-[8px] w-[100%]">
+                <div className="flex pl-[25px]  pb-[8px]">
+                  <Image src={icon} alt="icon" />
+                  <p className="montserratfont text-[10px] font-medium leading-normal dark:text-brandLightOpacity70 ml-[8px] ">
+                    Intel Gamer Days X ROG LAN Fest
+                  </p>
+                </div>
+                <div className="bg-brandLightOpacity10 pt-[8px] pl-[25px]">
+                  <div className="flex items-center">
+                    <Image src={mobinf} alt="" />
+                    <p className="text-[12px] montserratfont font-medium leading-normal dark:text-[#e5e5e5] pl-[8px]">
+                      Reckoning Esports
+                    </p>
+                  </div>
+                  <div className="my-[2px] ">
+                    <p className="montserratfont text-[8px] font-normal dark:text-brandLightOpacity70 pl-[25px]">
+                      VS
+                    </p>
+                  </div>
+                  <div className="flex items-center pb-[7px]">
+                    <Image src={mobinf} alt="" />
+                    <p className="text-[12px] montserratfont font-medium leading-normal dark:text-[#e5e5e5] pl-[8px]">
+                      Reckoning Esports
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className={`${styles.main_wrapper}  border dark:border-brandLightOpacity10 rounded-[4px]  mt-[6px]`}
+          >
+            <div
+              className={`${
+                isDarkTheme === "dark"
+                  ? `${styles.mainSliderWrap} `
+                  : `${styles.lightVarient}`
+              } content_wrapper items-start dark:bg-[#2E2A2B]  mw-lg:flex-col `}
+            >
+              <div className={`${styles.pararotate__} `}>
+                <p
+                  className={`montserratfont text-[10px] font-semibold bg-[#D91618] text-[#E5E5E5]`}
+                >
+                  LIVE
+                </p>
+              </div>
+
+              <div className="pt-[8px] w-[100%]">
+                <div className="flex pl-[25px]  pb-[8px]">
+                  <Image src={icon} alt="icon" />
+                  <p className="montserratfont text-[10px] font-medium leading-normal dark:text-brandLightOpacity70 ml-[8px] ">
+                    Intel Gamer Days X ROG LAN Fest
+                  </p>
+                </div>
+                <div className="bg-brandLightOpacity10 pt-[8px] pl-[25px]">
+                  <div className="flex items-center">
+                    <Image src={mobinf} alt="" />
+                    <p className="text-[12px] montserratfont font-medium leading-normal dark:text-[#e5e5e5] pl-[8px]">
+                      Reckoning Esports
+                    </p>
+                  </div>
+                  <div className="my-[2px] ">
+                    <p className="montserratfont text-[8px] font-normal dark:text-brandLightOpacity70 pl-[25px]">
+                      VS
+                    </p>
+                  </div>
+                  <div className="flex items-center pb-[7px]">
+                    <Image src={mobinf} alt="" />
+                    <p className="text-[12px] montserratfont font-medium leading-normal dark:text-[#e5e5e5] pl-[8px]">
+                      Reckoning Esports
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className={`${styles.main_wrapper}  border dark:border-brandLightOpacity10 rounded-[4px]  mt-[6px]`}
+          >
+            <div
+              className={`${
+                isDarkTheme === "dark"
+                  ? `${styles.mainSliderWrap} `
+                  : `${styles.lightVarient}`
+              } content_wrapper items-start dark:bg-[#2E2A2B]  mw-lg:flex-col `}
+            >
+              <div className={`${styles.pararotate__} `}>
+                <p
+                  className={`montserratfont text-[10px] font-semibold text-[#221E1F] bg-[#E5E5E5]`}
+                >
+                  In 3 days
+                </p>
+              </div>
+
+              <div className="pt-[8px] w-[100%]">
+                <div className="flex pl-[25px]  pb-[8px]">
+                  <Image src={icon} alt="icon" />
+                  <p className="montserratfont text-[10px] font-medium leading-normal dark:text-brandLightOpacity70 ml-[8px] ">
+                    Intel Gamer Days X ROG LAN Fest
+                  </p>
+                </div>
+                <div className="bg-brandLightOpacity10 pt-[8px] pl-[25px]">
+                  <div className="flex items-center">
+                    <Image src={mobinf} alt="" />
+                    <p className="text-[12px] montserratfont font-medium leading-normal dark:text-[#e5e5e5] pl-[8px]">
+                      Reckoning Esports
+                    </p>
+                  </div>
+                  <div className="my-[2px] ">
+                    <p className="montserratfont text-[8px] font-normal dark:text-brandLightOpacity70 pl-[25px]">
+                      VS
+                    </p>
+                  </div>
+                  <div className="flex items-center pb-[7px]">
+                    <Image src={mobinf} alt="" />
+                    <p className="text-[12px] montserratfont font-medium leading-normal dark:text-[#e5e5e5] pl-[8px]">
+                      Reckoning Esports
+                    </p>
                   </div>
                 </div>
               </div>

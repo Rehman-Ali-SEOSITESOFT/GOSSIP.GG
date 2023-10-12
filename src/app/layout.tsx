@@ -30,6 +30,10 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet"
+        ></link>
       </head>
 
       <body className="scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2">
@@ -37,7 +41,7 @@ export default function RootLayout({
           <main className="gossip bg-bodycolor dark:bg-brandDark2">
             <Header />
             <div className="content">{children}</div>
-            
+
             <QuizRatio />
             <Footer />
           </main>

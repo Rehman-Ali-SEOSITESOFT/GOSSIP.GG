@@ -40,6 +40,13 @@ const LiveMatchSlider = () => {
           arrows: true,
         },
       },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
+          arrows: true,
+        },
+      },
     ],
   };
   interface Sliders {
@@ -174,7 +181,7 @@ const LiveMatchSlider = () => {
             {sliderData.map((e, index) => {
               return (
                 <div
-                  className={`content_wrapper  border border-brandLightOpacity10 bg-[#2E2A2B] rounded-[4px] ${styles.mainSliderWrap} mw-lg:flex-col`}
+                  className={`content_wrapper  border dark:border-brandLightOpacity10 dark:bg-[#2E2A2B] rounded-[4px] ${styles.mainSliderWrap} mw-lg:flex-col`}
                   key={index}
                 >
                   <div className={`${styles.pararotate} mw-lg:hidden`}>
@@ -217,23 +224,23 @@ const LiveMatchSlider = () => {
                   >
                     <div className="flex items-center">
                       <Image src={icon} alt="" className="mw-lg:hidden" />
-                      <h4 className="montserratfont text-[12px]  mw-lg:text-[12px] font-normal leading-normal text-[#E5E5E5] pl-[9px]">
+                      <h4 className="montserratfont text-[12px]  mw-lg:text-[12px] font-normal leading-normal dark:text-[#E5E5E5] pl-[9px]">
                         {e.title}
                       </h4>
                     </div>
                     <div className="flex items-center mt-[6px] ">
                       <div className="flex items-center">
                         <Image src={teamtag} alt="" />
-                        <h4 className="montserratfont text-[14px] font-semibold text-[#E5E5E5] leading-normal pl-[8px]">
+                        <h4 className="montserratfont text-[14px] font-semibold dark:text-[#E5E5E5] leading-normal pl-[8px]">
                           Team Liquid
                         </h4>
                       </div>
-                      <h4 className="montserratfont text-[12px] font-medium leading-normal text-brandLightOpacity70 px-[8px]">
+                      <h4 className="montserratfont text-[12px] font-medium leading-normal dark:text-brandLightOpacity70 px-[8px]">
                         VS
                       </h4>
                       <div className="flex items-center">
                         <Image src={teamtag} alt="" />
-                        <h4 className="montserratfont text-[14px] font-semibold text-[#E5E5E5] leading-normal pl-[8px]">
+                        <h4 className="montserratfont text-[14px] font-semibold dark:text-[#E5E5E5] leading-normal pl-[8px]">
                           {e.sexondteam}
                         </h4>
                       </div>

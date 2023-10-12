@@ -1,11 +1,11 @@
-import React from "react"
-import HeroSection from "./HeroSection/HeroSection"
-import SectionSaprator from "@/components/SecSaprator"
-import LatestNews from "./LatestNews/LatestNews"
-import AllEsportsEvents from "./AllEsportsEvent/AllEsportsEvents"
-import AllValorant from "./Valorant/AllValorant"
-import AllBgmi from "./AllBgmi/AllBgmi"
-import BgmiEvents from "../EsportsBgmi/BgmiEvents/BgmiEvents"
+import React from "react";
+import HeroSection from "./HeroSection/HeroSection";
+import SectionSaprator from "@/components/SecSaprator";
+import LatestNews from "./LatestNews/LatestNews";
+import AllEsportsEvents from "./AllEsportsEvent/AllEsportsEvents";
+import AllValorant from "./Valorant/AllValorant";
+import AllBgmi from "./AllBgmi/AllBgmi";
+import BgmiEvents from "../EsportsBgmi/BgmiEvents/BgmiEvents";
 
 const AllEsports = () => {
   const responsive = {
@@ -27,7 +27,7 @@ const AllEsports = () => {
       paritialVisibilityGutter: 60,
       arrows: false,
     },
-  }
+  };
   return (
     <>
       <section className="All_Exports_wrapper">
@@ -44,7 +44,7 @@ const AllEsports = () => {
             </div>
             <BgmiEvents responsive={responsive} />
           </div>
-         </div>
+        </div>
         <div className="all_varo">
           <AllValorant />
         </div>
@@ -53,7 +53,7 @@ const AllEsports = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default AllEsports
+export default AllEsports;

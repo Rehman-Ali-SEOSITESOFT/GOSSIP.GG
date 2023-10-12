@@ -117,7 +117,7 @@ const ReleventTabs = () => {
   return (
     <>
       <div className="quiz_history_tabs relative">
-        <div className="tabss  mt-[28px] mw-md:mt-[0px]">
+        <div className="tabss  mt-[28px] mw-lg:mt-[13px]">
           <ul className="flex full listTabUser   before:max-w-[1390px] before:left-0 before:right-0 before:top-[31px] before:absolute before:m-auto mw-lg:flex-col">
             <div className="flex w-[63%] mw-lg:w-[100%] ">
               <li className="">
@@ -215,7 +215,7 @@ const ReleventTabs = () => {
             </li>
           </ul>
 
-          <div className="mb-6 mw-lg:mt-[91px] mw-lg:mt-[1px]">
+          <div className="mb-6 mw-lg:mt-[23px] mw-lg:mt-[1px]">
             <div className="tab-content tab-space w-full  h-full  	">
               <div
                 className={

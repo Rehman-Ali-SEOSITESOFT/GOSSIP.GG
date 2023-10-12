@@ -82,7 +82,6 @@ const HeroSection = () => {
                         </div>
                         <div className="desc_wrapper pr-5	pl-3.5	mw-11:pr-3.5	mw-11:h-[130px] 	">
                           <h3 className="text-base font-bold  leading-5	 text-brandDark2 montserratfont dark:text-brandLightOpacity100 mw-11:text-[15px] mw-lg:text-base ">
-                            
                             {elem.name}
                           </h3>
 
@@ -96,7 +95,6 @@ const HeroSection = () => {
                           </div>
                           <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs mw-sm3:text-[10px]">
                             <span className="montserratfont">
-                              
                               <i>3 hrs ago</i>
                             </span>
                             <span
@@ -137,7 +135,6 @@ const HeroSection = () => {
                         </div>
                         <div className="desc_wrapper pr-5	pl-3.5	mw-11:pr-3.5	mw-11:h-[130px] mw-sm:h-[100px]	">
                           <h3 className="text-base font-bold  leading-5	 text-brandDark2 montserratfont dark:text-brandLightOpacity100 mw-11:text-[15px] mw-lg:text-base hero-section-tech-title mw-sm:text-sm mw-sm:leading-[17px]">
-                            
                             {elem.name}
                           </h3>
                           <div className="tags flex pt-3.5 pb-3 mw-sm:pt-2.5 mw-sm:pb-2    montserratfont">
@@ -150,7 +147,6 @@ const HeroSection = () => {
                           </div>
                           <small className="text-textColorGray dark:text-brandLightOpacity70 text-xs mw-sm3:text-[10px]">
                             <span className="montserratfont">
-                              
                               <i>3 hrs ago</i>
                             </span>
                             <span

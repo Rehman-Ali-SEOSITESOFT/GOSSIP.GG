@@ -91,7 +91,7 @@ const DealsArticleMain = (props: any) => {
                           className=""
                         />
                         <h4 className="montserratfont text-[14px] font-medium dark:text-brandLightOpacity70 pt-[8px]">
-                          Image credit:Hogwrts.com
+                          Image credit: Hogwrts.com
                         </h4>
                       </>
                     )}

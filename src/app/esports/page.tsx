@@ -17,6 +17,18 @@ const Esports = () => {
     herobg: any;
     titlee: String;
   }
+  const [respData1, setRespData1] = useState<RESPDATA[]>([
+    {
+      herobg: resp1,
+      titlee:
+        "Star Wars Jedi 3 Apparently Confirmed By Cal Kestis Actor Cameron Monaghan",
+    },
+    {
+      herobg: resp2,
+      titlee:
+        "Intel Gamer Days LAN Fest By OMEN Recap - Meet And Greet, Valorant Tournament, Cosplay, Community Events And More",
+    },
+  ]);
   const [respData, setRespData] = useState<RESPDATA[]>([
     {
       herobg: resp1,
@@ -62,7 +74,7 @@ const Esports = () => {
                         "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5   capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize mw-sm5:fontbold" +
                         (openTab === 1
                           ? " dark:text-brand border-b-2 border-brandDark2   dark:border-b-brand font-bold	"
-                          : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-normal  ")
+                          : "dark:bg-brandDark2   dark:text-[#E5E5E5] font-normal  ")
                       }
                       onClick={(e) => {
                         e.preventDefault();
@@ -81,7 +93,7 @@ const Esports = () => {
                         "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5   capitalize  pb-[8px]  mw-sm4:text-[12px] mw-sm4:leading-normal capitaliz" +
                         (openTab === 2
                           ? " dark:text-brand border-b-2 border-brandDark2   dark:border-b-brand font-bold	"
-                          : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-normal  ")
+                          : "dark:bg-brandDark2   dark:text-[#E5E5E5] font-normal  ")
                       }
                       onClick={(e) => {
                         e.preventDefault();
@@ -104,7 +116,20 @@ const Esports = () => {
                       id="link1"
                     >
                       <EsportsSlider />
-                      <div className="hidden mw-md:block">
+                      <div className="hidden mw-lg:block mt-[40px] mw-md:hidden">
+                        <div className="flex justify-between">
+                          {respData1.map((e, idx) => {
+                            return (
+                              <RespSection
+                                key={idx}
+                                herobg={e.herobg}
+                                titlee={e.titlee}
+                              />
+                            );
+                          })}
+                        </div>
+                      </div>
+                      <div className="hidden mw-md:block ">
                         {respData.map((e, idx) => {
                           return (
                             <RespSection
@@ -126,6 +151,30 @@ const Esports = () => {
                     <div className="for-you-section   mw-md:pt-[32px]">
                       <div className="">
                         <LiveMatchSlider />
+                        <div className="hidden mw-lg:block mt-[40px] mw-md:hidden">
+                          <div className="flex justify-between">
+                            {respData1.map((e, idx) => {
+                              return (
+                                <RespSection
+                                  key={idx}
+                                  herobg={e.herobg}
+                                  titlee={e.titlee}
+                                />
+                              );
+                            })}
+                          </div>
+                          <div className="hidden mw-md:block ">
+                            {respData.map((e, idx) => {
+                              return (
+                                <RespSection
+                                  key={idx}
+                                  herobg={e.herobg}
+                                  titlee={e.titlee}
+                                />
+                              );
+                            })}
+                          </div>
+                        </div>
                         <div>
                           <InnerTabsLiveMatches />
                         </div>

@@ -5,7 +5,7 @@ const RespSection = (props: any) => {
   const { herobg, titlee } = props;
   return (
     <>
-      <div className="mb-[16px]">
+      <div className="mb-[16px] w-[48%] mw-md:w-[100%]">
         <div className="relative  overflow-hidden ">
           <Image src={herobg} alt="image" className="w-[100%]" />
           <div className={`overlayy overlay  absolute inset-0 `}></div>
