@@ -49,14 +49,10 @@ const TrendingTags = () => {
       name: "Hogwarts",
       link: "/tag-search",
     },
-    {
-      name: "Flame Throwers",
-      link: "/tag-search",
-    },
   ]);
   return (
     <>
-      <div className="trending_wrapper flex flex-wrap	mt-[20px] ">
+      <div className="trending_wrapper flex flex-wrap	mt-[20px] mx-13:mt-[16px] mb-[32px] mx-13:mb-[18px] mw-xl:mb-[8px]">
         {tags.map((item, index) => {
           return (
             <Link
@@ -77,7 +73,7 @@ const TrendingTags = () => {
         <div className="gossip_content pt-[8px]">
           <p className="text-[12px] font-semibold montserratfont text-[#ED4E50] leading-normal">
             In{" "}
-            <span className=" inline-block	 w-[60px]">
+            <span className=" inline-block	 w-[70px]">
               <CountDownTimer />
             </span>
             <i className="fa-solid fa-angle-right"></i>
@@ -102,14 +98,14 @@ const TrendingTags = () => {
                   className="w-[24px] h-[24px] absolute left-[15px] "
                 />
               </div>
-              <div className="ml-[50px]">
+              <div className="ml-[44px]">
                 <p className="montserratfont text-[12px] font-normal text-brandDark2 dark:text-[#E5E5E5]">
                   and 54 others are playing
                 </p>
               </div>
             </div>
             <div className="mt-[12px]">
-              <p className="montserratfont text-[14px] font-medium leading-normal dark:text-[#E5E5E5]">
+              <p className="montserratfont text-[14px] font-medium leading-normal dark:text-[#E5E5E5] mx-13:text-[12px]">
                 Play everyday between 5 p.m. and 8 p.m. and stand a chance to
                 win the latest Samsung phone and other exciting prizes!
               </p>
@@ -120,13 +116,13 @@ const TrendingTags = () => {
           </div>
         </div>
       </div>
-      <div className="tag_last_section pt-[44px]">
+      <div className="tag_last_section pt-[44px] mx-13:pt-[30px] mw-xl:pt-[20px]">
         <p className="text-[12px] montserratfont font-normal dark:text-brandLightOpacity90 leading-[16px]">
           Gossip.GG brings you the latest scoop from Gaming, Esports, Tech, and
           a whole lot more. From breaking the latest industry news to in-depth
           reviews and features, Gossip.GG has you covered.
         </p>
-        <div className="flex mt-[12px]">
+        <div className="flex mt-[13px] ">
           <div className="h-[24px] hover:bg-brandLightOpacity20   cursor-pointer w-[24px]  rounded-3xl bg-brandDark1 flex justify-center  items-center">
             <Image
               src={instagram}
@@ -143,31 +139,31 @@ const TrendingTags = () => {
           </div>
         </div>
       </div>
-      <div className=" mt-[12px]">
+      <div className=" mt-[13px] mx-13:mt-[6px]">
         <ul className="flex list-none flex-wrap	">
-          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px] mx-13:mb-[6px]">
             <Link href="#">Disclaimer</Link>{" "}
           </li>
-          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px] mx-13:mb-[6px]">
             <Link href="#">Privacy Policy</Link>{" "}
           </li>
-          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px] mx-13:mb-[6px]">
             <Link href="#">Terms of Use</Link>{" "}
           </li>
-          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px] mx-13:mb-[6px]">
             <Link href="#">Editorial Policy</Link>{" "}
           </li>
-          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px] mx-13:mb-[6px]">
             <Link href="#">About Us</Link>{" "}
           </li>
-          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px] mx-13:mb-[6px]">
             <Link href="#">Contact</Link>{" "}
           </li>
-          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px]">
+          <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px] mx-13:mb-[6px]">
             <Link href="#">Careers</Link>{" "}
           </li>
         </ul>
-        <p className="montserratfont text-[12px] font-normal dark:text-brandLightOpacity70 mt-[8px]">
+        <p className="montserratfont text-[12px] font-normal dark:text-brandLightOpacity70 mt-[10px] mx-13:mb-[6px]">
           (c) 2023 Gossip.gg - All Rights Reserved
         </p>
       </div>

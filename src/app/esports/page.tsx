@@ -12,6 +12,7 @@ import RespSection from "@/components/NewEsports/RespNewSection";
 import LiveMatchSlider from "@/components/NewEsports/LiveMatchTab/LiveMatchSlider";
 import InnerTabsLiveMatches from "@/components/NewEsports/LiveMatchTab/LiveMatchInnerTabs";
 import LiveTabReleventTabs from "@/components/NewEsports/LiveMatchTab/LiveMatchRelevantTabs";
+import TopButton from "@/components/TopButton/TopButton";
 const Esports = () => {
   interface RESPDATA {
     herobg: any;
@@ -151,8 +152,8 @@ const Esports = () => {
                     <div className="for-you-section   mw-md:pt-[32px]">
                       <div className="">
                         <LiveMatchSlider />
-                        <div className="hidden mw-lg:block mt-[40px] mw-md:hidden">
-                          <div className="flex justify-between">
+                        <div className="hidden mw-lg:block mt-[40px] ">
+                          <div className="flex justify-between mw-md:hidden">
                             {respData1.map((e, idx) => {
                               return (
                                 <RespSection
@@ -163,7 +164,7 @@ const Esports = () => {
                               );
                             })}
                           </div>
-                          <div className="hidden mw-md:block ">
+                          <div className="hidden mw-md:block">
                             {respData.map((e, idx) => {
                               return (
                                 <RespSection

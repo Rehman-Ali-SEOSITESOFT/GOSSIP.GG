@@ -10,7 +10,9 @@ const CountDownTimer = () => {
       // Render a countdown
       return (
         <span>
-          {hours}:{minutes}:{seconds}
+          <span className="pr-[5px]"> {hours}</span>:
+          <span className="px-[5px]">{minutes}</span>:
+          <span className="pl-[5px]">{seconds}</span>
         </span>
       );
     }
@@ -18,7 +20,7 @@ const CountDownTimer = () => {
 
   return (
     <>
-      <Countdown date={Date.now() + 5000000} renderer={renderer} />
+      <Countdown date={Date.now() + 500000000} renderer={renderer} />
     </>
   );
 };

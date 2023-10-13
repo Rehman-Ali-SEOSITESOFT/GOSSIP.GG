@@ -7,15 +7,15 @@ const RelevantTabsSection = (props: any) => {
     <>
       <div className="tab_wrapper w-[32%] dark:bg-brandLightOpacity10 rounded-[8px] mb-[40px]  dark:border-brandLightOpacity10 border mw-lg:w-[49%] mw-sm:w-[100%] mw-lg:mb-[24px]">
         <Image src={tabImage} alt="image" className="mw-lg:w-[100%]" />
-        <div className="overflow-hidden	bottom_section">
-          <p className="montserratfont text-[16px] leading-normal font-medium dark:text-[#E5E5E5] pt-[12px] pb-[20px] pr-[18px] pl-[12px] h-[104px] section_para mw-9:text-[16px] mw-9:h-[auto] mw-sm:pb-[12px]">
+        <div className="	bottom_section">
+          <p className="montserratfont text-[16px] leading-normal font-medium dark:text-[#E5E5E5] pt-[12px] pb-[20px] pr-[18px] pl-[12px] h-[104px] section_para mx-14:h-[63px] mw-9:text-[16px] mw-9:h-[auto] mw-sm:pb-[12px] paraaa">
             {paragraph}
           </p>
           <div className="flex mb-[12px] px-[12px] ">
-            <div className="montserratfont text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
+            <div className="montserratfont text-textColorGray bg-grayCard px-2 rounded mr-2 text-xs leading-[32px] font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70 btn1">
               {button2}
             </div>
-            <div className="montserratfont text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
+            <div className="montserratfont text-textColorGray bg-grayCard px-2  rounded mr-2 text-xs leading-[32px] font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70 btn1">
               {button1}
             </div>
           </div>

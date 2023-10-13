@@ -1,3 +1,20 @@
+.bottom_section p {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+@media screen and (max-width: 1300px) {
+  .btn1 {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1 !important;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .bottom_section p {
     display: -webkit-box !important;

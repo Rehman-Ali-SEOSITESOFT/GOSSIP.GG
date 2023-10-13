@@ -18,6 +18,15 @@ import blackinf from "../../../../assets/livematches/blackinf.png";
 import posicon from "../../../../assets/livematches/posicon.png";
 import ViewMore from "@/components/Gamings/ViewMore/ViewMore";
 import mobinf from "../../../../assets/newsports/mobing.png";
+import ifn1 from "../../../../assets/livematchessstags/image1.png";
+import ifn2 from "../../../../assets/livematchessstags/image2.png";
+import ifn3 from "../../../../assets/livematchessstags/image3.png";
+import ifn4 from "../../../../assets/livematchessstags/image4.png";
+import mob1 from "../../../../assets/livematchessstags/mob1.png";
+import mob2 from "../../../../assets/livematchessstags/mob2.png";
+import mob3 from "../../../../assets/livematchessstags/mob3.png";
+import mob4 from "../../../../assets/livematchessstags/mob4.png";
+
 const LiveMatchMatchess = () => {
   var settings = {
     dots: false,
@@ -190,7 +199,9 @@ const LiveMatchMatchess = () => {
                     >
                       <div className="flex items-center">
                         <Image src={icon} alt="" className="mw-lg:hidden" />
-                        <h4 className="montserratfont text-[16px]  mw-lg:text-[12px] font-semibold         leading-normal dark:text-[#E5E5E5] pl-[8px] mx-13:text-[14px]">
+                        <h4
+                          className={`montserratfont text-[16px]  mw-lg:text-[12px] font-semibold         leading-normal dark:text-[#E5E5E5] pl-[8px] mx-13:text-[14px] ${styles.tileeee}`}
+                        >
                           {e.title}
                         </h4>
                       </div>
@@ -388,7 +399,7 @@ const LiveMatchMatchess = () => {
                         <Image src={whiteinf} alt="" />
                       </div>
                       <div className="mx-[12px]">
-                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
+                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px] mw-xl:text-[12px]">
                           VS
                         </h4>
                       </div>
@@ -448,7 +459,7 @@ const LiveMatchMatchess = () => {
                         <Image src={whiteinf} alt="" />
                       </div>
                       <div className="mx-[12px]">
-                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
+                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px] mw-xl:text-[12px]">
                           VS
                         </h4>
                       </div>
@@ -507,7 +518,7 @@ const LiveMatchMatchess = () => {
                         <Image src={whiteinf} alt="" />
                       </div>
                       <div className="mx-[12px]">
-                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
+                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px] mw-xl:text-[12px]">
                           VS
                         </h4>
                       </div>
@@ -523,6 +534,78 @@ const LiveMatchMatchess = () => {
               </div>
 
               {/* third one starts hrer */}
+
+              {/* fouth one starts here */}
+              <div
+                className={` content_wrapper  bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col mt-[20px]`}
+              >
+                <div className={`${styles.pararotate_} mw-lg:hidden`}>
+                  <p
+                    className={`montserratfont text-[10px] font-semibold bg-[#D91618] text-[#e5e5e5]`}
+                  >
+                    Live
+                  </p>
+                </div>
+
+                <div className="hidden mw-lg:block mw-lg:flex mw-lg:justify-between	mw-lg:pt-[5px] mw-lg:pl-[8px] mw-lg:pr-[8px] mw-lg:border-b-[1px] mw-lg:border-brandLightOpacity10 mw-lg:pb-[4px]">
+                  <Image src={icon} alt="" />
+                  <p
+                    className={`montserratfont text-[10px] font-semibold   
+                    
+                     `}
+                  >
+                    Live
+                  </p>
+                </div>
+
+                <div
+                  className={`${styles.right_content_} w-[100%]  pl-[8px]  mw-lg:ml-[0px] mw-lg:py-[6px]  `}
+                >
+                  <div className="absolute left-[26px] top-[23px]">
+                    <Image src={posicon} alt="" />
+                  </div>
+                  <div className="w-[100%]">
+                    <div className="text-center pt-[8px] pb-[10px]">
+                      <p className="montserratfont text-[14px] leading-normal font-medium dark:text-brandLightOpacity70">
+                        Intel Gamer Days X ROG LAN Fest
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-center bg-brandLightOpacity10">
+                      <div className="wrap w-[100] flex justify-center items-center">
+                        <div className="relative">
+                          <Image src={ifn1} alt="" className="absolute z-[5]" />
+                          <Image
+                            src={ifn2}
+                            alt=""
+                            className="absolute left-[20px] z-[4]"
+                          />
+                          <Image
+                            src={ifn3}
+                            alt=""
+                            className="absolute left-[50px] z-[3]"
+                          />
+                          <Image
+                            src={ifn4}
+                            alt=""
+                            className="absolute left-[75px] z-[2]"
+                          />
+                          <Image
+                            src={ifn2}
+                            alt=""
+                            className="absolute left-[104px] z-[1]"
+                          />
+                          <Image src={ifn1} alt="" className="" />
+                        </div>
+                        <p className="montserratfont text-[12px] leading-normal font-medium dark:text-brandLightOpacity70 ml-[110px]">
+                          + 10 more teams
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* fourth one ends here */}
+
               {/* fifth starts here */}
               <div
                 className={`content_wrapper  dark:bg-[#2E2A2B] bg-brandLightOpacity70  ${styles.mainSliderWrap} mw-lg:flex-col mt-[20px]`}
@@ -566,7 +649,7 @@ const LiveMatchMatchess = () => {
                         <Image src={whiteinf} alt="" />
                       </div>
                       <div className="mx-[12px]">
-                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
+                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px] mw-xl:text-[12px]">
                           VS
                         </h4>
                       </div>
@@ -625,7 +708,7 @@ const LiveMatchMatchess = () => {
                         <Image src={whiteinf} alt="" />
                       </div>
                       <div className="mx-[12px]">
-                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
+                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px] mw-xl:text-[12px]">
                           VS
                         </h4>
                       </div>
@@ -683,7 +766,7 @@ const LiveMatchMatchess = () => {
                         <Image src={whiteinf} alt="" />
                       </div>
                       <div className="mx-[12px]">
-                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
+                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px] mw-xl:text-[12px]">
                           VS
                         </h4>
                       </div>
@@ -740,7 +823,7 @@ const LiveMatchMatchess = () => {
                         <Image src={whiteinf} alt="" />
                       </div>
                       <div className="mx-[12px]">
-                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px]">
+                        <h4 className="montserratfont text-[14px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px] mw-xl:text-[12px]">
                           VS
                         </h4>
                       </div>
@@ -902,6 +985,67 @@ const LiveMatchMatchess = () => {
               </div>
             </div>
           </div>
+
+          <div
+            className={`${styles.main_wrapper}  border dark:border-brandLightOpacity10 rounded-[4px]  mt-[6px]`}
+          >
+            <div
+              className={`${
+                isDarkTheme === "dark"
+                  ? `${styles.mainSliderWrap} `
+                  : `${styles.lightVarient}`
+              } content_wrapper items-start dark:bg-[#2E2A2B]  mw-lg:flex-col `}
+            >
+              <div className={`${styles.pararotate__} `}>
+                <p
+                  className={`montserratfont text-[10px] font-semibold bg-[#D91618] text-[#E5E5E5]`}
+                >
+                  LIVE
+                </p>
+              </div>
+
+              <div className="pt-[8px] w-[100%]">
+                <div className="flex pl-[25px]  pb-[8px]">
+                  <Image src={icon} alt="icon" />
+                  <p className="montserratfont text-[10px] font-medium leading-normal dark:text-brandLightOpacity70 ml-[8px] ">
+                    Intel Gamer Days X ROG LAN Fest
+                  </p>
+                </div>
+                <div className="bg-brandLightOpacity10 py-[16px] pl-[25px]">
+                  <div className="wrap w-[100] flex justify-start items-center">
+                    <div className="relative">
+                      <Image src={mob1} alt="" className="absolute z-[5]" />
+                      <Image
+                        src={mob2}
+                        alt=""
+                        className="absolute left-[20px] z-[4]"
+                      />
+                      <Image
+                        src={mob3}
+                        alt=""
+                        className="absolute left-[38px] z-[3]"
+                      />
+                      <Image
+                        src={mob4}
+                        alt=""
+                        className="absolute left-[55px] z-[2]"
+                      />
+                      <Image
+                        src={mob2}
+                        alt=""
+                        className="absolute left-[75px] z-[1]"
+                      />
+                      <Image src={mob1} alt="" className="" />
+                    </div>
+                    <p className="montserratfont text-[12px] leading-normal font-medium dark:text-brandLightOpacity70 ml-[80px]">
+                      + 10 more teams
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div
             className={`${styles.main_wrapper}  border dark:border-brandLightOpacity10 rounded-[4px]  mt-[6px]`}
           >

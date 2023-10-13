@@ -12,7 +12,7 @@ const LowerContentHeroSection = (props: any) => {
           className=" min-w-[280px] mw-xl:min-w-[240px] mw-xl:h-[150px]"
         />
         <div className="content-right pr-[13px] pl-[13px] pt-[10px] pb-[10px]">
-          <h4 className="montserratfont text-[14px] font-bold dark:text-[#E5E5E5] capitalize ">
+          <h4 className="montserratfont text-[14px] font-bold dark:text-[#E5E5E5] capitalize elieepisePara">
             {discription}
           </h4>
           <p className="montserratfont text-[12px] font-normal dark:text-brandLightOpacity90 leading-normal pt-[8px]">

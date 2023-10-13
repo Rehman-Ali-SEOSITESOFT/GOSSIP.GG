@@ -22,7 +22,7 @@ const Comments = () => {
     <div className="global-section-width-article ">
       <div className="max-w-[968px]  pb-[24px] mw-lg:pt-7 mw-sm:pt-[16px] ">
         <div className="section-saprator flex flex-row items-center pb-[8px]  overflow-hidden mw-xl:m-0	">
-          <p className="text-brandDark2 font-bold font-sec-saprate-18 dark:text-secSaprator w-auto min-w-fit mw-sm:pt-5 mw-sm:border-t dark:border-t-brandLightOpacity10 border-t-borderEditProfile mw-sm:w-full uppercase mw-sm:capitalize ">
+          <p className="text-brandDark2 font-bold font-sec-saprate-18 dark:text-secSaprator w-auto min-w-fit mw-sm:pt-5 mw-sm:border-t dark:border-t-brandLightOpacity10 border-t-borderEditProfile mw-sm:w-full uppercase mw-sm:capitalize mw-sm4:pb-[2px]">
             Comments
           </p>
           <div className="bg-gradient-to-r from-brandDark2 h-0.5  min-w-[86%] ml-3 dark:from-secSaprator mw-sm:hidden"></div>

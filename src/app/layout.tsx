@@ -14,6 +14,7 @@ import "react-multi-carousel/lib/styles.css";
 import QuizRatio from "@/components/QuizRatio";
 import "animate.css";
 import SideBar from "@/layouts/sidebar/SideBar";
+import TopButton from "@/components/TopButton/TopButton";
 export default function RootLayout({
   children,
 }: {
@@ -40,7 +41,10 @@ export default function RootLayout({
         <Providers>
           <main className="gossip bg-bodycolor dark:bg-brandDark2">
             <Header />
-            <div className="content">{children}</div>
+            <div className="content">
+              <TopButton />
+              {children}
+            </div>
 
             <QuizRatio />
             <Footer />
