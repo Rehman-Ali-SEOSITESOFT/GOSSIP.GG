@@ -9,3 +9,19 @@
   text-align: center;
   width: auto !important;
 }
+@media screen and (max-width: 1250px) {
+  .daily_quizz_wrapper {
+    padding-top: 12px !important;
+  }
+  .playnowBtn {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    margin-top: 10px !important;
+  }
+  .tag_last_section {
+    padding-top: 12px !important;
+  }
+  .trending_wrapper {
+    margin-bottom: 0px !important;
+  }
+}

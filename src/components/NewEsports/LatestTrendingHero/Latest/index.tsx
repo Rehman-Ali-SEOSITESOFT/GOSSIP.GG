@@ -5,7 +5,7 @@ const Latest = (props: any) => {
   const { image, latestNew } = props;
   return (
     <>
-      <div className="latest_esports_wrapper flex items-start mt-[20px] mx-13:mb-[12px] mb-[27px] mx-13:mt-[16px]">
+      <div className="latest_esports_wrapper flex items-start mt-[20px] mx-13:mb-[12px] mb-[27px] mx-13:mt-[16px] mw-xl:mt-[14px]">
         <div className="min-w-[150px] min-h-[88px]">
           <Image src={image} alt="" className="" />
         </div>

@@ -39,7 +39,7 @@ export default function RootLayout({
 
       <body className="scrollbar-thin  scrollbar-thumb-choosebox  scrollbar-track-bodycolor  scrollbar-thumb-darkScollorBarColor  dark:scrollbar-track-brandDark2">
         <Providers>
-          <main className="gossip bg-bodycolor dark:bg-brandDark2">
+          <main className="gossip bg-bodycolor dark:bg-brandDark2 relative">
             <Header />
             <div className="content">
               <TopButton />

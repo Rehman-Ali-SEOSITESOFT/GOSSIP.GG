@@ -153,7 +153,7 @@ const GamingSlider = () => {
   return (
     <>
       <section
-        className={`${styles.trending} trending new_esports_slider pt-[22px] pb-[26px] border-b-[1px] border-brandLightOpacity10 mw-lg:pt-[16px] mw-md:pb-[40px] mw-md:border-b-[0px]`}
+        className={`${styles.trending} trending new_esports_slider pt-[26px] pb-[26px] border-b-[1px] border-brandLightOpacity10 mw-lg:pt-[16px] mw-md:pb-[40px] mw-md:border-b-[0px]`}
       >
         <div className="2xl:container">
           <Slider

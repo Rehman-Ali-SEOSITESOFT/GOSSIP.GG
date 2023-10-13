@@ -1,7 +1,11 @@
 .new_esports_slider .newtrean .slick-prev {
   left: 0px !important;
-  top: 22px !important;
+  top: 18px !important;
 }
 .new_esports_slider .slick-next {
   right: 0px !important;
+}
+.new_esports_slider .slick-prev:before,
+.new_esports_slider .slick-next:before {
+  opacity: 1 !important;
 }
