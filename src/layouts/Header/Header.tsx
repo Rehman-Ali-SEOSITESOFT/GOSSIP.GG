@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Fragment } from "react";
 import logo from "../../assets/images/header/main-logo.png";
+
 import search from "../../assets/images/header/search.png";
 import noti from "../../assets/images/header/notif.png";
 import moon from "../../assets/images/header/moon.png";
@@ -27,6 +28,7 @@ import IntroScreen from "@/components/QuizScreen/IntroScreen";
 import PrizeOfTheDay from "@/components/QuizScreen/PrizeOfTheDay";
 import bars from "../../assets/head/bars.png";
 import SideBar from "../sidebar/SideBar";
+import logo2 from "@/assets/images/header/logo-2.png";
 const Header = () => {
   interface MenuList {
     name: string;
@@ -215,10 +217,19 @@ const Header = () => {
           >
             <div className="flex  h-full flex-wrap items-center justify-between">
               <div
-                className={`xl:w-1/4 lg:w-1/5  w-3/6  ${styles.header__left} mw-12:w-[20%] mw-sm5:w-[35%]`}
+                className={`xl:w-1/5 lg:w-1/5  w-3/6  ${styles.header__left} mw-12:w-[20%] mw-sm5:w-[35%]`}
               >
                 <Link href="/" className={styles.logo}>
-                  <Image src={logo} alt="Gossip GG" />
+                  <Image
+                    src={logo}
+                    alt="Gossip GG"
+                    className="distop block mw-lg:hidden"
+                  />
+                  <Image
+                    src={logo2}
+                    alt="Gossip GG"
+                    className="mobile hidden mw-lg:block"
+                  />
                 </Link>
               </div>
               {searchOpen ? (
@@ -334,7 +345,7 @@ const Header = () => {
               )}
 
               <div
-                className={`xl:w-1/4 lg:w-1/5	w-3/6 ${styles.header__right} relative mw-12:w-[30%]  mw-md:w-[50%]`}
+                className={`xl:w-1/4 lg:w-[25%]	w-3/6 ${styles.header__right} relative mw-12:w-[30%]  mw-md:w-[50%]`}
               >
                 <div
                   className={`${styles.header__right} flex justify-end items-center`}
