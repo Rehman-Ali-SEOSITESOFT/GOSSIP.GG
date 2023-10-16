@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import logo from "../../../../assets/newsports/gossiplogo.png";
 import image1 from "../../../../assets/rewards/one.png";
@@ -7,8 +7,11 @@ import image3 from "../../../../assets/rewards/three.png";
 import CountDownTimer from "@/components/Rewards/CountDownTimer/CountDownTimer";
 import instagram from "../../../../assets/newsports/instagram.png";
 import twitter from "../../../../assets/newsports/twitter.png";
+import linstagram from "../../../../assets/newsports/linstagram.png";
+import ltwitter from "../../../../assets/newsports/ltwitter.png";
 import "./gamingTrendingTags.css";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 const GamingTrendingTags = () => {
   interface TagsList {
     name: string;
@@ -50,6 +53,11 @@ const GamingTrendingTags = () => {
       link: "/tag-search",
     },
   ]);
+  const { theme } = useTheme();
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
+  useEffect(() => {
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   return (
     <>
       <div className="trending_wrapper flex flex-wrap	mt-[20px] mx-13:mt-[16px] mb-[32px] mx-13:mb-[18px] mw-xl:mb-[8px] ">
@@ -123,16 +131,16 @@ const GamingTrendingTags = () => {
           reviews and features, Gossip.GG has you covered.
         </p>
         <div className="flex mt-[13px] mx-13:mt-[6px] mw-xl:mt-[10px]">
-          <div className="h-[24px] hover:bg-brandLightOpacity20   cursor-pointer w-[24px]  rounded-3xl bg-brandDark1 flex justify-center  items-center">
+          <div className="h-[24px] hover:bg-brandLightOpacity20   cursor-pointer w-[24px]  rounded-3xl dark:bg-brandLightOpacity10 bg-grayCard flex justify-center  items-center">
             <Image
-              src={instagram}
+              src={isDarkTheme === "dark" ? instagram : linstagram}
               alt="instagram"
               className="w-[14px] h-[14px]"
             />
           </div>
-          <div className="h-[24px] hover:bg-brandLightOpacity20   cursor-pointer w-[24px] ml-[24px] rounded-3xl bg-brandDark1 flex justify-center  items-center">
+          <div className="h-[24px] hover:bg-brandLightOpacity20 bg-grayCard  cursor-pointer w-[24px] ml-[24px] rounded-3xl dark:bg-brandLightOpacity10 flex justify-center  items-center">
             <Image
-              src={twitter}
+              src={isDarkTheme === "dark" ? twitter : ltwitter}
               alt="instagram"
               className="w-[14px] h-[14px]"
             />
