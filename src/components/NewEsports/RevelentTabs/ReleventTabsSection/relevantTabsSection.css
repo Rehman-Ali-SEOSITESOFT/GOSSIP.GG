@@ -8,6 +8,8 @@
 .stickymenu {
   position: sticky !important;
   top: 80px !important;
+  background-color: #221e1f;
+  z-index: 22222;
 }
 @media screen and (max-width: 1300px) {
   .btn1 {

@@ -13,6 +13,7 @@ import LiveMatchSlider from "@/components/NewEsports/LiveMatchTab/LiveMatchSlide
 import InnerTabsLiveMatches from "@/components/NewEsports/LiveMatchTab/LiveMatchInnerTabs";
 import LiveTabReleventTabs from "@/components/NewEsports/LiveMatchTab/LiveMatchRelevantTabs";
 import TopButton from "@/components/TopButton/TopButton";
+import AllTabsData from "@/components/NewEsports/RevelentTabs/AllTabsData";
 const Esports = () => {
   interface RESPDATA {
     herobg: any;
@@ -108,17 +109,54 @@ const Esports = () => {
                     </a>
                   </li>
                 </ul>
-                <div className="mb-6  mw-lg:mt-[0px]">
-                  <div className="tab-content tab-space w-full  h-full  	">
-                    <div
-                      className={
-                        openTab === 1 ? " rounded-lg	 overflow-hidden" : "hidden"
-                      }
-                      id="link1"
-                    >
-                      <EsportsSlider />
-                      <div className="hidden mw-lg:block mt-[40px] mw-md:hidden">
-                        <div className="flex justify-between">
+
+                <div
+                  className={`
+                     ${
+                       openTab === 1 ? " rounded-lg	 overflow-hidden" : "hidden"
+                     } tab-content tab-space w-full  h-full  	mb-6  mw-lg:mt-[0px]`}
+                  id="link1"
+                >
+                  <EsportsSlider />
+                  <div className="hidden mw-lg:block mt-[40px] mw-md:hidden">
+                    <div className="flex justify-between">
+                      {respData1.map((e, idx) => {
+                        return (
+                          <RespSection
+                            key={idx}
+                            herobg={e.herobg}
+                            titlee={e.titlee}
+                          />
+                        );
+                      })}
+                    </div>
+                  </div>
+                  <div className="hidden mw-md:block ">
+                    {respData.map((e, idx) => {
+                      return (
+                        <RespSection
+                          key={idx}
+                          herobg={e.herobg}
+                          titlee={e.titlee}
+                        />
+                      );
+                    })}
+                  </div>
+                  <LatestTrendingHero />
+                  <AllTabsData />
+                </div>
+
+                <div
+                  className={`${
+                    openTab === 2 ? "block" : "hidden"
+                  } mb-6  mw-lg:mt-[0px]`}
+                  id="link2"
+                >
+                  <div className="for-you-section   mw-md:pt-[32px]">
+                    <div className="">
+                      <LiveMatchSlider />
+                      <div className="hidden mw-lg:block mt-[40px] ">
+                        <div className="flex justify-between mw-md:hidden">
                           {respData1.map((e, idx) => {
                             return (
                               <RespSection
@@ -129,56 +167,20 @@ const Esports = () => {
                             );
                           })}
                         </div>
-                      </div>
-                      <div className="hidden mw-md:block ">
-                        {respData.map((e, idx) => {
-                          return (
-                            <RespSection
-                              key={idx}
-                              herobg={e.herobg}
-                              titlee={e.titlee}
-                            />
-                          );
-                        })}
-                      </div>
-                      <LatestTrendingHero />
-                      <ReleventTabs />
-                    </div>
-                  </div>
-                  <div
-                    className={openTab === 2 ? "block" : "hidden"}
-                    id="link2"
-                  >
-                    <div className="for-you-section   mw-md:pt-[32px]">
-                      <div className="">
-                        <LiveMatchSlider />
-                        <div className="hidden mw-lg:block mt-[40px] ">
-                          <div className="flex justify-between mw-md:hidden">
-                            {respData1.map((e, idx) => {
-                              return (
-                                <RespSection
-                                  key={idx}
-                                  herobg={e.herobg}
-                                  titlee={e.titlee}
-                                />
-                              );
-                            })}
-                          </div>
-                          <div className="hidden mw-md:block">
-                            {respData.map((e, idx) => {
-                              return (
-                                <RespSection
-                                  key={idx}
-                                  herobg={e.herobg}
-                                  titlee={e.titlee}
-                                />
-                              );
-                            })}
-                          </div>
+                        <div className="hidden mw-md:block">
+                          {respData.map((e, idx) => {
+                            return (
+                              <RespSection
+                                key={idx}
+                                herobg={e.herobg}
+                                titlee={e.titlee}
+                              />
+                            );
+                          })}
                         </div>
-                        <div>
-                          <InnerTabsLiveMatches />
-                        </div>
+                      </div>
+                      <div>
+                        <InnerTabsLiveMatches />
                       </div>
                     </div>
                   </div>
