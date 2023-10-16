@@ -53,7 +53,7 @@ export default function RootLayout({
               <TopButton />
             </div>
             <QuizRatio />
-            {path === "/esports" ? "" : <Footer />}
+            {path === "/esports" || path === "/gaming" ? "" : <Footer />}
           </main>
         </Providers>
       </body>

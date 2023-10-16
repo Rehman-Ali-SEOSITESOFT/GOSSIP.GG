@@ -82,7 +82,7 @@ const QuizRatio = () => {
 
   return (
     <>
-      <div className="quiz-ration fixed right-[15px] bottom-[100px]	 w-full max-w-[130px] ">
+      <div className="quiz-ration fixed right-[15px] bottom-[100px]	 w-full max-w-[130px] z-[333333]">
         {/*   QUIZED BOX */}
 
         <div

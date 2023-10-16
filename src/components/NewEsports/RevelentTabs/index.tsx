@@ -692,9 +692,7 @@ const ReleventTabs = () => {
           <div className="mb-6 mw-lg:mt-[23px] mw-lg:mt-[1px]">
             <div className="tab-content tab-space w-full  h-full">
               <div
-                className={
-                  openTab === 1 ? " rounded-lg	 overflow-hidden" : "hidden"
-                }
+                className={openTab === 1 ? " rounded-lg	 " : "hidden"}
                 id="link1"
               >
                 <div className="flex justify-between   relative">

@@ -8,7 +8,8 @@ const InnerTabsLiveMatches = () => {
 
   const menulist = [
     { name: "all", data: <LiveMatchAllTab /> },
-    { name: "Esports Events", data: <LiveMatchEsportEventTab /> },
+    { name: "Esports Events", data: <LiveMatchAllTab /> },
+    // { name: "Esports Events", data: <LiveMatchEsportEventTab /> },
   ];
   const hanldeOpenTab = (e: number) => {
     setOpenTab(e);
