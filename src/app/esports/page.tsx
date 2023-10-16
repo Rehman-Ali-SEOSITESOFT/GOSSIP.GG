@@ -141,10 +141,10 @@ const Esports = () => {
                           );
                         })}
                       </div>
-                      <LatestTrendingHero />
-                      <ReleventTabs />
                     </div>
                   </div>
+                  <LatestTrendingHero />
+                  <ReleventTabs />
                   <div
                     className={openTab === 2 ? "block" : "hidden"}
                     id="link2"

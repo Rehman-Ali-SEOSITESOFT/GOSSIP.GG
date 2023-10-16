@@ -18,6 +18,7 @@ import Advertise from "../RightSidebar";
 import RightSidebar from "@/components/Game/rightbar2/RightSidebar";
 import EmptyTabs from "@/components/Emptytabs";
 import "./ReleventTabsSection/relevantTabsSection.css";
+import LatestTabsEsport from "./LatestTabs";
 const ReleventTabs = () => {
   interface TABDATA {
     tabImage: any;
@@ -120,104 +121,7 @@ const ReleventTabs = () => {
     <>
       <div className="quiz_history_tabs relative">
         <div className="tabss  mt-[28px] mw-lg:mt-[13px]">
-          <div className="stickymenu">
-            <ul className="flex full listTabUser   before:max-w-[1390px] before:left-0 before:right-0 before:top-[31px] before:absolute before:m-auto mw-lg:flex-col">
-              <div className="flex w-[63%] mw-lg:w-[100%] ">
-                <li className="">
-                  <a
-                    className={
-                      "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize " +
-                      (openTab === 1
-                        ? " dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
-                        : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light	")
-                    }
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setOpenTab(1);
-                    }}
-                    data-toggle="tab"
-                    href="#link1"
-                    role="tablist"
-                  >
-                    Relevant
-                  </a>
-                </li>
-                <li className="pl-[20px]  mw-md:pl-[30px] ">
-                  <a
-                    className={
-                      "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
-                      (openTab === 2
-                        ? " dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
-                        : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light ")
-                    }
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setOpenTab(2);
-                    }}
-                    data-toggle="tab"
-                    href="#link2"
-                    role="tablist"
-                  >
-                    Latest
-                  </a>
-                </li>
-                <li className="pl-[20px]  mw-md:pl-[30px] ">
-                  <a
-                    className={
-                      "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
-                      (openTab === 3
-                        ? " dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
-                        : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light ")
-                    }
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setOpenTab(3);
-                    }}
-                    data-toggle="tab"
-                    href="#link2"
-                    role="tablist"
-                  >
-                    Top
-                  </a>
-                </li>
-                <li className="pl-[20px]  mw-md:pl-[30px] ">
-                  <a
-                    className={
-                      "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
-                      (openTab === 4
-                        ? "dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
-                        : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light  ")
-                    }
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setOpenTab(4);
-                    }}
-                    data-toggle="tab"
-                    href="#link2"
-                    role="tablist"
-                  >
-                    For You
-                  </a>
-                </li>
-              </div>
-              <li>
-                <div className="flex mw-lg:mt-[21px]">
-                  <div className="montserratfont text-textColorGray bg-grayCard px-[12px] py-[8px]  rounded-[16px] mr-2 text-[14px] leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
-                    All
-                  </div>
-                  <div className="montserratfont text-textColorGray bg-grayCard px-[12px] py-[8px]  rounded-[16px] mr-2 text-[14px] leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
-                    Gaming
-                  </div>
-                  <div className="montserratfont text-textColorGray bg-grayCard px-[12px] py-[8px] rounded-[16px] mr-2 text-[14px] leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
-                    Esports
-                  </div>
-                  <div className="montserratfont text-textColorGray bg-grayCard px-[12px] py-[8px]  rounded-[16px] mr-2 text-[14px] leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
-                    Gossip
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
+          <LatestTabsEsport />
           <div className="mb-6 mw-lg:mt-[23px] mw-lg:mt-[1px]">
             <div className="tab-content tab-space w-full  h-full  	">
               <div
