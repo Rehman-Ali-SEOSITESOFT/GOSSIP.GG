@@ -18,3 +18,18 @@
   width: 60px;
   height: 60px;
 }
+@media screen and (max-width: 992px) {
+  .icon-position {
+    right: 120px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .icon-position {
+    right: 80px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .icon-position {
+    right: 30px;
+  }
+}

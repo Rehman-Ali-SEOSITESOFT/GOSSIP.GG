@@ -91,7 +91,7 @@ const SideBar = ({ isOpen, onClose }) => {
                 </div>
                 <p className="text-[12px] font-semibold montserratfont text-[#ED4E50] leading-normal mt-[8px]">
                   In{" "}
-                  <span className=" inline-block	 w-[60px]">
+                  <span className=" inline-block	 w-[70px]">
                     <CountDownTimer />
                   </span>
                   <i className="fa-solid fa-angle-right"></i>

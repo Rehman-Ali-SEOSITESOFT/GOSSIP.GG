@@ -291,7 +291,7 @@ const LiveTabReleventTabs = () => {
               isDarkTheme === "dark"
                 ? "stickymenu bg-[#221e1f]"
                 : "bg-[#f8f8f8] sticky top-[86px] z-[2222]"
-            }  pt-[28px] mw-md:pt-[0px] pb-[31px]`}
+            }  pt-[28px] mw-md:pt-[56px] pb-[31px] `}
           >
             <ul className="flex full listTabUser   before:max-w-[1390px] before:left-0 before:right-0 before:top-[31px] before:absolute before:m-auto mw-lg:flex-col  ">
               <div className="flex w-[68%] mw-lg:w-[100%] ">
@@ -387,7 +387,7 @@ const LiveTabReleventTabs = () => {
               </li>
             </ul>
           </div>
-          <div className="mb-6 mw-lg:mt-[91px] mw-lg:mt-[1px]">
+          <div className="mb-6 mw-lg:mt-[31px] mw-md:mt-[1px]">
             <div className="tab-content tab-space w-full  h-full  	">
               <div
                 className={openTab === 1 ? " rounded-lg	" : "hidden"}
