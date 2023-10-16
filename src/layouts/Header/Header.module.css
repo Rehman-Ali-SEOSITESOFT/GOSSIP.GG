@@ -63,7 +63,7 @@
   line-height: 20px;
   text-align: center;
   width: 85px;
-  margin: 0 28px;
+  margin: 0 16px;
 }
 .serach_btn {
   width: 625px;
@@ -169,8 +169,8 @@
   }
 
   .header__left .logo img {
-    max-height: 20px;
-    max-width: 140px;
+    max-height: 40px;
+    width: 40px;
   }
   .header__center {
     display: none;
@@ -226,7 +226,7 @@
   }
   .header__right .login__btn {
     font-size: 14px;
-    margin: 0 10px;
+    /* margin: 0 10px; */
   }
 }
 @media screen and (max-width: 600px) {
@@ -305,10 +305,10 @@
   .seach__deve.open {
     top: 10px;
   }
-  .header__left .logo img {
+  /* .header__left .logo img {
     max-height: fit-content;
     max-width: 110px;
-  }
+  } */
 
   .header__right .icons {
     min-width: 30px;
