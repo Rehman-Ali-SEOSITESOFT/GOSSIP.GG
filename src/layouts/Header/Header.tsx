@@ -209,7 +209,7 @@ const Header = () => {
       )}
 
       <header
-        className={`${styles.main_header} relative z-[10] mw-lg:sticky top-0`}
+        className={`${styles.main_header} relative z-[10] mw-lg:sticky top-0 bg-[#221E1F]`}
       >
         <div className={`${styles.header_width} relative `}>
           <div
