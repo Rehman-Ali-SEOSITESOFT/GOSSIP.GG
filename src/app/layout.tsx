@@ -1,3 +1,4 @@
+"use client";
 // import "../styles/styles.scss";
 import "../styles/globals.css";
 import Header from "@/layouts/Header/Header";
@@ -15,11 +16,17 @@ import QuizRatio from "@/components/QuizRatio";
 import "animate.css";
 import SideBar from "@/layouts/sidebar/SideBar";
 import TopButton from "@/components/TopButton/TopButton";
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const path = usePathname();
+  useEffect(() => {
+    console.log(path, "path");
+  }, []);
   return (
     <html lang="en">
       <head>
@@ -45,9 +52,8 @@ export default function RootLayout({
               {children}
               <TopButton />
             </div>
-
             <QuizRatio />
-            <Footer />
+            {path === "/esports" ? "" : <Footer />}
           </main>
         </Providers>
       </body>
