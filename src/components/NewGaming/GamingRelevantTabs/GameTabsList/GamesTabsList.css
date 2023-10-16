@@ -1,0 +1,19 @@
+.stickymenu {
+  position: sticky !important;
+  top: 86px !important;
+  background-color: #221e1f;
+  z-index: 22222;
+}
+.lightMode {
+  position: sticky !important;
+  top: 86px !important;
+  /* border: 1px solid #e5e5e5; */
+  background-color: #f8f8f8;
+  z-index: 22222;
+}
+@media screen and (max-width: 1280px) {
+  .stickymenu,
+  .lightMode {
+    top: 72px !important;
+  }
+}

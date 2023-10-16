@@ -17,6 +17,8 @@ import GamingRelevantTab from "..";
 import Filter from "@/components/Filter/Filter";
 import GamingFilter from "../../GamingFilter";
 import EmptyTabs from "@/components/Emptytabs";
+import { open } from "fs/promises";
+import GameTabList from "../GameTabsList";
 const GamingRelevantTabSection = () => {
   interface TABDATA {
     tabImage: any;
@@ -25,6 +27,573 @@ const GamingRelevantTabSection = () => {
     button1: String;
   }
   const [tabData, setTabData] = useState<TABDATA[]>([
+    {
+      tabImage: tab1,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab2,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab3,
+      paragraph: "Apex Legends Season 18 Resurrection ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab4,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab5,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free   ",
+      button2: "Features",
+      button1: "Gaming",
+    },
+    {
+      tabImage: tab6,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update  ",
+      button2: "FIFA",
+      button1: "Championship",
+    },
+    {
+      tabImage: tab7,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab8,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab9,
+      paragraph: "Apex Legends Season 18 Resurrection  ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab10,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab11,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free   ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab9,
+      paragraph: "Apex Legends Season 18 Resurrection  ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab1,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab2,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab3,
+      paragraph: "Apex Legends Season 18 Resurrection ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab4,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab5,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free   ",
+      button2: "Features",
+      button1: "Gaming",
+    },
+    {
+      tabImage: tab6,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update  ",
+      button2: "FIFA",
+      button1: "Championship",
+    },
+    {
+      tabImage: tab7,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab8,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab9,
+      paragraph: "Apex Legends Season 18 Resurrection  ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab10,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab11,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free   ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab9,
+      paragraph: "Apex Legends Season 18 Resurrection  ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab1,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab2,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab3,
+      paragraph: "Apex Legends Season 18 Resurrection ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab4,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab5,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free   ",
+      button2: "Features",
+      button1: "Gaming",
+    },
+    {
+      tabImage: tab6,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update  ",
+      button2: "FIFA",
+      button1: "Championship",
+    },
+    {
+      tabImage: tab7,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab8,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab9,
+      paragraph: "Apex Legends Season 18 Resurrection  ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab10,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab11,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free   ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab9,
+      paragraph: "Apex Legends Season 18 Resurrection  ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab1,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab2,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab3,
+      paragraph: "Apex Legends Season 18 Resurrection ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab4,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab5,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free   ",
+      button2: "Features",
+      button1: "Gaming",
+    },
+    {
+      tabImage: tab6,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update  ",
+      button2: "FIFA",
+      button1: "Championship",
+    },
+    {
+      tabImage: tab7,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab8,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab9,
+      paragraph: "Apex Legends Season 18 Resurrection  ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab10,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab11,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free   ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab9,
+      paragraph: "Apex Legends Season 18 Resurrection  ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab1,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab2,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab3,
+      paragraph: "Apex Legends Season 18 Resurrection ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab4,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab5,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free   ",
+      button2: "Features",
+      button1: "Gaming",
+    },
+    {
+      tabImage: tab6,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update  ",
+      button2: "FIFA",
+      button1: "Championship",
+    },
+    {
+      tabImage: tab7,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab8,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab9,
+      paragraph: "Apex Legends Season 18 Resurrection  ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab10,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab11,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free   ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab9,
+      paragraph: "Apex Legends Season 18 Resurrection  ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab1,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab2,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab3,
+      paragraph: "Apex Legends Season 18 Resurrection ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab4,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab5,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free   ",
+      button2: "Features",
+      button1: "Gaming",
+    },
+    {
+      tabImage: tab6,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update  ",
+      button2: "FIFA",
+      button1: "Championship",
+    },
+    {
+      tabImage: tab7,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab8,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab9,
+      paragraph: "Apex Legends Season 18 Resurrection  ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab10,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab11,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free   ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab9,
+      paragraph: "Apex Legends Season 18 Resurrection  ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab1,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab2,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab3,
+      paragraph: "Apex Legends Season 18 Resurrection ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab4,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab5,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free   ",
+      button2: "Features",
+      button1: "Gaming",
+    },
+    {
+      tabImage: tab6,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update  ",
+      button2: "FIFA",
+      button1: "Championship",
+    },
+    {
+      tabImage: tab7,
+      paragraph:
+        "Apex Legends Season 18 Resurrection Details: Revenant Revamped, Charge Rifle Update ",
+      button2: "Baldurs gate 3 ",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab8,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab9,
+      paragraph: "Apex Legends Season 18 Resurrection  ",
+      button2: "News ",
+      button1: "Esports",
+    },
+    {
+      tabImage: tab10,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free  ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab11,
+      paragraph:
+        "EA Sports UFC 5 Gameplay Deep Dive: New Ground-And-Pound System, free   ",
+      button2: "Guides",
+      button1: "Dungeons and dragons etc",
+    },
+    {
+      tabImage: tab9,
+      paragraph: "Apex Legends Season 18 Resurrection  ",
+      button2: "News ",
+      button1: "Esports",
+    },
     {
       tabImage: tab1,
       paragraph:
@@ -116,8 +685,8 @@ const GamingRelevantTabSection = () => {
   return (
     <>
       <div className="quiz_history_tabs relative">
-        <div className="tabss  mt-[28px] mw-lg:mt-[48px]">
-          <ul className="flex full listTabUser   before:max-w-[1390px] before:left-0 before:right-0 before:top-[31px] before:absolute before:m-auto mw-lg:flex-col">
+        <div className="tabss   mw-lg:mt-[48px]">
+          {/* <ul className="flex full listTabUser   before:max-w-[1390px] before:left-0 before:right-0 before:top-[31px] before:absolute before:m-auto mw-lg:flex-col">
             <div className="flex w-[56%] mw-lg:w-[100%]">
               <li className="">
                 <a
@@ -215,9 +784,57 @@ const GamingRelevantTabSection = () => {
                 </div>
               </div>
             </li>
-          </ul>
+          </ul> */}
+          <GameTabList OpennTab={setOpenTab} />
+          {openTab === 1 ? (
+            <div className="mb-6 mw-lg:mt-[0px] flex justify-between   relative">
+              <div className="w-[85%] mw-lg:w-[100%]">
+                <GamingFilter />
+                <div className="flex flex-wrap justify-between ">
+                  {tabData.map((e, idx) => {
+                    return (
+                      <GamingRelevantTab
+                        key={idx}
+                        tabImage={e.tabImage}
+                        paragraph={e.paragraph}
+                        button1={e.button1}
+                        button2={e.button2}
+                      />
+                    );
+                  })}
+                </div>
+              </div>
+              <div className="mw-lg:hidden">
+                <Advertise />
+              </div>
+            </div>
+          ) : openTab === 2 ? (
+            <div className="mb-6 mw-lg:mt-[0px]">
+              <div className="for-you-section  pt-[51px]  mw-md:pt-[32px]">
+                <div className="">
+                  <h1 className="text-[#fff]">
+                    <EmptyTabs />
+                  </h1>
+                </div>
+              </div>
+            </div>
+          ) : openTab === 3 ? (
+            <div className="for-you-section  pt-[51px]  mw-md:pt-[32px]">
+              <h1 className="text-[#fff]">
+                <EmptyTabs />
+              </h1>
+            </div>
+          ) : openTab === 4 ? (
+            <div className="for-you-section  pt-[51px]  mw-md:pt-[32px]">
+              <h1 className="text-[#fff]">
+                <EmptyTabs />
+              </h1>
+            </div>
+          ) : (
+            ""
+          )}
 
-          <div className="mb-6 mw-lg:mt-[0px] ">
+          {/* <div className="mb-6 mw-lg:mt-[0px] ">
             <div className="tab-content tab-space w-full  h-full  	">
               <div
                 className={
@@ -275,7 +892,7 @@ const GamingRelevantTabSection = () => {
                 </h1>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

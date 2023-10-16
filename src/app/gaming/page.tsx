@@ -11,6 +11,8 @@ import RespSection from "@/components/NewEsports/RespNewSection";
 import resp1 from "../../assets/newsports/resp1.png";
 import resp2 from "../../assets/newsports/resp2.png";
 import resp3 from "../../assets/newsports/resp3.png";
+import LiveMatchSlider from "@/components/NewEsports/LiveMatchTab/LiveMatchSlider";
+import InnerTabsLiveMatches from "@/components/NewEsports/LiveMatchTab/LiveMatchInnerTabs";
 const Gaming = () => {
   interface RESPDATA {
     herobg: any;
@@ -104,7 +106,72 @@ const Gaming = () => {
                     </a>
                   </li>
                 </ul>
-                <div className="mb-6 mw-lg:mt-[0px]">
+                {openTab === 1 ? (
+                  <div className="mb-6 mw-lg:mt-[0px]">
+                    <GamingSlider />
+                    <div className="hidden mw-lg:block mt-[40px] mw-md:hidden">
+                      <div className="flex justify-between">
+                        {respData1.map((e, idx) => {
+                          return (
+                            <RespSection
+                              key={idx}
+                              herobg={e.herobg}
+                              titlee={e.titlee}
+                            />
+                          );
+                        })}
+                      </div>
+                    </div>
+                    <div className="hidden mw-md:block ">
+                      {respData.map((e, idx) => {
+                        return (
+                          <RespSection
+                            key={idx}
+                            herobg={e.herobg}
+                            titlee={e.titlee}
+                          />
+                        );
+                      })}
+                    </div>
+                    <GamingLatestHeroTrending />
+                    <GamingRelevantTabSection />
+                  </div>
+                ) : (
+                  <div>
+                    <div className="for-you-section   mw-md:pt-[32px]">
+                      <LiveMatchSlider />
+                      <div className="hidden mw-lg:block mt-[40px] ">
+                        <div className="flex justify-between mw-md:hidden">
+                          {respData1.map((e, idx) => {
+                            return (
+                              <RespSection
+                                key={idx}
+                                herobg={e.herobg}
+                                titlee={e.titlee}
+                              />
+                            );
+                          })}
+                        </div>
+                        <div className="hidden mw-md:block">
+                          {respData.map((e, idx) => {
+                            return (
+                              <RespSection
+                                key={idx}
+                                herobg={e.herobg}
+                                titlee={e.titlee}
+                              />
+                            );
+                          })}
+                        </div>
+                      </div>
+                      <div>
+                        <InnerTabsLiveMatches />
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* <div className="mb-6 mw-lg:mt-[0px]">
                   <div className="tab-content tab-space w-full  h-full  	">
                     <div
                       className={
@@ -139,9 +206,6 @@ const Gaming = () => {
                       </div>
                       <GamingLatestHeroTrending />
                       <GamingRelevantTabSection />
-                      {/* <GamingTrendingTags/> */}
-                      {/* <LatestTrendingHero />
-                    <ReleventTabs />  */}
                     </div>
                   </div>
                   <div
@@ -190,7 +254,7 @@ const Gaming = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

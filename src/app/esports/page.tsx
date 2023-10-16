@@ -110,7 +110,70 @@ const Esports = () => {
                   </li>
                 </ul>
 
-                <div
+                {openTab === 1 ? (
+                  <div className="tab-content tab-space w-full  h-full  	mb-6  mw-lg:mt-[0px]">
+                    <EsportsSlider />
+                    <div className="hidden mw-lg:block mt-[40px] mw-md:hidden">
+                      <div className="flex justify-between">
+                        {respData1.map((e, idx) => {
+                          return (
+                            <RespSection
+                              key={idx}
+                              herobg={e.herobg}
+                              titlee={e.titlee}
+                            />
+                          );
+                        })}
+                      </div>
+                    </div>
+                    <div className="hidden mw-md:block ">
+                      {respData.map((e, idx) => {
+                        return (
+                          <RespSection
+                            key={idx}
+                            herobg={e.herobg}
+                            titlee={e.titlee}
+                          />
+                        );
+                      })}
+                    </div>
+                    <LatestTrendingHero />
+                    <AllTabsData />
+                  </div>
+                ) : (
+                  <div className="for-you-section   mw-md:pt-[32px]">
+                    <LiveMatchSlider />
+                    <div className="hidden mw-lg:block mt-[40px] ">
+                      <div className="flex justify-between mw-md:hidden">
+                        {respData1.map((e, idx) => {
+                          return (
+                            <RespSection
+                              key={idx}
+                              herobg={e.herobg}
+                              titlee={e.titlee}
+                            />
+                          );
+                        })}
+                      </div>
+                      <div className="hidden mw-md:block">
+                        {respData.map((e, idx) => {
+                          return (
+                            <RespSection
+                              key={idx}
+                              herobg={e.herobg}
+                              titlee={e.titlee}
+                            />
+                          );
+                        })}
+                      </div>
+                    </div>
+                    <div>
+                      <InnerTabsLiveMatches />
+                    </div>
+                  </div>
+                )}
+
+                {/* <div
                   className={`
                      ${
                        openTab === 1 ? " rounded-lg	 overflow-hidden" : "hidden"
@@ -144,9 +207,9 @@ const Esports = () => {
                   </div>
                   <LatestTrendingHero />
                   <AllTabsData />
-                </div>
+                </div> */}
 
-                <div
+                {/* <div
                   className={`${
                     openTab === 2 ? "block" : "hidden"
                   } mb-6  mw-lg:mt-[0px]`}
@@ -184,7 +247,7 @@ const Esports = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import tab1 from "../../../../assets/newsports/tab1.png";
 import tab2 from "../../../../assets/newsports/tab2.png";
 import tab3 from "../../../../assets/newsports/tab3.png";
@@ -17,6 +17,7 @@ import Advertise from "../../RightSidebar";
 import RightSidebar from "@/components/Game/rightbar2/RightSidebar";
 import EmptyTabs from "@/components/Emptytabs";
 import RelevantTabsSection from "../../RevelentTabs/ReleventTabsSection";
+import { useTheme } from "next-themes";
 const LiveTabReleventTabs = () => {
   interface TABDATA {
     tabImage: any;
@@ -113,105 +114,117 @@ const LiveTabReleventTabs = () => {
   const mobile = (e: number) => {
     setMobileSelectNumber(e);
   };
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
 
+  const { theme } = useTheme();
+  useEffect(() => {
+    setIsDarkTheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
   return (
     <>
       <div className="quiz_history_tabs relative">
-        <div className="tabss  mt-[28px] mw-md:mt-[0px]">
-          <ul className="flex full listTabUser   before:max-w-[1390px] before:left-0 before:right-0 before:top-[31px] before:absolute before:m-auto mw-lg:flex-col">
-            <div className="flex w-[68%] mw-lg:w-[100%] ">
-              <li className="">
-                <a
-                  className={
-                    "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize " +
-                    (openTab === 1
-                      ? " dark:text-[#E5E5E5] text-[#E5E5E5]   font-semibold	"
-                      : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light	")
-                  }
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setOpenTab(1);
-                  }}
-                  data-toggle="tab"
-                  href="#link1"
-                  role="tablist"
-                >
-                  Relevant
-                </a>
-              </li>
-              <li className="pl-[20px]  mw-md:pl-[30px] ">
-                <a
-                  className={
-                    "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
-                    (openTab === 2
-                      ? " dark:text-[#E5E5E5] text-[#E5E5E5]   font-semibold	"
-                      : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light ")
-                  }
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setOpenTab(2);
-                  }}
-                  data-toggle="tab"
-                  href="#link2"
-                  role="tablist"
-                >
-                  Latest
-                </a>
-              </li>
-              <li className="pl-[20px]  mw-md:pl-[30px] ">
-                <a
-                  className={
-                    "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
-                    (openTab === 3
-                      ? " dark:text-[#E5E5E5] text-[#E5E5E5]   font-semibold	"
-                      : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light ")
-                  }
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setOpenTab(3);
-                  }}
-                  data-toggle="tab"
-                  href="#link2"
-                  role="tablist"
-                >
-                  Top
-                </a>
-              </li>
-              <li className="pl-[20px]  mw-md:pl-[30px] ">
-                <a
-                  className={
-                    "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
-                    (openTab === 4
-                      ? "dark:text-[#E5E5E5] text-[#E5E5E5]   font-semibold	"
-                      : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light  ")
-                  }
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setOpenTab(4);
-                  }}
-                  data-toggle="tab"
-                  href="#link2"
-                  role="tablist"
-                >
-                  For You
-                </a>
-              </li>
-            </div>
-            <li>
-              <div className="flex mw-lg:mt-[21px]">
-                <div className="montserratfont text-textColorGray bg-grayCard px-[12px] py-[8px]  rounded-[16px] mr-2 text-[14px] leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
-                  All
-                </div>
-                <div className="montserratfont text-textColorGray bg-grayCard px-[12px] py-[8px]  rounded-[16px] mr-2 text-[14px] leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
-                  BGMI
-                </div>
-                <div className="montserratfont text-textColorGray bg-grayCard px-[12px] py-[8px] rounded-[16px] mr-2 text-[14px] leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
-                  Valorant
-                </div>
+        <div className="tabss ">
+          <div
+            className={`${
+              isDarkTheme === "dark"
+                ? "stickymenu bg-[#221e1f]"
+                : "bg-[#f8f8f8] sticky top-[86px] z-[2222]"
+            }  pt-[28px] mw-md:pt-[0px] pb-[31px]`}
+          >
+            <ul className="flex full listTabUser   before:max-w-[1390px] before:left-0 before:right-0 before:top-[31px] before:absolute before:m-auto mw-lg:flex-col  ">
+              <div className="flex w-[68%] mw-lg:w-[100%] ">
+                <li className="">
+                  <a
+                    className={
+                      "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize " +
+                      (openTab === 1
+                        ? " dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
+                        : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light	")
+                    }
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setOpenTab(1);
+                    }}
+                    data-toggle="tab"
+                    href="#link1"
+                    role="tablist"
+                  >
+                    Relevant
+                  </a>
+                </li>
+                <li className="pl-[20px]  mw-md:pl-[30px] ">
+                  <a
+                    className={
+                      "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
+                      (openTab === 2
+                        ? " dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
+                        : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light ")
+                    }
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setOpenTab(2);
+                    }}
+                    data-toggle="tab"
+                    href="#link2"
+                    role="tablist"
+                  >
+                    Latest
+                  </a>
+                </li>
+                <li className="pl-[20px]  mw-md:pl-[30px] ">
+                  <a
+                    className={
+                      "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
+                      (openTab === 3
+                        ? " dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
+                        : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light ")
+                    }
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setOpenTab(3);
+                    }}
+                    data-toggle="tab"
+                    href="#link2"
+                    role="tablist"
+                  >
+                    Top
+                  </a>
+                </li>
+                <li className="pl-[20px]  mw-md:pl-[30px] ">
+                  <a
+                    className={
+                      "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
+                      (openTab === 4
+                        ? "dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
+                        : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light  ")
+                    }
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setOpenTab(4);
+                    }}
+                    data-toggle="tab"
+                    href="#link2"
+                    role="tablist"
+                  >
+                    For You
+                  </a>
+                </li>
               </div>
-            </li>
-          </ul>
-
+              <li>
+                <div className="flex mw-lg:mt-[21px]">
+                  <div className="montserratfont text-textColorGray bg-grayCard px-[12px] py-[8px]  rounded-[16px] mr-2 text-[14px] leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
+                    All
+                  </div>
+                  <div className="montserratfont text-textColorGray bg-grayCard px-[12px] py-[8px]  rounded-[16px] mr-2 text-[14px] leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
+                    BGMI
+                  </div>
+                  <div className="montserratfont text-textColorGray bg-grayCard px-[12px] py-[8px] rounded-[16px] mr-2 text-[14px] leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
+                    Valorant
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
           <div className="mb-6 mw-lg:mt-[91px] mw-lg:mt-[1px]">
             <div className="tab-content tab-space w-full  h-full  	">
               <div
@@ -220,7 +233,7 @@ const LiveTabReleventTabs = () => {
                 }
                 id="link1"
               >
-                <div className="flex justify-between mt-[31px]  relative">
+                <div className="flex justify-between  relative">
                   <div className="w-[85%] mw-lg:w-[100%]">
                     <div className="flex flex-wrap justify-between ">
                       {tabData.map((e, idx) => {

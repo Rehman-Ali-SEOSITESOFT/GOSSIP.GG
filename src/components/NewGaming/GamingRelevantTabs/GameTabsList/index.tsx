@@ -1,35 +1,34 @@
-import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
+import "./GamesTabsList.css";
+import { useTheme } from "next-themes";
 interface TABDATA {
   tabImage: any;
   paragraph: String;
   button2: String;
   button1: String;
 }
-const LatestTabsEsport = ({ OpenTab }: any) => {
+const GameTabList = ({ OpennTab }: any) => {
   const [openTab, setOpenTab] = useState<number | null>(1);
   const [mobilepage, setMobilePage] = useState<number[]>([1, 2, 3, 4, 10]);
+  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
+
   const [mobileSelectNumber, setMobileSelectNumber] = useState<number>(1);
   const mobile = (e: number) => {
     setMobileSelectNumber(e);
   };
   const { theme } = useTheme();
-  const [isDarkTheme, setIsDarkTheme] = useState<string>("");
 
   useEffect(() => {
     setIsDarkTheme(theme === "dark" ? "dark" : "light");
   }, [theme]);
-
   return (
     <>
       <div
         className={`${
-          isDarkTheme === "dark"
-            ? "stickymenu bg-[#221e1f]"
-            : "lightmode bg-[#f8f8f8]"
-        }  pt-[28px] pb-[31px]`}
+          isDarkTheme === "dark" ? "stickymenu" : "lightMode"
+        }  pt-[47px] pb-[47px] mw-xl:pt-[30px] mw-xl:pb-[30px]`}
       >
-        <ul className="flex full listTabUser   before:max-w-[1390px] before:left-0 before:right-0 before:top-[31px] before:absolute before:m-auto mw-lg:flex-col">
+        <ul className="flex full listTabUser   before:max-w-[1390px] before:left-0 before:right-0 before:top-[31px] before:absolute before:m-auto mw-lg:flex-col ">
           <div className="flex w-[63%] mw-lg:w-[100%] ">
             <li className="">
               <a
@@ -41,7 +40,7 @@ const LatestTabsEsport = ({ OpenTab }: any) => {
                 }
                 onClick={(e) => {
                   e.preventDefault();
-                  OpenTab(1);
+                  OpennTab(1);
                   setOpenTab(1);
                 }}
                 data-toggle="tab"
@@ -61,7 +60,7 @@ const LatestTabsEsport = ({ OpenTab }: any) => {
                 }
                 onClick={(e) => {
                   e.preventDefault();
-                  OpenTab(2);
+                  OpennTab(2);
                   setOpenTab(2);
                 }}
                 data-toggle="tab"
@@ -81,7 +80,7 @@ const LatestTabsEsport = ({ OpenTab }: any) => {
                 }
                 onClick={(e) => {
                   e.preventDefault();
-                  OpenTab(3);
+                  OpennTab(3);
                   setOpenTab(3);
                 }}
                 data-toggle="tab"
@@ -101,7 +100,7 @@ const LatestTabsEsport = ({ OpenTab }: any) => {
                 }
                 onClick={(e) => {
                   e.preventDefault();
-                  OpenTab(4);
+                  OpennTab(4);
                   setOpenTab(4);
                 }}
                 data-toggle="tab"
@@ -134,4 +133,4 @@ const LatestTabsEsport = ({ OpenTab }: any) => {
   );
 };
 
-export default LatestTabsEsport;
+export default GameTabList;

@@ -537,7 +537,7 @@ const LiveMatchMatchess = () => {
 
               {/* fouth one starts here */}
               <div
-                className={` content_wrapper  bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col mt-[20px]`}
+                className={` content_wrapper  dark:bg-[#2E2A2B] bg-brandLightOpacity70  ${styles.mainSliderWrap} mw-lg:flex-col mt-[20px]`}
               >
                 <div className={`${styles.pararotate_} mw-lg:hidden`}>
                   <p
@@ -782,7 +782,7 @@ const LiveMatchMatchess = () => {
               </div>
               {/* seventh ends  here */}
               <div
-                className={`content_wrapper  bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col mt-[22px]`}
+                className={`content_wrapper  bg-brandLightOpacity70 dark:bg-[#2E2A2B]  ${styles.mainSliderWrap} mw-lg:flex-col mt-[22px]`}
               >
                 <div className={`${styles.pararotate_} mw-lg:hidden`}>
                   <p

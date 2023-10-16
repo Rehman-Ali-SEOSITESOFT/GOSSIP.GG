@@ -7,9 +7,15 @@
 }
 .stickymenu {
   position: sticky !important;
-  top: 80px !important;
-  background-color: #221e1f;
+  top: 86px !important;
+
   z-index: 22222;
+}
+.lightmode {
+  position: sticky !important;
+  top: 86px !important;
+  z-index: 22222;
+
 }
 @media screen and (max-width: 1300px) {
   .btn1 {
@@ -18,6 +24,9 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  .stickymenu {
+    top: 72px !important;
   }
 }
 
