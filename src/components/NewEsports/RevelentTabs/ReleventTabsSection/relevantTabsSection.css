@@ -15,7 +15,6 @@
   position: sticky !important;
   top: 86px !important;
   z-index: 22222;
-
 }
 @media screen and (max-width: 1300px) {
   .btn1 {
@@ -29,7 +28,11 @@
     top: 72px !important;
   }
 }
-
+@media screen and (max-width: 992px) {
+  .stickymenu {
+    top: 80px !important;
+  }
+}
 @media screen and (max-width: 576px) {
   .bottom_section p {
     display: -webkit-box !important;
@@ -37,5 +40,8 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  .stickymenu {
+    top: 80px !important;
   }
 }

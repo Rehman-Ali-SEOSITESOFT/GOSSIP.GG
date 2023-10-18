@@ -21,3 +21,10 @@
 .middle_section {
   overflow-y: scroll;
 }
+.middle_section ul li a.active {
+  color: var(--brand);
+  font-weight: 700;
+  text-underline-offset: 5px;
+  text-decoration-color: var(--brand);
+  text-decoration-thickness: 2px;
+}

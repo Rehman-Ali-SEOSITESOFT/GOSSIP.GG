@@ -1,4 +1,3 @@
-
 .trending button {
   background: none !important;
 }
@@ -81,6 +80,12 @@
 
   .trend-right {
     width: 85%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .esportsEventWRAAAP .mainSliderWrap {
+    width: 170px !important;
   }
 }
 

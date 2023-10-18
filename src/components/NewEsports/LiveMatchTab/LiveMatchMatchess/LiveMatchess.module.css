@@ -6,6 +6,7 @@
   display: flex !important;
   position: relative;
   overflow: hidden;
+  width: 100% !important;
 }
 
 .pararotate p {
@@ -91,6 +92,7 @@
   width: 108px;
   height: 17px;
   text-align: center;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .scrolling_bar {
@@ -119,6 +121,9 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.robo {
+  font-family: "Roboto", sans-serif !important;
 }
 
 @media screen and (max-width: 1024px) {

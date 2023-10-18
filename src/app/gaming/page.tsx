@@ -138,9 +138,9 @@ const Gaming = () => {
                   </div>
                 ) : (
                   <div>
-                    <div className="for-you-section   mw-md:pt-[32px]">
+                    <div className="for-you-section   mw-md:pt-[32px] mw-sm4:pt-[0px]">
                       <LiveMatchSlider />
-                      <div className="hidden mw-lg:block mt-[40px] ">
+                      <div className="hidden mw-lg:block mt-[40px] mw-sm4:mt-[0px]">
                         <div className="flex justify-between mw-md:hidden">
                           {respData1.map((e, idx) => {
                             return (

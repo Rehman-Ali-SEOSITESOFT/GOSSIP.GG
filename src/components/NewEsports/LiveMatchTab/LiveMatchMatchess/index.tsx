@@ -234,7 +234,7 @@ const LiveMatchMatchess = () => {
           {/* web version ends */}
 
           {/* mobile versions starts */}
-          <div className="hidden mw-lg:block rounded-[2px] border dark:border-brandLightOpacity10  mw-lg:border-[0px]">
+          <div className="hidden mw-lg:block rounded-[2px] border dark:border-brandLightOpacity10  mw-lg:border-[0px] w-[100%]">
             {sliderData.map((e, index) => {
               return (
                 <div
@@ -314,7 +314,19 @@ const LiveMatchMatchess = () => {
                           <p className="montserratfont text-[12px] font-normal leading-normal dark:text-[#E5E5E5] mw-sm3:text-[11px]">
                             Dec 01, 2022 - Jan 18, 2023
                           </p>
-                          <p className="hidden mw-lg:block pt-[8px] text-[12px] robotoslub font-normal tracking-[0.6px] italic dark:text-[#e5e5e5]">
+                          <p
+                            className={`${
+                              styles.robo
+                            } hidden mw-lg:block pt-[8px] text-[12px]  font-normal tracking-[0.6px] italic    ${
+                              e.heading === "Ongoing"
+                                ? "text-[#008D52]"
+                                : e.heading === "Past"
+                                ? "dark:text-[#E5E5E5]"
+                                : e.id == 3
+                                ? "dark:text-[#e5e5e5]"
+                                : ""
+                            } `}
+                          >
                             {e.heading}
                           </p>
                           <div className="flex items-center">

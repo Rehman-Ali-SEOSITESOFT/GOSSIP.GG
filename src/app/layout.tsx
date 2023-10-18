@@ -48,6 +48,7 @@ export default function RootLayout({
         <Providers>
           <main className="gossip bg-bodycolor dark:bg-brandDark2 ">
             <Header />
+
             <div className="content">
               {children}
               <TopButton />

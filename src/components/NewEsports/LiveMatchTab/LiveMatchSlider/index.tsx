@@ -167,7 +167,7 @@ const LiveMatchSlider = () => {
   return (
     <>
       <section
-        className={`${styles.trending} trending new_esports_slider pt-[26px] pb-[26px] border-b-[1px] border-brandLightOpacity10 mw-md:pt-[16px] mw-md:pb-[40px] mw-md:border-b-[0px] `}
+        className={`${styles.trending} ${styles.liveMATchWrapper} trending new_esports_slider pt-[26px] pb-[26px] border-b-[1px] border-brandLightOpacity10 mw-md:pt-[16px] mw-md:pb-[40px] mw-md:border-b-[0px] `}
       >
         <div className="2xl:container">
           <Slider
@@ -223,24 +223,28 @@ const LiveMatchSlider = () => {
                     className={`${styles.right_content} py-[8px] pr-[12px] pl-[8px] mw-lg:ml-[0px] mw-lg:py-[6px]`}
                   >
                     <div className="flex items-center">
-                      <Image src={icon} alt="" className="mw-lg:hidden" />
-                      <h4 className="montserratfont text-[12px]  mw-lg:text-[12px] font-normal leading-normal dark:text-[#E5E5E5] pl-[9px]">
+                      <Image
+                        src={icon}
+                        alt=""
+                        className={styles.image_hidden}
+                      />
+                      <h4 className="montserratfont text-[12px]  mw-lg:text-[12px] font-normal leading-normal dark:text-[#E5E5E5] pl-[9px] mw-sm4:text-[10px] mw-sm4:pl-[0px]">
                         {e.title}
                       </h4>
                     </div>
-                    <div className="flex items-center mt-[6px] ">
+                    <div className="flex items-center mt-[6px] mw-sm4:flex-col mw-sm4:items-start">
                       <div className="flex items-center">
                         <Image src={teamtag} alt="" />
-                        <h4 className="montserratfont text-[14px] font-semibold dark:text-[#E5E5E5] leading-normal pl-[8px]">
+                        <h4 className="montserratfont text-[14px] font-semibold dark:text-[#E5E5E5] leading-normal pl-[8px] mw-sm4:text-[12px]">
                           Team Liquid
                         </h4>
                       </div>
-                      <h4 className="montserratfont text-[12px] font-medium leading-normal dark:text-brandLightOpacity70 px-[8px]">
+                      <h4 className="montserratfont text-[12px] font-medium leading-normal dark:text-brandLightOpacity70 px-[8px] mw-sm4:text-[8px] mw-sm4:pl-[33px]">
                         VS
                       </h4>
                       <div className="flex items-center">
                         <Image src={teamtag} alt="" />
-                        <h4 className="montserratfont text-[14px] font-semibold dark:text-[#E5E5E5] leading-normal pl-[8px]">
+                        <h4 className="montserratfont text-[14px] font-semibold dark:text-[#E5E5E5] leading-normal pl-[8px] mw-sm4:text-[12px]">
                           {e.sexondteam}
                         </h4>
                       </div>

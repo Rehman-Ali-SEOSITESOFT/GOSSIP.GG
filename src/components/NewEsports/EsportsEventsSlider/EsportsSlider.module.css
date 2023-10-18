@@ -68,7 +68,7 @@
 .trending button {
   background: none !important;
 }
-.mainSliderWrap {
+.esportsEventsWrapper .mainSliderWrap {
   display: flex !important;
   position: relative;
   overflow: hidden;
@@ -149,7 +149,11 @@
     width: 85%;
   }
 }
-
+@media screen and (max-width: 500px) {
+  .esportsEventsWrapper .mainSliderWrap {
+    width: 170px !important;
+  }
+}
 @media screen and (max-width: 400px) {
   .trendingteass .tags {
     font-size: 12px;

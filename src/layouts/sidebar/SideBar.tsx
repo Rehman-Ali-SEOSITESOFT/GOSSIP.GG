@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import style from "./Sidebar.module.css";
 import Image from "next/image";
 import cancel from "../../assets/head/cancel.png";
@@ -12,13 +12,45 @@ import image3 from "../../assets/rewards/three.png";
 import TrendingTags from "@/components/NewEsports/LatestTrendingHero/TrendingTags";
 import CountDownTimer from "@/components/Rewards/CountDownTimer/CountDownTimer";
 import SidebarFooter from "../SidebarFooter/SidebarFooter";
+import { usePathname } from "next/navigation";
 const SideBar = ({ isOpen, onClose }) => {
+  interface MenuList {
+    name: string;
+    link: string;
+  }
+  const currentPage = usePathname();
   interface SidebarProps {
     isOpen: boolean;
     onClose: () => void;
   }
   const sidebarClass = isOpen ? style.sidebarOpen : style.sidebarClosed;
-
+  const path = usePathname();
+  const [menu, setMenu] = useState<MenuList[]>([
+    // {
+    //   name: "Home",
+    //   link: "/",
+    // },
+    {
+      name: "gossip",
+      link: "/gossip",
+    },
+    {
+      name: "esports",
+      link: "/esports",
+    },
+    {
+      name: "gaming",
+      link: "/gaming",
+    },
+    {
+      name: "tech",
+      link: "/tech",
+    },
+    {
+      name: "rewards",
+      link: "/rewards",
+    },
+  ]);
   return (
     <>
       <aside>
@@ -37,6 +69,28 @@ const SideBar = ({ isOpen, onClose }) => {
               <ul
                 className={`${style.menu_items} border-b-[1px] border-brandLightOpacity10 pb-[18px] px-[16px]`}
               >
+                {menu.map((elme, index) => {
+                  return (
+                    <li
+                      key={index}
+                      className="montserratfont text-[14px] font-medium leading-normal uppercase text-brandLightOpacity70 tracking-[0.7px] mt-[16px]"
+                    >
+                      <Link
+                        href={elme.link}
+                        className={` ${
+                          currentPage === elme.link && `${style.active} }`
+                        }`}
+                        onClick={onClose}
+                      >
+                        {elme.name}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+              {/* <ul
+                className={`${style.menu_items} border-b-[1px] border-brandLightOpacity10 pb-[18px] px-[16px]`}
+              >
                 <li className="montserratfont text-[14px] font-medium leading-normal uppercase text-brandLightOpacity70 tracking-[0.7px] mt-[16px]">
                   <Link href="/gossip">Gossip</Link>
                 </li>
@@ -52,7 +106,7 @@ const SideBar = ({ isOpen, onClose }) => {
                 <li className="montserratfont text-[14px] font-medium leading-normal uppercase text-brandLightOpacity70 tracking-[0.7px] mt-[16px]">
                   <Link href="/rewards">Rewards</Link>
                 </li>
-              </ul>
+              </ul> */}
             </div>
             <div className="pt-[28px] px-[16px]">
               <h4 className="montserratfont text-[16px] font-bold capitalize text-[#ED4E50] leading-normal">

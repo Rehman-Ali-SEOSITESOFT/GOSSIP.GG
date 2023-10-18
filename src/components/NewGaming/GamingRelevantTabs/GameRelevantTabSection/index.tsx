@@ -685,7 +685,7 @@ const GamingRelevantTabSection = () => {
   return (
     <>
       <div className="quiz_history_tabs relative">
-        <div className="tabss   mw-lg:mt-[48px]">
+        <div className="tabss   mw-lg:mt-[48px] mw-sm4:mt-[6px]">
           {/* <ul className="flex full listTabUser   before:max-w-[1390px] before:left-0 before:right-0 before:top-[31px] before:absolute before:m-auto mw-lg:flex-col">
             <div className="flex w-[56%] mw-lg:w-[100%]">
               <li className="">

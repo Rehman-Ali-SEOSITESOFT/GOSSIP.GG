@@ -6,6 +6,7 @@ interface TABDATA {
   button2: String;
   button1: String;
 }
+
 const LatestTabsEsport = ({ OpenTab }: any) => {
   const [openTab, setOpenTab] = useState<number | null>(1);
   const [mobilepage, setMobilePage] = useState<number[]>([1, 2, 3, 4, 10]);
@@ -34,7 +35,7 @@ const LatestTabsEsport = ({ OpenTab }: any) => {
             <li className="">
               <a
                 className={
-                  "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize " +
+                  "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[16px] mw-sm4:leading-normal capitalize " +
                   (openTab === 1
                     ? " dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
                     : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light	")
@@ -54,7 +55,7 @@ const LatestTabsEsport = ({ OpenTab }: any) => {
             <li className="pl-[20px]  mw-md:pl-[30px] ">
               <a
                 className={
-                  "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
+                  "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[16px] mw-sm4:leading-normal capitalize" +
                   (openTab === 2
                     ? " dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
                     : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light ")
@@ -74,7 +75,7 @@ const LatestTabsEsport = ({ OpenTab }: any) => {
             <li className="pl-[20px]  mw-md:pl-[30px] ">
               <a
                 className={
-                  "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
+                  "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[16px] mw-sm4:leading-normal capitalize" +
                   (openTab === 3
                     ? " dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
                     : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light ")
@@ -94,7 +95,7 @@ const LatestTabsEsport = ({ OpenTab }: any) => {
             <li className="pl-[20px]  mw-md:pl-[30px] ">
               <a
                 className={
-                  "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
+                  "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[16px] mw-sm4:leading-normal capitalize" +
                   (openTab === 4
                     ? "dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
                     : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light  ")

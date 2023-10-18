@@ -88,7 +88,7 @@
 
   text-align: center;
 }
-.right_content {
+.liveMATchWrapper .right_content {
   margin-left: 20px;
 }
 .trend_left {
@@ -148,8 +148,15 @@
   .trend-right {
     width: 85%;
   }
+  .image_hidden {
+    display: none !important;
+  }
 }
-
+@media screen and (max-width: 500px) {
+  .liveMATchWrapper .right_content {
+    margin-left: 0px;
+  }
+}
 @media screen and (max-width: 400px) {
   .trendingteass .tags {
     font-size: 12px;

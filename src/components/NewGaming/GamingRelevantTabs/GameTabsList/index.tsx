@@ -25,15 +25,17 @@ const GameTabList = ({ OpennTab }: any) => {
     <>
       <div
         className={`${
-          isDarkTheme === "dark" ? "stickymenu" : "lightMode"
-        }  pt-[47px] pb-[47px] mw-xl:pt-[30px] mw-xl:pb-[30px]`}
+          isDarkTheme === "dark"
+            ? "stickymenu stickWrap"
+            : "lightMode stickWrap"
+        }  pt-[47px] pb-[47px] mw-xl:pt-[30px] mw-xl:pb-[30px] mw:sm4:pb-[40px]`}
       >
         <ul className="flex full listTabUser   before:max-w-[1390px] before:left-0 before:right-0 before:top-[31px] before:absolute before:m-auto mw-lg:flex-col ">
           <div className="flex w-[63%] mw-lg:w-[100%] ">
             <li className="">
               <a
                 className={
-                  "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize " +
+                  "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[16px] mw-sm4:leading-normal capitalize " +
                   (openTab === 1
                     ? " dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
                     : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light	")
@@ -50,10 +52,10 @@ const GameTabList = ({ OpennTab }: any) => {
                 Relevant
               </a>
             </li>
-            <li className="pl-[20px]  mw-md:pl-[30px] ">
+            <li className="pl-[20px]  mw-md:pl-[30px] mw-sm4:pl-[16px]">
               <a
                 className={
-                  "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
+                  "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[16px] mw-sm4:leading-normal capitalize" +
                   (openTab === 2
                     ? " dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
                     : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light ")
@@ -70,10 +72,10 @@ const GameTabList = ({ OpennTab }: any) => {
                 Latest
               </a>
             </li>
-            <li className="pl-[20px]  mw-md:pl-[30px] ">
+            <li className="pl-[20px]  mw-md:pl-[30px] mw-sm4:pl-[16px]">
               <a
                 className={
-                  "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
+                  "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[16px] mw-sm4:leading-normal capitalize" +
                   (openTab === 3
                     ? " dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
                     : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light ")
@@ -90,10 +92,10 @@ const GameTabList = ({ OpennTab }: any) => {
                 Top
               </a>
             </li>
-            <li className="pl-[20px]  mw-md:pl-[30px] ">
+            <li className="pl-[20px]  mw-md:pl-[30px] mw-sm4:pl-[16px]">
               <a
                 className={
-                  "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
+                  "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[16px] mw-sm4:leading-normal capitalize" +
                   (openTab === 4
                     ? "dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
                     : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light  ")

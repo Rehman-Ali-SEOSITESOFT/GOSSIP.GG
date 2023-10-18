@@ -18,7 +18,7 @@
   -webkit-box-orient: vertical;
 }
 @media screen and (max-width: 450px) {
-  .content_wrapper {
-    width: 190px !important;
+  .esportsEventWRAAAP .content_wrapper {
+    width: 170px !important;
   }
 }

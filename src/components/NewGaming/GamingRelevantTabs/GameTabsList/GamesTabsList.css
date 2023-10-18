@@ -12,8 +12,14 @@
   z-index: 22222;
 }
 @media screen and (max-width: 1280px) {
-  .stickymenu,
-  .lightMode {
+  .stickWrap .stickymenu,
+  .stickWrap .lightMode {
     top: 72px !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .stickWrap .stickymenu,
+  .stickWrap .lightMode {
+    top: 77px !important;
   }
 }

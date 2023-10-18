@@ -153,7 +153,7 @@ const GamingSlider = () => {
   return (
     <>
       <section
-        className={`${styles.trending} trending new_esports_slider pt-[26px] pb-[26px] border-b-[1px] border-brandLightOpacity10 mw-lg:pt-[16px] mw-md:pb-[40px] mw-md:border-b-[0px]`}
+        className={`${styles.trending} ${styles.esportsEventWRAAAP} esportsEventWRAAAP trending new_esports_slider pt-[26px] pb-[26px] border-b-[1px] border-brandLightOpacity10 mw-lg:pt-[16px] mw-md:pb-[40px] mw-md:border-b-[0px]`}
       >
         <div className="2xl:container">
           <Slider
@@ -167,7 +167,7 @@ const GamingSlider = () => {
             {sliderData.map((e, index) => {
               return (
                 <div
-                  className={`content_wrapper  border dark:border-brandLightOpacity10 dark:bg-[#2E2A2B] rounded-[4px] ${styles.mainSliderWrap} mw-lg:flex-col mw-sm5:w-[180px]`}
+                  className={`content_wrapper  border dark:border-brandLightOpacity10 dark:bg-[#2E2A2B] rounded-[4px] ${styles.mainSliderWrap} mw-lg:flex-col mw-sm5:w-[170px]`}
                   key={index}
                 >
                   <div className={`${styles.pararotate} mw-lg:hidden`}>

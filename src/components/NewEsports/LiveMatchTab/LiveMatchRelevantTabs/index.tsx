@@ -289,16 +289,16 @@ const LiveTabReleventTabs = () => {
           <div
             className={`${
               isDarkTheme === "dark"
-                ? "stickymenu bg-[#221e1f]"
-                : "bg-[#f8f8f8] sticky top-[86px] z-[2222]"
-            }  pt-[28px] mw-md:pt-[56px] pb-[31px] `}
+                ? "stickymenu bg-[#221e1f] mw-sm4:top-[77px]"
+                : "bg-[#f8f8f8] sticky top-[86px] z-[2222] mw-sm4:top-[77px]"
+            }  pt-[28px] mw-md:pt-[48px] pb-[31px] `}
           >
             <ul className="flex full listTabUser   before:max-w-[1390px] before:left-0 before:right-0 before:top-[31px] before:absolute before:m-auto mw-lg:flex-col  ">
               <div className="flex w-[68%] mw-lg:w-[100%] ">
                 <li className="">
                   <a
                     className={
-                      "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize " +
+                      "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[16px] mw-sm4:leading-normal capitalize " +
                       (openTab === 1
                         ? " dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
                         : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light	")
@@ -317,7 +317,7 @@ const LiveTabReleventTabs = () => {
                 <li className="pl-[20px]  mw-md:pl-[30px] ">
                   <a
                     className={
-                      "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
+                      "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[16px] mw-sm4:leading-normal capitalize" +
                       (openTab === 2
                         ? " dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
                         : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light ")
@@ -336,7 +336,7 @@ const LiveTabReleventTabs = () => {
                 <li className="pl-[20px]  mw-md:pl-[30px] ">
                   <a
                     className={
-                      "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
+                      "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[16px] mw-sm4:leading-normal capitalize" +
                       (openTab === 3
                         ? " dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
                         : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light ")
@@ -355,7 +355,7 @@ const LiveTabReleventTabs = () => {
                 <li className="pl-[20px]  mw-md:pl-[30px] ">
                   <a
                     className={
-                      "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[12px] mw-sm4:leading-normal capitalize" +
+                      "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[16px] mw-sm4:leading-normal capitalize" +
                       (openTab === 4
                         ? "dark:text-[#E5E5E5] dark:text-[#E5E5E5]   font-semibold	"
                         : "dark:bg-brandDark2   dark:text-brandLightOpacity70 font-light  ")

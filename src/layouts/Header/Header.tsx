@@ -29,6 +29,7 @@ import PrizeOfTheDay from "@/components/QuizScreen/PrizeOfTheDay";
 import bars from "../../assets/head/bars.png";
 import SideBar from "../sidebar/SideBar";
 import logo2 from "@/assets/images/header/logo-2.png";
+
 const Header = () => {
   interface MenuList {
     name: string;
@@ -40,6 +41,8 @@ const Header = () => {
   }
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const headerSearchbarRef = useRef<any | null>(null);
+  const path = usePathname();
+
   const { theme, setTheme } = useTheme();
   const [menu, setMenu] = useState<MenuList[]>([
     // {
@@ -617,30 +620,35 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div
-            className={`hidden mw-lg:block mw-lg:z-10 ${styles.fixed__bottom__header} fixed bottom-0 left-0 right-0 bg-brandDark2`}
-          >
-            <div className="xl:w-3/6 lg:w-1/1 ">
-              <div className="header-navigation">
-                <ul className="flex flex-wrap  justify-center mw-sm:justify-between">
-                  {menu.map((elme, index) => {
-                    return (
-                      <li key={index}>
-                        <Link
-                          href={elme.link}
-                          className={`font-bold leading-5 no-underline uppercase  hover:text-brand hover:font-extrabold text-brandLightOpacity100 mw-sm:text-brandLightOpacity70 ${
-                            currentPage === elme.link && `${styles.active}`
-                          }`}
-                        >
-                          {elme.name}
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
+
+          {path === "/esports" || path === "/gaming" ? (
+            ""
+          ) : (
+            <div
+              className={`hidden mw-lg:block mw-lg:z-10 ${styles.fixed__bottom__header} fixed bottom-0 left-0 right-0 bg-brandDark2 `}
+            >
+              <div className="xl:w-3/6 lg:w-1/1 ">
+                <div className="header-navigation">
+                  <ul className="flex flex-wrap  justify-center mw-sm:justify-between">
+                    {menu.map((elme, index) => {
+                      return (
+                        <li key={index}>
+                          <Link
+                            href={elme.link}
+                            className={`font-bold leading-5 no-underline uppercase  hover:text-brand hover:font-extrabold text-brandLightOpacity100 mw-sm:text-brandLightOpacity70 ${
+                              currentPage === elme.link && `${styles.active}`
+                            }`}
+                          >
+                            {elme.name}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
         <LoginModal open={open} onClickOpenModal={onClickOpenModal} />
         {openIntroModal && (

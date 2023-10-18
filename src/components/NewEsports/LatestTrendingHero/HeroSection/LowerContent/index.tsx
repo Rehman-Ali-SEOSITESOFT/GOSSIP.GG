@@ -18,7 +18,7 @@ const LowerContentHeroSection = (props: any) => {
           <p className="montserratfont text-[12px] font-normal dark:text-brandLightOpacity90 leading-normal pt-[8px]">
             {para}
           </p>
-          <div className="bottom_section flex mt-[6px] justify-between	items-end">
+          <div className="bottom_section flex mt-[6px] justify-between	items-end mx-13:mt-[14px]">
             <div className="buttonss flex">
               <div className="montserratfont text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                 News
