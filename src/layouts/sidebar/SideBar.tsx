@@ -57,7 +57,12 @@ const SideBar = ({ isOpen, onClose }) => {
         <div className={sidebarClass}>
           <div className="flex justify-between items-center px-[16px]">
             <Image src={logo} alt="" />
-            <Image src={cancel} alt="" onClick={onClose} />
+            <Image
+              src={cancel}
+              alt=""
+              onClick={onClose}
+              className="mw-sm4:w-[18px] mw-sm4:h-[18px]"
+            />
           </div>
           <div
             className={`${style.trendPad} border-t-[1px] border-brandLightOpacity10 border-b-[1px] `}
