@@ -31,7 +31,7 @@ const QuizRatio = () => {
   const Completionist = () => (
     <span
       onClick={() => onClickPlay()}
-      className="cursor-pointer montserratfont text-[14px] font-semibold leading-[17.07px] "
+      className="cursor-pointer montserratfont text-[14px] font-semibold leading-[17.07px] mw-sm4:text-xs "
     >
       Quiz Result <i className="fa-solid fa-angle-right"></i>
       <i className="fa-solid fa-angle-right"></i>
@@ -66,7 +66,7 @@ const QuizRatio = () => {
     } else {
       // Render a countdown
       return (
-        <div className="timer quiz-timer  flex flex-col items-center justify-center bg-brand rounded-full w-[130px] h-[43px]">
+        <div className="timer quiz-timer  flex flex-col items-center justify-center bg-brand rounded-full w-[130px] h-[43px] mw-sm4:w-[110px]">
           <p
             className={` m-0 leading-3	text-[10px] montserratfont capitalize  font-medium text-white`}
           >
@@ -82,7 +82,7 @@ const QuizRatio = () => {
 
   return (
     <>
-      <div className="quiz-ration fixed right-[15px] bottom-[100px]	 w-full max-w-[130px] z-[333333]">
+      <div className="quiz-ration fixed right-[15px] bottom-[100px]	 w-full max-w-[130px] z-[999999] mw-sm4:max-w-[110px]">
         {/*   QUIZED BOX */}
 
         <div
@@ -104,7 +104,7 @@ const QuizRatio = () => {
           </div>
           <div className="logo-close  pl-[20px] pb-2.5	 relative">
             <div
-              className="logo-quiz-brand bg-brand w-[89px] h-[89px] drop-box-shadow rounded-full cursor-pointer	"
+              className="logo-quiz-brand bg-brand w-[89px] h-[89px] mw-sm4:w-[70px] mw-sm4:h-[70px] drop-box-shadow rounded-full cursor-pointer	"
               onClick={hanldeOpenedQuiz}
             >
               <span className="green-cicle absolute right-[12px]">
@@ -112,11 +112,15 @@ const QuizRatio = () => {
               </span>
 
               <span className="circle-logo">
-                <Image src={logo} alt="" className=" w-[89px] h-[89px]" />
+                <Image
+                  src={logo}
+                  alt=""
+                  className=" w-[89px] h-[89px] mw-sm4:w-[70px] mw-sm4:h-[70px]"
+                />
               </span>
 
               <span className="quiz-title flex items-center justify-center h-full">
-                <h4 className="logo text-white text-center text-base leading-normal	 font-semibold	montserratfont capitalize ">
+                <h4 className="logo text-white text-center text-base leading-normal	 font-semibold	montserratfont capitalize mw-sm4:text-sm">
                   quiz
                   <span>
                     <Image src={doublearrow} className="inline-block" alt="" />
@@ -125,7 +129,7 @@ const QuizRatio = () => {
               </span>
             </div>
           </div>
-          <div className="timer quiz-timer  flex flex-col items-center justify-center bg-brand rounded-full w-[130px] h-[43px]">
+          <div className="timer quiz-timer  flex flex-col items-center justify-center bg-brand rounded-full w-[130px] h-[43px] mw-sm4:w-[110px] ">
             {/* <p
               className={` m-0 leading-3	text-[10px] montserratfont capitalize  font-medium text-white`}
             >
