@@ -220,7 +220,7 @@ const LiveMatchSlider = () => {
                     </p>
                   </div>
                   <div
-                    className={`${styles.right_content} py-[8px] pr-[12px] pl-[8px] mw-lg:ml-[0px] mw-lg:py-[6px]`}
+                    className={`${styles.right_content} py-[12px] pr-[12px] pl-[8px] mw-lg:ml-[0px] mw-lg:py-[6px]`}
                   >
                     <div className="flex items-center">
                       <Image

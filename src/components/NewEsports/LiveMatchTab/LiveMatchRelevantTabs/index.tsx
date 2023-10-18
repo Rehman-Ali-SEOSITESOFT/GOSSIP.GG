@@ -284,7 +284,7 @@ const LiveTabReleventTabs = () => {
   }, [theme]);
   return (
     <>
-      <div className="quiz_history_tabs relative">
+      <div className="quiz_history_tabs relative ">
         <div className="tabss ">
           <div
             className={`${

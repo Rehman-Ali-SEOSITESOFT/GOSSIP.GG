@@ -231,6 +231,18 @@ const LiveMatchMatchess = () => {
               })}
             </div>
           </div>
+          <div className="mt-[11px] mb-[30px] mw-lg:hidden">
+            <div className="w-full flex items-center">
+              <a
+                href="#"
+                className="montserratfont hover:text-[#000000] dark:hover:text-[white]  dark:text-brandLightOpacity70  text-[brandLightOpacity70] font-normal text-[12px] leading-5 mw-sm:text-[12px] mw-sm:leading-[12px]"
+              >
+                View more <span> &#x3E;</span>
+                <span>&#x3E;</span>
+                <span>&#x3E;</span>
+              </a>
+            </div>
+          </div>
           {/* web version ends */}
 
           {/* mobile versions starts */}

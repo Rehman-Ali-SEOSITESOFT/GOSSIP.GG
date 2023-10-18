@@ -686,7 +686,7 @@ const ReleventTabs = () => {
 
   return (
     <>
-      <div className="quiz_history_tabs relative">
+      <div className="quiz_history_tabs relative mt-[36px] mw-lg:mt-[0px]">
         <div className="tabss   mw-lg:mt-[13px]">
           <LatestTabsEsport OpenTab={setOpenTab} />
           <div className="mb-6 mw-lg:mt-[23px] mw-lg:mt-[1px]">
