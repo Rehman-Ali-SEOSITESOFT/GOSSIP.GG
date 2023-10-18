@@ -366,7 +366,7 @@ const LiveMatchMatchess = () => {
           </h4>
           <div>
             <div
-              className={`${styles.main_wrapper} ${styles.scrolling_bar}  border dark:border-brandLightOpacity10 rounded-[4px]  h-[565px]  overflow-y-scroll`}
+              className={`${styles.main_wrapper} ${styles.scrolling_bar}  border dark:border-brandLightOpacity10 rounded-[4px]  h-[565px]  overflow-y-scroll mw-sm4:overflow-hidden`}
             >
               {/* first row starts here */}
               <div
