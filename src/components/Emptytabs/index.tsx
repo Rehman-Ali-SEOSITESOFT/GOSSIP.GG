@@ -5,19 +5,19 @@ import cable from "../../assets/emptytab/empty.png";
 const EmptyTabs = () => {
   return (
     <>
-      <div className="mt-[81px] text-center">
-        <h4 className="montserratfont text-center text-[16px] font-normal leading-normal text-[#000] dark:text-[#E5E5E5]">
+      <div className="mt-[81px] text-center mw-md:mt-[40px]">
+        <h4 className="montserratfont text-center text-[16px] font-normal leading-normal text-[#000] dark:text-[#E5E5E5] mw-md:text-[14px]">
           Recommended articles will appear here based on topics you are
           following.
         </h4>
-        <h2 className="pt-[32px] montserratfont text-[16px] font-semibold text-[#000] dark:text-[#E5E5E5] text-center">
+        <h2 className="pt-[32px] montserratfont text-[16px] font-semibold text-[#000] dark:text-[#E5E5E5] text-center mw-md:pt-[16px] mw-md:text-[14px]">
           Get started by{" "}
           <Link href="#" className="underline">
             {" "}
             adding your preferences.
           </Link>
         </h2>
-        <div className="pt-[136px] text-center flex justify-center">
+        <div className="pt-[136px] text-center flex justify-center mw-md:pt-[30px]">
           <Image
             src={cable}
             alt="plug"
