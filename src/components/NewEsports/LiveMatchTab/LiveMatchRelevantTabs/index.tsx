@@ -314,7 +314,7 @@ const LiveTabReleventTabs = () => {
                     Relevant
                   </a>
                 </li>
-                <li className="pl-[20px]  mw-md:pl-[30px] ">
+                <li className="pl-[20px]  mw-md:pl-[30px] mw-sm4:pl-[16px]">
                   <a
                     className={
                       "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[16px] mw-sm4:leading-normal capitalize" +
@@ -333,7 +333,7 @@ const LiveTabReleventTabs = () => {
                     Latest
                   </a>
                 </li>
-                <li className="pl-[20px]  mw-md:pl-[30px] ">
+                <li className="pl-[20px]  mw-md:pl-[30px] mw-sm4:pl-[16px]">
                   <a
                     className={
                       "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[16px] mw-sm4:leading-normal capitalize" +
@@ -352,7 +352,7 @@ const LiveTabReleventTabs = () => {
                     Top
                   </a>
                 </li>
-                <li className="pl-[20px]  mw-md:pl-[30px] ">
+                <li className="pl-[20px]  mw-md:pl-[30px] mw-sm4:pl-[16px]">
                   <a
                     className={
                       "text-[18px]   mw-sm1:text-sm   montserratfont  leading-5 font-light	  capitalize  pb-[8px] mw-sm4:text-[16px] mw-sm4:leading-normal capitalize" +

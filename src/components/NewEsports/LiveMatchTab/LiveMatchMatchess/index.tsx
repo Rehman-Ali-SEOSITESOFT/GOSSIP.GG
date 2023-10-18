@@ -366,7 +366,7 @@ const LiveMatchMatchess = () => {
           </h4>
           <div>
             <div
-              className={`${styles.main_wrapper} ${styles.scrolling_bar}  border dark:border-brandLightOpacity10 rounded-[4px]  h-[565px]  overflow-y-scroll mw-sm4:overflow-hidden`}
+              className={`${styles.main_wrapper} ${styles.scrolling_bar}  border dark:border-brandLightOpacity10 rounded-[4px]  h-[565px]  overflow-y-scroll mw-md:overflow-hidden`}
             >
               {/* first row starts here */}
               <div
@@ -857,7 +857,7 @@ const LiveMatchMatchess = () => {
             live matches
           </h4>
           <div
-            className={`${styles.main_wrapper}  border dark:border-brandLightOpacity10 rounded-[4px]  `}
+            className={`${styles.main_wrapper}  border dark:border-brandLightOpacity10 rounded-[4px]  overflow-hidden`}
           >
             <div
               className={`${
@@ -904,7 +904,7 @@ const LiveMatchMatchess = () => {
             </div>
           </div>
           <div
-            className={`${styles.main_wrapper}  border dark:border-brandLightOpacity10 rounded-[4px]  mt-[6px]`}
+            className={`${styles.main_wrapper}  border dark:border-brandLightOpacity10 rounded-[4px] overflow-hidden  mt-[6px]`}
           >
             <div
               className={`${
@@ -951,7 +951,7 @@ const LiveMatchMatchess = () => {
             </div>
           </div>
           <div
-            className={`${styles.main_wrapper}  border dark:border-brandLightOpacity10 rounded-[4px]  mt-[6px]`}
+            className={`${styles.main_wrapper} overflow-hidden border dark:border-brandLightOpacity10 rounded-[4px]  mt-[6px]`}
           >
             <div
               className={`${
@@ -999,7 +999,7 @@ const LiveMatchMatchess = () => {
           </div>
 
           <div
-            className={`${styles.main_wrapper}  border dark:border-brandLightOpacity10 rounded-[4px]  mt-[6px]`}
+            className={`${styles.main_wrapper} overflow-hidden border dark:border-brandLightOpacity10 rounded-[4px]  mt-[6px]`}
           >
             <div
               className={`${
@@ -1059,7 +1059,7 @@ const LiveMatchMatchess = () => {
           </div>
 
           <div
-            className={`${styles.main_wrapper}  border dark:border-brandLightOpacity10 rounded-[4px]  mt-[6px]`}
+            className={`${styles.main_wrapper} overflow-hidden  border dark:border-brandLightOpacity10 rounded-[4px]  mt-[6px]`}
           >
             <div
               className={`${
@@ -1106,7 +1106,7 @@ const LiveMatchMatchess = () => {
             </div>
           </div>
           <div
-            className={`${styles.main_wrapper}  border dark:border-brandLightOpacity10 rounded-[4px]  mt-[6px]`}
+            className={`${styles.main_wrapper} overflow-hidden border dark:border-brandLightOpacity10 rounded-[4px]  mt-[6px]`}
           >
             <div
               className={`${
@@ -1153,7 +1153,7 @@ const LiveMatchMatchess = () => {
             </div>
           </div>
           <div
-            className={`${styles.main_wrapper}  border dark:border-brandLightOpacity10 rounded-[4px]  mt-[6px]`}
+            className={`${styles.main_wrapper} overflow-hidden border dark:border-brandLightOpacity10 rounded-[4px]  mt-[6px]`}
           >
             <div
               className={`${

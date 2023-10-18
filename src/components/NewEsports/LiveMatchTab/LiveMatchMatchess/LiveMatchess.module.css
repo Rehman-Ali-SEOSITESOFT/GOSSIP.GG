@@ -92,7 +92,6 @@
   width: 108px;
   height: 17px;
   text-align: center;
-  border-radius: 10px 10px 0px 0px;
 }
 
 .scrolling_bar {
@@ -146,6 +145,9 @@
 
   .trend-right {
     width: 85%;
+  }
+  .scrolling_bar {
+    overflow: hidden !important;
   }
 }
 
