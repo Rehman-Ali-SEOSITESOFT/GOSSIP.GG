@@ -133,7 +133,7 @@ const LiveMatchMatchess = () => {
       <section className="mt-[33px] flex mw-lg:flex-col">
         {/* left section starts here */}
         <div className="w-[45%] mw-lg:w-[100%]">
-          <h4 className="montserratfont text-[18px] font-bold uppercase text-[#ED4E50] pb-[9px]">
+          <h4 className="montserratfont text-[18px] font-bold uppercase text-[#ED4E50] pb-[20px] mw-md:pb-[16px]">
             ESPORTS eVENTs
           </h4>
           {/* web version starts */}
@@ -373,7 +373,7 @@ const LiveMatchMatchess = () => {
         {/* right section starts here */}
 
         <div className="w-[52%] mw-lg:w-[100%] ml-[25px] mw-lg:ml-[0px] relative mw-lg:hidden">
-          <h4 className="montserratfont text-[18px] font-bold uppercase text-[#ED4E50] pb-[9px]">
+          <h4 className="montserratfont text-[18px] font-bold uppercase text-[#ED4E50] pb-[20px] mw-md:pb-[16px]">
             live matches
           </h4>
           <div>
@@ -423,7 +423,7 @@ const LiveMatchMatchess = () => {
                         <Image src={whiteinf} alt="" />
                       </div>
                       <div className="mx-[12px]">
-                        <h4 className="montserratfont text-[12px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px] mw-xl:text-[12px]">
+                        <h4 className="montserratfont text-[10px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 py-[12px] px-[9px] mw-xl:text-[12px]">
                           VS
                         </h4>
                       </div>
@@ -483,7 +483,7 @@ const LiveMatchMatchess = () => {
                         <Image src={whiteinf} alt="" />
                       </div>
                       <div className="mx-[12px]">
-                        <h4 className="montserratfont text-[12px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px] mw-xl:text-[12px]">
+                        <h4 className="montserratfont text-[10px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 py-[12px] px-[9px] mw-xl:text-[12px]">
                           VS
                         </h4>
                       </div>
@@ -542,7 +542,7 @@ const LiveMatchMatchess = () => {
                         <Image src={whiteinf} alt="" />
                       </div>
                       <div className="mx-[12px]">
-                        <h4 className="montserratfont text-[12px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px] mw-xl:text-[12px]">
+                        <h4 className="montserratfont text-[10px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 py-[12px] px-[9px] mw-xl:text-[12px]">
                           VS
                         </h4>
                       </div>
@@ -673,7 +673,7 @@ const LiveMatchMatchess = () => {
                         <Image src={whiteinf} alt="" />
                       </div>
                       <div className="mx-[12px]">
-                        <h4 className="montserratfont text-[12px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px] mw-xl:text-[12px]">
+                        <h4 className="montserratfont text-[10px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 py-[12px] px-[9px] mw-xl:text-[12px]">
                           VS
                         </h4>
                       </div>
@@ -732,7 +732,7 @@ const LiveMatchMatchess = () => {
                         <Image src={whiteinf} alt="" />
                       </div>
                       <div className="mx-[12px]">
-                        <h4 className="montserratfont text-[12px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px] mw-xl:text-[12px]">
+                        <h4 className="montserratfont text-[10px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 py-[12px] px-[9px] mw-xl:text-[12px]">
                           VS
                         </h4>
                       </div>
@@ -790,7 +790,7 @@ const LiveMatchMatchess = () => {
                         <Image src={whiteinf} alt="" />
                       </div>
                       <div className="mx-[12px]">
-                        <h4 className="montserratfont text-[12px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px] mw-xl:text-[12px]">
+                        <h4 className="montserratfont text-[10px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 py-[12px] px-[9px] mw-xl:text-[12px]">
                           VS
                         </h4>
                       </div>
@@ -847,7 +847,7 @@ const LiveMatchMatchess = () => {
                         <Image src={whiteinf} alt="" />
                       </div>
                       <div className="mx-[12px]">
-                        <h4 className="montserratfont text-[12px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 p-[9px] mw-xl:text-[12px]">
+                        <h4 className="montserratfont text-[10px] font-medium leading-normal dark:text-brandLightOpacity70 dark:bg-[#514E4F] bg-brandLightOpacity90 py-[12px] px-[9px] mw-xl:text-[12px]">
                           VS
                         </h4>
                       </div>

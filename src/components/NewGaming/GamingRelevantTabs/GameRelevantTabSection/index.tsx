@@ -790,8 +790,8 @@ const GamingRelevantTabSection = () => {
           {openTab === 1 ? (
             <div className="mb-6 mw-lg:mt-[0px] flex justify-between   relative">
               <div className="w-[85%] mw-lg:w-[100%]">
-                <GamingFilter />
                 <TopButton />
+                <GamingFilter />
                 <div className="flex flex-wrap justify-between ">
                   {tabData.map((e, idx) => {
                     return (

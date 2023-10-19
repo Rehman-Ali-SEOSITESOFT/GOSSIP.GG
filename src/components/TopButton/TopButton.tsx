@@ -1,27 +1,28 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import arrowup from "../../assets/livematchessstags/arrow-up.png";
 import Image from "next/image";
 import "./TopButton.css";
 const TopButton = () => {
   const [showTopBtn, setShowTopBtn] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
+  const [newState, setNewState] = useState(0);
+  const windowHeight = useRef(window.innerHeight);
   let scroll_position = 0;
   let scroll_direction;
-
+  let heightPotiion = document.body.getBoundingClientRect().top;
   useEffect(() => {
     window.addEventListener("scroll", function (e) {
       scroll_direction =
         document.body.getBoundingClientRect().top < scroll_position
           ? setShowTopBtn(false)
           : setShowTopBtn(true);
+
       scroll_position = document.body.getBoundingClientRect().top;
-      console.log(scroll_direction, "scroll dir");
-      console.log(scroll_position, "scroll directions");
+      console.log(scroll_position);
+      setNewState(scroll_position);
     });
   }, []);
-
+  console.log(newState, "second one");
   // useEffect(() => {
   //   window.addEventListener("scroll", () => {
   //     if (window.scrollY > 0) {
@@ -70,14 +71,16 @@ const TopButton = () => {
   return (
     <>
       <div className=" top-to-btm">
-        {showTopBtn && (
-          <Image
-            src={arrowup}
-            alt="arrow up"
-            className="icon-position icon_style"
-            onClick={scrollToTop}
-          />
-        )}
+        {newState >= -1200
+          ? ""
+          : showTopBtn && (
+              <Image
+                src={arrowup}
+                alt="arrow up"
+                className="icon-position icon_style"
+                onClick={scrollToTop}
+              />
+            )}
       </div>
 
       {/* {isVisible && (

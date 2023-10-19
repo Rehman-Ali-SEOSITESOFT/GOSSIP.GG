@@ -154,7 +154,7 @@
 }
 @media screen and (max-width: 500px) {
   .liveMATchWrapper .right_content {
-    margin-left: 0px;
+    margin-left: 0px !important;
   }
 }
 @media screen and (max-width: 400px) {

@@ -87,6 +87,9 @@
   .esportsEventWRAAAP .mainSliderWrap {
     width: 170px !important;
   }
+  .right_content {
+    margin-left: 0px !important;
+  }
 }
 
 @media screen and (max-width: 400px) {

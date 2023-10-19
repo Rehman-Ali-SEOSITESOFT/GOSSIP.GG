@@ -19,6 +19,7 @@ import RightSidebar from "@/components/Game/rightbar2/RightSidebar";
 import EmptyTabs from "@/components/Emptytabs";
 import "./ReleventTabsSection/relevantTabsSection.css";
 import LatestTabsEsport from "./LatestTabs";
+import TopButton from "@/components/TopButton/TopButton";
 const ReleventTabs = () => {
   interface TABDATA {
     tabImage: any;
@@ -697,6 +698,8 @@ const ReleventTabs = () => {
               >
                 <div className="flex justify-between   relative">
                   <div className="w-[85%] mw-lg:w-[100%]">
+                    <TopButton />
+
                     <div className="flex flex-wrap justify-between ">
                       {tabData.map((e, idx) => {
                         return (

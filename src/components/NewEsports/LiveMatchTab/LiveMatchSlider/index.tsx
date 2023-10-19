@@ -232,7 +232,7 @@ const LiveMatchSlider = () => {
                         {e.title}
                       </h4>
                     </div>
-                    <div className="flex items-center mt-[4px] mw-sm4:flex-col mw-sm4:items-start">
+                    <div className="flex items-center mt-[6px] mw-sm4:flex-col mw-sm4:items-start mw-sm4:mt-[4px]">
                       <div className="flex items-center">
                         <Image
                           src={teamtag}
@@ -243,7 +243,7 @@ const LiveMatchSlider = () => {
                           Team Liquid
                         </h4>
                       </div>
-                      <h4 className="montserratfont text-[12px] font-medium leading-normal dark:text-brandLightOpacity70 px-[8px] mw-sm4:text-[8px] mw-sm4:pl-[33px]">
+                      <h4 className="montserratfont text-[10px] font-medium leading-normal dark:text-brandLightOpacity70 px-[8px] mw-sm4:text-[8px] mw-sm4:pl-[33px]">
                         VS
                       </h4>
                       <div className="flex items-center">
