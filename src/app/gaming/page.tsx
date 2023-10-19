@@ -13,6 +13,7 @@ import resp2 from "../../assets/newsports/resp2.png";
 import resp3 from "../../assets/newsports/resp3.png";
 import LiveMatchSlider from "@/components/NewEsports/LiveMatchTab/LiveMatchSlider";
 import InnerTabsLiveMatches from "@/components/NewEsports/LiveMatchTab/LiveMatchInnerTabs";
+import LatestTrendingHero from "@/components/NewEsports/LatestTrendingHero";
 const Gaming = () => {
   interface RESPDATA {
     herobg: any;
@@ -133,7 +134,9 @@ const Gaming = () => {
                         );
                       })}
                     </div>
-                    <GamingLatestHeroTrending />
+                    {/* <GamingLatestHeroTrending /> */}
+                    <LatestTrendingHero />
+
                     <GamingRelevantTabSection />
                   </div>
                 ) : (

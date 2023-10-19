@@ -19,6 +19,7 @@ import GamingFilter from "../../GamingFilter";
 import EmptyTabs from "@/components/Emptytabs";
 import { open } from "fs/promises";
 import GameTabList from "../GameTabsList";
+import TopButton from "@/components/TopButton/TopButton";
 const GamingRelevantTabSection = () => {
   interface TABDATA {
     tabImage: any;
@@ -790,6 +791,7 @@ const GamingRelevantTabSection = () => {
             <div className="mb-6 mw-lg:mt-[0px] flex justify-between   relative">
               <div className="w-[85%] mw-lg:w-[100%]">
                 <GamingFilter />
+                <TopButton />
                 <div className="flex flex-wrap justify-between ">
                   {tabData.map((e, idx) => {
                     return (

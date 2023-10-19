@@ -397,7 +397,7 @@ const LiveTabReleventTabs = () => {
                 <div className="flex justify-between  relative">
                   <div className="w-[85%] mw-lg:w-[100%]">
                     <TopButton />
-                    {/* <button className="text-[red]">hello</button> */}
+
                     <div className="flex flex-wrap justify-between ">
                       {tabData.map((e, idx) => {
                         return (
