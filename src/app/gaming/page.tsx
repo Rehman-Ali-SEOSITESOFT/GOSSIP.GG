@@ -108,7 +108,7 @@ const Gaming = () => {
                   </li>
                 </ul>
                 {openTab === 1 ? (
-                  <div className="mb-6 mw-lg:mt-[0px]">
+                  <div className="mb-6 mw-lg:mt-[0px] mw-md:mb-[0px]">
                     <GamingSlider />
                     <div className="hidden mw-lg:block mt-[40px] mw-md:hidden">
                       <div className="flex justify-between">

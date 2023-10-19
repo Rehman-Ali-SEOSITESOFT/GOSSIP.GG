@@ -112,7 +112,7 @@ const Esports = () => {
                 </ul>
 
                 {openTab === 1 ? (
-                  <div className="tab-content tab-space w-full  h-full  	mb-6  mw-lg:mt-[0px]">
+                  <div className="tab-content tab-space w-full  h-full  	mb-6  mw-md:mb-[0px] mw-lg:mt-[0px]">
                     <GamingSlider />
 
                     <div className="hidden mw-lg:block mt-[40px] mw-md:hidden">
