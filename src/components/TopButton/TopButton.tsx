@@ -6,10 +6,10 @@ import "./TopButton.css";
 const TopButton = () => {
   const [showTopBtn, setShowTopBtn] = useState(false);
   const [newState, setNewState] = useState(0);
-  const windowHeight = useRef(window.innerHeight);
+
   let scroll_position = 0;
   let scroll_direction;
-  let heightPotiion = document.body.getBoundingClientRect().top;
+
   useEffect(() => {
     window.addEventListener("scroll", function (e) {
       scroll_direction =
@@ -23,7 +23,7 @@ const TopButton = () => {
     });
   }, []);
   console.log(newState, "second one");
-  // useEffect(() => {
+
   //   window.addEventListener("scroll", () => {
   //     if (window.scrollY > 0) {
   //       setShowTopBtn(false);
@@ -42,12 +42,14 @@ const TopButton = () => {
   // };
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    if (typeof window !== "undefined") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
   };
-  // useEffect(() => {
+
   //   const handleScroll = () => {
   //     const scrolledToBottom =
   //       window.innerHeight + window.scrollY <= document.body.offsetHeight - 100;

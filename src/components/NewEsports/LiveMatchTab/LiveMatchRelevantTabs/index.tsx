@@ -388,7 +388,7 @@ const LiveTabReleventTabs = () => {
               </li>
             </ul>
           </div>
-          <div className="mb-6 mw-lg:mt-[31px] mw-md:mt-[1px]">
+          <div className="mb-6 mw-lg:mt-[31px] mw-md:mb-[0px] mw-md:mt-[1px]">
             <div className="tab-content tab-space w-full  h-full">
               <div
                 className={openTab === 1 ? " rounded-lg	" : "hidden"}

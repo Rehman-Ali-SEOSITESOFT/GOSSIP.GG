@@ -7,7 +7,7 @@ import Twitter from "../../assets/images/footer/twitter.png";
 import style from "./Footer.module.css";
 const Footer = () => {
   return (
-    <footer className="bg-brandDark2 mw-lg:mb-16 dark:bg-brandDark3">
+    <footer className="bg-brandDark2 mw-lg:mb-16 dark:bg-brandDark3 mw-md:mb-[0px]">
       <div className="global-section-width">
         {/* Desktop Footer Start */}
         <div className="pt-14 mw-lg:hidden">

@@ -788,7 +788,7 @@ const GamingRelevantTabSection = () => {
           </ul> */}
           <GameTabList OpennTab={setOpenTab} />
           {openTab === 1 ? (
-            <div className="mb-6 mw-lg:mt-[0px] flex justify-between   relative">
+            <div className="mb-6 mw-lg:mt-[0px] flex justify-between mw-md:mb-[0px]  relative">
               <div className="w-[85%] mw-lg:w-[100%]">
                 <TopButton />
                 <GamingFilter />
