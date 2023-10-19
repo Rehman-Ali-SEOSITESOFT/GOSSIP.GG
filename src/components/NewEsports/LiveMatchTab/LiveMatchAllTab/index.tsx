@@ -12,11 +12,48 @@ import HeroSection from "../../LatestTrendingHero/HeroSection";
 import TrendingTags from "../../LatestTrendingHero/TrendingTags";
 import LiveTabReleventTabs from "../LiveMatchRelevantTabs";
 import LiveMatchMatchess from "../LiveMatchMatchess";
+import RespSection from "../../RespNewSection";
+import resp1 from "../../../../assets/newsports/resp1.png";
+import resp2 from "../../../../assets/newsports/resp2.png";
+import resp3 from "../../../../assets/newsports/resp3.png";
 const LiveMatchAllTab = () => {
   interface LATEST {
     image: any;
     latestNew: String;
   }
+  interface RESPDATA {
+    herobg: any;
+    titlee: String;
+  }
+  const [respData1, setRespData1] = useState<RESPDATA[]>([
+    {
+      herobg: resp1,
+      titlee:
+        "Star Wars Jedi 3 Apparently Confirmed By Cal Kestis Actor Cameron Monaghan",
+    },
+    {
+      herobg: resp2,
+      titlee:
+        "Intel Gamer Days LAN Fest By OMEN Recap - Meet And Greet, Valorant Tournament, Cosplay, Community Events And More",
+    },
+  ]);
+  const [respData, setRespData] = useState<RESPDATA[]>([
+    {
+      herobg: resp1,
+      titlee:
+        "Star Wars Jedi 3 Apparently Confirmed By Cal Kestis Actor Cameron Monaghan",
+    },
+    {
+      herobg: resp2,
+      titlee:
+        "Intel Gamer Days LAN Fest By OMEN Recap - Meet And Greet, Valorant Tournament, Cosplay, Community Events And More",
+    },
+    {
+      herobg: resp3,
+      titlee:
+        "Indian Esports Team At The Asian Games Hangzhou: Games And Schedule",
+    },
+  ]);
   const [latestNews, setLatestNews] = useState<LATEST[]>([
     {
       image: image,
@@ -59,6 +96,23 @@ const LiveMatchAllTab = () => {
   ]);
   return (
     <>
+      <div className="hidden mw-lg:block mt-[40px] mw-sm4:mt-[0px]">
+        <div className="flex justify-between mw-md:hidden">
+          {respData1.map((e, idx) => {
+            return (
+              <RespSection key={idx} herobg={e.herobg} titlee={e.titlee} />
+            );
+          })}
+        </div>
+        <div className="hidden mw-md:block">
+          {respData.map((e, idx) => {
+            return (
+              <RespSection key={idx} herobg={e.herobg} titlee={e.titlee} />
+            );
+          })}
+        </div>
+      </div>
+
       <div className="mt-[56px]">
         <div className="flex">
           <div className="w-[28%] mw-lg:w-[100%]">

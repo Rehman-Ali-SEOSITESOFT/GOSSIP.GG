@@ -14,6 +14,7 @@ import InnerTabsLiveMatches from "@/components/NewEsports/LiveMatchTab/LiveMatch
 import LiveTabReleventTabs from "@/components/NewEsports/LiveMatchTab/LiveMatchRelevantTabs";
 import TopButton from "@/components/TopButton/TopButton";
 import AllTabsData from "@/components/NewEsports/RevelentTabs/AllTabsData";
+import GamingSlider from "@/components/NewGaming/GamingEventsSlider";
 const Esports = () => {
   interface RESPDATA {
     herobg: any;
@@ -112,7 +113,8 @@ const Esports = () => {
 
                 {openTab === 1 ? (
                   <div className="tab-content tab-space w-full  h-full  	mb-6  mw-lg:mt-[0px]">
-                    <EsportsSlider />
+                    <GamingSlider />
+
                     <div className="hidden mw-lg:block mt-[40px] mw-md:hidden">
                       <div className="flex justify-between">
                         {respData1.map((e, idx) => {
@@ -142,31 +144,9 @@ const Esports = () => {
                   </div>
                 ) : (
                   <div className="for-you-section   mw-md:pt-[32px] mw-sm4:pt-[0px]">
+                    {/* <LiveMatchSlider /> */}
                     <LiveMatchSlider />
-                    <div className="hidden mw-lg:block mt-[40px] mw-sm4:mt-[0px]">
-                      <div className="flex justify-between mw-md:hidden">
-                        {respData1.map((e, idx) => {
-                          return (
-                            <RespSection
-                              key={idx}
-                              herobg={e.herobg}
-                              titlee={e.titlee}
-                            />
-                          );
-                        })}
-                      </div>
-                      <div className="hidden mw-md:block">
-                        {respData.map((e, idx) => {
-                          return (
-                            <RespSection
-                              key={idx}
-                              herobg={e.herobg}
-                              titlee={e.titlee}
-                            />
-                          );
-                        })}
-                      </div>
-                    </div>
+
                     <div>
                       <InnerTabsLiveMatches />
                     </div>
@@ -250,6 +230,7 @@ const Esports = () => {
                 </div> */}
               </div>
             </div>
+          
           </div>
         </div>
       </section>

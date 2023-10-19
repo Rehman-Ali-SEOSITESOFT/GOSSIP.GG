@@ -167,7 +167,7 @@ const LiveMatchSlider = () => {
   return (
     <>
       <section
-        className={`${styles.trending} ${styles.liveMATchWrapper} trending new_esports_slider pt-[26px] pb-[26px] border-b-[1px] border-brandLightOpacity10 mw-md:pt-[16px] mw-md:pb-[40px] mw-md:border-b-[0px] `}
+        className={`${styles.trending} ${styles.liveMATchWrapper} trending new_esports_slider pt-[26px] pb-[26px] border-b-[1px] border-brandLightOpacity10 mw-md:border-b-[0px]  mw-md  mw-md:pt-[16px] mw-md:pb-[16px] mw-md:border-b-[0px] `}
       >
         <div className="2xl:container">
           <Slider
@@ -201,7 +201,7 @@ const LiveMatchSlider = () => {
                       {e.heading}
                     </p>
                   </div>
-                  <div className="hidden mw-lg:block mw-lg:flex mw-lg:justify-between	mw-lg:pt-[5px] mw-lg:pl-[8px] mw-lg:pr-[8px] mw-lg:border-b-[1px] mw-lg:border-brandLightOpacity10 mw-lg:pb-[4px]">
+                  <div className="hidden mw-lg:block mw-lg:flex mw-lg:justify-between	mw-lg:pt-[4px] mw-lg:pl-[8px] mw-lg:pr-[8px] mw-lg:border-b-[1px] mw-lg:border-brandLightOpacity10 mw-lg:pb-[4px]">
                     <Image src={icon} alt="" />
                     <p
                       className={`montserratfont text-[10px] font-semibold   
@@ -220,7 +220,7 @@ const LiveMatchSlider = () => {
                     </p>
                   </div>
                   <div
-                    className={`${styles.right_content} py-[12px] pr-[12px] pl-[8px] mw-lg:ml-[0px] mw-lg:py-[6px]`}
+                    className={`${styles.right_content} py-[12px] pr-[12px] pl-[8px] mw-lg:ml-[0px] mw-lg:py-[4px] mw-sm4:pb-[5px]`}
                   >
                     <div className="flex items-center">
                       <Image
@@ -232,9 +232,13 @@ const LiveMatchSlider = () => {
                         {e.title}
                       </h4>
                     </div>
-                    <div className="flex items-center mt-[6px] mw-sm4:flex-col mw-sm4:items-start">
+                    <div className="flex items-center mt-[4px] mw-sm4:flex-col mw-sm4:items-start">
                       <div className="flex items-center">
-                        <Image src={teamtag} alt="" />
+                        <Image
+                          src={teamtag}
+                          alt=""
+                          className="mw-md:w-[16px] mw-md:h-[16px]"
+                        />
                         <h4 className="montserratfont text-[14px] font-semibold dark:text-[#E5E5E5] leading-normal pl-[8px] mw-sm4:text-[12px]">
                           Team Liquid
                         </h4>
@@ -243,7 +247,11 @@ const LiveMatchSlider = () => {
                         VS
                       </h4>
                       <div className="flex items-center">
-                        <Image src={teamtag} alt="" />
+                        <Image
+                          src={teamtag}
+                          alt=""
+                          className="mw-md:w-[16px] mw-md:h-[16px]"
+                        />
                         <h4 className="montserratfont text-[14px] font-semibold dark:text-[#E5E5E5] leading-normal pl-[8px] mw-sm4:text-[12px]">
                           {e.sexondteam}
                         </h4>

@@ -60,7 +60,7 @@ const TrendingTags = () => {
   }, [theme]);
   return (
     <>
-      <div className="trending_wrapper flex flex-wrap	mt-[20px] mx-13:mt-[16px] mb-[32px] mx-13:mb-[18px] mw-xl:mb-[8px]">
+      <div className="trending_wrapper flex flex-wrap	mt-[20px] mx-13:mt-[16px] mb-[16px] mx-13:mb-[18px] mw-xl:mb-[8px]">
         {tags.map((item, index) => {
           return (
             <Link
@@ -112,7 +112,7 @@ const TrendingTags = () => {
                 </p>
               </div>
             </div>
-            <div className="mt-[12px]">
+            <div className="mt-[12px] gossip_para">
               <p className="montserratfont text-[14px] font-medium leading-normal dark:text-[#E5E5E5] mx-13:text-[12px]">
                 Play everyday between 5 p.m. and 8 p.m. and stand a chance to
                 win the latest Samsung phone and other exciting prizes!
@@ -124,7 +124,7 @@ const TrendingTags = () => {
           </div>
         </div>
       </div>
-      <div className="tag_last_section pt-[44px] mx-13:pt-[30px] mw-xl:pt-[20px]">
+      <div className="tag_last_section pt-[28px] mx-13:pt-[30px] mw-xl:pt-[20px]">
         <p className="text-[12px] montserratfont font-normal dark:text-brandLightOpacity90 leading-[16px]">
           Gossip.GG brings you the latest scoop from Gaming, Esports, Tech, and
           a whole lot more. From breaking the latest industry news to in-depth
@@ -147,7 +147,7 @@ const TrendingTags = () => {
           </div>
         </div>
       </div>
-      <div className=" mt-[13px] mx-13:mt-[6px] mw-xl:mt-[10px]">
+      <div className=" mt-[13px] mx-13:mt-[6px] mw-xl:mt-[10px] pages__">
         <ul className="flex list-none flex-wrap	">
           <li className="montserratfont text-[12px] dark:text-[#E5E5E5] font-normal mr-[16px] mb-[8px] mx-13:mb-[3px]">
             <Link href="#">Disclaimer</Link>{" "}
@@ -171,7 +171,7 @@ const TrendingTags = () => {
             <Link href="#">Careers</Link>{" "}
           </li>
         </ul>
-        <p className="montserratfont text-[11px] font-normal dark:text-brandLightOpacity70 mt-[10px]      mw-13:mt-[3px]">
+        <p className="montserratfont text-[11px] font-normal dark:text-brandLightOpacity70 mt-[10px] copyright     mw-13:mt-[3px]">
           (c) 2023 Gossip.gg - All Rights Reserved
         </p>
       </div>

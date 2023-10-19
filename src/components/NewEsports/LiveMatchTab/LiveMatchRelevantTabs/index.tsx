@@ -18,6 +18,7 @@ import RightSidebar from "@/components/Game/rightbar2/RightSidebar";
 import EmptyTabs from "@/components/Emptytabs";
 import RelevantTabsSection from "../../RevelentTabs/ReleventTabsSection";
 import { useTheme } from "next-themes";
+import TopButton from "@/components/TopButton/TopButton";
 const LiveTabReleventTabs = () => {
   interface TABDATA {
     tabImage: any;
@@ -388,13 +389,15 @@ const LiveTabReleventTabs = () => {
             </ul>
           </div>
           <div className="mb-6 mw-lg:mt-[31px] mw-md:mt-[1px]">
-            <div className="tab-content tab-space w-full  h-full  	">
+            <div className="tab-content tab-space w-full  h-full">
               <div
                 className={openTab === 1 ? " rounded-lg	" : "hidden"}
                 id="link1"
               >
                 <div className="flex justify-between  relative">
                   <div className="w-[85%] mw-lg:w-[100%]">
+                    <TopButton />
+                    {/* <button className="text-[red]">hello</button> */}
                     <div className="flex flex-wrap justify-between ">
                       {tabData.map((e, idx) => {
                         return (

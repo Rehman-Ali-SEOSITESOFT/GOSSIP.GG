@@ -9,6 +9,24 @@
   text-align: center;
   width: auto !important;
 }
+@media screen and (max-width: 1400px) {
+  .gossip_para p {
+    font-size: 13px;
+  }
+  .pages__ {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 1365px) {
+  .playnowBtn {
+    font-size: 16px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+  .copyright {
+    margin-top: 0px !important;
+  }
+}
 @media screen and (max-width: 1250px) {
   .daily_quizz_wrapper {
     padding-top: 12px !important;

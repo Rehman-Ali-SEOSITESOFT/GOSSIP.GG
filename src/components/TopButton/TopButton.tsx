@@ -20,22 +20,52 @@ const TopButton = () => {
       behavior: "smooth",
     });
   };
+
+  // const [isVisible, setIsVisible] = useState(false);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 100) {
+  //       setIsVisible(true);
+  //     } else {
+  //       setIsVisible(false);
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+  // const scrollToTop = () => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth",
+  //   });
+  // };
+
   return (
     <>
-      <div className="global-section-width">
-        <div className="2xl-container">
-          <div className=" top-to-btm">
-            {showTopBtn && (
-              <Image
-                src={arrowup}
-                alt="arrow up"
-                className="icon-position icon_style"
-                onClick={goToTop}
-              />
-            )}
-          </div>
-        </div>
+      <div className=" top-to-btm">
+        {showTopBtn && (
+          <Image
+            src={arrowup}
+            alt="arrow up"
+            className="icon-position icon_style"
+            onClick={goToTop}
+          />
+        )}
       </div>
+
+      {/* {isVisible && (
+        <Image
+          src={arrowup}
+          alt="arrow up"
+          className="icon_style"
+          onClick={scrollToTop}
+        />
+      )} */}
     </>
   );
 };

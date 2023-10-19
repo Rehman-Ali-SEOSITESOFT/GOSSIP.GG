@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import LiveMatchAllTab from "../LiveMatchAllTab";
 import LiveMatchEsportEventTab from "../LiveMatchEsportEventTab";
+import RespSection from "../../RespNewSection";
 
 const InnerTabsLiveMatches = () => {
   const [openTab, setOpenTab] = useState(0);
@@ -17,7 +18,7 @@ const InnerTabsLiveMatches = () => {
   return (
     <>
       <section>
-        <div className="py-[20px]">
+        <div className="py-[20px] mw-md:pt-[24px] mw-md:border-t-[1px] border-brandLightOpacity10 mw-md:pb-[27px]">
           <div className="w-full text-center">
             <ul className="flex max-w-[460px] mw-sm:max-w-[300px]  w-full m-auto justify-center items-center">
               {menulist.map((el, index) => {

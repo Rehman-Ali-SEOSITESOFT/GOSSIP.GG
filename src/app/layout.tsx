@@ -15,9 +15,10 @@ import "react-multi-carousel/lib/styles.css";
 import QuizRatio from "@/components/QuizRatio";
 import "animate.css";
 import SideBar from "@/layouts/sidebar/SideBar";
-import TopButton from "@/components/TopButton/TopButton";
+
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
+import TopButton from "@/components/TopButton/TopButton";
 export default function RootLayout({
   children,
 }: {
@@ -50,8 +51,9 @@ export default function RootLayout({
             <Header />
 
             <div className="content">
+              {" "}
+              {/* <TopButton /> */}
               {children}
-              <TopButton />
             </div>
             <QuizRatio />
             {path === "/esports" || path === "/gaming" ? "" : <Footer />}

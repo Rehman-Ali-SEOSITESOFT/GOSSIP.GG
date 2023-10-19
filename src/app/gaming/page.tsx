@@ -140,30 +140,7 @@ const Gaming = () => {
                   <div>
                     <div className="for-you-section   mw-md:pt-[32px] mw-sm4:pt-[0px]">
                       <LiveMatchSlider />
-                      <div className="hidden mw-lg:block mt-[40px] mw-sm4:mt-[0px]">
-                        <div className="flex justify-between mw-md:hidden">
-                          {respData1.map((e, idx) => {
-                            return (
-                              <RespSection
-                                key={idx}
-                                herobg={e.herobg}
-                                titlee={e.titlee}
-                              />
-                            );
-                          })}
-                        </div>
-                        <div className="hidden mw-md:block">
-                          {respData.map((e, idx) => {
-                            return (
-                              <RespSection
-                                key={idx}
-                                herobg={e.herobg}
-                                titlee={e.titlee}
-                              />
-                            );
-                          })}
-                        </div>
-                      </div>
+
                       <div>
                         <InnerTabsLiveMatches />
                       </div>

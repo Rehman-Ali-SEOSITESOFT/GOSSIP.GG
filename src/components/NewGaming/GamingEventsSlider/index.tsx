@@ -206,9 +206,9 @@ const GamingSlider = () => {
                     </p>
                   </div>
                   <div
-                    className={`${styles.right_content} py-[12px] pr-[12px] pl-[8px] mw-lg:ml-[0px] mw-lg:py-[6px] mw-lg:text-[12px]`}
+                    className={`${styles.right_content} pt-[12px] pb-[12px] pr-[12px] pl-[8px] mw-lg:ml-[0px] mw-lg:pt-[6px] mw-sm4:pb-[10px] mw-lg:text-[12px]`}
                   >
-                    <h4 className="montserratfont text-[14px] font-semibold leading-normal dark:text-[#E5E5E5] mw-lg:text-[12px] headingg">
+                    <h4 className="montserratfont text-[14px] font-semibold leading-normal dark:text-[#E5E5E5] mw-lg:text-[12px] headingg ">
                       {e.title}
                     </h4>
                     <div className="flex items-center mt-[6px] mw-lg:hidden">

@@ -9,16 +9,16 @@ const LowerContentHeroSection = (props: any) => {
         <Image
           src={contentIamge}
           alt=""
-          className=" min-w-[280px] mw-xl:min-w-[240px] mw-xl:h-[150px]"
+          className=" min-w-[280px] mw-xl:min-w-[240px] max-h-[158px]"
         />
         <div className="content-right pr-[13px] pl-[13px] pt-[10px] pb-[10px]">
-          <h4 className="montserratfont text-[14px] font-bold dark:text-[#E5E5E5] capitalize elieepisePara">
+          <h4 className="pr-[10px] montserratfont text-[14px] font-bold dark:text-[#E5E5E5] capitalize elieepisePara">
             {discription}
           </h4>
-          <p className="montserratfont text-[12px] font-normal dark:text-brandLightOpacity90 leading-normal pt-[8px]">
+          <p className="hero_section_para montserratfont text-[12px] font-normal dark:text-brandLightOpacity90 leading-normal pt-[5px]">
             {para}
           </p>
-          <div className="bottom_section flex mt-[6px] justify-between	items-end mx-13:mt-[14px]">
+          <div className="bottom_section flex mt-[6px] justify-between	items-end mx-13:mt-[22px]">
             <div className="buttonss flex">
               <div className="montserratfont text-textColorGray bg-grayCard px-2 py-1.5 rounded mr-2 text-xs leading-4 font-medium hover:bg-grayCardHover cursor-pointer dark:bg-brandLightOpacity10 dark:hover:bg-brandLightOpacity20 dark:hover:text-brandLightOpacity100    hover:text-brandDark2   dark:text-brandLightOpacity70">
                 News
