@@ -195,7 +195,7 @@ const GamingSlider = () => {
                        e.heading === "Ongoing"
                          ? " text-[#008D52]"
                          : e.heading === "Past"
-                         ? "text-[#221E1F]"
+                         ? "dark:text-[#E5E5E5] text-[#221E1F]"
                          : e.id == 3
                          ? "text-[#E5E5E5] "
                          : ""
