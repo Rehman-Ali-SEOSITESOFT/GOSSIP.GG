@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import LiveMatchAllTab from "../LiveMatchAllTab";
 import LiveMatchEsportEventTab from "../LiveMatchEsportEventTab";
 import RespSection from "../../RespNewSection";
-
+import "./LiveMatchInnertabs.css";
 const InnerTabsLiveMatches = () => {
   const [openTab, setOpenTab] = useState(0);
 
@@ -23,7 +23,7 @@ const InnerTabsLiveMatches = () => {
             <ul className="flex max-w-[460px] mw-sm:max-w-[300px]  w-full m-auto justify-center items-center">
               {menulist.map((el, index) => {
                 return (
-                  <li key={index} className="mr-[32px]">
+                  <li key={index} className="listing_inner mr-[32px]">
                     <a
                       className={
                         "cursor-pointer capitalize montserratfont block  transition-all	duration-75 leading-loose	 mw-sm:leading-[18px] " +
