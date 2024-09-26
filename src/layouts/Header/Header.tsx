@@ -34,10 +34,10 @@ const Header = () => {
   const headerSearchbarRef = useRef<any | null>(null);
   const { theme, setTheme } = useTheme();
   const [menu, setMenu] = useState<MenuList[]>([
-    {
-      name: "Home",
-      link: "/",
-    },
+    // {
+    //   name: "Home",
+    //   link: "/",
+    // },
     {
       name: "gossip",
       link: "/gossip",
@@ -53,6 +53,10 @@ const Header = () => {
     {
       name: "tech",
       link: "/tech",
+    },
+    {
+      name: "rewards",
+      link: "/rewards",
     },
   ]);
   const [recentSearchList, setrRecentSearchList] = useState<searcList[]>([
@@ -90,14 +94,12 @@ const Header = () => {
     setIsDarkTheme(theme === "dark" ? "dark" : "light");
   }, [theme]);
 
-
   const hanldeClose = () => {
     setSearchOpen(!searchOpen);
   };
   const hanldeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchText(e.target.value);
   };
-
 
   const onClickOpenModal = () => {
     setOpen(!open);
@@ -155,7 +157,8 @@ const Header = () => {
             {searchOpen ? (
               <div className={`${styles.header__center} xl:w-3/6 lg:w-1/1  `}>
                 <div className="header-navigation">
-                  <ul className="flex flex-wrap  justify-center">
+                  {/* <ul className="flex flex-wrap  justify-center"> */}
+                  <ul className="flex   justify-center">
                     {menu.map((elme, index) => {
                       return (
                         <li key={index}>

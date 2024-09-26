@@ -14,6 +14,7 @@ export default function Head() {
         crossOrigin="anonymous"
         referrerPolicy="no-referrer"
       />
+      <script src="//unpkg.com/alpinejs" defer></script>
     </>
   );
 }

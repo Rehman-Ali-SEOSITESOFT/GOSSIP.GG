@@ -1,11 +1,10 @@
-"use client"
-import React, { useEffect, useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import styles from "./AbsBannerArticle.module.css"
-import NavSlider from "@/components/Article/Slider"
+"use client";
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import styles from "./AbsBannerArticle.module.css";
+import NavSlider from "@/components/Article/Slider";
 const AbsBannerArticle = (props: any) => {
-
   return (
     <>
       <section className="article_banner_wrapper global-section-width-article">
@@ -27,61 +26,66 @@ const AbsBannerArticle = (props: any) => {
                 <div className="pr-[25px] mw-md:pr-[0px]  ">
                   <p className="robotoslub text-[16px] leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90 font-normal mw-md:text-[14px] mw-md:leading-[24px] pt-[40px] mw-lg:pt-[30px] mw-sm4:leading-[17px]">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry&#39;s
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries.
+                    typesetting industry. Lorem Ipsum has been the
+                    industry&#39;s standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled
+                    it to make a type specimen book. It has survived not only
+                    five centuries.
                   </p>
                   <h2 className="pt-[40px] pb-[24px] montserratfont text-[24px] leading-[30px] tracking-[0.05em] capitalize dark:text-[#E5E5E5] font-bold mw-md:pb-[20px] mw-md:pt-[20px] mw-md:text-[20px] mw-md:leading-[26px] mw-sm4:text-[14px] mw-sm4:leading-[30px] mw-sm4:pt-[16px] mw-sm4:pb-[8px]">
                     Floo flames - a new feature
                   </h2>
                   <p className="pb-[24px] robotoslub text-[16px] leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90 font-normal mw-md:text-[14px] mw-md:leading-[24px] mw-sm4:leading-[17px] mw-sm4:pb-[16px]">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry&#39;s
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged.
+                    typesetting industry. Lorem Ipsum has been the
+                    industry&#39;s standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled
+                    it to make a type specimen book. It has survived not only
+                    five centuries, but also the leap into electronic
+                    typesetting, remaining essentially unchanged.
                   </p>
                   <p className="robotoslub text-[16px] leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90 font-normal mw-md:text-[14px] mw-md:leading-[24px] mw-sm4:leading-[17px]">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry&#39;s
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged.
+                    typesetting industry. Lorem Ipsum has been the
+                    industry&#39;s standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled
+                    it to make a type specimen book. It has survived not only
+                    five centuries, but also the leap into electronic
+                    typesetting, remaining essentially unchanged.
                   </p>
                   <h2 className="pt-[40px] pb-[24px] montserratfont text-[24px] leading-[30px] tracking-[0.05em] capitalize dark:text-[#E5E5E5] font-bold mw-md:pb-[20px] mw-md:pt-[20px] mw-md:text-[20px] mw-md:leading-[26px] mw-sm4:pt-[16px] mw-sm4:pb-[8px] mw-sm4:text-[14px] mw-sm4:leading-[30px]">
                     Floo flames - a new feature
                   </h2>
                   <p className="pb-[24px] robotoslub text-[16px] leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90 font-normal mw-md:text-[14px] mw-md:leading-[24px] mw-sm4:leading-[17px] mw-sm4:pb-[12px]">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry&#39;s
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged.
+                    typesetting industry. Lorem Ipsum has been the
+                    industry&#39;s standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled
+                    it to make a type specimen book. It has survived not only
+                    five centuries, but also the leap into electronic
+                    typesetting, remaining essentially unchanged.
                   </p>
                   <p className="robotoslub text-[16px] leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90 font-normal mw-md:text-[14px] mw-md:leading-[24px] mw-sm4:leading-[17px]">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry&#39;s
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged.
+                    typesetting industry. Lorem Ipsum has been the
+                    industry&#39;s standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled
+                    it to make a type specimen book. It has survived not only
+                    five centuries, but also the leap into electronic
+                    typesetting, remaining essentially unchanged.
                   </p>
                 </div>
                 <div className="third_section mt-[64px]  mw-sm4:mt-[28px] ">
                   <div className="w-[80%] m-auto mw-sm1:w-[100%]">
-                 { props.navImages !== null && props.navImages !== undefined ?
-                     <NavSlider navImages={props.navImages} mainImages={props.mainImages}/>
-                  :
-                    <Image src={props.lowerImage} alt="image " className="" /> 
-                 }
+                    {props.navImages !== null &&
+                    props.navImages !== undefined ? (
+                      <NavSlider
+                        navImages={props.navImages}
+                        mainImages={props.mainImages}
+                      />
+                    ) : (
+                      <Image src={props.lowerImage} alt="image " className="" />
+                    )}
                   </div>
                 </div>
                 <div className="fourth_section">
@@ -90,21 +94,21 @@ const AbsBannerArticle = (props: any) => {
                   </h2>
                   <p className="pb-[24px] robotoslub text-[16px] leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90 font-normal mw-md:text-[14px] mw-md:leading-[24px] mw-sm4:leading-[17px] mw-sm4:pb-[12px]">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry&#39;s
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged.
+                    typesetting industry. Lorem Ipsum has been the
+                    industry&#39;s standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled
+                    it to make a type specimen book. It has survived not only
+                    five centuries, but also the leap into electronic
+                    typesetting, remaining essentially unchanged.
                   </p>
                   <p className="robotoslub text-[16px] leading-[27px] tracking-[0.03em] dark:text-brandLightOpacity90 font-normal mw-md:text-[14px] mw-md:leading-[24px] mw-sm4:leading-[17px]">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry&#39;s
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged.
+                    typesetting industry. Lorem Ipsum has been the
+                    industry&#39;s standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled
+                    it to make a type specimen book. It has survived not only
+                    five centuries, but also the leap into electronic
+                    typesetting, remaining essentially unchanged.
                   </p>
                 </div>
               </div>
@@ -210,7 +214,7 @@ const AbsBannerArticle = (props: any) => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default AbsBannerArticle
+export default AbsBannerArticle;

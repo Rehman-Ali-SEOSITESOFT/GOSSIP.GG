@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
+  plugins: [require("tw-elements/dist/plugin.cjs")],
   // mode: "jit",
   purge: {
     enabled: true,
@@ -38,6 +39,8 @@ module.exports = {
         errorIndicator: "#d91618",
         // custom color
         white: "#ffffff",
+        switch: "#292828",
+        swtichTip:"#4f4e4e",
         iconBackground: "#ededed",
         bodycolor: "#f8f8f8",
         grayCard: "rgba(34, 30, 31, 0.1)",
@@ -98,10 +101,15 @@ module.exports = {
       },
       boxShadow: {
         "3xshadow": "0px 8px 20px #000000",
+        // "quiz-timer": "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
       },
+      // dropShadow: {
+      //   "quiz-drop": "0px 4px 4px rgba(0, 0, 0, 0.25)",
+      // },
     },
   },
   plugins: [require("@tailwindcss/typography"), require("tailwind-scrollbar")],
+
   variants: {
     scrollbar: ["rounded"],
   },

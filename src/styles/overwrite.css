@@ -6,9 +6,9 @@
   margin: 0 -16px;
 }
 
-.Esport-events .slick-initialized .slick-slide>div,
-.esorts_event_wrapper .slick-initialized .slick-slide>div,
-.bgmi_slider .slick-initialized .slick-slide>div {
+.Esport-events .slick-initialized .slick-slide > div,
+.esorts_event_wrapper .slick-initialized .slick-slide > div,
+.bgmi_slider .slick-initialized .slick-slide > div {
   padding: 0 16px;
 }
 
@@ -17,7 +17,7 @@
   margin: 0 -16px;
 }
 
-.live-matches .slick-initialized .slick-slide>div {
+.live-matches .slick-initialized .slick-slide > div {
   padding: 0 16px;
 }
 
@@ -31,7 +31,7 @@
   bottom: 24px !important;
 }
 
-.deailslider .slick-slide>div {
+.deailslider .slick-slide > div {
   height: 315px !important;
 }
 
@@ -121,13 +121,13 @@ input[type="checkbox"]:checked::before {
 }
 
 @media screen and (max-width: 1024px) {
-  .deailslider .slick-slide>div {
+  .deailslider .slick-slide > div {
     height: 300px !important;
   }
 }
 
 @media screen and (max-width: 639px) {
-  .deailslider .slick-slide>div {
+  .deailslider .slick-slide > div {
     height: 250px !important;
   }
 
@@ -140,7 +140,6 @@ input[type="checkbox"]:checked::before {
 }
 
 @media screen and (max-width: 500px) {
-
   .Esport-events .slick-initialized .slick-list {
     margin: 0 0;
   }
@@ -149,7 +148,7 @@ input[type="checkbox"]:checked::before {
     margin-left: -7px;
   }
 
-  .Esport-events .slick-initialized .slick-slide>div {
+  .Esport-events .slick-initialized .slick-slide > div {
     padding: 0 15px;
   }
 }

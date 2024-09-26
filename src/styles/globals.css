@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import "./overwrite.css";
+@import "./quiz.css";
 
 /* // BRAND LIGHT COLOR'S */
 :root {
@@ -13,7 +14,11 @@
   --brandLightOpacity50: rgba(229, 229, 229, 0.5);
   --brandLightOpacity10: rgba(229, 229, 229, 0.1);
   --brandLightOpacity5: rgba(229, 229, 229, 0.05);
+  --borderColor: rgba(229, 229, 229, 0.33);
+  --quizFilterBg: rgba(0, 0, 0, 0.22);
   --bodycolor: #f8f8f8;
+ 
+
   /* // BRAND DARK COLORS */
   --brandDark1: #2e2a2b;
   --brandDark2: #221e1f;
@@ -115,18 +120,22 @@ body::-webkit-scrollbar-thumb {
 
 .trending .dark-arrow.slick-slider button.slick-next,
 .trending .dark-arrow.slick-slider button.slick-prev {
-  background: linear-gradient(270deg,
-      var(--brandDark2) 15.85%,
-      var(--brandDark2) 56.62%,
-      rgba(34, 30, 31, 0) 83.6%);
+  background: linear-gradient(
+    270deg,
+    var(--brandDark2) 15.85%,
+    var(--brandDark2) 56.62%,
+    rgba(34, 30, 31, 0) 83.6%
+  );
 }
 
 .trending .light-arrow.slick-slider button.slick-next,
 .trending .light-arrow.slick-slider button.slick-prev {
-  background: linear-gradient(270deg,
-      var(--bodycolor) 15.85%,
-      var(--bodycolor) 56.62%,
-      rgba(34, 30, 31, 0) 83.6%);
+  background: linear-gradient(
+    270deg,
+    var(--bodycolor) 15.85%,
+    var(--bodycolor) 56.62%,
+    rgba(34, 30, 31, 0) 83.6%
+  );
 }
 
 .dark-arrow.slick-slider .slick-next:before,
@@ -200,7 +209,6 @@ body::-webkit-scrollbar-thumb {
 .light-arrow.slick-slider .slick-prev::after {
   content: "";
   background-image: url("../assets/trending-arrows/dark-arrow.png");
-
 }
 
 /* ARROW'S STYLE CLOSE */
@@ -215,6 +223,9 @@ body::-webkit-scrollbar-thumb {
 
 .montserratfont {
   font-family: "Montserrat", sans-serif;
+}
+.interfonts {
+  font-family: "Inter", sans-serif;
 }
 
 .robotoslub {
@@ -306,7 +317,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 1430px) {
-
   .global-section-width-article,
   .user-section-width,
   .global-section-width {
@@ -367,7 +377,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (-width: 1100px) {
   .about-user-description {
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -401,7 +411,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 1024px) {
-
   .global-section-width-article,
   .user-section-width,
   .global-section-width {
@@ -433,7 +442,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 639px) {
-
   .deail-tab-com-title,
   .review-title {
     display: -webkit-box;
